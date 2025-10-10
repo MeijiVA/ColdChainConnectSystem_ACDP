@@ -29,21 +29,21 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.LogoACDPpBox = new System.Windows.Forms.PictureBox();
             this.PanelLogin = new System.Windows.Forms.Panel();
-            this.passLbl = new System.Windows.Forms.Label();
-            this.userLbl = new System.Windows.Forms.Label();
             this.usernTbox = new System.Windows.Forms.TextBox();
             this.passTbox = new System.Windows.Forms.TextBox();
             this.loginBtn = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.CCCpBox = new System.Windows.Forms.PictureBox();
+            this.passLbl = new System.Windows.Forms.Label();
+            this.userLbl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LogoACDPpBox)).BeginInit();
             this.PanelLogin.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CCCpBox)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -57,7 +57,7 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.splitContainer1.Panel1.Controls.Add(this.pictureBox2);
+            this.splitContainer1.Panel1.Controls.Add(this.LogoACDPpBox);
             this.splitContainer1.Panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SplitPanelLogo_MouseDown);
             this.splitContainer1.Panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.SplitPanelLogo_MouseMove);
             // 
@@ -69,44 +69,31 @@
             this.splitContainer1.SplitterWidth = 1;
             this.splitContainer1.TabIndex = 0;
             // 
+            // LogoACDPpBox
+            // 
+            this.LogoACDPpBox.BackgroundImage = global::ColdChainConnectSystem_ACDP.Properties.Resources.LoginLogoACDP;
+            this.LogoACDPpBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.LogoACDPpBox.Location = new System.Drawing.Point(66, 98);
+            this.LogoACDPpBox.Name = "LogoACDPpBox";
+            this.LogoACDPpBox.Size = new System.Drawing.Size(428, 299);
+            this.LogoACDPpBox.TabIndex = 0;
+            this.LogoACDPpBox.TabStop = false;
+            // 
             // PanelLogin
             // 
             this.PanelLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.PanelLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.PanelLogin.Controls.Add(this.pictureBox1);
-            this.PanelLogin.Controls.Add(this.passLbl);
-            this.PanelLogin.Controls.Add(this.userLbl);
             this.PanelLogin.Controls.Add(this.usernTbox);
             this.PanelLogin.Controls.Add(this.passTbox);
             this.PanelLogin.Controls.Add(this.loginBtn);
+            this.PanelLogin.Controls.Add(this.passLbl);
+            this.PanelLogin.Controls.Add(this.userLbl);
+            this.PanelLogin.Controls.Add(this.CCCpBox);
             this.PanelLogin.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.PanelLogin.Location = new System.Drawing.Point(31, 70);
             this.PanelLogin.Name = "PanelLogin";
             this.PanelLogin.Size = new System.Drawing.Size(350, 460);
             this.PanelLogin.TabIndex = 0;
-            // 
-            // passLbl
-            // 
-            this.passLbl.AutoSize = true;
-            this.passLbl.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.passLbl.Location = new System.Drawing.Point(52, 225);
-            this.passLbl.Name = "passLbl";
-            this.passLbl.Size = new System.Drawing.Size(66, 14);
-            this.passLbl.TabIndex = 4;
-            this.passLbl.Text = "Password";
-            // 
-            // userLbl
-            // 
-            this.userLbl.AutoSize = true;
-            this.userLbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.userLbl.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.userLbl.Location = new System.Drawing.Point(52, 142);
-            this.userLbl.Name = "userLbl";
-            this.userLbl.Size = new System.Drawing.Size(67, 14);
-            this.userLbl.TabIndex = 3;
-            this.userLbl.Text = "Username";
             // 
             // usernTbox
             // 
@@ -115,6 +102,7 @@
             this.usernTbox.Name = "usernTbox";
             this.usernTbox.Size = new System.Drawing.Size(235, 35);
             this.usernTbox.TabIndex = 1;
+            this.usernTbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.usernTbox_KeyDown);
             // 
             // passTbox
             // 
@@ -125,6 +113,7 @@
             this.passTbox.PasswordChar = '*';
             this.passTbox.Size = new System.Drawing.Size(235, 35);
             this.passTbox.TabIndex = 1;
+            this.passTbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.passTbox_KeyDown);
             // 
             // loginBtn
             // 
@@ -133,7 +122,7 @@
             this.loginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.loginBtn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginBtn.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.loginBtn.Location = new System.Drawing.Point(116, 350);
+            this.loginBtn.Location = new System.Drawing.Point(119, 324);
             this.loginBtn.Name = "loginBtn";
             this.loginBtn.Size = new System.Drawing.Size(124, 51);
             this.loginBtn.TabIndex = 0;
@@ -141,25 +130,38 @@
             this.loginBtn.UseVisualStyleBackColor = false;
             this.loginBtn.Click += new System.EventHandler(this.loginBtn_Click);
             // 
-            // pictureBox2
+            // CCCpBox
             // 
-            this.pictureBox2.BackgroundImage = global::ColdChainConnectSystem_ACDP.Properties.Resources.LoginLogoACDP;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(66, 98);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(428, 299);
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
+            this.CCCpBox.BackgroundImage = global::ColdChainConnectSystem_ACDP.Properties.Resources.CCC_GrayLogo;
+            this.CCCpBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.CCCpBox.Location = new System.Drawing.Point(132, 15);
+            this.CCCpBox.Name = "CCCpBox";
+            this.CCCpBox.Size = new System.Drawing.Size(94, 70);
+            this.CCCpBox.TabIndex = 0;
+            this.CCCpBox.TabStop = false;
             // 
-            // pictureBox1
+            // passLbl
             // 
-            this.pictureBox1.BackgroundImage = global::ColdChainConnectSystem_ACDP.Properties.Resources.CCC_GrayLogo;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(132, 15);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(94, 70);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.passLbl.AutoSize = true;
+            this.passLbl.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.passLbl.Location = new System.Drawing.Point(52, 223);
+            this.passLbl.Name = "passLbl";
+            this.passLbl.Size = new System.Drawing.Size(74, 16);
+            this.passLbl.TabIndex = 4;
+            this.passLbl.Text = "Password";
+            // 
+            // userLbl
+            // 
+            this.userLbl.AutoSize = true;
+            this.userLbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.userLbl.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.userLbl.Location = new System.Drawing.Point(52, 140);
+            this.userLbl.Name = "userLbl";
+            this.userLbl.Size = new System.Drawing.Size(76, 16);
+            this.userLbl.TabIndex = 3;
+            this.userLbl.Text = "Username";
             // 
             // LoginForm
             // 
@@ -178,10 +180,10 @@
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.LogoACDPpBox)).EndInit();
             this.PanelLogin.ResumeLayout(false);
             this.PanelLogin.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CCCpBox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -195,8 +197,8 @@
         private System.Windows.Forms.TextBox passTbox;
         private System.Windows.Forms.Label passLbl;
         private System.Windows.Forms.Label userLbl;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox CCCpBox;
+        private System.Windows.Forms.PictureBox LogoACDPpBox;
     }
 }
 

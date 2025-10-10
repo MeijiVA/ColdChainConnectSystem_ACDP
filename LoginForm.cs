@@ -8,13 +8,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ColdChainConnectSystem_ACDP;
+using ColdChainConnectSystem_ACDP.ClassResources;
 
 namespace ColdChainConnectSystem_ACDP
 {
     public partial class LoginForm : Form
     {
         DisplayClass cc = new DisplayClass();
+        ConnectionClass conc = new ConnectionClass();
         public LoginForm()
         {
             string baseBlue = "#070760";
@@ -61,9 +62,28 @@ namespace ColdChainConnectSystem_ACDP
 
         private void loginBtn_Click(object sender, EventArgs e)
         {
-            String verify = (usernTbox.Text) + "," + (passTbox);
+            String verify = (usernTbox.Text) + "," + (passTbox.Text);
+            MessageBox.Show(verify);
+            conc.LoginAccount(verify);
         }
 
+        private void usernTbox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                SendKeys.Send("{TAB}");
+            }
+        }
+
+        private void passTbox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                SendKeys.Send("{TAB}");
+                SendKeys.Send("{TAB}");
+                SendKeys.Send("{ENTER}");
+            }
+        }
 
     }//class
 }//namespace

@@ -4,12 +4,13 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace ColdChainConnectSystem_ACDP.ClassResources
 {
     internal class ConnectionClass
     {
-        public static void LoginAccount(string input)
+        public void LoginAccount(string input)
         {
             
             string DB = "Data Source = MIAN\\SQLEXPRESS; Initial Catalog=SampleDB; Integrated Security=True;TrustServerCertificate=True";
@@ -18,30 +19,35 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
             //NOTE TEMPORARY
 
             string Account = "";
-            string query = @"SELECT Username, Password FROM Accounts";
+            string query = @"SELECT USERNAME, PASSWORD, POSITION FROM Accounts";
             using (SqlCommand cmd = new SqlCommand(query, con))
             {
                 con.Open();
                 using (var reader = cmd.ExecuteReader())
                 {
-                    //NOTE : EMPID USERNAME PASSWORD FNAME MNAME LNAME CONTNUM AGE DOB POSITION(ACCESS)
+                    //NOTE: Add If active or not !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! (too lazy)
+
+                    //EMPID USERNAME PASSWORD FNAME MNAME LNAME CONTNUM AGE DOB POSITION(ACCESS)   
                     while (reader.Read())
                     {
-                        for (int i = 0; i < 2; i++)
-                        {
-                            if (i == 1)
-                            {
-                                Account = reader[i].ToString();
-                            }
-                            else
-                            {
-                                Account = Account + "," + reader[i].ToString();
-                            }
-                        }
+                        Account = reader[0].ToString() + "," + reader[1].ToString();
 
                         if (input.Equals(Account))
                         {
-                            Console.WriteLine("Account Accepted");
+                            switch (reader[2].ToString())
+                            {
+                                case "Administrator":
+                                    break;
+                                case "Sales":
+                                    break;
+                                case "Assistant":
+                                    break;
+                                case "Inventory":
+                                    break;
+                                default:
+                                    MessageBox.Show("Unknown Position, Please");
+                                    break;
+                            }
                             break;
                         }
                     }
