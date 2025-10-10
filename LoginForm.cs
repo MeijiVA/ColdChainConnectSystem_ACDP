@@ -17,29 +17,30 @@ namespace ColdChainConnectSystem_ACDP
         DisplayClass cc = new DisplayClass();
         public LoginForm()
         {
+            string baseBlue = "#070760";
+            string baseWhite = "#FFFFFF";
             InitializeComponent();
-
+            //FORM DISPLAY
+            splitContainer1.Panel1.BackColor = cc.SetCustomColor(baseBlue);
+            splitContainer1.Panel2.BackColor = cc.SetCustomColor(baseWhite);
+            loginBtn.BackColor = cc.SetCustomColor(baseBlue);
+            userLbl.ForeColor = cc.SetCustomColor(baseBlue);
+            passLbl.ForeColor = cc.SetCustomColor(baseBlue);
+            cc.SetDisplayRectangle(loginBtn);
+            cc.SetDisplayRectangle(splitContainer1.Panel1, 0, 0, 50, 0);
+            cc.myPanel = PanelLogin;
+            splitContainer1.Panel2.Paint += new PaintEventHandler(cc.Panel_Paint);
         }
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
-            //FORM DISPLAY
-            splitContainer1.Panel1.BackColor = cc.SetCustomColor("#0d0e61");
-            splitContainer1.Panel2.BackColor = cc.SetCustomColor("#FFFFFF");
-            loginBtn.BackColor = cc.SetCustomColor("#0d0e61");
-            cc.SetDisplayRectangle(loginBtn);
-            cc.SetDisplayRectangle(splitContainer1.Panel1,0,0,50,0);
-            splitContainer1.SplitterWidth = 1;
-            userLbl.ForeColor = cc.SetCustomColor("#0d0e61");
-            passLbl.ForeColor = cc.SetCustomColor("#0d0e61");
-            cc.myPanel = PanelLogin;
-            splitContainer1.Panel2.Paint += new PaintEventHandler(cc.Panel_Paint); // If the panel is inside another panel
+
         }
 
 
 
         //Allows the form to move via mouseHoldDrag
-
+        
         public Point mouseLoc;
         public Point bottleMouse;
         private void SplitPanelLogo_MouseDown(object sender, MouseEventArgs e)
@@ -57,7 +58,12 @@ namespace ColdChainConnectSystem_ACDP
             }
         }
 
-      
 
-    }
-}
+        private void loginBtn_Click(object sender, EventArgs e)
+        {
+            String verify = (usernTbox.Text) + "," + (passTbox);
+        }
+
+
+    }//class
+}//namespace
