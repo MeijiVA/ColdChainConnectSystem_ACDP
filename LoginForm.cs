@@ -19,13 +19,22 @@ namespace ColdChainConnectSystem_ACDP
         }
         private void LoginForm_Load(object sender, EventArgs e)
         {
-            this.BackColor = cc.SetCustomColor("#4287f5");
+
+            splitContainer1.Panel1.BackColor = cc.SetCustomColor("#13159c");
+            splitContainer1.Panel2.BackColor = cc.SetCustomColor("#FFFFFF");
         }
+
+
+        //Allows the form to move via mouseHoldDrag
 
         public Point mouseLoc;
         public Point bottleMouse;
+        private void SplitPanelLogo_MouseDown(object sender, MouseEventArgs e)
+        {
+            mouseLoc = new Point(-e.X, -e.Y);
+        }
 
-        private void LoginForm_MouseMove(object sender, MouseEventArgs e)
+        private void SplitPanelLogo_MouseMove(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)//checks if left mouse button is held or pressed : D
             {
@@ -35,9 +44,5 @@ namespace ColdChainConnectSystem_ACDP
             }
         }
 
-        private void LoginForm_MouseDown(object sender, MouseEventArgs e)
-        {
-            mouseLoc = new Point(-e.X, -e.Y);
-        }
     }
 }
