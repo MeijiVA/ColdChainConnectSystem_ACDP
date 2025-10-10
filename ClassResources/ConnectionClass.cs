@@ -10,7 +10,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
 {
     internal class ConnectionClass
     {
-        public void LoginAccount(string input)
+        public string LoginAccount(string input)
         {
             
             string DB = "Data Source = MIAN\\SQLEXPRESS; Initial Catalog=SampleDB; Integrated Security=True;TrustServerCertificate=True";
@@ -37,21 +37,21 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                             switch (reader[2].ToString())
                             {
                                 case "Administrator":
-                                    break;
+                                    return "admin";
                                 case "Sales":
-                                    break;
+                                    return "sales";
                                 case "Assistant":
-                                    break;
+                                    return "assist";
                                 case "Inventory":
-                                    break;
+                                    return "inv"; 
                                 default:
-                                    MessageBox.Show("Unknown Position, Please");
-                                    break;
+                                    MessageBox.Show("Unknown Position, Please Contact the Adminstrator.");
+                                    return "default"; 
                             }
-                            break;
                         }
-                    }
 
+                    }
+                    return "default";
                 }
                 con.Close();
 

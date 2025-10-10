@@ -28,46 +28,46 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.LoginSplContainer = new System.Windows.Forms.SplitContainer();
             this.LogoACDPpBox = new System.Windows.Forms.PictureBox();
             this.PanelLogin = new System.Windows.Forms.Panel();
             this.usernTbox = new System.Windows.Forms.TextBox();
             this.passTbox = new System.Windows.Forms.TextBox();
             this.loginBtn = new System.Windows.Forms.Button();
-            this.CCCpBox = new System.Windows.Forms.PictureBox();
             this.passLbl = new System.Windows.Forms.Label();
             this.userLbl = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
-            this.splitContainer1.Panel1.SuspendLayout();
-            this.splitContainer1.Panel2.SuspendLayout();
-            this.splitContainer1.SuspendLayout();
+            this.CCCpBox = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.LoginSplContainer)).BeginInit();
+            this.LoginSplContainer.Panel1.SuspendLayout();
+            this.LoginSplContainer.Panel2.SuspendLayout();
+            this.LoginSplContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LogoACDPpBox)).BeginInit();
             this.PanelLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CCCpBox)).BeginInit();
             this.SuspendLayout();
             // 
-            // splitContainer1
+            // LoginSplContainer
             // 
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
-            this.splitContainer1.IsSplitterFixed = true;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer1.Name = "splitContainer1";
+            this.LoginSplContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LoginSplContainer.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
+            this.LoginSplContainer.IsSplitterFixed = true;
+            this.LoginSplContainer.Location = new System.Drawing.Point(0, 0);
+            this.LoginSplContainer.Name = "LoginSplContainer";
             // 
-            // splitContainer1.Panel1
+            // LoginSplContainer.Panel1
             // 
-            this.splitContainer1.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.splitContainer1.Panel1.Controls.Add(this.LogoACDPpBox);
-            this.splitContainer1.Panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SplitPanelLogo_MouseDown);
-            this.splitContainer1.Panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.SplitPanelLogo_MouseMove);
+            this.LoginSplContainer.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.LoginSplContainer.Panel1.Controls.Add(this.LogoACDPpBox);
+            this.LoginSplContainer.Panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LoginSplContainer_Panel1_MouseDown);
+            this.LoginSplContainer.Panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.LoginSplContainer_Panel1_MouseMove);
             // 
-            // splitContainer1.Panel2
+            // LoginSplContainer.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.PanelLogin);
-            this.splitContainer1.Size = new System.Drawing.Size(1000, 600);
-            this.splitContainer1.SplitterDistance = 577;
-            this.splitContainer1.SplitterWidth = 1;
-            this.splitContainer1.TabIndex = 0;
+            this.LoginSplContainer.Panel2.Controls.Add(this.PanelLogin);
+            this.LoginSplContainer.Size = new System.Drawing.Size(1000, 600);
+            this.LoginSplContainer.SplitterDistance = 577;
+            this.LoginSplContainer.SplitterWidth = 1;
+            this.LoginSplContainer.TabIndex = 0;
             // 
             // LogoACDPpBox
             // 
@@ -130,16 +130,6 @@
             this.loginBtn.UseVisualStyleBackColor = false;
             this.loginBtn.Click += new System.EventHandler(this.loginBtn_Click);
             // 
-            // CCCpBox
-            // 
-            this.CCCpBox.BackgroundImage = global::ColdChainConnectSystem_ACDP.Properties.Resources.CCC_GrayLogo;
-            this.CCCpBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.CCCpBox.Location = new System.Drawing.Point(132, 15);
-            this.CCCpBox.Name = "CCCpBox";
-            this.CCCpBox.Size = new System.Drawing.Size(94, 70);
-            this.CCCpBox.TabIndex = 0;
-            this.CCCpBox.TabStop = false;
-            // 
             // passLbl
             // 
             this.passLbl.AutoSize = true;
@@ -163,11 +153,21 @@
             this.userLbl.TabIndex = 3;
             this.userLbl.Text = "Username";
             // 
+            // CCCpBox
+            // 
+            this.CCCpBox.BackgroundImage = global::ColdChainConnectSystem_ACDP.Properties.Resources.CCC_GrayLogo;
+            this.CCCpBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.CCCpBox.Location = new System.Drawing.Point(132, 15);
+            this.CCCpBox.Name = "CCCpBox";
+            this.CCCpBox.Size = new System.Drawing.Size(94, 70);
+            this.CCCpBox.TabIndex = 0;
+            this.CCCpBox.TabStop = false;
+            // 
             // LoginForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1000, 600);
-            this.Controls.Add(this.splitContainer1);
+            this.Controls.Add(this.LoginSplContainer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -176,10 +176,10 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginForm";
             this.Load += new System.EventHandler(this.LoginForm_Load);
-            this.splitContainer1.Panel1.ResumeLayout(false);
-            this.splitContainer1.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
-            this.splitContainer1.ResumeLayout(false);
+            this.LoginSplContainer.Panel1.ResumeLayout(false);
+            this.LoginSplContainer.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.LoginSplContainer)).EndInit();
+            this.LoginSplContainer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.LogoACDPpBox)).EndInit();
             this.PanelLogin.ResumeLayout(false);
             this.PanelLogin.PerformLayout();
@@ -190,7 +190,7 @@
 
         #endregion
 
-        private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.SplitContainer LoginSplContainer;
         private System.Windows.Forms.Button loginBtn;
         private System.Windows.Forms.Panel PanelLogin;
         private System.Windows.Forms.TextBox usernTbox;
