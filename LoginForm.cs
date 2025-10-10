@@ -16,5 +16,9 @@ namespace ColdChainConnectSystem_ACDP
         {
             InitializeComponent();
         }
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+            this.BackColor = ColorClass.SetCustomColor("#4287f5");
+        }
     }
 }
