@@ -13,7 +13,7 @@ namespace ColdChainConnectSystem_ACDP
     {
         public abstract Color SetCustomColor(string color);
         public abstract void SetDisplayRectangle(Button b);
-        public abstract void SetDisplayRectangle(Panel b);
+        public abstract void SetDisplayRectangle(Panel p,int arc1,int arc2,int arc3,int arc4);
     }
 
 
@@ -38,15 +38,16 @@ namespace ColdChainConnectSystem_ACDP
             b.Region = new Region(p);
         }
 
-        public override void SetDisplayRectangle(Panel b)
+        public override void SetDisplayRectangle(Panel p, int arc1, int arc2, int arc3, int arc4)
         {
-            GraphicsPath p = new GraphicsPath();
-            Rectangle Rect = new Rectangle(0, 0, b.Width, b.Height);
-            p.AddArc(Rect.X, Rect.Y, 50, 50, 180, 90);
-            p.AddArc(Rect.X + Rect.Width, Rect.Y, 50, 50, 270, 90);
-            p.AddArc(Rect.X + Rect.Width, Rect.Y + Rect.Height - 50, 50, 50, 0, 90);
-            p.AddArc(Rect.X, Rect.Y + Rect.Height, 50, 50, 90, 90);
-            b.Region = new Region(p);
+            GraphicsPath g = new GraphicsPath();
+            Rectangle rec = new Rectangle(0, 0, p.Width, p.Height);
+            g.AddArc(rec.X, rec.Y, 1 + arc1, 1 + arc1, 180, 90);
+            g.AddArc(rec.X + rec.Width - arc2, rec.Y, 50, 50, 270, 90);
+            g.AddArc(rec.X + rec.Width - arc3, rec.Y + rec.Height - 50, 50, 50, 0, 90);
+            g.AddArc(rec.X, rec.Y + rec.Height - arc4, 50, 50, 90, 90);
+            p.Region = new Region(g);
+
         }
     }
 }

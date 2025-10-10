@@ -30,13 +30,15 @@
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.loginBtn = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.PanelLogin = new System.Windows.Forms.Panel();
             this.passTbox = new System.Windows.Forms.TextBox();
             this.usernTbox = new System.Windows.Forms.TextBox();
+            this.userLbl = new System.Windows.Forms.Label();
+            this.passLbl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.PanelLogin.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -55,7 +57,7 @@
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.panel1);
+            this.splitContainer1.Panel2.Controls.Add(this.PanelLogin);
             this.splitContainer1.Size = new System.Drawing.Size(1000, 600);
             this.splitContainer1.SplitterDistance = 577;
             this.splitContainer1.TabIndex = 0;
@@ -74,16 +76,21 @@
             this.loginBtn.Text = "Login";
             this.loginBtn.UseVisualStyleBackColor = false;
             // 
-            // panel1
+            // PanelLogin
             // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.usernTbox);
-            this.panel1.Controls.Add(this.passTbox);
-            this.panel1.Controls.Add(this.loginBtn);
-            this.panel1.Location = new System.Drawing.Point(33, 68);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(348, 460);
-            this.panel1.TabIndex = 0;
+            this.PanelLogin.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.PanelLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.PanelLogin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PanelLogin.Controls.Add(this.passLbl);
+            this.PanelLogin.Controls.Add(this.userLbl);
+            this.PanelLogin.Controls.Add(this.usernTbox);
+            this.PanelLogin.Controls.Add(this.passTbox);
+            this.PanelLogin.Controls.Add(this.loginBtn);
+            this.PanelLogin.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.PanelLogin.Location = new System.Drawing.Point(31, 70);
+            this.PanelLogin.Name = "PanelLogin";
+            this.PanelLogin.Size = new System.Drawing.Size(350, 460);
+            this.PanelLogin.TabIndex = 0;
             // 
             // passTbox
             // 
@@ -103,6 +110,28 @@
             this.usernTbox.Size = new System.Drawing.Size(235, 40);
             this.usernTbox.TabIndex = 2;
             // 
+            // userLbl
+            // 
+            this.userLbl.AutoSize = true;
+            this.userLbl.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userLbl.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.userLbl.Location = new System.Drawing.Point(52, 137);
+            this.userLbl.Name = "userLbl";
+            this.userLbl.Size = new System.Drawing.Size(67, 14);
+            this.userLbl.TabIndex = 3;
+            this.userLbl.Text = "Username";
+            // 
+            // passLbl
+            // 
+            this.passLbl.AutoSize = true;
+            this.passLbl.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passLbl.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.passLbl.Location = new System.Drawing.Point(52, 219);
+            this.passLbl.Name = "passLbl";
+            this.passLbl.Size = new System.Drawing.Size(66, 14);
+            this.passLbl.TabIndex = 4;
+            this.passLbl.Text = "Password";
+            // 
             // LoginForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -119,8 +148,8 @@
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.PanelLogin.ResumeLayout(false);
+            this.PanelLogin.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -129,9 +158,11 @@
 
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Button loginBtn;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel PanelLogin;
         private System.Windows.Forms.TextBox usernTbox;
         private System.Windows.Forms.TextBox passTbox;
+        private System.Windows.Forms.Label passLbl;
+        private System.Windows.Forms.Label userLbl;
     }
 }
 

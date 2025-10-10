@@ -20,16 +20,19 @@ namespace ColdChainConnectSystem_ACDP
             InitializeComponent();
 
         }
+
         private void LoginForm_Load(object sender, EventArgs e)
         {
-            this.BackColor = cc.SetCustomColor("#0d0e61");
+            //FORM DISPLAY
             splitContainer1.Panel1.BackColor = cc.SetCustomColor("#0d0e61");
             splitContainer1.Panel2.BackColor = cc.SetCustomColor("#FFFFFF");
             loginBtn.BackColor = cc.SetCustomColor("#0d0e61");
-
             cc.SetDisplayRectangle(loginBtn);
-            cc.SetDisplayRectangle(splitContainer1.Panel2);
+            cc.SetDisplayRectangle(splitContainer1.Panel1,0,0,50,0);
             splitContainer1.SplitterWidth = 1;
+            cc.SetDisplayRectangle(PanelLogin, 0, 50, 50, 50);
+            userLbl.ForeColor = cc.SetCustomColor("#0d0e61");
+            passLbl.ForeColor = cc.SetCustomColor("#0d0e61");
         }
 
 
