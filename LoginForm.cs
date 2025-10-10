@@ -30,9 +30,10 @@ namespace ColdChainConnectSystem_ACDP
             cc.SetDisplayRectangle(loginBtn);
             cc.SetDisplayRectangle(splitContainer1.Panel1,0,0,50,0);
             splitContainer1.SplitterWidth = 1;
-            cc.SetDisplayRectangle(PanelLogin, 0, 50, 50, 50);
             userLbl.ForeColor = cc.SetCustomColor("#0d0e61");
             passLbl.ForeColor = cc.SetCustomColor("#0d0e61");
+            cc.myPanel = PanelLogin;
+            splitContainer1.Panel2.Paint += new PaintEventHandler(cc.Panel_Paint); // If the panel is inside another panel
         }
 
 
@@ -48,14 +49,15 @@ namespace ColdChainConnectSystem_ACDP
 
         private void SplitPanelLogo_MouseMove(object sender, MouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Left)//checks if left mouse button is held or pressed : D
+            if (e.Button == MouseButtons.Left)
             {
-                Point mousePose = Control.MousePosition;//point var of mouse cursor from topleft corner of sccreen
-                mousePose.Offset(mouseLoc.X, mouseLoc.Y);//translates point depending on the location of mouseLoc
-                Location = mousePose;//forms location is moved depending on the location of the point variable 
+                Point mousePose = Control.MousePosition;
+                mousePose.Offset(mouseLoc.X, mouseLoc.Y);
+                Location = mousePose;
             }
         }
 
+      
 
     }
 }

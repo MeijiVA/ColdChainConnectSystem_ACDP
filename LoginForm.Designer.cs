@@ -80,7 +80,6 @@
             // 
             this.PanelLogin.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.PanelLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.PanelLogin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PanelLogin.Controls.Add(this.passLbl);
             this.PanelLogin.Controls.Add(this.userLbl);
             this.PanelLogin.Controls.Add(this.usernTbox);
