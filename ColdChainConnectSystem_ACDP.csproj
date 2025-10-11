@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppForms\MainPanel\Dashboard\DashboardUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AppForms\MainPanel\Dashboard\DashboardUC.Designer.cs">
+      <DependentUpon>DashboardUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForms\MainPanel\Dashboard\GreetPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AppForms\MainPanel\Dashboard\GreetPanel.Designer.cs">
+      <DependentUpon>GreetPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="AppForms\SidePanel\Admin.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -95,6 +107,12 @@
     <EmbeddedResource Include="AppForms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\MainPanel\Dashboard\DashboardUC.resx">
+      <DependentUpon>DashboardUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\MainPanel\Dashboard\GreetPanel.resx">
+      <DependentUpon>GreetPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AppForms\SidePanel\Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>
     </EmbeddedResource>
@@ -114,7 +132,7 @@
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
@@ -148,14 +166,12 @@
   <ItemGroup>
     <None Include="Resources\LoginLogoACDP.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="AppForms\MainPanel\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\LogoutButton.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\CCC_icon.ico" />
+    <None Include="Resources\CCC_Logo.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

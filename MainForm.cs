@@ -10,6 +10,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ColdChainConnectSystem_ACDP.AppForms.MainPanel;
 
 namespace ColdChainConnectSystem_ACDP
 {
@@ -21,29 +22,63 @@ namespace ColdChainConnectSystem_ACDP
             
         }
 
-        public const int WM_NCLBUTTONDOWN = 0xA1;
-        public const int HT_CAPTION = 0x2;
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            this.Icon = ColdChainConnectSystem_ACDP.Properties.Resources.CCC_Logo;
+        }
 
-        [DllImportAttribute("user32.dll")]
-        public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
-        [DllImportAttribute("user32.dll")]
-        public static extern bool ReleaseCapture();
+        public void NavigateTo(UserControl screen)
+        {
+            DisplayPanel.Controls.Clear();
+            screen.Dock = DockStyle.Fill;
+            
+            DisplayPanel.Controls.Add(screen);
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
         public Point mouseLoc;
         public Point bottleMouse;
-
         private void MainForm_MouseDown(object sender, MouseEventArgs e)
         {
             mouseLoc = new Point(-e.X, -e.Y);
         }
-
         private void MainForm_MouseMove(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
-                ReleaseCapture();
-                SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+                Point mousePos = Control.MousePosition;
+                mousePos.Offset(mouseLoc.X, mouseLoc.Y);
+                this.Location = mousePos;
             }
         }
 
@@ -51,15 +86,15 @@ namespace ColdChainConnectSystem_ACDP
         {
             this.Close();
         }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void logoutBtn_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Cancel;
         }
-    }
-}
+
+
+
+
+
+
+    }//class
+}//namespace

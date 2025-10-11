@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.DisplayPanel = new System.Windows.Forms.Panel();
             this.MainSidePanel = new System.Windows.Forms.Panel();
             this.UserSidePanel = new System.Windows.Forms.Panel();
@@ -54,6 +53,7 @@
             this.MainSidePanel.Name = "MainSidePanel";
             this.MainSidePanel.Size = new System.Drawing.Size(200, 355);
             this.MainSidePanel.TabIndex = 1;
+
             // 
             // UserSidePanel
             // 
@@ -71,7 +71,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 46);
             this.panel1.TabIndex = 3;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // logoutBtn
             // 
@@ -109,14 +108,13 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.DisplayPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "MainForm";
-            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainForm";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MainForm_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MainForm_MouseMove);
             this.panel1.ResumeLayout(false);

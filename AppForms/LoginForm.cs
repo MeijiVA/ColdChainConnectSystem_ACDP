@@ -16,11 +16,16 @@ namespace ColdChainConnectSystem_ACDP
 {
     public partial class LoginForm : Form
     {
+
         DisplayClass dc = new DisplayClass();
         private ConnectionClass conc;
-        private static MainForm mf; //singleton
+        public static MainForm mf; //singleton
         public LoginForm()
         {
+            if (mf == null)
+            {
+                mf = new MainForm();
+            }
             string baseBlue = "#070760";
             string baseWhite = "#FFFFFF";
             InitializeComponent();
@@ -38,7 +43,7 @@ namespace ColdChainConnectSystem_ACDP
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
-
+            this.Icon = ColdChainConnectSystem_ACDP.Properties.Resources.CCC_Logo;
         }
         
         private void loginBtn_Click(object sender, EventArgs e)
@@ -48,10 +53,6 @@ namespace ColdChainConnectSystem_ACDP
             switch (conc.LoginAccount(verify))
             {
                 case "admin":
-                    if(mf == null)
-                    {
-                        mf = new MainForm();
-                    }
                     UserAccountControl uc = new UserAccountControl();
                     Admin af = new Admin();
 
@@ -64,7 +65,7 @@ namespace ColdChainConnectSystem_ACDP
                     mf.MainSidePanel.Controls.Add(af);
                     mf.UserSidePanel.Controls.Add(uc);
 
-                    uc.UAC_namelbl.Text = conc.name;
+                    uc.UAC_namelbl.Text = ConnectionClass.fname +" "+ ConnectionClass.mname + " " + ConnectionClass.lname;
                     uc.UAC_positionlbl.Text = conc.position;
 
                     af.Show();

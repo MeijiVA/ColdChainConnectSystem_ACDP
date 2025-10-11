@@ -28,22 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.LoginSplContainer = new System.Windows.Forms.SplitContainer();
-            this.LogoACDPpBox = new System.Windows.Forms.PictureBox();
             this.PanelLogin = new System.Windows.Forms.Panel();
             this.usernTbox = new System.Windows.Forms.TextBox();
             this.passTbox = new System.Windows.Forms.TextBox();
             this.loginBtn = new System.Windows.Forms.Button();
             this.passLbl = new System.Windows.Forms.Label();
             this.userLbl = new System.Windows.Forms.Label();
+            this.LogoACDPpBox = new System.Windows.Forms.PictureBox();
             this.CCCpBox = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.LoginSplContainer)).BeginInit();
             this.LoginSplContainer.Panel1.SuspendLayout();
             this.LoginSplContainer.Panel2.SuspendLayout();
             this.LoginSplContainer.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.LogoACDPpBox)).BeginInit();
             this.PanelLogin.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LogoACDPpBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CCCpBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,16 +68,6 @@
             this.LoginSplContainer.SplitterDistance = 577;
             this.LoginSplContainer.SplitterWidth = 1;
             this.LoginSplContainer.TabIndex = 0;
-            // 
-            // LogoACDPpBox
-            // 
-            this.LogoACDPpBox.BackgroundImage = global::ColdChainConnectSystem_ACDP.Properties.Resources.LoginLogoACDP;
-            this.LogoACDPpBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.LogoACDPpBox.Location = new System.Drawing.Point(66, 98);
-            this.LogoACDPpBox.Name = "LogoACDPpBox";
-            this.LogoACDPpBox.Size = new System.Drawing.Size(428, 299);
-            this.LogoACDPpBox.TabIndex = 0;
-            this.LogoACDPpBox.TabStop = false;
             // 
             // PanelLogin
             // 
@@ -155,6 +144,16 @@
             this.userLbl.TabIndex = 3;
             this.userLbl.Text = "Username";
             // 
+            // LogoACDPpBox
+            // 
+            this.LogoACDPpBox.BackgroundImage = global::ColdChainConnectSystem_ACDP.Properties.Resources.LoginLogoACDP;
+            this.LogoACDPpBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.LogoACDPpBox.Location = new System.Drawing.Point(66, 98);
+            this.LogoACDPpBox.Name = "LogoACDPpBox";
+            this.LogoACDPpBox.Size = new System.Drawing.Size(428, 299);
+            this.LogoACDPpBox.TabIndex = 0;
+            this.LogoACDPpBox.TabStop = false;
+            // 
             // CCCpBox
             // 
             this.CCCpBox.BackgroundImage = global::ColdChainConnectSystem_ACDP.Properties.Resources.CCC_GrayLogo;
@@ -171,11 +170,9 @@
             this.ClientSize = new System.Drawing.Size(1000, 600);
             this.Controls.Add(this.LoginSplContainer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "LoginForm";
-            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginForm";
             this.Load += new System.EventHandler(this.LoginForm_Load);
@@ -183,9 +180,9 @@
             this.LoginSplContainer.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.LoginSplContainer)).EndInit();
             this.LoginSplContainer.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.LogoACDPpBox)).EndInit();
             this.PanelLogin.ResumeLayout(false);
             this.PanelLogin.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LogoACDPpBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CCCpBox)).EndInit();
             this.ResumeLayout(false);
 

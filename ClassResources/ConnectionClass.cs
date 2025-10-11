@@ -10,14 +10,19 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
 {
     internal class ConnectionClass
     {
+        public static string fname { get; set; }
+        public static string mname { get; set; }
+        public static string lname { get; set; }
+
         public ConnectionClass()
         {
             account = "";
-            name = "";
+            fname = "";
+            mname = "";
+            lname = "";
             position = "";
         }
         public string account = "";
-        public string name = "";
         public string position = "";
         public string LoginAccount(string input)
         {
@@ -42,7 +47,9 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
 
                         if (input.Equals(account))
                         {
-                            name = reader[3].ToString() + " " + reader[4].ToString().Substring(0,1) + ". " + reader[5].ToString(); 
+                            fname = reader[3].ToString();
+                            mname = reader[4].ToString().Substring(0, 1);
+                            lname = reader[5].ToString(); 
                             position = reader[2].ToString();
                             switch (position)
                             {
