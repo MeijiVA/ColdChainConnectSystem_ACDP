@@ -46,11 +46,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AppForms\AdminForm.cs">
-      <SubType>Form</SubType>
+    <Compile Include="AppForms\SidePanel\Admin.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="AppForms\AdminForm.Designer.cs">
-      <DependentUpon>AdminForm.cs</DependentUpon>
+    <Compile Include="AppForms\SidePanel\Admin.Designer.cs">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForms\SidePanel\Assistant.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AppForms\SidePanel\Assistant.Designer.cs">
+      <DependentUpon>Assistant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForms\SidePanel\Inventory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AppForms\SidePanel\Inventory.Designer.cs">
+      <DependentUpon>Inventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForms\SidePanel\Sales.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AppForms\SidePanel\Sales.Designer.cs">
+      <DependentUpon>Sales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForms\SidePanel\UserAccountControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AppForms\SidePanel\UserAccountControl.Designer.cs">
+      <DependentUpon>UserAccountControl.cs</DependentUpon>
     </Compile>
     <Compile Include="ClassResources\ConnectionClass.cs" />
     <Compile Include="ClassResources\DisplayClass.cs" />
@@ -68,11 +92,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AppForms\AdminForm.resx">
-      <DependentUpon>AdminForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="AppForms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\SidePanel\Admin.resx">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\SidePanel\Assistant.resx">
+      <DependentUpon>Assistant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\SidePanel\Inventory.resx">
+      <DependentUpon>Inventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\SidePanel\Sales.resx">
+      <DependentUpon>Sales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\SidePanel\UserAccountControl.resx">
+      <DependentUpon>UserAccountControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -111,6 +147,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\LoginLogoACDP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="AppForms\MainPanel\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogoutButton.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

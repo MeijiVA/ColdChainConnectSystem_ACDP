@@ -28,26 +28,70 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.mainPanel = new System.Windows.Forms.Panel();
+            this.DisplayPanel = new System.Windows.Forms.Panel();
+            this.MainSidePanel = new System.Windows.Forms.Panel();
+            this.UserSidePanel = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.logoutBtn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // mainPanel
+            // DisplayPanel
             // 
-            this.mainPanel.BackColor = System.Drawing.Color.White;
-            this.mainPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.mainPanel.Location = new System.Drawing.Point(0, 50);
-            this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(1000, 550);
-            this.mainPanel.TabIndex = 0;
+            this.DisplayPanel.BackColor = System.Drawing.Color.White;
+            this.DisplayPanel.Location = new System.Drawing.Point(202, 30);
+            this.DisplayPanel.Name = "DisplayPanel";
+            this.DisplayPanel.Size = new System.Drawing.Size(798, 570);
+            this.DisplayPanel.TabIndex = 0;
+            // 
+            // MainSidePanel
+            // 
+            this.MainSidePanel.BackColor = System.Drawing.Color.White;
+            this.MainSidePanel.Location = new System.Drawing.Point(0, 200);
+            this.MainSidePanel.Name = "MainSidePanel";
+            this.MainSidePanel.Size = new System.Drawing.Size(200, 355);
+            this.MainSidePanel.TabIndex = 1;
+            // 
+            // UserSidePanel
+            // 
+            this.UserSidePanel.BackColor = System.Drawing.Color.White;
+            this.UserSidePanel.Location = new System.Drawing.Point(0, 30);
+            this.UserSidePanel.Name = "UserSidePanel";
+            this.UserSidePanel.Size = new System.Drawing.Size(200, 170);
+            this.UserSidePanel.TabIndex = 2;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.logoutBtn);
+            this.panel1.Location = new System.Drawing.Point(0, 554);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(200, 46);
+            this.panel1.TabIndex = 3;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // logoutBtn
+            // 
+            this.logoutBtn.BackgroundImage = global::ColdChainConnectSystem_ACDP.Properties.Resources.LogoutButton;
+            this.logoutBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.logoutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.logoutBtn.ForeColor = System.Drawing.Color.Transparent;
+            this.logoutBtn.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.logoutBtn.Location = new System.Drawing.Point(50, 12);
+            this.logoutBtn.Name = "logoutBtn";
+            this.logoutBtn.Size = new System.Drawing.Size(93, 25);
+            this.logoutBtn.TabIndex = 0;
+            this.logoutBtn.UseVisualStyleBackColor = true;
+            this.logoutBtn.Click += new System.EventHandler(this.logoutBtn_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::ColdChainConnectSystem_ACDP.Properties.Resources.ACDPLogo;
-            this.pictureBox1.Location = new System.Drawing.Point(25, -1);
+            this.pictureBox1.Location = new System.Drawing.Point(21, 1);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(106, 50);
+            this.pictureBox1.Size = new System.Drawing.Size(74, 30);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -58,8 +102,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.ClientSize = new System.Drawing.Size(1000, 600);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.UserSidePanel);
+            this.Controls.Add(this.MainSidePanel);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.mainPanel);
+            this.Controls.Add(this.DisplayPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -70,6 +117,7 @@
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MainForm_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MainForm_MouseMove);
+            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -77,6 +125,10 @@
 
         #endregion
         private System.Windows.Forms.PictureBox pictureBox1;
-        public System.Windows.Forms.Panel mainPanel;
+        public System.Windows.Forms.Panel DisplayPanel;
+        public System.Windows.Forms.Panel MainSidePanel;
+        public System.Windows.Forms.Panel UserSidePanel;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button logoutBtn;
     }
 }

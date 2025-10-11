@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ColdChainConnectSystem_ACDP.AppForms
+namespace ColdChainConnectSystem_ACDP.AppForms.SidePanel
 {
-    public partial class AdminForm : Form
+    public partial class Inventory : UserControl
     {
-        public AdminForm()
+        public Inventory()
         {
             InitializeComponent();
-        }
-
-        private void AdminForm_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

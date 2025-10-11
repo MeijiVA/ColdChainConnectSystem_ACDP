@@ -10,6 +10,15 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
 {
     internal class ConnectionClass
     {
+        public ConnectionClass()
+        {
+            account = "";
+            name = "";
+            position = "";
+        }
+        public string account = "";
+        public string name = "";
+        public string position = "";
         public string LoginAccount(string input)
         {
             
@@ -18,8 +27,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
             SqlConnection con = new SqlConnection(DB);
             //NOTE TEMPORARY
 
-            string Account = "";
-            string query = @"SELECT USERNAME, PASSWORD, POSITION FROM Accounts";
+            string query = @"SELECT USERNAME, PASSWORD, POSITION, FNAME, MNAME, LNAME FROM Accounts";
             using (SqlCommand cmd = new SqlCommand(query, con))
             {
                 con.Open();
@@ -30,11 +38,13 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                     //EMPID USERNAME PASSWORD FNAME MNAME LNAME CONTNUM AGE DOB POSITION(ACCESS)   
                     while (reader.Read())
                     {
-                        Account = reader[0].ToString() + "," + reader[1].ToString();
+                        account = reader[0].ToString() + "," + reader[1].ToString();
 
-                        if (input.Equals(Account))
+                        if (input.Equals(account))
                         {
-                            switch (reader[2].ToString())
+                            name = reader[3].ToString() + " " + reader[4].ToString().Substring(0,1) + ". " + reader[5].ToString(); 
+                            position = reader[2].ToString();
+                            switch (position)
                             {
                                 case "Administrator":
                                     return "admin";
@@ -49,14 +59,14 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                                     return "default"; 
                             }
                         }
-
                     }
-                    return "default";
                 }
                 con.Close();
+                return "default";
 
             }
 
         }
+
     }
 }

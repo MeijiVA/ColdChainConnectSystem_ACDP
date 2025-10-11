@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ColdChainConnectSystem_ACDP.AppForms;
+using ColdChainConnectSystem_ACDP.AppForms.SidePanel;
 using ColdChainConnectSystem_ACDP.ClassResources;
 
 namespace ColdChainConnectSystem_ACDP
@@ -16,7 +17,7 @@ namespace ColdChainConnectSystem_ACDP
     public partial class LoginForm : Form
     {
         DisplayClass cc = new DisplayClass();
-        private ConnectionClass conc = new ConnectionClass(); 
+        private ConnectionClass conc;
         private static MainForm mf; //singleton
         public LoginForm()
         {
@@ -42,6 +43,7 @@ namespace ColdChainConnectSystem_ACDP
         
         private void loginBtn_Click(object sender, EventArgs e)
         {
+            conc = new ConnectionClass();
             String verify = (usernTbox.Text) + "," + (passTbox.Text);
             switch (conc.LoginAccount(verify))
             {
@@ -50,18 +52,29 @@ namespace ColdChainConnectSystem_ACDP
                     {
                         mf = new MainForm();
                     }
+                    UserAccountControl uc = new UserAccountControl();
+                    Admin af = new Admin();
 
-                    AdminForm af = new AdminForm();
-                    
+                    uc.Dock = DockStyle.Fill;
                     af.Dock = DockStyle.Fill;
-                    af.TopLevel = false;
-                    mf.mainPanel.Controls.Clear();
-                    mf.mainPanel.Controls.Add(af);
+
+                    mf.MainSidePanel.Controls.Clear();
+                    mf.UserSidePanel.Controls.Clear();
+
+                    mf.MainSidePanel.Controls.Add(af);
+                    mf.UserSidePanel.Controls.Add(uc);
+
+                    uc.UAC_namelbl.Text = conc.name;
+                    uc.UAC_positionlbl.Text = conc.position;
+
                     af.Show();
                     this.Hide();
+
                     if(mf.ShowDialog() == DialogResult.Cancel)
                     {
                         this.Show();
+                        passTbox.Text = "";
+                        usernTbox.Text = "";
                     }
                     
                     break;

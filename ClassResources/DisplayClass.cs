@@ -9,11 +9,11 @@ using System.Windows.Forms;
 
 namespace ColdChainConnectSystem_ACDP
 {
-
     public abstract class CColor
     {
         public abstract Color SetCustomColor(string color);
         public abstract void SetDisplayRectangle(Button b);
+        public abstract void SetDisplayCircle(PictureBox b);
         public abstract void SetDisplayRectangle(Panel p,int arc1,int arc2,int arc3,int arc4);
         public abstract void Panel_Paint(object sender, PaintEventArgs e);
         
@@ -81,8 +81,12 @@ namespace ColdChainConnectSystem_ACDP
             }
         }
 
-
-
-
+        public override void SetDisplayCircle(PictureBox pb)
+        {
+            System.Drawing.Drawing2D.GraphicsPath obj = new System.Drawing.Drawing2D.GraphicsPath();
+            obj.AddEllipse(0,0,pb.Width,pb.Height);
+            Region rg = new Region(obj);
+            pb.Region = rg;
+        }
     }//class color
 }//namespace
