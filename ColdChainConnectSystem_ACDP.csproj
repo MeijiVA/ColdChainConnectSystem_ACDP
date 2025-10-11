@@ -154,5 +154,8 @@
   <ItemGroup>
     <None Include="Resources\LogoutButton.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CCC_icon.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

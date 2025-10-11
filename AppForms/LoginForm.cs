@@ -16,7 +16,7 @@ namespace ColdChainConnectSystem_ACDP
 {
     public partial class LoginForm : Form
     {
-        DisplayClass cc = new DisplayClass();
+        DisplayClass dc = new DisplayClass();
         private ConnectionClass conc;
         private static MainForm mf; //singleton
         public LoginForm()
@@ -25,15 +25,15 @@ namespace ColdChainConnectSystem_ACDP
             string baseWhite = "#FFFFFF";
             InitializeComponent();
             //FORM DISPLAY
-            LoginSplContainer.Panel1.BackColor = cc.SetCustomColor(baseBlue);
-            LoginSplContainer.Panel2.BackColor = cc.SetCustomColor(baseWhite);
-            loginBtn.BackColor = cc.SetCustomColor(baseBlue);
-            userLbl.ForeColor = cc.SetCustomColor(baseBlue);
-            passLbl.ForeColor = cc.SetCustomColor(baseBlue);
-            cc.SetDisplayRectangle(loginBtn);
-            cc.SetDisplayRectangle(LoginSplContainer.Panel1, 0, 0, 50, 0);
-            cc.myPanel = PanelLogin;
-            LoginSplContainer.Panel2.Paint += new PaintEventHandler(cc.Panel_Paint);
+            LoginSplContainer.Panel1.BackColor = dc.SetCustomColor(baseBlue);
+            LoginSplContainer.Panel2.BackColor = dc.SetCustomColor(baseWhite);
+            loginBtn.BackColor = dc.SetCustomColor(baseBlue);
+            userLbl.ForeColor = dc.SetCustomColor(baseBlue);
+            passLbl.ForeColor = dc.SetCustomColor(baseBlue);
+            dc.SetDisplayRectangle(loginBtn);
+            dc.SetDisplayRectangle(LoginSplContainer.Panel1, 0, 0, 50, 0);
+            dc.myPanel = PanelLogin;
+            LoginSplContainer.Panel2.Paint += new PaintEventHandler(dc.Panel_Paint);
         }
 
         private void LoginForm_Load(object sender, EventArgs e)

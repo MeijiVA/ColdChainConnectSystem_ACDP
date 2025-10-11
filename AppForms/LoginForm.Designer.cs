@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.LoginSplContainer = new System.Windows.Forms.SplitContainer();
             this.LogoACDPpBox = new System.Windows.Forms.PictureBox();
             this.PanelLogin = new System.Windows.Forms.Panel();
@@ -119,6 +120,7 @@
             // 
             this.loginBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.loginBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.loginBtn.FlatAppearance.BorderSize = 0;
             this.loginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.loginBtn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginBtn.ForeColor = System.Drawing.SystemColors.ButtonFace;
@@ -169,6 +171,7 @@
             this.ClientSize = new System.Drawing.Size(1000, 600);
             this.Controls.Add(this.LoginSplContainer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "LoginForm";

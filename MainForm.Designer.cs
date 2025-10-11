@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.DisplayPanel = new System.Windows.Forms.Panel();
             this.MainSidePanel = new System.Windows.Forms.Panel();
             this.UserSidePanel = new System.Windows.Forms.Panel();
@@ -108,6 +109,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.DisplayPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "MainForm";

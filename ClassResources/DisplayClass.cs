@@ -13,6 +13,7 @@ namespace ColdChainConnectSystem_ACDP
     {
         public abstract Color SetCustomColor(string color);
         public abstract void SetDisplayRectangle(Button b);
+        public abstract void SetDisplayRectangle(Button p, int arc1, int arc2, int arc3, int arc4);
         public abstract void SetDisplayCircle(PictureBox b);
         public abstract void SetDisplayRectangle(Panel p,int arc1,int arc2,int arc3,int arc4);
         public abstract void Panel_Paint(object sender, PaintEventArgs e);
@@ -87,6 +88,18 @@ namespace ColdChainConnectSystem_ACDP
             obj.AddEllipse(0,0,pb.Width,pb.Height);
             Region rg = new Region(obj);
             pb.Region = rg;
+        }
+
+        public override void SetDisplayRectangle(Button b, int arc1, int arc2, int arc3, int arc4)
+        {
+            GraphicsPath g = new GraphicsPath();
+            Rectangle rec = new Rectangle(0, 0, b.Width, b.Height);
+            g.AddArc(rec.X, rec.Y, 1 + arc1, 1 + arc1, 180, 90);
+            g.AddArc(rec.X + rec.Width - arc2, rec.Y, 50, 50, 270, 90);
+            g.AddArc(rec.X + rec.Width - arc3, rec.Y + rec.Height - 50, 50, 50, 0, 90);
+            g.AddArc(rec.X, rec.Y + rec.Height - arc4, 50, 50, 90, 90);
+            b.Region = new Region(g);
+
         }
     }//class color
 }//namespace
