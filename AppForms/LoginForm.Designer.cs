@@ -29,20 +29,20 @@
         private void InitializeComponent()
         {
             this.LoginSplContainer = new System.Windows.Forms.SplitContainer();
+            this.LogoACDPpBox = new System.Windows.Forms.PictureBox();
             this.PanelLogin = new System.Windows.Forms.Panel();
             this.usernTbox = new System.Windows.Forms.TextBox();
             this.passTbox = new System.Windows.Forms.TextBox();
             this.loginBtn = new System.Windows.Forms.Button();
             this.passLbl = new System.Windows.Forms.Label();
             this.userLbl = new System.Windows.Forms.Label();
-            this.LogoACDPpBox = new System.Windows.Forms.PictureBox();
             this.CCCpBox = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.LoginSplContainer)).BeginInit();
             this.LoginSplContainer.Panel1.SuspendLayout();
             this.LoginSplContainer.Panel2.SuspendLayout();
             this.LoginSplContainer.SuspendLayout();
-            this.PanelLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LogoACDPpBox)).BeginInit();
+            this.PanelLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CCCpBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,6 +69,16 @@
             this.LoginSplContainer.SplitterWidth = 1;
             this.LoginSplContainer.TabIndex = 0;
             // 
+            // LogoACDPpBox
+            // 
+            this.LogoACDPpBox.BackgroundImage = global::ColdChainConnectSystem_ACDP.Properties.Resources.LoginLogoACDP;
+            this.LogoACDPpBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.LogoACDPpBox.Location = new System.Drawing.Point(66, 98);
+            this.LogoACDPpBox.Name = "LogoACDPpBox";
+            this.LogoACDPpBox.Size = new System.Drawing.Size(428, 299);
+            this.LogoACDPpBox.TabIndex = 0;
+            this.LogoACDPpBox.TabStop = false;
+            // 
             // PanelLogin
             // 
             this.PanelLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
@@ -87,6 +97,9 @@
             // 
             // usernTbox
             // 
+            this.usernTbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.usernTbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usernTbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(96)))));
             this.usernTbox.Location = new System.Drawing.Point(58, 163);
             this.usernTbox.MinimumSize = new System.Drawing.Size(235, 35);
             this.usernTbox.Name = "usernTbox";
@@ -96,7 +109,9 @@
             // 
             // passTbox
             // 
-            this.passTbox.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.passTbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.passTbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passTbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(96)))));
             this.passTbox.Location = new System.Drawing.Point(58, 246);
             this.passTbox.MinimumSize = new System.Drawing.Size(235, 35);
             this.passTbox.Name = "passTbox";
@@ -144,16 +159,6 @@
             this.userLbl.TabIndex = 3;
             this.userLbl.Text = "Username";
             // 
-            // LogoACDPpBox
-            // 
-            this.LogoACDPpBox.BackgroundImage = global::ColdChainConnectSystem_ACDP.Properties.Resources.LoginLogoACDP;
-            this.LogoACDPpBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.LogoACDPpBox.Location = new System.Drawing.Point(66, 98);
-            this.LogoACDPpBox.Name = "LogoACDPpBox";
-            this.LogoACDPpBox.Size = new System.Drawing.Size(428, 299);
-            this.LogoACDPpBox.TabIndex = 0;
-            this.LogoACDPpBox.TabStop = false;
-            // 
             // CCCpBox
             // 
             this.CCCpBox.BackgroundImage = global::ColdChainConnectSystem_ACDP.Properties.Resources.CCC_GrayLogo;
@@ -180,9 +185,9 @@
             this.LoginSplContainer.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.LoginSplContainer)).EndInit();
             this.LoginSplContainer.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.LogoACDPpBox)).EndInit();
             this.PanelLogin.ResumeLayout(false);
             this.PanelLogin.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.LogoACDPpBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CCCpBox)).EndInit();
             this.ResumeLayout(false);
 

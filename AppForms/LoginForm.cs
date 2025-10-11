@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ColdChainConnectSystem_ACDP.AppForms;
+using ColdChainConnectSystem_ACDP.AppForms.MainPanel.Dashboard;
 using ColdChainConnectSystem_ACDP.AppForms.SidePanel;
 using ColdChainConnectSystem_ACDP.ClassResources;
 
@@ -46,6 +47,20 @@ namespace ColdChainConnectSystem_ACDP
             this.Icon = ColdChainConnectSystem_ACDP.Properties.Resources.CCC_Logo;
         }
         
+        private void setupMainForm() 
+        {
+            UserAccountControl uc = new UserAccountControl();
+            uc.Dock = DockStyle.Fill;
+            mf.MainSidePanel.Controls.Clear();
+            mf.UserSidePanel.Controls.Clear();
+            mf.UserSidePanel.Controls.Add(uc);
+
+            uc.UAC_namelbl.Text = ConnectionClass.fname + " " + ConnectionClass.mname + " " + ConnectionClass.lname;
+            uc.UAC_positionlbl.Text = conc.position;
+
+        }
+
+        public delegate void FormDelegate<T>(T form);
         private void loginBtn_Click(object sender, EventArgs e)
         {
             conc = new ConnectionClass();
@@ -53,40 +68,40 @@ namespace ColdChainConnectSystem_ACDP
             switch (conc.LoginAccount(verify))
             {
                 case "admin":
-                    UserAccountControl uc = new UserAccountControl();
+
                     Admin af = new Admin();
+                    setupMainForm();
 
-                    uc.Dock = DockStyle.Fill;
                     af.Dock = DockStyle.Fill;
-
-                    mf.MainSidePanel.Controls.Clear();
-                    mf.UserSidePanel.Controls.Clear();
-
                     mf.MainSidePanel.Controls.Add(af);
-                    mf.UserSidePanel.Controls.Add(uc);
-
-                    uc.UAC_namelbl.Text = ConnectionClass.fname +" "+ ConnectionClass.mname + " " + ConnectionClass.lname;
-                    uc.UAC_positionlbl.Text = conc.position;
-
                     af.Show();
                     this.Hide();
 
-                    if(mf.ShowDialog() == DialogResult.Cancel)
+                    LoginForm.mf.NavigateTo(new DashboardUC());
+
+                    if (mf.ShowDialog() == DialogResult.Cancel)
                     {
                         this.Show();
                         passTbox.Text = "";
                         usernTbox.Text = "";
                     }
-                    
                     break;
+
                 case "sales":
+                    setupMainForm();
                     break;
+
                 case "assist":
+                    setupMainForm();
                     break;
+
                 case "inv":
+                    setupMainForm();
                     break;
+
                 case "default":
                     break;
+
             }
 
         }

@@ -109,16 +109,17 @@
             // 
             // dashboardbtn
             // 
+            this.dashboardbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.dashboardbtn.FlatAppearance.BorderSize = 0;
             this.dashboardbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.dashboardbtn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
-            this.dashboardbtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.dashboardbtn.ForeColor = System.Drawing.Color.White;
             this.dashboardbtn.Location = new System.Drawing.Point(0, 24);
             this.dashboardbtn.Name = "dashboardbtn";
             this.dashboardbtn.Size = new System.Drawing.Size(185, 50);
             this.dashboardbtn.TabIndex = 6;
             this.dashboardbtn.Text = "Dashboard";
-            this.dashboardbtn.UseVisualStyleBackColor = true;
+            this.dashboardbtn.UseVisualStyleBackColor = false;
             this.dashboardbtn.Click += new System.EventHandler(this.dashboardbtn_Click);
             // 
             // Admin
