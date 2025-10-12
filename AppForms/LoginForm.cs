@@ -51,6 +51,7 @@ namespace ColdChainConnectSystem_ACDP
         {
             UserAccountControl uc = new UserAccountControl();
             uc.Dock = DockStyle.Fill;
+            mf.DisplayPanel.Controls.Clear();
             mf.MainSidePanel.Controls.Clear();
             mf.UserSidePanel.Controls.Clear();
             mf.UserSidePanel.Controls.Add(uc);
@@ -60,50 +61,71 @@ namespace ColdChainConnectSystem_ACDP
 
         }
 
-        public delegate void FormDelegate<T>(T form);
+        private void MainFormShow(MainForm mf)
+        {
+            if (mf.ShowDialog() == DialogResult.Cancel)
+            {
+                this.Show();
+                passTbox.Text = "";
+                usernTbox.Text = "";
+            }
+        }
+
         private void loginBtn_Click(object sender, EventArgs e)
         {
-            conc = new ConnectionClass();
-            String verify = (usernTbox.Text) + "," + (passTbox.Text);
-            switch (conc.LoginAccount(verify))
+            if (usernTbox.Text.Equals(""))
             {
-                case "admin":
-
-                    Admin af = new Admin();
-                    setupMainForm();
-
-                    af.Dock = DockStyle.Fill;
-                    mf.MainSidePanel.Controls.Add(af);
-                    af.Show();
-                    this.Hide();
-
-                    LoginForm.mf.NavigateTo(new DashboardUC());
-
-                    if (mf.ShowDialog() == DialogResult.Cancel)
-                    {
-                        this.Show();
-                        passTbox.Text = "";
-                        usernTbox.Text = "";
-                    }
-                    break;
-
-                case "sales":
-                    setupMainForm();
-                    break;
-
-                case "assist":
-                    setupMainForm();
-                    break;
-
-                case "inv":
-                    setupMainForm();
-                    break;
-
-                case "default":
-                    break;
-
+                MessageBox.Show("Please enter your Username.");
             }
+            else if (passTbox.Text.Equals(""))
+            {
+                MessageBox.Show("Please enter your Account's Password.");
+            }
+            else
+            {
+                conc = new ConnectionClass();
+                String verify = (usernTbox.Text) + "," + (passTbox.Text);
+                switch (conc.LoginAccount(verify))
+                {
+                    case "admin":
 
+                        Admin af = new Admin();
+                        setupMainForm();
+                        af.Dock = DockStyle.Fill;
+                        mf.MainSidePanel.Controls.Add(af);
+                        af.Show();
+
+                        this.Hide();
+                        LoginForm.mf.NavigateTo(new DashboardUC());
+                        MainFormShow(mf);
+                        break;
+
+                    case "sales":
+                        setupMainForm();
+
+                        this.Hide();
+                        MainFormShow(mf);
+                        break;
+
+                    case "assist":
+                        setupMainForm();
+
+                        this.Hide();
+                        MainFormShow(mf);
+                        break;
+
+                    case "inv":
+                        setupMainForm();
+
+                        this.Hide();
+                        MainFormShow(mf);
+                        break;
+
+                    case "default":
+                        break;
+
+                }
+            }
         }
 
 

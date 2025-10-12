@@ -21,59 +21,72 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
             mname = "";
             lname = "";
             position = "";
+            status = "";
         }
         public string account = "";
         public string position = "";
+        public string status = "";
         public string LoginAccount(string input)
         {
-            
-            string DB = "Data Source = MIAN\\SQLEXPRESS; Initial Catalog=SampleDB; Integrated Security=True;TrustServerCertificate=True";
-            //SQL CONNECTIONS
-            SqlConnection con = new SqlConnection(DB);
-            //NOTE TEMPORARY
-
-            string query = @"SELECT USERNAME, PASSWORD, POSITION, FNAME, MNAME, LNAME FROM Accounts";
-            using (SqlCommand cmd = new SqlCommand(query, con))
+            try
             {
-                con.Open();
-                using (var reader = cmd.ExecuteReader())
+                string DB = "Data Source = MIAN\\SQLEXPRESS; Initial Catalog=SampleDB; Integrated Security=True;TrustServerCertificate=True";
+                //SQL CONNECTIONS
+                SqlConnection con = new SqlConnection(DB);
+                //NOTE TEMPORARY
+
+                string query = @"SELECT USERNAME, PASSWORD, POSITION, FNAME, MNAME, LNAME, STATUS FROM Accounts";
+                using (SqlCommand cmd = new SqlCommand(query, con))
                 {
-                    //NOTE: Add If active or not !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! (too lazy)
-
-                    //EMPID USERNAME PASSWORD FNAME MNAME LNAME CONTNUM AGE DOB POSITION(ACCESS)   
-                    while (reader.Read())
+                    con.Open();
+                    using (var reader = cmd.ExecuteReader())
                     {
-                        account = reader[0].ToString() + "," + reader[1].ToString();
 
-                        if (input.Equals(account))
+                        //EMPID USERNAME PASSWORD FNAME MNAME LNAME CONTNUM AGE DOB POSITION(ACCESS) STATUS  
+                        while (reader.Read())
                         {
-                            fname = reader[3].ToString();
-                            mname = reader[4].ToString().Substring(0, 1);
-                            lname = reader[5].ToString(); 
-                            position = reader[2].ToString();
-                            switch (position)
+                            account = reader[0].ToString() + "," + reader[1].ToString();
+
+                            if (account.Equals(input))
                             {
-                                case "Administrator":
-                                    return "admin";
-                                case "Sales":
-                                    return "sales";
-                                case "Assistant":
-                                    return "assist";
-                                case "Inventory":
-                                    return "inv"; 
-                                default:
-                                    MessageBox.Show("Unknown Position, Please Contact the Adminstrator.");
-                                    return "default"; 
+                                fname = reader[3].ToString();
+                                mname = reader[4].ToString().Substring(0, 1);
+                                lname = reader[5].ToString();
+                                position = reader[2].ToString();
+                                status = reader[6].ToString();
+                                if (status.Equals("INACTIVE"))
+                                {
+                                    MessageBox.Show("Account is Inactive, Please Contact the Administrator.");
+                                    return "default";
+                                }
+    
+
+                            switch (position)
+                                    {
+                                        case "Administrator":
+                                            return "admin";
+                                        case "Sales":
+                                            return "sales";
+                                        case "Assistant":
+                                            return "assist";
+                                        case "Inventory":
+                                            return "inv";
+                                        default:
+                                            MessageBox.Show("Unknown Position, Please Contact the Adminstrator.");
+                                            return "default";
+                                    }
                             }
                         }
                     }
+                    MessageBox.Show("Incorrect Credentials.");
+                    con.Close();
                 }
-                con.Close();
-                return "default";
-
+            }catch(Exception e)
+            {
+                MessageBox.Show(e.Message);
             }
-
+            return "default";
         }
 
-    }
-}
+    }//class
+}//namespace
