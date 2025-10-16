@@ -47,7 +47,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                 SqlConnection con = new SqlConnection(DB);
                 //NOTE TEMPORARY
 
-                string query = @"SELECT EMPID USERNAME, PASSWORD, FNAME, MNAME, LNAME, AGE, DOB, POSITION, STATUS FROM Accounts";
+                string query = @"SELECT EMPID, USERNAME, PASSWORD, FNAME, MNAME, LNAME, AGE, DOB, POSITION, STATUS FROM Accounts";
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
                     con.Open();

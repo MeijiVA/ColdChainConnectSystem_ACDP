@@ -33,10 +33,10 @@ namespace ColdChainConnectSystem_ACDP
             //FORM DISPLAY
             LoginSplContainer.Panel1.BackColor = dc.SetCustomColor(baseBlue);
             LoginSplContainer.Panel2.BackColor = dc.SetCustomColor(baseWhite);
-            loginBtn.BackColor = dc.SetCustomColor(baseBlue);
+            btnLogin.BackColor = dc.SetCustomColor(baseBlue);
             userLbl.ForeColor = dc.SetCustomColor(baseBlue);
             passLbl.ForeColor = dc.SetCustomColor(baseBlue);
-            dc.SetDisplayRectangle(loginBtn);
+            dc.SetDisplayRectangle(btnLogin);
             dc.SetDisplayRectangle(LoginSplContainer.Panel1, 0, 0, 50, 0);
             dc.myPanel = PanelLogin;
             LoginSplContainer.Panel2.Paint += new PaintEventHandler(dc.Panel_Paint);
@@ -58,25 +58,25 @@ namespace ColdChainConnectSystem_ACDP
             if (mf.ShowDialog() == DialogResult.Cancel)
             {
                 this.Show();
-                passTbox.Text = "";
-                usernTbox.Text = "";
+                txtPass.Text = "";
+                txtUser.Text = "";
             }
         }
 
         private void loginBtn_Click(object sender, EventArgs e)
         {
-            if (usernTbox.Text.Equals(""))
+            if (txtUser.Text.Equals(""))
             {
                 MessageBox.Show("Please enter your Username.");
             }
-            else if (passTbox.Text.Equals(""))
+            else if (txtPass.Text.Equals(""))
             {
                 MessageBox.Show("Please enter your Account's Password.");
             }
             else
             {
                 conc = new ConnectionClass();
-                String verify = (usernTbox.Text) + "," + (passTbox.Text);
+                String verify = (txtUser.Text) + "," + (txtPass.Text);
                 switch (conc.LoginAccount(verify))
                 {
                     case "admin":

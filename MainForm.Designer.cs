@@ -33,9 +33,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.logoutBtn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSettings = new System.Windows.Forms.Button();
             this.userAccountControl1 = new ColdChainConnectSystem_ACDP.AppForms.SidePanel.UserAccountControl();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnNotif = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -89,18 +89,19 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // button1
+            // btnSettings
             // 
-            this.button1.BackgroundImage = global::ColdChainConnectSystem_ACDP.Properties.Resources.settings;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.Transparent;
-            this.button1.Location = new System.Drawing.Point(971, 6);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(17, 17);
-            this.button1.TabIndex = 4;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnSettings.BackgroundImage = global::ColdChainConnectSystem_ACDP.Properties.Resources.settings;
+            this.btnSettings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSettings.FlatAppearance.BorderSize = 0;
+            this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSettings.ForeColor = System.Drawing.Color.Transparent;
+            this.btnSettings.Location = new System.Drawing.Point(971, 6);
+            this.btnSettings.Name = "btnSettings";
+            this.btnSettings.Size = new System.Drawing.Size(17, 17);
+            this.btnSettings.TabIndex = 4;
+            this.btnSettings.UseVisualStyleBackColor = true;
+            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
             // 
             // userAccountControl1
             // 
@@ -111,18 +112,18 @@
             this.userAccountControl1.TabIndex = 5;
             this.userAccountControl1.Load += new System.EventHandler(this.userAccountControl1_Load);
             // 
-            // button2
+            // btnNotif
             // 
-            this.button2.BackgroundImage = global::ColdChainConnectSystem_ACDP.Properties.Resources.notifications;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.Transparent;
-            this.button2.Location = new System.Drawing.Point(940, 6);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(17, 17);
-            this.button2.TabIndex = 6;
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnNotif.BackgroundImage = global::ColdChainConnectSystem_ACDP.Properties.Resources.notifications;
+            this.btnNotif.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnNotif.FlatAppearance.BorderSize = 0;
+            this.btnNotif.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNotif.ForeColor = System.Drawing.Color.Transparent;
+            this.btnNotif.Location = new System.Drawing.Point(940, 6);
+            this.btnNotif.Name = "btnNotif";
+            this.btnNotif.Size = new System.Drawing.Size(17, 17);
+            this.btnNotif.TabIndex = 6;
+            this.btnNotif.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
@@ -130,9 +131,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.ClientSize = new System.Drawing.Size(1000, 600);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnNotif);
             this.Controls.Add(this.userAccountControl1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnSettings);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.MainSidePanel);
             this.Controls.Add(this.pictureBox1);
@@ -159,8 +160,8 @@
         public System.Windows.Forms.Panel MainSidePanel;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button logoutBtn;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSettings;
         private AppForms.SidePanel.UserAccountControl userAccountControl1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnNotif;
     }
 }

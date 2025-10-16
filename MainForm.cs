@@ -11,7 +11,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ColdChainConnectSystem_ACDP.AppForms.MainPanel;
+using ColdChainConnectSystem_ACDP.AppForms.MainPanel.Dashboard;
 using ColdChainConnectSystem_ACDP.ClassResources;
+using ColdChainConnectSystem_ACDP.AppForms.MainPanel.Settings;
 
 namespace ColdChainConnectSystem_ACDP
 {
@@ -97,6 +99,11 @@ namespace ColdChainConnectSystem_ACDP
         {
             userAccountControl1.UAC_namelbl.Text = ConnectionClass.fname + " " + ConnectionClass.mname + " " + ConnectionClass.lname; ;
             userAccountControl1.UAC_positionlbl.Text = ConnectionClass.position;
+        }
+
+        private void btnSettings_Click(object sender, EventArgs e)
+        {
+            LoginForm.mf.NavigateTo(new SettingForm());
         }
     }//class
 }//namespace

@@ -31,9 +31,9 @@
             this.LoginSplContainer = new System.Windows.Forms.SplitContainer();
             this.LogoACDPpBox = new System.Windows.Forms.PictureBox();
             this.PanelLogin = new System.Windows.Forms.Panel();
-            this.usernTbox = new System.Windows.Forms.TextBox();
-            this.passTbox = new System.Windows.Forms.TextBox();
-            this.loginBtn = new System.Windows.Forms.Button();
+            this.txtUser = new System.Windows.Forms.TextBox();
+            this.txtPass = new System.Windows.Forms.TextBox();
+            this.btnLogin = new System.Windows.Forms.Button();
             this.passLbl = new System.Windows.Forms.Label();
             this.userLbl = new System.Windows.Forms.Label();
             this.CCCpBox = new System.Windows.Forms.PictureBox();
@@ -83,9 +83,9 @@
             // 
             this.PanelLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.PanelLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.PanelLogin.Controls.Add(this.usernTbox);
-            this.PanelLogin.Controls.Add(this.passTbox);
-            this.PanelLogin.Controls.Add(this.loginBtn);
+            this.PanelLogin.Controls.Add(this.txtUser);
+            this.PanelLogin.Controls.Add(this.txtPass);
+            this.PanelLogin.Controls.Add(this.btnLogin);
             this.PanelLogin.Controls.Add(this.passLbl);
             this.PanelLogin.Controls.Add(this.userLbl);
             this.PanelLogin.Controls.Add(this.CCCpBox);
@@ -95,46 +95,46 @@
             this.PanelLogin.Size = new System.Drawing.Size(350, 460);
             this.PanelLogin.TabIndex = 0;
             // 
-            // usernTbox
+            // txtUser
             // 
-            this.usernTbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.usernTbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usernTbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(96)))));
-            this.usernTbox.Location = new System.Drawing.Point(58, 163);
-            this.usernTbox.MinimumSize = new System.Drawing.Size(235, 35);
-            this.usernTbox.Name = "usernTbox";
-            this.usernTbox.Size = new System.Drawing.Size(235, 35);
-            this.usernTbox.TabIndex = 1;
-            this.usernTbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.usernTbox_KeyDown);
+            this.txtUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(96)))));
+            this.txtUser.Location = new System.Drawing.Point(58, 163);
+            this.txtUser.MinimumSize = new System.Drawing.Size(235, 35);
+            this.txtUser.Name = "txtUser";
+            this.txtUser.Size = new System.Drawing.Size(235, 35);
+            this.txtUser.TabIndex = 1;
+            this.txtUser.KeyDown += new System.Windows.Forms.KeyEventHandler(this.usernTbox_KeyDown);
             // 
-            // passTbox
+            // txtPass
             // 
-            this.passTbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.passTbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passTbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(96)))));
-            this.passTbox.Location = new System.Drawing.Point(58, 246);
-            this.passTbox.MinimumSize = new System.Drawing.Size(235, 35);
-            this.passTbox.Name = "passTbox";
-            this.passTbox.PasswordChar = '*';
-            this.passTbox.Size = new System.Drawing.Size(235, 35);
-            this.passTbox.TabIndex = 1;
-            this.passTbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.passTbox_KeyDown);
+            this.txtPass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(96)))));
+            this.txtPass.Location = new System.Drawing.Point(58, 246);
+            this.txtPass.MinimumSize = new System.Drawing.Size(235, 35);
+            this.txtPass.Name = "txtPass";
+            this.txtPass.PasswordChar = '*';
+            this.txtPass.Size = new System.Drawing.Size(235, 35);
+            this.txtPass.TabIndex = 1;
+            this.txtPass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.passTbox_KeyDown);
             // 
-            // loginBtn
+            // btnLogin
             // 
-            this.loginBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.loginBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.loginBtn.FlatAppearance.BorderSize = 0;
-            this.loginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.loginBtn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginBtn.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.loginBtn.Location = new System.Drawing.Point(119, 324);
-            this.loginBtn.Name = "loginBtn";
-            this.loginBtn.Size = new System.Drawing.Size(124, 51);
-            this.loginBtn.TabIndex = 0;
-            this.loginBtn.Text = "Login";
-            this.loginBtn.UseVisualStyleBackColor = false;
-            this.loginBtn.Click += new System.EventHandler(this.loginBtn_Click);
+            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.btnLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnLogin.FlatAppearance.BorderSize = 0;
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogin.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnLogin.Location = new System.Drawing.Point(119, 324);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(124, 51);
+            this.btnLogin.TabIndex = 0;
+            this.btnLogin.Text = "Login";
+            this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.loginBtn_Click);
             // 
             // passLbl
             // 
@@ -196,10 +196,10 @@
         #endregion
 
         private System.Windows.Forms.SplitContainer LoginSplContainer;
-        private System.Windows.Forms.Button loginBtn;
+        private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Panel PanelLogin;
-        private System.Windows.Forms.TextBox usernTbox;
-        private System.Windows.Forms.TextBox passTbox;
+        private System.Windows.Forms.TextBox txtUser;
+        private System.Windows.Forms.TextBox txtPass;
         private System.Windows.Forms.Label passLbl;
         private System.Windows.Forms.Label userLbl;
         private System.Windows.Forms.PictureBox CCCpBox;
