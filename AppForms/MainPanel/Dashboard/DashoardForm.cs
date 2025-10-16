@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Dashboard
 {
-    public partial class DashboardPanel : Form
+    public partial class DashoardForm : Form
     {
-        public DashboardPanel()
+        public DashoardForm()
         {
             InitializeComponent();
         }

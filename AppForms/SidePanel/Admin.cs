@@ -16,14 +16,16 @@ namespace ColdChainConnectSystem_ACDP.AppForms.SidePanel
     public partial class Admin : UserControl
     {
         DisplayClass dc = new DisplayClass();
-        String baseblue = "#070760";
+        public static string form;
         public Admin()
         {
             InitializeComponent();
+            form = "";
         }
 
         private void SelectedTab(Button b)
         {
+            String baseblue = "#070760";
             dashboardbtn.BackColor = Color.White;
             invmanbtn.BackColor = Color.White; 
             supmanbbtn.BackColor = Color.White;
@@ -58,13 +60,15 @@ namespace ColdChainConnectSystem_ACDP.AppForms.SidePanel
         private void dashboardbtn_Click(object sender, EventArgs e)
         {
             SelectedTab(dashboardbtn);
-            LoginForm.mf.NavigateTo(new DashboardPanel());
+            LoginForm.mf.NavigateTo(new DashoardForm());
+            form = "dbpanel";
         }
 
         private void invmanbtn_Click(object sender, EventArgs e)
         {
             SelectedTab(invmanbtn);
             LoginForm.mf.NavigateTo(new InventoryForm());
+            form = "invform";
         }
 
         private void supmanbbtn_Click(object sender, EventArgs e)

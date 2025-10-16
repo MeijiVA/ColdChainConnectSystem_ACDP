@@ -88,7 +88,7 @@ namespace ColdChainConnectSystem_ACDP
                         af.Show();
 
                         this.Hide();
-                        LoginForm.mf.NavigateTo(new DashboardPanel());
+                        LoginForm.mf.NavigateTo(new DashoardForm());
                         MainFormShow(mf);
                         break;
 

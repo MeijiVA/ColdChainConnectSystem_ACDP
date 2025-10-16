@@ -46,11 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AppForms\MainPanel\Dashboard\DashboardPanel.cs">
+    <Compile Include="AppForms\MainPanel\Dashboard\DashoardForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AppForms\MainPanel\Dashboard\DashboardPanel.Designer.cs">
-      <DependentUpon>DashboardPanel.cs</DependentUpon>
+    <Compile Include="AppForms\MainPanel\Dashboard\DashoardForm.Designer.cs">
+      <DependentUpon>DashoardForm.cs</DependentUpon>
     </Compile>
     <Compile Include="AppForms\MainPanel\Dashboard\GreetPanel.cs">
       <SubType>UserControl</SubType>
@@ -143,8 +143,8 @@
     <EmbeddedResource Include="AppForms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AppForms\MainPanel\Dashboard\DashboardPanel.resx">
-      <DependentUpon>DashboardPanel.cs</DependentUpon>
+    <EmbeddedResource Include="AppForms\MainPanel\Dashboard\DashoardForm.resx">
+      <DependentUpon>DashoardForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AppForms\MainPanel\Dashboard\GreetPanel.resx">
       <DependentUpon>GreetPanel.cs</DependentUpon>

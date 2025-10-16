@@ -19,6 +19,7 @@ namespace ColdChainConnectSystem_ACDP
 {
     public partial class MainForm : Form
     {
+        int settingFlag;
         public MainForm()
         {
             InitializeComponent();
@@ -28,6 +29,7 @@ namespace ColdChainConnectSystem_ACDP
         private void MainForm_Load(object sender, EventArgs e)
         {
             this.Icon = ColdChainConnectSystem_ACDP.Properties.Resources.CCC_Logo;
+            settingFlag = 0;
         }
 
         public void NavigateTo(Form screen)
@@ -38,7 +40,6 @@ namespace ColdChainConnectSystem_ACDP
             DisplayPanel.Controls.Add(screen);
             screen.Show();
         }
-
 
 
 
@@ -103,7 +104,16 @@ namespace ColdChainConnectSystem_ACDP
 
         private void btnSettings_Click(object sender, EventArgs e)
         {
-            LoginForm.mf.NavigateTo(new SettingForm());
+            if (settingFlag == 0)
+            {
+                LoginForm.mf.NavigateTo(new SettingForm());
+                settingFlag = 1;
+            }
+            else if (settingFlag == 0)
+            {
+                DisplayPanel.Controls.Clear();
+            }
         }
+
     }//class
 }//namespace

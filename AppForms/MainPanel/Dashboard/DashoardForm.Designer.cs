@@ -1,6 +1,6 @@
 ﻿namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Dashboard
 {
-    partial class DashboardPanel
+    partial class DashoardForm
     {
         /// <summary>
         /// Required designer variable.
