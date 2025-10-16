@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ColdChainConnectSystem_ACDP.AppForms.MainPanel;
 using ColdChainConnectSystem_ACDP.AppForms.MainPanel.Dashboard;
+using ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory;
 using ColdChainConnectSystem_ACDP.ClassResources;
 using ColdChainConnectSystem_ACDP.AppForms.MainPanel.Settings;
 
@@ -19,7 +20,7 @@ namespace ColdChainConnectSystem_ACDP
 {
     public partial class MainForm : Form
     {
-        int settingFlag;
+        public static int settingFlag;
         public MainForm()
         {
             InitializeComponent();
@@ -29,7 +30,7 @@ namespace ColdChainConnectSystem_ACDP
         private void MainForm_Load(object sender, EventArgs e)
         {
             this.Icon = ColdChainConnectSystem_ACDP.Properties.Resources.CCC_Logo;
-            settingFlag = 0;
+            settingFlag = 1;
         }
 
         public void NavigateTo(Form screen)
@@ -43,18 +44,26 @@ namespace ColdChainConnectSystem_ACDP
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+        public Form currentForm(string cf)
+        {
+            switch (cf)
+            {
+                case "dbform":
+                    return new DashoardForm();
+                case "invform":
+                    return new InventoryForm();
+                case "supform":
+                    return new InventoryForm(); //change this
+                case "salform":
+                    return new InventoryForm();//change this
+                case "custform":
+                    return new InventoryForm();//change this
+                case "empform":
+                    return new InventoryForm();//change this
+                default:
+                    return new DashoardForm();
+            }
+        }
 
 
 
@@ -104,14 +113,15 @@ namespace ColdChainConnectSystem_ACDP
 
         private void btnSettings_Click(object sender, EventArgs e)
         {
-            if (settingFlag == 0)
+            if (settingFlag == 1)
             {
                 LoginForm.mf.NavigateTo(new SettingForm());
-                settingFlag = 1;
+                settingFlag = 0;
             }
             else if (settingFlag == 0)
             {
-                DisplayPanel.Controls.Clear();
+                LoginForm.mf.NavigateTo(currentForm(CurrentFormClass.form));
+                settingFlag = 1;
             }
         }
 

@@ -10,17 +10,16 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ColdChainConnectSystem_ACDP.AppForms.MainPanel.Dashboard;
 using ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory;
+using ColdChainConnectSystem_ACDP.ClassResources;
 
 namespace ColdChainConnectSystem_ACDP.AppForms.SidePanel
 {
     public partial class Admin : UserControl
     {
         DisplayClass dc = new DisplayClass();
-        public static string form;
         public Admin()
         {
             InitializeComponent();
-            form = "";
         }
 
         private void SelectedTab(Button b)
@@ -61,34 +60,44 @@ namespace ColdChainConnectSystem_ACDP.AppForms.SidePanel
         {
             SelectedTab(dashboardbtn);
             LoginForm.mf.NavigateTo(new DashoardForm());
-            form = "dbpanel";
+            CurrentFormClass.form = "dbform";
+            MainForm.settingFlag = 1;
         }
 
         private void invmanbtn_Click(object sender, EventArgs e)
         {
             SelectedTab(invmanbtn);
             LoginForm.mf.NavigateTo(new InventoryForm());
-            form = "invform";
+            CurrentFormClass.form = "invform";
+            MainForm.settingFlag = 1;
         }
 
         private void supmanbbtn_Click(object sender, EventArgs e)
         {
             SelectedTab(supmanbbtn);
+            CurrentFormClass.form = "supform";
+            MainForm.settingFlag = 1;
         }
 
         private void salesmanbbtn_Click(object sender, EventArgs e)
         {
             SelectedTab(salesmanbbtn);
+            CurrentFormClass.form = "salform";
+            MainForm.settingFlag = 1;
         }
 
         private void custmanbtn_Click(object sender, EventArgs e)
         {
             SelectedTab(custmanbtn);
+            CurrentFormClass.form = "custform";
+            MainForm.settingFlag = 1;
         }
 
         private void empmanbtn_Click(object sender, EventArgs e)
         {
             SelectedTab(empmanbtn);
+            CurrentFormClass.form = "empform";
+            MainForm.settingFlag = 1;
         }
     }
 }

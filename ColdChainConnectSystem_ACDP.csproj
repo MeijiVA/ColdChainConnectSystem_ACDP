@@ -94,6 +94,12 @@
     <Compile Include="AppForms\MainPanel\Settings\SettingForm.Designer.cs">
       <DependentUpon>SettingForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AppForms\MainPanel\Settings\settingsTabControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AppForms\MainPanel\Settings\settingsTabControl.Designer.cs">
+      <DependentUpon>settingsTabControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="AppForms\SidePanel\Admin.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -125,6 +131,7 @@
       <DependentUpon>UserAccountControl.cs</DependentUpon>
     </Compile>
     <Compile Include="ClassResources\ConnectionClass.cs" />
+    <Compile Include="ClassResources\CurrentFormClass.cs" />
     <Compile Include="ClassResources\DisplayClass.cs" />
     <Compile Include="AppForms\LoginForm.cs">
       <SubType>Form</SubType>
@@ -166,6 +173,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AppForms\MainPanel\Settings\SettingForm.resx">
       <DependentUpon>SettingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\MainPanel\Settings\settingsTabControl.resx">
+      <DependentUpon>settingsTabControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AppForms\SidePanel\Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>
