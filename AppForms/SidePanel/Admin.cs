@@ -8,8 +8,8 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ColdChainConnectSystem_ACDP.AppForms.MainPanel;
 using ColdChainConnectSystem_ACDP.AppForms.MainPanel.Dashboard;
+using ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory;
 
 namespace ColdChainConnectSystem_ACDP.AppForms.SidePanel
 {
@@ -51,19 +51,20 @@ namespace ColdChainConnectSystem_ACDP.AppForms.SidePanel
             dc.SetDisplayRectangle(empmanbtn, 0, 50, 0, 0);
         }
 
-        public void GetCurrentPanel(object sender)
+        public void GetCurrentPanel()
         {
-
+            //to be used:::
         }
         private void dashboardbtn_Click(object sender, EventArgs e)
         {
             SelectedTab(dashboardbtn);
-            LoginForm.mf.NavigateTo(new DashboardUC());
+            LoginForm.mf.NavigateTo(new DashboardPanel());
         }
 
         private void invmanbtn_Click(object sender, EventArgs e)
         {
             SelectedTab(invmanbtn);
+            LoginForm.mf.NavigateTo(new InventoryForm());
         }
 
         private void supmanbbtn_Click(object sender, EventArgs e)

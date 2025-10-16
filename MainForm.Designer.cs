@@ -30,10 +30,12 @@
         {
             this.DisplayPanel = new System.Windows.Forms.Panel();
             this.MainSidePanel = new System.Windows.Forms.Panel();
-            this.UserSidePanel = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.logoutBtn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.userAccountControl1 = new ColdChainConnectSystem_ACDP.AppForms.SidePanel.UserAccountControl();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -53,15 +55,6 @@
             this.MainSidePanel.Name = "MainSidePanel";
             this.MainSidePanel.Size = new System.Drawing.Size(200, 355);
             this.MainSidePanel.TabIndex = 1;
-
-            // 
-            // UserSidePanel
-            // 
-            this.UserSidePanel.BackColor = System.Drawing.Color.White;
-            this.UserSidePanel.Location = new System.Drawing.Point(0, 30);
-            this.UserSidePanel.Name = "UserSidePanel";
-            this.UserSidePanel.Size = new System.Drawing.Size(200, 170);
-            this.UserSidePanel.TabIndex = 2;
             // 
             // panel1
             // 
@@ -96,14 +89,51 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::ColdChainConnectSystem_ACDP.Properties.Resources.settings;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.Transparent;
+            this.button1.Location = new System.Drawing.Point(971, 6);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(17, 17);
+            this.button1.TabIndex = 4;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // userAccountControl1
+            // 
+            this.userAccountControl1.BackColor = System.Drawing.Color.White;
+            this.userAccountControl1.Location = new System.Drawing.Point(0, 30);
+            this.userAccountControl1.Name = "userAccountControl1";
+            this.userAccountControl1.Size = new System.Drawing.Size(200, 170);
+            this.userAccountControl1.TabIndex = 5;
+            this.userAccountControl1.Load += new System.EventHandler(this.userAccountControl1_Load);
+            // 
+            // button2
+            // 
+            this.button2.BackgroundImage = global::ColdChainConnectSystem_ACDP.Properties.Resources.notifications;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.Transparent;
+            this.button2.Location = new System.Drawing.Point(940, 6);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(17, 17);
+            this.button2.TabIndex = 6;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.ClientSize = new System.Drawing.Size(1000, 600);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.userAccountControl1);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.UserSidePanel);
             this.Controls.Add(this.MainSidePanel);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.DisplayPanel);
@@ -127,8 +157,10 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         public System.Windows.Forms.Panel DisplayPanel;
         public System.Windows.Forms.Panel MainSidePanel;
-        public System.Windows.Forms.Panel UserSidePanel;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button logoutBtn;
+        private System.Windows.Forms.Button button1;
+        private AppForms.SidePanel.UserAccountControl userAccountControl1;
+        private System.Windows.Forms.Button button2;
     }
 }

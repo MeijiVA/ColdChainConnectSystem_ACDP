@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ColdChainConnectSystem_ACDP.AppForms.MainPanel;
+using ColdChainConnectSystem_ACDP.ClassResources;
 
 namespace ColdChainConnectSystem_ACDP
 {
@@ -27,12 +28,13 @@ namespace ColdChainConnectSystem_ACDP
             this.Icon = ColdChainConnectSystem_ACDP.Properties.Resources.CCC_Logo;
         }
 
-        public void NavigateTo(UserControl screen)
+        public void NavigateTo(Form screen)
         {
             DisplayPanel.Controls.Clear();
             screen.Dock = DockStyle.Fill;
-            
+            screen.TopLevel = false;
             DisplayPanel.Controls.Add(screen);
+            screen.Show();
         }
 
 
@@ -91,10 +93,10 @@ namespace ColdChainConnectSystem_ACDP
             this.DialogResult = DialogResult.Cancel;
         }
 
-
-
-
-
-
+        private void userAccountControl1_Load(object sender, EventArgs e)
+        {
+            userAccountControl1.UAC_namelbl.Text = ConnectionClass.fname + " " + ConnectionClass.mname + " " + ConnectionClass.lname; ;
+            userAccountControl1.UAC_positionlbl.Text = ConnectionClass.position;
+        }
     }//class
 }//namespace

@@ -10,22 +10,34 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
 {
     internal class ConnectionClass
     {
+        public static string empid { get; set; }
+        public static string password { get; set; }
+        public static string username { get; set; }
+        public static string position { get; set; }
         public static string fname { get; set; }
         public static string mname { get; set; }
         public static string lname { get; set; }
+        public static string status { get; set; }
+        public static string contnum { get; set; }
+        public static string age { get; set; }
+        public static string dob { get; set; }
 
         public ConnectionClass()
         {
+            empid = "";
+            password = "";
+            username = "";
             account = "";
             fname = "";
             mname = "";
             lname = "";
             position = "";
             status = "";
+            contnum = "";
+            age = "";
+            dob = "";
         }
         public string account = "";
-        public string position = "";
-        public string status = "";
         public string LoginAccount(string input)
         {
             try
@@ -35,7 +47,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                 SqlConnection con = new SqlConnection(DB);
                 //NOTE TEMPORARY
 
-                string query = @"SELECT USERNAME, PASSWORD, POSITION, FNAME, MNAME, LNAME, STATUS FROM Accounts";
+                string query = @"SELECT EMPID USERNAME, PASSWORD, FNAME, MNAME, LNAME, AGE, DOB, POSITION, STATUS FROM Accounts";
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
                     con.Open();
@@ -45,15 +57,20 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                         //EMPID USERNAME PASSWORD FNAME MNAME LNAME CONTNUM AGE DOB POSITION(ACCESS) STATUS  
                         while (reader.Read())
                         {
-                            account = reader[0].ToString() + "," + reader[1].ToString();
+                            account = reader[1].ToString() + "," + reader[2].ToString();
 
                             if (account.Equals(input))
                             {
+                                empid = reader[0].ToString();  
+                                username = reader[1].ToString();
+                                password = reader[2].ToString();
                                 fname = reader[3].ToString();
                                 mname = reader[4].ToString().Substring(0, 1);
                                 lname = reader[5].ToString();
-                                position = reader[2].ToString();
-                                status = reader[6].ToString();
+                                age = reader[6].ToString();
+                                dob = reader[7].ToString();
+                                position = reader[8].ToString();
+                                status = reader[9].ToString();
                                 if (status.Equals("INACTIVE"))
                                 {
                                     MessageBox.Show("Account is Inactive, Please Contact the Administrator.");

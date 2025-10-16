@@ -21,7 +21,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Dashboard
 
         private void GreetPanel_Load(object sender, EventArgs e)
         {
-            greetlbl.Text = "Good to See you, " + ConnectionClass.fname;
+            greetlbl.Text = "Good to See you, " + ConnectionClass.fname + "!";
             timelbl.Text = DateTime.Now.ToString("HH:mm tt");
             daylbl.Text = DateTime.Now.ToString("dddd");
             datelbl.Text = DateTime.Now.ToString("MMMM dd, yyyy");

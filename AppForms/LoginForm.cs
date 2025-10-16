@@ -49,16 +49,8 @@ namespace ColdChainConnectSystem_ACDP
         
         private void setupMainForm() 
         {
-            UserAccountControl uc = new UserAccountControl();
-            uc.Dock = DockStyle.Fill;
             mf.DisplayPanel.Controls.Clear();
             mf.MainSidePanel.Controls.Clear();
-            mf.UserSidePanel.Controls.Clear();
-            mf.UserSidePanel.Controls.Add(uc);
-
-            uc.UAC_namelbl.Text = ConnectionClass.fname + " " + ConnectionClass.mname + " " + ConnectionClass.lname;
-            uc.UAC_positionlbl.Text = conc.position;
-
         }
 
         private void MainFormShow(MainForm mf)
@@ -96,7 +88,7 @@ namespace ColdChainConnectSystem_ACDP
                         af.Show();
 
                         this.Hide();
-                        LoginForm.mf.NavigateTo(new DashboardUC());
+                        LoginForm.mf.NavigateTo(new DashboardPanel());
                         MainFormShow(mf);
                         break;
 

@@ -10,20 +10,11 @@ using System.Windows.Forms;
 
 namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Dashboard
 {
-    public partial class DashboardUC : UserControl
+    public partial class DashboardPanel : Form
     {
-        public DashboardUC()
+        public DashboardPanel()
         {
             InitializeComponent();
-            GreetPanel gp = new GreetPanel();
-            gp.Dock = DockStyle.Fill;
-            basicInfopnl.Controls.Clear();
-            basicInfopnl.Controls.Add(gp);
-        }
-
-        private void basicInfopnl_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }
