@@ -20,15 +20,19 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Settings
         }
         private void settingsTabControl_Load(object sender, EventArgs e)
         {
-            for(int i = 0; i < 6; i++)
+            for (int i = 0; i < 6; i++)
+            {
+                Clickable[i] = true;
+            }
+            for (int i = 0; i < 6; i++)
             {
                 ClickFlag[i] = false;
             }
             
-            HideLabel(lblEmployee,3);
-            HideLabel(lblExtra4,4);
-            HideLabel(lblExtra5,5);
-            HideLabel(lblExtra6,6);
+            HideLabel(lblEmployee,2);
+            HideLabel(lblExtra4,3);
+            HideLabel(lblExtra5,4);
+            HideLabel(lblExtra6,5);
         }
 
         private void HideLabel(Label l, int i)
@@ -61,7 +65,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Settings
         }
         private void lblSecurity_Click(object sender, EventArgs e)
         {
-            if (Clickable[0] == true)
+            if (Clickable[1] == true)
             {
                 LabelClick(ClickFlag[0], lblSecurity);
             }
@@ -69,33 +73,33 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Settings
 
         private void lblExtra3_Click(object sender, EventArgs e)
         {
-            if (Clickable[3] == true)
+            if (Clickable[2] == true)
             {
-                LabelClick(ClickFlag[3], lblEmployee);
+                LabelClick(ClickFlag[2], lblEmployee);
             }
         }
 
         private void lblExtra4_Click(object sender, EventArgs e)
         {
-            if (Clickable[4] == true)
+            if (Clickable[3] == true)
             {
-                LabelClick(ClickFlag[4], lblExtra4);
+                LabelClick(ClickFlag[3], lblExtra4);
             }
         }
 
         private void lblExtra5_Click(object sender, EventArgs e)
         {
-            if (Clickable[5] == true)
+            if (Clickable[4] == true)
             {
-                LabelClick(ClickFlag[5], lblExtra5);
+                LabelClick(ClickFlag[4], lblExtra5);
             }
         }
 
         private void lblExtra6_Click(object sender, EventArgs e)
         {
-            if (Clickable[6] == true)
+            if (Clickable[5] == true)
             {
-                LabelClick(ClickFlag[6], lblSecurity);
+                LabelClick(ClickFlag[5], lblSecurity);
             }
         }
 
