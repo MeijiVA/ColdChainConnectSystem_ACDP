@@ -30,7 +30,7 @@
         {
             this.lblPersDetail = new System.Windows.Forms.Label();
             this.lblSecurity = new System.Windows.Forms.Label();
-            this.lblExtra3 = new System.Windows.Forms.Label();
+            this.lblEmployee = new System.Windows.Forms.Label();
             this.lblExtra4 = new System.Windows.Forms.Label();
             this.lblExtra5 = new System.Windows.Forms.Label();
             this.lblExtra6 = new System.Windows.Forms.Label();
@@ -62,17 +62,17 @@
             this.lblSecurity.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.lblSecurity.Click += new System.EventHandler(this.lblSecurity_Click);
             // 
-            // lblExtra3
+            // lblEmployee
             // 
-            this.lblExtra3.BackColor = System.Drawing.Color.White;
-            this.lblExtra3.Font = new System.Drawing.Font("Arial", 9F);
-            this.lblExtra3.Location = new System.Drawing.Point(240, 0);
-            this.lblExtra3.Name = "lblExtra3";
-            this.lblExtra3.Size = new System.Drawing.Size(120, 30);
-            this.lblExtra3.TabIndex = 2;
-            this.lblExtra3.Text = "Security";
-            this.lblExtra3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.lblExtra3.Click += new System.EventHandler(this.lblExtra3_Click);
+            this.lblEmployee.BackColor = System.Drawing.Color.White;
+            this.lblEmployee.Font = new System.Drawing.Font("Arial", 9F);
+            this.lblEmployee.Location = new System.Drawing.Point(240, 0);
+            this.lblEmployee.Name = "lblEmployee";
+            this.lblEmployee.Size = new System.Drawing.Size(120, 30);
+            this.lblEmployee.TabIndex = 2;
+            this.lblEmployee.Text = "Employee";
+            this.lblEmployee.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.lblEmployee.Click += new System.EventHandler(this.lblExtra3_Click);
             // 
             // lblExtra4
             // 
@@ -114,7 +114,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.panel1.Controls.Add(this.lblSecurity);
-            this.panel1.Controls.Add(this.lblExtra3);
+            this.panel1.Controls.Add(this.lblEmployee);
             this.panel1.Controls.Add(this.lblExtra6);
             this.panel1.Controls.Add(this.lblPersDetail);
             this.panel1.Controls.Add(this.lblExtra5);
@@ -142,7 +142,7 @@
 
         private System.Windows.Forms.Label lblPersDetail;
         private System.Windows.Forms.Label lblSecurity;
-        private System.Windows.Forms.Label lblExtra3;
+        private System.Windows.Forms.Label lblEmployee;
         private System.Windows.Forms.Label lblExtra4;
         private System.Windows.Forms.Label lblExtra5;
         private System.Windows.Forms.Label lblExtra6;

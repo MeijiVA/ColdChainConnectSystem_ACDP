@@ -107,8 +107,8 @@ namespace ColdChainConnectSystem_ACDP
 
         private void userAccountControl1_Load(object sender, EventArgs e)
         {
-            userAccountControl1.UAC_namelbl.Text = ConnectionClass.fname + " " + ConnectionClass.mname + " " + ConnectionClass.lname; ;
-            userAccountControl1.UAC_positionlbl.Text = ConnectionClass.position;
+            uacUserProfile.UAC_namelbl.Text = ConnectionClass.fname + " " + ConnectionClass.mname + " " + ConnectionClass.lname; ;
+            uacUserProfile.UAC_positionlbl.Text = ConnectionClass.position;
         }
 
         private void btnSettings_Click(object sender, EventArgs e)

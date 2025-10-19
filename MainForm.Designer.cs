@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.DisplayPanel = new System.Windows.Forms.Panel();
-            this.MainSidePanel = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.logoutBtn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnSettings = new System.Windows.Forms.Button();
-            this.userAccountControl1 = new ColdChainConnectSystem_ACDP.AppForms.SidePanel.UserAccountControl();
+            this.uacUserProfile = new ColdChainConnectSystem_ACDP.AppForms.SidePanel.UserAccountControl();
             this.btnNotif = new System.Windows.Forms.Button();
+            this.sidePanel1 = new ColdChainConnectSystem_ACDP.AppForms.SidePanel.SidePanel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -47,14 +47,6 @@
             this.DisplayPanel.Name = "DisplayPanel";
             this.DisplayPanel.Size = new System.Drawing.Size(798, 570);
             this.DisplayPanel.TabIndex = 0;
-            // 
-            // MainSidePanel
-            // 
-            this.MainSidePanel.BackColor = System.Drawing.Color.White;
-            this.MainSidePanel.Location = new System.Drawing.Point(0, 200);
-            this.MainSidePanel.Name = "MainSidePanel";
-            this.MainSidePanel.Size = new System.Drawing.Size(200, 355);
-            this.MainSidePanel.TabIndex = 1;
             // 
             // panel1
             // 
@@ -103,14 +95,14 @@
             this.btnSettings.UseVisualStyleBackColor = true;
             this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
             // 
-            // userAccountControl1
+            // uacUserProfile
             // 
-            this.userAccountControl1.BackColor = System.Drawing.Color.White;
-            this.userAccountControl1.Location = new System.Drawing.Point(0, 30);
-            this.userAccountControl1.Name = "userAccountControl1";
-            this.userAccountControl1.Size = new System.Drawing.Size(200, 170);
-            this.userAccountControl1.TabIndex = 5;
-            this.userAccountControl1.Load += new System.EventHandler(this.userAccountControl1_Load);
+            this.uacUserProfile.BackColor = System.Drawing.Color.White;
+            this.uacUserProfile.Location = new System.Drawing.Point(0, 30);
+            this.uacUserProfile.Name = "uacUserProfile";
+            this.uacUserProfile.Size = new System.Drawing.Size(200, 170);
+            this.uacUserProfile.TabIndex = 5;
+            this.uacUserProfile.Load += new System.EventHandler(this.userAccountControl1_Load);
             // 
             // btnNotif
             // 
@@ -125,17 +117,25 @@
             this.btnNotif.TabIndex = 6;
             this.btnNotif.UseVisualStyleBackColor = true;
             // 
+            // sidePanel1
+            // 
+            this.sidePanel1.BackColor = System.Drawing.Color.White;
+            this.sidePanel1.Location = new System.Drawing.Point(0, 199);
+            this.sidePanel1.Name = "sidePanel1";
+            this.sidePanel1.Size = new System.Drawing.Size(200, 355);
+            this.sidePanel1.TabIndex = 7;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.ClientSize = new System.Drawing.Size(1000, 600);
+            this.Controls.Add(this.sidePanel1);
             this.Controls.Add(this.btnNotif);
-            this.Controls.Add(this.userAccountControl1);
+            this.Controls.Add(this.uacUserProfile);
             this.Controls.Add(this.btnSettings);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.MainSidePanel);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.DisplayPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -157,11 +157,11 @@
         #endregion
         private System.Windows.Forms.PictureBox pictureBox1;
         public System.Windows.Forms.Panel DisplayPanel;
-        public System.Windows.Forms.Panel MainSidePanel;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button logoutBtn;
         private System.Windows.Forms.Button btnSettings;
-        private AppForms.SidePanel.UserAccountControl userAccountControl1;
+        private AppForms.SidePanel.UserAccountControl uacUserProfile;
         private System.Windows.Forms.Button btnNotif;
+        private AppForms.SidePanel.SidePanel sidePanel1;
     }
 }

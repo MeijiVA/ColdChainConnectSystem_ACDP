@@ -17,7 +17,7 @@ namespace ColdChainConnectSystem_ACDP
 {
     public partial class LoginForm : Form
     {
-
+        public static string verify;
         DisplayClass dc = new DisplayClass();
         private ConnectionClass conc;
         public static MainForm mf; //singleton
@@ -50,7 +50,6 @@ namespace ColdChainConnectSystem_ACDP
         private void setupMainForm() 
         {
             mf.DisplayPanel.Controls.Clear();
-            mf.MainSidePanel.Controls.Clear();
         }
 
         private void MainFormShow(MainForm mf)
@@ -76,17 +75,12 @@ namespace ColdChainConnectSystem_ACDP
             else
             {
                 conc = new ConnectionClass();
-                String verify = (txtUser.Text) + "," + (txtPass.Text);
-                switch (conc.LoginAccount(verify))
+                string accountCredentials = (txtUser.Text) + "," + (txtPass.Text);
+                verify = conc.LoginAccount(accountCredentials);
+                switch (verify)
                 {
                     case "admin":
-
-                        Admin af = new Admin();
                         setupMainForm();
-                        af.Dock = DockStyle.Fill;
-                        mf.MainSidePanel.Controls.Add(af);
-                        af.Show();
-
                         this.Hide();
                         LoginForm.mf.NavigateTo(new DashoardForm());
                         MainFormShow(mf);

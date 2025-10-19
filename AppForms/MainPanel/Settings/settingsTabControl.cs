@@ -70,11 +70,11 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Settings
             {
                 case true:
                     ClickFlag3 = false;
-                    lblExtra3.Location = new Point(240, -3);
+                    lblEmployee.Location = new Point(240, -3);
                     break;
                 case false:
                     ClickFlag3 = true;
-                    lblExtra3.Location = new Point(240, 0);
+                    lblEmployee.Location = new Point(240, 0);
                     break;
             }
         }

@@ -100,29 +100,11 @@
     <Compile Include="AppForms\MainPanel\Settings\settingsTabControl.Designer.cs">
       <DependentUpon>settingsTabControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="AppForms\SidePanel\Admin.cs">
+    <Compile Include="AppForms\SidePanel\SidePanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="AppForms\SidePanel\Admin.Designer.cs">
-      <DependentUpon>Admin.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AppForms\SidePanel\Assistant.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="AppForms\SidePanel\Assistant.Designer.cs">
-      <DependentUpon>Assistant.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AppForms\SidePanel\Inventory.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="AppForms\SidePanel\Inventory.Designer.cs">
-      <DependentUpon>Inventory.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AppForms\SidePanel\Sales.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="AppForms\SidePanel\Sales.Designer.cs">
-      <DependentUpon>Sales.cs</DependentUpon>
+    <Compile Include="AppForms\SidePanel\SidePanel.Designer.cs">
+      <DependentUpon>SidePanel.cs</DependentUpon>
     </Compile>
     <Compile Include="AppForms\SidePanel\UserAccountControl.cs">
       <SubType>UserControl</SubType>
@@ -177,17 +159,8 @@
     <EmbeddedResource Include="AppForms\MainPanel\Settings\settingsTabControl.resx">
       <DependentUpon>settingsTabControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AppForms\SidePanel\Admin.resx">
-      <DependentUpon>Admin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AppForms\SidePanel\Assistant.resx">
-      <DependentUpon>Assistant.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AppForms\SidePanel\Inventory.resx">
-      <DependentUpon>Inventory.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AppForms\SidePanel\Sales.resx">
-      <DependentUpon>Sales.cs</DependentUpon>
+    <EmbeddedResource Include="AppForms\SidePanel\SidePanel.resx">
+      <DependentUpon>SidePanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AppForms\SidePanel\UserAccountControl.resx">
       <DependentUpon>UserAccountControl.cs</DependentUpon>
