@@ -41,7 +41,7 @@
             // lblPersDetail
             // 
             this.lblPersDetail.BackColor = System.Drawing.Color.White;
-            this.lblPersDetail.Font = new System.Drawing.Font("Arial", 9F);
+            this.lblPersDetail.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
             this.lblPersDetail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(9)))), ((int)(((byte)(76)))));
             this.lblPersDetail.Location = new System.Drawing.Point(0, 0);
             this.lblPersDetail.Name = "lblPersDetail";
@@ -54,7 +54,7 @@
             // lblSecurity
             // 
             this.lblSecurity.BackColor = System.Drawing.Color.White;
-            this.lblSecurity.Font = new System.Drawing.Font("Arial", 9F);
+            this.lblSecurity.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
             this.lblSecurity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(9)))), ((int)(((byte)(76)))));
             this.lblSecurity.Location = new System.Drawing.Point(120, 0);
             this.lblSecurity.Name = "lblSecurity";
@@ -67,7 +67,7 @@
             // lblEmployee
             // 
             this.lblEmployee.BackColor = System.Drawing.Color.White;
-            this.lblEmployee.Font = new System.Drawing.Font("Arial", 9F);
+            this.lblEmployee.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
             this.lblEmployee.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(9)))), ((int)(((byte)(76)))));
             this.lblEmployee.Location = new System.Drawing.Point(240, 0);
             this.lblEmployee.Name = "lblEmployee";
@@ -80,7 +80,7 @@
             // lblExtra4
             // 
             this.lblExtra4.BackColor = System.Drawing.Color.White;
-            this.lblExtra4.Font = new System.Drawing.Font("Arial", 9F);
+            this.lblExtra4.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
             this.lblExtra4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(9)))), ((int)(((byte)(76)))));
             this.lblExtra4.Location = new System.Drawing.Point(360, 0);
             this.lblExtra4.Name = "lblExtra4";
@@ -93,7 +93,7 @@
             // lblExtra5
             // 
             this.lblExtra5.BackColor = System.Drawing.Color.White;
-            this.lblExtra5.Font = new System.Drawing.Font("Arial", 9F);
+            this.lblExtra5.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
             this.lblExtra5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(9)))), ((int)(((byte)(76)))));
             this.lblExtra5.Location = new System.Drawing.Point(480, 0);
             this.lblExtra5.Name = "lblExtra5";
@@ -106,7 +106,7 @@
             // lblExtra6
             // 
             this.lblExtra6.BackColor = System.Drawing.Color.White;
-            this.lblExtra6.Font = new System.Drawing.Font("Arial", 9F);
+            this.lblExtra6.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
             this.lblExtra6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(9)))), ((int)(((byte)(76)))));
             this.lblExtra6.Location = new System.Drawing.Point(600, 0);
             this.lblExtra6.Name = "lblExtra6";

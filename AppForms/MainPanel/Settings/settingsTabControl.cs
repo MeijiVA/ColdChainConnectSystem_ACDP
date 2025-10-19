@@ -26,7 +26,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Settings
             }
             for (int i = 0; i < 6; i++)
             {
-                ClickFlag[i] = false;
+                ClickFlag[i] = true;
             }
             
             HideLabel(lblEmployee,2);
@@ -40,19 +40,16 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Settings
             l.Text = "";
             Clickable[i] = false;
         }
-        private void LabelClick(Boolean c, Label l)
+
+        private void LabelClick(Label l)
         {
-            switch (c)
-            {
-                case true:
-                    c = false;
-                    l.Location = new Point(l.Location.X, -3);
-                    break;
-                case false:
-                    c = true;
-                    l.Location = new Point(l.Location.X, 0);
-                    break;
-            }
+            lblPersDetail.Location = new Point(lblPersDetail.Location.X, 0);
+            lblSecurity.Location = new Point(lblSecurity.Location.X, 0);
+            lblEmployee.Location = new Point(lblEmployee.Location.X, 0);
+            lblExtra4.Location = new Point(lblExtra4.Location.X, 0);
+            lblExtra5.Location = new Point(lblExtra5.Location.X, 0);
+            lblExtra6.Location = new Point(lblExtra6.Location.X, 0);
+            l.Location = new Point(l.Location.X, -3);
         }
 
 
@@ -60,14 +57,14 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Settings
         {
             if (Clickable[0] == true)
             {
-                LabelClick(ClickFlag[0], lblPersDetail);
+                LabelClick(lblPersDetail);
             }
         }
         private void lblSecurity_Click(object sender, EventArgs e)
         {
             if (Clickable[1] == true)
             {
-                LabelClick(ClickFlag[0], lblSecurity);
+                LabelClick(lblSecurity);
             }
         }
 
@@ -75,7 +72,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Settings
         {
             if (Clickable[2] == true)
             {
-                LabelClick(ClickFlag[2], lblEmployee);
+                LabelClick(lblEmployee);
             }
         }
 
@@ -83,7 +80,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Settings
         {
             if (Clickable[3] == true)
             {
-                LabelClick(ClickFlag[3], lblExtra4);
+                LabelClick(lblExtra4);
             }
         }
 
@@ -91,7 +88,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Settings
         {
             if (Clickable[4] == true)
             {
-                LabelClick(ClickFlag[4], lblExtra5);
+                LabelClick(lblExtra5);
             }
         }
 
@@ -99,7 +96,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Settings
         {
             if (Clickable[5] == true)
             {
-                LabelClick(ClickFlag[5], lblSecurity);
+                LabelClick(lblExtra6);
             }
         }
 
