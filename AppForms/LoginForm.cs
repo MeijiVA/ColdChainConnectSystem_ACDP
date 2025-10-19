@@ -19,7 +19,6 @@ namespace ColdChainConnectSystem_ACDP
     {
         public static string verify;
         DisplayClass dc = new DisplayClass();
-        private ConnectionClass conc;
         public static MainForm mf; //singleton
         public LoginForm()
         {
@@ -64,6 +63,7 @@ namespace ColdChainConnectSystem_ACDP
 
         private void loginBtn_Click(object sender, EventArgs e)
         {
+
             if (txtUser.Text.Equals(""))
             {
                 MessageBox.Show("Please enter your Username.");
@@ -74,9 +74,9 @@ namespace ColdChainConnectSystem_ACDP
             }
             else
             {
-                conc = new ConnectionClass();
+                
                 string accountCredentials = (txtUser.Text) + "," + (txtPass.Text);
-                verify = conc.LoginAccount(accountCredentials);
+                verify = ConnectionClass.LoginAccount(accountCredentials);
                 switch (verify)
                 {
                     case "admin":
@@ -113,17 +113,6 @@ namespace ColdChainConnectSystem_ACDP
                 }
             }
         }
-
-
-
-
-
-
-
-
-
-
-
 
 
 
