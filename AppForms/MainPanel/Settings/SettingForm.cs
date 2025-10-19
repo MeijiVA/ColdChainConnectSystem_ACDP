@@ -23,5 +23,10 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Settings
         {
 
         }
+
+        private void SettingForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

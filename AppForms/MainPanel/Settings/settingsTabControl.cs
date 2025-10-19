@@ -12,115 +12,90 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Settings
 {
     public partial class settingsTabControl : UserControl
     {
-        bool ClickFlag1;
-        bool ClickFlag2;
-        bool ClickFlag3;
-        bool ClickFlag4;
-        bool ClickFlag5;
-        bool ClickFlag6;
+        bool[] Clickable = new bool[6];
+        bool[] ClickFlag = new bool[6];
         public settingsTabControl()
         {
             InitializeComponent();
         }
         private void settingsTabControl_Load(object sender, EventArgs e)
         {
-            ClickFlag1 = false;
-            ClickFlag2 = false;
-            ClickFlag3 = false;
-            ClickFlag4 = false;
-            ClickFlag5 = false;
-            ClickFlag6 = false;
+            for(int i = 0; i < 6; i++)
+            {
+                ClickFlag[i] = false;
+            }
+            
+            HideLabel(lblEmployee,3);
+            HideLabel(lblExtra4,4);
+            HideLabel(lblExtra5,5);
+            HideLabel(lblExtra6,6);
         }
 
-
-
-        private void lblPersDetail_Click(object sender, EventArgs e)
+        private void HideLabel(Label l, int i)
         {
-            switch (ClickFlag1)
+            l.Text = "";
+            Clickable[i] = false;
+        }
+        private void LabelClick(Boolean c, Label l)
+        {
+            switch (c)
             {
                 case true:
-                    ClickFlag1 = false;
-                    lblPersDetail.Location = new Point(0, -3);
+                    c = false;
+                    l.Location = new Point(l.Location.X, -3);
                     break;
                 case false:
-                    ClickFlag1 = true;
-                    lblPersDetail.Location = new Point(0, 0);
+                    c = true;
+                    l.Location = new Point(l.Location.X, 0);
                     break;
             }
         }
 
+
+        private void lblPersDetail_Click(object sender, EventArgs e)
+        {
+            if (Clickable[0] == true)
+            {
+                LabelClick(ClickFlag[0], lblPersDetail);
+            }
+        }
         private void lblSecurity_Click(object sender, EventArgs e)
         {
-            switch (ClickFlag2)
+            if (Clickable[0] == true)
             {
-                case true:
-                    ClickFlag2 = false;
-                    lblSecurity.Location = new Point(120, -3);
-                    break;
-                case false:
-                    ClickFlag2 = true;
-                    lblSecurity.Location = new Point(120, 0);
-                    break;
+                LabelClick(ClickFlag[0], lblSecurity);
             }
         }
 
         private void lblExtra3_Click(object sender, EventArgs e)
         {
-            switch (ClickFlag3)
+            if (Clickable[3] == true)
             {
-                case true:
-                    ClickFlag3 = false;
-                    lblEmployee.Location = new Point(240, -3);
-                    break;
-                case false:
-                    ClickFlag3 = true;
-                    lblEmployee.Location = new Point(240, 0);
-                    break;
+                LabelClick(ClickFlag[3], lblEmployee);
             }
         }
 
         private void lblExtra4_Click(object sender, EventArgs e)
         {
-            switch (ClickFlag4)
+            if (Clickable[4] == true)
             {
-                case true:
-                    ClickFlag4 = false;
-                    lblExtra4.Location = new Point(360, -3);
-                    break;
-                case false:
-                    ClickFlag4 = true;
-                    lblExtra4.Location = new Point(360, 0);
-                    break;
+                LabelClick(ClickFlag[4], lblExtra4);
             }
         }
 
         private void lblExtra5_Click(object sender, EventArgs e)
         {
-            switch (ClickFlag5)
+            if (Clickable[5] == true)
             {
-                case true:
-                    ClickFlag5 = false;
-                    lblExtra5.Location = new Point(480, -3);
-                    break;
-                case false:
-                    ClickFlag5 = true;
-                    lblExtra5.Location = new Point(480, 0);
-                    break;
+                LabelClick(ClickFlag[5], lblExtra5);
             }
         }
 
         private void lblExtra6_Click(object sender, EventArgs e)
         {
-            switch (ClickFlag6)
+            if (Clickable[6] == true)
             {
-                case true:
-                    ClickFlag6 = false;
-                    lblExtra6.Location = new Point(600, -3);
-                    break;
-                case false:
-                    ClickFlag6 = true;
-                    lblExtra6.Location = new Point(600, 0);
-                    break;
+                LabelClick(ClickFlag[6], lblSecurity);
             }
         }
 

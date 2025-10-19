@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.setlbl = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.tabsSetting = new ColdChainConnectSystem_ACDP.AppForms.MainPanel.Settings.settingsTabControl();
             this.SuspendLayout();
             // 
             // setlbl
@@ -45,12 +45,13 @@
             this.setlbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.setlbl.Click += new System.EventHandler(this.setlbl_Click);
             // 
-            // panel1
+            // tabsSetting
             // 
-            this.panel1.Location = new System.Drawing.Point(19, 58);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(765, 35);
-            this.panel1.TabIndex = 1;
+            this.tabsSetting.BackColor = System.Drawing.Color.White;
+            this.tabsSetting.Location = new System.Drawing.Point(19, 59);
+            this.tabsSetting.Name = "tabsSetting";
+            this.tabsSetting.Size = new System.Drawing.Size(765, 35);
+            this.tabsSetting.TabIndex = 0;
             // 
             // SettingForm
             // 
@@ -58,12 +59,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(798, 570);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.tabsSetting);
             this.Controls.Add(this.setlbl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SettingForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SettingForm";
+            this.Load += new System.EventHandler(this.SettingForm_Load);
             this.ResumeLayout(false);
 
         }
@@ -71,6 +73,6 @@
         #endregion
 
         private System.Windows.Forms.Label setlbl;
-        private System.Windows.Forms.Panel panel1;
+        private settingsTabControl tabsSetting;
     }
 }
