@@ -13,7 +13,6 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Settings
     public partial class settingsTabControl : UserControl
     {
         bool[] Clickable = new bool[6];
-        bool[] ClickFlag = new bool[6];
         public settingsTabControl()
         {
             InitializeComponent();
@@ -24,11 +23,6 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Settings
             {
                 Clickable[i] = true;
             }
-            for (int i = 0; i < 6; i++)
-            {
-                ClickFlag[i] = true;
-            }
-            
             HideLabel(lblEmployee,2);
             HideLabel(lblExtra4,3);
             HideLabel(lblExtra5,4);

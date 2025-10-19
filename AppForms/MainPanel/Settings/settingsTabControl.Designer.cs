@@ -86,7 +86,7 @@
             this.lblExtra4.Name = "lblExtra4";
             this.lblExtra4.Size = new System.Drawing.Size(120, 30);
             this.lblExtra4.TabIndex = 3;
-            this.lblExtra4.Text = "Security";
+            this.lblExtra4.Text = "Extra";
             this.lblExtra4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.lblExtra4.Click += new System.EventHandler(this.lblExtra4_Click);
             // 
@@ -99,7 +99,7 @@
             this.lblExtra5.Name = "lblExtra5";
             this.lblExtra5.Size = new System.Drawing.Size(120, 30);
             this.lblExtra5.TabIndex = 4;
-            this.lblExtra5.Text = "Security";
+            this.lblExtra5.Text = "Extra2";
             this.lblExtra5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.lblExtra5.Click += new System.EventHandler(this.lblExtra5_Click);
             // 
@@ -112,7 +112,7 @@
             this.lblExtra6.Name = "lblExtra6";
             this.lblExtra6.Size = new System.Drawing.Size(120, 30);
             this.lblExtra6.TabIndex = 5;
-            this.lblExtra6.Text = "Security";
+            this.lblExtra6.Text = "Extra3";
             this.lblExtra6.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.lblExtra6.Click += new System.EventHandler(this.lblExtra6_Click);
             // 
