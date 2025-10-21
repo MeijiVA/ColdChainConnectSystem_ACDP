@@ -23,7 +23,6 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Settings
             {
                 Clickable[i] = true;
             }
-            HideLabel(lblEmployee,2);
             HideLabel(lblExtra4,3);
             HideLabel(lblExtra5,4);
             HideLabel(lblExtra6,5);

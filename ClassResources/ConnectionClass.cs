@@ -68,7 +68,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                 string[] token = input.Split(',');
                 string username = token[0];
                 string password = token[1];
-                string database = @"Data Source=MIAN\SQLEXPRESS;Initial Catalog=AccountsDB;User ID=" + username + ";Password=" + password + ";TrustServerCertificate=True";
+                string database = @"Data Source=KIEL;Initial Catalog=AccountsDB;User ID=" + username + ";Password=" + password + ";TrustServerCertificate=True";
                 SqlConnection con = new SqlConnection(database);
                 query = @"SELECT empid, username, fname, mname, lname, contnum,"
                         + "address, age, dob, position, status FROM Employees";
@@ -119,9 +119,9 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                 }
 
             }
-            catch (System.Data.SqlClient.SqlException)
+            catch (System.Data.SqlClient.SqlException e)
             {
-                MessageBox.Show("Invalid Credentials.");
+                MessageBox.Show("Invalid Credentials."+e.Message);
             }
             catch (InactiveException e)
             {

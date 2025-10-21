@@ -45,12 +45,18 @@ namespace ColdChainConnectSystem_ACDP.AppForms.SidePanel
         }
         private void Admin_Load(object sender, EventArgs e)
         {
+            btnDashboard.Show();
+            btnInvMan.Show();
+            btnSupMan.Show();
+            btnSalesMan.Show();
+            btnCusMan.Show();
+            btnEmpMan.Hide();//unused
             switch (LoginForm.verify)
             {
+                
                 case "admin":
                     break;
                 case "assist":
-                    btnEmpMan.Hide();
                     break;
                 case "sales":
                     btnSupMan.Hide();
