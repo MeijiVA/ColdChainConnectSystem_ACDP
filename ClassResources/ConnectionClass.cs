@@ -11,6 +11,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Xml.Linq;
 using System.Net.Sockets;
+using System.IO;
 
 namespace ColdChainConnectSystem_ACDP.ClassResources
 {
@@ -68,7 +69,12 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                 string[] token = input.Split(',');
                 string username = token[0];
                 string password = token[1];
-                string database = @"Data Source=KIEL;Initial Catalog=AccountsDB;User ID=" + username + ";Password=" + password + ";TrustServerCertificate=True";
+
+                string filePath = System.IO.Path.GetDirectoryName(Application.ExecutablePath) + @"\conString.txt";
+                StreamReader sr = new StreamReader(filePath);
+                string database = sr.ReadLine();
+                database = database.Replace("username",username);
+                database = database.Replace("password", password);
                 SqlConnection con = new SqlConnection(database);
                 query = @"SELECT empid, username, fname, mname, lname, contnum,"
                         + "address, age, dob, position, status FROM Employees";
