@@ -5,13 +5,18 @@ using System.Data;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Linq;
+using System.Net;
+using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 using ColdChainConnectSystem_ACDP.AppForms;
 using ColdChainConnectSystem_ACDP.AppForms.MainPanel.Dashboard;
 using ColdChainConnectSystem_ACDP.AppForms.SidePanel;
 using ColdChainConnectSystem_ACDP.ClassResources;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace ColdChainConnectSystem_ACDP
 {
@@ -151,6 +156,27 @@ namespace ColdChainConnectSystem_ACDP
                 mousePos.Offset(mouseLoc.X, mouseLoc.Y);
                 this.Location = mousePos;
             }
+        }
+
+        private void testButton_Click(object sender, EventArgs e)
+        {
+            
+            ConnectionClass.empid = "ADM-0001";
+            ConnectionClass.username = "AntonDelaPena";
+            ConnectionClass.account = "AntonDelaPena,123123123";
+            ConnectionClass.fname = "Antonio";
+            ConnectionClass.mname = "C";
+            ConnectionClass.lname = "Dela Pena";
+            ConnectionClass.address = "Pampanga";
+            ConnectionClass.contnum = "09999245959";
+            ConnectionClass.age = "40";
+            ConnectionClass.dob = "01/01/1985";
+            ConnectionClass.position = "Administrator";
+            ConnectionClass.status = "Active";
+            setupMainForm();
+            this.Hide();
+            LoginForm.mf.NavigateTo(new DashoardForm());
+            MainFormShow(mf);
         }
     }//class
 }//namespace

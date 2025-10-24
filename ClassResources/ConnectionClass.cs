@@ -44,7 +44,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
         public static string position { get; set; }
         public static string status { get; set; }
         public static string query { get; set; }
-
+        public static string account { get; set; }
         public ConnectionClass()
         {
             empid = "";
@@ -60,7 +60,6 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
             position = "";
             status = "";
         }
-        public string account = "";
         public static string LoginAccount(string input)
         {
             //empid,username,fname,mname,lname,contnum,address,age,dob,position,status 
