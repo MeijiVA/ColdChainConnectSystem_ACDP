@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Drawing2D;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,22 +19,46 @@ namespace ColdChainConnectSystem_ACDP
         public abstract void SetDisplayRectangle(Label l, int arc1, int arc2, int arc3, int arc4);
         public abstract void SetDisplayRectangle(Panel p,int arc1,int arc2,int arc3,int arc4);
         public abstract void Panel_Paint(object sender, PaintEventArgs e);
-
         public abstract void SetDisplayRectangle(TextBox t, int arc1, int arc2, int arc3, int arc4);
-
     }
 
 
     internal class DisplayClass : CColor
     {
         public Panel myPanel;
+
+        public override void Panel_Paint(object sender, PaintEventArgs e)
+        {
+
+            if (myPanel != null)
+            {
+                Color[] shadowColors = new Color[5];
+                shadowColors[0] = Color.FromArgb(130, 130, 130); // Darkest shade
+                shadowColors[1] = Color.FromArgb(181, 181, 181); // Darker shade
+                shadowColors[2] = Color.FromArgb(195, 195, 195); // Medium shade
+                shadowColors[3] = Color.FromArgb(211, 211, 211); // Lighter shade
+                shadowColors[4] = Color.FromArgb(230, 230, 230); // Lightest shade
+                using (Pen pen = new Pen(shadowColors[0]))
+                {
+                    Point pt = myPanel.Location;
+                    pt.Y += myPanel.Height;
+
+                    for (int sp = 0; sp < 5; sp++)
+                    {
+                        pen.Color = shadowColors[sp];
+                        e.Graphics.DrawLine(pen, pt.X + sp, pt.Y, pt.X + myPanel.Width - 1 + sp, pt.Y); // Bottom shadow
+                        e.Graphics.DrawLine(pen, myPanel.Right + sp, myPanel.Top + sp, myPanel.Right + sp, myPanel.Bottom + sp); // Right shadow
+                        pt.Y++;
+                    }
+                }
+            }
+        }
+
         public override Color SetCustomColor(string color)
         {
             Color custColor = ColorTranslator.FromHtml(color);
             return custColor;
         }
-
-
 
         public override void SetDisplayRectangle(Button b)
         {
@@ -56,33 +81,6 @@ namespace ColdChainConnectSystem_ACDP
             g.AddArc(rec.X, rec.Y + rec.Height - arc4, 50, 50, 90, 90);
             p.Region = new Region(g);
 
-        }
-
-        public override void Panel_Paint(object sender, PaintEventArgs e)
-        {
- 
-            if (myPanel != null)
-            {
-                Color[] shadowColors = new Color[5];
-                shadowColors[0] = Color.FromArgb(130, 130, 130); // Darkest shade
-                shadowColors[1] = Color.FromArgb(181, 181, 181); // Darker shade
-                shadowColors[2] = Color.FromArgb(195, 195, 195); // Medium shade
-                shadowColors[3] = Color.FromArgb(211, 211, 211); // Lighter shade
-                shadowColors[4] = Color.FromArgb(230, 230 ,230); // Lightest shade
-                using (Pen pen = new Pen(shadowColors[0]))
-                {
-                    Point pt = myPanel.Location;
-                    pt.Y += myPanel.Height;
-
-                    for (int sp = 0; sp < 5; sp++)
-                    {
-                        pen.Color = shadowColors[sp];
-                        e.Graphics.DrawLine(pen, pt.X + sp, pt.Y, pt.X + myPanel.Width - 1 + sp, pt.Y); // Bottom shadow
-                        e.Graphics.DrawLine(pen, myPanel.Right + sp, myPanel.Top + sp, myPanel.Right + sp, myPanel.Bottom + sp); // Right shadow
-                        pt.Y++;
-                    }
-                }
-            }
         }
 
         public override void SetDisplayCircle(PictureBox pb)
@@ -126,5 +124,6 @@ namespace ColdChainConnectSystem_ACDP
             g.AddArc(rec.X, rec.Y + rec.Height - arc4, 50, 50, 90, 90);
             t.Region = new Region(g);
         }
+
     }//class color
 }//namespace

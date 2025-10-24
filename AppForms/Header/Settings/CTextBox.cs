@@ -20,7 +20,11 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Settings
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            dc.SetDisplayRectangle(txtBoxCust, 50, 50, 50, 50);
+
+        }
+        private void CTextBox_Load(object sender, EventArgs e)
+        {
+            dc.SetDisplayRectangle(txtBoxCust,20,20,20,20);
         }
     }
 }

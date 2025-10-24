@@ -16,5 +16,10 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings
         {
             InitializeComponent();
         }
+
+        private void panel1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
