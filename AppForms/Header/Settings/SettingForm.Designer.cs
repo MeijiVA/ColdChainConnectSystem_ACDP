@@ -30,6 +30,7 @@
         {
             this.setlbl = new System.Windows.Forms.Label();
             this.tabsSetting = new ColdChainConnectSystem_ACDP.AppForms.MainPanel.Settings.settingsTabControl();
+            this.pnlDisplaySettings = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // setlbl
@@ -53,12 +54,20 @@
             this.tabsSetting.Size = new System.Drawing.Size(765, 35);
             this.tabsSetting.TabIndex = 0;
             // 
+            // pnlDisplaySettings
+            // 
+            this.pnlDisplaySettings.Location = new System.Drawing.Point(17, 100);
+            this.pnlDisplaySettings.Name = "pnlDisplaySettings";
+            this.pnlDisplaySettings.Size = new System.Drawing.Size(765, 458);
+            this.pnlDisplaySettings.TabIndex = 1;
+            // 
             // SettingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(798, 570);
+            this.Controls.Add(this.pnlDisplaySettings);
             this.Controls.Add(this.tabsSetting);
             this.Controls.Add(this.setlbl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -74,5 +83,6 @@
 
         private System.Windows.Forms.Label setlbl;
         private settingsTabControl tabsSetting;
+        public System.Windows.Forms.Panel pnlDisplaySettings;
     }
 }

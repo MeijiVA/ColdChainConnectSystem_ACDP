@@ -115,7 +115,7 @@ namespace ColdChainConnectSystem_ACDP
         {
             if (settingFlag == 1)
             {
-                LoginForm.mf.NavigateTo(new SettingForm());
+                LoginForm.mf.NavigateTo(LoginForm.sf);
                 settingFlag = 0;
             }
             else if (settingFlag == 0)

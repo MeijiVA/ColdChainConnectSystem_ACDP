@@ -17,6 +17,7 @@ using ColdChainConnectSystem_ACDP.AppForms.SidePanel;
 using ColdChainConnectSystem_ACDP.ClassResources;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using ColdChainConnectSystem_ACDP.AppForms.MainPanel.Settings;
 
 namespace ColdChainConnectSystem_ACDP
 {
@@ -25,6 +26,7 @@ namespace ColdChainConnectSystem_ACDP
         public static string verify;
         DisplayClass dc = new DisplayClass();
         public static MainForm mf; //singleton
+        public static SettingForm sf = new SettingForm(); //singleton
         public LoginForm()
         {
             if (mf == null)

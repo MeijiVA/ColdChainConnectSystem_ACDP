@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ColdChainConnectSystem_ACDP.AppForms.Header.Settings;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -51,6 +52,8 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Settings
             if (Clickable[0] == true)
             {
                 LabelClick(lblPersDetail);
+                LoginForm.sf.NavigateTo(new PersonalDetailsForm());
+
             }
         }
         private void lblSecurity_Click(object sender, EventArgs e)

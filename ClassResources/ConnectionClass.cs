@@ -25,11 +25,6 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
         public UnknownPositionException(string str) : base(str) { }
     }
 
-
-
-
-
-
     internal class ConnectionClass
     {
         public static string empid { get; set; }

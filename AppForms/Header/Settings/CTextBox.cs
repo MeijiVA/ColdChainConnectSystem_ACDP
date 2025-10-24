@@ -12,9 +12,15 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Settings
 {
     public partial class CTextBox : UserControl
     {
+        DisplayClass dc = new DisplayClass();
         public CTextBox()
         {
             InitializeComponent();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            dc.SetDisplayRectangle(txtBoxCust, 50, 50, 50, 50);
         }
     }
 }

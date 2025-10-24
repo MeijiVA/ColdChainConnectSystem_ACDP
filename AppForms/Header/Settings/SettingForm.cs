@@ -19,6 +19,15 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Settings
             dc.SetDisplayRectangle(setlbl, 50, 50, 50, 50);
         }
 
+        public void NavigateTo(Form screen)
+        {
+            pnlDisplaySettings.Controls.Clear();
+            screen.Dock = DockStyle.Fill;
+            screen.TopLevel = false;
+            pnlDisplaySettings.Controls.Add(screen);
+            screen.Show();
+        }
+
         private void setlbl_Click(object sender, EventArgs e)
         {
 
