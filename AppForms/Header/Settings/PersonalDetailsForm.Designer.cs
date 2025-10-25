@@ -75,7 +75,7 @@
             this.lblMName.BackColor = System.Drawing.Color.Transparent;
             this.lblMName.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold);
             this.lblMName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.lblMName.Location = new System.Drawing.Point(509, 75);
+            this.lblMName.Location = new System.Drawing.Point(516, 88);
             this.lblMName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMName.Name = "lblMName";
             this.lblMName.Size = new System.Drawing.Size(131, 24);
@@ -89,7 +89,7 @@
             this.txtMName.Enabled = false;
             this.txtMName.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Bold);
             this.txtMName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.txtMName.Location = new System.Drawing.Point(506, 104);
+            this.txtMName.Location = new System.Drawing.Point(513, 117);
             this.txtMName.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtMName.Name = "txtMName";
             this.txtMName.ReadOnly = true;
@@ -102,7 +102,7 @@
             this.lblLName.BackColor = System.Drawing.Color.Transparent;
             this.lblLName.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold);
             this.lblLName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.lblLName.Location = new System.Drawing.Point(509, 168);
+            this.lblLName.Location = new System.Drawing.Point(516, 168);
             this.lblLName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblLName.Name = "lblLName";
             this.lblLName.Size = new System.Drawing.Size(110, 24);
@@ -116,7 +116,7 @@
             this.txtLName.Enabled = false;
             this.txtLName.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Bold);
             this.txtLName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.txtLName.Location = new System.Drawing.Point(506, 197);
+            this.txtLName.Location = new System.Drawing.Point(513, 197);
             this.txtLName.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtLName.Name = "txtLName";
             this.txtLName.ReadOnly = true;
@@ -129,7 +129,7 @@
             this.lblDOB.BackColor = System.Drawing.Color.Transparent;
             this.lblDOB.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold);
             this.lblDOB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.lblDOB.Location = new System.Drawing.Point(496, 440);
+            this.lblDOB.Location = new System.Drawing.Point(531, 433);
             this.lblDOB.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDOB.Name = "lblDOB";
             this.lblDOB.Size = new System.Drawing.Size(130, 24);
@@ -143,7 +143,7 @@
             this.txtAddress.Enabled = false;
             this.txtAddress.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Bold);
             this.txtAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.txtAddress.Location = new System.Drawing.Point(474, 356);
+            this.txtAddress.Location = new System.Drawing.Point(509, 349);
             this.txtAddress.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
@@ -157,7 +157,7 @@
             this.lblAge.BackColor = System.Drawing.Color.Transparent;
             this.lblAge.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold);
             this.lblAge.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.lblAge.Location = new System.Drawing.Point(509, 233);
+            this.lblAge.Location = new System.Drawing.Point(516, 233);
             this.lblAge.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAge.Name = "lblAge";
             this.lblAge.Size = new System.Drawing.Size(46, 24);
@@ -171,7 +171,7 @@
             this.txtAge.Enabled = false;
             this.txtAge.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Bold);
             this.txtAge.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.txtAge.Location = new System.Drawing.Point(506, 262);
+            this.txtAge.Location = new System.Drawing.Point(513, 262);
             this.txtAge.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtAge.Name = "txtAge";
             this.txtAge.ReadOnly = true;
@@ -186,7 +186,7 @@
             this.dtpDOB.CalendarTitleBackColor = System.Drawing.Color.Transparent;
             this.dtpDOB.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.dtpDOB.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.dtpDOB.Location = new System.Drawing.Point(495, 469);
+            this.dtpDOB.Location = new System.Drawing.Point(530, 462);
             this.dtpDOB.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.dtpDOB.Name = "dtpDOB";
             this.dtpDOB.Size = new System.Drawing.Size(136, 20);
@@ -198,7 +198,7 @@
             this.lblAdress.BackColor = System.Drawing.Color.Transparent;
             this.lblAdress.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold);
             this.lblAdress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.lblAdress.Location = new System.Drawing.Point(475, 329);
+            this.lblAdress.Location = new System.Drawing.Point(510, 322);
             this.lblAdress.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAdress.Name = "lblAdress";
             this.lblAdress.Size = new System.Drawing.Size(88, 24);
@@ -210,7 +210,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(766, 458);
+            this.ClientSize = new System.Drawing.Size(766, 765);
             this.Controls.Add(this.lblAdress);
             this.Controls.Add(this.dtpDOB);
             this.Controls.Add(this.lblAge);
