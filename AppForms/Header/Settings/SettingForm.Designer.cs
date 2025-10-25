@@ -49,7 +49,7 @@
             // tabsSetting
             // 
             this.tabsSetting.BackColor = System.Drawing.Color.White;
-            this.tabsSetting.Location = new System.Drawing.Point(19, 59);
+            this.tabsSetting.Location = new System.Drawing.Point(22, 59);
             this.tabsSetting.Name = "tabsSetting";
             this.tabsSetting.Size = new System.Drawing.Size(764, 35);
             this.tabsSetting.TabIndex = 0;

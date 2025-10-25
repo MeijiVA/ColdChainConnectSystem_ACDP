@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Settings
@@ -18,7 +19,6 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Settings
         public settingsTabControl()
         {
             InitializeComponent();
-
         }
         private void settingsTabControl_Load(object sender, EventArgs e)
         {
@@ -26,16 +26,45 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Settings
             {
                 Clickable[i] = true;
             }
-            HideLabel(lblExtra4,3);
-            HideLabel(lblExtra5,4);
-            HideLabel(lblExtra6,5);
+
+            LabelStatus("hide", lblExtra4,3, "");
+            LabelStatus("hide", lblExtra5,4, "");
+            LabelStatus("hide", lblExtra6,5, "");
+
+            switch (LoginForm.verify)
+            {
+            case "admin":
+                    LabelStatus("show", lblPersDetail, 0,"Personal Detail");
+                    LabelStatus("show", lblSecurity, 1, "Security");
+                    LabelStatus("show", lblEmployee, 2, "Employee Management");
+                    break;
+            case "assist":
+            case "sales":
+            case "inv":
+                    LabelStatus("show", lblPersDetail, 0, "Personal Detail");
+                    LabelStatus("show", lblSecurity, 1, "Security");
+                    LabelStatus("hide", lblEmployee, 2,"");
+                    break;
+            }
         }
 
-        private void HideLabel(Label l, int i)
+        private void LabelStatus(String state, Label l, int i,String txt)
         {
-            l.Text = "";
-            Clickable[i] = false;
+            switch (state)
+            {
+                case "show":
+                    l.Text = txt;
+                    Clickable[i] = true;
+                    break;
+
+                case "hide":
+                    l.Text = "";
+                    Clickable[i] = false;
+                    break;
+            }
+
         }
+
 
         private void LabelClick(Label l)
         {
