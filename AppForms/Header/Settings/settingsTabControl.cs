@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Settings
 {
@@ -17,6 +18,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Settings
         public settingsTabControl()
         {
             InitializeComponent();
+
         }
         private void settingsTabControl_Load(object sender, EventArgs e)
         {
@@ -52,8 +54,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Settings
             if (Clickable[0] == true)
             {
                 LabelClick(lblPersDetail);
-                LoginForm.sf.NavigateTo(new PersonalDetailsForm());
-
+                LoginForm.sf.NavigateTo(SettingForm.pdf);
             }
         }
         private void lblSecurity_Click(object sender, EventArgs e)

@@ -7,11 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ColdChainConnectSystem_ACDP.AppForms.Header.Settings;
+using ColdChainConnectSystem_ACDP.AppForms.MainPanel.Employee;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Settings
 {
     public partial class SettingForm : Form
     {
+        public static PersonalDetailsForm pdf = new PersonalDetailsForm();
+  /*    public static SecurityForm secf = new SecurityForm();
+        public static EmployeeForm ef = new EmployeeForm();*/
         DisplayClass dc = new DisplayClass();
         public SettingForm()
         {
@@ -33,9 +39,15 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Settings
 
         }
 
-        private void SettingForm_Load(object sender, EventArgs e)
+        private void vsbDisplayPanel_DragOver(object sender, DragEventArgs e)
         {
 
         }
+
+        private void vsbDisplayPanel_Scroll(object sender, ScrollEventArgs e)
+        {
+
+        }
+
     }
 }

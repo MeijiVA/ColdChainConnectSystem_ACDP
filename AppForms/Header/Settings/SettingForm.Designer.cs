@@ -51,14 +51,14 @@
             this.tabsSetting.BackColor = System.Drawing.Color.White;
             this.tabsSetting.Location = new System.Drawing.Point(19, 59);
             this.tabsSetting.Name = "tabsSetting";
-            this.tabsSetting.Size = new System.Drawing.Size(765, 35);
+            this.tabsSetting.Size = new System.Drawing.Size(764, 35);
             this.tabsSetting.TabIndex = 0;
             // 
             // pnlDisplaySettings
             // 
             this.pnlDisplaySettings.Location = new System.Drawing.Point(17, 100);
             this.pnlDisplaySettings.Name = "pnlDisplaySettings";
-            this.pnlDisplaySettings.Size = new System.Drawing.Size(765, 458);
+            this.pnlDisplaySettings.Size = new System.Drawing.Size(766, 458);
             this.pnlDisplaySettings.TabIndex = 1;
             // 
             // SettingForm
@@ -74,7 +74,6 @@
             this.Name = "SettingForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SettingForm";
-            this.Load += new System.EventHandler(this.SettingForm_Load);
             this.ResumeLayout(false);
 
         }

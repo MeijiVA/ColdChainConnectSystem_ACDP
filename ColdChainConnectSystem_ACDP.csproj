@@ -88,12 +88,6 @@
     <Compile Include="AppForms\MainPanel\Inventory\SearchUC.Designer.cs">
       <DependentUpon>SearchUC.cs</DependentUpon>
     </Compile>
-    <Compile Include="AppForms\Header\Settings\CTextBox.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="AppForms\Header\Settings\CTextBox.Designer.cs">
-      <DependentUpon>CTextBox.cs</DependentUpon>
-    </Compile>
     <Compile Include="AppForms\Header\Settings\SettingForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -158,9 +152,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AppForms\MainPanel\Inventory\SearchUC.resx">
       <DependentUpon>SearchUC.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AppForms\Header\Settings\CTextBox.resx">
-      <DependentUpon>CTextBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AppForms\Header\Settings\SettingForm.resx">
       <DependentUpon>SettingForm.cs</DependentUpon>
