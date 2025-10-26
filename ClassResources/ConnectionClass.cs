@@ -38,6 +38,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
         public static string dob { get; set; }
         public static string position { get; set; }
         public static string status { get; set; }
+        public static string sex { get; set; }
         public static string query { get; set; }
         public static string account { get; set; }
         public ConnectionClass()
@@ -54,6 +55,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
             dob = "";
             position = "";
             status = "";
+            sex = "";
         }
         public static string LoginAccount(string input)
         {
@@ -71,7 +73,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                 database = database.Replace("password", password);
                 SqlConnection con = new SqlConnection(database);
                 query = @"SELECT empid, username, fname, mname, lname, contnum,"
-                        + "address, age, dob, position, status FROM Employees";
+                        + "address, age, dob, position, status, sex FROM Employees";
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
                     con.Open();
@@ -84,7 +86,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                                 empid = reader[0].ToString();
                                 username = reader[1].ToString();
                                 fname = reader[2].ToString();
-                                mname = reader[3].ToString().Substring(0, 1);
+                                mname = reader[3].ToString();
                                 lname = reader[4].ToString();
                                 contnum = reader[5].ToString();
                                 address = reader[6].ToString();
@@ -92,6 +94,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                                 dob = reader[8].ToString();
                                 position = reader[9].ToString();
                                 status = reader[10].ToString();
+                                sex = reader[11].ToString();
 
                                 if (status.Equals("Inactive"))
                                 {

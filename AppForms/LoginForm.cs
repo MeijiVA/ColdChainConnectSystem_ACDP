@@ -175,6 +175,7 @@ namespace ColdChainConnectSystem_ACDP
             ConnectionClass.dob = "01/01/1985";
             ConnectionClass.position = "Administrator";
             ConnectionClass.status = "Active";
+            ConnectionClass.sex = "Alot";
             setupMainForm();
             this.Hide();
             LoginForm.mf.NavigateTo(new DashoardForm());

@@ -20,12 +20,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings
 
         private void PersonalDetailsForm_Load(object sender, EventArgs e)
         {
-            txtFName.Text = ConnectionClass.fname;
-            txtMName.Text = ConnectionClass.mname;
-            txtLName.Text = ConnectionClass.lname;
-            txtAge.Text = ConnectionClass.age;
-            dtpDOB.Value = Convert.ToDateTime(ConnectionClass.dob);
-            txtAddress.Text = ConnectionClass.address;
+
         }
     }
 }

@@ -46,10 +46,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AppForms\Header\Settings\PersonalDetailsForm.cs">
+    <Compile Include="AppForms\Header\Settings\PersonalDetails\EPersonalInformation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AppForms\Header\Settings\PersonalDetails\EPersonalInformation.Designer.cs">
+      <DependentUpon>EPersonalInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForms\Header\Settings\PersonalDetails\PersonalInformation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AppForms\Header\Settings\PersonalDetails\PersonalInformation.Designer.cs">
+      <DependentUpon>PersonalInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForms\Header\Settings\PersonalDetails\PersonalDetailsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AppForms\Header\Settings\PersonalDetailsForm.Designer.cs">
+    <Compile Include="AppForms\Header\Settings\PersonalDetails\PersonalDetailsForm.Designer.cs">
       <DependentUpon>PersonalDetailsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="AppForms\MainPanel\Dashboard\DashoardForm.cs">
@@ -129,7 +141,13 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AppForms\Header\Settings\PersonalDetailsForm.resx">
+    <EmbeddedResource Include="AppForms\Header\Settings\PersonalDetails\EPersonalInformation.resx">
+      <DependentUpon>EPersonalInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\Header\Settings\PersonalDetails\PersonalInformation.resx">
+      <DependentUpon>PersonalInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\Header\Settings\PersonalDetails\PersonalDetailsForm.resx">
       <DependentUpon>PersonalDetailsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AppForms\LoginForm.resx">
