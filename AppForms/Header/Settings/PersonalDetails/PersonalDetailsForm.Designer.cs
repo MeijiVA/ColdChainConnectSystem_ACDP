@@ -30,6 +30,7 @@
         {
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.personal_Information1 = new ColdChainConnectSystem_ACDP.AppForms.Header.Settings.PersonalDetails.Personal_Information();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // flowLayoutPanel2
@@ -50,6 +51,13 @@
             this.personal_Information1.Size = new System.Drawing.Size(450, 200);
             this.personal_Information1.TabIndex = 0;
             // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(488, 15);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(278, 428);
+            this.panel1.TabIndex = 18;
+            // 
             // PersonalDetailsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -57,6 +65,7 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(782, 455);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.personal_Information1);
             this.Controls.Add(this.flowLayoutPanel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -71,5 +80,6 @@
         #endregion
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private PersonalDetails.Personal_Information personal_Information1;
+        private System.Windows.Forms.Panel panel1;
     }
 }

@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppForms\Header\Settings\PersonalDetails\ContactInformation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AppForms\Header\Settings\PersonalDetails\ContactInformation.Designer.cs">
+      <DependentUpon>ContactInformation.cs</DependentUpon>
+    </Compile>
     <Compile Include="AppForms\Header\Settings\PersonalDetails\EPersonalInformation.cs">
       <SubType>UserControl</SubType>
     </Compile>
