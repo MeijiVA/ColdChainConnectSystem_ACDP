@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.PersonalDetails
 {
-    public partial class ContactInformation : UserControl
+    public partial class AddressInformation : UserControl
     {
-        public ContactInformation()
+        public AddressInformation()
         {
             InitializeComponent();
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-            
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

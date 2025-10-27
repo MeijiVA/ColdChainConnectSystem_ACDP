@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppForms\Header\Settings\PersonalDetails\AddressInformation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AppForms\Header\Settings\PersonalDetails\AddressInformation.Designer.cs">
+      <DependentUpon>AddressInformation.cs</DependentUpon>
+    </Compile>
     <Compile Include="AppForms\Header\Settings\PersonalDetails\ContactInformation.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -147,6 +153,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AppForms\Header\Settings\PersonalDetails\ContactInformation.resx">
+      <DependentUpon>ContactInformation.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AppForms\Header\Settings\PersonalDetails\EPersonalInformation.resx">
       <DependentUpon>EPersonalInformation.cs</DependentUpon>
     </EmbeddedResource>

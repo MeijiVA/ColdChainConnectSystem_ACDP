@@ -20,7 +20,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings
 
         private void PersonalDetailsForm_Load(object sender, EventArgs e)
         {
-
+            lblEmpID.Text = "    Employee ID : " + ConnectionClass.empid;
         }
     }
 }
