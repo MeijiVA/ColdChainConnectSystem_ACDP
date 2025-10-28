@@ -41,6 +41,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
         public static string sex { get; set; }
         public static string query { get; set; }
         public static string account { get; set; }
+        public static string email { get; set; }
         public ConnectionClass()
         {
             empid = "";
@@ -66,14 +67,14 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                 string username = token[0];
                 string password = token[1];
 
-                string filePath = System.IO.Path.GetDirectoryName(Application.ExecutablePath) + @"\conString.txt";
+                string filePath = Directory.GetCurrentDirectory() + @"\conString.txt";
                 StreamReader sr = new StreamReader(filePath);
                 string database = sr.ReadLine();
-                database = database.Replace("username",username);
+                database = database.Replace("username", username);
                 database = database.Replace("password", password);
                 SqlConnection con = new SqlConnection(database);
                 query = @"SELECT empid, username, fname, mname, lname, contnum,"
-                        + "address, age, dob, position, status, sex FROM Employees";
+                        + "address, age, dob, position, status, sex, email FROM Employees";
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
                     con.Open();
@@ -95,6 +96,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                                 position = reader[9].ToString();
                                 status = reader[10].ToString();
                                 sex = reader[11].ToString();
+                                email = reader[12].ToString();
 
                                 if (status.Equals("Inactive"))
                                 {
@@ -122,9 +124,13 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                 }
 
             }
+            catch (FileNotFoundException )
+            {
+                FileNotFound();
+            }
             catch (System.Data.SqlClient.SqlException e)
             {
-                MessageBox.Show("Invalid Credentials."+e.Message);
+                MessageBox.Show("Invalid Credentials." + e.Message);
             }
             catch (InactiveException e)
             {
@@ -140,6 +146,40 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
             }
             return "default";
         }
+
+        public static void FileNotFound()
+        {
+            try
+            {
+                OpenFileDialog ofdNoFileFound = new OpenFileDialog();
+                ofdNoFileFound.InitialDirectory = Directory.GetCurrentDirectory();
+                ofdNoFileFound.Title = "Select Connection String Text File";
+                ofdNoFileFound.DefaultExt = "txt";
+                ofdNoFileFound.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+                ofdNoFileFound.ShowDialog();
+                string getPath = ofdNoFileFound.FileName;
+                string newPath = Directory.GetCurrentDirectory() + @"\conString.txt";
+                using (StreamReader sr = File.OpenText(getPath))
+                {
+                    string _getText = "";
+                    using (StreamWriter sw = File.CreateText(newPath))
+                    {
+                        while ((_getText = sr.ReadLine()) != null)
+                        {
+                            sw.WriteLine(_getText);
+                            Console.WriteLine(_getText);
+                        }
+                        sw.Close();
+                    }
+                }
+
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+        }
+
 
     }//class
 }//namespace

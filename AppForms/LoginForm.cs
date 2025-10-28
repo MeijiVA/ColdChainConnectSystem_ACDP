@@ -70,7 +70,6 @@ namespace ColdChainConnectSystem_ACDP
 
         private void loginBtn_Click(object sender, EventArgs e)
         {
-
             if (txtUser.Text.Equals(""))
             {
                 MessageBox.Show("Please enter your Username.");

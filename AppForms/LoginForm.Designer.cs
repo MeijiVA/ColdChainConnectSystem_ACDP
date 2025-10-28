@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.LoginSplContainer = new System.Windows.Forms.SplitContainer();
+            this.testButton = new System.Windows.Forms.Button();
             this.LogoACDPpBox = new System.Windows.Forms.PictureBox();
             this.PanelLogin = new System.Windows.Forms.Panel();
             this.txtUser = new System.Windows.Forms.TextBox();
@@ -37,7 +38,6 @@
             this.passLbl = new System.Windows.Forms.Label();
             this.userLbl = new System.Windows.Forms.Label();
             this.CCCpBox = new System.Windows.Forms.PictureBox();
-            this.testButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.LoginSplContainer)).BeginInit();
             this.LoginSplContainer.Panel1.SuspendLayout();
             this.LoginSplContainer.Panel2.SuspendLayout();
@@ -70,6 +70,22 @@
             this.LoginSplContainer.SplitterDistance = 577;
             this.LoginSplContainer.SplitterWidth = 1;
             this.LoginSplContainer.TabIndex = 0;
+            // 
+            // testButton
+            // 
+            this.testButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(120)))));
+            this.testButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.testButton.FlatAppearance.BorderSize = 0;
+            this.testButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.testButton.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.testButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.testButton.Location = new System.Drawing.Point(23, 537);
+            this.testButton.Name = "testButton";
+            this.testButton.Size = new System.Drawing.Size(74, 51);
+            this.testButton.TabIndex = 1;
+            this.testButton.Text = "Login";
+            this.testButton.UseVisualStyleBackColor = false;
+            this.testButton.Click += new System.EventHandler(this.testButton_Click);
             // 
             // LogoACDPpBox
             // 
@@ -170,22 +186,6 @@
             this.CCCpBox.Size = new System.Drawing.Size(94, 70);
             this.CCCpBox.TabIndex = 0;
             this.CCCpBox.TabStop = false;
-            // 
-            // testButton
-            // 
-            this.testButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(120)))));
-            this.testButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.testButton.FlatAppearance.BorderSize = 0;
-            this.testButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.testButton.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.testButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.testButton.Location = new System.Drawing.Point(23, 537);
-            this.testButton.Name = "testButton";
-            this.testButton.Size = new System.Drawing.Size(74, 51);
-            this.testButton.TabIndex = 1;
-            this.testButton.Text = "Login";
-            this.testButton.UseVisualStyleBackColor = false;
-            this.testButton.Click += new System.EventHandler(this.testButton_Click);
             // 
             // LoginForm
             // 
