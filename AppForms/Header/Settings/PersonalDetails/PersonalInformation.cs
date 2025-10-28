@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ColdChainConnectSystem_ACDP.ClassResources;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.PersonalDetails
 {
@@ -18,6 +19,38 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.PersonalDetails
             InitializeComponent();
         }
 
+        public string First_NameInfo
+        {
+            get { return lblFName.Text; }
+            set { lblFName.Text = value; }
+        }
+        public string Middle_NameInfo
+        {
+            get { return lblMName.Text; }
+            set { lblMName.Text = value; }
+        }
+        public string Last_NameInfo
+        {
+            get { return lblLName.Text; }
+            set { lblLName.Text = value; }
+        }
+
+        public string AgeInfo
+        {
+            get { return lblAge.Text; }
+            set { lblAge.Text = value; }
+        }
+
+        public string DOBInfo
+        {
+            get { return lblDOB.Text; }
+            set { lblDOB.Text = value; }
+        }
+        public string SexInfo
+        {
+            get { return lblGender.Text; }
+            set { lblGender.Text = value; }
+        }
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
@@ -25,12 +58,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.PersonalDetails
 
         private void Personal_Information_Load(object sender, EventArgs e)
         {
-            lblFName.Text = ConnectionClass.fname;
-            lblMName.Text = ConnectionClass.mname;
-            lblLName.Text = ConnectionClass.lname;
-            lblAge.Text = ConnectionClass.age;
-            lblDOB.Text = ConnectionClass.dob;
-            lblGender.Text = ConnectionClass.sex;
+
         }
     }
 }

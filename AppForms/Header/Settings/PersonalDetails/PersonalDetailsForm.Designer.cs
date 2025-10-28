@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.lblEmpID = new System.Windows.Forms.Label();
-            this.personal_Information1 = new ColdChainConnectSystem_ACDP.AppForms.Header.Settings.PersonalDetails.Personal_Information();
+            this.ContactUserControl = new ColdChainConnectSystem_ACDP.AppForms.Header.Settings.PersonalDetails.ContactInformation();
+            this.PersonalUserControl = new ColdChainConnectSystem_ACDP.AppForms.Header.Settings.PersonalDetails.Personal_Information();
             this.SuspendLayout();
             // 
             // flowLayoutPanel2
@@ -41,13 +41,6 @@
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(450, 200);
             this.flowLayoutPanel2.TabIndex = 17;
-            // 
-            // panel1
-            // 
-            this.panel1.Location = new System.Drawing.Point(475, 15);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(280, 430);
-            this.panel1.TabIndex = 18;
             // 
             // lblEmpID
             // 
@@ -62,15 +55,35 @@
             this.lblEmpID.Text = "Employee ID Here";
             this.lblEmpID.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // personal_Information1
+            // ContactUserControl
             // 
-            this.personal_Information1.BackColor = System.Drawing.Color.White;
-            this.personal_Information1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.personal_Information1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.personal_Information1.Location = new System.Drawing.Point(16, 36);
-            this.personal_Information1.Name = "personal_Information1";
-            this.personal_Information1.Size = new System.Drawing.Size(450, 200);
-            this.personal_Information1.TabIndex = 0;
+            this.ContactUserControl.BackColor = System.Drawing.Color.White;
+            this.ContactUserControl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ContactUserControl.ConNum = "Ow yeah";
+            this.ContactUserControl.EmailInfo = "email";
+            this.ContactUserControl.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ContactUserControl.Location = new System.Drawing.Point(474, 15);
+            this.ContactUserControl.Name = "ContactUserControl";
+            this.ContactUserControl.PositionInfo = "position";
+            this.ContactUserControl.Size = new System.Drawing.Size(280, 430);
+            this.ContactUserControl.StatusInfo = "status";
+            this.ContactUserControl.TabIndex = 65;
+            // 
+            // PersonalUserControl
+            // 
+            this.PersonalUserControl.AgeInfo = "label3";
+            this.PersonalUserControl.BackColor = System.Drawing.Color.White;
+            this.PersonalUserControl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PersonalUserControl.DOBInfo = "label3";
+            this.PersonalUserControl.First_NameInfo = "label1";
+            this.PersonalUserControl.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.PersonalUserControl.Last_NameInfo = "label4";
+            this.PersonalUserControl.Location = new System.Drawing.Point(16, 36);
+            this.PersonalUserControl.Middle_NameInfo = "label2";
+            this.PersonalUserControl.Name = "PersonalUserControl";
+            this.PersonalUserControl.SexInfo = "label3";
+            this.PersonalUserControl.Size = new System.Drawing.Size(450, 200);
+            this.PersonalUserControl.TabIndex = 0;
             // 
             // PersonalDetailsForm
             // 
@@ -78,9 +91,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(766, 458);
+            this.Controls.Add(this.ContactUserControl);
             this.Controls.Add(this.lblEmpID);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.personal_Information1);
+            this.Controls.Add(this.PersonalUserControl);
             this.Controls.Add(this.flowLayoutPanel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -93,8 +106,8 @@
 
         #endregion
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
-        private PersonalDetails.Personal_Information personal_Information1;
-        private System.Windows.Forms.Panel panel1;
+        private PersonalDetails.Personal_Information PersonalUserControl;
         private System.Windows.Forms.Label lblEmpID;
+        private PersonalDetails.ContactInformation ContactUserControl;
     }
 }

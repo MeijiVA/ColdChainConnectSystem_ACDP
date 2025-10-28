@@ -20,6 +20,18 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings
 
         private void PersonalDetailsForm_Load(object sender, EventArgs e)
         {
+            PersonalUserControl.First_NameInfo = ConnectionClass.fname;
+            PersonalUserControl.Middle_NameInfo = ConnectionClass.mname;
+            PersonalUserControl.Last_NameInfo = ConnectionClass.lname;
+            PersonalUserControl.AgeInfo = ConnectionClass.age;
+            PersonalUserControl.DOBInfo = ConnectionClass.dob;
+            PersonalUserControl.SexInfo = ConnectionClass.sex;
+
+
+            ContactUserControl.PositionInfo = ConnectionClass.position;
+            ContactUserControl.StatusInfo = ConnectionClass.status;
+            ContactUserControl.ConNum = ConnectionClass.contnum;
+            ContactUserControl.EmailInfo = ConnectionClass.empid;
             lblEmpID.Text = "    Employee ID : " + ConnectionClass.empid;
         }
     }
