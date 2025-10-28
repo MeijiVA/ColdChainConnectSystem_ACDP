@@ -53,6 +53,7 @@
             this.tabsSetting.Name = "tabsSetting";
             this.tabsSetting.Size = new System.Drawing.Size(764, 35);
             this.tabsSetting.TabIndex = 0;
+            this.tabsSetting.Load += new System.EventHandler(this.tabsSetting_Load);
             // 
             // pnlDisplaySettings
             // 

@@ -26,13 +26,9 @@ namespace ColdChainConnectSystem_ACDP
         public static string verify;
         DisplayClass dc = new DisplayClass();
         public static MainForm mf; //singleton
-        public static SettingForm sf = new SettingForm(); //singleton
+        public static SettingForm sf; //singleton
         public LoginForm()
         {
-            if (mf == null)
-            {
-                mf = new MainForm();
-            }
             string baseBlue = "#070760";
             string baseWhite = "#FFFFFF";
             InitializeComponent();
@@ -70,6 +66,8 @@ namespace ColdChainConnectSystem_ACDP
 
         private void loginBtn_Click(object sender, EventArgs e)
         {
+            mf = new MainForm();
+            sf = new SettingForm();
             if (txtUser.Text.Equals(""))
             {
                 MessageBox.Show("Please enter your Username.");

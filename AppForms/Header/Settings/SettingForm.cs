@@ -15,7 +15,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Settings
 {
     public partial class SettingForm : Form
     {
-        public static PersonalDetailsForm pdf = new PersonalDetailsForm();
+        public static PersonalDetailsForm pdf;
   /*    public static SecurityForm secf = new SecurityForm();
         public static EmployeeForm ef = new EmployeeForm();*/
         DisplayClass dc = new DisplayClass();
@@ -24,6 +24,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Settings
             InitializeComponent();
             dc.SetDisplayRectangle(setlbl, 50, 50, 50, 50);
         }
+
 
         public void NavigateTo(Form screen)
         {
@@ -49,5 +50,9 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Settings
 
         }
 
+        private void tabsSetting_Load(object sender, EventArgs e)
+        {
+            pdf = new PersonalDetailsForm();
+        }
     }
 }
