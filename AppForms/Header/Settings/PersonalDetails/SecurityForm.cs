@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.PersonalDetails
 {
-    public partial class EPersonalInformation : UserControl
+    public partial class SecurityForm : Form
     {
-        public EPersonalInformation()
+        public SecurityForm()
         {
             InitializeComponent();
         }

@@ -58,12 +58,6 @@
     <Compile Include="AppForms\Header\Settings\PersonalDetails\ContactInformation.Designer.cs">
       <DependentUpon>ContactInformation.cs</DependentUpon>
     </Compile>
-    <Compile Include="AppForms\Header\Settings\PersonalDetails\EPersonalInformation.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="AppForms\Header\Settings\PersonalDetails\EPersonalInformation.Designer.cs">
-      <DependentUpon>EPersonalInformation.cs</DependentUpon>
-    </Compile>
     <Compile Include="AppForms\Header\Settings\PersonalDetails\PersonalInformation.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -75,6 +69,18 @@
     </Compile>
     <Compile Include="AppForms\Header\Settings\PersonalDetails\PersonalDetailsForm.Designer.cs">
       <DependentUpon>PersonalDetailsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForms\Header\Settings\PersonalDetails\SecurityDetailsForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AppForms\Header\Settings\PersonalDetails\SecurityDetailsForm.Designer.cs">
+      <DependentUpon>SecurityDetailsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForms\Header\Settings\PersonalDetails\SecurityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\Header\Settings\PersonalDetails\SecurityForm.Designer.cs">
+      <DependentUpon>SecurityForm.cs</DependentUpon>
     </Compile>
     <Compile Include="AppForms\MainPanel\Dashboard\DashoardForm.cs">
       <SubType>Form</SubType>
@@ -156,14 +162,17 @@
     <EmbeddedResource Include="AppForms\Header\Settings\PersonalDetails\ContactInformation.resx">
       <DependentUpon>ContactInformation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AppForms\Header\Settings\PersonalDetails\EPersonalInformation.resx">
-      <DependentUpon>EPersonalInformation.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="AppForms\Header\Settings\PersonalDetails\PersonalInformation.resx">
       <DependentUpon>PersonalInformation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AppForms\Header\Settings\PersonalDetails\PersonalDetailsForm.resx">
       <DependentUpon>PersonalDetailsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\Header\Settings\PersonalDetails\SecurityDetailsForm.resx">
+      <DependentUpon>SecurityDetailsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\Header\Settings\PersonalDetails\SecurityForm.resx">
+      <DependentUpon>SecurityForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AppForms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
