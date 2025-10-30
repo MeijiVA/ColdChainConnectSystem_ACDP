@@ -42,6 +42,8 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
         public static string query { get; set; }
         public static string account { get; set; }
         public static string email { get; set; }
+
+        public static string pass { get; set; }
         public ConnectionClass()
         {
             empid = "";
@@ -57,6 +59,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
             position = "";
             status = "";
             sex = "";
+            pass = "";
         }
         public static string LoginAccount(string input)
         {
@@ -64,14 +67,14 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
             try
             {
                 string[] token = input.Split(',');
-                string username = token[0];
-                string password = token[1];
+                username = token[0];
+                pass = token[1];
 
                 string filePath = Directory.GetCurrentDirectory() + @"\conString.txt";
                 StreamReader sr = new StreamReader(filePath);
                 string database = sr.ReadLine();
                 database = database.Replace("username", username);
-                database = database.Replace("password", password);
+                database = database.Replace("password", pass);
                 SqlConnection con = new SqlConnection(database);
                 query = @"SELECT empid, username, fname, mname, lname, contnum,"
                         + "address, age, dob, position, status, sex, email FROM Employees";

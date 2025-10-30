@@ -159,7 +159,9 @@ namespace ColdChainConnectSystem_ACDP
 
         private void testButton_Click(object sender, EventArgs e)
         {
-            
+            mf = new MainForm();
+            sf = new SettingForm();
+            ConnectionClass.pass = "123123123";
             ConnectionClass.empid = "ADM-0001";
             ConnectionClass.username = "AntonDelaPena";
             ConnectionClass.account = "AntonDelaPena,123123123";

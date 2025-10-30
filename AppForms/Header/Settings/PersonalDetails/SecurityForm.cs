@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ColdChainConnectSystem_ACDP.ClassResources;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,17 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.PersonalDetails
         public SecurityForm()
         {
             InitializeComponent();
+        }
+
+        private void SecurityForm_Load(object sender, EventArgs e)
+        {
+            string p = "";
+            for (int i = 0; i < ConnectionClass.pass.Length; i++)
+            {
+                p = p + "*";
+            }
+            sdUserControl.PasswordLength = p;
+            sdUserControl.UsernameView = ConnectionClass.username;
         }
     }
 }
