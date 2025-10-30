@@ -68,14 +68,30 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.PersonalDetails
             switch (result) 
             {
                 case DialogResult.OK:
-                    lblUsername.Text = ChangeCredentialsClass.ChangeUsername(tboxUsername, tboxPassUser, tboxRePassUser);
-                    
-                    pnlUsername.Show();
-                    pnlUsernameEdit.Hide();
-                    tboxUsername.Text = "";
-                    tboxPassUser.Text = "";
-                    tboxRePassUser.Text = "";
-                    break;
+                    if (!tboxUsername.Text.Equals("") || !tboxPassUser.Text.Equals("") || !tboxRePassUser.Text.Equals(""))
+                    {
+                        if (ChangeCredentialsClass.SameUsernameWith(tboxUsername) != true)
+                        {
+                            if(ChangeCredentialsClass.ChangeUsername(tboxUsername, tboxPassUser, tboxRePassUser))
+                            {
+                                lblUsername.Text = ConnectionClass.username;
+                                tboxUsername.Text = "";
+                                tboxPassUser.Text = "";
+                                tboxRePassUser.Text = "";
+                                pnlUsername.Show();
+                                pnlUsernameEdit.Hide();
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Username is taken.");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Please insert the required Values.");
+                    }
+                        break;
                 case DialogResult.Cancel:
                     break;
             }
@@ -88,13 +104,22 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.PersonalDetails
             switch (result)
             {
                 case DialogResult.OK:
-                    lblPassword.Text = ChangeCredentialsClass.ChangePassword(tboxCurrPass, tboxNewPassEdit, tboxRePassEdit);
-
-                    pnlPassword.Show();
-                    pnlPasswordEdit.Hide();
-                    tboxCurrPass.Text = "";
-                    tboxNewPassEdit.Text = "";
-                    tboxRePassEdit.Text = "";
+                    if (!tboxCurrPass.Text.Equals("") || !tboxNewPassEdit.Text.Equals("") || !tboxRePassEdit.Text.Equals(""))
+                    {
+                        if (ChangeCredentialsClass.ChangePassword(tboxCurrPass, tboxNewPassEdit, tboxRePassEdit))
+                        {
+                            lblPassword.Text = ConnectionClass.pass;
+                            tboxCurrPass.Text = "";
+                            tboxNewPassEdit.Text = "";
+                            tboxRePassEdit.Text = "";
+                            pnlPassword.Show();
+                            pnlPasswordEdit.Hide();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Please insert the required Values.");
+                    }
                     break;
                 case DialogResult.Cancel:
                     break;

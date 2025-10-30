@@ -1,15 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data.SqlClient;
+using System.IO;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace ColdChainConnectSystem_ACDP.ClassResources
 {
     internal class ChangeCredentialsClass
     {
-        public static string ChangeUsername(TextBox user, TextBox pass, TextBox rep)
+        public static bool ChangeUsername(TextBox user, TextBox pass, TextBox rep)
         {
             if (!user.Text.Equals(ConnectionClass.username))
             {
@@ -18,28 +17,25 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                     if (pass.Text.Equals(ConnectionClass.pass))
                     {
                         MessageBox.Show("Username has been Changed.");
-                        return ConnectionClass.username = user.Text;
+                        ConnectionClass.username = user.Text;
+                        return true;
                     }
                     else
                     {
                         MessageBox.Show("Passwords do not match this User's Credentials.");
-                        return ConnectionClass.username;
+                        return false;
                     }
                 }
                 else
                 {
                     MessageBox.Show("Your two Passwords do not match.");
-                    return ConnectionClass.username;
+                    return false;
                 }
             }
-            else
-            {
-                MessageBox.Show("Your New Username must not be the same as your Old Username.");
-                return ConnectionClass.username;
-            }
+            return false;
         }//chng user
 
-        public static string ChangePassword(TextBox oldp, TextBox newp, TextBox rep)
+        public static bool ChangePassword(TextBox oldp, TextBox newp, TextBox rep)
         {
 
             if (oldp.Text.Equals(ConnectionClass.pass))
@@ -48,28 +44,64 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                 {
                     if (!oldp.Text.Equals(newp.Text))
                     {
-                            MessageBox.Show("Password has been Changed.");
-                            return ConnectionClass.pass = newp.Text;
+                        MessageBox.Show("Password has been Changed.");
+                        ConnectionClass.pass = newp.Text;
+                        return true;
+                          
                     }
                     else
                     {
                         MessageBox.Show("Your Old Password must not match the new Password.");
-                        return ConnectionClass.pass;
+                        return false;
                     }
                 }
                 else
                 {
                     MessageBox.Show("Your two Passwords do not match.");
-                    return ConnectionClass.pass;
+                    return false;
                 }
             }
             else
             {
                 MessageBox.Show("Your Old Password does not match this User's Credentials.");
-                return ConnectionClass.pass;
+                return false;
             }
 
 
         }//chng pass
+
+        public static bool SameUsernameWith(TextBox user)
+        {
+            string filePath = Directory.GetCurrentDirectory() + @"\conString.txt";
+            StreamReader sr = new StreamReader(filePath);
+            string database = sr.ReadLine();
+            database = database.Replace("username", ConnectionClass.username);
+            database = database.Replace("password", ConnectionClass.pass);
+            SqlConnection con = new SqlConnection(database);
+            string query = @"SELECT username FROM Employees";
+
+            using (SqlCommand cmd = new SqlCommand(query, con))
+            {
+                con.Open();
+                using (var reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        if (user.Text.Equals(ConnectionClass.username))
+                        {
+                            MessageBox.Show("Your New Username must not be the same as your Old Username.");
+                            return false;
+                        }
+                        else if (user.Text.Equals(reader[0].ToString()))
+                        {
+                            return true;
+                        }
+                    }
+                }
+            }
+            return false;
+
+        }
+
     }
 }
