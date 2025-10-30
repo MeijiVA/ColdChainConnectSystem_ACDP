@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ColdChainConnectSystem_ACDP.ClassResources;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 
 namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.PersonalDetails
 {
@@ -61,9 +63,18 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.PersonalDetails
 
         private void btnConfirmUser_Click(object sender, EventArgs e)
         {
-            switch (MessageBox.Show("Are you sure you want to change your password?")) 
+            DialogResult result = MessageBox.Show("Are you sure you want to change your Username?", "Change Username", MessageBoxButtons.OKCancel);
+
+            switch (result) 
             {
-                case DialogResult.Yes:
+                case DialogResult.OK:
+                    lblUsername.Text = ChangeCredentialsClass.ChangeUsername(tboxUsername, tboxPassUser, tboxRePassUser);
+                    
+                    pnlUsername.Show();
+                    pnlUsernameEdit.Hide();
+                    tboxUsername.Text = "";
+                    tboxPassUser.Text = "";
+                    tboxRePassUser.Text = "";
                     break;
                 case DialogResult.Cancel:
                     break;
@@ -72,7 +83,22 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.PersonalDetails
 
         private void btnConfirmPass_Click(object sender, EventArgs e)
         {
+            DialogResult result = MessageBox.Show("Are you sure you want to change your Password?", "Change Password", MessageBoxButtons.OKCancel);
 
+            switch (result)
+            {
+                case DialogResult.OK:
+                    lblPassword.Text = ChangeCredentialsClass.ChangePassword(tboxCurrPass, tboxNewPassEdit, tboxRePassEdit);
+
+                    pnlPassword.Show();
+                    pnlPasswordEdit.Hide();
+                    tboxCurrPass.Text = "";
+                    tboxNewPassEdit.Text = "";
+                    tboxRePassEdit.Text = "";
+                    break;
+                case DialogResult.Cancel:
+                    break;
+            }
         }
     }
 }
