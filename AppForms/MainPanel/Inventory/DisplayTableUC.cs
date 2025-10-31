@@ -16,8 +16,6 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
     public partial class DisplayTableUC : UserControl
     {
         DisplayClass dc = new DisplayClass();
-        string baseBlue = "#070760";
-        string baseWhite = "#FFFFFF";
         public DisplayTableUC()
         {
             InitializeComponent();

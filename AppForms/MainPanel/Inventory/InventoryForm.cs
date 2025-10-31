@@ -16,5 +16,10 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
         {
             InitializeComponent();
         }
+
+        private void searchUC1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
