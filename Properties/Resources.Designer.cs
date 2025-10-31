@@ -93,6 +93,26 @@ namespace ColdChainConnectSystem_ACDP.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap delBtn {
+            get {
+                object obj = ResourceManager.GetObject("delBtn", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap editBtn {
+            get {
+                object obj = ResourceManager.GetObject("editBtn", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap LoginLogoACDP {
             get {
                 object obj = ResourceManager.GetObject("LoginLogoACDP", resourceCulture);
@@ -136,6 +156,16 @@ namespace ColdChainConnectSystem_ACDP.Properties {
         public static System.Drawing.Bitmap Sherma {
             get {
                 object obj = ResourceManager.GetObject("Sherma", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap viewBtn {
+            get {
+                object obj = ResourceManager.GetObject("viewBtn", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
