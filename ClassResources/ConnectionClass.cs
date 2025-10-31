@@ -32,7 +32,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
         public static string query { get; set; }
         public static string account { get; set; }
         public static string email { get; set; }
-
+        public static string filePath { get; set; }
         public static string pass { get; set; }
         public ConnectionClass()
         {
@@ -60,7 +60,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                 username = token[0];
                 pass = token[1];
 
-                string filePath = Directory.GetCurrentDirectory() + @"\conString.txt";
+                filePath = Directory.GetCurrentDirectory() + @"\conString.txt";
                 StreamReader sr = new StreamReader(filePath);
                 string database = sr.ReadLine();
                 database = database.Replace("username", username);
