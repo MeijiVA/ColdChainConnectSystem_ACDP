@@ -26,15 +26,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
         private void DisplayTableUC_Load(object sender, EventArgs e)
         {
             Image testImage = Properties.Resources.CCC_GrayLogo;
-            invDisplaydgv.Rows.Add(new object[] {0, 7700165, "FF Bossing Hotdog Kingsized 1kg", testImage, 148.57f, 8914.20f, 60, 60});
-            invDisplaydgv.Rows.Add(new object[] {0, 1, 1, testImage, 1, 1, 1, 1});
-            invDisplaydgv.Rows.Add(new object[] {0, 1, 1, testImage, 1, 1, 1, 1});
-            invDisplaydgv.Rows.Add(new object[] {0, 1, 1, testImage, 1, 1, 1, 1});
-            invDisplaydgv.Rows.Add(new object[] {0, 1, 1, testImage, 1, 1, 1, 1});
-            invDisplaydgv.Rows.Add(new object[] {0, 1, 1, testImage, 1, 1, 1, 1});
-            invDisplaydgv.Rows.Add(new object[] {0, 1, 1, testImage, 1, 1, 1, 1});
-            invDisplaydgv.Rows.Add(new object[] {0, 1, 1, testImage, 1, 1, 1, 1});
-            invDisplaydgv.Rows.Add(new object[] {0, 1, 1, testImage, 1, 1, 1, 1});
+            InventoryClass.setInventoryData(invDisplaydgv);
         }
 
         private void invDisplaydgv_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -61,24 +53,15 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
             //usabble soon?
         }
 
-        private void invDisplaydgv_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        private void invDisplaydgv_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
         {
-
-        }
-
-        private void invDisplaydgv_CellMouseUp(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            foreach (DataGridViewRow r in invDisplaydgv.Rows)
+            if (e.RowIndex % 2 == 0) // For even-indexed rows
             {
-                if (Convert.ToBoolean(r.Cells[0].Value) == true)
+                using (Pen p = new Pen(Color.FromArgb(58, 58, 82), 2)) // Define pen for the line
                 {
-                    r.DefaultCellStyle.BackColor = dc.SetCustomColor(baseBlue);
-                    r.DefaultCellStyle.ForeColor = dc.SetCustomColor(baseWhite);
-                }
-                else if (Convert.ToBoolean(r.Cells[0].Value) == false)
-                {
-                    r.DefaultCellStyle.BackColor = dc.SetCustomColor(baseWhite);
-                    r.DefaultCellStyle.ForeColor = dc.SetCustomColor(baseBlue);
+                    // Calculate the position for the line
+                    int y = e.RowBounds.Bottom - 1;
+                    e.Graphics.DrawLine(p, e.RowBounds.Left + 10, y, e.RowBounds.Right - 10, y);
                 }
             }
         }

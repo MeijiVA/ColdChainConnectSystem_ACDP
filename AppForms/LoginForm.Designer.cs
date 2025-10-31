@@ -31,6 +31,7 @@
             this.LoginSplContainer = new System.Windows.Forms.SplitContainer();
             this.testButton = new System.Windows.Forms.Button();
             this.LogoACDPpBox = new System.Windows.Forms.PictureBox();
+            this.btnExit = new System.Windows.Forms.Button();
             this.PanelLogin = new System.Windows.Forms.Panel();
             this.txtUser = new System.Windows.Forms.TextBox();
             this.txtPass = new System.Windows.Forms.TextBox();
@@ -66,6 +67,7 @@
             // LoginSplContainer.Panel2
             // 
             this.LoginSplContainer.Panel2.Controls.Add(this.PanelLogin);
+            this.LoginSplContainer.Panel2.Controls.Add(this.btnExit);
             this.LoginSplContainer.Size = new System.Drawing.Size(1000, 600);
             this.LoginSplContainer.SplitterDistance = 577;
             this.LoginSplContainer.SplitterWidth = 1;
@@ -96,6 +98,21 @@
             this.LogoACDPpBox.Size = new System.Drawing.Size(428, 299);
             this.LogoACDPpBox.TabIndex = 0;
             this.LogoACDPpBox.TabStop = false;
+            // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.Transparent;
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Font = new System.Drawing.Font("Copperplate Gothic Light", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.btnExit.Location = new System.Drawing.Point(375, 12);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(35, 35);
+            this.btnExit.TabIndex = 1;
+            this.btnExit.Text = "X";
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // PanelLogin
             // 
@@ -223,6 +240,7 @@
         private System.Windows.Forms.PictureBox CCCpBox;
         private System.Windows.Forms.PictureBox LogoACDPpBox;
         private System.Windows.Forms.Button testButton;
+        private System.Windows.Forms.Button btnExit;
     }
 }
 

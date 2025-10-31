@@ -136,6 +136,7 @@ namespace ColdChainConnectSystem_ACDP
             {
                 SendKeys.Send("{TAB}");
                 SendKeys.Send("{TAB}");
+                SendKeys.Send("{TAB}");
                 SendKeys.Send("{ENTER}");
             }
         }
@@ -161,24 +162,48 @@ namespace ColdChainConnectSystem_ACDP
         {
             mf = new MainForm();
             sf = new SettingForm();
-            ConnectionClass.pass = "123123123";
-            ConnectionClass.empid = "ADM-0001";
-            ConnectionClass.username = "AntonDelaPena";
-            ConnectionClass.account = "AntonDelaPena,123123123";
-            ConnectionClass.fname = "Antonio";
-            ConnectionClass.mname = "C";
-            ConnectionClass.lname = "Dela Pena";
-            ConnectionClass.address = "Pampanga";
-            ConnectionClass.contnum = "09999245959";
-            ConnectionClass.age = "40";
-            ConnectionClass.dob = "01/01/1985";
-            ConnectionClass.position = "Administrator";
-            ConnectionClass.status = "Active";
-            ConnectionClass.sex = "Alot";
-            setupMainForm();
-            this.Hide();
-            LoginForm.mf.NavigateTo(new DashoardForm());
-            MainFormShow(mf);
+
+                string accountCredentials = (txtUser.Text = "AntonDelaPena") + "," + (txtPass.Text = "123123123");
+                verify = ConnectionClass.LoginAccount(accountCredentials);
+                switch (verify)
+                {
+                    case "admin":
+                        setupMainForm();
+                        this.Hide();
+                        LoginForm.mf.NavigateTo(new DashoardForm());
+                        MainFormShow(mf);
+                        break;
+
+                    case "sales":
+                        setupMainForm();
+
+                        this.Hide();
+                        MainFormShow(mf);
+                        break;
+
+                    case "assist":
+                        setupMainForm();
+
+                        this.Hide();
+                        MainFormShow(mf);
+                        break;
+
+                    case "inv":
+                        setupMainForm();
+
+                        this.Hide();
+                        MainFormShow(mf);
+                        break;
+
+                    case "default":
+                        break;
+
+                }
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }//class
 }//namespace
