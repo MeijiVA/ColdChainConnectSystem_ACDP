@@ -31,14 +31,14 @@
             this.LoginSplContainer = new System.Windows.Forms.SplitContainer();
             this.testButton = new System.Windows.Forms.Button();
             this.LogoACDPpBox = new System.Windows.Forms.PictureBox();
-            this.btnExit = new System.Windows.Forms.Button();
             this.PanelLogin = new System.Windows.Forms.Panel();
             this.txtUser = new System.Windows.Forms.TextBox();
             this.txtPass = new System.Windows.Forms.TextBox();
-            this.btnLogin = new System.Windows.Forms.Button();
             this.passLbl = new System.Windows.Forms.Label();
             this.userLbl = new System.Windows.Forms.Label();
             this.CCCpBox = new System.Windows.Forms.PictureBox();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.btnlogin = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.LoginSplContainer)).BeginInit();
             this.LoginSplContainer.Panel1.SuspendLayout();
             this.LoginSplContainer.Panel2.SuspendLayout();
@@ -99,28 +99,13 @@
             this.LogoACDPpBox.TabIndex = 0;
             this.LogoACDPpBox.TabStop = false;
             // 
-            // btnExit
-            // 
-            this.btnExit.BackColor = System.Drawing.Color.Transparent;
-            this.btnExit.FlatAppearance.BorderSize = 0;
-            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.Font = new System.Drawing.Font("Copperplate Gothic Light", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.btnExit.Location = new System.Drawing.Point(375, 12);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(35, 35);
-            this.btnExit.TabIndex = 1;
-            this.btnExit.Text = "X";
-            this.btnExit.UseVisualStyleBackColor = false;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
             // PanelLogin
             // 
             this.PanelLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.PanelLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.PanelLogin.Controls.Add(this.txtUser);
             this.PanelLogin.Controls.Add(this.txtPass);
-            this.PanelLogin.Controls.Add(this.btnLogin);
+            this.PanelLogin.Controls.Add(this.btnlogin);
             this.PanelLogin.Controls.Add(this.passLbl);
             this.PanelLogin.Controls.Add(this.userLbl);
             this.PanelLogin.Controls.Add(this.CCCpBox);
@@ -155,22 +140,6 @@
             this.txtPass.TabIndex = 1;
             this.txtPass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.passTbox_KeyDown);
             // 
-            // btnLogin
-            // 
-            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.btnLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnLogin.FlatAppearance.BorderSize = 0;
-            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogin.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnLogin.Location = new System.Drawing.Point(119, 324);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(124, 51);
-            this.btnLogin.TabIndex = 0;
-            this.btnLogin.Text = "Login";
-            this.btnLogin.UseVisualStyleBackColor = false;
-            this.btnLogin.Click += new System.EventHandler(this.loginBtn_Click);
-            // 
             // passLbl
             // 
             this.passLbl.AutoSize = true;
@@ -204,6 +173,37 @@
             this.CCCpBox.TabIndex = 0;
             this.CCCpBox.TabStop = false;
             // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.Transparent;
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Font = new System.Drawing.Font("Copperplate Gothic Light", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.btnExit.Location = new System.Drawing.Point(375, 12);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(35, 35);
+            this.btnExit.TabIndex = 1;
+            this.btnExit.Text = "X";
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // btnlogin
+            // 
+            this.btnlogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.btnlogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnlogin.FlatAppearance.BorderSize = 0;
+            this.btnlogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnlogin.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnlogin.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnlogin.Location = new System.Drawing.Point(115, 322);
+            this.btnlogin.Name = "btnlogin";
+            this.btnlogin.Size = new System.Drawing.Size(124, 51);
+            this.btnlogin.TabIndex = 0;
+            this.btnlogin.Text = "Login";
+            this.btnlogin.UseVisualStyleBackColor = false;
+            this.btnlogin.Click += new System.EventHandler(this.loginBtn_Click);
+            // 
             // LoginForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -231,7 +231,6 @@
         #endregion
 
         private System.Windows.Forms.SplitContainer LoginSplContainer;
-        private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Panel PanelLogin;
         private System.Windows.Forms.TextBox txtUser;
         private System.Windows.Forms.TextBox txtPass;
@@ -241,6 +240,7 @@
         private System.Windows.Forms.PictureBox LogoACDPpBox;
         private System.Windows.Forms.Button testButton;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnlogin;
     }
 }
 

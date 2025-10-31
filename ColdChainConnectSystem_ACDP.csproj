@@ -279,6 +279,9 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Materials\CustomButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AppForms\Header\Settings\PersonalDetails\ContactInformation.resx">
@@ -390,7 +393,13 @@
     <None Include="Resources\editBtn.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Materials\" />
+    <None Include="Resources\export.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\import.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\Microsoft.Data.SqlClient.SNI.6.0.2\build\net462\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('packages\Microsoft.Data.SqlClient.SNI.6.0.2\build\net462\Microsoft.Data.SqlClient.SNI.targets')" />

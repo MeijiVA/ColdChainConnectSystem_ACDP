@@ -35,10 +35,9 @@ namespace ColdChainConnectSystem_ACDP
             //FORM DISPLAY
             LoginSplContainer.Panel1.BackColor = dc.SetCustomColor(baseBlue);
             LoginSplContainer.Panel2.BackColor = dc.SetCustomColor(baseWhite);
-            btnLogin.BackColor = dc.SetCustomColor(baseBlue);
             userLbl.ForeColor = dc.SetCustomColor(baseBlue);
             passLbl.ForeColor = dc.SetCustomColor(baseBlue);
-            dc.SetDisplayRectangle(btnLogin);
+            dc.SetDisplayRectangle(btnlogin);
             dc.SetDisplayRectangle(LoginSplContainer.Panel1, 0, 0, 50, 0);
             dc.myPanel = PanelLogin;
             LoginSplContainer.Panel2.Paint += new PaintEventHandler(dc.Panel_Paint);
@@ -78,7 +77,7 @@ namespace ColdChainConnectSystem_ACDP
             }
             else
             {
-                
+
                 string accountCredentials = (txtUser.Text) + "," + (txtPass.Text);
                 verify = ConnectionClass.LoginAccount(accountCredentials);
                 switch (verify)
@@ -205,5 +204,6 @@ namespace ColdChainConnectSystem_ACDP
         {
             this.Close();
         }
+
     }//class
 }//namespace
