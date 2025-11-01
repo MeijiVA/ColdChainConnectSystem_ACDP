@@ -101,6 +101,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Settings
             if (Clickable[2] == true)
             {
                 LabelClick(lblEmployee);
+                LoginForm.sf.NavigateTo(SettingForm.empf);
             }
         }
 

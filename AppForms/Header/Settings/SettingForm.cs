@@ -1,4 +1,5 @@
 ﻿using ColdChainConnectSystem_ACDP.AppForms.Header.Settings;
+using ColdChainConnectSystem_ACDP.AppForms.Header.Settings.Employee;
 using ColdChainConnectSystem_ACDP.AppForms.Header.Settings.PersonalDetails;
 using System;
 using System.Collections.Generic;
@@ -16,6 +17,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Settings
     {
         public static PersonalDetailsForm pdf;
         public static SecurityForm secf;
+        public static EmployeeManagementForm empf;
         /*public static EmployeeForm ef = new EmployeeForm();*/
         DisplayClass dc = new DisplayClass();
         public SettingForm()
@@ -53,6 +55,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Settings
         {
             pdf = new PersonalDetailsForm();
             secf = new SecurityForm();
+            empf = new EmployeeManagementForm();
         }
     }
 }

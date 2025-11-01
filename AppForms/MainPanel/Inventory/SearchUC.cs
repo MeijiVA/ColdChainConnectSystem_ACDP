@@ -17,8 +17,29 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
         public SearchUC()
         {
             InitializeComponent();
+
         }
 
+        private void customTextBox1__TextChanged(object sender, EventArgs e)
+        {
 
+        }
+
+        private void txtSearchBar_Enter(object sender, EventArgs e)
+        {
+            if (txtSearchBar.Texts.Equals("Search Term"))
+            {
+                txtSearchBar.Texts = "";
+            }
+
+        }
+
+        private void txtSearchBar_Leave(object sender, EventArgs e)
+        {
+            if (txtSearchBar.Texts.Equals(""))
+            {
+                txtSearchBar.Texts = "Search Term";
+            }
+        }
     }
 }
