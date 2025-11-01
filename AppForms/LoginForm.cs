@@ -62,30 +62,6 @@ namespace ColdChainConnectSystem_ACDP
             }
         }
 
-
-
-
-
-
-        private void usernTbox_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                SendKeys.Send("{TAB}");
-            }
-        }
-
-        private void passTbox_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                SendKeys.Send("{TAB}");
-                SendKeys.Send("{TAB}");
-                SendKeys.Send("{TAB}");
-                SendKeys.Send("{ENTER}");
-            }
-        }
-
         public Point mouseLoc;
         public Point bottleMouse;
         public void LoginSplContainer_Panel1_MouseDown(object sender, MouseEventArgs e)
@@ -219,6 +195,15 @@ namespace ColdChainConnectSystem_ACDP
                 btnTogglePassword.BackgroundImage = dc.SetImageOpacity(Properties.Resources.passhide, 0.50F);
                 txtPass.PasswordChar = true;
                 toggle = false;
+            }
+        }
+
+        private void txtUser_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                e.SuppressKeyPress = true; // Prevents the default Enter key behavior (e.g., beep, new line)
+                SelectNextControl(ActiveControl, true, true, true, true);
             }
         }
     }//class
