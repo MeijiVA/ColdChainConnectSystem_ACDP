@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.LoginSplContainer = new System.Windows.Forms.SplitContainer();
+            this.customTextBox1 = new CustomControls.RJControls.CustomTextBox();
             this.testButton = new System.Windows.Forms.Button();
             this.LogoACDPpBox = new System.Windows.Forms.PictureBox();
             this.btnExit = new System.Windows.Forms.Button();
             this.pnlLogin = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
-            this.txtPass = new System.Windows.Forms.TextBox();
             this.btnLogin = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
-            this.txtUser = new System.Windows.Forms.TextBox();
             this.CCCpBox = new System.Windows.Forms.PictureBox();
             this.userLbl = new System.Windows.Forms.Label();
             this.passLbl = new System.Windows.Forms.Label();
-            this.customTextBox1 = new CustomControls.RJControls.CustomTextBox();
+            this.customTextBox2 = new CustomControls.RJControls.CustomTextBox();
+            this.customButton1 = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
             ((System.ComponentModel.ISupportInitialize)(this.LoginSplContainer)).BeginInit();
             this.LoginSplContainer.Panel1.SuspendLayout();
             this.LoginSplContainer.Panel2.SuspendLayout();
@@ -60,7 +60,6 @@
             // LoginSplContainer.Panel1
             // 
             this.LoginSplContainer.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.LoginSplContainer.Panel1.Controls.Add(this.customTextBox1);
             this.LoginSplContainer.Panel1.Controls.Add(this.testButton);
             this.LoginSplContainer.Panel1.Controls.Add(this.LogoACDPpBox);
             this.LoginSplContainer.Panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LoginSplContainer_Panel1_MouseDown);
@@ -74,6 +73,28 @@
             this.LoginSplContainer.SplitterDistance = 577;
             this.LoginSplContainer.SplitterWidth = 1;
             this.LoginSplContainer.TabIndex = 0;
+            // 
+            // customTextBox1
+            // 
+            this.customTextBox1.BackColor = System.Drawing.Color.White;
+            this.customTextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.customTextBox1.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(96)))));
+            this.customTextBox1.BorderRadius = 10;
+            this.customTextBox1.BorderSize = 2;
+            this.customTextBox1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F);
+            this.customTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.customTextBox1.Location = new System.Drawing.Point(50, 188);
+            this.customTextBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.customTextBox1.Multiline = false;
+            this.customTextBox1.Name = "customTextBox1";
+            this.customTextBox1.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.customTextBox1.PasswordChar = false;
+            this.customTextBox1.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.customTextBox1.PlaceholderText = "";
+            this.customTextBox1.Size = new System.Drawing.Size(250, 39);
+            this.customTextBox1.TabIndex = 2;
+            this.customTextBox1.Texts = "";
+            this.customTextBox1.UnderlinedStyle = false;
             // 
             // testButton
             // 
@@ -123,9 +144,10 @@
             this.pnlLogin.BorderColor = System.Drawing.Color.Gray;
             this.pnlLogin.BorderRadius = 15;
             this.pnlLogin.BorderSize = 1;
-            this.pnlLogin.Controls.Add(this.txtPass);
+            this.pnlLogin.Controls.Add(this.customButton1);
+            this.pnlLogin.Controls.Add(this.customTextBox2);
+            this.pnlLogin.Controls.Add(this.customTextBox1);
             this.pnlLogin.Controls.Add(this.btnLogin);
-            this.pnlLogin.Controls.Add(this.txtUser);
             this.pnlLogin.Controls.Add(this.CCCpBox);
             this.pnlLogin.Controls.Add(this.userLbl);
             this.pnlLogin.Controls.Add(this.passLbl);
@@ -135,17 +157,6 @@
             this.pnlLogin.Size = new System.Drawing.Size(350, 460);
             this.pnlLogin.TabIndex = 2;
             this.pnlLogin.TextColor = System.Drawing.Color.White;
-            // 
-            // txtPass
-            // 
-            this.txtPass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.txtPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(96)))));
-            this.txtPass.Location = new System.Drawing.Point(57, 275);
-            this.txtPass.MinimumSize = new System.Drawing.Size(235, 35);
-            this.txtPass.Name = "txtPass";
-            this.txtPass.Size = new System.Drawing.Size(235, 35);
-            this.txtPass.TabIndex = 1;
             // 
             // btnLogin
             // 
@@ -158,7 +169,7 @@
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12.75F);
             this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(117, 338);
+            this.btnLogin.Location = new System.Drawing.Point(115, 326);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(124, 51);
             this.btnLogin.TabIndex = 5;
@@ -166,18 +177,6 @@
             this.btnLogin.TextColor = System.Drawing.Color.White;
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.customButton1_Click);
-            // 
-            // txtUser
-            // 
-            this.txtUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(96)))));
-            this.txtUser.Location = new System.Drawing.Point(57, 187);
-            this.txtUser.MinimumSize = new System.Drawing.Size(235, 35);
-            this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(235, 35);
-            this.txtUser.TabIndex = 1;
-            this.txtUser.KeyDown += new System.Windows.Forms.KeyEventHandler(this.usernTbox_KeyDown);
             // 
             // CCCpBox
             // 
@@ -212,27 +211,45 @@
             this.passLbl.TabIndex = 4;
             this.passLbl.Text = "Password";
             // 
-            // customTextBox1
+            // customTextBox2
             // 
-            this.customTextBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.customTextBox1.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.customTextBox1.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.customTextBox1.BorderRadius = 0;
-            this.customTextBox1.BorderSize = 2;
-            this.customTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.customTextBox1.Location = new System.Drawing.Point(266, 53);
-            this.customTextBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.customTextBox1.Multiline = false;
-            this.customTextBox1.Name = "customTextBox1";
-            this.customTextBox1.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.customTextBox1.PasswordChar = false;
-            this.customTextBox1.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.customTextBox1.PlaceholderText = "";
-            this.customTextBox1.Size = new System.Drawing.Size(250, 31);
-            this.customTextBox1.TabIndex = 2;
-            this.customTextBox1.Texts = "";
-            this.customTextBox1.UnderlinedStyle = false;
+            this.customTextBox2.BackColor = System.Drawing.Color.White;
+            this.customTextBox2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.customTextBox2.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(96)))));
+            this.customTextBox2.BorderRadius = 10;
+            this.customTextBox2.BorderSize = 2;
+            this.customTextBox2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F);
+            this.customTextBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.customTextBox2.Location = new System.Drawing.Point(50, 260);
+            this.customTextBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.customTextBox2.Multiline = false;
+            this.customTextBox2.Name = "customTextBox2";
+            this.customTextBox2.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.customTextBox2.PasswordChar = false;
+            this.customTextBox2.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.customTextBox2.PlaceholderText = "";
+            this.customTextBox2.Size = new System.Drawing.Size(250, 39);
+            this.customTextBox2.TabIndex = 6;
+            this.customTextBox2.Texts = "";
+            this.customTextBox2.UnderlinedStyle = false;
+            // 
+            // customButton1
+            // 
+            this.customButton1.BackColor = System.Drawing.Color.White;
+            this.customButton1.BackgroundColor = System.Drawing.Color.White;
+            this.customButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.customButton1.BorderRadius = 0;
+            this.customButton1.BorderSize = 0;
+            this.customButton1.FlatAppearance.BorderSize = 0;
+            this.customButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.customButton1.ForeColor = System.Drawing.Color.White;
+            this.customButton1.Location = new System.Drawing.Point(259, 264);
+            this.customButton1.Name = "customButton1";
+            this.customButton1.Size = new System.Drawing.Size(32, 32);
+            this.customButton1.TabIndex = 7;
+            this.customButton1.Text = "customButton1";
+            this.customButton1.TextColor = System.Drawing.Color.White;
+            this.customButton1.UseVisualStyleBackColor = false;
             // 
             // LoginForm
             // 
@@ -266,12 +283,12 @@
         private System.Windows.Forms.Button btnExit;
         private Materials.CustomPanel pnlLogin;
         private Materials.CustomButton btnLogin;
-        private System.Windows.Forms.TextBox txtUser;
         private System.Windows.Forms.PictureBox CCCpBox;
         private System.Windows.Forms.Label userLbl;
         private System.Windows.Forms.Label passLbl;
-        private System.Windows.Forms.TextBox txtPass;
         private CustomControls.RJControls.CustomTextBox customTextBox1;
+        private CustomControls.RJControls.CustomTextBox customTextBox2;
+        private Materials.CustomButton customButton1;
     }
 }
 
