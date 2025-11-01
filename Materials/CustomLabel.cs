@@ -11,7 +11,7 @@ using System.ComponentModel;
 
 namespace ColdChainConnectSystem_ACDP.Materials
 {
-    public class CustomButton : Button
+    public class CustomLabel : Label
     {
         //Fields
         private int borderSize = 0;
@@ -19,7 +19,7 @@ namespace ColdChainConnectSystem_ACDP.Materials
         private Color borderColor = Color.PaleVioletRed;
 
         //Properties
-        [Category("Button Properties")]
+        [Category("Label Properties")]
         public int BorderSize
         {
             get { return borderSize; }
@@ -30,7 +30,7 @@ namespace ColdChainConnectSystem_ACDP.Materials
             }
         }
 
-        [Category("Button Properties")]
+        [Category("Label Properties")]
         public int BorderRadius
         {
             get { return borderRadius; }
@@ -41,7 +41,7 @@ namespace ColdChainConnectSystem_ACDP.Materials
             }
         }
 
-        [Category("Button Properties")]
+        [Category("Label Properties")]
         public Color BorderColor
         {
             get { return borderColor; }
@@ -52,7 +52,7 @@ namespace ColdChainConnectSystem_ACDP.Materials
             }
         }
 
-        [Category("Button Properties")]
+        [Category("Label Properties")]
         public Color BackgroundColor
         {
             get { return this.BackColor; }
@@ -67,14 +67,14 @@ namespace ColdChainConnectSystem_ACDP.Materials
         }
 
         //Constructor
-        public CustomButton()
+        public CustomLabel()
         {
             this.FlatStyle = FlatStyle.Flat;
-            this.FlatAppearance.BorderSize = 0;
             this.Size = new Size(150, 40);
             this.BackColor = Color.MediumSlateBlue;
             this.ForeColor = Color.White;
             this.Resize += new EventHandler(Button_Resize);
+            this.TextAlign = ContentAlignment.MiddleCenter;
         }
 
         //Methods
