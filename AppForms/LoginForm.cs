@@ -23,6 +23,7 @@ namespace ColdChainConnectSystem_ACDP
 {
     public partial class LoginForm : Form
     {
+        bool toggle = false;
         public static string verify;
         DisplayClass dc = new DisplayClass();
         public static MainForm mf; //singleton
@@ -38,6 +39,7 @@ namespace ColdChainConnectSystem_ACDP
             userLbl.ForeColor = dc.SetCustomColor(baseBlue);
             passLbl.ForeColor = dc.SetCustomColor(baseBlue);
             dc.SetDisplayRectangle(LoginSplContainer.Panel1, 0, 0, 50, 0);
+            btnTogglePassword.BackgroundImage = dc.SetImageOpacity(Properties.Resources.passhide, 0.50F);
         }
 
         private void LoginForm_Load(object sender, EventArgs e)
@@ -55,8 +57,8 @@ namespace ColdChainConnectSystem_ACDP
             if (mf.ShowDialog() == DialogResult.Cancel)
             {
                 this.Show();
-                txtPass.Text = "";
-                txtUser.Text = "";
+                txtPass.Texts = "";
+                txtUser.Texts = "";
             }
         }
 
@@ -106,7 +108,7 @@ namespace ColdChainConnectSystem_ACDP
             mf = new MainForm();
             sf = new SettingForm();
 
-                string accountCredentials = (txtUser.Text = "AntonDelaPena") + "," + (txtPass.Text = "123123123");
+                string accountCredentials = (txtUser.Texts = "AntonDelaPena") + "," + (txtPass.Texts = "123123123");
                 verify = ConnectionClass.LoginAccount(accountCredentials);
                 switch (verify)
                 {
@@ -153,18 +155,18 @@ namespace ColdChainConnectSystem_ACDP
         {
             mf = new MainForm();
             sf = new SettingForm();
-            if (txtUser.Text.Equals(""))
+            if (txtUser.Texts.Equals(""))
             {
                 MessageBox.Show("Please enter your Username.");
             }
-            else if (txtPass.Text.Equals(""))
+            else if (txtPass.Texts.Equals(""))
             {
                 MessageBox.Show("Please enter your Account's Password.");
             }
             else
             {
 
-                string accountCredentials = (txtUser.Text) + "," + (txtPass.Text);
+                string accountCredentials = (txtUser.Texts) + "," + (txtPass.Texts);
                 verify = ConnectionClass.LoginAccount(accountCredentials);
                 switch (verify)
                 {
@@ -200,6 +202,23 @@ namespace ColdChainConnectSystem_ACDP
                         break;
 
                 }
+            }
+        }
+
+        private void btnTogglePassword_Click(object sender, EventArgs e)
+        {
+            if (!toggle)
+            {
+                btnTogglePassword.BackgroundImage = dc.SetImageOpacity(Properties.Resources.passshow, 0.50F);
+                txtPass.PasswordChar = false;
+                toggle = true;
+            }
+            else if (toggle)
+            {
+                
+                btnTogglePassword.BackgroundImage = dc.SetImageOpacity(Properties.Resources.passhide, 0.50F);
+                txtPass.PasswordChar = true;
+                toggle = false;
             }
         }
     }//class

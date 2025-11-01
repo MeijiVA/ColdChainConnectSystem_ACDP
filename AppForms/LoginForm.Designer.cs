@@ -29,22 +29,24 @@
         private void InitializeComponent()
         {
             this.LoginSplContainer = new System.Windows.Forms.SplitContainer();
-            this.customTextBox1 = new CustomControls.RJControls.CustomTextBox();
             this.testButton = new System.Windows.Forms.Button();
             this.LogoACDPpBox = new System.Windows.Forms.PictureBox();
-            this.btnExit = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.pnlLogin = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
+            this.btnTogglePassword = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
+            this.txtPass = new CustomControls.RJControls.CustomTextBox();
+            this.txtUser = new CustomControls.RJControls.CustomTextBox();
             this.btnLogin = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
             this.CCCpBox = new System.Windows.Forms.PictureBox();
             this.userLbl = new System.Windows.Forms.Label();
             this.passLbl = new System.Windows.Forms.Label();
-            this.customTextBox2 = new CustomControls.RJControls.CustomTextBox();
-            this.customButton1 = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
+            this.btnExit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.LoginSplContainer)).BeginInit();
             this.LoginSplContainer.Panel1.SuspendLayout();
             this.LoginSplContainer.Panel2.SuspendLayout();
             this.LoginSplContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LogoACDPpBox)).BeginInit();
+            this.panel1.SuspendLayout();
             this.pnlLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CCCpBox)).BeginInit();
             this.SuspendLayout();
@@ -67,34 +69,13 @@
             // 
             // LoginSplContainer.Panel2
             // 
+            this.LoginSplContainer.Panel2.Controls.Add(this.panel1);
             this.LoginSplContainer.Panel2.Controls.Add(this.btnExit);
-            this.LoginSplContainer.Panel2.Controls.Add(this.pnlLogin);
+            this.LoginSplContainer.Panel2.Padding = new System.Windows.Forms.Padding(0, 30, 0, 30);
             this.LoginSplContainer.Size = new System.Drawing.Size(1000, 600);
             this.LoginSplContainer.SplitterDistance = 577;
             this.LoginSplContainer.SplitterWidth = 1;
             this.LoginSplContainer.TabIndex = 0;
-            // 
-            // customTextBox1
-            // 
-            this.customTextBox1.BackColor = System.Drawing.Color.White;
-            this.customTextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.customTextBox1.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(96)))));
-            this.customTextBox1.BorderRadius = 10;
-            this.customTextBox1.BorderSize = 2;
-            this.customTextBox1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F);
-            this.customTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.customTextBox1.Location = new System.Drawing.Point(50, 188);
-            this.customTextBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.customTextBox1.Multiline = false;
-            this.customTextBox1.Name = "customTextBox1";
-            this.customTextBox1.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.customTextBox1.PasswordChar = false;
-            this.customTextBox1.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.customTextBox1.PlaceholderText = "";
-            this.customTextBox1.Size = new System.Drawing.Size(250, 39);
-            this.customTextBox1.TabIndex = 2;
-            this.customTextBox1.Texts = "";
-            this.customTextBox1.UnderlinedStyle = false;
             // 
             // testButton
             // 
@@ -122,20 +103,14 @@
             this.LogoACDPpBox.TabIndex = 0;
             this.LogoACDPpBox.TabStop = false;
             // 
-            // btnExit
+            // panel1
             // 
-            this.btnExit.BackColor = System.Drawing.Color.Transparent;
-            this.btnExit.FlatAppearance.BorderSize = 0;
-            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.Font = new System.Drawing.Font("Copperplate Gothic Light", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.btnExit.Location = new System.Drawing.Point(375, 12);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(35, 35);
-            this.btnExit.TabIndex = 1;
-            this.btnExit.Text = "X";
-            this.btnExit.UseVisualStyleBackColor = false;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            this.panel1.BackgroundImage = global::ColdChainConnectSystem_ACDP.Properties.Resources.ShadowsTravelingGRRR;
+            this.panel1.Controls.Add(this.pnlLogin);
+            this.panel1.Location = new System.Drawing.Point(25, 53);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(370, 480);
+            this.panel1.TabIndex = 2;
             // 
             // pnlLogin
             // 
@@ -144,19 +119,85 @@
             this.pnlLogin.BorderColor = System.Drawing.Color.Gray;
             this.pnlLogin.BorderRadius = 15;
             this.pnlLogin.BorderSize = 1;
-            this.pnlLogin.Controls.Add(this.customButton1);
-            this.pnlLogin.Controls.Add(this.customTextBox2);
-            this.pnlLogin.Controls.Add(this.customTextBox1);
+            this.pnlLogin.Controls.Add(this.btnTogglePassword);
+            this.pnlLogin.Controls.Add(this.txtPass);
+            this.pnlLogin.Controls.Add(this.txtUser);
             this.pnlLogin.Controls.Add(this.btnLogin);
             this.pnlLogin.Controls.Add(this.CCCpBox);
             this.pnlLogin.Controls.Add(this.userLbl);
             this.pnlLogin.Controls.Add(this.passLbl);
             this.pnlLogin.ForeColor = System.Drawing.Color.White;
-            this.pnlLogin.Location = new System.Drawing.Point(34, 53);
+            this.pnlLogin.Location = new System.Drawing.Point(10, 10);
             this.pnlLogin.Name = "pnlLogin";
             this.pnlLogin.Size = new System.Drawing.Size(350, 460);
             this.pnlLogin.TabIndex = 2;
             this.pnlLogin.TextColor = System.Drawing.Color.White;
+            // 
+            // btnTogglePassword
+            // 
+            this.btnTogglePassword.BackColor = System.Drawing.Color.Transparent;
+            this.btnTogglePassword.BackgroundColor = System.Drawing.Color.Transparent;
+            this.btnTogglePassword.BackgroundImage = global::ColdChainConnectSystem_ACDP.Properties.Resources.passhide;
+            this.btnTogglePassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnTogglePassword.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnTogglePassword.BorderRadius = 0;
+            this.btnTogglePassword.BorderSize = 0;
+            this.btnTogglePassword.FlatAppearance.BorderSize = 0;
+            this.btnTogglePassword.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnTogglePassword.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnTogglePassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTogglePassword.ForeColor = System.Drawing.Color.White;
+            this.btnTogglePassword.Location = new System.Drawing.Point(265, 266);
+            this.btnTogglePassword.Name = "btnTogglePassword";
+            this.btnTogglePassword.Size = new System.Drawing.Size(25, 29);
+            this.btnTogglePassword.TabIndex = 7;
+            this.btnTogglePassword.TextColor = System.Drawing.Color.White;
+            this.btnTogglePassword.UseVisualStyleBackColor = false;
+            this.btnTogglePassword.Click += new System.EventHandler(this.btnTogglePassword_Click);
+            // 
+            // txtPass
+            // 
+            this.txtPass.BackColor = System.Drawing.Color.White;
+            this.txtPass.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.txtPass.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(96)))));
+            this.txtPass.BorderRadius = 10;
+            this.txtPass.BorderSize = 2;
+            this.txtPass.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F);
+            this.txtPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtPass.Location = new System.Drawing.Point(50, 260);
+            this.txtPass.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPass.Multiline = false;
+            this.txtPass.Name = "txtPass";
+            this.txtPass.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtPass.PasswordChar = true;
+            this.txtPass.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtPass.PlaceholderText = "";
+            this.txtPass.Size = new System.Drawing.Size(250, 39);
+            this.txtPass.TabIndex = 6;
+            this.txtPass.Texts = "";
+            this.txtPass.UnderlinedStyle = false;
+            // 
+            // txtUser
+            // 
+            this.txtUser.BackColor = System.Drawing.Color.White;
+            this.txtUser.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.txtUser.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(96)))));
+            this.txtUser.BorderRadius = 10;
+            this.txtUser.BorderSize = 2;
+            this.txtUser.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F);
+            this.txtUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtUser.Location = new System.Drawing.Point(50, 188);
+            this.txtUser.Margin = new System.Windows.Forms.Padding(4);
+            this.txtUser.Multiline = false;
+            this.txtUser.Name = "txtUser";
+            this.txtUser.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtUser.PasswordChar = false;
+            this.txtUser.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtUser.PlaceholderText = "";
+            this.txtUser.Size = new System.Drawing.Size(250, 39);
+            this.txtUser.TabIndex = 2;
+            this.txtUser.Texts = "";
+            this.txtUser.UnderlinedStyle = false;
             // 
             // btnLogin
             // 
@@ -211,45 +252,20 @@
             this.passLbl.TabIndex = 4;
             this.passLbl.Text = "Password";
             // 
-            // customTextBox2
+            // btnExit
             // 
-            this.customTextBox2.BackColor = System.Drawing.Color.White;
-            this.customTextBox2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.customTextBox2.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(96)))));
-            this.customTextBox2.BorderRadius = 10;
-            this.customTextBox2.BorderSize = 2;
-            this.customTextBox2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F);
-            this.customTextBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.customTextBox2.Location = new System.Drawing.Point(50, 260);
-            this.customTextBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.customTextBox2.Multiline = false;
-            this.customTextBox2.Name = "customTextBox2";
-            this.customTextBox2.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.customTextBox2.PasswordChar = false;
-            this.customTextBox2.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.customTextBox2.PlaceholderText = "";
-            this.customTextBox2.Size = new System.Drawing.Size(250, 39);
-            this.customTextBox2.TabIndex = 6;
-            this.customTextBox2.Texts = "";
-            this.customTextBox2.UnderlinedStyle = false;
-            // 
-            // customButton1
-            // 
-            this.customButton1.BackColor = System.Drawing.Color.White;
-            this.customButton1.BackgroundColor = System.Drawing.Color.White;
-            this.customButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.customButton1.BorderRadius = 0;
-            this.customButton1.BorderSize = 0;
-            this.customButton1.FlatAppearance.BorderSize = 0;
-            this.customButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customButton1.ForeColor = System.Drawing.Color.White;
-            this.customButton1.Location = new System.Drawing.Point(259, 264);
-            this.customButton1.Name = "customButton1";
-            this.customButton1.Size = new System.Drawing.Size(32, 32);
-            this.customButton1.TabIndex = 7;
-            this.customButton1.Text = "customButton1";
-            this.customButton1.TextColor = System.Drawing.Color.White;
-            this.customButton1.UseVisualStyleBackColor = false;
+            this.btnExit.BackColor = System.Drawing.Color.Transparent;
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Font = new System.Drawing.Font("Copperplate Gothic Light", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.btnExit.Location = new System.Drawing.Point(375, 12);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(35, 35);
+            this.btnExit.TabIndex = 1;
+            this.btnExit.Text = "X";
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // LoginForm
             // 
@@ -268,6 +284,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.LoginSplContainer)).EndInit();
             this.LoginSplContainer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.LogoACDPpBox)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.pnlLogin.ResumeLayout(false);
             this.pnlLogin.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CCCpBox)).EndInit();
@@ -286,9 +303,10 @@
         private System.Windows.Forms.PictureBox CCCpBox;
         private System.Windows.Forms.Label userLbl;
         private System.Windows.Forms.Label passLbl;
-        private CustomControls.RJControls.CustomTextBox customTextBox1;
-        private CustomControls.RJControls.CustomTextBox customTextBox2;
-        private Materials.CustomButton customButton1;
+        private CustomControls.RJControls.CustomTextBox txtUser;
+        private CustomControls.RJControls.CustomTextBox txtPass;
+        private Materials.CustomButton btnTogglePassword;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 
