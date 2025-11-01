@@ -37,10 +37,7 @@ namespace ColdChainConnectSystem_ACDP
             LoginSplContainer.Panel2.BackColor = dc.SetCustomColor(baseWhite);
             userLbl.ForeColor = dc.SetCustomColor(baseBlue);
             passLbl.ForeColor = dc.SetCustomColor(baseBlue);
-            dc.SetDisplayRectangle(btnlogin);
             dc.SetDisplayRectangle(LoginSplContainer.Panel1, 0, 0, 50, 0);
-            dc.myPanel = PanelLogin;
-            LoginSplContainer.Panel2.Paint += new PaintEventHandler(dc.Panel_Paint);
         }
 
         private void LoginForm_Load(object sender, EventArgs e)
@@ -63,59 +60,6 @@ namespace ColdChainConnectSystem_ACDP
             }
         }
 
-        private void loginBtn_Click(object sender, EventArgs e)
-        {
-            mf = new MainForm();
-            sf = new SettingForm();
-            if (txtUser.Text.Equals(""))
-            {
-                MessageBox.Show("Please enter your Username.");
-            }
-            else if (txtPass.Text.Equals(""))
-            {
-                MessageBox.Show("Please enter your Account's Password.");
-            }
-            else
-            {
-
-                string accountCredentials = (txtUser.Text) + "," + (txtPass.Text);
-                verify = ConnectionClass.LoginAccount(accountCredentials);
-                switch (verify)
-                {
-                    case "admin":
-                        setupMainForm();
-                        this.Hide();
-                        LoginForm.mf.NavigateTo(new DashoardForm());
-                        MainFormShow(mf);
-                        break;
-
-                    case "sales":
-                        setupMainForm();
-
-                        this.Hide();
-                        MainFormShow(mf);
-                        break;
-
-                    case "assist":
-                        setupMainForm();
-
-                        this.Hide();
-                        MainFormShow(mf);
-                        break;
-
-                    case "inv":
-                        setupMainForm();
-
-                        this.Hide();
-                        MainFormShow(mf);
-                        break;
-
-                    case "default":
-                        break;
-
-                }
-            }
-        }
 
 
 
@@ -205,5 +149,58 @@ namespace ColdChainConnectSystem_ACDP
             this.Close();
         }
 
+        private void customButton1_Click(object sender, EventArgs e)
+        {
+            mf = new MainForm();
+            sf = new SettingForm();
+            if (txtUser.Text.Equals(""))
+            {
+                MessageBox.Show("Please enter your Username.");
+            }
+            else if (txtPass.Text.Equals(""))
+            {
+                MessageBox.Show("Please enter your Account's Password.");
+            }
+            else
+            {
+
+                string accountCredentials = (txtUser.Text) + "," + (txtPass.Text);
+                verify = ConnectionClass.LoginAccount(accountCredentials);
+                switch (verify)
+                {
+                    case "admin":
+                        setupMainForm();
+                        this.Hide();
+                        LoginForm.mf.NavigateTo(new DashoardForm());
+                        MainFormShow(mf);
+                        break;
+
+                    case "sales":
+                        setupMainForm();
+
+                        this.Hide();
+                        MainFormShow(mf);
+                        break;
+
+                    case "assist":
+                        setupMainForm();
+
+                        this.Hide();
+                        MainFormShow(mf);
+                        break;
+
+                    case "inv":
+                        setupMainForm();
+
+                        this.Hide();
+                        MainFormShow(mf);
+                        break;
+
+                    case "default":
+                        break;
+
+                }
+            }
+        }
     }//class
 }//namespace

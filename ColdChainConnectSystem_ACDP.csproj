@@ -282,6 +282,18 @@
     <Compile Include="Materials\CustomButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Materials\CustomLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Materials\CustomPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Materials\CustomTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Materials\CustomTextBox.Designer.cs">
+      <DependentUpon>CustomTextBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AppForms\Header\Settings\PersonalDetails\ContactInformation.resx">
@@ -334,6 +346,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Materials\CustomTextBox.resx">
+      <DependentUpon>CustomTextBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
