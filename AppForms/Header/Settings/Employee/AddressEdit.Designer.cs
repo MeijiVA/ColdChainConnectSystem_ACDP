@@ -34,17 +34,19 @@
             this.lblPersInfo = new System.Windows.Forms.Label();
             this.lbl3 = new System.Windows.Forms.Label();
             this.lbl4 = new System.Windows.Forms.Label();
-            this.lblHouseNum = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.lblPostCode = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.lblBarangay = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.lbl2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.customTextBox2 = new CustomControls.RJControls.CustomTextBox();
+            this.cbxCity = new ColdChainConnectSystem_ACDP.Materials.CustomComboBox();
+            this.cbxProvince = new ColdChainConnectSystem_ACDP.Materials.CustomComboBox();
+            this.customTextBox1 = new CustomControls.RJControls.CustomTextBox();
+            this.txtBarangay = new CustomControls.RJControls.CustomTextBox();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -121,31 +123,15 @@
             this.lbl4.TabIndex = 56;
             this.lbl4.Text = "  Province";
             // 
-            // lblHouseNum
-            // 
-            this.lblHouseNum.Location = new System.Drawing.Point(5, 30);
-            this.lblHouseNum.Name = "lblHouseNum";
-            this.lblHouseNum.Size = new System.Drawing.Size(217, 16);
-            this.lblHouseNum.TabIndex = 54;
-            this.lblHouseNum.Text = "label1";
-            // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.lblPostCode);
+            this.panel3.Controls.Add(this.customTextBox2);
             this.panel3.Controls.Add(this.label7);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 147);
+            this.panel3.Location = new System.Drawing.Point(0, 145);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(450, 53);
             this.panel3.TabIndex = 9;
-            // 
-            // lblPostCode
-            // 
-            this.lblPostCode.Location = new System.Drawing.Point(5, 30);
-            this.lblPostCode.Name = "lblPostCode";
-            this.lblPostCode.Size = new System.Drawing.Size(224, 16);
-            this.lblPostCode.TabIndex = 60;
-            this.lblPostCode.Text = "label3";
             // 
             // label7
             // 
@@ -159,23 +145,15 @@
             this.label7.TabIndex = 59;
             this.label7.Text = "  Postal Code";
             // 
-            // lblBarangay
-            // 
-            this.lblBarangay.Location = new System.Drawing.Point(230, 30);
-            this.lblBarangay.Name = "lblBarangay";
-            this.lblBarangay.Size = new System.Drawing.Size(217, 16);
-            this.lblBarangay.TabIndex = 55;
-            this.lblBarangay.Text = "label2";
-            // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.customTextBox1);
+            this.panel2.Controls.Add(this.txtBarangay);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.lblBarangay);
-            this.panel2.Controls.Add(this.lblHouseNum);
             this.panel2.Controls.Add(this.lbl1);
             this.panel2.Controls.Add(this.lbl3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 41);
+            this.panel2.Location = new System.Drawing.Point(0, 39);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(450, 53);
             this.panel2.TabIndex = 8;
@@ -209,7 +187,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(450, 41);
+            this.panel1.Size = new System.Drawing.Size(450, 39);
             this.panel1.TabIndex = 7;
             // 
             // label2
@@ -223,14 +201,203 @@
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.cbxCity);
+            this.panel4.Controls.Add(this.cbxProvince);
             this.panel4.Controls.Add(this.label2);
             this.panel4.Controls.Add(this.lbl4);
             this.panel4.Controls.Add(this.lbl2);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 94);
+            this.panel4.Location = new System.Drawing.Point(0, 92);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(450, 53);
             this.panel4.TabIndex = 10;
+            // 
+            // customTextBox2
+            // 
+            this.customTextBox2.BackColor = System.Drawing.SystemColors.Window;
+            this.customTextBox2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.customTextBox2.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.customTextBox2.BorderRadius = 0;
+            this.customTextBox2.BorderSize = 1;
+            this.customTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.customTextBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.customTextBox2.Location = new System.Drawing.Point(8, 20);
+            this.customTextBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.customTextBox2.Multiline = false;
+            this.customTextBox2.Name = "customTextBox2";
+            this.customTextBox2.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.customTextBox2.PasswordChar = false;
+            this.customTextBox2.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.customTextBox2.PlaceholderText = "";
+            this.customTextBox2.Size = new System.Drawing.Size(200, 30);
+            this.customTextBox2.TabIndex = 64;
+            this.customTextBox2.Texts = "";
+            this.customTextBox2.UnderlinedStyle = false;
+            // 
+            // cbxCity
+            // 
+            this.cbxCity.BackColor = System.Drawing.Color.White;
+            this.cbxCity.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.cbxCity.BorderSize = 1;
+            this.cbxCity.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cbxCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.cbxCity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.cbxCity.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.cbxCity.ListBackColor = System.Drawing.Color.White;
+            this.cbxCity.ListTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.cbxCity.Location = new System.Drawing.Point(8, 21);
+            this.cbxCity.MinimumSize = new System.Drawing.Size(200, 30);
+            this.cbxCity.Name = "cbxCity";
+            this.cbxCity.Padding = new System.Windows.Forms.Padding(1);
+            this.cbxCity.Size = new System.Drawing.Size(200, 30);
+            this.cbxCity.TabIndex = 64;
+            this.cbxCity.Texts = "";
+            // 
+            // cbxProvince
+            // 
+            this.cbxProvince.BackColor = System.Drawing.Color.White;
+            this.cbxProvince.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.cbxProvince.BorderSize = 1;
+            this.cbxProvince.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cbxProvince.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.cbxProvince.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.cbxProvince.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.cbxProvince.Items.AddRange(new object[] {
+            "Abra",
+            "Agusan del Norte",
+            "Agusan del Sur",
+            "Aklan",
+            "Albay",
+            "Antique",
+            "Apayao",
+            "Aurora",
+            "Basilan",
+            "Bataan",
+            "Batanes",
+            "Batangas",
+            "Benguet",
+            "Biliran",
+            "Bohol",
+            "Bukidnon",
+            "Bulacan",
+            "Cagayan",
+            "Camarines Norte",
+            "Camarines Sur",
+            "Camiguin",
+            "Capiz",
+            "Catanduanes",
+            "Cavite",
+            "Cebu",
+            "Cotabato",
+            "Davao de Oro",
+            "Davao del Norte",
+            "Davao del Sur",
+            "Davao Occidental",
+            "Davao Oriental",
+            "Dinagat Islands",
+            "Eastern Samar",
+            "Guimaras",
+            "Ifugao",
+            "Ilocos Norte",
+            "Ilocos Sur",
+            "Iloilo",
+            "Isabela",
+            "Kalinga",
+            "La Union",
+            "Laguna",
+            "Lanao del Norte",
+            "Lanao del Sur",
+            "Leyte",
+            "Maguindanao",
+            "Marinduque",
+            "Masbate",
+            "Misamis Occidental",
+            "Misamis Oriental",
+            "Mountain Province",
+            "Negros Occidental",
+            "Negros Oriental",
+            "Northern Samar",
+            "Nueva Ecija",
+            "Nueva Vizcaya",
+            "Occidental Mindoro",
+            "Oriental Mindoro",
+            "Palawan",
+            "Pampanga",
+            "Pangasinan",
+            "Quezon",
+            "Quirino",
+            "Rizal",
+            "Romblon",
+            "Samar",
+            "Sarangani",
+            "Siquijor",
+            "Sorsogon",
+            "South Cotabato",
+            "Southern Leyte",
+            "Sultan Kudarat",
+            "Sulu",
+            "Surigao del Norte",
+            "Surigao del Sur",
+            "Tarlac",
+            "Tawi-Tawi",
+            "Zambales",
+            "Zamboanga del Norte",
+            "Zamboanga del Sur",
+            "Zamboanga Sibugay"});
+            this.cbxProvince.ListBackColor = System.Drawing.Color.White;
+            this.cbxProvince.ListTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.cbxProvince.Location = new System.Drawing.Point(228, 21);
+            this.cbxProvince.MinimumSize = new System.Drawing.Size(200, 30);
+            this.cbxProvince.Name = "cbxProvince";
+            this.cbxProvince.Padding = new System.Windows.Forms.Padding(1);
+            this.cbxProvince.Size = new System.Drawing.Size(200, 30);
+            this.cbxProvince.TabIndex = 61;
+            this.cbxProvince.Texts = "";
+            this.cbxProvince.OnSelectedIndexChanged += new System.EventHandler(this.cbxProvince_OnSelectedIndexChanged_1);
+            // 
+            // customTextBox1
+            // 
+            this.customTextBox1.BackColor = System.Drawing.SystemColors.Window;
+            this.customTextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.customTextBox1.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.customTextBox1.BorderRadius = 0;
+            this.customTextBox1.BorderSize = 1;
+            this.customTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.customTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.customTextBox1.Location = new System.Drawing.Point(8, 20);
+            this.customTextBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.customTextBox1.Multiline = false;
+            this.customTextBox1.Name = "customTextBox1";
+            this.customTextBox1.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.customTextBox1.PasswordChar = false;
+            this.customTextBox1.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.customTextBox1.PlaceholderText = "";
+            this.customTextBox1.Size = new System.Drawing.Size(200, 30);
+            this.customTextBox1.TabIndex = 64;
+            this.customTextBox1.Texts = "";
+            this.customTextBox1.UnderlinedStyle = false;
+            // 
+            // txtBarangay
+            // 
+            this.txtBarangay.BackColor = System.Drawing.SystemColors.Window;
+            this.txtBarangay.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.txtBarangay.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.txtBarangay.BorderRadius = 0;
+            this.txtBarangay.BorderSize = 1;
+            this.txtBarangay.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.txtBarangay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtBarangay.Location = new System.Drawing.Point(228, 20);
+            this.txtBarangay.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBarangay.Multiline = false;
+            this.txtBarangay.Name = "txtBarangay";
+            this.txtBarangay.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtBarangay.PasswordChar = false;
+            this.txtBarangay.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtBarangay.PlaceholderText = "";
+            this.txtBarangay.Size = new System.Drawing.Size(200, 30);
+            this.txtBarangay.TabIndex = 63;
+            this.txtBarangay.Texts = "";
+            this.txtBarangay.UnderlinedStyle = false;
             // 
             // AddressEdit
             // 
@@ -242,6 +409,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "AddressEdit";
             this.Size = new System.Drawing.Size(450, 200);
+            this.Load += new System.EventHandler(this.AddressEdit_Load);
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
@@ -258,16 +426,18 @@
         private System.Windows.Forms.Label lblPersInfo;
         private System.Windows.Forms.Label lbl3;
         private System.Windows.Forms.Label lbl4;
-        private System.Windows.Forms.Label lblHouseNum;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label lblPostCode;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label lblBarangay;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbl2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel4;
+        private Materials.CustomComboBox cbxProvince;
+        private Materials.CustomComboBox cbxCity;
+        private CustomControls.RJControls.CustomTextBox customTextBox2;
+        private CustomControls.RJControls.CustomTextBox customTextBox1;
+        private CustomControls.RJControls.CustomTextBox txtBarangay;
     }
 }
