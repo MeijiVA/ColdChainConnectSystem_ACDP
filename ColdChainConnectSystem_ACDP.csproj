@@ -166,6 +166,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppForms\Header\Settings\Employee\AddressEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AppForms\Header\Settings\Employee\AddressEdit.Designer.cs">
+      <DependentUpon>AddressEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="AppForms\Header\Settings\PersonalDetails\AddressInformation.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -190,16 +196,16 @@
     <Compile Include="AppForms\Header\Settings\PersonalDetails\PersonalDetailsForm.Designer.cs">
       <DependentUpon>PersonalDetailsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AppForms\Header\Settings\PersonalDetails\SecurityDetails.cs">
+    <Compile Include="AppForms\Header\Settings\Security\SecurityDetails.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="AppForms\Header\Settings\PersonalDetails\SecurityDetails.Designer.cs">
+    <Compile Include="AppForms\Header\Settings\Security\SecurityDetails.Designer.cs">
       <DependentUpon>SecurityDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="AppForms\Header\Settings\PersonalDetails\SecurityForm.cs">
+    <Compile Include="AppForms\Header\Settings\Security\SecurityForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AppForms\Header\Settings\PersonalDetails\SecurityForm.Designer.cs">
+    <Compile Include="AppForms\Header\Settings\Security\SecurityForm.Designer.cs">
       <DependentUpon>SecurityForm.cs</DependentUpon>
     </Compile>
     <Compile Include="AppForms\MainPanel\Dashboard\DashoardForm.cs">
@@ -296,6 +302,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AppForms\Header\Settings\Employee\AddressEdit.resx">
+      <DependentUpon>AddressEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\Header\Settings\PersonalDetails\AddressInformation.resx">
+      <DependentUpon>AddressInformation.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AppForms\Header\Settings\PersonalDetails\ContactInformation.resx">
       <DependentUpon>ContactInformation.cs</DependentUpon>
     </EmbeddedResource>
@@ -305,10 +317,10 @@
     <EmbeddedResource Include="AppForms\Header\Settings\PersonalDetails\PersonalDetailsForm.resx">
       <DependentUpon>PersonalDetailsForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AppForms\Header\Settings\PersonalDetails\SecurityDetails.resx">
+    <EmbeddedResource Include="AppForms\Header\Settings\Security\SecurityDetails.resx">
       <DependentUpon>SecurityDetails.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AppForms\Header\Settings\PersonalDetails\SecurityForm.resx">
+    <EmbeddedResource Include="AppForms\Header\Settings\Security\SecurityForm.resx">
       <DependentUpon>SecurityForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AppForms\LoginForm.resx">
