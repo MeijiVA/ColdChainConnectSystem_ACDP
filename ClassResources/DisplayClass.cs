@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Drawing2D;
+using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -19,12 +20,30 @@ namespace ColdChainConnectSystem_ACDP
         public abstract void SetDisplayRectangle(Label l, int arc1, int arc2, int arc3, int arc4);
         public abstract void SetDisplayRectangle(Panel p,int arc1,int arc2,int arc3,int arc4);
         public abstract void SetDisplayRectangle(TextBox t, int arc1, int arc2, int arc3, int arc4);
+        public abstract Image SetImageOpacity(Image image, float opacity);
     }
 
 
     internal class DisplayClass : CColor
     {
-       
+
+        public override Image SetImageOpacity(Image image, float opacity)
+        {
+            Bitmap bmp = new Bitmap(image.Width, image.Height);
+            using (Graphics g = Graphics.FromImage(bmp))
+            {
+                ColorMatrix matrix = new ColorMatrix();
+                matrix.Matrix33 = opacity;
+                ImageAttributes attributes = new ImageAttributes();
+                attributes.SetColorMatrix(matrix, ColorMatrixFlag.Default,
+                                                  ColorAdjustType.Bitmap);
+                g.DrawImage(image, new Rectangle(0, 0, bmp.Width, bmp.Height),
+                                   0, 0, image.Width, image.Height,
+                                   GraphicsUnit.Pixel, attributes);
+            }
+            return bmp;
+        }
+
 
         public override Color SetCustomColor(string color)
         {

@@ -416,6 +416,15 @@
   <ItemGroup>
     <None Include="Resources\add.PNG" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ShadowsTravelingGRRR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\passhide1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\passshow1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\Microsoft.Data.SqlClient.SNI.6.0.2\build\net462\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('packages\Microsoft.Data.SqlClient.SNI.6.0.2\build\net462\Microsoft.Data.SqlClient.SNI.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
