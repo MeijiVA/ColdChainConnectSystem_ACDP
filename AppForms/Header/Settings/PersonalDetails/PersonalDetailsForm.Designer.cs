@@ -28,19 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.lblEmpID = new System.Windows.Forms.Label();
             this.ContactUserControl = new ColdChainConnectSystem_ACDP.AppForms.Header.Settings.PersonalDetails.ContactInformation();
             this.PersonalUserControl = new ColdChainConnectSystem_ACDP.AppForms.Header.Settings.PersonalDetails.Personal_Information();
+            this.AddressUserControl = new ColdChainConnectSystem_ACDP.AppForms.Header.Settings.PersonalDetails.AddressInformation();
             this.SuspendLayout();
-            // 
-            // flowLayoutPanel2
-            // 
-            this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(15, 245);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(450, 200);
-            this.flowLayoutPanel2.TabIndex = 17;
             // 
             // lblEmpID
             // 
@@ -85,16 +77,30 @@
             this.PersonalUserControl.Size = new System.Drawing.Size(450, 200);
             this.PersonalUserControl.TabIndex = 0;
             // 
+            // AddressUserControl
+            // 
+            this.AddressUserControl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.AddressUserControl.Barangay = "label2";
+            this.AddressUserControl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.AddressUserControl.City = "label4";
+            this.AddressUserControl.HouseNum = "label1";
+            this.AddressUserControl.Location = new System.Drawing.Point(16, 245);
+            this.AddressUserControl.Name = "AddressUserControl";
+            this.AddressUserControl.Postal = "label3";
+            this.AddressUserControl.Province = "label3";
+            this.AddressUserControl.Size = new System.Drawing.Size(450, 200);
+            this.AddressUserControl.TabIndex = 66;
+            // 
             // PersonalDetailsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(766, 458);
+            this.Controls.Add(this.AddressUserControl);
             this.Controls.Add(this.ContactUserControl);
             this.Controls.Add(this.lblEmpID);
             this.Controls.Add(this.PersonalUserControl);
-            this.Controls.Add(this.flowLayoutPanel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "PersonalDetailsForm";
@@ -105,9 +111,9 @@
         }
 
         #endregion
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private PersonalDetails.Personal_Information PersonalUserControl;
         private System.Windows.Forms.Label lblEmpID;
         private PersonalDetails.ContactInformation ContactUserControl;
+        private PersonalDetails.AddressInformation AddressUserControl;
     }
 }

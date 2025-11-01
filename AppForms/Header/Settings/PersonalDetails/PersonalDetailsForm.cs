@@ -33,6 +33,14 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings
             ContactUserControl.ConNum = ConnectionClass.contnum;
             ContactUserControl.EmailInfo = ConnectionClass.empid;
             lblEmpID.Text = "    Employee ID : " + ConnectionClass.empid;
+
+            string[] address = ConnectionClass.address.Split(',');
+            AddressUserControl.HouseNum = address[0];
+            AddressUserControl.Barangay = address[1];
+            AddressUserControl.City = address[2];
+            AddressUserControl.Province = address[3];
+            AddressUserControl.Postal = address[4];
+
         }
     }
 }
