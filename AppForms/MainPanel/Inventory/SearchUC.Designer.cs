@@ -198,7 +198,7 @@
         private Materials.CustomButton customButton3;
         private Materials.CustomPanel customPanel1;
         private Materials.CustomPanel pnlSearch;
-        private CustomControls.RJControls.CustomTextBox txtSearchBar;
         private System.Windows.Forms.PictureBox pictureBox1;
+        public CustomControls.RJControls.CustomTextBox txtSearchBar;
     }
 }

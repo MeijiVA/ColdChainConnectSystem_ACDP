@@ -51,6 +51,15 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
             sex = "";
             pass = "";
         }
+
+        public static SqlConnection Connection()
+        {
+            StreamReader sr = new StreamReader(filePath);
+            string database = sr.ReadLine();
+            database = database.Replace("username", username);
+            database = database.Replace("password", pass);
+            return new SqlConnection(database);
+        }
         public static string LoginAccount(string input)
         {
             //empid,username,fname,mname,lname,contnum,address,age,dob,position,status 
@@ -59,16 +68,11 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                 string[] token = input.Split(',');
                 username = token[0];
                 pass = token[1];
-
                 filePath = Directory.GetCurrentDirectory() + @"\conString.txt";
-                StreamReader sr = new StreamReader(filePath);
-                string database = sr.ReadLine();
-                database = database.Replace("username", username);
-                database = database.Replace("password", pass);
-                SqlConnection con = new SqlConnection(database);
                 query = @"SELECT empid, username, fname, mname, lname, contnum,"
                         + "address, age, dob, position, status, sex, email FROM Employees";
-                using (SqlCommand cmd = new SqlCommand(query, con))
+                SqlConnection con = Connection();
+                using (SqlCommand cmd = new SqlCommand(query,con))
                 {
                     con.Open();
                     using (var reader = cmd.ExecuteReader())

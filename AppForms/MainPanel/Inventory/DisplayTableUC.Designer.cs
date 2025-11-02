@@ -39,7 +39,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.invDisplaydgv = new System.Windows.Forms.DataGridView();
+            this.actionlbl = new System.Windows.Forms.Label();
             this.rowCbox = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.skucode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.desc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.img = new System.Windows.Forms.DataGridViewImageColumn();
@@ -50,7 +52,6 @@
             this.viewCol = new System.Windows.Forms.DataGridViewImageColumn();
             this.editCol = new System.Windows.Forms.DataGridViewImageColumn();
             this.deleteCol = new System.Windows.Forms.DataGridViewImageColumn();
-            this.actionlbl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.invDisplaydgv)).BeginInit();
             this.SuspendLayout();
             // 
@@ -86,6 +87,7 @@
             this.invDisplaydgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.invDisplaydgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.rowCbox,
+            this.id,
             this.skucode,
             this.desc,
             this.img,
@@ -138,6 +140,18 @@
             this.invDisplaydgv.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.invDisplaydgv_RowPostPaint);
             this.invDisplaydgv.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.invDisplaydgv_RowsAdded);
             // 
+            // actionlbl
+            // 
+            this.actionlbl.AutoSize = true;
+            this.actionlbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.actionlbl.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.actionlbl.ForeColor = System.Drawing.Color.White;
+            this.actionlbl.Location = new System.Drawing.Point(695, 11);
+            this.actionlbl.Name = "actionlbl";
+            this.actionlbl.Size = new System.Drawing.Size(41, 12);
+            this.actionlbl.TabIndex = 1;
+            this.actionlbl.Text = "Action";
+            // 
             // rowCbox
             // 
             this.rowCbox.HeaderText = "";
@@ -145,6 +159,15 @@
             this.rowCbox.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.rowCbox.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.rowCbox.Width = 20;
+            // 
+            // id
+            // 
+            this.id.HeaderText = "";
+            this.id.MinimumWidth = 2;
+            this.id.Name = "id";
+            this.id.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.id.Visible = false;
+            this.id.Width = 2;
             // 
             // skucode
             // 
@@ -239,18 +262,6 @@
             this.deleteCol.ToolTipText = "Deletes the row.";
             this.deleteCol.Width = 25;
             // 
-            // actionlbl
-            // 
-            this.actionlbl.AutoSize = true;
-            this.actionlbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.actionlbl.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.actionlbl.ForeColor = System.Drawing.Color.White;
-            this.actionlbl.Location = new System.Drawing.Point(695, 11);
-            this.actionlbl.Name = "actionlbl";
-            this.actionlbl.Size = new System.Drawing.Size(41, 12);
-            this.actionlbl.TabIndex = 1;
-            this.actionlbl.Text = "Action";
-            // 
             // DisplayTableUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -271,6 +282,7 @@
         private System.Windows.Forms.Label actionlbl;
         public System.Windows.Forms.DataGridView invDisplaydgv;
         private System.Windows.Forms.DataGridViewCheckBoxColumn rowCbox;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn skucode;
         private System.Windows.Forms.DataGridViewTextBoxColumn desc;
         private System.Windows.Forms.DataGridViewImageColumn img;

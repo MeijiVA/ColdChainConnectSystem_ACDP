@@ -24,7 +24,6 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
         private void DisplayTableUC_Load(object sender, EventArgs e)
         {
             Image testImage = Properties.Resources.CCC_GrayLogo;
-            InventoryClass.setInventoryData(invDisplaydgv);
         }
 
         private void invDisplaydgv_CellContentClick(object sender, DataGridViewCellEventArgs e)

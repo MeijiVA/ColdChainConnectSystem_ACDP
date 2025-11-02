@@ -258,9 +258,9 @@
             this.btnExit.BackColor = System.Drawing.Color.Transparent;
             this.btnExit.FlatAppearance.BorderSize = 0;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.Font = new System.Drawing.Font("Copperplate Gothic Light", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F);
             this.btnExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.btnExit.Location = new System.Drawing.Point(375, 12);
+            this.btnExit.Location = new System.Drawing.Point(385, 2);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(35, 35);
             this.btnExit.TabIndex = 5;
@@ -278,7 +278,7 @@
             this.MinimizeBox = false;
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "LoginForm";
+            this.Text = "22g";
             this.Load += new System.EventHandler(this.LoginForm_Load);
             this.LoginSplContainer.Panel1.ResumeLayout(false);
             this.LoginSplContainer.Panel2.ResumeLayout(false);
