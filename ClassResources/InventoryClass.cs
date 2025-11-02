@@ -33,7 +33,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                     {
                         while (reader.Read())
                         {
-                            double amount = double.Parse(reader[3].ToString()) * double.Parse(reader[5].ToString());
+                            double amount = double.Parse(reader[4].ToString()) * double.Parse(reader[6].ToString());
 
                             //  0        0    1    2      3      blank       4     5      6          7            8            9
                             //checkbox,numid sku, desc,  img,  unitprice, amount, kg, quantity, buttonedit, button view, button delete
@@ -70,7 +70,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                     {
                         while (reader.Read())
                         {
-                            double amount = double.Parse(reader[3].ToString()) * double.Parse(reader[5].ToString());
+                            double amount = double.Parse(reader[4].ToString()) * double.Parse(reader[6].ToString());
 
                             //  0        0    1    2      3      blank    4      5         6          7              8
                             //checkbox, sku, desc,img,unitprice, amount, kg, quantity, buttonedit, button view, button delete
