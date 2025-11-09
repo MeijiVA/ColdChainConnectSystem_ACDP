@@ -20,6 +20,11 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
 
         }
 
+        public string searchTXT
+        {
+            get { return this.txtSearchBar.Texts; }
+            set { this.txtSearchBar.Texts = value; }
+        }
         private void customTextBox1__TextChanged(object sender, EventArgs e)
         {
 

@@ -31,13 +31,13 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblOf = new System.Windows.Forms.Label();
             this.lblMaxPage = new System.Windows.Forms.Label();
-            this.lblPage = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.lblPageNum = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
+            this.lblPage = new System.Windows.Forms.Label();
             this.btnNext = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
             this.btnPrev = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
-            this.displayTableUC = new ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory.DisplayTableUC();
-            this.searchUC1 = new ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory.SearchUC();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dgvInventoryTable = new ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory.DisplayTableUC();
+            this.SearchBar = new ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory.SearchUC();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -77,27 +77,6 @@
             this.lblMaxPage.TabIndex = 5;
             this.lblMaxPage.Text = "25";
             // 
-            // lblPage
-            // 
-            this.lblPage.AutoSize = true;
-            this.lblPage.Font = new System.Drawing.Font("Arial", 8.25F);
-            this.lblPage.ForeColor = System.Drawing.Color.DimGray;
-            this.lblPage.Location = new System.Drawing.Point(623, 10);
-            this.lblPage.Name = "lblPage";
-            this.lblPage.Size = new System.Drawing.Size(34, 14);
-            this.lblPage.TabIndex = 3;
-            this.lblPage.Text = "Page:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 8.25F);
-            this.label1.Location = new System.Drawing.Point(3, 11);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(54, 14);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "legends : ";
-            // 
             // lblPageNum
             // 
             this.lblPageNum.BackColor = System.Drawing.Color.White;
@@ -115,6 +94,17 @@
             this.lblPageNum.Text = " 1";
             this.lblPageNum.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblPageNum.TextColor = System.Drawing.Color.Gray;
+            // 
+            // lblPage
+            // 
+            this.lblPage.AutoSize = true;
+            this.lblPage.Font = new System.Drawing.Font("Arial", 8.25F);
+            this.lblPage.ForeColor = System.Drawing.Color.DimGray;
+            this.lblPage.Location = new System.Drawing.Point(623, 10);
+            this.lblPage.Name = "lblPage";
+            this.lblPage.Size = new System.Drawing.Size(34, 14);
+            this.lblPage.TabIndex = 3;
+            this.lblPage.Text = "Page:";
             // 
             // btnNext
             // 
@@ -156,22 +146,32 @@
             this.btnPrev.UseVisualStyleBackColor = false;
             this.btnPrev.Click += new System.EventHandler(this.btnPrev_Click);
             // 
-            // displayTableUC
+            // label1
             // 
-            this.displayTableUC.BackColor = System.Drawing.Color.White;
-            this.displayTableUC.Location = new System.Drawing.Point(22, 81);
-            this.displayTableUC.Name = "displayTableUC";
-            this.displayTableUC.Size = new System.Drawing.Size(755, 442);
-            this.displayTableUC.TabIndex = 1;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 8.25F);
+            this.label1.Location = new System.Drawing.Point(3, 11);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(54, 14);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "legends : ";
             // 
-            // searchUC1
+            // dgvInventoryTable
             // 
-            this.searchUC1.BackColor = System.Drawing.Color.Transparent;
-            this.searchUC1.Location = new System.Drawing.Point(22, 12);
-            this.searchUC1.Name = "searchUC1";
-            this.searchUC1.Size = new System.Drawing.Size(755, 65);
-            this.searchUC1.TabIndex = 0;
-            this.searchUC1.Load += new System.EventHandler(this.searchUC1_Load);
+            this.dgvInventoryTable.BackColor = System.Drawing.Color.White;
+            this.dgvInventoryTable.Location = new System.Drawing.Point(17, 82);
+            this.dgvInventoryTable.Name = "dgvInventoryTable";
+            this.dgvInventoryTable.Size = new System.Drawing.Size(755, 442);
+            this.dgvInventoryTable.TabIndex = 1;
+            // 
+            // SearchBar
+            // 
+            this.SearchBar.BackColor = System.Drawing.Color.Transparent;
+            this.SearchBar.Location = new System.Drawing.Point(22, 12);
+            this.SearchBar.Name = "SearchBar";
+            this.SearchBar.Size = new System.Drawing.Size(755, 65);
+            this.SearchBar.TabIndex = 0;
+            this.SearchBar.Load += new System.EventHandler(this.searchUC1_Load);
             // 
             // InventoryForm
             // 
@@ -180,11 +180,12 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(798, 570);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.displayTableUC);
-            this.Controls.Add(this.searchUC1);
+            this.Controls.Add(this.dgvInventoryTable);
+            this.Controls.Add(this.SearchBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "InventoryForm";
             this.Text = "InventoryForm";
+            this.Load += new System.EventHandler(this.InventoryForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -193,8 +194,7 @@
 
         #endregion
 
-        private SearchUC searchUC1;
-        private DisplayTableUC displayTableUC;
+        private SearchUC SearchBar;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private Materials.CustomButton btnPrev;
@@ -203,5 +203,6 @@
         private Materials.CustomLabel lblPageNum;
         private System.Windows.Forms.Label lblOf;
         private System.Windows.Forms.Label lblMaxPage;
+        public DisplayTableUC dgvInventoryTable;
     }
 }

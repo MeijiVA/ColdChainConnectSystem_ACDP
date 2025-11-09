@@ -28,18 +28,18 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
 
         private void invDisplaydgv_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (invDisplaydgv.Columns[e.ColumnIndex].Name == "deleteCol")
+            if (table.Columns[e.ColumnIndex].Name == "deleteCol")
             {
                 if (MessageBox.Show("Are you sure you want to delete this item from the Database?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    invDisplaydgv.Rows.RemoveAt(e.RowIndex);
+                    table.Rows.RemoveAt(e.RowIndex);
                 }
             }
-            if (invDisplaydgv.Columns[e.ColumnIndex].Name == "editCol")
+            if (table.Columns[e.ColumnIndex].Name == "editCol")
             {
 
             }
-            if (invDisplaydgv.Columns[e.ColumnIndex].Name == "viewCol")
+            if (table.Columns[e.ColumnIndex].Name == "viewCol")
             {
 
             }

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.customPanel1 = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
+            this.customComboBox1 = new ColdChainConnectSystem_ACDP.Materials.CustomComboBox();
             this.pnlSearch = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
             this.txtSearchBar = new CustomControls.RJControls.CustomTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -47,6 +48,7 @@
             this.customPanel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.customPanel1.BorderRadius = 10;
             this.customPanel1.BorderSize = 0;
+            this.customPanel1.Controls.Add(this.customComboBox1);
             this.customPanel1.Controls.Add(this.pnlSearch);
             this.customPanel1.Controls.Add(this.customButton1);
             this.customPanel1.Controls.Add(this.customButton3);
@@ -59,6 +61,25 @@
             this.customPanel1.TabIndex = 3;
             this.customPanel1.TextColor = System.Drawing.Color.White;
             // 
+            // customComboBox1
+            // 
+            this.customComboBox1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.customComboBox1.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.customComboBox1.BorderSize = 1;
+            this.customComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.customComboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.customComboBox1.ForeColor = System.Drawing.Color.DimGray;
+            this.customComboBox1.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.customComboBox1.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.customComboBox1.ListTextColor = System.Drawing.Color.DimGray;
+            this.customComboBox1.Location = new System.Drawing.Point(358, 16);
+            this.customComboBox1.MinimumSize = new System.Drawing.Size(40, 30);
+            this.customComboBox1.Name = "customComboBox1";
+            this.customComboBox1.Padding = new System.Windows.Forms.Padding(1);
+            this.customComboBox1.Size = new System.Drawing.Size(40, 30);
+            this.customComboBox1.TabIndex = 5;
+            this.customComboBox1.Texts = "";
+            // 
             // pnlSearch
             // 
             this.pnlSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
@@ -69,10 +90,10 @@
             this.pnlSearch.Controls.Add(this.txtSearchBar);
             this.pnlSearch.Controls.Add(this.pictureBox1);
             this.pnlSearch.ForeColor = System.Drawing.Color.White;
-            this.pnlSearch.Location = new System.Drawing.Point(20, 9);
+            this.pnlSearch.Location = new System.Drawing.Point(20, 16);
             this.pnlSearch.Name = "pnlSearch";
-            this.pnlSearch.Padding = new System.Windows.Forms.Padding(2, 7, 2, 7);
-            this.pnlSearch.Size = new System.Drawing.Size(309, 46);
+            this.pnlSearch.Padding = new System.Windows.Forms.Padding(10, 2, 2, 2);
+            this.pnlSearch.Size = new System.Drawing.Size(309, 30);
             this.pnlSearch.TabIndex = 4;
             this.pnlSearch.TextColor = System.Drawing.Color.White;
             // 
@@ -82,11 +103,11 @@
             this.txtSearchBar.BorderColor = System.Drawing.Color.Transparent;
             this.txtSearchBar.BorderFocusColor = System.Drawing.Color.Transparent;
             this.txtSearchBar.BorderRadius = 0;
-            this.txtSearchBar.BorderSize = 2;
+            this.txtSearchBar.BorderSize = 1;
             this.txtSearchBar.Dock = System.Windows.Forms.DockStyle.Left;
-            this.txtSearchBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.txtSearchBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtSearchBar.ForeColor = System.Drawing.Color.White;
-            this.txtSearchBar.Location = new System.Drawing.Point(42, 7);
+            this.txtSearchBar.Location = new System.Drawing.Point(34, 2);
             this.txtSearchBar.Margin = new System.Windows.Forms.Padding(4);
             this.txtSearchBar.Multiline = false;
             this.txtSearchBar.Name = "txtSearchBar";
@@ -94,7 +115,7 @@
             this.txtSearchBar.PasswordChar = false;
             this.txtSearchBar.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtSearchBar.PlaceholderText = "";
-            this.txtSearchBar.Size = new System.Drawing.Size(250, 37);
+            this.txtSearchBar.Size = new System.Drawing.Size(250, 30);
             this.txtSearchBar.TabIndex = 3;
             this.txtSearchBar.Texts = "Search Term";
             this.txtSearchBar.UnderlinedStyle = false;
@@ -107,9 +128,11 @@
             this.pictureBox1.BackgroundImage = global::ColdChainConnectSystem_ACDP.Properties.Resources.searchIcon;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox1.Location = new System.Drawing.Point(2, 7);
+            this.pictureBox1.Location = new System.Drawing.Point(10, 2);
+            this.pictureBox1.MaximumSize = new System.Drawing.Size(24, 24);
+            this.pictureBox1.MinimumSize = new System.Drawing.Size(24, 24);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(40, 32);
+            this.pictureBox1.Size = new System.Drawing.Size(24, 24);
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
@@ -200,5 +223,6 @@
         private Materials.CustomPanel pnlSearch;
         private System.Windows.Forms.PictureBox pictureBox1;
         public CustomControls.RJControls.CustomTextBox txtSearchBar;
+        private Materials.CustomComboBox customComboBox1;
     }
 }
