@@ -125,5 +125,9 @@ namespace ColdChainConnectSystem_ACDP
             }
         }
 
+        private void DisplayPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }//class
 }//namespace

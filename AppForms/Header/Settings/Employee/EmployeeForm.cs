@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.Employee
 {
-    public partial class EmployeeManagementForm : Form
+    public partial class EmployeeForm : Form
     {
-        public EmployeeManagementForm()
+        public EmployeeForm()
         {
             InitializeComponent();
         }

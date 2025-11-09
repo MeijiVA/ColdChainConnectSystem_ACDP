@@ -172,11 +172,17 @@
     <Compile Include="AppForms\Header\Settings\Employee\AddressEdit.Designer.cs">
       <DependentUpon>AddressEdit.cs</DependentUpon>
     </Compile>
-    <Compile Include="AppForms\Header\Settings\Employee\EmployeeManagementForm.cs">
+    <Compile Include="AppForms\Header\Settings\Employee\EmployeeForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AppForms\Header\Settings\Employee\EmployeeManagementForm.Designer.cs">
-      <DependentUpon>EmployeeManagementForm.cs</DependentUpon>
+    <Compile Include="AppForms\Header\Settings\Employee\EmployeeForm.Designer.cs">
+      <DependentUpon>EmployeeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForms\Header\Settings\Employee\ShowEmployee.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AppForms\Header\Settings\Employee\ShowEmployee.Designer.cs">
+      <DependentUpon>ShowEmployee.cs</DependentUpon>
     </Compile>
     <Compile Include="AppForms\Header\Settings\PersonalDetails\AddressInformation.cs">
       <SubType>UserControl</SubType>
@@ -269,16 +275,18 @@
       <DependentUpon>UserAccountControl.cs</DependentUpon>
     </Compile>
     <Compile Include="ClassResources\ChangeCredentialsClass.cs" />
-    <Compile Include="ClassResources\ConnectionClass.cs" />
-    <Compile Include="ClassResources\CurrentFormClass.cs" />
-    <Compile Include="ClassResources\DisplayClass.cs" />
+    <Compile Include="ClassResources\Connection\ConnectionClass.cs" />
+    <Compile Include="ClassResources\Display\CurrentFormClass.cs" />
+    <Compile Include="ClassResources\Display\DisplayClass.cs" />
     <Compile Include="AppForms\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AppForms\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ClassResources\InventoryClass.cs" />
+    <Compile Include="ClassResources\Connection\InventoryClass.cs" />
+    <Compile Include="ClassResources\Display\Tables\DataGridViewButtons.cs" />
+    <Compile Include="ClassResources\Display\Tables\InventoryColumn.cs" />
     <Compile Include="ClassResources\MunicipalityListClass.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -309,8 +317,11 @@
     <EmbeddedResource Include="AppForms\Header\Settings\Employee\AddressEdit.resx">
       <DependentUpon>AddressEdit.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AppForms\Header\Settings\Employee\EmployeeManagementForm.resx">
-      <DependentUpon>EmployeeManagementForm.cs</DependentUpon>
+    <EmbeddedResource Include="AppForms\Header\Settings\Employee\EmployeeForm.resx">
+      <DependentUpon>EmployeeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\Header\Settings\Employee\ShowEmployee.resx">
+      <DependentUpon>ShowEmployee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AppForms\Header\Settings\PersonalDetails\AddressInformation.resx">
       <DependentUpon>AddressInformation.cs</DependentUpon>

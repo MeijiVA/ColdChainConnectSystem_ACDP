@@ -17,7 +17,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Settings
     {
         public static PersonalDetailsForm pdf;
         public static SecurityForm secf;
-        public static EmployeeManagementForm empf;
+        public static EmployeeForm empf;
         /*public static EmployeeForm ef = new EmployeeForm();*/
         DisplayClass dc = new DisplayClass();
         public SettingForm()
@@ -55,7 +55,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Settings
         {
             pdf = new PersonalDetailsForm();
             secf = new SecurityForm();
-            empf = new EmployeeManagementForm();
+            empf = new EmployeeForm();
         }
     }
 }

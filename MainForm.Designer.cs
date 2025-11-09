@@ -33,9 +33,9 @@
             this.logoutBtn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnSettings = new System.Windows.Forms.Button();
-            this.uacUserProfile = new ColdChainConnectSystem_ACDP.AppForms.SidePanel.UserAccountControl();
             this.btnNotif = new System.Windows.Forms.Button();
             this.sidePanel1 = new ColdChainConnectSystem_ACDP.AppForms.SidePanel.SidePanel();
+            this.uacUserProfile = new ColdChainConnectSystem_ACDP.AppForms.SidePanel.UserAccountControl();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -47,6 +47,7 @@
             this.DisplayPanel.Name = "DisplayPanel";
             this.DisplayPanel.Size = new System.Drawing.Size(798, 570);
             this.DisplayPanel.TabIndex = 0;
+            this.DisplayPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.DisplayPanel_Paint);
             // 
             // panel1
             // 
@@ -95,15 +96,6 @@
             this.btnSettings.UseVisualStyleBackColor = true;
             this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
             // 
-            // uacUserProfile
-            // 
-            this.uacUserProfile.BackColor = System.Drawing.Color.White;
-            this.uacUserProfile.Location = new System.Drawing.Point(0, 30);
-            this.uacUserProfile.Name = "uacUserProfile";
-            this.uacUserProfile.Size = new System.Drawing.Size(200, 170);
-            this.uacUserProfile.TabIndex = 5;
-            this.uacUserProfile.Load += new System.EventHandler(this.userAccountControl1_Load);
-            // 
             // btnNotif
             // 
             this.btnNotif.BackgroundImage = global::ColdChainConnectSystem_ACDP.Properties.Resources.notifications;
@@ -124,6 +116,15 @@
             this.sidePanel1.Name = "sidePanel1";
             this.sidePanel1.Size = new System.Drawing.Size(200, 355);
             this.sidePanel1.TabIndex = 7;
+            // 
+            // uacUserProfile
+            // 
+            this.uacUserProfile.BackColor = System.Drawing.Color.White;
+            this.uacUserProfile.Location = new System.Drawing.Point(0, 30);
+            this.uacUserProfile.Name = "uacUserProfile";
+            this.uacUserProfile.Size = new System.Drawing.Size(200, 170);
+            this.uacUserProfile.TabIndex = 5;
+            this.uacUserProfile.Load += new System.EventHandler(this.userAccountControl1_Load);
             // 
             // MainForm
             // 

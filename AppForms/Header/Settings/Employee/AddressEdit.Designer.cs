@@ -35,18 +35,18 @@
             this.lbl3 = new System.Windows.Forms.Label();
             this.lbl4 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.customTextBox2 = new CustomControls.RJControls.CustomTextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.customTextBox1 = new CustomControls.RJControls.CustomTextBox();
+            this.txtBarangay = new CustomControls.RJControls.CustomTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lbl2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.customTextBox2 = new CustomControls.RJControls.CustomTextBox();
             this.cbxCity = new ColdChainConnectSystem_ACDP.Materials.CustomComboBox();
             this.cbxProvince = new ColdChainConnectSystem_ACDP.Materials.CustomComboBox();
-            this.customTextBox1 = new CustomControls.RJControls.CustomTextBox();
-            this.txtBarangay = new CustomControls.RJControls.CustomTextBox();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -80,7 +80,7 @@
             this.btnEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnEdit.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(96)))));
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEdit.Location = new System.Drawing.Point(400, 9);
+            this.btnEdit.Location = new System.Drawing.Point(202, 3);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(37, 23);
             this.btnEdit.TabIndex = 64;
@@ -130,8 +130,30 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 145);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(450, 53);
+            this.panel3.Size = new System.Drawing.Size(242, 53);
             this.panel3.TabIndex = 9;
+            // 
+            // customTextBox2
+            // 
+            this.customTextBox2.BackColor = System.Drawing.SystemColors.Window;
+            this.customTextBox2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.customTextBox2.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.customTextBox2.BorderRadius = 0;
+            this.customTextBox2.BorderSize = 1;
+            this.customTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.customTextBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.customTextBox2.Location = new System.Drawing.Point(8, 20);
+            this.customTextBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.customTextBox2.Multiline = false;
+            this.customTextBox2.Name = "customTextBox2";
+            this.customTextBox2.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.customTextBox2.PasswordChar = false;
+            this.customTextBox2.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.customTextBox2.PlaceholderText = "";
+            this.customTextBox2.Size = new System.Drawing.Size(200, 30);
+            this.customTextBox2.TabIndex = 64;
+            this.customTextBox2.Texts = "";
+            this.customTextBox2.UnderlinedStyle = false;
             // 
             // label7
             // 
@@ -155,8 +177,52 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 39);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(450, 53);
+            this.panel2.Size = new System.Drawing.Size(242, 53);
             this.panel2.TabIndex = 8;
+            // 
+            // customTextBox1
+            // 
+            this.customTextBox1.BackColor = System.Drawing.SystemColors.Window;
+            this.customTextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.customTextBox1.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.customTextBox1.BorderRadius = 0;
+            this.customTextBox1.BorderSize = 1;
+            this.customTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.customTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.customTextBox1.Location = new System.Drawing.Point(8, 20);
+            this.customTextBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.customTextBox1.Multiline = false;
+            this.customTextBox1.Name = "customTextBox1";
+            this.customTextBox1.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.customTextBox1.PasswordChar = false;
+            this.customTextBox1.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.customTextBox1.PlaceholderText = "";
+            this.customTextBox1.Size = new System.Drawing.Size(61, 30);
+            this.customTextBox1.TabIndex = 64;
+            this.customTextBox1.Texts = "";
+            this.customTextBox1.UnderlinedStyle = false;
+            // 
+            // txtBarangay
+            // 
+            this.txtBarangay.BackColor = System.Drawing.SystemColors.Window;
+            this.txtBarangay.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.txtBarangay.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.txtBarangay.BorderRadius = 0;
+            this.txtBarangay.BorderSize = 1;
+            this.txtBarangay.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.txtBarangay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtBarangay.Location = new System.Drawing.Point(228, 20);
+            this.txtBarangay.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBarangay.Multiline = false;
+            this.txtBarangay.Name = "txtBarangay";
+            this.txtBarangay.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtBarangay.PasswordChar = false;
+            this.txtBarangay.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtBarangay.PlaceholderText = "";
+            this.txtBarangay.Size = new System.Drawing.Size(67, 30);
+            this.txtBarangay.TabIndex = 63;
+            this.txtBarangay.Texts = "";
+            this.txtBarangay.UnderlinedStyle = false;
             // 
             // label1
             // 
@@ -187,7 +253,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(450, 39);
+            this.panel1.Size = new System.Drawing.Size(242, 39);
             this.panel1.TabIndex = 7;
             // 
             // label2
@@ -209,30 +275,8 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 92);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(450, 53);
+            this.panel4.Size = new System.Drawing.Size(242, 53);
             this.panel4.TabIndex = 10;
-            // 
-            // customTextBox2
-            // 
-            this.customTextBox2.BackColor = System.Drawing.SystemColors.Window;
-            this.customTextBox2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.customTextBox2.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.customTextBox2.BorderRadius = 0;
-            this.customTextBox2.BorderSize = 1;
-            this.customTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.customTextBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.customTextBox2.Location = new System.Drawing.Point(8, 20);
-            this.customTextBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.customTextBox2.Multiline = false;
-            this.customTextBox2.Name = "customTextBox2";
-            this.customTextBox2.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.customTextBox2.PasswordChar = false;
-            this.customTextBox2.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.customTextBox2.PlaceholderText = "";
-            this.customTextBox2.Size = new System.Drawing.Size(200, 30);
-            this.customTextBox2.TabIndex = 64;
-            this.customTextBox2.Texts = "";
-            this.customTextBox2.UnderlinedStyle = false;
             // 
             // cbxCity
             // 
@@ -355,50 +399,6 @@
             this.cbxProvince.Texts = "";
             this.cbxProvince.OnSelectedIndexChanged += new System.EventHandler(this.cbxProvince_OnSelectedIndexChanged_1);
             // 
-            // customTextBox1
-            // 
-            this.customTextBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.customTextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.customTextBox1.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.customTextBox1.BorderRadius = 0;
-            this.customTextBox1.BorderSize = 1;
-            this.customTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.customTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.customTextBox1.Location = new System.Drawing.Point(8, 20);
-            this.customTextBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.customTextBox1.Multiline = false;
-            this.customTextBox1.Name = "customTextBox1";
-            this.customTextBox1.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.customTextBox1.PasswordChar = false;
-            this.customTextBox1.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.customTextBox1.PlaceholderText = "";
-            this.customTextBox1.Size = new System.Drawing.Size(200, 30);
-            this.customTextBox1.TabIndex = 64;
-            this.customTextBox1.Texts = "";
-            this.customTextBox1.UnderlinedStyle = false;
-            // 
-            // txtBarangay
-            // 
-            this.txtBarangay.BackColor = System.Drawing.SystemColors.Window;
-            this.txtBarangay.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.txtBarangay.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.txtBarangay.BorderRadius = 0;
-            this.txtBarangay.BorderSize = 1;
-            this.txtBarangay.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.txtBarangay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtBarangay.Location = new System.Drawing.Point(228, 20);
-            this.txtBarangay.Margin = new System.Windows.Forms.Padding(4);
-            this.txtBarangay.Multiline = false;
-            this.txtBarangay.Name = "txtBarangay";
-            this.txtBarangay.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtBarangay.PasswordChar = false;
-            this.txtBarangay.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtBarangay.PlaceholderText = "";
-            this.txtBarangay.Size = new System.Drawing.Size(200, 30);
-            this.txtBarangay.TabIndex = 63;
-            this.txtBarangay.Texts = "";
-            this.txtBarangay.UnderlinedStyle = false;
-            // 
             // AddressEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -408,7 +408,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "AddressEdit";
-            this.Size = new System.Drawing.Size(450, 200);
+            this.Size = new System.Drawing.Size(242, 180);
             this.Load += new System.EventHandler(this.AddressEdit_Load);
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
