@@ -57,6 +57,7 @@
             this.customPanel1.ForeColor = System.Drawing.Color.White;
             this.customPanel1.Location = new System.Drawing.Point(0, 0);
             this.customPanel1.Name = "customPanel1";
+            this.customPanel1.Padding = new System.Windows.Forms.Padding(15);
             this.customPanel1.Size = new System.Drawing.Size(755, 65);
             this.customPanel1.TabIndex = 3;
             this.customPanel1.TextColor = System.Drawing.Color.White;
@@ -72,11 +73,11 @@
             this.customComboBox1.IconColor = System.Drawing.Color.MediumSlateBlue;
             this.customComboBox1.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.customComboBox1.ListTextColor = System.Drawing.Color.DimGray;
-            this.customComboBox1.Location = new System.Drawing.Point(358, 16);
+            this.customComboBox1.Location = new System.Drawing.Point(302, 17);
             this.customComboBox1.MinimumSize = new System.Drawing.Size(40, 30);
             this.customComboBox1.Name = "customComboBox1";
             this.customComboBox1.Padding = new System.Windows.Forms.Padding(1);
-            this.customComboBox1.Size = new System.Drawing.Size(40, 30);
+            this.customComboBox1.Size = new System.Drawing.Size(97, 30);
             this.customComboBox1.TabIndex = 5;
             this.customComboBox1.Texts = "";
             // 
@@ -90,10 +91,10 @@
             this.pnlSearch.Controls.Add(this.txtSearchBar);
             this.pnlSearch.Controls.Add(this.pictureBox1);
             this.pnlSearch.ForeColor = System.Drawing.Color.White;
-            this.pnlSearch.Location = new System.Drawing.Point(20, 16);
+            this.pnlSearch.Location = new System.Drawing.Point(18, 15);
             this.pnlSearch.Name = "pnlSearch";
-            this.pnlSearch.Padding = new System.Windows.Forms.Padding(10, 2, 2, 2);
-            this.pnlSearch.Size = new System.Drawing.Size(309, 30);
+            this.pnlSearch.Padding = new System.Windows.Forms.Padding(10, 7, 2, 2);
+            this.pnlSearch.Size = new System.Drawing.Size(278, 35);
             this.pnlSearch.TabIndex = 4;
             this.pnlSearch.TextColor = System.Drawing.Color.White;
             // 
@@ -104,18 +105,20 @@
             this.txtSearchBar.BorderFocusColor = System.Drawing.Color.Transparent;
             this.txtSearchBar.BorderRadius = 0;
             this.txtSearchBar.BorderSize = 1;
-            this.txtSearchBar.Dock = System.Windows.Forms.DockStyle.Left;
+            this.txtSearchBar.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.txtSearchBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtSearchBar.ForeColor = System.Drawing.Color.White;
-            this.txtSearchBar.Location = new System.Drawing.Point(34, 2);
+            this.txtSearchBar.Location = new System.Drawing.Point(34, 3);
             this.txtSearchBar.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSearchBar.MaximumSize = new System.Drawing.Size(230, 30);
+            this.txtSearchBar.MinimumSize = new System.Drawing.Size(230, 30);
             this.txtSearchBar.Multiline = false;
             this.txtSearchBar.Name = "txtSearchBar";
             this.txtSearchBar.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.txtSearchBar.PasswordChar = false;
             this.txtSearchBar.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtSearchBar.PlaceholderText = "";
-            this.txtSearchBar.Size = new System.Drawing.Size(250, 30);
+            this.txtSearchBar.Size = new System.Drawing.Size(230, 30);
             this.txtSearchBar.TabIndex = 3;
             this.txtSearchBar.Texts = "Search Term";
             this.txtSearchBar.UnderlinedStyle = false;
@@ -128,7 +131,7 @@
             this.pictureBox1.BackgroundImage = global::ColdChainConnectSystem_ACDP.Properties.Resources.searchIcon;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox1.Location = new System.Drawing.Point(10, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(10, 7);
             this.pictureBox1.MaximumSize = new System.Drawing.Size(24, 24);
             this.pictureBox1.MinimumSize = new System.Drawing.Size(24, 24);
             this.pictureBox1.Name = "pictureBox1";
@@ -150,9 +153,9 @@
             this.customButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.customButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.customButton1.ForeColor = System.Drawing.Color.White;
-            this.customButton1.Location = new System.Drawing.Point(423, 16);
+            this.customButton1.Location = new System.Drawing.Point(405, 15);
             this.customButton1.Name = "customButton1";
-            this.customButton1.Size = new System.Drawing.Size(113, 30);
+            this.customButton1.Size = new System.Drawing.Size(132, 35);
             this.customButton1.TabIndex = 0;
             this.customButton1.TextColor = System.Drawing.Color.White;
             this.customButton1.UseVisualStyleBackColor = false;
@@ -171,9 +174,9 @@
             this.customButton3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.customButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.customButton3.ForeColor = System.Drawing.Color.White;
-            this.customButton3.Location = new System.Drawing.Point(642, 16);
+            this.customButton3.Location = new System.Drawing.Point(543, 16);
             this.customButton3.Name = "customButton3";
-            this.customButton3.Size = new System.Drawing.Size(94, 30);
+            this.customButton3.Size = new System.Drawing.Size(94, 35);
             this.customButton3.TabIndex = 2;
             this.customButton3.TextColor = System.Drawing.Color.White;
             this.customButton3.UseVisualStyleBackColor = false;
@@ -192,9 +195,9 @@
             this.customButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.customButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.customButton2.ForeColor = System.Drawing.Color.White;
-            this.customButton2.Location = new System.Drawing.Point(542, 16);
+            this.customButton2.Location = new System.Drawing.Point(643, 15);
             this.customButton2.Name = "customButton2";
-            this.customButton2.Size = new System.Drawing.Size(94, 30);
+            this.customButton2.Size = new System.Drawing.Size(94, 35);
             this.customButton2.TabIndex = 1;
             this.customButton2.TextColor = System.Drawing.Color.White;
             this.customButton2.UseVisualStyleBackColor = false;
