@@ -169,9 +169,11 @@
             this.SearchBar.BackColor = System.Drawing.Color.Transparent;
             this.SearchBar.Location = new System.Drawing.Point(22, 12);
             this.SearchBar.Name = "SearchBar";
+            this.SearchBar.searchTXT = null;
             this.SearchBar.Size = new System.Drawing.Size(755, 65);
             this.SearchBar.TabIndex = 0;
             this.SearchBar.Load += new System.EventHandler(this.searchUC1_Load);
+            this.SearchBar.Leave += new System.EventHandler(this.SearchBar_Leave);
             // 
             // InventoryForm
             // 

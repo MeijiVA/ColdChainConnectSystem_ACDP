@@ -16,7 +16,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
     public partial class InventoryForm : Form
     {
         int currentPageIndex = 0;
-        public int totalPages = 0;
+        public int totalPages = 0 ;
         public InventoryForm()
         {
             InitializeComponent();
@@ -42,36 +42,58 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
         private void searchUC1_Load(object sender, EventArgs e)
         {
             currentPageIndex = 1;//!!!!!!!!!!!!!!!!!!!
-            string query = "WHERE " + "CHANGE THIS TO THE COMBO BOX THANK YOU " + " = " + SearchBar.searchTXT;
             totalPages = InventoryClass.loadInventoryData(dgvInventoryTable.table, lblMaxPage, lblPageNum, currentPageIndex);
         }
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-            if((SearchBar.txtSearchBar.Texts.Equals("Search Term") || SearchBar.txtSearchBar.Texts.Equals("")) && (currentPageIndex < totalPages))
+            if ((SearchBar.txtSearchBar.Texts.Equals("Search Term") || SearchBar.txtSearchBar.Texts.Equals("")) && (currentPageIndex < Convert.ToInt32(totalPages)) || SelectedFilterClass.SelectedFilter.Equals(""))
             {
                 dgvInventoryTable.table.Rows.Clear();
                 lblPageNum.Text = (currentPageIndex += 1).ToString();
                 totalPages = InventoryClass.loadInventoryData(dgvInventoryTable.table, lblMaxPage, lblPageNum, currentPageIndex);
             }//no search query
-            else
+            else if (currentPageIndex < Convert.ToInt32(totalPages))
             {
-
+                dgvInventoryTable.table.Rows.Clear();
+                Console.WriteLine(SelectedFilterClass.SelectedFilter);
+                lblPageNum.Text = (currentPageIndex += 1).ToString();
+                string query = "WHERE " + SelectedFilterClass.SelectedFilter + " LIKE '%" + SearchBar.searchTXT + "%' ";
+                totalPages = InventoryClass.loadInventoryData(dgvInventoryTable.table, lblMaxPage, lblPageNum, currentPageIndex, query);
             }
         }
 
         private void btnPrev_Click(object sender, EventArgs e)
         {
-            if ((SearchBar.txtSearchBar.Texts.Equals("Search Term") || SearchBar.txtSearchBar.Texts.Equals("")) && (currentPageIndex  > 1))
+            if ((SearchBar.txtSearchBar.Texts.Equals("Search Term") || SearchBar.txtSearchBar.Texts.Equals("")) && (currentPageIndex  > 1) || SelectedFilterClass.SelectedFilter.Equals(""))
             {
                 dgvInventoryTable.table.Rows.Clear();
                 lblPageNum.Text = (currentPageIndex -= 1).ToString();
                 totalPages = InventoryClass.loadInventoryData(dgvInventoryTable.table, lblMaxPage, lblPageNum, currentPageIndex);
             }//no search query
-            else
+            else if (currentPageIndex > 1)
             {
-
+                dgvInventoryTable.table.Rows.Clear();
+                Console.WriteLine(SelectedFilterClass.SelectedFilter);
+                lblPageNum.Text = (currentPageIndex -= 1).ToString();
+                string query = "WHERE " + SelectedFilterClass.SelectedFilter + " LIKE '%" + SearchBar.searchTXT + "%' ";
+                totalPages = InventoryClass.loadInventoryData(dgvInventoryTable.table, lblMaxPage, lblPageNum, currentPageIndex, query);
             }//has search query
+        }
+
+        private void SearchBar_Leave(object sender, EventArgs e)
+        {
+            try
+            {
+                dgvInventoryTable.table.Rows.Clear();
+                string query = " WHERE " + SelectedFilterClass.SelectedFilter + " LIKE '%" + SearchBar.searchTXT + "%' ";
+                Console.WriteLine(query);
+                totalPages = InventoryClass.loadInventoryData(dgvInventoryTable.table, lblMaxPage, lblPageNum, currentPageIndex, query);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

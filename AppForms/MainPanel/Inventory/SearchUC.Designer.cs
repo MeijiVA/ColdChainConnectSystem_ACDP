@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.customPanel1 = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
-            this.customComboBox1 = new ColdChainConnectSystem_ACDP.Materials.CustomComboBox();
+            this.cbxFilter = new ColdChainConnectSystem_ACDP.Materials.CustomComboBox();
             this.pnlSearch = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
             this.txtSearchBar = new CustomControls.RJControls.CustomTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -48,7 +48,7 @@
             this.customPanel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.customPanel1.BorderRadius = 10;
             this.customPanel1.BorderSize = 0;
-            this.customPanel1.Controls.Add(this.customComboBox1);
+            this.customPanel1.Controls.Add(this.cbxFilter);
             this.customPanel1.Controls.Add(this.pnlSearch);
             this.customPanel1.Controls.Add(this.customButton1);
             this.customPanel1.Controls.Add(this.customButton3);
@@ -62,24 +62,30 @@
             this.customPanel1.TabIndex = 3;
             this.customPanel1.TextColor = System.Drawing.Color.White;
             // 
-            // customComboBox1
+            // cbxFilter
             // 
-            this.customComboBox1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.customComboBox1.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.customComboBox1.BorderSize = 1;
-            this.customComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.customComboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.customComboBox1.ForeColor = System.Drawing.Color.DimGray;
-            this.customComboBox1.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.customComboBox1.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.customComboBox1.ListTextColor = System.Drawing.Color.DimGray;
-            this.customComboBox1.Location = new System.Drawing.Point(302, 17);
-            this.customComboBox1.MinimumSize = new System.Drawing.Size(40, 30);
-            this.customComboBox1.Name = "customComboBox1";
-            this.customComboBox1.Padding = new System.Windows.Forms.Padding(1);
-            this.customComboBox1.Size = new System.Drawing.Size(97, 30);
-            this.customComboBox1.TabIndex = 5;
-            this.customComboBox1.Texts = "";
+            this.cbxFilter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(6)))), ((int)(((byte)(60)))));
+            this.cbxFilter.BackgroundImage = global::ColdChainConnectSystem_ACDP.Properties.Resources.Filter;
+            this.cbxFilter.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(6)))), ((int)(((byte)(60)))));
+            this.cbxFilter.BorderRadius = 10;
+            this.cbxFilter.BorderSize = 1;
+            this.cbxFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cbxFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.cbxFilter.ForeColor = System.Drawing.Color.White;
+            this.cbxFilter.IconColor = System.Drawing.Color.White;
+            this.cbxFilter.Items.AddRange(new object[] {
+            "test"});
+            this.cbxFilter.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.cbxFilter.ListTextColor = System.Drawing.Color.DimGray;
+            this.cbxFilter.Location = new System.Drawing.Point(302, 15);
+            this.cbxFilter.MinimumSize = new System.Drawing.Size(40, 30);
+            this.cbxFilter.Name = "cbxFilter";
+            this.cbxFilter.Padding = new System.Windows.Forms.Padding(1);
+            this.cbxFilter.Size = new System.Drawing.Size(100, 35);
+            this.cbxFilter.TabIndex = 5;
+            this.cbxFilter.Texts = "Filter";
+            this.cbxFilter.OnSelectedIndexChanged += new System.EventHandler(this.cbxFilter_OnSelectedIndexChanged);
+            this.cbxFilter.Load += new System.EventHandler(this.cbxFilter_Load);
             // 
             // pnlSearch
             // 
@@ -226,6 +232,6 @@
         private Materials.CustomPanel pnlSearch;
         private System.Windows.Forms.PictureBox pictureBox1;
         public CustomControls.RJControls.CustomTextBox txtSearchBar;
-        private Materials.CustomComboBox customComboBox1;
+        private Materials.CustomComboBox cbxFilter;
     }
 }

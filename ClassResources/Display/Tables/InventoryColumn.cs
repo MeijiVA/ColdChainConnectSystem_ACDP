@@ -40,6 +40,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources.Display
             sku.Width = 90;
             sku.DefaultCellStyle = dcsText();
             sku.Resizable = DataGridViewTriState.False;
+            sku.SortMode = DataGridViewColumnSortMode.NotSortable;
             return sku;
         }
         public static DataGridViewTextBoxColumn columnDescription()
@@ -50,6 +51,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources.Display
             desc.Width = 170;
             desc.DefaultCellStyle = dcsText();
             desc.Resizable = DataGridViewTriState.False;
+            desc.SortMode = DataGridViewColumnSortMode.NotSortable;
             return desc;
         }
         public static DataGridViewImageColumn columnImage()
@@ -61,6 +63,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources.Display
             img.Width = 90;
             img.DefaultCellStyle = dcsImage();
             img.Resizable = DataGridViewTriState.False;
+            img.SortMode = DataGridViewColumnSortMode.NotSortable;
             return img;
         }
 
@@ -72,6 +75,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources.Display
             unitp.Width = 100;
             unitp.DefaultCellStyle = dcsText();
             unitp.Resizable = DataGridViewTriState.False;
+            unitp.SortMode = DataGridViewColumnSortMode.NotSortable;
             return unitp;
         }
         public static DataGridViewTextBoxColumn columnAmount()
@@ -82,6 +86,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources.Display
             amt.Width = 100;
             amt.DefaultCellStyle = dcsText();
             amt.Resizable = DataGridViewTriState.False;
+            amt.SortMode = DataGridViewColumnSortMode.NotSortable;
             return amt;
         }
         public static DataGridViewTextBoxColumn columnKG()
@@ -92,6 +97,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources.Display
             kg.Width = 40;
             kg.DefaultCellStyle = dcsText();
             kg.Resizable = DataGridViewTriState.False;
+            kg.SortMode = DataGridViewColumnSortMode.NotSortable;
             return kg;
         }
         public static DataGridViewTextBoxColumn columnQuantity()
@@ -102,6 +108,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources.Display
             qty.Width = 70;
             qty.DefaultCellStyle = dcsText();
             qty.Resizable = DataGridViewTriState.False;
+            qty.SortMode = DataGridViewColumnSortMode.NotSortable;
             return qty;
         }
     }

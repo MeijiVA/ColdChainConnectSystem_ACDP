@@ -87,6 +87,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.SidePanel
         {
             CurrentFormClass.form = name;
             MainForm.settingFlag = 1;
+            Console.WriteLine(name);
         }
 
         private void dashboardbtn_Click(object sender, EventArgs e)
@@ -99,33 +100,33 @@ namespace ColdChainConnectSystem_ACDP.AppForms.SidePanel
 
         private void invmanbtn_Click(object sender, EventArgs e)
         {
+            setPreviousFormTo("invform");
             SelectedTab(btnInvMan);
             LoginForm.mf.NavigateTo(new InventoryForm());
-            setPreviousFormTo("invform");
         }
 
         private void supmanbbtn_Click(object sender, EventArgs e)
         {
-            SelectedTab(btnSupMan);
             setPreviousFormTo("supform");
+            SelectedTab(btnSupMan);
         }
 
         private void salesmanbbtn_Click(object sender, EventArgs e)
         {
-            SelectedTab(btnSalesMan);
             setPreviousFormTo("salform");
+            SelectedTab(btnSalesMan);
         }
 
         private void custmanbtn_Click(object sender, EventArgs e)
         {
-            SelectedTab(btnCusMan);
             setPreviousFormTo("custform");
+            SelectedTab(btnCusMan);
         }
 
         private void empmanbtn_Click(object sender, EventArgs e)
         {
-            SelectedTab(btnEmpMan);
             setPreviousFormTo("empform");
+            SelectedTab(btnEmpMan);
         }
     }
 }
