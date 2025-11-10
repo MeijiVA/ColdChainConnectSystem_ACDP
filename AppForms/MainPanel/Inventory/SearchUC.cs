@@ -88,6 +88,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
             {
                 case "invform":
                     cbxFilter.Items.Add("All");
+                    cbxFilter.Items.Add("All");
                     cbxFilter.Items.Add("ID");
                     cbxFilter.Items.Add("SKU");
                     cbxFilter.Items.Add("Desc");

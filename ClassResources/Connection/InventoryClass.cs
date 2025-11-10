@@ -55,6 +55,13 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
             Image testImage = Properties.Resources.CCC_GrayLogo;
             SqlConnection con = ConnectionClass.Connection();
             con.Open();
+            if(searchQuery == "")
+            {
+
+            }
+ 
+
+
             query = $"SELECT COUNT(*) FROM Inventory {searchQuery}";
             using (SqlCommand count = new SqlCommand(query, con))
             {
