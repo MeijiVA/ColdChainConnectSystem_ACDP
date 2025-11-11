@@ -106,6 +106,8 @@
             this.customPanel1.Size = new System.Drawing.Size(350, 30);
             this.customPanel1.TabIndex = 0;
             this.customPanel1.TextColor = System.Drawing.Color.White;
+            this.customPanel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.customPanel1_MouseDown);
+            this.customPanel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.customPanel1_MouseMove);
             // 
             // lbl
             // 

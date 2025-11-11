@@ -52,5 +52,22 @@ namespace ColdChainConnectSystem_ACDP.Popup
             DialogResult = DialogResult.OK;
             Close();
         }
+
+        public Point mouseLoc;
+        public Point bottleMouse;
+        private void customPanel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                Point mousePos = Control.MousePosition;
+                mousePos.Offset(mouseLoc.X, mouseLoc.Y);
+                this.Location = mousePos;
+            }
+        }
+
+        private void customPanel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            mouseLoc = new Point(-e.X, -e.Y);
+        }
     }
 }

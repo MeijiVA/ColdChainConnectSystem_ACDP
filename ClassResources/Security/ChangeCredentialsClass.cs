@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ColdChainConnectSystem_ACDP.Popup;
+using System;
 using System.Data.SqlClient;
 using System.IO;
 using System.Windows.Forms;
@@ -8,6 +9,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
 {
     internal class ChangeCredentialsClass
     {
+        static CustomMessageBox cmb;
         public static bool ChangeUsername(TextBox user, TextBox pass, TextBox rep)
         {
             if (!user.Text.Equals(ConnectionClass.username))
@@ -16,19 +18,22 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                 {
                     if (pass.Text.Equals(ConnectionClass.pass))
                     {
-                        MessageBox.Show("Username has been Changed.");
+                        cmb = new CustomMessageBox("Change Username", "Username has been Changed.", MessageBoxButtons.OK);
+                        cmb.ShowDialog();
                         ConnectionClass.username = user.Text;
                         return true;
                     }
                     else
                     {
-                        MessageBox.Show("Passwords do not match this User's Credentials.");
+                        cmb = new CustomMessageBox("Change Username", "Passwords do not match this User's Credentials.", MessageBoxButtons.OK);
+                        cmb.ShowDialog();
                         return false;
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Your two Passwords do not match.");
+                    cmb = new CustomMessageBox("Change Username", "Your two Passwords do not match.", MessageBoxButtons.OK);
+                    cmb.ShowDialog();
                     return false;
                 }
             }
@@ -44,26 +49,30 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                 {
                     if (!oldp.Text.Equals(newp.Text))
                     {
-                        MessageBox.Show("Password has been Changed.");
+                        cmb = new CustomMessageBox("Change Password", "Password has been Changed.", MessageBoxButtons.OK);
+                        cmb.ShowDialog();
                         ConnectionClass.pass = newp.Text;
                         return true;
                           
                     }
                     else
                     {
-                        MessageBox.Show("Your Old Password must not match the new Password.");
+                        cmb = new CustomMessageBox("Change Password", "Your Old Password must not match the new Password.", MessageBoxButtons.OK);
+                        cmb.ShowDialog();
                         return false;
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Your two Passwords do not match.");
+                    cmb = new CustomMessageBox("Change Password", "Your two Passwords do not match.", MessageBoxButtons.OK);
+                    cmb.ShowDialog();
                     return false;
                 }
             }
             else
             {
-                MessageBox.Show("Your Old Password does not match this User's Credentials.");
+                cmb = new CustomMessageBox("Change Password", "Your Old Password does not match this User's Credentials.", MessageBoxButtons.OK);
+                cmb.ShowDialog();
                 return false;
             }
 
@@ -72,12 +81,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
 
         public static bool SameUsernameWith(TextBox user)
         {
-            string filePath = Directory.GetCurrentDirectory() + @"\conString.txt";
-            StreamReader sr = new StreamReader(filePath);
-            string database = sr.ReadLine();
-            database = database.Replace("username", ConnectionClass.username);
-            database = database.Replace("password", ConnectionClass.pass);
-            SqlConnection con = new SqlConnection(database);
+            SqlConnection con = ConnectionClass.Connection();
             string query = @"SELECT username FROM Employees";
 
             using (SqlCommand cmd = new SqlCommand(query, con))
@@ -89,7 +93,8 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                     {
                         if (user.Text.Equals(ConnectionClass.username))
                         {
-                            MessageBox.Show("Your New Username must not be the same as your Old Username.");
+                            cmb = new CustomMessageBox("Change Username", "Your New Username must not be the same as your Old Username.", MessageBoxButtons.OK);
+                            cmb.ShowDialog();
                             return false;
                         }
                         else if (user.Text.Equals(reader[0].ToString()))
