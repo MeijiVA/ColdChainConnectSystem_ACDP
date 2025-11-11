@@ -48,7 +48,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-            if ((SearchBar.txtSearchBar.Texts.Equals("Search Term") || SearchBar.txtSearchBar.Texts.Equals("")) && (currentPageIndex < Convert.ToInt32(totalPages)) || SelectedFilterClass.SelectedFilter.Equals(""))
+            if ((SearchBar.txtSearchBar.Texts.Equals("Search Term") || SearchBar.txtSearchBar.Texts.Equals("")) && (currentPageIndex < totalPages) || SelectedFilterClass.SelectedFilter.Equals(""))
             {
                 dgvInventoryTable.table.Rows.Clear();
                 lblPageNum.Text = (currentPageIndex += 1).ToString();
@@ -62,7 +62,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
                 string query = "WHERE " + SelectedFilterClass.SelectedFilter + " LIKE '%" + SearchBar.searchTXT + "%' ";
                 totalPages = InventoryClass.loadInventoryData(dgvInventoryTable.table, lblMaxPage, lblPageNum, currentPageIndex, query);
             }//has search query
-            else if (currentPageIndex < Convert.ToInt32(totalPages))
+            else if (currentPageIndex < totalPages)
             {
                 dgvInventoryTable.table.Rows.Clear();
                 Console.WriteLine(SelectedFilterClass.SelectedFilter);

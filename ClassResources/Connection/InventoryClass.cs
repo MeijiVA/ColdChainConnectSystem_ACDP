@@ -68,6 +68,8 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                 totalRows = (int)count.ExecuteScalar();
                 totalPages = (int)Math.Ceiling((double)totalRows / PageSize);
                 lblPage.Text = totalPages.ToString();
+
+                Console.WriteLine(totalRows + " TR "+ totalPages + "TP" );
                 query = $"SELECT numid,skucode, descript, image, unitprice, kg, quantity, expiry FROM Inventory {searchQuery} ORDER BY numid OFFSET {(currentPageIndex - 1) * PageSize} ROWS FETCH NEXT {PageSize} ROWS ONLY";
                 using (SqlCommand data = new SqlCommand(query, con))
                 {
