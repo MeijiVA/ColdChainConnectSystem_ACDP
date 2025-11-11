@@ -289,6 +289,11 @@
     <Compile Include="ClassResources\Display\Tables\DataGridViewButtons.cs" />
     <Compile Include="ClassResources\Display\Tables\InventoryColumn.cs" />
     <Compile Include="ClassResources\MunicipalityListClass.cs" />
+    <Compile Include="ColdChainConnectACDP_DBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ColdChainConnectACDP_DBDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -312,6 +317,12 @@
     </Compile>
     <Compile Include="Materials\CustomTextBox.Designer.cs">
       <DependentUpon>CustomTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\LoginPopupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\LoginPopupForm.Designer.cs">
+      <DependentUpon>LoginPopupForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -381,11 +392,25 @@
     <EmbeddedResource Include="Materials\CustomTextBox.resx">
       <DependentUpon>CustomTextBox.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Popup\LoginPopupForm.resx">
+      <DependentUpon>LoginPopupForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="ColdChainConnectACDP_DBDataSet.xsc">
+      <DependentUpon>ColdChainConnectACDP_DBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ColdChainConnectACDP_DBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ColdChainConnectACDP_DBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ColdChainConnectACDP_DBDataSet.xss">
+      <DependentUpon>ColdChainConnectACDP_DBDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -461,6 +486,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Filter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Arrow left-circle.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\Microsoft.Data.SqlClient.SNI.6.0.2\build\net462\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('packages\Microsoft.Data.SqlClient.SNI.6.0.2\build\net462\Microsoft.Data.SqlClient.SNI.targets')" />

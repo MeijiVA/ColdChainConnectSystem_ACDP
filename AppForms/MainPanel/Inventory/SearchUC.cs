@@ -25,8 +25,8 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
 
         public string searchTXT
         {
-            get { return txtSearchBar.Texts;  }
-            set { txtSearchBar.Texts = value; }
+            get { return txtSearch.Text; }
+            set { txtSearch.Text = value; }
         }
 
         private void customTextBox1__TextChanged(object sender, EventArgs e)
@@ -34,27 +34,11 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
 
         }
 
-        private void txtSearchBar_Enter(object sender, EventArgs e)
-        {
-            if (txtSearchBar.Texts.Equals("Search Term"))
-            {
-                txtSearchBar.Texts = "";
-            }
-
-        }
-
-        private void txtSearchBar_Leave(object sender, EventArgs e)
-        {
-            if (txtSearchBar.Texts.Equals(""))
-            {
-                txtSearchBar.Texts = "Search Term";
-            }
-        }
-
         private void cbxFilter_OnSelectedIndexChanged(object sender, EventArgs e)
         {
             switch (cbxFilter.Texts)
             {
+                case "Filter":
                 case "All":
                 SelectedFilterClass.SelectedFilter = "";
                     break;
@@ -88,7 +72,6 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
             {
                 case "invform":
                     cbxFilter.Items.Add("All");
-                    cbxFilter.Items.Add("All");
                     cbxFilter.Items.Add("ID");
                     cbxFilter.Items.Add("SKU");
                     cbxFilter.Items.Add("Desc");
@@ -107,6 +90,32 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
                     cbxFilter.Items.Add("Customer Name");
                     break;
 
+            }
+        }
+
+
+        private void txtSearch_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar.Equals(Keys.Enter))
+            {
+                SendKeys.Send("{TAB}");
+            }
+        }
+
+        private void txtSearch_Enter(object sender, EventArgs e)
+        {
+            if (txtSearch.Text.Equals("Search Term"))
+            {
+                txtSearch.Text = "";
+            }
+
+        }
+
+        private void txtSearch_Leave(object sender, EventArgs e)
+        {
+            if (txtSearch.Text.Equals(""))
+            {
+                txtSearch.Text = "Search Term";
             }
         }
     }

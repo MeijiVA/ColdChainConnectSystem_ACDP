@@ -83,6 +83,16 @@ namespace ColdChainConnectSystem_ACDP.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap Arrow_left_circle {
+            get {
+                object obj = ResourceManager.GetObject("Arrow left-circle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap CCC_GrayLogo {
             get {
                 object obj = ResourceManager.GetObject("CCC_GrayLogo", resourceCulture);
@@ -97,6 +107,16 @@ namespace ColdChainConnectSystem_ACDP.Properties {
             get {
                 object obj = ResourceManager.GetObject("CCC_Logo", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Check {
+            get {
+                object obj = ResourceManager.GetObject("Check", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         

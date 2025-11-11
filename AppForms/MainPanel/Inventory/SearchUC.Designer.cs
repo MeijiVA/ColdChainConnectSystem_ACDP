@@ -31,7 +31,7 @@
             this.customPanel1 = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
             this.cbxFilter = new ColdChainConnectSystem_ACDP.Materials.CustomComboBox();
             this.pnlSearch = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
-            this.txtSearchBar = new CustomControls.RJControls.CustomTextBox();
+            this.txtSearch = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.customButton1 = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
             this.customButton3 = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
@@ -65,7 +65,6 @@
             // cbxFilter
             // 
             this.cbxFilter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(6)))), ((int)(((byte)(60)))));
-            this.cbxFilter.BackgroundImage = global::ColdChainConnectSystem_ACDP.Properties.Resources.Filter;
             this.cbxFilter.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(6)))), ((int)(((byte)(60)))));
             this.cbxFilter.BorderRadius = 10;
             this.cbxFilter.BorderSize = 1;
@@ -94,49 +93,37 @@
             this.pnlSearch.BorderColor = System.Drawing.Color.White;
             this.pnlSearch.BorderRadius = 10;
             this.pnlSearch.BorderSize = 1;
-            this.pnlSearch.Controls.Add(this.txtSearchBar);
+            this.pnlSearch.Controls.Add(this.txtSearch);
             this.pnlSearch.Controls.Add(this.pictureBox1);
             this.pnlSearch.ForeColor = System.Drawing.Color.White;
             this.pnlSearch.Location = new System.Drawing.Point(18, 15);
             this.pnlSearch.Name = "pnlSearch";
-            this.pnlSearch.Padding = new System.Windows.Forms.Padding(10, 7, 2, 2);
+            this.pnlSearch.Padding = new System.Windows.Forms.Padding(40, 10, 2, 2);
             this.pnlSearch.Size = new System.Drawing.Size(278, 35);
             this.pnlSearch.TabIndex = 4;
             this.pnlSearch.TextColor = System.Drawing.Color.White;
             // 
-            // txtSearchBar
+            // txtSearch
             // 
-            this.txtSearchBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.txtSearchBar.BorderColor = System.Drawing.Color.Transparent;
-            this.txtSearchBar.BorderFocusColor = System.Drawing.Color.Transparent;
-            this.txtSearchBar.BorderRadius = 0;
-            this.txtSearchBar.BorderSize = 1;
-            this.txtSearchBar.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.txtSearchBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.txtSearchBar.ForeColor = System.Drawing.Color.White;
-            this.txtSearchBar.Location = new System.Drawing.Point(34, 3);
-            this.txtSearchBar.Margin = new System.Windows.Forms.Padding(4);
-            this.txtSearchBar.MaximumSize = new System.Drawing.Size(230, 30);
-            this.txtSearchBar.MinimumSize = new System.Drawing.Size(230, 30);
-            this.txtSearchBar.Multiline = false;
-            this.txtSearchBar.Name = "txtSearchBar";
-            this.txtSearchBar.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtSearchBar.PasswordChar = false;
-            this.txtSearchBar.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtSearchBar.PlaceholderText = "";
-            this.txtSearchBar.Size = new System.Drawing.Size(230, 30);
-            this.txtSearchBar.TabIndex = 3;
-            this.txtSearchBar.Texts = "Search Term";
-            this.txtSearchBar.UnderlinedStyle = false;
-            this.txtSearchBar._TextChanged += new System.EventHandler(this.customTextBox1__TextChanged);
-            this.txtSearchBar.Enter += new System.EventHandler(this.txtSearchBar_Enter);
-            this.txtSearchBar.Leave += new System.EventHandler(this.txtSearchBar_Leave);
+            this.txtSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSearch.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.txtSearch.ForeColor = System.Drawing.Color.White;
+            this.txtSearch.Location = new System.Drawing.Point(40, 10);
+            this.txtSearch.MaximumSize = new System.Drawing.Size(200, 30);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(200, 14);
+            this.txtSearch.TabIndex = 6;
+            this.txtSearch.Text = "Search Term";
+            this.txtSearch.Enter += new System.EventHandler(this.txtSearch_Enter);
+            this.txtSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSearch_KeyPress);
+            this.txtSearch.Leave += new System.EventHandler(this.txtSearch_Leave);
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = global::ColdChainConnectSystem_ACDP.Properties.Resources.searchIcon;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
             this.pictureBox1.Location = new System.Drawing.Point(10, 7);
             this.pictureBox1.MaximumSize = new System.Drawing.Size(24, 24);
             this.pictureBox1.MinimumSize = new System.Drawing.Size(24, 24);
@@ -218,6 +205,7 @@
             this.Size = new System.Drawing.Size(755, 65);
             this.customPanel1.ResumeLayout(false);
             this.pnlSearch.ResumeLayout(false);
+            this.pnlSearch.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -231,7 +219,7 @@
         private Materials.CustomPanel customPanel1;
         private Materials.CustomPanel pnlSearch;
         private System.Windows.Forms.PictureBox pictureBox1;
-        public CustomControls.RJControls.CustomTextBox txtSearchBar;
         private Materials.CustomComboBox cbxFilter;
+        public System.Windows.Forms.TextBox txtSearch;
     }
 }

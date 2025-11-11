@@ -2,6 +2,7 @@
 using System.Data.SqlClient;
 using System.Windows.Forms;
 using System.IO;
+using ColdChainConnectSystem_ACDP.Popup;
 
 namespace ColdChainConnectSystem_ACDP.ClassResources
 {
@@ -29,11 +30,14 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
         public static string position { get; set; }
         public static string status { get; set; }
         public static string sex { get; set; }
+        public static string email { get; set; }
+        public static string pass { get; set; }
+
+
         public static string query { get; set; }
         public static string account { get; set; }
-        public static string email { get; set; }
         public static string filePath { get; set; }
-        public static string pass { get; set; }
+        public static string db { get; set; }
         public ConnectionClass()
         {
             empid = "";
@@ -50,98 +54,126 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
             status = "";
             sex = "";
             pass = "";
+            filePath = "";
         }
 
         public static SqlConnection Connection()
         {
             StreamReader sr = new StreamReader(filePath);
-            string database = sr.ReadLine();
+            db = sr.ReadLine();
+            sr.Close();
+            string database = "Data Source = database; Initial Catalog = ColdChainConnectACDP_DB; User ID = username; Password = password; TrustServerCertificate = True";
+            
+            database = database.Replace("database", db);
             database = database.Replace("username", username);
             database = database.Replace("password", pass);
             return new SqlConnection(database);
         }
         public static string LoginAccount(string input)
         {
-            //empid,username,fname,mname,lname,contnum,address,age,dob,position,status 
-            try
+            LoginPopupForm lpf = new LoginPopupForm();
+            filePath = Directory.GetCurrentDirectory() + @"\conString.txt";
+            if (!File.Exists(filePath))
             {
-                string[] token = input.Split(',');
-                username = token[0];
-                pass = token[1];
-                filePath = Directory.GetCurrentDirectory() + @"\conString.txt";
-                query = @"SELECT empid, username, fname, mname, lname, contnum,"
-                        + "address, age, dob, position, status, sex, email FROM Employees";
-                SqlConnection con = Connection();
-                using (SqlCommand cmd = new SqlCommand(query,con))
+                if (lpf.ShowDialog() == DialogResult.Cancel)
                 {
-                    con.Open();
-                    using (var reader = cmd.ExecuteReader())
+                    return "default";
+                }
+            }
+            //empid,username,fname,mname,lname,contnum,address,age,dob,position,status 
+                try
+                {
+                    string[] token = input.Split(',');
+                    username = token[0];
+                    pass = token[1];
+                    query = @"SELECT empid, username, fname, mname, lname, contnum,"
+                            + "address, age, dob, position, status, sex, email FROM Employees";
+                    SqlConnection con = Connection();
+                    using (SqlCommand cmd = new SqlCommand(query, con))
                     {
-                        while (reader.Read())
+                        con.Open();
+                        using (var reader = cmd.ExecuteReader())
                         {
-                            if (username.Equals(reader[1].ToString()))
+                            while (reader.Read())
                             {
-                                empid = reader[0].ToString();
-                                username = reader[1].ToString();
-                                fname = reader[2].ToString();
-                                mname = reader[3].ToString();
-                                lname = reader[4].ToString();
-                                contnum = reader[5].ToString();
-                                address = reader[6].ToString();
-                                age = reader[7].ToString();
-                                dob = reader[8].ToString();
-                                position = reader[9].ToString();
-                                status = reader[10].ToString();
-                                sex = reader[11].ToString();
-                                email = reader[12].ToString();
-
-                                if (status.Equals("Inactive"))
+                                if (username.Equals(reader[1].ToString()))
                                 {
-                                    throw new InactiveException("Account's Status is INACTIVE, Please contact an Administrator.");
-                                }
+                                    empid = reader[0].ToString();
+                                    username = reader[1].ToString();
+                                    fname = reader[2].ToString();
+                                    mname = reader[3].ToString();
+                                    lname = reader[4].ToString();
+                                    contnum = reader[5].ToString();
+                                    address = reader[6].ToString();
+                                    age = reader[7].ToString();
+                                    dob = reader[8].ToString();
+                                    position = reader[9].ToString();
+                                    status = reader[10].ToString();
+                                    sex = reader[11].ToString();
+                                    email = reader[12].ToString();
 
-                                //NOTE not needed, bat ka pa gagawa ganto kung pwede mo naman return nalang ung position haha....
-                                switch (position)
-                                {
-                                    case "Administrator":
-                                        return "admin";
-                                    case "Sales":
-                                        return "sales";
-                                    case "Assistant":
-                                        return "assist";
-                                    case "Inventory":
-                                        return "inv";
-                                    default:
-                                        throw new UnknownPositionException("Account has an undefined Position, Please contact an Administrator.");
+                                    if (status.Equals("Inactive"))
+                                    {
+                                        throw new InactiveException("Account's Status is INACTIVE, Please contact an Administrator.");
+                                    }
+
+                                    //NOTE not needed, bat ka pa gagawa ganto kung pwede mo naman return nalang ung position haha....
+                                    switch (position)
+                                    {
+                                        case "Administrator":
+                                            return "admin";
+                                        case "Sales":
+                                            return "sales";
+                                        case "Assistant":
+                                            return "assist";
+                                        case "Inventory":
+                                            return "inv";
+                                        default:
+                                            throw new UnknownPositionException("Account has an undefined Position, Please contact an Administrator.");
+                                    }
                                 }
                             }
                         }
+                        con.Close();
                     }
-                    con.Close();
+                }
+                catch (FileNotFoundException)
+                {
+                    FileNotFound();
+                }
+                catch (System.Data.SqlClient.SqlException e)
+                {
+                //if not found
+                if (e.Message.Contains("Server"))
+                {
+                    MessageBox.Show("Invalid Server.");
+                    File.Delete(filePath);
+                }
+                // if credentials bad
+                else if (e.Message.Contains("Login"))
+                {
+                    MessageBox.Show("Invalid Credentials. ");
+                }
+                else
+                {
+                    MessageBox.Show(e.Message);
                 }
 
-            }
-            catch (FileNotFoundException )
-            {
-                FileNotFound();
-            }
-            catch (System.Data.SqlClient.SqlException e)
-            {
-                MessageBox.Show("Invalid Credentials." + e.Message);
-            }
-            catch (InactiveException e)
-            {
-                MessageBox.Show(e.Message);
-            }
-            catch (UnknownPositionException e)
-            {
-                MessageBox.Show(e.Message);
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show(e.Message);
-            }
-            return "default";
+
+                }
+                catch (InactiveException e)
+                {
+                    MessageBox.Show(e.Message);
+                }
+                catch (UnknownPositionException e)
+                {
+                    MessageBox.Show(e.Message);
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show(e.Message);
+                }
+        return "default";
         }
 
         public static void FileNotFound()
