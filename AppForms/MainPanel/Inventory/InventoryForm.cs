@@ -48,7 +48,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-            if ((SearchBar.txtSearchBar.Texts.Equals("Search Term") || SearchBar.txtSearchBar.Texts.Equals("")) && (currentPageIndex < totalPages) || SelectedFilterClass.SelectedFilter.Equals(""))
+            if ((SearchBar.txtSearchBar.Texts.Equals("Search Term") || SearchBar.txtSearchBar.Texts.Equals("")) && (currentPageIndex < totalPages) || (SelectedFilterClass.SelectedFilter.Equals("") && (currentPageIndex < totalPages)))
             {
                 dgvInventoryTable.table.Rows.Clear();
                 lblPageNum.Text = (currentPageIndex += 1).ToString();
@@ -74,7 +74,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
 
         private void btnPrev_Click(object sender, EventArgs e)
         {
-            if ((SearchBar.txtSearchBar.Texts.Equals("Search Term") || SearchBar.txtSearchBar.Texts.Equals("")) && (currentPageIndex  > 1) || SelectedFilterClass.SelectedFilter.Equals(""))
+            if ((SearchBar.txtSearchBar.Texts.Equals("Search Term") || SearchBar.txtSearchBar.Texts.Equals("")) && (currentPageIndex  > 1) || (SelectedFilterClass.SelectedFilter.Equals("") && (currentPageIndex > 1)))
             {
                 dgvInventoryTable.table.Rows.Clear();
                 lblPageNum.Text = (currentPageIndex -= 1).ToString();
