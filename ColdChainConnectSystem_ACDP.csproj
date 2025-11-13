@@ -226,6 +226,18 @@
     <Compile Include="AppForms\MainPanel\Customer\CustomerForm.Designer.cs">
       <DependentUpon>CustomerForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AppForms\MainPanel\Customer\DisplayTableUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AppForms\MainPanel\Customer\DisplayTableUC.Designer.cs">
+      <DependentUpon>DisplayTableUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForms\MainPanel\Customer\SearchUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AppForms\MainPanel\Customer\SearchUC.Designer.cs">
+      <DependentUpon>SearchUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="AppForms\MainPanel\Dashboard\DashoardForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -350,6 +362,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AppForms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\MainPanel\Customer\CustomerForm.resx">
+      <DependentUpon>CustomerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\MainPanel\Customer\DisplayTableUC.resx">
+      <DependentUpon>DisplayTableUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\MainPanel\Customer\SearchUC.resx">
+      <DependentUpon>SearchUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AppForms\MainPanel\Dashboard\DashoardForm.resx">
       <DependentUpon>DashoardForm.cs</DependentUpon>
