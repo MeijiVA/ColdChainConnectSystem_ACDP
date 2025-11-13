@@ -1,8 +1,10 @@
 ﻿
 using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IdentityModel.Tokens;
 using System.IO;
 using System.Windows.Forms;
 
@@ -14,9 +16,9 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
         public static Image getImage(string imgStr)
         {
             Image i;
-            if (File.Exists(Directory.GetCurrentDirectory() + "\\InventoryImage\\" + imgStr + ".png"))
+            if (File.Exists(Directory.GetCurrentDirectory() + "\\InventoryImage\\" + imgStr))
             {
-                i = Image.FromFile(Directory.GetCurrentDirectory() + "\\InventoryImage\\" + imgStr + ".png");
+                i = Image.FromFile(Directory.GetCurrentDirectory() + "\\InventoryImage\\" + imgStr);
                 return i;
             }
             else
@@ -67,14 +69,13 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
             int totalPages = 0;
             int PageSize = 10;
             String query;
-            Image testImage = Properties.Resources.CCC_GrayLogo;
             SqlConnection con = ConnectionClass.Connection();
             con.Open();
-            if(searchQuery == "")
+            if (searchQuery == "")
             {
 
             }
- 
+
 
 
             query = $"SELECT COUNT(*) FROM Inventory {searchQuery}";
@@ -84,7 +85,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                 totalPages = (int)Math.Ceiling((double)totalRows / PageSize);
                 lblPage.Text = totalPages.ToString();
 
-                Console.WriteLine(totalRows + " TR "+ totalPages + "TP" );
+                Console.WriteLine(totalRows + " TR " + totalPages + "TP");
                 query = $"SELECT numid,skucode, descript, image, unitprice, kg, quantity, expiry FROM Inventory {searchQuery} ORDER BY numid OFFSET {(currentPageIndex - 1) * PageSize} ROWS FETCH NEXT {PageSize} ROWS ONLY";
                 using (SqlCommand data = new SqlCommand(query, con))
                 {
@@ -105,5 +106,27 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
 
             return totalPages;
         }//method
+
+
+
+        public static void writeInventoryData(string sku, string desc, string unitp, string img, string kg, string quantity, string expiry)
+        {
+            string query = $"INSERT INTO Inventory(skucode, descript, image, unitprice, kg, quantity, expiry) VALUES('{sku}', '{desc}', '{img}', CAST({unitp} AS Decimal(18, 2)), {kg}, {quantity}, '{expiry}')";
+            
+            SqlConnection con = ConnectionClass.Connection();
+            using (SqlCommand cmd = new SqlCommand(query, con))
+            {
+                Console.WriteLine(query);
+                con.Open();
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
+        }
+
+
+
+
+
+
     }
 }
