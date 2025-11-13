@@ -238,6 +238,12 @@
     <Compile Include="AppForms\MainPanel\DisplayTableUC.Designer.cs">
       <DependentUpon>DisplayTableUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="AppForms\MainPanel\Inventory\AddItemInventoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\MainPanel\Inventory\AddItemInventoryForm.Designer.cs">
+      <DependentUpon>AddItemInventoryForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AppForms\MainPanel\Inventory\InventoryForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -289,6 +295,11 @@
     <Compile Include="ClassResources\Display\Tables\DataGridViewButtons.cs" />
     <Compile Include="ClassResources\Display\Tables\InventoryColumn.cs" />
     <Compile Include="ClassResources\Display\MunicipalityListClass.cs" />
+    <Compile Include="ColdChainConnectACDP_DBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ColdChainConnectACDP_DBDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -366,6 +377,9 @@
     <EmbeddedResource Include="AppForms\MainPanel\DisplayTableUC.resx">
       <DependentUpon>DisplayTableUC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\MainPanel\Inventory\AddItemInventoryForm.resx">
+      <DependentUpon>AddItemInventoryForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AppForms\MainPanel\Inventory\InventoryForm.resx">
       <DependentUpon>InventoryForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -404,6 +418,17 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="ColdChainConnectACDP_DBDataSet.xsc">
+      <DependentUpon>ColdChainConnectACDP_DBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ColdChainConnectACDP_DBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ColdChainConnectACDP_DBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ColdChainConnectACDP_DBDataSet.xss">
+      <DependentUpon>ColdChainConnectACDP_DBDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

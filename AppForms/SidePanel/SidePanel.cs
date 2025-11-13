@@ -83,49 +83,44 @@ namespace ColdChainConnectSystem_ACDP.AppForms.SidePanel
 
         }
 
-        public void setPreviousFormTo(string name)
-        {
-            CurrentFormClass.form = name;
-            MainForm.settingFlag = 1;
-            Console.WriteLine(name);
-        }
+
 
         private void dashboardbtn_Click(object sender, EventArgs e)
         {
             
             SelectedTab(btnDashboard);
             LoginForm.mf.NavigateTo(new DashoardForm());
-            setPreviousFormTo("dbform");
+            CurrentFormClass.setPreviousFormTo("dbform");
         }
 
         private void invmanbtn_Click(object sender, EventArgs e)
         {
-            setPreviousFormTo("invform");
+            CurrentFormClass.setPreviousFormTo("invform");
             SelectedTab(btnInvMan);
             LoginForm.mf.NavigateTo(new InventoryForm());
         }
 
         private void supmanbbtn_Click(object sender, EventArgs e)
         {
-            setPreviousFormTo("supform");
+            CurrentFormClass.setPreviousFormTo("supform");
             SelectedTab(btnSupMan);
         }
 
         private void salesmanbbtn_Click(object sender, EventArgs e)
         {
-            setPreviousFormTo("salform");
+            CurrentFormClass.setPreviousFormTo("salform");
             SelectedTab(btnSalesMan);
         }
 
         private void custmanbtn_Click(object sender, EventArgs e)
         {
-            setPreviousFormTo("custform");
+            CurrentFormClass.setPreviousFormTo("custform");
             SelectedTab(btnCusMan);
         }
 
         private void empmanbtn_Click(object sender, EventArgs e)
         {
-            setPreviousFormTo("empform");
+            CurrentFormClass.setPreviousFormTo("empform");
             SelectedTab(btnEmpMan);
         }
     }

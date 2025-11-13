@@ -33,9 +33,9 @@
             this.pnlSearch = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.customButton1 = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
-            this.customButton3 = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
-            this.customButton2 = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
+            this.btnAddItem = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
+            this.btnImport = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
+            this.btnExport = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
             this.customPanel1.SuspendLayout();
             this.pnlSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -50,9 +50,9 @@
             this.customPanel1.BorderSize = 0;
             this.customPanel1.Controls.Add(this.cbxFilter);
             this.customPanel1.Controls.Add(this.pnlSearch);
-            this.customPanel1.Controls.Add(this.customButton1);
-            this.customPanel1.Controls.Add(this.customButton3);
-            this.customPanel1.Controls.Add(this.customButton2);
+            this.customPanel1.Controls.Add(this.btnAddItem);
+            this.customPanel1.Controls.Add(this.btnImport);
+            this.customPanel1.Controls.Add(this.btnExport);
             this.customPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.customPanel1.ForeColor = System.Drawing.Color.White;
             this.customPanel1.Location = new System.Drawing.Point(0, 0);
@@ -132,68 +132,65 @@
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
-            // customButton1
+            // btnAddItem
             // 
-            this.customButton1.BackColor = System.Drawing.Color.Transparent;
-            this.customButton1.BackgroundColor = System.Drawing.Color.Transparent;
-            this.customButton1.BackgroundImage = global::ColdChainConnectSystem_ACDP.Properties.Resources.add;
-            this.customButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.customButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.customButton1.BorderRadius = 10;
-            this.customButton1.BorderSize = 0;
-            this.customButton1.FlatAppearance.BorderSize = 0;
-            this.customButton1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.customButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.customButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customButton1.ForeColor = System.Drawing.Color.White;
-            this.customButton1.Location = new System.Drawing.Point(405, 15);
-            this.customButton1.Name = "customButton1";
-            this.customButton1.Size = new System.Drawing.Size(132, 35);
-            this.customButton1.TabIndex = 0;
-            this.customButton1.TextColor = System.Drawing.Color.White;
-            this.customButton1.UseVisualStyleBackColor = false;
+            this.btnAddItem.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddItem.BackgroundColor = System.Drawing.Color.Transparent;
+            this.btnAddItem.BackgroundImage = global::ColdChainConnectSystem_ACDP.Properties.Resources.add;
+            this.btnAddItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAddItem.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnAddItem.BorderRadius = 10;
+            this.btnAddItem.BorderSize = 0;
+            this.btnAddItem.FlatAppearance.BorderSize = 0;
+            this.btnAddItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddItem.ForeColor = System.Drawing.Color.White;
+            this.btnAddItem.Location = new System.Drawing.Point(405, 15);
+            this.btnAddItem.Name = "btnAddItem";
+            this.btnAddItem.Size = new System.Drawing.Size(132, 35);
+            this.btnAddItem.TabIndex = 0;
+            this.btnAddItem.TextColor = System.Drawing.Color.White;
+            this.btnAddItem.UseVisualStyleBackColor = false;
+            this.btnAddItem.Click += new System.EventHandler(this.btnAddItem_Click);
             // 
-            // customButton3
+            // btnImport
             // 
-            this.customButton3.BackColor = System.Drawing.Color.Transparent;
-            this.customButton3.BackgroundColor = System.Drawing.Color.Transparent;
-            this.customButton3.BackgroundImage = global::ColdChainConnectSystem_ACDP.Properties.Resources.import;
-            this.customButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.customButton3.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.customButton3.BorderRadius = 10;
-            this.customButton3.BorderSize = 0;
-            this.customButton3.FlatAppearance.BorderSize = 0;
-            this.customButton3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.customButton3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.customButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customButton3.ForeColor = System.Drawing.Color.White;
-            this.customButton3.Location = new System.Drawing.Point(543, 16);
-            this.customButton3.Name = "customButton3";
-            this.customButton3.Size = new System.Drawing.Size(94, 35);
-            this.customButton3.TabIndex = 2;
-            this.customButton3.TextColor = System.Drawing.Color.White;
-            this.customButton3.UseVisualStyleBackColor = false;
+            this.btnImport.BackColor = System.Drawing.Color.Transparent;
+            this.btnImport.BackgroundColor = System.Drawing.Color.Transparent;
+            this.btnImport.BackgroundImage = global::ColdChainConnectSystem_ACDP.Properties.Resources.import;
+            this.btnImport.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnImport.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnImport.BorderRadius = 10;
+            this.btnImport.BorderSize = 0;
+            this.btnImport.FlatAppearance.BorderSize = 0;
+            this.btnImport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnImport.ForeColor = System.Drawing.Color.White;
+            this.btnImport.Location = new System.Drawing.Point(543, 16);
+            this.btnImport.Name = "btnImport";
+            this.btnImport.Size = new System.Drawing.Size(94, 35);
+            this.btnImport.TabIndex = 2;
+            this.btnImport.TextColor = System.Drawing.Color.White;
+            this.btnImport.UseVisualStyleBackColor = false;
+            this.btnImport.Click += new System.EventHandler(this.btnImport_Click);
             // 
-            // customButton2
+            // btnExport
             // 
-            this.customButton2.BackColor = System.Drawing.Color.Transparent;
-            this.customButton2.BackgroundColor = System.Drawing.Color.Transparent;
-            this.customButton2.BackgroundImage = global::ColdChainConnectSystem_ACDP.Properties.Resources.export;
-            this.customButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.customButton2.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.customButton2.BorderRadius = 10;
-            this.customButton2.BorderSize = 0;
-            this.customButton2.FlatAppearance.BorderSize = 0;
-            this.customButton2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.customButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.customButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customButton2.ForeColor = System.Drawing.Color.White;
-            this.customButton2.Location = new System.Drawing.Point(643, 15);
-            this.customButton2.Name = "customButton2";
-            this.customButton2.Size = new System.Drawing.Size(94, 35);
-            this.customButton2.TabIndex = 1;
-            this.customButton2.TextColor = System.Drawing.Color.White;
-            this.customButton2.UseVisualStyleBackColor = false;
+            this.btnExport.BackColor = System.Drawing.Color.Transparent;
+            this.btnExport.BackgroundColor = System.Drawing.Color.Transparent;
+            this.btnExport.BackgroundImage = global::ColdChainConnectSystem_ACDP.Properties.Resources.export;
+            this.btnExport.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnExport.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnExport.BorderRadius = 10;
+            this.btnExport.BorderSize = 0;
+            this.btnExport.FlatAppearance.BorderSize = 0;
+            this.btnExport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExport.ForeColor = System.Drawing.Color.White;
+            this.btnExport.Location = new System.Drawing.Point(643, 15);
+            this.btnExport.Name = "btnExport";
+            this.btnExport.Size = new System.Drawing.Size(94, 35);
+            this.btnExport.TabIndex = 1;
+            this.btnExport.TextColor = System.Drawing.Color.White;
+            this.btnExport.UseVisualStyleBackColor = false;
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
             // 
             // SearchUC
             // 
@@ -213,9 +210,9 @@
 
         #endregion
 
-        private Materials.CustomButton customButton1;
-        private Materials.CustomButton customButton2;
-        private Materials.CustomButton customButton3;
+        private Materials.CustomButton btnAddItem;
+        private Materials.CustomButton btnExport;
+        private Materials.CustomButton btnImport;
         private Materials.CustomPanel customPanel1;
         private Materials.CustomPanel pnlSearch;
         private System.Windows.Forms.PictureBox pictureBox1;

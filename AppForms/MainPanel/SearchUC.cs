@@ -89,7 +89,8 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
                 case "custform":
                     cbxFilter.Items.Add("Customer Name");
                     break;
-
+                default:
+                    break;
             }
         }
 
@@ -116,6 +117,64 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
             if (txtSearch.Text.Equals(""))
             {
                 txtSearch.Text = "Search Term";
+            }
+        }
+
+        private void btnAddItem_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine("HERE at " + CurrentFormClass.form);
+            switch (CurrentFormClass.form)
+            {
+                case "invform":
+                    AddItemInventoryForm addItem = new AddItemInventoryForm();
+                    LoginForm.mf.NavigateTo(addItem);
+                    break;
+                case "supform":
+                    break;
+                case "salform":
+                    break;
+                case "custform":
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        private void btnImport_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine("HERE at " + CurrentFormClass.form);
+
+            switch (CurrentFormClass.form)
+            {
+                case "invform":
+                    break;
+                case "supform":
+                    break;
+                case "salform":
+                    break;
+                case "custform":
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine("HERE at " + CurrentFormClass.form);
+
+            switch (CurrentFormClass.form)
+            {
+                case "invform":
+                    break;
+                case "supform":
+                    break;
+                case "salform":
+                    break;
+                case "custform":
+                    break;
+                default:
+                    break;
             }
         }
     }
