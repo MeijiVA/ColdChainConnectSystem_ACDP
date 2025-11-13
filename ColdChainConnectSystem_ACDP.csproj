@@ -280,11 +280,29 @@
     <Compile Include="AppForms\Header\Settings\settingsTabControl.Designer.cs">
       <DependentUpon>settingsTabControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="AppForms\MainPanel\Sales\DisplayTableUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AppForms\MainPanel\Sales\DisplayTableUC.Designer.cs">
+      <DependentUpon>DisplayTableUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="AppForms\MainPanel\Sales\SalesForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AppForms\MainPanel\Sales\SalesForm.Designer.cs">
       <DependentUpon>SalesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForms\MainPanel\Sales\SearchUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AppForms\MainPanel\Sales\SearchUC.Designer.cs">
+      <DependentUpon>SearchUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForms\MainPanel\Supplier\SupplierForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\MainPanel\Supplier\SupplierForm.Designer.cs">
+      <DependentUpon>SupplierForm.cs</DependentUpon>
     </Compile>
     <Compile Include="AppForms\SidePanel\SidePanel.cs">
       <SubType>UserControl</SubType>
@@ -399,8 +417,14 @@
     <EmbeddedResource Include="AppForms\Header\Settings\settingsTabControl.resx">
       <DependentUpon>settingsTabControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\MainPanel\Sales\DisplayTableUC.resx">
+      <DependentUpon>DisplayTableUC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AppForms\MainPanel\Sales\SalesForm.resx">
       <DependentUpon>SalesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\MainPanel\Sales\SearchUC.resx">
+      <DependentUpon>SearchUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AppForms\SidePanel\SidePanel.resx">
       <DependentUpon>SidePanel.cs</DependentUpon>
@@ -498,9 +522,7 @@
   <ItemGroup>
     <None Include="Resources\Filter.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="AppForms\MainPanel\Supplier\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\Microsoft.Data.SqlClient.SNI.6.0.2\build\net462\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('packages\Microsoft.Data.SqlClient.SNI.6.0.2\build\net462\Microsoft.Data.SqlClient.SNI.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
