@@ -341,7 +341,7 @@
             this.dpExpiry.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.dpExpiry.BorderSize = 0;
             this.dpExpiry.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.dpExpiry.Location = new System.Drawing.Point(57, 290);
+            this.dpExpiry.Location = new System.Drawing.Point(419, 287);
             this.dpExpiry.MinimumSize = new System.Drawing.Size(0, 35);
             this.dpExpiry.Name = "dpExpiry";
             this.dpExpiry.Size = new System.Drawing.Size(217, 35);
