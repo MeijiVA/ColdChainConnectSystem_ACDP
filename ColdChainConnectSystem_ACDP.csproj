@@ -280,6 +280,12 @@
     <Compile Include="AppForms\Header\Settings\settingsTabControl.Designer.cs">
       <DependentUpon>settingsTabControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="AppForms\MainPanel\Sales\SalesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\MainPanel\Sales\SalesForm.Designer.cs">
+      <DependentUpon>SalesForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AppForms\SidePanel\SidePanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -490,7 +496,6 @@
     <None Include="Resources\Filter.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="AppForms\MainPanel\Sales\" />
     <Folder Include="AppForms\MainPanel\Supplier\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
