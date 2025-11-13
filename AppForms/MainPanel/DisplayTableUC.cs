@@ -52,15 +52,13 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
 
         private void invDisplaydgv_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
         {
-            if (e.RowIndex % 2 == 0) // For even-indexed rows
-            {
-                using (Pen p = new Pen(Color.FromArgb(58, 58, 82), 2)) // Define pen for the line
+
+                using (Pen p = new Pen(Color.FromArgb(07, 07, 96), 2)) // Define pen for the line
                 {
                     // Calculate the position for the line
                     int y = e.RowBounds.Bottom - 1;
                     e.Graphics.DrawLine(p, e.RowBounds.Left + 10, y, e.RowBounds.Right - 10, y);
                 }
-            }
         }
     }
 }

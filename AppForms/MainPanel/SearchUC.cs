@@ -1,9 +1,12 @@
 ﻿using ColdChainConnectSystem_ACDP.ClassResources;
+using ColdChainConnectSystem_ACDP.ClassResources.Connection;
 using ColdChainConnectSystem_ACDP.ClassResources.Display;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Common;
+using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.IdentityModel.Tokens;
@@ -11,6 +14,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
 {
@@ -20,7 +24,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
         public SearchUC()
         {
             InitializeComponent();
-
+            ofdImportExcel.Filter = "Excel Worksheets|*.xls;*.xlsx;*.xlsm";
         }
 
         public string searchTXT
@@ -142,11 +146,16 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
 
         private void btnImport_Click(object sender, EventArgs e)
         {
-            Console.WriteLine("HERE at " + CurrentFormClass.form);
-
+            Console.WriteLine("HERE IMPORT at " + CurrentFormClass.form);
+    
             switch (CurrentFormClass.form)
             {
                 case "invform":
+
+                    if (ofdImportExcel.ShowDialog() == DialogResult.OK)
+                    {
+                        ImportClass.InsertDataToSQL(ofdImportExcel.FileName);
+                    }
                     break;
                 case "supform":
                     break;

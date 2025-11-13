@@ -37,7 +37,6 @@
             this.lblKG = new System.Windows.Forms.Label();
             this.lblQuantity = new System.Windows.Forms.Label();
             this.lblSKU = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dpExpiry = new ColdChainConnectSystem_ACDP.Materials.CustomDatePicker();
             this.txtSKU = new CustomControls.RJControls.CustomTextBox();
             this.txtQuantity = new CustomControls.RJControls.CustomTextBox();
@@ -60,7 +59,7 @@
             this.pbxImage.BackgroundImage = global::ColdChainConnectSystem_ACDP.Properties.Resources.NoImage1;
             this.pbxImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbxImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbxImage.Location = new System.Drawing.Point(636, 59);
+            this.pbxImage.Location = new System.Drawing.Point(624, 86);
             this.pbxImage.Name = "pbxImage";
             this.pbxImage.Size = new System.Drawing.Size(150, 150);
             this.pbxImage.TabIndex = 2;
@@ -69,15 +68,16 @@
             // btnExit
             // 
             this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.btnExit.BackgroundImage = global::ColdChainConnectSystem_ACDP.Properties.Resources.Back;
+            this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnExit.FlatAppearance.BorderSize = 0;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F);
             this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(759, 5);
+            this.btnExit.Location = new System.Drawing.Point(732, 36);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(27, 27);
             this.btnExit.TabIndex = 7;
-            this.btnExit.Text = "X";
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
@@ -86,7 +86,7 @@
             this.lblDescription.AutoSize = true;
             this.lblDescription.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10F);
             this.lblDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.lblDescription.Location = new System.Drawing.Point(45, 114);
+            this.lblDescription.Location = new System.Drawing.Point(39, 145);
             this.lblDescription.Name = "lblDescription";
             this.lblDescription.Size = new System.Drawing.Size(85, 16);
             this.lblDescription.TabIndex = 17;
@@ -97,7 +97,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10F);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.label1.Location = new System.Drawing.Point(48, 257);
+            this.label1.Location = new System.Drawing.Point(39, 285);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(74, 16);
             this.label1.TabIndex = 18;
@@ -108,7 +108,7 @@
             this.lblExpiry.AutoSize = true;
             this.lblExpiry.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10F);
             this.lblExpiry.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.lblExpiry.Location = new System.Drawing.Point(45, 454);
+            this.lblExpiry.Location = new System.Drawing.Point(307, 353);
             this.lblExpiry.Name = "lblExpiry";
             this.lblExpiry.Size = new System.Drawing.Size(50, 16);
             this.lblExpiry.TabIndex = 20;
@@ -119,7 +119,7 @@
             this.lblKG.AutoSize = true;
             this.lblKG.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10F);
             this.lblKG.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.lblKG.Location = new System.Drawing.Point(44, 324);
+            this.lblKG.Location = new System.Drawing.Point(39, 353);
             this.lblKG.Name = "lblKG";
             this.lblKG.Size = new System.Drawing.Size(89, 16);
             this.lblKG.TabIndex = 21;
@@ -130,7 +130,7 @@
             this.lblQuantity.AutoSize = true;
             this.lblQuantity.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10F);
             this.lblQuantity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.lblQuantity.Location = new System.Drawing.Point(45, 387);
+            this.lblQuantity.Location = new System.Drawing.Point(307, 285);
             this.lblQuantity.Name = "lblQuantity";
             this.lblQuantity.Size = new System.Drawing.Size(64, 16);
             this.lblQuantity.TabIndex = 22;
@@ -141,25 +141,18 @@
             this.lblSKU.AutoSize = true;
             this.lblSKU.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10F);
             this.lblSKU.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.lblSKU.Location = new System.Drawing.Point(48, 55);
+            this.lblSKU.Location = new System.Drawing.Point(39, 83);
             this.lblSKU.Name = "lblSKU";
             this.lblSKU.Size = new System.Drawing.Size(76, 16);
             this.lblSKU.TabIndex = 23;
             this.lblSKU.Text = "SKU Code";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(-15, -15);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 24;
             // 
             // dpExpiry
             // 
             this.dpExpiry.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.dpExpiry.BorderSize = 0;
             this.dpExpiry.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.dpExpiry.Location = new System.Drawing.Point(39, 477);
+            this.dpExpiry.Location = new System.Drawing.Point(295, 382);
             this.dpExpiry.MinimumSize = new System.Drawing.Size(4, 35);
             this.dpExpiry.Name = "dpExpiry";
             this.dpExpiry.Size = new System.Drawing.Size(250, 35);
@@ -175,17 +168,17 @@
             this.txtSKU.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(150)))));
             this.txtSKU.BorderRadius = 10;
             this.txtSKU.BorderSize = 2;
-            this.txtSKU.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10F);
+            this.txtSKU.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14F);
             this.txtSKU.ForeColor = System.Drawing.Color.Black;
-            this.txtSKU.Location = new System.Drawing.Point(39, 75);
-            this.txtSKU.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSKU.Location = new System.Drawing.Point(22, 103);
+            this.txtSKU.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSKU.Multiline = false;
             this.txtSKU.Name = "txtSKU";
             this.txtSKU.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.txtSKU.PasswordChar = false;
             this.txtSKU.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtSKU.PlaceholderText = "";
-            this.txtSKU.Size = new System.Drawing.Size(250, 31);
+            this.txtSKU.Size = new System.Drawing.Size(250, 37);
             this.txtSKU.TabIndex = 15;
             this.txtSKU.Texts = "";
             this.txtSKU.UnderlinedStyle = false;
@@ -197,20 +190,21 @@
             this.txtQuantity.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(150)))));
             this.txtQuantity.BorderRadius = 10;
             this.txtQuantity.BorderSize = 2;
-            this.txtQuantity.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10F);
+            this.txtQuantity.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14F);
             this.txtQuantity.ForeColor = System.Drawing.Color.Black;
-            this.txtQuantity.Location = new System.Drawing.Point(39, 407);
-            this.txtQuantity.Margin = new System.Windows.Forms.Padding(4);
+            this.txtQuantity.Location = new System.Drawing.Point(295, 305);
+            this.txtQuantity.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtQuantity.Multiline = false;
             this.txtQuantity.Name = "txtQuantity";
             this.txtQuantity.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.txtQuantity.PasswordChar = false;
             this.txtQuantity.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtQuantity.PlaceholderText = "";
-            this.txtQuantity.Size = new System.Drawing.Size(250, 31);
+            this.txtQuantity.Size = new System.Drawing.Size(250, 37);
             this.txtQuantity.TabIndex = 14;
             this.txtQuantity.Texts = "";
             this.txtQuantity.UnderlinedStyle = false;
+            this.txtQuantity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtQuantity_KeyPress);
             // 
             // txtWeight
             // 
@@ -219,17 +213,17 @@
             this.txtWeight.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(150)))));
             this.txtWeight.BorderRadius = 10;
             this.txtWeight.BorderSize = 2;
-            this.txtWeight.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10F);
+            this.txtWeight.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14F);
             this.txtWeight.ForeColor = System.Drawing.Color.Black;
-            this.txtWeight.Location = new System.Drawing.Point(39, 344);
-            this.txtWeight.Margin = new System.Windows.Forms.Padding(4);
+            this.txtWeight.Location = new System.Drawing.Point(22, 381);
+            this.txtWeight.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtWeight.Multiline = false;
             this.txtWeight.Name = "txtWeight";
             this.txtWeight.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.txtWeight.PasswordChar = false;
             this.txtWeight.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtWeight.PlaceholderText = "";
-            this.txtWeight.Size = new System.Drawing.Size(250, 31);
+            this.txtWeight.Size = new System.Drawing.Size(250, 37);
             this.txtWeight.TabIndex = 13;
             this.txtWeight.Texts = "";
             this.txtWeight.UnderlinedStyle = false;
@@ -242,20 +236,21 @@
             this.txtUnitPrice.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(150)))));
             this.txtUnitPrice.BorderRadius = 10;
             this.txtUnitPrice.BorderSize = 2;
-            this.txtUnitPrice.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10F);
+            this.txtUnitPrice.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14F);
             this.txtUnitPrice.ForeColor = System.Drawing.Color.Black;
-            this.txtUnitPrice.Location = new System.Drawing.Point(39, 277);
-            this.txtUnitPrice.Margin = new System.Windows.Forms.Padding(4);
+            this.txtUnitPrice.Location = new System.Drawing.Point(22, 305);
+            this.txtUnitPrice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtUnitPrice.Multiline = false;
             this.txtUnitPrice.Name = "txtUnitPrice";
             this.txtUnitPrice.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.txtUnitPrice.PasswordChar = false;
             this.txtUnitPrice.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtUnitPrice.PlaceholderText = "";
-            this.txtUnitPrice.Size = new System.Drawing.Size(250, 31);
+            this.txtUnitPrice.Size = new System.Drawing.Size(250, 37);
             this.txtUnitPrice.TabIndex = 10;
             this.txtUnitPrice.Texts = "";
             this.txtUnitPrice.UnderlinedStyle = false;
+            this.txtUnitPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUnitPrice_KeyPress);
             // 
             // txtDescription
             // 
@@ -264,10 +259,10 @@
             this.txtDescription.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(150)))));
             this.txtDescription.BorderRadius = 10;
             this.txtDescription.BorderSize = 2;
-            this.txtDescription.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10F);
+            this.txtDescription.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14F);
             this.txtDescription.ForeColor = System.Drawing.Color.Black;
-            this.txtDescription.Location = new System.Drawing.Point(39, 134);
-            this.txtDescription.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDescription.Location = new System.Drawing.Point(23, 165);
+            this.txtDescription.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
@@ -290,7 +285,7 @@
             this.btnImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnImage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnImage.ForeColor = System.Drawing.Color.White;
-            this.btnImage.Location = new System.Drawing.Point(636, 215);
+            this.btnImage.Location = new System.Drawing.Point(624, 251);
             this.btnImage.Name = "btnImage";
             this.btnImage.Size = new System.Drawing.Size(150, 40);
             this.btnImage.TabIndex = 8;
@@ -304,15 +299,15 @@
             this.lbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.lbl.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.lbl.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.lbl.BorderRadius = 0;
+            this.lbl.BorderRadius = 10;
             this.lbl.BorderSize = 0;
             this.lbl.Dock = System.Windows.Forms.DockStyle.Top;
             this.lbl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl.ForeColor = System.Drawing.Color.White;
-            this.lbl.Location = new System.Drawing.Point(0, 0);
+            this.lbl.Location = new System.Drawing.Point(20, 20);
             this.lbl.Name = "lbl";
-            this.lbl.Size = new System.Drawing.Size(801, 40);
+            this.lbl.Size = new System.Drawing.Size(758, 55);
             this.lbl.TabIndex = 1;
             this.lbl.Text = "     Add Item (Inventory)";
             this.lbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -330,7 +325,7 @@
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(636, 518);
+            this.btnAdd.Location = new System.Drawing.Point(624, 507);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(150, 40);
             this.btnAdd.TabIndex = 0;
@@ -344,8 +339,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(801, 570);
-            this.Controls.Add(this.dateTimePicker1);
+            this.ClientSize = new System.Drawing.Size(798, 570);
             this.Controls.Add(this.lblSKU);
             this.Controls.Add(this.lblQuantity);
             this.Controls.Add(this.lblKG);
@@ -365,7 +359,9 @@
             this.Controls.Add(this.btnAdd);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddItemInventoryForm";
+            this.Padding = new System.Windows.Forms.Padding(20);
             this.Text = "AddItemInventoryForm";
+            this.Load += new System.EventHandler(this.AddItemInventoryForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbxImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -392,6 +388,5 @@
         private System.Windows.Forms.Label lblKG;
         private System.Windows.Forms.Label lblQuantity;
         private System.Windows.Forms.Label lblSKU;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

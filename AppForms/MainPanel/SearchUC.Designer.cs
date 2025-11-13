@@ -36,6 +36,7 @@
             this.btnAddItem = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
             this.btnImport = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
             this.btnExport = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
+            this.ofdImportExcel = new System.Windows.Forms.OpenFileDialog();
             this.customPanel1.SuspendLayout();
             this.pnlSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -218,5 +219,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private Materials.CustomComboBox cbxFilter;
         public System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.OpenFileDialog ofdImportExcel;
     }
 }
