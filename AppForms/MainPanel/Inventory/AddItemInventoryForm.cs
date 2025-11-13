@@ -60,11 +60,5 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
             //checkbox,  id, sku, desc,img,unitprice, amount, kg, quantity, buttonedit, button view, button delete
         }
 
-        private void AddItemInventoryForm_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'coldChainConnectACDP_DBDataSet.Inventory' table. You can move, or remove it, as needed.
-            this.inventoryTableAdapter.Fill(this.coldChainConnectACDP_DBDataSet.Inventory);
-
-        }
     }
 }

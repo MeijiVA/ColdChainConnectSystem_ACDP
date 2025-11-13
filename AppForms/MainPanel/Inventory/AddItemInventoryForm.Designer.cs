@@ -333,7 +333,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddItemInventoryForm";
             this.Text = "AddItemInventoryForm";
-            this.Load += new System.EventHandler(this.AddItemInventoryForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbxImage)).EndInit();
             this.ResumeLayout(false);
 

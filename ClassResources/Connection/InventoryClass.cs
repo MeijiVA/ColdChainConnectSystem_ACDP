@@ -3,19 +3,34 @@ using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
 
 namespace ColdChainConnectSystem_ACDP.ClassResources
 {
     internal class InventoryClass
     {
+
+        public static Image getImage(string imgStr)
+        {
+            Image i;
+            if (File.Exists(Directory.GetCurrentDirectory() + "\\InventoryImage\\" + imgStr + ".png"))
+            {
+                i = Image.FromFile(Directory.GetCurrentDirectory() + "\\InventoryImage\\" + imgStr + ".png");
+                return i;
+            }
+            else
+            {
+                i = Properties.Resources.CCC_GrayLogo;
+                return i;
+            }
+        }
         public static int loadInventoryData(DataGridView dgv, Label lblPage, Label lblPageNum, int currentPageIndex)
         {
             int totalRows = 0;
             int totalPages = 0;
             int PageSize = 10;
             String query;
-            Image testImage = Properties.Resources.CCC_GrayLogo;
             SqlConnection con = ConnectionClass.Connection();
             con.Open();
             query = "SELECT COUNT(*) FROM Inventory";
@@ -35,7 +50,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
 
                             //  0        0    1    2    3     4        blank   5      6         7            8              9
                             //checkbox,  id, sku, desc,img,unitprice, amount, kg, quantity, buttonedit, button view, button delete
-                            dgv.Rows.Add(new object[] { 0, reader[0].ToString(), reader[1].ToString(), reader[2].ToString(),testImage,reader[4].ToString(), amount, reader[5].ToString(), reader[6].ToString() });
+                            dgv.Rows.Add(new object[] { 0, reader[0].ToString(), reader[1].ToString(), reader[2].ToString(), getImage(reader[3].ToString()), reader[4].ToString(), amount, reader[5].ToString(), reader[6].ToString() });
                         }//while reader loop
                     }//reader
                     con.Close();
@@ -81,7 +96,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
 
                             //  0        0    1    2    3     4        blank   5      6         7            8              9
                             //checkbox,  id, sku, desc,img,unitprice, amount, kg, quantity, buttonedit, button view, button delete
-                            dgv.Rows.Add(new object[] { 0, reader[0].ToString(), reader[1].ToString(), reader[2].ToString(), testImage, reader[4].ToString(), amount, reader[5].ToString(), reader[6].ToString() });
+                            dgv.Rows.Add(new object[] { 0, reader[0].ToString(), reader[1].ToString(), reader[2].ToString(), getImage(reader[3].ToString()), reader[4].ToString(), amount, reader[5].ToString(), reader[6].ToString() });
                         }//while reader loop
                     }//reader
                     con.Close();
