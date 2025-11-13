@@ -31,6 +31,8 @@
             this.ofdSaveImage = new System.Windows.Forms.OpenFileDialog();
             this.pbxImage = new System.Windows.Forms.PictureBox();
             this.btnExit = new System.Windows.Forms.Button();
+            this.lblDescription = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.customTextBox7 = new CustomControls.RJControls.CustomTextBox();
             this.customTextBox8 = new CustomControls.RJControls.CustomTextBox();
             this.customTextBox5 = new CustomControls.RJControls.CustomTextBox();
@@ -42,6 +44,7 @@
             this.btnImage = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
             this.lbl = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
             this.btnAdd = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
+            this.dpExpiry = new ColdChainConnectSystem_ACDP.Materials.CustomDatePicker();
             ((System.ComponentModel.ISupportInitialize)(this.pbxImage)).BeginInit();
             this.SuspendLayout();
             // 
@@ -75,6 +78,28 @@
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // lblDescription
+            // 
+            this.lblDescription.AutoSize = true;
+            this.lblDescription.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10F);
+            this.lblDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.lblDescription.Location = new System.Drawing.Point(33, 59);
+            this.lblDescription.Name = "lblDescription";
+            this.lblDescription.Size = new System.Drawing.Size(85, 16);
+            this.lblDescription.TabIndex = 17;
+            this.lblDescription.Text = "Description";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10F);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.label1.Location = new System.Drawing.Point(33, 132);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(74, 16);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "Unit Price";
+            // 
             // customTextBox7
             // 
             this.customTextBox7.BackColor = System.Drawing.SystemColors.Window;
@@ -82,8 +107,8 @@
             this.customTextBox7.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(150)))));
             this.customTextBox7.BorderRadius = 10;
             this.customTextBox7.BorderSize = 2;
-            this.customTextBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customTextBox7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.customTextBox7.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10F);
+            this.customTextBox7.ForeColor = System.Drawing.Color.Black;
             this.customTextBox7.Location = new System.Drawing.Point(355, 240);
             this.customTextBox7.Margin = new System.Windows.Forms.Padding(4);
             this.customTextBox7.Multiline = false;
@@ -104,8 +129,8 @@
             this.customTextBox8.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(150)))));
             this.customTextBox8.BorderRadius = 10;
             this.customTextBox8.BorderSize = 2;
-            this.customTextBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customTextBox8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.customTextBox8.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10F);
+            this.customTextBox8.ForeColor = System.Drawing.Color.Black;
             this.customTextBox8.Location = new System.Drawing.Point(355, 191);
             this.customTextBox8.Margin = new System.Windows.Forms.Padding(4);
             this.customTextBox8.Multiline = false;
@@ -126,8 +151,8 @@
             this.customTextBox5.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(150)))));
             this.customTextBox5.BorderRadius = 10;
             this.customTextBox5.BorderSize = 2;
-            this.customTextBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customTextBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.customTextBox5.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10F);
+            this.customTextBox5.ForeColor = System.Drawing.Color.Black;
             this.customTextBox5.Location = new System.Drawing.Point(355, 152);
             this.customTextBox5.Margin = new System.Windows.Forms.Padding(4);
             this.customTextBox5.Multiline = false;
@@ -148,8 +173,8 @@
             this.customTextBox6.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(150)))));
             this.customTextBox6.BorderRadius = 10;
             this.customTextBox6.BorderSize = 2;
-            this.customTextBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customTextBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.customTextBox6.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10F);
+            this.customTextBox6.ForeColor = System.Drawing.Color.Black;
             this.customTextBox6.Location = new System.Drawing.Point(355, 103);
             this.customTextBox6.Margin = new System.Windows.Forms.Padding(4);
             this.customTextBox6.Multiline = false;
@@ -170,8 +195,8 @@
             this.customTextBox3.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(150)))));
             this.customTextBox3.BorderRadius = 10;
             this.customTextBox3.BorderSize = 2;
-            this.customTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customTextBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.customTextBox3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10F);
+            this.customTextBox3.ForeColor = System.Drawing.Color.Black;
             this.customTextBox3.Location = new System.Drawing.Point(81, 240);
             this.customTextBox3.Margin = new System.Windows.Forms.Padding(4);
             this.customTextBox3.Multiline = false;
@@ -192,8 +217,8 @@
             this.customTextBox4.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(150)))));
             this.customTextBox4.BorderRadius = 10;
             this.customTextBox4.BorderSize = 2;
-            this.customTextBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customTextBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.customTextBox4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10F);
+            this.customTextBox4.ForeColor = System.Drawing.Color.Black;
             this.customTextBox4.Location = new System.Drawing.Point(81, 191);
             this.customTextBox4.Margin = new System.Windows.Forms.Padding(4);
             this.customTextBox4.Multiline = false;
@@ -214,9 +239,9 @@
             this.customTextBox2.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(150)))));
             this.customTextBox2.BorderRadius = 10;
             this.customTextBox2.BorderSize = 2;
-            this.customTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customTextBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.customTextBox2.Location = new System.Drawing.Point(81, 152);
+            this.customTextBox2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10F);
+            this.customTextBox2.ForeColor = System.Drawing.Color.Black;
+            this.customTextBox2.Location = new System.Drawing.Point(24, 152);
             this.customTextBox2.Margin = new System.Windows.Forms.Padding(4);
             this.customTextBox2.Multiline = false;
             this.customTextBox2.Name = "customTextBox2";
@@ -236,9 +261,9 @@
             this.customTextBox1.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(150)))));
             this.customTextBox1.BorderRadius = 10;
             this.customTextBox1.BorderSize = 2;
-            this.customTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.customTextBox1.Location = new System.Drawing.Point(81, 103);
+            this.customTextBox1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10F);
+            this.customTextBox1.ForeColor = System.Drawing.Color.Black;
+            this.customTextBox1.Location = new System.Drawing.Point(24, 88);
             this.customTextBox1.Margin = new System.Windows.Forms.Padding(4);
             this.customTextBox1.Multiline = false;
             this.customTextBox1.Name = "customTextBox1";
@@ -311,12 +336,28 @@
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
+            // dpExpiry
+            // 
+            this.dpExpiry.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.dpExpiry.BorderSize = 0;
+            this.dpExpiry.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.dpExpiry.Location = new System.Drawing.Point(57, 290);
+            this.dpExpiry.MinimumSize = new System.Drawing.Size(0, 35);
+            this.dpExpiry.Name = "dpExpiry";
+            this.dpExpiry.Size = new System.Drawing.Size(217, 35);
+            this.dpExpiry.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.dpExpiry.TabIndex = 19;
+            this.dpExpiry.TextColor = System.Drawing.Color.White;
+            // 
             // AddItemInventoryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(798, 570);
+            this.Controls.Add(this.dpExpiry);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblDescription);
             this.Controls.Add(this.customTextBox7);
             this.Controls.Add(this.customTextBox8);
             this.Controls.Add(this.customTextBox5);
@@ -335,6 +376,7 @@
             this.Text = "AddItemInventoryForm";
             ((System.ComponentModel.ISupportInitialize)(this.pbxImage)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -354,5 +396,8 @@
         private CustomControls.RJControls.CustomTextBox customTextBox6;
         private CustomControls.RJControls.CustomTextBox customTextBox7;
         private CustomControls.RJControls.CustomTextBox customTextBox8;
+        private System.Windows.Forms.Label lblDescription;
+        private System.Windows.Forms.Label label1;
+        private Materials.CustomDatePicker dpExpiry;
     }
 }

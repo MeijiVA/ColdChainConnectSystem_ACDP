@@ -73,7 +73,7 @@
             this.cbxFilter.ForeColor = System.Drawing.Color.White;
             this.cbxFilter.IconColor = System.Drawing.Color.White;
             this.cbxFilter.Items.AddRange(new object[] {
-            "test"});
+            "Filter"});
             this.cbxFilter.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.cbxFilter.ListTextColor = System.Drawing.Color.DimGray;
             this.cbxFilter.Location = new System.Drawing.Point(302, 15);
