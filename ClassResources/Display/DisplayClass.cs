@@ -20,6 +20,7 @@ namespace ColdChainConnectSystem_ACDP
         public abstract void SetDisplayRectangle(Label l, int arc1, int arc2, int arc3, int arc4);
         public abstract void SetDisplayRectangle(Panel p,int arc1,int arc2,int arc3,int arc4);
         public abstract void SetDisplayRectangle(TextBox t, int arc1, int arc2, int arc3, int arc4);
+        public abstract void SetDisplayRectangle(Form f, int arc1, int arc2, int arc3, int arc4);
         public abstract Image SetImageOpacity(Image image, float opacity);
     }
 
@@ -116,5 +117,15 @@ namespace ColdChainConnectSystem_ACDP
             t.Region = new Region(g);
         }
 
+        public override void SetDisplayRectangle(Form f, int arc1, int arc2, int arc3, int arc4)
+        {
+            GraphicsPath g = new GraphicsPath();
+            Rectangle rec = new Rectangle(0, 0, f.Width, f.Height);
+            g.AddArc(rec.X, rec.Y, 1 + arc1, 1 + arc1, 180, 90);
+            g.AddArc(rec.X + rec.Width - arc2, rec.Y, 50, 50, 270, 90);
+            g.AddArc(rec.X + rec.Width - arc3, rec.Y + rec.Height - 50, 50, 50, 0, 90);
+            g.AddArc(rec.X, rec.Y + rec.Height - arc4, 50, 50, 90, 90);
+            f.Region = new Region(g);
+        }
     }//class color
 }//namespace

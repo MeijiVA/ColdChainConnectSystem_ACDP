@@ -18,6 +18,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
 
     internal class ConnectionClass
     {
+        static CustomMessageBox cmb;
         public static string empid { get; set; }
         public static string username { get; set; }
         public static string fname { get; set; }
@@ -146,13 +147,15 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                 //if not found
                 if (e.Message.Contains("Server"))
                 {
-                    MessageBox.Show("Invalid Server.");
+                    cmb = new CustomMessageBox("Server", "Invalid Server.");
+                    cmb.ShowDialog();
                     File.Delete(filePath);
                 }
                 // if credentials bad
                 else if (e.Message.Contains("Login"))
                 {
-                    MessageBox.Show("Invalid Credentials. ");
+                    cmb = new CustomMessageBox("Credentials", "Invalid Credentials.");
+                    cmb.ShowDialog();
                 }
                 else
                 {
@@ -163,16 +166,19 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                 }
                 catch (InactiveException e)
                 {
-                    MessageBox.Show(e.Message);
+                cmb = new CustomMessageBox("Inactivity", e.Message);
+                cmb.ShowDialog();
                 }
                 catch (UnknownPositionException e)
                 {
-                    MessageBox.Show(e.Message);
+                cmb = new CustomMessageBox("Position Problem", e.Message);
+                cmb.ShowDialog();
                 }
                 catch (Exception e)
                 {
-                    MessageBox.Show(e.Message);
-                }
+                cmb = new CustomMessageBox("Exception", e.Message);
+                cmb.ShowDialog();
+            }
         return "default";
         }
 

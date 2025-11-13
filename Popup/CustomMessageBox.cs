@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,9 +13,22 @@ namespace ColdChainConnectSystem_ACDP.Popup
 {
     public partial class CustomMessageBox : Form
     {
+
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn
+(
+    int nLeftRect,     // x-coordinate of upper-left corner
+    int nTopRect,      // y-coordinate of upper-left corner
+    int nRightRect,    // x-coordinate of lower-right corner
+    int nBottomRect,   // y-coordinate of lower-right corner
+    int nWidthEllipse, // width of ellipse
+    int nHeightEllipse // height of ellipse
+);
         public CustomMessageBox(String lbl, String desc)
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
             btnOK.Visible = true;
             lblTitle.Text = lbl;
             lblDescription.Text = desc;
@@ -24,6 +38,8 @@ namespace ColdChainConnectSystem_ACDP.Popup
             if (messageBoxButtons == MessageBoxButtons.OKCancel)
             {
                 InitializeComponent();
+                this.FormBorderStyle = FormBorderStyle.None;
+                this.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
                 btnOK.Visible = true;
                 btnCancel.Visible = true;
                 lblTitle.Text = lbl;
@@ -32,6 +48,8 @@ namespace ColdChainConnectSystem_ACDP.Popup
             else if (messageBoxButtons == MessageBoxButtons.OK)
             {
                 InitializeComponent();
+                this.FormBorderStyle = FormBorderStyle.None;
+                this.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
                 btnOK.Visible = true;
                 btnCancel.Visible = false;
                 lblTitle.Text = lbl;
@@ -40,6 +58,8 @@ namespace ColdChainConnectSystem_ACDP.Popup
             else
             {
                 InitializeComponent();
+                this.FormBorderStyle = FormBorderStyle.None;
+                this.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
                 btnOK.Visible = false;
                 btnCancel.Visible = false;
                 lblTitle.Text = lbl;
@@ -60,6 +80,27 @@ namespace ColdChainConnectSystem_ACDP.Popup
         private void customButton1_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.Cancel;
+        }
+        public Point mouseLoc;
+        public Point bottleMouse;
+        private void customPanel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            mouseLoc = new Point(-e.X, -e.Y);
+        }
+
+        private void customPanel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                Point mousePos = Control.MousePosition;
+                mousePos.Offset(mouseLoc.X, mouseLoc.Y);
+                this.Location = mousePos;
+            }
+        }
+
+        private void CustomMessageBox_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -13,6 +13,7 @@ using System.Windows.Forms;
 
 namespace ColdChainConnectSystem_ACDP.Popup
 {
+
     public partial class LoginPopupForm : Form
     {
 
@@ -33,7 +34,7 @@ namespace ColdChainConnectSystem_ACDP.Popup
         {
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None;
-            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
+            this.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -68,6 +69,11 @@ namespace ColdChainConnectSystem_ACDP.Popup
         private void customPanel1_MouseDown(object sender, MouseEventArgs e)
         {
             mouseLoc = new Point(-e.X, -e.Y);
+        }
+
+        private void LoginPopupForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

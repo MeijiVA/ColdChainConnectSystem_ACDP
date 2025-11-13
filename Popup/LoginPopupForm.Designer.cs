@@ -39,12 +39,11 @@
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10F);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.label1.Location = new System.Drawing.Point(12, 42);
+            this.label1.Location = new System.Drawing.Point(13, 42);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(285, 32);
+            this.label1.Size = new System.Drawing.Size(325, 32);
             this.label1.TabIndex = 7;
             this.label1.Text = "The Current Data Source is not specified,\r\n Insert your Database\'s Data Source";
             // 
@@ -53,13 +52,13 @@
             this.btnOK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.btnOK.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.btnOK.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnOK.BorderRadius = 0;
+            this.btnOK.BorderRadius = 10;
             this.btnOK.BorderSize = 0;
             this.btnOK.FlatAppearance.BorderSize = 0;
             this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOK.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F);
+            this.btnOK.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOK.ForeColor = System.Drawing.Color.White;
-            this.btnOK.Location = new System.Drawing.Point(281, 123);
+            this.btnOK.Location = new System.Drawing.Point(283, 121);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(56, 40);
             this.btnOK.TabIndex = 2;
@@ -114,7 +113,7 @@
             this.lbl.AutoSize = true;
             this.lbl.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10F);
             this.lbl.ForeColor = System.Drawing.Color.White;
-            this.lbl.Location = new System.Drawing.Point(11, 5);
+            this.lbl.Location = new System.Drawing.Point(20, 7);
             this.lbl.Name = "lbl";
             this.lbl.Size = new System.Drawing.Size(75, 16);
             this.lbl.TabIndex = 3;
@@ -127,7 +126,7 @@
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F);
             this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(320, -3);
+            this.btnExit.Location = new System.Drawing.Point(314, 0);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(27, 30);
             this.btnExit.TabIndex = 6;
@@ -146,11 +145,12 @@
             this.Controls.Add(this.customPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LoginPopupForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginPopupForm";
+            this.Load += new System.EventHandler(this.LoginPopupForm_Load);
             this.customPanel1.ResumeLayout(false);
             this.customPanel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
