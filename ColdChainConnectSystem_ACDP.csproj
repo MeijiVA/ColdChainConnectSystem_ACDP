@@ -399,6 +399,9 @@
     <EmbeddedResource Include="AppForms\Header\Settings\settingsTabControl.resx">
       <DependentUpon>settingsTabControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\MainPanel\Sales\SalesForm.resx">
+      <DependentUpon>SalesForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AppForms\SidePanel\SidePanel.resx">
       <DependentUpon>SidePanel.cs</DependentUpon>
     </EmbeddedResource>
