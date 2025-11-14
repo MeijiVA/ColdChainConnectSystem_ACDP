@@ -31,6 +31,7 @@
             this.customButton1 = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
             this.customButton2 = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
             this.customButton3 = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
+            this.lblEMP = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
             this.SuspendLayout();
             // 
             // customButton1
@@ -87,11 +88,30 @@
             this.customButton3.Text = "customButton3";
             this.customButton3.TextColor = System.Drawing.Color.White;
             this.customButton3.UseVisualStyleBackColor = false;
+            this.customButton3.Click += new System.EventHandler(this.customButton3_Click);
+            // 
+            // lblEMP
+            // 
+            this.lblEMP.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.lblEMP.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.lblEMP.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.lblEMP.BorderRadius = 10;
+            this.lblEMP.BorderSize = 0;
+            this.lblEMP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblEMP.ForeColor = System.Drawing.Color.White;
+            this.lblEMP.Location = new System.Drawing.Point(8, 5);
+            this.lblEMP.Name = "lblEMP";
+            this.lblEMP.Size = new System.Drawing.Size(225, 27);
+            this.lblEMP.TabIndex = 3;
+            this.lblEMP.Text = "customLabel1";
+            this.lblEMP.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblEMP.TextColor = System.Drawing.Color.White;
             // 
             // ShowEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.lblEMP);
             this.Controls.Add(this.customButton3);
             this.Controls.Add(this.customButton2);
             this.Controls.Add(this.customButton1);
@@ -107,5 +127,6 @@
         private Materials.CustomButton customButton1;
         private Materials.CustomButton customButton2;
         private Materials.CustomButton customButton3;
+        private Materials.CustomLabel lblEMP;
     }
 }

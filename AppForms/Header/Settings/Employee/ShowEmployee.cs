@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,10 +17,22 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.Employee
         {
             InitializeComponent();
         }
+        [Category("Data")]
+        public string EMPID
+        {
+            get { return lblEMP.Text; }
+            set { lblEMP.Text = value; }
+        }
 
         private void customButton2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void customButton3_Click(object sender, EventArgs e)
+        {
+            AddItemInventoryForm add = new AddItemInventoryForm();
+            LoginForm.sf.pnlDisplaySettings.Controls.Add(add);
         }
     }
 }

@@ -194,6 +194,12 @@
     <Compile Include="AppForms\Header\Settings\Employee\ShowEmployee.Designer.cs">
       <DependentUpon>ShowEmployee.cs</DependentUpon>
     </Compile>
+    <Compile Include="AppForms\Header\Settings\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\Header\Settings\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="AppForms\Header\Settings\PersonalDetails\AddressInformation.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -360,6 +366,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AppForms\Header\Settings\Employee\ShowEmployee.resx">
       <DependentUpon>ShowEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\Header\Settings\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AppForms\Header\Settings\PersonalDetails\AddressInformation.resx">
       <DependentUpon>AddressInformation.cs</DependentUpon>

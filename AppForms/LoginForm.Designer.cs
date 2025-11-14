@@ -109,6 +109,7 @@
             this.panel1.Controls.Add(this.pnlLogin);
             this.panel1.Location = new System.Drawing.Point(25, 53);
             this.panel1.Name = "panel1";
+            this.panel1.Padding = new System.Windows.Forms.Padding(10);
             this.panel1.Size = new System.Drawing.Size(370, 480);
             this.panel1.TabIndex = 2;
             // 
@@ -126,6 +127,7 @@
             this.pnlLogin.Controls.Add(this.userLbl);
             this.pnlLogin.Controls.Add(this.passLbl);
             this.pnlLogin.Controls.Add(this.txtPass);
+            this.pnlLogin.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlLogin.ForeColor = System.Drawing.Color.White;
             this.pnlLogin.Location = new System.Drawing.Point(10, 10);
             this.pnlLogin.Name = "pnlLogin";

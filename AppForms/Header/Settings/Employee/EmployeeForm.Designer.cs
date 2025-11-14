@@ -56,48 +56,60 @@
             // showEmployee1
             // 
             this.showEmployee1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.showEmployee1.EMPID = "";
             this.showEmployee1.Location = new System.Drawing.Point(14, 11);
             this.showEmployee1.Name = "showEmployee1";
+            this.showEmployee1.Padding = new System.Windows.Forms.Padding(5);
             this.showEmployee1.Size = new System.Drawing.Size(241, 180);
             this.showEmployee1.TabIndex = 0;
             // 
             // showEmployee2
             // 
             this.showEmployee2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.showEmployee2.EMPID = "customLabel1";
             this.showEmployee2.Location = new System.Drawing.Point(261, 11);
             this.showEmployee2.Name = "showEmployee2";
+            this.showEmployee2.Padding = new System.Windows.Forms.Padding(5);
             this.showEmployee2.Size = new System.Drawing.Size(241, 180);
             this.showEmployee2.TabIndex = 1;
             // 
             // showEmployee3
             // 
             this.showEmployee3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.showEmployee3.EMPID = "customLabel1";
             this.showEmployee3.Location = new System.Drawing.Point(508, 11);
             this.showEmployee3.Name = "showEmployee3";
+            this.showEmployee3.Padding = new System.Windows.Forms.Padding(5);
             this.showEmployee3.Size = new System.Drawing.Size(241, 180);
             this.showEmployee3.TabIndex = 2;
             // 
             // showEmployee4
             // 
             this.showEmployee4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.showEmployee4.EMPID = "customLabel1";
             this.showEmployee4.Location = new System.Drawing.Point(14, 197);
             this.showEmployee4.Name = "showEmployee4";
+            this.showEmployee4.Padding = new System.Windows.Forms.Padding(5);
             this.showEmployee4.Size = new System.Drawing.Size(241, 180);
             this.showEmployee4.TabIndex = 3;
             // 
             // showEmployee5
             // 
             this.showEmployee5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.showEmployee5.EMPID = "customLabel1";
             this.showEmployee5.Location = new System.Drawing.Point(261, 197);
             this.showEmployee5.Name = "showEmployee5";
+            this.showEmployee5.Padding = new System.Windows.Forms.Padding(5);
             this.showEmployee5.Size = new System.Drawing.Size(241, 180);
             this.showEmployee5.TabIndex = 4;
             // 
             // showEmployee6
             // 
             this.showEmployee6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.showEmployee6.EMPID = "customLabel1";
             this.showEmployee6.Location = new System.Drawing.Point(508, 197);
             this.showEmployee6.Name = "showEmployee6";
+            this.showEmployee6.Padding = new System.Windows.Forms.Padding(5);
             this.showEmployee6.Size = new System.Drawing.Size(241, 180);
             this.showEmployee6.TabIndex = 5;
             // 
