@@ -36,8 +36,8 @@
             // 
             // customButton1
             // 
-            this.customButton1.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.customButton1.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.customButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.customButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.customButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.customButton1.BorderRadius = 0;
             this.customButton1.BorderSize = 0;
@@ -54,8 +54,8 @@
             // 
             // customButton2
             // 
-            this.customButton2.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.customButton2.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.customButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.customButton2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.customButton2.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.customButton2.BorderRadius = 0;
             this.customButton2.BorderSize = 0;
@@ -73,8 +73,8 @@
             // 
             // customButton3
             // 
-            this.customButton3.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.customButton3.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.customButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.customButton3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.customButton3.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.customButton3.BorderRadius = 0;
             this.customButton3.BorderSize = 0;
@@ -92,8 +92,8 @@
             // 
             // lblEMP
             // 
-            this.lblEMP.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.lblEMP.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.lblEMP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.lblEMP.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.lblEMP.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.lblEMP.BorderRadius = 10;
             this.lblEMP.BorderSize = 0;

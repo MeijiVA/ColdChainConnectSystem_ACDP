@@ -33,5 +33,16 @@ namespace ColdChainConnectSystem_ACDP.Properties {
                 return ((string)(this["ColdChainConnectACDP_DBConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=KIEL\\SQLEXPRESS01;Initial Catalog=ColdChainConnectACDP_DB;Integrated " +
+            "Security=True;TrustServerCertificate=True")]
+        public string ColdChainConnectACDP_DBConnectionString1 {
+            get {
+                return ((string)(this["ColdChainConnectACDP_DBConnectionString1"]));
+            }
+        }
     }
 }
