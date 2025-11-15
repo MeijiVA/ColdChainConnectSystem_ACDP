@@ -41,6 +41,7 @@
             this.passLbl = new System.Windows.Forms.Label();
             this.txtPass = new CustomControls.RJControls.CustomTextBox();
             this.btnExit = new System.Windows.Forms.Button();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             ((System.ComponentModel.ISupportInitialize)(this.LoginSplContainer)).BeginInit();
             this.LoginSplContainer.Panel1.SuspendLayout();
             this.LoginSplContainer.Panel2.SuspendLayout();
@@ -310,6 +311,7 @@
         private CustomControls.RJControls.CustomTextBox txtPass;
         private Materials.CustomButton btnTogglePassword;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ColorDialog colorDialog1;
     }
 }
 

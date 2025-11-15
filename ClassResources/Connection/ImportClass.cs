@@ -39,8 +39,6 @@ namespace ColdChainConnectSystem_ACDP.ClassResources.Connection
 
             try
             {
-                string connectionString = "Data Source=localhost\\SQLExpress01;Initial Catalog=ColdChainConnectACDP_DB;Integrated Security=True;TrustServerCertificate=True";
-                DapperPlusManager.Entity<Customers>().Table("Customers");
             }
             catch (Exception e)
             {

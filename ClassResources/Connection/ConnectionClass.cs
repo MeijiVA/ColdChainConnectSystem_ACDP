@@ -3,6 +3,7 @@ using System.Data.SqlClient;
 using System.Windows.Forms;
 using System.IO;
 using ColdChainConnectSystem_ACDP.Popup;
+using System.Drawing;
 
 namespace ColdChainConnectSystem_ACDP.ClassResources
 {
@@ -64,10 +65,11 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
             db = sr.ReadLine();
             sr.Close();
             string database = "Data Source = database; Initial Catalog = ColdChainConnectACDP_DB; User ID = username; Password = password; TrustServerCertificate = True";
-            
+            //Data Source = ANNEX - PC00; Initial Catalog = ColdChainConnectACDP_DB; User ID = bautista.369742; Password = ***********; Trust Server Certificate = True
             database = database.Replace("database", db);
             database = database.Replace("username", username);
             database = database.Replace("password", pass);
+            Console.WriteLine(database);
             return new SqlConnection(database);
         }
         public static string LoginAccount(string input)

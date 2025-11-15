@@ -46,7 +46,7 @@ namespace ColdChainConnectSystem_ACDP.Popup
         private void btnOK_Click(object sender, EventArgs e)
         {
             StreamWriter sw = new StreamWriter(ConnectionClass.filePath);
-            ConnectionClass.db = "localhost\\" + txtDb.Texts;
+            ConnectionClass.db = txtDb.Texts;
             sw.Write(ConnectionClass.db);
             sw.Flush();
             sw.Close();

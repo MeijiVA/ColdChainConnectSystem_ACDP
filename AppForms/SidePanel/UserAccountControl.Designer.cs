@@ -28,21 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.UserpBox = new System.Windows.Forms.PictureBox();
             this.UAC_namelbl = new System.Windows.Forms.Label();
             this.UAC_positionlbl = new System.Windows.Forms.Label();
+            this.UserpBox = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.UserpBox)).BeginInit();
             this.SuspendLayout();
-            // 
-            // UserpBox
-            // 
-            this.UserpBox.BackgroundImage = global::ColdChainConnectSystem_ACDP.Properties.Resources.Sherma;
-            this.UserpBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.UserpBox.Location = new System.Drawing.Point(40, 15);
-            this.UserpBox.Name = "UserpBox";
-            this.UserpBox.Size = new System.Drawing.Size(120, 120);
-            this.UserpBox.TabIndex = 0;
-            this.UserpBox.TabStop = false;
             // 
             // UAC_namelbl
             // 
@@ -70,6 +60,16 @@
             this.UAC_positionlbl.Text = "Position";
             this.UAC_positionlbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // UserpBox
+            // 
+            this.UserpBox.BackgroundImage = global::ColdChainConnectSystem_ACDP.Properties.Resources.NoImage1;
+            this.UserpBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.UserpBox.Location = new System.Drawing.Point(40, 15);
+            this.UserpBox.Name = "UserpBox";
+            this.UserpBox.Size = new System.Drawing.Size(120, 120);
+            this.UserpBox.TabIndex = 0;
+            this.UserpBox.TabStop = false;
+            // 
             // UserAccountControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -86,9 +86,8 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox UserpBox;
         public System.Windows.Forms.Label UAC_namelbl;
         public System.Windows.Forms.Label UAC_positionlbl;
+        private System.Windows.Forms.PictureBox UserpBox;
     }
 }

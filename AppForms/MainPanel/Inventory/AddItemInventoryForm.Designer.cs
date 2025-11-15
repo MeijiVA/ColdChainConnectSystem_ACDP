@@ -59,7 +59,7 @@
             this.pbxImage.BackgroundImage = global::ColdChainConnectSystem_ACDP.Properties.Resources.NoImage1;
             this.pbxImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbxImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbxImage.Location = new System.Drawing.Point(624, 86);
+            this.pbxImage.Location = new System.Drawing.Point(624, 83);
             this.pbxImage.Name = "pbxImage";
             this.pbxImage.Size = new System.Drawing.Size(150, 150);
             this.pbxImage.TabIndex = 2;
@@ -171,7 +171,7 @@
             this.txtSKU.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14F);
             this.txtSKU.ForeColor = System.Drawing.Color.Black;
             this.txtSKU.Location = new System.Drawing.Point(22, 103);
-            this.txtSKU.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSKU.Margin = new System.Windows.Forms.Padding(4);
             this.txtSKU.Multiline = false;
             this.txtSKU.Name = "txtSKU";
             this.txtSKU.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
@@ -193,7 +193,7 @@
             this.txtQuantity.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14F);
             this.txtQuantity.ForeColor = System.Drawing.Color.Black;
             this.txtQuantity.Location = new System.Drawing.Point(295, 305);
-            this.txtQuantity.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtQuantity.Margin = new System.Windows.Forms.Padding(4);
             this.txtQuantity.Multiline = false;
             this.txtQuantity.Name = "txtQuantity";
             this.txtQuantity.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
@@ -216,7 +216,7 @@
             this.txtWeight.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14F);
             this.txtWeight.ForeColor = System.Drawing.Color.Black;
             this.txtWeight.Location = new System.Drawing.Point(22, 381);
-            this.txtWeight.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtWeight.Margin = new System.Windows.Forms.Padding(4);
             this.txtWeight.Multiline = false;
             this.txtWeight.Name = "txtWeight";
             this.txtWeight.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
@@ -239,7 +239,7 @@
             this.txtUnitPrice.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14F);
             this.txtUnitPrice.ForeColor = System.Drawing.Color.Black;
             this.txtUnitPrice.Location = new System.Drawing.Point(22, 305);
-            this.txtUnitPrice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUnitPrice.Margin = new System.Windows.Forms.Padding(4);
             this.txtUnitPrice.Multiline = false;
             this.txtUnitPrice.Name = "txtUnitPrice";
             this.txtUnitPrice.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
@@ -262,7 +262,7 @@
             this.txtDescription.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14F);
             this.txtDescription.ForeColor = System.Drawing.Color.Black;
             this.txtDescription.Location = new System.Drawing.Point(23, 165);
-            this.txtDescription.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDescription.Margin = new System.Windows.Forms.Padding(4);
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
