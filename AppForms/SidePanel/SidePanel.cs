@@ -1,4 +1,8 @@
-﻿using System;
+﻿using ColdChainConnectSystem_ACDP.AppForms.MainPanel.Dashboard;
+using ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory;
+using ColdChainConnectSystem_ACDP.ClassResources;
+using ColdChainConnectSystem_ACDP.ClassResources.Instances;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,9 +12,6 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ColdChainConnectSystem_ACDP.AppForms.MainPanel.Dashboard;
-using ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory;
-using ColdChainConnectSystem_ACDP.ClassResources;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolTip;
 
 namespace ColdChainConnectSystem_ACDP.AppForms.SidePanel
@@ -89,7 +90,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.SidePanel
         {
             
             SelectedTab(btnDashboard);
-            LoginForm.mf.NavigateTo(new DashoardForm());
+            MainInstance.i.NavigateTo(new DashoardForm());
             CurrentFormClass.setPreviousFormTo("dbform");
         }
 
@@ -97,7 +98,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.SidePanel
         {
             CurrentFormClass.setPreviousFormTo("invform");
             SelectedTab(btnInvMan);
-            LoginForm.mf.NavigateTo(new InventoryForm());
+            MainInstance.i.NavigateTo(new InventoryForm());
         }
 
         private void supmanbbtn_Click(object sender, EventArgs e)

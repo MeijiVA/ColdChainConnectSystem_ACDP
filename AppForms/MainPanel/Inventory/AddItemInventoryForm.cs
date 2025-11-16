@@ -1,4 +1,5 @@
 ﻿using ColdChainConnectSystem_ACDP.ClassResources;
+using ColdChainConnectSystem_ACDP.ClassResources.Instances;
 using ColdChainConnectSystem_ACDP.Popup;
 using System;
 using System.Collections.Generic;
@@ -25,7 +26,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
-            LoginForm.mf.NavigateTo(new InventoryForm());
+            MainInstance.i.NavigateTo(new InventoryForm());
         }
 
         private void btnImage_Click(object sender, EventArgs e)
@@ -75,7 +76,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
                         }//if has image
                             pbxImage.BackgroundImage.Save(filePath + System.IO.Path.GetFileName(fileName));
                         this.Close();
-                        LoginForm.mf.NavigateTo(new InventoryForm());
+                        MainInstance.i.NavigateTo(new InventoryForm());
                     }
                     catch (Exception ex)
                     {

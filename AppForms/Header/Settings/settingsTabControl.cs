@@ -1,5 +1,5 @@
-﻿using ColdChainConnectSystem_ACDP.AppForms.Header.Settings;
-using ColdChainConnectSystem_ACDP.AppForms.Header.Settings.PersonalDetails;
+﻿using ColdChainConnectSystem_ACDP.ClassResources;
+using ColdChainConnectSystem_ACDP.ClassResources.Instances;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -84,15 +84,16 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Settings
             if (Clickable[0] == true)
             {
                 LabelClick(lblPersDetail);
-                LoginForm.sf.NavigateTo(SettingForm.pdf);
+                SettingsInstance.i.NavigateTo(SettingForm.pdf);
             }
         }
         private void lblSecurity_Click(object sender, EventArgs e)
         {
             if (Clickable[1] == true)
             {
+                
                 LabelClick(lblSecurity);
-                LoginForm.sf.NavigateTo(SettingForm.secf);
+                SettingsInstance.i.NavigateTo(SettingForm.secf);
             }
         }
 
@@ -101,7 +102,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Settings
             if (Clickable[2] == true)
             {
                 LabelClick(lblEmployee);
-                LoginForm.sf.NavigateTo(SettingForm.empf);
+                SettingsInstance.i.NavigateTo(SettingForm.empf);
             }
         }
 

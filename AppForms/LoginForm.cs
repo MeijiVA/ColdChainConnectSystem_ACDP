@@ -1,4 +1,10 @@
-﻿using System;
+﻿using ColdChainConnectSystem_ACDP.AppForms;
+using ColdChainConnectSystem_ACDP.AppForms.MainPanel.Dashboard;
+using ColdChainConnectSystem_ACDP.AppForms.MainPanel.Settings;
+using ColdChainConnectSystem_ACDP.AppForms.SidePanel;
+using ColdChainConnectSystem_ACDP.ClassResources;
+using ColdChainConnectSystem_ACDP.ClassResources.Instances;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,13 +17,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
-using ColdChainConnectSystem_ACDP.AppForms;
-using ColdChainConnectSystem_ACDP.AppForms.MainPanel.Dashboard;
-using ColdChainConnectSystem_ACDP.AppForms.SidePanel;
-using ColdChainConnectSystem_ACDP.ClassResources;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-using ColdChainConnectSystem_ACDP.AppForms.MainPanel.Settings;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace ColdChainConnectSystem_ACDP
 {
@@ -26,8 +27,6 @@ namespace ColdChainConnectSystem_ACDP
         bool toggle = false;
         public static string verify;
         DisplayClass dc = new DisplayClass();
-        public static MainForm mf; //singleton
-        public static SettingForm sf; //singleton
         public LoginForm()
         {
             string baseBlue = "#070760";
@@ -49,7 +48,7 @@ namespace ColdChainConnectSystem_ACDP
         
         private void setupMainForm() 
         {
-            mf.DisplayPanel.Controls.Clear();
+            MainInstance.i.DisplayPanel.Controls.Clear();
         }
 
         private void MainFormShow(MainForm mf)
@@ -81,8 +80,8 @@ namespace ColdChainConnectSystem_ACDP
 
         private void testButton_Click(object sender, EventArgs e)
         {
-            mf = new MainForm();
-            sf = new SettingForm();
+            MainInstance.i = new MainForm();
+            SettingsInstance.i = new SettingForm();
 
                 string accountCredentials = (txtUser.Texts = "AntonDelaPena") + "," + (txtPass.Texts = "123123123");
                 verify = ConnectionClass.LoginAccount(accountCredentials);
@@ -91,29 +90,29 @@ namespace ColdChainConnectSystem_ACDP
                     case "admin":
                         setupMainForm();
                         this.Hide();
-                        LoginForm.mf.NavigateTo(new DashoardForm());
-                        MainFormShow(mf);
+                        MainInstance.i.NavigateTo(new DashoardForm());
+                        MainFormShow(MainInstance.i);
                         break;
 
                     case "sales":
                         setupMainForm();
 
                         this.Hide();
-                        MainFormShow(mf);
+                        MainFormShow(MainInstance.i);
                         break;
 
                     case "assist":
                         setupMainForm();
 
                         this.Hide();
-                        MainFormShow(mf);
+                        MainFormShow(MainInstance.i);
                         break;
 
                     case "inv":
                         setupMainForm();
 
                         this.Hide();
-                        MainFormShow(mf);
+                        MainFormShow(MainInstance.i);
                         break;
 
                     case "default":
@@ -129,8 +128,8 @@ namespace ColdChainConnectSystem_ACDP
 
         private void customButton1_Click(object sender, EventArgs e)
         {
-            mf = new MainForm();
-            sf = new SettingForm();
+            MainInstance.i = new MainForm();
+            SettingsInstance.i = new SettingForm();
             if (txtUser.Texts.Equals(""))
             {
                 MessageBox.Show("Please enter your Username.");
@@ -149,29 +148,29 @@ namespace ColdChainConnectSystem_ACDP
                     case "admin":
                         setupMainForm();
                         this.Hide();
-                        LoginForm.mf.NavigateTo(new DashoardForm());
-                        MainFormShow(mf);
+                        MainInstance.i.NavigateTo(new DashoardForm());
+                        MainFormShow(MainInstance.i);
                         break;
 
                     case "sales":
                         setupMainForm();
 
                         this.Hide();
-                        MainFormShow(mf);
+                        MainFormShow(MainInstance.i);
                         break;
 
                     case "assist":
                         setupMainForm();
 
                         this.Hide();
-                        MainFormShow(mf);
+                        MainFormShow(MainInstance.i);
                         break;
 
                     case "inv":
                         setupMainForm();
 
                         this.Hide();
-                        MainFormShow(mf);
+                        MainFormShow(MainInstance.i);
                         break;
 
                     case "default":

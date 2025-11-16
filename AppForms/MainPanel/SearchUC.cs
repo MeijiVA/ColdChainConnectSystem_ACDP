@@ -1,6 +1,7 @@
 ﻿using ColdChainConnectSystem_ACDP.ClassResources;
 using ColdChainConnectSystem_ACDP.ClassResources.Connection;
 using ColdChainConnectSystem_ACDP.ClassResources.Display;
+using ColdChainConnectSystem_ACDP.ClassResources.Instances;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -131,7 +132,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
             {
                 case "invform":
                     AddItemInventoryForm addItem = new AddItemInventoryForm();
-                    LoginForm.mf.NavigateTo(addItem);
+                    MainInstance.i.NavigateTo(addItem);
                     break;
                 case "supform":
                     break;

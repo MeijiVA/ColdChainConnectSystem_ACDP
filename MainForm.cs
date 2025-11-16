@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ColdChainConnectSystem_ACDP.AppForms.MainPanel;
+using ColdChainConnectSystem_ACDP.ClassResources.Instances;
 using ColdChainConnectSystem_ACDP.AppForms.MainPanel.Dashboard;
 using ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory;
 using ColdChainConnectSystem_ACDP.ClassResources;
@@ -115,12 +115,12 @@ namespace ColdChainConnectSystem_ACDP
         {
             if (settingFlag == 1)
             {
-                LoginForm.mf.NavigateTo(LoginForm.sf);
+                MainInstance.i.NavigateTo(SettingsInstance.i);
                 settingFlag = 0;
             }
             else if (settingFlag == 0)
             {
-                LoginForm.mf.NavigateTo(currentForm(CurrentFormClass.form));
+                MainInstance.i.NavigateTo(currentForm(CurrentFormClass.form));
                 settingFlag = 1;
             }
         }

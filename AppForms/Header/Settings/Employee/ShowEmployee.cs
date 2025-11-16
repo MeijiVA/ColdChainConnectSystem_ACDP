@@ -1,4 +1,5 @@
 ﻿using ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory;
+using ColdChainConnectSystem_ACDP.ClassResources;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -32,7 +33,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.Employee
         private void customButton3_Click(object sender, EventArgs e)
         {
             AddItemInventoryForm add = new AddItemInventoryForm();
-            LoginForm.sf.pnlDisplaySettings.Controls.Add(add);
+            SettingsInstance.i.pnlDisplaySettings.Controls.Add(add);
         }
     }
 }
