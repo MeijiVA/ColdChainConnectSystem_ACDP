@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.ofdImport = new System.Windows.Forms.OpenFileDialog();
             this.customPanel1 = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
             this.cbxFilter = new ColdChainConnectSystem_ACDP.Materials.CustomComboBox();
             this.pnlSearch = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
@@ -36,11 +37,16 @@
             this.btnAddItem = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
             this.btnImport = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
             this.btnExport = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
-            this.ofdImportExcel = new System.Windows.Forms.OpenFileDialog();
+            this.ofdExport = new System.Windows.Forms.SaveFileDialog();
             this.customPanel1.SuspendLayout();
             this.pnlSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // ofdImport
+            // 
+            this.ofdImport.InitialDirectory = "Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), \"D" +
+    "ownloads\")";
             // 
             // customPanel1
             // 
@@ -193,6 +199,11 @@
             this.btnExport.UseVisualStyleBackColor = false;
             this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
             // 
+            // ofdExport
+            // 
+            this.ofdExport.InitialDirectory = "Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), \"D" +
+    "ownloads\")";
+            // 
             // SearchUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -219,6 +230,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private Materials.CustomComboBox cbxFilter;
         public System.Windows.Forms.TextBox txtSearch;
-        private System.Windows.Forms.OpenFileDialog ofdImportExcel;
+        private System.Windows.Forms.OpenFileDialog ofdImport;
+        private System.Windows.Forms.SaveFileDialog ofdExport;
     }
 }

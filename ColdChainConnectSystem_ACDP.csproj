@@ -99,6 +99,10 @@
     <Reference Include="Microsoft.IdentityModel.Tokens, Version=7.7.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.IdentityModel.Tokens.7.7.1\lib\net472\Microsoft.IdentityModel.Tokens.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Office.Interop.Excel.16.0.18925.20022\lib\net40\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
@@ -296,7 +300,8 @@
     <Compile Include="AppForms\SidePanel\UserAccountControl.Designer.cs">
       <DependentUpon>UserAccountControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="ClassResources\Connection\ImportClass.cs" />
+    <Compile Include="ClassResources\Connection\InvExcelClass.cs" />
+    <Compile Include="ClassResources\Instances\InventoryInstance.cs" />
     <Compile Include="ClassResources\Instances\MainInstance.cs" />
     <Compile Include="ClassResources\Instances\SettingsInstance.cs" />
     <Compile Include="ClassResources\Security\ChangeCredentialsClass.cs" />
@@ -550,6 +555,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="AppForms\Header\Audit\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\Microsoft.Data.SqlClient.SNI.6.0.2\build\net462\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('packages\Microsoft.Data.SqlClient.SNI.6.0.2\build\net462\Microsoft.Data.SqlClient.SNI.targets')" />

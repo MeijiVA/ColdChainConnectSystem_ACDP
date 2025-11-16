@@ -12,6 +12,7 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.IdentityModel.Tokens;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -25,7 +26,8 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
         public SearchUC()
         {
             InitializeComponent();
-            ofdImportExcel.Filter = "Excel Worksheets|*.xls;*.xlsx;*.xlsm";
+            ofdExport.Filter = "Excel Worksheets|*.xls;*.xlsx;*.xlsm";
+            ofdImport.Filter = "Excel Worksheets|*.xls;*.xlsx;*.xlsm";
         }
 
         public string searchTXT
@@ -152,11 +154,6 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
             switch (CurrentFormClass.form)
             {
                 case "invform":
-
-                    if (ofdImportExcel.ShowDialog() == DialogResult.OK)
-                    {
-                        ImportClass.InsertDataToSQL(ofdImportExcel.FileName);
-                    }
                     break;
                 case "supform":
                     break;
@@ -176,6 +173,12 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
             switch (CurrentFormClass.form)
             {
                 case "invform":
+                    Console.WriteLine(txtSearch.Text + " | " + cbxFilter.Texts + " | " + ofdExport.FileName + " | " + SelectedFilterClass.SelectedFilter);
+                    if (ofdExport.ShowDialog() == DialogResult.OK)
+                    {
+
+                        InvExcelClass.Export(txtSearch.Text, ofdExport.FileName);
+                    }
                     break;
                 case "supform":
                     break;
@@ -187,5 +190,6 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
                     break;
             }
         }
+
     }
 }

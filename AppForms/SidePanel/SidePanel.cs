@@ -98,7 +98,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.SidePanel
         {
             CurrentFormClass.setPreviousFormTo("invform");
             SelectedTab(btnInvMan);
-            MainInstance.i.NavigateTo(new InventoryForm());
+            MainInstance.i.NavigateTo(InventoryInstance.i = new InventoryForm());
         }
 
         private void supmanbbtn_Click(object sender, EventArgs e)
