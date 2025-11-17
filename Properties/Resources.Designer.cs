@@ -183,6 +183,16 @@ namespace ColdChainConnectSystem_ACDP.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap FemaleIcon {
+            get {
+                object obj = ResourceManager.GetObject("FemaleIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap Filter {
             get {
                 object obj = ResourceManager.GetObject("Filter", resourceCulture);
@@ -216,6 +226,16 @@ namespace ColdChainConnectSystem_ACDP.Properties {
         public static System.Drawing.Bitmap LogoutButton {
             get {
                 object obj = ResourceManager.GetObject("LogoutButton", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap MaleIcon {
+            get {
+                object obj = ResourceManager.GetObject("MaleIcon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

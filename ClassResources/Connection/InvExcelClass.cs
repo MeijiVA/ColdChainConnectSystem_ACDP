@@ -22,8 +22,6 @@ namespace ColdChainConnectSystem_ACDP.ClassResources.Connection
 {
     internal static class InvExcelClass
     {
-
-        static DataTableCollection tableCollection;
         public static void Export(String searchQuery, String ofd)
         {
             string Filter = "";
@@ -105,9 +103,10 @@ namespace ColdChainConnectSystem_ACDP.ClassResources.Connection
 
             }
 
-            catch (Exception exception)
+            catch (Exception ex)
             {
-
+                CustomMessageBox cmb = new CustomMessageBox("Export Problem",ex.Message,MessageBoxButtons.OK);
+                cmb.ShowDialog();
             }
 
 

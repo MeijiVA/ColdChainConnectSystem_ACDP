@@ -330,6 +330,9 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Materials\CircularPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Materials\CustomButton.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -558,6 +561,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="AppForms\Header\Audit\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MaleIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FemaleIcon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\Microsoft.Data.SqlClient.SNI.6.0.2\build\net462\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('packages\Microsoft.Data.SqlClient.SNI.6.0.2\build\net462\Microsoft.Data.SqlClient.SNI.targets')" />

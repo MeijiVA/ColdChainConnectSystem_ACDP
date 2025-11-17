@@ -30,8 +30,10 @@
         {
             this.UAC_namelbl = new System.Windows.Forms.Label();
             this.UAC_positionlbl = new System.Windows.Forms.Label();
-            this.UserpBox = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.UserpBox)).BeginInit();
+            this.rjCircularPictureBox1 = new ColdChainConnectSystem_ACDP.Materials.CircularPictureBox();
+            this.pbxUser = new ColdChainConnectSystem_ACDP.Materials.CircularPictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxUser)).BeginInit();
             this.SuspendLayout();
             // 
             // UAC_namelbl
@@ -60,27 +62,49 @@
             this.UAC_positionlbl.Text = "Position";
             this.UAC_positionlbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // UserpBox
+            // rjCircularPictureBox1
             // 
-            this.UserpBox.BackgroundImage = global::ColdChainConnectSystem_ACDP.Properties.Resources.NoImage1;
-            this.UserpBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.UserpBox.Location = new System.Drawing.Point(40, 15);
-            this.UserpBox.Name = "UserpBox";
-            this.UserpBox.Size = new System.Drawing.Size(120, 120);
-            this.UserpBox.TabIndex = 0;
-            this.UserpBox.TabStop = false;
+            this.rjCircularPictureBox1.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
+            this.rjCircularPictureBox1.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.rjCircularPictureBox1.BorderColor2 = System.Drawing.Color.HotPink;
+            this.rjCircularPictureBox1.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            this.rjCircularPictureBox1.BorderSize = 2;
+            this.rjCircularPictureBox1.GradientAngle = 50F;
+            this.rjCircularPictureBox1.Location = new System.Drawing.Point(25, 2);
+            this.rjCircularPictureBox1.Name = "rjCircularPictureBox1";
+            this.rjCircularPictureBox1.Size = new System.Drawing.Size(135, 135);
+            this.rjCircularPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.rjCircularPictureBox1.TabIndex = 3;
+            this.rjCircularPictureBox1.TabStop = false;
+            // 
+            // pbxUser
+            // 
+            this.pbxUser.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
+            this.pbxUser.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.pbxUser.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(197)))));
+            this.pbxUser.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
+            this.pbxUser.BorderSize = 5;
+            this.pbxUser.GradientAngle = 20F;
+            this.pbxUser.Image = global::ColdChainConnectSystem_ACDP.Properties.Resources.NoImage1;
+            this.pbxUser.Location = new System.Drawing.Point(32, 3);
+            this.pbxUser.Name = "pbxUser";
+            this.pbxUser.Size = new System.Drawing.Size(135, 135);
+            this.pbxUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxUser.TabIndex = 3;
+            this.pbxUser.TabStop = false;
             // 
             // UserAccountControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.pbxUser);
             this.Controls.Add(this.UAC_namelbl);
             this.Controls.Add(this.UAC_positionlbl);
-            this.Controls.Add(this.UserpBox);
             this.Name = "UserAccountControl";
             this.Size = new System.Drawing.Size(200, 170);
             this.Load += new System.EventHandler(this.UserControl1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.UserpBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxUser)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -88,6 +112,7 @@
         #endregion
         public System.Windows.Forms.Label UAC_namelbl;
         public System.Windows.Forms.Label UAC_positionlbl;
-        private System.Windows.Forms.PictureBox UserpBox;
+        private Materials.CircularPictureBox rjCircularPictureBox1;
+        private Materials.CircularPictureBox pbxUser;
     }
 }

@@ -16,7 +16,6 @@ namespace ColdChainConnectSystem_ACDP
         public abstract Color SetCustomColor(string color);
         public abstract void SetDisplayRectangle(Button b);
         public abstract void SetDisplayRectangle(Button p, int arc1, int arc2, int arc3, int arc4);
-        public abstract void SetDisplayCircle(PictureBox b);
         public abstract void SetDisplayRectangle(Label l, int arc1, int arc2, int arc3, int arc4);
         public abstract void SetDisplayRectangle(Panel p,int arc1,int arc2,int arc3,int arc4);
         public abstract void SetDisplayRectangle(TextBox t, int arc1, int arc2, int arc3, int arc4);
@@ -75,13 +74,6 @@ namespace ColdChainConnectSystem_ACDP
 
         }
 
-        public override void SetDisplayCircle(PictureBox pb)
-        {
-            System.Drawing.Drawing2D.GraphicsPath obj = new System.Drawing.Drawing2D.GraphicsPath();
-            obj.AddEllipse(0,0,pb.Width,pb.Height);
-            Region rg = new Region(obj);
-            pb.Region = rg;
-        }
 
         public override void SetDisplayRectangle(Button b, int arc1, int arc2, int arc3, int arc4)
         {

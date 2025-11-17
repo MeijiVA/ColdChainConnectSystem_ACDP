@@ -99,6 +99,11 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
 
         private void btnCheck_Click(object sender, EventArgs e)
         {
+            UpdateTable();
+        }
+
+        public void UpdateTable()
+        {
             try
             {
                 if ((SearchBar.txtSearch.Text.Equals("Search Term") || SearchBar.txtSearch.Text.Equals("")))
@@ -132,6 +137,5 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
                 MessageBox.Show(ex.Message);
             }
         }
-
     }
 }

@@ -21,14 +21,13 @@ namespace ColdChainConnectSystem_ACDP.AppForms.SidePanel
 
         private void UserControl1_Load(object sender, EventArgs e)
         {
-            cc.SetDisplayCircle(UserpBox);
             switch(ConnectionClass.sex)
             {
                 case "Male":
-                    UserpBox.BackgroundImage = Properties.Resources.ACDPLogo;
+                    pbxUser.Image = Properties.Resources.MaleIcon;
                     break;
                 case "Female":
-                    UserpBox.BackgroundImage = Properties.Resources.LoginLogoACDP;
+                    pbxUser.Image = Properties.Resources.FemaleIcon;
                     break;
                 default:
                     break;
