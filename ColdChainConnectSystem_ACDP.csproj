@@ -252,11 +252,11 @@
     <Compile Include="AppForms\MainPanel\Dashboard\GreetPanel.Designer.cs">
       <DependentUpon>GreetPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="AppForms\MainPanel\DisplayTableUC.cs">
+    <Compile Include="AppForms\MainPanel\CopyableTable.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="AppForms\MainPanel\DisplayTableUC.Designer.cs">
-      <DependentUpon>DisplayTableUC.cs</DependentUpon>
+    <Compile Include="AppForms\MainPanel\CopyableTable.Designer.cs">
+      <DependentUpon>CopyableTable.cs</DependentUpon>
     </Compile>
     <Compile Include="AppForms\MainPanel\Inventory\AddItemInventoryForm.cs">
       <SubType>Form</SubType>
@@ -354,6 +354,11 @@
     <Compile Include="Materials\CustomDatePicker.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Materials\DropDown\MenuColorTable.cs" />
+    <Compile Include="Materials\DropDown\MenuRenderer.cs" />
+    <Compile Include="Materials\DropDown\RJDropdownMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Popup\CustomMessageBox.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -407,8 +412,8 @@
     <EmbeddedResource Include="AppForms\MainPanel\Dashboard\GreetPanel.resx">
       <DependentUpon>GreetPanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AppForms\MainPanel\DisplayTableUC.resx">
-      <DependentUpon>DisplayTableUC.cs</DependentUpon>
+    <EmbeddedResource Include="AppForms\MainPanel\CopyableTable.resx">
+      <DependentUpon>CopyableTable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AppForms\MainPanel\Inventory\AddItemInventoryForm.resx">
       <DependentUpon>AddItemInventoryForm.cs</DependentUpon>

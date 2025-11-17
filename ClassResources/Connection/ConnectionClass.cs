@@ -19,7 +19,6 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
 
     internal class ConnectionClass
     {
-        static CustomMessageBox cmb;
         public static string empid { get; set; }
         public static string username { get; set; }
         public static string fname { get; set; }
@@ -149,38 +148,33 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                 //if not found
                 if (e.Message.Contains("Server"))
                 {
-                    cmb = new CustomMessageBox("Server", "Invalid Server.");
-                    cmb.ShowDialog();
+                    new CustomMessageBox("Server", "Invalid Server.").ShowDialog();
                     File.Delete(filePath);
                 }
                 // if credentials bad
                 else if (e.Message.Contains("Login"))
                 {
-                    cmb = new CustomMessageBox("Credentials", "Invalid Credentials.");
-                    cmb.ShowDialog();
+                   new CustomMessageBox("Credentials", "Invalid Credentials.").ShowDialog();
                 }
                 else
                 {
-                    MessageBox.Show(e.Message);
+                    new CustomMessageBox("File Not Found", e.Message).ShowDialog();
                 }
 
 
                 }
                 catch (InactiveException e)
                 {
-                cmb = new CustomMessageBox("Inactivity", e.Message);
-                cmb.ShowDialog();
+                new CustomMessageBox("Inactive", e.Message).ShowDialog();
                 }
                 catch (UnknownPositionException e)
                 {
-                cmb = new CustomMessageBox("Position Problem", e.Message);
-                cmb.ShowDialog();
+                new CustomMessageBox("Position Problem", e.Message).ShowDialog();
                 }
                 catch (Exception e)
                 {
-                cmb = new CustomMessageBox("Exception", e.Message);
-                cmb.ShowDialog();
-            }
+                new CustomMessageBox("Exception", e.Message).ShowDialog();
+                }
         return "default";
         }
 
@@ -213,7 +207,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
             }
             catch(Exception e)
             {
-                MessageBox.Show(e.Message);
+                new CustomMessageBox("File Not Found", e.Message, MessageBoxButtons.OK).ShowDialog();
             }
         }
 

@@ -13,10 +13,10 @@ using ColdChainConnectSystem_ACDP.ClassResources;
 
 namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
 {
-    public partial class DisplayTableUC : UserControl
+    public partial class CopyableTable : UserControl
     {
         DisplayClass dc = new DisplayClass();
-        public DisplayTableUC()
+        public CopyableTable()
         {
             InitializeComponent();
         }

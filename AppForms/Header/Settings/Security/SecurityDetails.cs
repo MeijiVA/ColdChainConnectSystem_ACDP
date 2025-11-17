@@ -15,7 +15,6 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.PersonalDetails
 {
     public partial class SecurityDetails : UserControl
     {
-        CustomMessageBox cmb;
         public SecurityDetails()
         {
             InitializeComponent();
@@ -64,8 +63,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.PersonalDetails
 
         private void btnConfirmUser_Click(object sender, EventArgs e)
         {
-            cmb = new CustomMessageBox("Change Username", "Are you sure you want to change your Username?", MessageBoxButtons.OKCancel);
-            switch (cmb.ShowDialog()) 
+            switch (new CustomMessageBox("Change Username", "Are you sure you want to change your Username?", MessageBoxButtons.OKCancel).ShowDialog()) 
             {
                 case DialogResult.OK:
                     if (!tboxUsername.Text.Equals("") || !tboxPassUser.Text.Equals("") || !tboxRePassUser.Text.Equals(""))
@@ -84,14 +82,12 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.PersonalDetails
                         }
                         else
                         {
-                            cmb = new CustomMessageBox("Change Username", "Username is taken.");
-                            cmb.ShowDialog();
+                            new CustomMessageBox("Change Username", "Username is taken.").ShowDialog();
                         }
                     }
                     else
                     {
-                        cmb = new CustomMessageBox("Change Username", "Please insert the required Values.");
-                        cmb.ShowDialog();
+                        new CustomMessageBox("Change Username", "Please insert the required Values.").ShowDialog();
                     }
                         break;
                 case DialogResult.Cancel:
@@ -101,8 +97,8 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.PersonalDetails
 
         private void btnConfirmPass_Click(object sender, EventArgs e)
         {
-            cmb = new CustomMessageBox("Change Password", "Are you sure you want to change your Password?",MessageBoxButtons.OKCancel);
-            switch (cmb.ShowDialog())
+            
+            switch (new CustomMessageBox("Change Password", "Are you sure you want to change your Password?", MessageBoxButtons.OKCancel).ShowDialog())
             {
                 case DialogResult.OK:
                     if (!tboxCurrPass.Text.Equals("") || !tboxNewPassEdit.Text.Equals("") || !tboxRePassEdit.Text.Equals(""))
@@ -119,8 +115,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.PersonalDetails
                     }
                     else
                     {
-                        cmb = new CustomMessageBox("Change Password", "Please insert the required Values.");
-                        cmb.ShowDialog();
+                        new CustomMessageBox("Change Password", "Please insert the required Values.").ShowDialog();
                     }
                     break;
                 case DialogResult.Cancel:

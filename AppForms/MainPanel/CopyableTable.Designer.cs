@@ -1,6 +1,6 @@
 ﻿namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
 {
-    partial class DisplayTableUC
+    partial class CopyableTable
     {
         /// <summary> 
         /// Required designer variable.

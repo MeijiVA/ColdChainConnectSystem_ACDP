@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.ofdImport = new System.Windows.Forms.OpenFileDialog();
+            this.ofdExport = new System.Windows.Forms.SaveFileDialog();
             this.customPanel1 = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
             this.cbxFilter = new ColdChainConnectSystem_ACDP.Materials.CustomComboBox();
             this.pnlSearch = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
@@ -37,7 +38,6 @@
             this.btnAddItem = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
             this.btnImport = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
             this.btnExport = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
-            this.ofdExport = new System.Windows.Forms.SaveFileDialog();
             this.customPanel1.SuspendLayout();
             this.pnlSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -46,6 +46,11 @@
             // ofdImport
             // 
             this.ofdImport.InitialDirectory = "Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), \"D" +
+    "ownloads\")";
+            // 
+            // ofdExport
+            // 
+            this.ofdExport.InitialDirectory = "Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), \"D" +
     "ownloads\")";
             // 
             // customPanel1
@@ -83,7 +88,7 @@
             "Filter"});
             this.cbxFilter.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.cbxFilter.ListTextColor = System.Drawing.Color.DimGray;
-            this.cbxFilter.Location = new System.Drawing.Point(302, 15);
+            this.cbxFilter.Location = new System.Drawing.Point(299, 16);
             this.cbxFilter.MinimumSize = new System.Drawing.Size(40, 30);
             this.cbxFilter.Name = "cbxFilter";
             this.cbxFilter.Padding = new System.Windows.Forms.Padding(1);
@@ -198,11 +203,6 @@
             this.btnExport.TextColor = System.Drawing.Color.White;
             this.btnExport.UseVisualStyleBackColor = false;
             this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
-            // 
-            // ofdExport
-            // 
-            this.ofdExport.InitialDirectory = "Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), \"D" +
-    "ownloads\")";
             // 
             // SearchUC
             // 

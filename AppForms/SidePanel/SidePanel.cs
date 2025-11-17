@@ -23,10 +23,9 @@ namespace ColdChainConnectSystem_ACDP.AppForms.SidePanel
         {
             InitializeComponent();
         }
-
+        String baseblue = "#070760";
         private void SelectedTab(Button b)
         {
-            String baseblue = "#070760";
             btnDashboard.BackColor = Color.White;
             btnInvMan.BackColor = Color.White; 
             btnSupMan.BackColor = Color.White;
@@ -42,7 +41,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.SidePanel
             btnEmpMan.ForeColor = dc.SetCustomColor(baseblue);
 
             b.BackColor = dc.SetCustomColor(baseblue);
-            b.ForeColor = Color.White;
+            b.ForeColor = dc.SetCustomColor("#FFFFFF");
         }
         private void Admin_Load(object sender, EventArgs e)
         {
@@ -51,7 +50,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.SidePanel
             btnSupMan.Show();
             btnSalesMan.Show();
             btnCusMan.Show();
-            btnEmpMan.Hide();//unused
+            btnEmpMan.Show();//unused
             switch (LoginForm.verify)
             {
                 
@@ -123,6 +122,9 @@ namespace ColdChainConnectSystem_ACDP.AppForms.SidePanel
         {
             CurrentFormClass.setPreviousFormTo("empform");
             SelectedTab(btnEmpMan);
+            MainInstance.i.NavigateTo(InventoryInstance.i = new InventoryForm());
         }
+
+ 
     }
 }

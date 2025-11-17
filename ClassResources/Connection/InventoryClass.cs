@@ -13,7 +13,6 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
 {
     internal class InventoryClass
     {
-        static CustomMessageBox cmb;
         public static Image getImage(string imgStr)
         {
             Image i;
@@ -134,15 +133,13 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                 }
                 catch (Exception ex)
                 {
-                    cmb = new CustomMessageBox("Exception", ex.Message, MessageBoxButtons.OK);
-                    cmb.ShowDialog();
+                    new CustomMessageBox("Exception", ex.Message, MessageBoxButtons.OK).ShowDialog();
                     return false;
                 }
             }
             else
             {
-                cmb = new CustomMessageBox("Missing Element","Fill in all required Fields.", MessageBoxButtons.OK);
-                cmb.ShowDialog();
+                new CustomMessageBox("Missing Element","Fill in all required Fields.", MessageBoxButtons.OK).ShowDialog();
                 return false;
             }
         }

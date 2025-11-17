@@ -105,8 +105,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources.Connection
 
             catch (Exception ex)
             {
-                CustomMessageBox cmb = new CustomMessageBox("Export Problem",ex.Message,MessageBoxButtons.OK);
-                cmb.ShowDialog();
+                new CustomMessageBox("Export Problem",ex.Message,MessageBoxButtons.OK).ShowDialog();
             }
 
 

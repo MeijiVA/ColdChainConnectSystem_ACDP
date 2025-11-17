@@ -22,7 +22,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
 {
     public partial class SearchUC : UserControl
     {
-        DisplayClass dc = new DisplayClass();
+
         public SearchUC()
         {
             InitializeComponent();
@@ -190,6 +190,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
                     break;
             }
         }
+
 
     }
 }
