@@ -1,1 +1,1 @@
-Data Source=KIEL;Initial Catalog=AccountsDB;User ID= username ;Password= password;TrustServerCertificate=True
+localhost\SQLExpress01
