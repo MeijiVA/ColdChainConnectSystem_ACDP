@@ -155,7 +155,8 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
                     if (ofdImport.ShowDialog() == DialogResult.OK)
                     {
 
-                        InvExcelClass.Import(ofdImport.FileName,InventoryInstance.i.testTable);
+                        InvExcelClass.Import(ofdImport.FileName);
+                        InventoryInstance.i.UpdateTable();
                     }
                     break;
                 case "supform":
@@ -181,6 +182,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
                     {
 
                         InvExcelClass.Export(txtSearch.Text, ofdExport.FileName);
+                        InventoryInstance.i.UpdateTable();
                     }
                     break;
                 case "supform":

@@ -54,7 +54,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
             cmb = new CustomMessageBox("Add Item","Confirm?",MessageBoxButtons.OKCancel);
             if (cmb.ShowDialog() == DialogResult.OK)
             {
-                if(InventoryClass.writeInventoryData(txtSKU.Texts, txtDescription.Texts, txtUnitPrice.Texts, System.IO.Path.GetFileName(ofdSaveImage.FileName), txtWeight.Texts, txtQuantity.Texts, dpExpiry.Value.ToString("MM/dd/yyyy")))
+                if(InventoryClass.writeInventoryData(txtSKU.Texts, txtDescription.Texts, txtUnitPrice.Texts, System.IO.Path.GetFileName(ofdSaveImage.FileName), txtWeight.Texts, txtQuantity.Texts, dpExpiry.Value.ToString("yyyy-MM-dd")))
                 {
                     try
                     {

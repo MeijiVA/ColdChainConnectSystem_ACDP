@@ -49,7 +49,7 @@
             // tabsSetting
             // 
             this.tabsSetting.BackColor = System.Drawing.Color.White;
-            this.tabsSetting.Location = new System.Drawing.Point(22, 59);
+            this.tabsSetting.Location = new System.Drawing.Point(17, 59);
             this.tabsSetting.Name = "tabsSetting";
             this.tabsSetting.Size = new System.Drawing.Size(764, 35);
             this.tabsSetting.TabIndex = 0;
@@ -57,6 +57,7 @@
             // 
             // pnlDisplaySettings
             // 
+            this.pnlDisplaySettings.BackColor = System.Drawing.SystemColors.Control;
             this.pnlDisplaySettings.Location = new System.Drawing.Point(17, 100);
             this.pnlDisplaySettings.Name = "pnlDisplaySettings";
             this.pnlDisplaySettings.Size = new System.Drawing.Size(766, 458);

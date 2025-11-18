@@ -119,7 +119,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                     {
                         img = "NoImage.png";
                     }
-                    string query = $"INSERT INTO Inventory(skucode, descript, image, unitprice, kg, quantity, expiry) VALUES('{sku}', '{desc}', '{img}', CAST({unitp} AS Decimal(18, 2)), {kg}, {quantity}, '{expiry}')";
+                    string query = $"INSERT INTO Inventory(skucode, descript, image, unitprice, kg, quantity, expiry) VALUES('{sku}', '{desc}', '{img}', CAST({unitp} AS Decimal(18, 2)), {kg}, {quantity}, N'{expiry}')";
 
                     SqlConnection con = ConnectionClass.Connection();
                     using (SqlCommand cmd = new SqlCommand(query, con))
