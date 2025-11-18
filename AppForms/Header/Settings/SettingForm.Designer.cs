@@ -30,7 +30,7 @@
         {
             this.setlbl = new System.Windows.Forms.Label();
             this.tabsSetting = new ColdChainConnectSystem_ACDP.AppForms.MainPanel.Settings.settingsTabControl();
-            this.pnlDisplaySettings = new System.Windows.Forms.Panel();
+            this.pnlDisplaySettings = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
             this.SuspendLayout();
             // 
             // setlbl
@@ -38,7 +38,7 @@
             this.setlbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.setlbl.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.setlbl.ForeColor = System.Drawing.Color.White;
-            this.setlbl.Location = new System.Drawing.Point(18, 14);
+            this.setlbl.Location = new System.Drawing.Point(18, 15);
             this.setlbl.Name = "setlbl";
             this.setlbl.Size = new System.Drawing.Size(765, 44);
             this.setlbl.TabIndex = 0;
@@ -49,19 +49,25 @@
             // tabsSetting
             // 
             this.tabsSetting.BackColor = System.Drawing.Color.White;
-            this.tabsSetting.Location = new System.Drawing.Point(17, 59);
+            this.tabsSetting.Location = new System.Drawing.Point(27, 61);
             this.tabsSetting.Name = "tabsSetting";
-            this.tabsSetting.Size = new System.Drawing.Size(764, 35);
+            this.tabsSetting.Size = new System.Drawing.Size(756, 35);
             this.tabsSetting.TabIndex = 0;
             this.tabsSetting.Load += new System.EventHandler(this.tabsSetting_Load);
             // 
             // pnlDisplaySettings
             // 
             this.pnlDisplaySettings.BackColor = System.Drawing.SystemColors.Control;
-            this.pnlDisplaySettings.Location = new System.Drawing.Point(17, 100);
+            this.pnlDisplaySettings.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.pnlDisplaySettings.BorderColor = System.Drawing.Color.Transparent;
+            this.pnlDisplaySettings.BorderRadius = 15;
+            this.pnlDisplaySettings.BorderSize = 1;
+            this.pnlDisplaySettings.ForeColor = System.Drawing.Color.White;
+            this.pnlDisplaySettings.Location = new System.Drawing.Point(18, 96);
             this.pnlDisplaySettings.Name = "pnlDisplaySettings";
             this.pnlDisplaySettings.Size = new System.Drawing.Size(766, 458);
-            this.pnlDisplaySettings.TabIndex = 1;
+            this.pnlDisplaySettings.TabIndex = 0;
+            this.pnlDisplaySettings.TextColor = System.Drawing.Color.White;
             // 
             // SettingForm
             // 
@@ -84,6 +90,6 @@
 
         private System.Windows.Forms.Label setlbl;
         private settingsTabControl tabsSetting;
-        public System.Windows.Forms.Panel pnlDisplaySettings;
+        public Materials.CustomPanel pnlDisplaySettings;
     }
 }

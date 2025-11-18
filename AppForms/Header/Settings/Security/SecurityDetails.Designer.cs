@@ -34,32 +34,32 @@
             this.lblPassword = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.pnlPasswordEdit = new System.Windows.Forms.Panel();
+            this.btnConfirmPass = new System.Windows.Forms.Button();
+            this.btnCancelPass = new System.Windows.Forms.Button();
+            this.tboxRePassEdit = new System.Windows.Forms.TextBox();
+            this.tboxNewPassEdit = new System.Windows.Forms.TextBox();
+            this.tboxCurrPass = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.pnlUsernameEdit = new System.Windows.Forms.Panel();
+            this.btnConfirmUser = new System.Windows.Forms.Button();
+            this.btnCancelUser = new System.Windows.Forms.Button();
+            this.tboxRePassUser = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.tboxPassUser = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.tboxUsername = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.pnlUsername = new System.Windows.Forms.Panel();
             this.btnUserEdit = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
             this.lbluser = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.tboxCurrPass = new System.Windows.Forms.TextBox();
-            this.tboxNewPassEdit = new System.Windows.Forms.TextBox();
-            this.tboxRePassEdit = new System.Windows.Forms.TextBox();
-            this.tboxRePassUser = new System.Windows.Forms.TextBox();
-            this.tboxPassUser = new System.Windows.Forms.TextBox();
-            this.tboxUsername = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.btnCancelPass = new System.Windows.Forms.Button();
-            this.btnCancelUser = new System.Windows.Forms.Button();
-            this.btnConfirmPass = new System.Windows.Forms.Button();
-            this.btnConfirmUser = new System.Windows.Forms.Button();
             this.pnlPassword.SuspendLayout();
             this.pnlPasswordEdit.SuspendLayout();
             this.pnlUsernameEdit.SuspendLayout();
@@ -99,6 +99,7 @@
             // 
             // lblPassword
             // 
+            this.lblPassword.ForeColor = System.Drawing.Color.Black;
             this.lblPassword.Location = new System.Drawing.Point(5, 40);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(217, 16);
@@ -134,6 +135,89 @@
             this.pnlPasswordEdit.Name = "pnlPasswordEdit";
             this.pnlPasswordEdit.Size = new System.Drawing.Size(742, 100);
             this.pnlPasswordEdit.TabIndex = 8;
+            // 
+            // btnConfirmPass
+            // 
+            this.btnConfirmPass.Location = new System.Drawing.Point(696, 66);
+            this.btnConfirmPass.Name = "btnConfirmPass";
+            this.btnConfirmPass.Size = new System.Drawing.Size(36, 23);
+            this.btnConfirmPass.TabIndex = 72;
+            this.btnConfirmPass.Text = "chk";
+            this.btnConfirmPass.UseVisualStyleBackColor = true;
+            this.btnConfirmPass.Click += new System.EventHandler(this.btnConfirmPass_Click);
+            // 
+            // btnCancelPass
+            // 
+            this.btnCancelPass.Location = new System.Drawing.Point(696, 6);
+            this.btnCancelPass.Name = "btnCancelPass";
+            this.btnCancelPass.Size = new System.Drawing.Size(36, 23);
+            this.btnCancelPass.TabIndex = 65;
+            this.btnCancelPass.Text = "cancel";
+            this.btnCancelPass.UseVisualStyleBackColor = true;
+            this.btnCancelPass.Click += new System.EventHandler(this.btnCancelPass_Click);
+            // 
+            // tboxRePassEdit
+            // 
+            this.tboxRePassEdit.Location = new System.Drawing.Point(108, 69);
+            this.tboxRePassEdit.Name = "tboxRePassEdit";
+            this.tboxRePassEdit.PasswordChar = '*';
+            this.tboxRePassEdit.Size = new System.Drawing.Size(243, 20);
+            this.tboxRePassEdit.TabIndex = 71;
+            // 
+            // tboxNewPassEdit
+            // 
+            this.tboxNewPassEdit.Location = new System.Drawing.Point(108, 47);
+            this.tboxNewPassEdit.Name = "tboxNewPassEdit";
+            this.tboxNewPassEdit.PasswordChar = '*';
+            this.tboxNewPassEdit.Size = new System.Drawing.Size(243, 20);
+            this.tboxNewPassEdit.TabIndex = 70;
+            // 
+            // tboxCurrPass
+            // 
+            this.tboxCurrPass.Location = new System.Drawing.Point(108, 25);
+            this.tboxCurrPass.Name = "tboxCurrPass";
+            this.tboxCurrPass.PasswordChar = '*';
+            this.tboxCurrPass.Size = new System.Drawing.Size(243, 20);
+            this.tboxCurrPass.TabIndex = 69;
+            // 
+            // label8
+            // 
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Arial", 7F, System.Drawing.FontStyle.Bold);
+            this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label8.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label8.Location = new System.Drawing.Point(-3, 71);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(106, 15);
+            this.label8.TabIndex = 68;
+            this.label8.Text = "  Re-enter Password";
+            // 
+            // label7
+            // 
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Arial", 7F, System.Drawing.FontStyle.Bold);
+            this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label7.Location = new System.Drawing.Point(-3, 49);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(106, 15);
+            this.label7.TabIndex = 67;
+            this.label7.Text = "  New Password";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label5
+            // 
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Arial", 7F, System.Drawing.FontStyle.Bold);
+            this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label5.Location = new System.Drawing.Point(-3, 28);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(106, 15);
+            this.label5.TabIndex = 66;
+            this.label5.Text = "  Current Password";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label3
             // 
@@ -174,6 +258,33 @@
             this.pnlUsernameEdit.Size = new System.Drawing.Size(742, 100);
             this.pnlUsernameEdit.TabIndex = 10;
             // 
+            // btnConfirmUser
+            // 
+            this.btnConfirmUser.Location = new System.Drawing.Point(696, 71);
+            this.btnConfirmUser.Name = "btnConfirmUser";
+            this.btnConfirmUser.Size = new System.Drawing.Size(36, 23);
+            this.btnConfirmUser.TabIndex = 73;
+            this.btnConfirmUser.Text = "chk";
+            this.btnConfirmUser.UseVisualStyleBackColor = true;
+            this.btnConfirmUser.Click += new System.EventHandler(this.btnConfirmUser_Click);
+            // 
+            // btnCancelUser
+            // 
+            this.btnCancelUser.Location = new System.Drawing.Point(696, 6);
+            this.btnCancelUser.Name = "btnCancelUser";
+            this.btnCancelUser.Size = new System.Drawing.Size(36, 23);
+            this.btnCancelUser.TabIndex = 72;
+            this.btnCancelUser.Text = "cancel";
+            this.btnCancelUser.UseVisualStyleBackColor = true;
+            this.btnCancelUser.Click += new System.EventHandler(this.btnCancelUser_Click);
+            // 
+            // tboxRePassUser
+            // 
+            this.tboxRePassUser.Location = new System.Drawing.Point(108, 69);
+            this.tboxRePassUser.Name = "tboxRePassUser";
+            this.tboxRePassUser.Size = new System.Drawing.Size(243, 20);
+            this.tboxRePassUser.TabIndex = 77;
+            // 
             // label1
             // 
             this.label1.BackColor = System.Drawing.SystemColors.Control;
@@ -182,6 +293,13 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(742, 3);
             this.label1.TabIndex = 63;
+            // 
+            // tboxPassUser
+            // 
+            this.tboxPassUser.Location = new System.Drawing.Point(108, 47);
+            this.tboxPassUser.Name = "tboxPassUser";
+            this.tboxPassUser.Size = new System.Drawing.Size(243, 20);
+            this.tboxPassUser.TabIndex = 76;
             // 
             // label6
             // 
@@ -194,6 +312,53 @@
             this.label6.Size = new System.Drawing.Size(225, 16);
             this.label6.TabIndex = 52;
             this.label6.Text = "  Username";
+            // 
+            // tboxUsername
+            // 
+            this.tboxUsername.Location = new System.Drawing.Point(108, 25);
+            this.tboxUsername.Name = "tboxUsername";
+            this.tboxUsername.Size = new System.Drawing.Size(243, 20);
+            this.tboxUsername.TabIndex = 75;
+            // 
+            // label11
+            // 
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Arial", 7F, System.Drawing.FontStyle.Bold);
+            this.label11.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label11.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label11.Location = new System.Drawing.Point(-3, 71);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(106, 15);
+            this.label11.TabIndex = 74;
+            this.label11.Text = "  Re-enter Password";
+            // 
+            // label13
+            // 
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.Font = new System.Drawing.Font("Arial", 7F, System.Drawing.FontStyle.Bold);
+            this.label13.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label13.Location = new System.Drawing.Point(-3, 28);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(106, 15);
+            this.label13.TabIndex = 72;
+            this.label13.Text = "  New Username";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label12
+            // 
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("Arial", 7F, System.Drawing.FontStyle.Bold);
+            this.label12.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label12.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label12.Location = new System.Drawing.Point(-3, 49);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(106, 15);
+            this.label12.TabIndex = 73;
+            this.label12.Text = "  Password";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // pnlUsername
             // 
@@ -228,6 +393,7 @@
             // 
             // lblUsername
             // 
+            this.lblUsername.ForeColor = System.Drawing.Color.Black;
             this.lblUsername.Location = new System.Drawing.Point(5, 40);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(217, 16);
@@ -245,170 +411,6 @@
             this.lbluser.Size = new System.Drawing.Size(225, 16);
             this.lbluser.TabIndex = 52;
             this.lbluser.Text = "  Username";
-            // 
-            // label5
-            // 
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Arial", 7F, System.Drawing.FontStyle.Bold);
-            this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label5.Location = new System.Drawing.Point(-3, 28);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(106, 15);
-            this.label5.TabIndex = 66;
-            this.label5.Text = "  Current Password";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label7
-            // 
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Arial", 7F, System.Drawing.FontStyle.Bold);
-            this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label7.Location = new System.Drawing.Point(-3, 49);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(106, 15);
-            this.label7.TabIndex = 67;
-            this.label7.Text = "  New Password";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label8
-            // 
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Arial", 7F, System.Drawing.FontStyle.Bold);
-            this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label8.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label8.Location = new System.Drawing.Point(-3, 71);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(106, 15);
-            this.label8.TabIndex = 68;
-            this.label8.Text = "  Re-enter Password";
-            // 
-            // tboxCurrPass
-            // 
-            this.tboxCurrPass.Location = new System.Drawing.Point(108, 25);
-            this.tboxCurrPass.Name = "tboxCurrPass";
-            this.tboxCurrPass.PasswordChar = '*';
-            this.tboxCurrPass.Size = new System.Drawing.Size(243, 20);
-            this.tboxCurrPass.TabIndex = 69;
-            // 
-            // tboxNewPassEdit
-            // 
-            this.tboxNewPassEdit.Location = new System.Drawing.Point(108, 47);
-            this.tboxNewPassEdit.Name = "tboxNewPassEdit";
-            this.tboxNewPassEdit.PasswordChar = '*';
-            this.tboxNewPassEdit.Size = new System.Drawing.Size(243, 20);
-            this.tboxNewPassEdit.TabIndex = 70;
-            // 
-            // tboxRePassEdit
-            // 
-            this.tboxRePassEdit.Location = new System.Drawing.Point(108, 69);
-            this.tboxRePassEdit.Name = "tboxRePassEdit";
-            this.tboxRePassEdit.PasswordChar = '*';
-            this.tboxRePassEdit.Size = new System.Drawing.Size(243, 20);
-            this.tboxRePassEdit.TabIndex = 71;
-            // 
-            // tboxRePassUser
-            // 
-            this.tboxRePassUser.Location = new System.Drawing.Point(108, 69);
-            this.tboxRePassUser.Name = "tboxRePassUser";
-            this.tboxRePassUser.Size = new System.Drawing.Size(243, 20);
-            this.tboxRePassUser.TabIndex = 77;
-            // 
-            // tboxPassUser
-            // 
-            this.tboxPassUser.Location = new System.Drawing.Point(108, 47);
-            this.tboxPassUser.Name = "tboxPassUser";
-            this.tboxPassUser.Size = new System.Drawing.Size(243, 20);
-            this.tboxPassUser.TabIndex = 76;
-            // 
-            // tboxUsername
-            // 
-            this.tboxUsername.Location = new System.Drawing.Point(108, 25);
-            this.tboxUsername.Name = "tboxUsername";
-            this.tboxUsername.Size = new System.Drawing.Size(243, 20);
-            this.tboxUsername.TabIndex = 75;
-            // 
-            // label11
-            // 
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Arial", 7F, System.Drawing.FontStyle.Bold);
-            this.label11.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label11.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label11.Location = new System.Drawing.Point(-3, 71);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(106, 15);
-            this.label11.TabIndex = 74;
-            this.label11.Text = "  Re-enter Password";
-            // 
-            // label12
-            // 
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Arial", 7F, System.Drawing.FontStyle.Bold);
-            this.label12.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label12.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label12.Location = new System.Drawing.Point(-3, 49);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(106, 15);
-            this.label12.TabIndex = 73;
-            this.label12.Text = "  Password";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label13
-            // 
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("Arial", 7F, System.Drawing.FontStyle.Bold);
-            this.label13.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label13.Location = new System.Drawing.Point(-3, 28);
-            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(106, 15);
-            this.label13.TabIndex = 72;
-            this.label13.Text = "  New Username";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // btnCancelPass
-            // 
-            this.btnCancelPass.Location = new System.Drawing.Point(696, 6);
-            this.btnCancelPass.Name = "btnCancelPass";
-            this.btnCancelPass.Size = new System.Drawing.Size(36, 23);
-            this.btnCancelPass.TabIndex = 65;
-            this.btnCancelPass.Text = "cancel";
-            this.btnCancelPass.UseVisualStyleBackColor = true;
-            this.btnCancelPass.Click += new System.EventHandler(this.btnCancelPass_Click);
-            // 
-            // btnCancelUser
-            // 
-            this.btnCancelUser.Location = new System.Drawing.Point(696, 6);
-            this.btnCancelUser.Name = "btnCancelUser";
-            this.btnCancelUser.Size = new System.Drawing.Size(36, 23);
-            this.btnCancelUser.TabIndex = 72;
-            this.btnCancelUser.Text = "cancel";
-            this.btnCancelUser.UseVisualStyleBackColor = true;
-            this.btnCancelUser.Click += new System.EventHandler(this.btnCancelUser_Click);
-            // 
-            // btnConfirmPass
-            // 
-            this.btnConfirmPass.Location = new System.Drawing.Point(696, 66);
-            this.btnConfirmPass.Name = "btnConfirmPass";
-            this.btnConfirmPass.Size = new System.Drawing.Size(36, 23);
-            this.btnConfirmPass.TabIndex = 72;
-            this.btnConfirmPass.Text = "chk";
-            this.btnConfirmPass.UseVisualStyleBackColor = true;
-            this.btnConfirmPass.Click += new System.EventHandler(this.btnConfirmPass_Click);
-            // 
-            // btnConfirmUser
-            // 
-            this.btnConfirmUser.Location = new System.Drawing.Point(696, 71);
-            this.btnConfirmUser.Name = "btnConfirmUser";
-            this.btnConfirmUser.Size = new System.Drawing.Size(36, 23);
-            this.btnConfirmUser.TabIndex = 73;
-            this.btnConfirmUser.Text = "chk";
-            this.btnConfirmUser.UseVisualStyleBackColor = true;
-            this.btnConfirmUser.Click += new System.EventHandler(this.btnConfirmUser_Click);
             // 
             // SecurityDetails
             // 

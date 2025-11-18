@@ -32,7 +32,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings
             ContactUserControl.PositionInfo = ConnectionClass.position;
             ContactUserControl.StatusInfo = ConnectionClass.status;
             ContactUserControl.ConNum = ConnectionClass.contnum;
-            ContactUserControl.EmailInfo = ConnectionClass.empid;
+            ContactUserControl.EmailInfo = ConnectionClass.email;
             lblEmpID.Text = "    Employee ID : " + ConnectionClass.empid;
 
             string[] address = ConnectionClass.address.Split(',');

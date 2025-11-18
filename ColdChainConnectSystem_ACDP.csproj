@@ -204,11 +204,11 @@
     <Compile Include="AppForms\Header\Settings\PersonalDetails\AddressInformation.Designer.cs">
       <DependentUpon>AddressInformation.cs</DependentUpon>
     </Compile>
-    <Compile Include="AppForms\Header\Settings\PersonalDetails\ContactInformation.cs">
+    <Compile Include="AppForms\Header\Settings\PersonalDetails\AccountInformation.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="AppForms\Header\Settings\PersonalDetails\ContactInformation.Designer.cs">
-      <DependentUpon>ContactInformation.cs</DependentUpon>
+    <Compile Include="AppForms\Header\Settings\PersonalDetails\AccountInformation.Designer.cs">
+      <DependentUpon>AccountInformation.cs</DependentUpon>
     </Compile>
     <Compile Include="AppForms\Header\Settings\PersonalDetails\PersonalInformation.cs">
       <SubType>UserControl</SubType>
@@ -374,8 +374,8 @@
     <EmbeddedResource Include="AppForms\Header\Settings\PersonalDetails\AddressInformation.resx">
       <DependentUpon>AddressInformation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AppForms\Header\Settings\PersonalDetails\ContactInformation.resx">
-      <DependentUpon>ContactInformation.cs</DependentUpon>
+    <EmbeddedResource Include="AppForms\Header\Settings\PersonalDetails\AccountInformation.resx">
+      <DependentUpon>AccountInformation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AppForms\Header\Settings\PersonalDetails\PersonalInformation.resx">
       <DependentUpon>PersonalInformation.cs</DependentUpon>
