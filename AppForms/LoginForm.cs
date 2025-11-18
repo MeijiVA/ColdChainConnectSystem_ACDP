@@ -1,8 +1,6 @@
-﻿using ColdChainConnectSystem_ACDP.AppForms;
-using ColdChainConnectSystem_ACDP.AppForms;
+﻿
 using ColdChainConnectSystem_ACDP.AppForms.MainPanel.Dashboard;
 using ColdChainConnectSystem_ACDP.AppForms.MainPanel.Settings;
-using ColdChainConnectSystem_ACDP.AppForms.SidePanel;
 using ColdChainConnectSystem_ACDP.ClassResources;
 using ColdChainConnectSystem_ACDP.ClassResources.Instances;
 using System;

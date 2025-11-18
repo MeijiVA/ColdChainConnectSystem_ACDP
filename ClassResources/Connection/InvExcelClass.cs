@@ -68,10 +68,11 @@ namespace ColdChainConnectSystem_ACDP.ClassResources.Connection
                     //ID	SKU Code	Description	Unit Price	Amount	Weight(KG)	Quantity	Expiry Date
                     command.ExecuteNonQuery();
                 }
+                new CustomMessageBox("Import", "Import has been completed.", MessageBoxButtons.OK).ShowDialog();
             }
             catch(RuntimeBinderException ex)
             {
-
+                new CustomMessageBox("RunTimeBinder Exception",ex.Message,MessageBoxButtons.OK).ShowDialog();
             }
             catch(Exception ex)
             {
@@ -123,6 +124,10 @@ namespace ColdChainConnectSystem_ACDP.ClassResources.Connection
         //not mine, don't edit xd
         public static void ExportDataFromTable(string query, String ofd)
         {
+            // Create a new Excel application and workbook
+            Microsoft.Office.Interop.Excel.Application excelApp = new Microsoft.Office.Interop.Excel.Application();
+            Workbook excelWorkbook = excelApp.Workbooks.Add();
+            Worksheet excelWorksheet = excelWorkbook.Worksheets[1];
             try
             {
                 if (File.Exists(ofd))
@@ -136,11 +141,6 @@ namespace ColdChainConnectSystem_ACDP.ClassResources.Connection
                     {
                         using (SqlDataReader reader = command.ExecuteReader())
                         {
-                            // Create a new Excel application and workbook
-                            Microsoft.Office.Interop.Excel.Application excelApp = new Microsoft.Office.Interop.Excel.Application();
-                            Workbook excelWorkbook = excelApp.Workbooks.Add();
-                            Worksheet excelWorksheet = excelWorkbook.Worksheets[1];
-
                             // Add the headers to the first row
                             excelWorksheet.Cells[1, 1].Value = "Inventory";
                             int col = 1;
@@ -170,11 +170,8 @@ namespace ColdChainConnectSystem_ACDP.ClassResources.Connection
                                 }
                                 row++;
                             }
+                            new CustomMessageBox("Export", "Export has been completed.", MessageBoxButtons.OK).ShowDialog();
 
-                            // Save the workbook and close the Excel application
-                            excelWorkbook.SaveAs(ofd);
-                            excelWorkbook.Close();
-                            excelApp.Quit();
                         }
                     }
                 }
@@ -185,7 +182,13 @@ namespace ColdChainConnectSystem_ACDP.ClassResources.Connection
             {
                 new CustomMessageBox("Export Problem",ex.Message,MessageBoxButtons.OK).ShowDialog();
             }
-
+            finally
+            {
+                // Save the workbook and close the Excel application
+                excelWorkbook.SaveAs(ofd);
+                excelWorkbook.Close();
+                excelApp.Quit();
+            }
 
         }
     }
