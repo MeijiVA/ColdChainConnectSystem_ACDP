@@ -42,6 +42,7 @@
             this.dgvTable = new System.Windows.Forms.DataGridView();
             this.rowCbox = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.testTable = new System.Windows.Forms.DataGridView();
             this.btnCheck = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
             this.lblPageNum = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
             this.btnNext = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
@@ -49,6 +50,7 @@
             this.SearchBar = new ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory.SearchUC();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTable)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.testTable)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -210,6 +212,14 @@
             this.id.Visible = false;
             this.id.Width = 2;
             // 
+            // testTable
+            // 
+            this.testTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.testTable.Location = new System.Drawing.Point(435, 233);
+            this.testTable.Name = "testTable";
+            this.testTable.Size = new System.Drawing.Size(296, 223);
+            this.testTable.TabIndex = 6;
+            // 
             // btnCheck
             // 
             this.btnCheck.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
@@ -304,6 +314,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(798, 570);
+            this.Controls.Add(this.testTable);
             this.Controls.Add(this.actionlbl);
             this.Controls.Add(this.dgvTable);
             this.Controls.Add(this.btnCheck);
@@ -317,6 +328,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTable)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.testTable)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -338,5 +350,6 @@
         public System.Windows.Forms.DataGridView dgvTable;
         private System.Windows.Forms.DataGridViewCheckBoxColumn rowCbox;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        public System.Windows.Forms.DataGridView testTable;
     }
 }

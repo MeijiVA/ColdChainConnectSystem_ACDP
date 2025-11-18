@@ -319,11 +319,6 @@
     <Compile Include="ClassResources\Display\Tables\DataGridViewButtons.cs" />
     <Compile Include="ClassResources\Display\Tables\InventoryColumn.cs" />
     <Compile Include="ClassResources\Display\MunicipalityListClass.cs" />
-    <Compile Include="ColdChainConnectACDP_DBDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ColdChainConnectACDP_DBDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -456,17 +451,6 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="ColdChainConnectACDP_DBDataSet.xsc">
-      <DependentUpon>ColdChainConnectACDP_DBDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="ColdChainConnectACDP_DBDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ColdChainConnectACDP_DBDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="ColdChainConnectACDP_DBDataSet.xss">
-      <DependentUpon>ColdChainConnectACDP_DBDataSet.xsd</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

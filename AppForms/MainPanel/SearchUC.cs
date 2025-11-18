@@ -149,11 +149,14 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
 
         private void btnImport_Click(object sender, EventArgs e)
         {
-            Console.WriteLine("HERE IMPORT at " + CurrentFormClass.form);
-    
             switch (CurrentFormClass.form)
             {
                 case "invform":
+                    if (ofdImport.ShowDialog() == DialogResult.OK)
+                    {
+
+                        InvExcelClass.Import(ofdImport.FileName,InventoryInstance.i.testTable);
+                    }
                     break;
                 case "supform":
                     break;
