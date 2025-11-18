@@ -24,52 +24,34 @@ namespace ColdChainConnectSystem_ACDP.ClassResources.Connection
     {
         public static void Import(String ofd, DataGridView dataGridView)
         {
-  
-            Microsoft.Office.Interop.Excel.Application  excelApp = new Microsoft.Office.Interop.Excel.Application();
+
+            Microsoft.Office.Interop.Excel.Application excelApp = new Microsoft.Office.Interop.Excel.Application();
             Microsoft.Office.Interop.Excel.Workbook excelWorkbook = excelApp.Workbooks.Open(ofd);
             Microsoft.Office.Interop.Excel.Worksheet excelWorksheet = (Microsoft.Office.Interop.Excel.Worksheet)excelWorkbook.Sheets[1]; // Assuming data is in the first sheet
             Microsoft.Office.Interop.Excel.Range excelRange = excelWorksheet.UsedRange;
 
-            System.Data.DataTable dt = new System.Data.DataTable();
-            dt.Columns.Add("skucode",typeof(string));
-            dt.Columns.Add("unitprice", typeof(double));
-            dt.Columns.Add("kg", typeof(int));
-            dt.Columns.Add("quantity", typeof(int));
-            dt.Columns.Add("expiry");
-            dt.Columns.Add("image",typeof(string));
-            dt.Columns.Add("descript", typeof(string));
-            // Populate the DataTable with data from Excel, starting from the second row (after headers)
+            SqlConnection con = ConnectionClass.Connection();
+
+
+            con.Open();
             for (int row = 2; row <= excelRange.Rows.Count; row++)
             {
-                System.Data.DataRow dr = dt.NewRow();
-                for (int col = 1; col <= excelRange.Columns.Count; col++)
+                String query = $"INSERT INTO Inventory (skucode,unitprice,kg,quantity,expiry,image,descript) " +
+               "VALUES (@TEST,@unitprice,@kg,@quantity,@expiry,@image,@descript)";
+                using (SqlCommand command = new SqlCommand(query, con))
                 {
                     //ID	SKU Code	Description	Unit Price	Amount	Weight(KG)	Quantity	Expiry Date
-                    dr[0] = (excelRange.Cells[row, 2] as Microsoft.Office.Interop.Excel.Range).Value;//sku
-                    dr[1] = (excelRange.Cells[row, 4] as Microsoft.Office.Interop.Excel.Range).Value;//unit
-                    dr[2] = (excelRange.Cells[row, 6] as Microsoft.Office.Interop.Excel.Range).Value;//kg
-                    dr[3] = (excelRange.Cells[row, 7] as Microsoft.Office.Interop.Excel.Range).Value;//qty
-                    string excelDate = ""+ (excelRange.Cells[row, 8] as Microsoft.Office.Interop.Excel.Range).Value;
-                    dr[4] = excelDate.Substring(0,8);//expiry
-                    dr[5] = "Image.png";//image
-                    dr[6] = (excelRange.Cells[row, 3] as Microsoft.Office.Interop.Excel.Range).Value;//descript
-
-
+                    command.Parameters.AddWithValue("@TEST", (excelRange.Cells[row, 2] as Microsoft.Office.Interop.Excel.Range).Value);//sku
+                    command.Parameters.AddWithValue("@unitprice", (excelRange.Cells[row, 4] as Microsoft.Office.Interop.Excel.Range).Value);//unit
+                    command.Parameters.AddWithValue("@kg", (excelRange.Cells[row, 6] as Microsoft.Office.Interop.Excel.Range).Value);//kg
+                    command.Parameters.AddWithValue("@quantity", (excelRange.Cells[row, 7] as Microsoft.Office.Interop.Excel.Range).Value);//qty
+                    string excelDate = "" + (excelRange.Cells[row, 8] as Microsoft.Office.Interop.Excel.Range).Value;
+                    command.Parameters.AddWithValue("@expiry", excelDate.Substring(0, 8));//expiry
+                    command.Parameters.AddWithValue("@image", "Image.png");//image
+                    command.Parameters.AddWithValue("@descript", (excelRange.Cells[row, 3] as Microsoft.Office.Interop.Excel.Range).Value);//descript
+                        Console.WriteLine(query);
+                    command.ExecuteNonQuery();
                 }
-                dt.Rows.Add(dr);
-            }
-            dataGridView.DataSource = dt;
-
-            SqlConnection con = ConnectionClass.Connection();
-            con.Open();
-            using (SqlBulkCopy bulkCopy = new SqlBulkCopy(con))
-            {
-                bulkCopy.DestinationTableName = "Inventory"; // Name of the target table in the database
-
-                // Map columns from DataTable to database table (if names differ)
-                // bulkCopy.ColumnMappings.Add("DataTableColumnName", "DatabaseColumnName");
-
-                bulkCopy.WriteToServer(dt);
             }
             con.Close();
             excelWorkbook.Close();
