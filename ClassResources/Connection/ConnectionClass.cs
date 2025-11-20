@@ -63,11 +63,11 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
             StreamReader sr = new StreamReader(filePath);
             db = sr.ReadLine();
             sr.Close();
-            string database = "Data Source = database; Initial Catalog = ColdChainConnectACDP_DB; User ID = username; Password = password; TrustServerCertificate = True";
+            string database = "Data Source = @database; Initial Catalog = ColdChainConnectACDP_DB; User ID = @username; Password = @password; TrustServerCertificate = True";
             //Data Source = ANNEX - PC00; Initial Catalog = ColdChainConnectACDP_DB; User ID = bautista.369742; Password = ***********; Trust Server Certificate = True
-            database = database.Replace("database", db);
-            database = database.Replace("username", username);
-            database = database.Replace("password", pass);
+            database = database.Replace("@database", db);
+            database = database.Replace("@username", username);
+            database = database.Replace("@password", pass);
             Console.WriteLine(database);
             return new SqlConnection(database);
         }
@@ -88,8 +88,9 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                     string[] token = input.Split(',');
                     username = token[0];
                     pass = token[1];
-                    query = @"SELECT empid, username, fname, mname, lname, contnum,"
-                            + "address, age, dob, position, status, sex, email FROM Employees";
+                Console.WriteLine(username +" "+ pass);
+                query = @"SELECT [empid], [username], [firstname], [middlename], [lastname], [contactnum],"
+                            + "[address], [age], [dateofbirth], [position], [status], [sex], [email] FROM Employees";
                     SqlConnection con = Connection();
                     using (SqlCommand cmd = new SqlCommand(query, con))
                     {
@@ -98,7 +99,8 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                         {
                             while (reader.Read())
                             {
-                                if (username.Equals(reader[1].ToString()))
+                            Console.WriteLine(reader[1] +"here");
+                            if (username.Equals(reader[1].ToString()))
                                 {
                                     empid = reader[0].ToString();
                                     username = reader[1].ToString();
@@ -154,7 +156,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                 // if credentials bad
                 else if (e.Message.Contains("Login"))
                 {
-                   new CustomMessageBox("Credentials", "Invalid Credentials.").ShowDialog();
+                   new CustomMessageBox("Credentials", "Invalid Credentials. " + e.Message).ShowDialog();
                 }
                 else
                 {

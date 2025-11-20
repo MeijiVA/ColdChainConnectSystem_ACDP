@@ -36,9 +36,9 @@ namespace ColdChainConnectSystem_ACDP.ClassResources.Connection
             SqlConnection con = ConnectionClass.Connection();
 
             try
-            {
-                con.Open();
-                String query = "INSERT INTO Inventory (skucode,unitprice,kg,quantity,expiry,image,descript) VALUES";
+            {//skucode,unitprice,kg,quantity,expiry,image,descript
+                con.Open();//[numid],[skucode],[description],[image],[unitprice],[kg],[quantity],[expiry]
+                String query = "INSERT INTO Inventory ([skucode],[unitprice],[kg],[quantity],[expiry],[image],[description]) VALUES";
                 if ((excelRange.Cells[1, 1] as Range).Value == "Inventory")
                 {
                     
@@ -110,7 +110,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources.Connection
                 {
                     Filter = " WHERE " + SelectedFilterClass.SelectedFilter + " LIKE '%" + searchQuery + "%' ";
                 }
-                query = $"SELECT numid AS \"ID\",skucode AS \"SKU Code\" , descript AS \"Description\",unitprice AS \"Unit Price\", unitprice * quantity AS \"Amount\", kg AS \"Weight(KG)\", quantity AS \"Quantity\", expiry AS \"Expiry Date\"FROM Inventory {Filter} ORDER BY numid;";
+                query = $"SELECT [numid] AS \"ID\",[skucode] AS \"SKU Code\" , [description] AS \"Description\",[unitprice] AS \"Unit Price\", [unitprice] * [quantity] AS \"Amount\", [kg] AS \"Weight(KG)\", [quantity] AS \"Quantity\", [expiry] AS \"Expiry Date\"FROM Inventory {Filter} ORDER BY numid;";
                 Console.WriteLine(query);
                 ExportDataFromTable(query, ofd);
             }
