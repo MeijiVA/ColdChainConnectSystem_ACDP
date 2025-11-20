@@ -129,11 +129,21 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
             }
         }
 
-        private void dgvTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvTable_RowPostPaint_1(object sender, DataGridViewRowPostPaintEventArgs e)
+        {
+            using (Pen p = new Pen(Color.FromArgb(07, 07, 96), 2)) // Define pen for the line
+            {
+                // Calculate the position for the line
+                int y = e.RowBounds.Bottom - 1;
+                e.Graphics.DrawLine(p, e.RowBounds.Left + 10, y, e.RowBounds.Right - 10, y);
+            }
+        }
+
+        private void dgvTable_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
             if (dgvTable.Columns[e.ColumnIndex].Name == "deleteCol")
             {
-                if (new CustomMessageBox("Delete Row", "Are you sure you want to delete this item from the Database?",MessageBoxButtons.OKCancel).ShowDialog() == DialogResult.Yes)
+                if (new CustomMessageBox("Delete Row", "Are you sure you want to delete this item from the Database?", MessageBoxButtons.OKCancel).ShowDialog() == DialogResult.Yes)
                 {
                     dgvTable.Rows.RemoveAt(e.RowIndex);
                 }
@@ -145,16 +155,6 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
             if (dgvTable.Columns[e.ColumnIndex].Name == "viewCol")
             {
 
-            }
-        }
-
-        private void dgvTable_RowPostPaint_1(object sender, DataGridViewRowPostPaintEventArgs e)
-        {
-            using (Pen p = new Pen(Color.FromArgb(07, 07, 96), 2)) // Define pen for the line
-            {
-                // Calculate the position for the line
-                int y = e.RowBounds.Bottom - 1;
-                e.Graphics.DrawLine(p, e.RowBounds.Left + 10, y, e.RowBounds.Right - 10, y);
             }
         }
     }

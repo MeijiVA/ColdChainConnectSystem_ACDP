@@ -37,7 +37,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InventoryForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerForm));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -305,6 +305,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer
             this.dgvTable.RowTemplate.Height = 40;
             this.dgvTable.Size = new System.Drawing.Size(755, 442);
             this.dgvTable.TabIndex = 8;
+            this.dgvTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTable_CellContentClick_1);
             this.dgvTable.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dgvTable_RowPostPaint);
             // 
             // rowCbox
@@ -417,7 +418,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer
             this.deleteCol.ToolTipText = "Deletes the row.";
             this.deleteCol.Width = 25;
             // 
-            // InventoryForm
+            // CustomerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -429,7 +430,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer
             this.Controls.Add(this.SearchBar);
             this.Controls.Add(this.dgvTable);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "InventoryForm";
+            this.Name = "CustomerForm";
             this.Padding = new System.Windows.Forms.Padding(20);
             this.Text = "InventoryForm";
             this.Load += new System.EventHandler(this.InventoryForm_Load);
