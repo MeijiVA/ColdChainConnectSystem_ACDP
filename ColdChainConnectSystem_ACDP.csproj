@@ -258,12 +258,6 @@
     <Compile Include="AppForms\MainPanel\Dashboard\GreetPanel.Designer.cs">
       <DependentUpon>GreetPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="AppForms\MainPanel\CopyableTable.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="AppForms\MainPanel\CopyableTable.Designer.cs">
-      <DependentUpon>CopyableTable.cs</DependentUpon>
-    </Compile>
     <Compile Include="AppForms\MainPanel\Inventory\AddItemInventoryForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -449,9 +443,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AppForms\MainPanel\Dashboard\GreetPanel.resx">
       <DependentUpon>GreetPanel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AppForms\MainPanel\CopyableTable.resx">
-      <DependentUpon>CopyableTable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AppForms\MainPanel\Inventory\AddItemInventoryForm.resx">
       <DependentUpon>AddItemInventoryForm.cs</DependentUpon>
