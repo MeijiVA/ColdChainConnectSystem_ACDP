@@ -1,4 +1,4 @@
-﻿using ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory;
+﻿using ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace ColdChainConnectSystem_ACDP.ClassResources.Instances
 {
-    internal class InventoryInstance
+    internal class SalesInstance
     {
-        public static InventoryForm i;
+        public static SalesForm i;
     }
 }

@@ -234,6 +234,18 @@
     <Compile Include="AppForms\Header\Settings\Security\SecurityForm.Designer.cs">
       <DependentUpon>SecurityForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AppForms\MainPanel\Customer\AddCustomerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\MainPanel\Customer\AddCustomerForm.Designer.cs">
+      <DependentUpon>AddCustomerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForms\MainPanel\Customer\InventoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\MainPanel\Customer\InventoryForm.Designer.cs">
+      <DependentUpon>InventoryForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AppForms\MainPanel\Dashboard\DashoardForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -270,6 +282,18 @@
     <Compile Include="AppForms\MainPanel\Inventory\InventoryForm.Designer.cs">
       <DependentUpon>InventoryForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AppForms\MainPanel\Sales\AddTransactionSalesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\MainPanel\Sales\AddTransactionSalesForm.Designer.cs">
+      <DependentUpon>AddTransactionSalesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForms\MainPanel\Sales\SalesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\MainPanel\Sales\SalesForm.Designer.cs">
+      <DependentUpon>SalesForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AppForms\MainPanel\SearchUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -288,6 +312,18 @@
     <Compile Include="AppForms\Header\Settings\settingsTabControl.Designer.cs">
       <DependentUpon>settingsTabControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="AppForms\MainPanel\Supplier\AddSupplierForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\MainPanel\Supplier\AddSupplierForm.Designer.cs">
+      <DependentUpon>AddSupplierForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForms\MainPanel\Supplier\SupplierForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\MainPanel\Supplier\SupplierForm.Designer.cs">
+      <DependentUpon>SupplierForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AppForms\SidePanel\SidePanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -300,9 +336,11 @@
     <Compile Include="AppForms\SidePanel\UserAccountControl.Designer.cs">
       <DependentUpon>UserAccountControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="ClassResources\Connection\SalesClass.cs" />
     <Compile Include="ClassResources\Connection\InvExcelClass.cs" />
     <Compile Include="ClassResources\Instances\InventoryInstance.cs" />
     <Compile Include="ClassResources\Instances\MainInstance.cs" />
+    <Compile Include="ClassResources\Instances\SalesInstance.cs" />
     <Compile Include="ClassResources\Instances\SettingsInstance.cs" />
     <Compile Include="ClassResources\Security\ChangeCredentialsClass.cs" />
     <Compile Include="ClassResources\Connection\ConnectionClass.cs" />
@@ -398,6 +436,12 @@
     <EmbeddedResource Include="AppForms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\MainPanel\Customer\AddCustomerForm.resx">
+      <DependentUpon>AddCustomerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\MainPanel\Customer\InventoryForm.resx">
+      <DependentUpon>InventoryForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AppForms\MainPanel\Dashboard\DashoardForm.resx">
       <DependentUpon>DashoardForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -416,6 +460,12 @@
     <EmbeddedResource Include="AppForms\MainPanel\Inventory\InventoryForm.resx">
       <DependentUpon>InventoryForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\MainPanel\Sales\AddTransactionSalesForm.resx">
+      <DependentUpon>AddTransactionSalesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\MainPanel\Sales\SalesForm.resx">
+      <DependentUpon>SalesForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AppForms\MainPanel\SearchUC.resx">
       <DependentUpon>SearchUC.cs</DependentUpon>
     </EmbeddedResource>
@@ -424,6 +474,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AppForms\Header\Settings\settingsTabControl.resx">
       <DependentUpon>settingsTabControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\MainPanel\Supplier\AddSupplierForm.resx">
+      <DependentUpon>AddSupplierForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\MainPanel\Supplier\SupplierForm.resx">
+      <DependentUpon>SupplierForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AppForms\SidePanel\SidePanel.resx">
       <DependentUpon>SidePanel.cs</DependentUpon>
@@ -550,9 +606,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="AppForms\Header\Audit\" />
-    <Folder Include="AppForms\MainPanel\Customer\" />
-    <Folder Include="AppForms\MainPanel\Sales\" />
-    <Folder Include="AppForms\MainPanel\Supplier\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\MaleIcon.png" />

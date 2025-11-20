@@ -1,4 +1,5 @@
-﻿using ColdChainConnectSystem_ACDP.ClassResources;
+﻿using ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales;
+using ColdChainConnectSystem_ACDP.ClassResources;
 using ColdChainConnectSystem_ACDP.ClassResources.Connection;
 using ColdChainConnectSystem_ACDP.ClassResources.Display;
 using ColdChainConnectSystem_ACDP.ClassResources.Instances;
@@ -133,10 +134,12 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
             switch (CurrentFormClass.form)
             {
                 case "invform":
-                    AddItemSalesForm addItem = new AddItemInventoryForm();
+                    AddItemInventoryForm addItem = new AddItemInventoryForm();
                     MainInstance.i.NavigateTo(addItem);
                     break;
                 case "supform":
+                    AddTransactionSalesForm addTrans = new AddTransactionSalesForm();
+                    MainInstance.i.NavigateTo(addTrans);
                     break;
                 case "salform":
                     break;

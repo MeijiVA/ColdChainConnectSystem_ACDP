@@ -1,5 +1,6 @@
 ﻿using ColdChainConnectSystem_ACDP.AppForms.MainPanel.Dashboard;
 using ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory;
+using ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales;
 using ColdChainConnectSystem_ACDP.ClassResources;
 using ColdChainConnectSystem_ACDP.ClassResources.Instances;
 using System;
@@ -104,6 +105,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.SidePanel
         {
             CurrentFormClass.setPreviousFormTo("supform");
             SelectedTab(btnSupMan);
+            MainInstance.i.NavigateTo(SalesInstance.i = new SalesForm());
         }
 
         private void salesmanbbtn_Click(object sender, EventArgs e)

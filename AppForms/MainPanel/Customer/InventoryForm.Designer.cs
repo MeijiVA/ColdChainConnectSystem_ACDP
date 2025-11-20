@@ -1,6 +1,8 @@
-﻿namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
+﻿using ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory;
+
+namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer
 {
-    partial class InventoryForm
+    partial class CustomerForm
     {
         /// <summary>
         /// Required designer variable.

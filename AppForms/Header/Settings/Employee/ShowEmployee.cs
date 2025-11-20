@@ -1,4 +1,5 @@
 ﻿using ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory;
+using ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales;
 using ColdChainConnectSystem_ACDP.ClassResources;
 using System;
 using System.Collections.Generic;
@@ -32,7 +33,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.Employee
 
         private void customButton3_Click(object sender, EventArgs e)
         {
-            AddItemSalesForm add = new AddItemInventoryForm();
+            AddTransactionSalesForm add = new AddTransactionSalesForm();
             SettingsInstance.i.pnlDisplaySettings.Controls.Add(add);
         }
     }
