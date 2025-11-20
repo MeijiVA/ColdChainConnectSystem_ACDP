@@ -338,6 +338,8 @@
     </Compile>
     <Compile Include="ClassResources\Connection\SalesClass.cs" />
     <Compile Include="ClassResources\Connection\InvExcelClass.cs" />
+    <Compile Include="ClassResources\Instances\CustomerInstance.cs" />
+    <Compile Include="ClassResources\Instances\SupplierInstance.cs" />
     <Compile Include="ClassResources\Instances\InventoryInstance.cs" />
     <Compile Include="ClassResources\Instances\MainInstance.cs" />
     <Compile Include="ClassResources\Instances\SalesInstance.cs" />
