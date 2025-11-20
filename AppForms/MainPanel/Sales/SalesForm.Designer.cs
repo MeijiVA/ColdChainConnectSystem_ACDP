@@ -1,4 +1,6 @@
-﻿namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
+﻿using ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory;
+
+namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
 {
     partial class SalesForm
     {

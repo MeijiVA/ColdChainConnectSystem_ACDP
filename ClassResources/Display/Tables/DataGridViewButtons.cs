@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IdentityModel.Claims;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Drawing;
+﻿using System.Windows.Forms;
 
 
 namespace ColdChainConnectSystem_ACDP.ClassResources.Display.Tables
@@ -17,11 +10,11 @@ namespace ColdChainConnectSystem_ACDP.ClassResources.Display.Tables
             DataGridViewCellStyle dgvCs = new DataGridViewCellStyle();
             dgvCs.NullValue = null;
             dgvCs.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dgvCs.Padding = new Padding( 0, 10, 0, 10 );
-            
+            dgvCs.Padding = new Padding(0, 10, 0, 10);
+
             return dgvCs;
         }
-        
+
         public static DataGridViewImageColumn AddViewCol_dgvButton()
         {
             DataGridViewImageColumn viewCol = new DataGridViewImageColumn();
@@ -45,7 +38,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources.Display.Tables
             editCol.Resizable = DataGridViewTriState.False;
             editCol.DefaultCellStyle = buttonStyle();
             return editCol;
-            
+
         }
         public static DataGridViewImageColumn AddDelCol_dgvButton()
         {

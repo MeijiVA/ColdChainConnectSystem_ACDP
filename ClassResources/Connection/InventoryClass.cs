@@ -1,11 +1,8 @@
 ﻿
 using ColdChainConnectSystem_ACDP.Popup;
 using System;
-using System.Collections.Generic;
-using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
-using System.IdentityModel.Tokens;
 using System.IO;
 using System.Windows.Forms;
 
@@ -111,7 +108,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
 
         public static bool writeInventoryData(string sku, string desc, string unitp, string img, string kg, string quantity, string expiry)
         {
-            if(!(sku.Equals("") || sku.Equals("") || desc.Equals("") || unitp.Equals("") || kg.Equals("") || quantity.Equals("") || expiry.Equals("")))
+            if (!(sku.Equals("") || sku.Equals("") || desc.Equals("") || unitp.Equals("") || kg.Equals("") || quantity.Equals("") || expiry.Equals("")))
             {
                 try
                 {
@@ -139,7 +136,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
             }
             else
             {
-                new CustomMessageBox("Missing Element","Fill in all required Fields.", MessageBoxButtons.OK).ShowDialog();
+                new CustomMessageBox("Missing Element", "Fill in all required Fields.", MessageBoxButtons.OK).ShowDialog();
                 return false;
             }
         }

@@ -1,25 +1,11 @@
 ﻿using ColdChainConnectSystem_ACDP.ClassResources.Display;
-using ColdChainConnectSystem_ACDP.ClassResources.Instances;
 using ColdChainConnectSystem_ACDP.Popup;
-using ExcelDataReader;
 using Microsoft.CSharp.RuntimeBinder;
 using Microsoft.Office.Interop.Excel;
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Odbc;
-using System.Data.OleDb;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Drawing.Printing;
 using System.IO;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace ColdChainConnectSystem_ACDP.ClassResources.Connection
 {
@@ -41,7 +27,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources.Connection
                 String query = "INSERT INTO Inventory (skucode,unitprice,kg,quantity,expiry,image,descript) VALUES";
                 if ((excelRange.Cells[1, 1] as Range).Value == "Inventory")
                 {
-                    
+
                 }
                 for (int row = 3; row <= excelRange.Rows.Count; row++)
                 {
@@ -70,13 +56,13 @@ namespace ColdChainConnectSystem_ACDP.ClassResources.Connection
                 }
                 new CustomMessageBox("Import", "Import has been completed.", MessageBoxButtons.OK).ShowDialog();
             }
-            catch(RuntimeBinderException ex)
+            catch (RuntimeBinderException ex)
             {
-                new CustomMessageBox("RunTimeBinder Exception",ex.Message,MessageBoxButtons.OK).ShowDialog();
+                new CustomMessageBox("RunTimeBinder Exception", ex.Message, MessageBoxButtons.OK).ShowDialog();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                new CustomMessageBox("Exception",ex.Message,MessageBoxButtons.OK).ShowDialog();
+                new CustomMessageBox("Exception", ex.Message, MessageBoxButtons.OK).ShowDialog();
             }
             finally
             {
@@ -161,11 +147,12 @@ namespace ColdChainConnectSystem_ACDP.ClassResources.Connection
                                     {
                                         DateTime date = Convert.ToDateTime(reader[7].ToString());
                                         excelWorksheet.Cells[row, col].Value2 = date.ToString("MM/dd/yyyy");
-                                    } else
+                                    }
+                                    else
                                     {
                                         excelWorksheet.Cells[row, col].Value2 = reader[i].ToString();
                                     }
-     
+
                                     col++;
                                 }
                                 row++;
@@ -180,7 +167,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources.Connection
 
             catch (Exception ex)
             {
-                new CustomMessageBox("Export Problem",ex.Message,MessageBoxButtons.OK).ShowDialog();
+                new CustomMessageBox("Export Problem", ex.Message, MessageBoxButtons.OK).ShowDialog();
             }
             finally
             {

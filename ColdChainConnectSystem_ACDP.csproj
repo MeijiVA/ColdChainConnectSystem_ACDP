@@ -264,6 +264,18 @@
     <Compile Include="AppForms\MainPanel\Inventory\InventoryForm.Designer.cs">
       <DependentUpon>InventoryForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AppForms\MainPanel\Sales\InsertSalesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\MainPanel\Sales\InsertSalesForm.Designer.cs">
+      <DependentUpon>InsertSalesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForms\MainPanel\Sales\SalesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\MainPanel\Sales\SalesForm.Designer.cs">
+      <DependentUpon>SalesForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AppForms\MainPanel\SearchUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -407,6 +419,12 @@
     <EmbeddedResource Include="AppForms\MainPanel\Inventory\InventoryForm.resx">
       <DependentUpon>InventoryForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\MainPanel\Sales\InsertSalesForm.resx">
+      <DependentUpon>InsertSalesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\MainPanel\Sales\SalesForm.resx">
+      <DependentUpon>SalesForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AppForms\MainPanel\SearchUC.resx">
       <DependentUpon>SearchUC.cs</DependentUpon>
     </EmbeddedResource>
@@ -541,6 +559,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="AppForms\Header\Audit\" />
+    <Folder Include="AppForms\MainPanel\Customer\" />
+    <Folder Include="AppForms\MainPanel\Supplier\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\MaleIcon.png" />

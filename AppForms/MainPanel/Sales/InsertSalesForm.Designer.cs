@@ -1,4 +1,4 @@
-﻿namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
+﻿namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
 {
     partial class AddItemSalesForm
     {
@@ -309,7 +309,7 @@
             this.lbl.Name = "lbl";
             this.lbl.Size = new System.Drawing.Size(758, 55);
             this.lbl.TabIndex = 1;
-            this.lbl.Text = "     Add Item (Inventory)";
+            this.lbl.Text = "     Insert Transaction (Sales)";
             this.lbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lbl.TextColor = System.Drawing.Color.White;
             this.lbl.UseMnemonic = false;
@@ -334,7 +334,7 @@
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // AddItemInventoryForm
+            // AddItemSalesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -358,7 +358,7 @@
             this.Controls.Add(this.lbl);
             this.Controls.Add(this.btnAdd);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "AddItemInventoryForm";
+            this.Name = "AddItemSalesForm";
             this.Padding = new System.Windows.Forms.Padding(20);
             this.Text = "AddItemInventoryForm";
             this.Load += new System.EventHandler(this.AddItemInventoryForm_Load);

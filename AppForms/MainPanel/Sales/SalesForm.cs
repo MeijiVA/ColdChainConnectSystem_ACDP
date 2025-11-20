@@ -6,7 +6,7 @@ using System;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
+namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
 {
     public partial class SalesForm : Form
     {

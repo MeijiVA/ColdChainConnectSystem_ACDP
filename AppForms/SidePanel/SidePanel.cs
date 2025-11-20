@@ -1,18 +1,9 @@
 ﻿using ColdChainConnectSystem_ACDP.AppForms.MainPanel.Dashboard;
-using ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory;
 using ColdChainConnectSystem_ACDP.ClassResources;
 using ColdChainConnectSystem_ACDP.ClassResources.Instances;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolTip;
 
 namespace ColdChainConnectSystem_ACDP.AppForms.SidePanel
 {
@@ -27,10 +18,10 @@ namespace ColdChainConnectSystem_ACDP.AppForms.SidePanel
         private void SelectedTab(Button b)
         {
             btnDashboard.BackColor = Color.White;
-            btnInvMan.BackColor = Color.White; 
+            btnInvMan.BackColor = Color.White;
             btnSupMan.BackColor = Color.White;
-            btnSalesMan.BackColor = Color.White;  
-            btnCusMan.BackColor = Color.White; 
+            btnSalesMan.BackColor = Color.White;
+            btnCusMan.BackColor = Color.White;
             btnEmpMan.BackColor = Color.White;
 
             btnDashboard.ForeColor = dc.SetCustomColor(baseblue);
@@ -53,7 +44,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.SidePanel
             btnEmpMan.Show();//unused
             switch (LoginForm.verify)
             {
-                
+
                 case "admin":
                     break;
                 case "assist":
@@ -73,7 +64,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.SidePanel
             //NOTE ASSIST = DASHBOARD, INV, SUPPLIER, SALES, CUST
             //NOTE SALES = DASHBOARD, SALES, INV
             //NOTE INV = DASHBOARD,INV, SUPPLIER
-            dc.SetDisplayRectangle(btnDashboard,0,50,0,0);
+            dc.SetDisplayRectangle(btnDashboard, 0, 50, 0, 0);
             dc.SetDisplayRectangle(btnInvMan, 0, 50, 0, 0);
             dc.SetDisplayRectangle(btnSupMan, 0, 50, 0, 0);
             dc.SetDisplayRectangle(btnSalesMan, 0, 50, 0, 0);
@@ -87,7 +78,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.SidePanel
 
         private void dashboardbtn_Click(object sender, EventArgs e)
         {
-            
+
             SelectedTab(btnDashboard);
             MainInstance.i.NavigateTo(new DashoardForm());
             CurrentFormClass.setPreviousFormTo("dbform");
@@ -125,6 +116,6 @@ namespace ColdChainConnectSystem_ACDP.AppForms.SidePanel
             MainInstance.i.NavigateTo(InventoryInstance.i = new InventoryForm());
         }
 
- 
+
     }
 }

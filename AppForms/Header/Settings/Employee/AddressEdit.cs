@@ -1,12 +1,5 @@
 ﻿using ColdChainConnectSystem_ACDP.ClassResources;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.Employee
@@ -31,7 +24,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.Employee
             {
                 string[] current = i.Split(',');
                 string selected = " " + cbxProvince.Texts;
-                   if (current[1].Equals(selected))
+                if (current[1].Equals(selected))
                 {
                     cbxCity.Items.Add(current[0]);
                 }

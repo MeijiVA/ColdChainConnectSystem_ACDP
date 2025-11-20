@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
+﻿using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ColdChainConnectSystem_ACDP
@@ -17,7 +11,7 @@ namespace ColdChainConnectSystem_ACDP
         public abstract void SetDisplayRectangle(Button b);
         public abstract void SetDisplayRectangle(Button p, int arc1, int arc2, int arc3, int arc4);
         public abstract void SetDisplayRectangle(Label l, int arc1, int arc2, int arc3, int arc4);
-        public abstract void SetDisplayRectangle(Panel p,int arc1,int arc2,int arc3,int arc4);
+        public abstract void SetDisplayRectangle(Panel p, int arc1, int arc2, int arc3, int arc4);
         public abstract void SetDisplayRectangle(TextBox t, int arc1, int arc2, int arc3, int arc4);
         public abstract void SetDisplayRectangle(Form f, int arc1, int arc2, int arc3, int arc4);
         public abstract Image SetImageOpacity(Image image, float opacity);
