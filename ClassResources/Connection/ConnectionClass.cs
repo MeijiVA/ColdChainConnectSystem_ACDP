@@ -1,8 +1,9 @@
-﻿using ColdChainConnectSystem_ACDP.Popup;
-using System;
+﻿using System;
 using System.Data.SqlClient;
-using System.IO;
 using System.Windows.Forms;
+using System.IO;
+using ColdChainConnectSystem_ACDP.Popup;
+using System.Drawing;
 
 namespace ColdChainConnectSystem_ACDP.ClassResources
 {
@@ -82,68 +83,68 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                 }
             }
             //empid,username,fname,mname,lname,contnum,address,age,dob,position,status 
-            try
-            {
-                string[] token = input.Split(',');
-                username = token[0];
-                pass = token[1];
-                query = @"SELECT empid, username, fname, mname, lname, contnum,"
-                        + "address, age, dob, position, status, sex, email FROM Employees";
-                SqlConnection con = Connection();
-                using (SqlCommand cmd = new SqlCommand(query, con))
+                try
                 {
-                    con.Open();
-                    using (var reader = cmd.ExecuteReader())
+                    string[] token = input.Split(',');
+                    username = token[0];
+                    pass = token[1];
+                    query = @"SELECT empid, username, fname, mname, lname, contnum,"
+                            + "address, age, dob, position, status, sex, email FROM Employees";
+                    SqlConnection con = Connection();
+                    using (SqlCommand cmd = new SqlCommand(query, con))
                     {
-                        while (reader.Read())
+                        con.Open();
+                        using (var reader = cmd.ExecuteReader())
                         {
-                            if (username.Equals(reader[1].ToString()))
+                            while (reader.Read())
                             {
-                                empid = reader[0].ToString();
-                                username = reader[1].ToString();
-                                fname = reader[2].ToString();
-                                mname = reader[3].ToString();
-                                lname = reader[4].ToString();
-                                contnum = reader[5].ToString();
-                                address = reader[6].ToString();
-                                age = reader[7].ToString();
-                                dob = reader[8].ToString();
-                                position = reader[9].ToString();
-                                status = reader[10].ToString();
-                                sex = reader[11].ToString();
-                                email = reader[12].ToString();
-
-                                if (status.Equals("Inactive"))
+                                if (username.Equals(reader[1].ToString()))
                                 {
-                                    throw new InactiveException("Account's Status is INACTIVE, Please contact an Administrator.");
-                                }
+                                    empid = reader[0].ToString();
+                                    username = reader[1].ToString();
+                                    fname = reader[2].ToString();
+                                    mname = reader[3].ToString();
+                                    lname = reader[4].ToString();
+                                    contnum = reader[5].ToString();
+                                    address = reader[6].ToString();
+                                    age = reader[7].ToString();
+                                    dob = reader[8].ToString();
+                                    position = reader[9].ToString();
+                                    status = reader[10].ToString();
+                                    sex = reader[11].ToString();
+                                    email = reader[12].ToString();
 
-                                //NOTE not needed, bat ka pa gagawa ganto kung pwede mo naman return nalang ung position haha....
-                                switch (position)
-                                {
-                                    case "Administrator":
-                                        return "admin";
-                                    case "Sales":
-                                        return "sales";
-                                    case "Assistant":
-                                        return "assist";
-                                    case "Inventory":
-                                        return "inv";
-                                    default:
-                                        throw new UnknownPositionException("Account has an undefined Position, Please contact an Administrator.");
+                                    if (status.Equals("Inactive"))
+                                    {
+                                        throw new InactiveException("Account's Status is INACTIVE, Please contact an Administrator.");
+                                    }
+
+                                    //NOTE not needed, bat ka pa gagawa ganto kung pwede mo naman return nalang ung position haha....
+                                    switch (position)
+                                    {
+                                        case "Administrator":
+                                            return "admin";
+                                        case "Sales":
+                                            return "sales";
+                                        case "Assistant":
+                                            return "assist";
+                                        case "Inventory":
+                                            return "inv";
+                                        default:
+                                            throw new UnknownPositionException("Account has an undefined Position, Please contact an Administrator.");
+                                    }
                                 }
                             }
                         }
+                        con.Close();
                     }
-                    con.Close();
                 }
-            }
-            catch (FileNotFoundException)
-            {
-                FileNotFound();
-            }
-            catch (System.Data.SqlClient.SqlException e)
-            {
+                catch (FileNotFoundException)
+                {
+                    FileNotFound();
+                }
+                catch (System.Data.SqlClient.SqlException e)
+                {
                 //if not found
                 if (e.Message.Contains("Server"))
                 {
@@ -153,7 +154,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                 // if credentials bad
                 else if (e.Message.Contains("Login"))
                 {
-                    new CustomMessageBox("Credentials", "Invalid Credentials.").ShowDialog();
+                   new CustomMessageBox("Credentials", "Invalid Credentials.").ShowDialog();
                 }
                 else
                 {
@@ -161,20 +162,20 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                 }
 
 
-            }
-            catch (InactiveException e)
-            {
+                }
+                catch (InactiveException e)
+                {
                 new CustomMessageBox("Inactive", e.Message).ShowDialog();
-            }
-            catch (UnknownPositionException e)
-            {
+                }
+                catch (UnknownPositionException e)
+                {
                 new CustomMessageBox("Position Problem", e.Message).ShowDialog();
-            }
-            catch (Exception e)
-            {
+                }
+                catch (Exception e)
+                {
                 new CustomMessageBox("Exception", e.Message).ShowDialog();
-            }
-            return "default";
+                }
+        return "default";
         }
 
         public static void FileNotFound()
@@ -204,7 +205,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                 }
 
             }
-            catch (Exception e)
+            catch(Exception e)
             {
                 new CustomMessageBox("File Not Found", e.Message, MessageBoxButtons.OK).ShowDialog();
             }

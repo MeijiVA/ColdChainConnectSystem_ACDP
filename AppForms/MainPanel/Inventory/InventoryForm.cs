@@ -1,18 +1,27 @@
 ﻿using ColdChainConnectSystem_ACDP.ClassResources;
+using ColdChainConnectSystem_ACDP.ClassResources.Connection;
 using ColdChainConnectSystem_ACDP.ClassResources.Display;
 using ColdChainConnectSystem_ACDP.ClassResources.Display.Tables;
 using ColdChainConnectSystem_ACDP.Popup;
 using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
 using System.Drawing;
+using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
+using Z.BulkOperations.Internal.InformationSchema;
 
 namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
 {
-    public partial class SalesForm : Form
+    public partial class InventoryForm : Form
     {
         int currentPageIndex = 0;
-        public int totalPages = 0;
-        public SalesForm()
+        public int totalPages = 0 ;
+        public InventoryForm()
         {
             InitializeComponent();
         }
@@ -67,7 +76,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
 
         private void btnPrev_Click(object sender, EventArgs e)
         {
-            if ((SearchBar.txtSearch.Text.Equals("Search Term") || SearchBar.txtSearch.Text.Equals("")) && (currentPageIndex > 1) || (SelectedFilterClass.SelectedFilter.Equals("") && (currentPageIndex > 1)))
+            if ((SearchBar.txtSearch.Text.Equals("Search Term") || SearchBar.txtSearch.Text.Equals("")) && (currentPageIndex  > 1) || (SelectedFilterClass.SelectedFilter.Equals("") && (currentPageIndex > 1)))
             {
                 dgvTable.Rows.Clear();
                 lblPageNum.Text = (currentPageIndex -= 1).ToString();
@@ -135,7 +144,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
         {
             if (dgvTable.Columns[e.ColumnIndex].Name == "deleteCol")
             {
-                if (new CustomMessageBox("Delete Row", "Are you sure you want to delete this item from the Database?", MessageBoxButtons.OKCancel).ShowDialog() == DialogResult.Yes)
+                if (new CustomMessageBox("Delete Row", "Are you sure you want to delete this item from the Database?",MessageBoxButtons.OKCancel).ShowDialog() == DialogResult.Yes)
                 {
                     dgvTable.Rows.RemoveAt(e.RowIndex);
                 }

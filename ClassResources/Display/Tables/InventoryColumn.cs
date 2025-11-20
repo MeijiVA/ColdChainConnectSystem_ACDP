@@ -1,4 +1,10 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Drawing;
 
 namespace ColdChainConnectSystem_ACDP.ClassResources.Display
 {
@@ -25,9 +31,9 @@ namespace ColdChainConnectSystem_ACDP.ClassResources.Display
 
 
 
-        public static DataGridViewTextBoxColumn columnSkuCode()
+        public static DataGridViewTextBoxColumn columnSkuCode() 
         {
-
+            
             DataGridViewTextBoxColumn sku = new DataGridViewTextBoxColumn();
             sku.HeaderText = "SKU Code";
             sku.Name = "skucode";

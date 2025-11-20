@@ -1,9 +1,20 @@
-﻿using ColdChainConnectSystem_ACDP.AppForms.MainPanel.Dashboard;
-using ColdChainConnectSystem_ACDP.ClassResources;
-using ColdChainConnectSystem_ACDP.ClassResources.Instances;
-using System;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
+using System.Linq;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
+using ColdChainConnectSystem_ACDP.ClassResources.Instances;
+using ColdChainConnectSystem_ACDP.AppForms.MainPanel.Dashboard;
+using ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory;
+using ColdChainConnectSystem_ACDP.ClassResources;
+using ColdChainConnectSystem_ACDP.AppForms.MainPanel.Settings;
 
 namespace ColdChainConnectSystem_ACDP
 {
@@ -13,7 +24,7 @@ namespace ColdChainConnectSystem_ACDP
         public MainForm()
         {
             InitializeComponent();
-
+            
         }
 
         private void MainForm_Load(object sender, EventArgs e)

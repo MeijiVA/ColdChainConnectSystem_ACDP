@@ -1,6 +1,9 @@
 ﻿using ColdChainConnectSystem_ACDP.Popup;
+using System;
 using System.Data.SqlClient;
+using System.IO;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace ColdChainConnectSystem_ACDP.ClassResources
 {
@@ -50,7 +53,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                         cmb.ShowDialog();
                         ConnectionClass.pass = newp.Text;
                         return true;
-
+                          
                     }
                     else
                     {

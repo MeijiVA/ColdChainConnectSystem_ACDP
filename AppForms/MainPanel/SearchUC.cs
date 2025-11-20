@@ -3,7 +3,20 @@ using ColdChainConnectSystem_ACDP.ClassResources.Connection;
 using ColdChainConnectSystem_ACDP.ClassResources.Display;
 using ColdChainConnectSystem_ACDP.ClassResources.Instances;
 using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Data.Common;
+using System.Diagnostics;
+using System.Drawing;
+using System.Drawing.Drawing2D;
+using System.IdentityModel.Tokens;
+using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
 {
@@ -34,7 +47,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
             {
                 case "Filter":
                 case "All":
-                    SelectedFilterClass.SelectedFilter = "";
+                SelectedFilterClass.SelectedFilter = "";
                     break;
                 case "ID":
                     SelectedFilterClass.SelectedFilter = "numid";
@@ -51,7 +64,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
                 case "Expry":
                     SelectedFilterClass.SelectedFilter = "expiry";
                     break;
-                    //FOR INVENTORY
+                //FOR INVENTORY
 
 
             }

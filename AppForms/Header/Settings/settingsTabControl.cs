@@ -1,7 +1,16 @@
 ﻿using ColdChainConnectSystem_ACDP.ClassResources;
+using ColdChainConnectSystem_ACDP.ClassResources.Instances;
 using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
 using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Settings
 {
@@ -19,28 +28,28 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Settings
                 Clickable[i] = true;
             }
 
-            LabelStatus("hide", lblExtra4, 3, "");
-            LabelStatus("hide", lblExtra5, 4, "");
-            LabelStatus("hide", lblExtra6, 5, "");
+            LabelStatus("hide", lblExtra4,3, "");
+            LabelStatus("hide", lblExtra5,4, "");
+            LabelStatus("hide", lblExtra6,5, "");
 
             switch (LoginForm.verify)
             {
-                case "admin":
-                    LabelStatus("show", lblPersDetail, 0, "Personal Detail");
+            case "admin":
+                    LabelStatus("show", lblPersDetail, 0,"Personal Detail");
                     LabelStatus("show", lblSecurity, 1, "Security");
                     LabelStatus("show", lblEmployee, 2, "Employee Management");
                     break;
-                case "assist":
-                case "sales":
-                case "inv":
+            case "assist":
+            case "sales":
+            case "inv":
                     LabelStatus("show", lblPersDetail, 0, "Personal Detail");
                     LabelStatus("show", lblSecurity, 1, "Security");
-                    LabelStatus("hide", lblEmployee, 2, "");
+                    LabelStatus("hide", lblEmployee, 2,"");
                     break;
             }
         }
 
-        private void LabelStatus(String state, Label l, int i, String txt)
+        private void LabelStatus(String state, Label l, int i,String txt)
         {
             switch (state)
             {
@@ -82,7 +91,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Settings
         {
             if (Clickable[1] == true)
             {
-
+                
                 LabelClick(lblSecurity);
                 SettingsInstance.i.NavigateTo(SettingForm.secf);
             }

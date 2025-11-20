@@ -1,7 +1,15 @@
 ﻿using ColdChainConnectSystem_ACDP.ClassResources;
 using ColdChainConnectSystem_ACDP.Popup;
 using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 
 namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.PersonalDetails
 {
@@ -12,10 +20,10 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.PersonalDetails
             InitializeComponent();
 
         }
-        public string PasswordLength
+        public string PasswordLength 
         {
             get { return lblPassword.Text; }
-            set { lblPassword.Text = value; }
+            set { lblPassword.Text = value;} 
         }
         public string UsernameView
         {
@@ -31,7 +39,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.PersonalDetails
 
         private void btnPassEdit_Click(object sender, EventArgs e)
         {
-            pnlPassword.Hide();
+            pnlPassword.Hide(); 
             pnlPasswordEdit.Show();
         }
 
@@ -55,14 +63,14 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.PersonalDetails
 
         private void btnConfirmUser_Click(object sender, EventArgs e)
         {
-            switch (new CustomMessageBox("Change Username", "Are you sure you want to change your Username?", MessageBoxButtons.OKCancel).ShowDialog())
+            switch (new CustomMessageBox("Change Username", "Are you sure you want to change your Username?", MessageBoxButtons.OKCancel).ShowDialog()) 
             {
                 case DialogResult.OK:
                     if (!tboxUsername.Text.Equals("") || !tboxPassUser.Text.Equals("") || !tboxRePassUser.Text.Equals(""))
                     {
                         if (ChangeCredentialsClass.SameUsernameWith(tboxUsername) != true)
                         {
-                            if (ChangeCredentialsClass.ChangeUsername(tboxUsername, tboxPassUser, tboxRePassUser))
+                            if(ChangeCredentialsClass.ChangeUsername(tboxUsername, tboxPassUser, tboxRePassUser))
                             {
                                 lblUsername.Text = ConnectionClass.username;
                                 tboxUsername.Text = "";
@@ -81,7 +89,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.PersonalDetails
                     {
                         new CustomMessageBox("Change Username", "Please insert the required Values.").ShowDialog();
                     }
-                    break;
+                        break;
                 case DialogResult.Cancel:
                     break;
             }
@@ -89,7 +97,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.PersonalDetails
 
         private void btnConfirmPass_Click(object sender, EventArgs e)
         {
-
+            
             switch (new CustomMessageBox("Change Password", "Are you sure you want to change your Password?", MessageBoxButtons.OKCancel).ShowDialog())
             {
                 case DialogResult.OK:

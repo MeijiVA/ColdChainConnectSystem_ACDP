@@ -1,9 +1,14 @@
 ﻿using System;
-using System.ComponentModel;
-using System.Drawing;
-using System.Drawing.Design;
-using System.Drawing.Drawing2D;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
 using System.Windows.Forms;
+using System.Drawing;
+using System.Drawing.Drawing2D;
+using System.ComponentModel;
+using System.Drawing.Design;
 
 namespace ColdChainConnectSystem_ACDP.Materials
 {
@@ -78,7 +83,7 @@ namespace ColdChainConnectSystem_ACDP.Materials
             this.Load += new System.EventHandler(this.RJComboBox_Load);
             this.borderRadius = 0;
             this.ResumeLayout();
-
+            
             AdjustComboBoxDimensions();
 
         }

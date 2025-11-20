@@ -4,8 +4,20 @@ using ColdChainConnectSystem_ACDP.AppForms.MainPanel.Settings;
 using ColdChainConnectSystem_ACDP.ClassResources;
 using ColdChainConnectSystem_ACDP.ClassResources.Instances;
 using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
+using System.Linq;
+using System.Net;
+using System.Security.Principal;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace ColdChainConnectSystem_ACDP
 {
@@ -32,8 +44,8 @@ namespace ColdChainConnectSystem_ACDP
         {
             this.Icon = ColdChainConnectSystem_ACDP.Properties.Resources.CCC_Logo;
         }
-
-        private void setupMainForm()
+        
+        private void setupMainForm() 
         {
             MainInstance.i.DisplayPanel.Controls.Clear();
         }
@@ -70,42 +82,42 @@ namespace ColdChainConnectSystem_ACDP
             MainInstance.i = new MainForm();
             SettingsInstance.i = new SettingForm();
 
-            string accountCredentials = (txtUser.Texts = "AntonDelaPena") + "," + (txtPass.Texts = "123123123");
-            verify = ConnectionClass.LoginAccount(accountCredentials);
-            switch (verify)
-            {
-                case "admin":
-                    setupMainForm();
-                    this.Hide();
-                    MainInstance.i.NavigateTo(new DashoardForm());
-                    MainFormShow(MainInstance.i);
-                    break;
+                string accountCredentials = (txtUser.Texts = "AntonDelaPena") + "," + (txtPass.Texts = "123123123");
+                verify = ConnectionClass.LoginAccount(accountCredentials);
+                switch (verify)
+                {
+                    case "admin":
+                        setupMainForm();
+                        this.Hide();
+                        MainInstance.i.NavigateTo(new DashoardForm());
+                        MainFormShow(MainInstance.i);
+                        break;
 
-                case "sales":
-                    setupMainForm();
+                    case "sales":
+                        setupMainForm();
 
-                    this.Hide();
-                    MainFormShow(MainInstance.i);
-                    break;
+                        this.Hide();
+                        MainFormShow(MainInstance.i);
+                        break;
 
-                case "assist":
-                    setupMainForm();
+                    case "assist":
+                        setupMainForm();
 
-                    this.Hide();
-                    MainFormShow(MainInstance.i);
-                    break;
+                        this.Hide();
+                        MainFormShow(MainInstance.i);
+                        break;
 
-                case "inv":
-                    setupMainForm();
+                    case "inv":
+                        setupMainForm();
 
-                    this.Hide();
-                    MainFormShow(MainInstance.i);
-                    break;
+                        this.Hide();
+                        MainFormShow(MainInstance.i);
+                        break;
 
-                case "default":
-                    break;
+                    case "default":
+                        break;
 
-            }
+                }
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -177,7 +189,7 @@ namespace ColdChainConnectSystem_ACDP
             }
             else if (toggle)
             {
-
+                
                 btnTogglePassword.BackgroundImage = dc.SetImageOpacity(Properties.Resources.passhide, 0.50F);
                 txtPass.PasswordChar = true;
                 toggle = false;
@@ -186,7 +198,7 @@ namespace ColdChainConnectSystem_ACDP
 
         private void txtUser_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            if(e.KeyCode == Keys.Enter)
             {
                 e.SuppressKeyPress = true; // Prevents the default Enter key behavior (e.g., beep, new line)
                 SelectNextControl(ActiveControl, true, true, true, true);
