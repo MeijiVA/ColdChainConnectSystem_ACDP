@@ -60,6 +60,13 @@
             this.label10 = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
             this.lbluser = new System.Windows.Forms.Label();
+            this.btnEdit = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
+            this.btnConfirm = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
+            this.btnCancel = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
+            this.btnEdit2 = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
+            this.btnConfirm2 = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
+            this.btnCancel2 = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
+            this.customTextBox1 = new CustomControls.RJControls.CustomTextBox();
             this.pnlPassword.SuspendLayout();
             this.pnlPasswordEdit.SuspendLayout();
             this.pnlUsernameEdit.SuspendLayout();
@@ -68,6 +75,7 @@
             // 
             // pnlPassword
             // 
+            this.pnlPassword.Controls.Add(this.btnEdit2);
             this.pnlPassword.Controls.Add(this.label2);
             this.pnlPassword.Controls.Add(this.btnPassEdit);
             this.pnlPassword.Controls.Add(this.lblPassword);
@@ -75,7 +83,7 @@
             this.pnlPassword.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlPassword.Location = new System.Drawing.Point(0, 175);
             this.pnlPassword.Name = "pnlPassword";
-            this.pnlPassword.Size = new System.Drawing.Size(742, 75);
+            this.pnlPassword.Size = new System.Drawing.Size(905, 75);
             this.pnlPassword.TabIndex = 6;
             // 
             // label2
@@ -89,7 +97,7 @@
             // 
             // btnPassEdit
             // 
-            this.btnPassEdit.Location = new System.Drawing.Point(696, 7);
+            this.btnPassEdit.Location = new System.Drawing.Point(570, 8);
             this.btnPassEdit.Name = "btnPassEdit";
             this.btnPassEdit.Size = new System.Drawing.Size(36, 23);
             this.btnPassEdit.TabIndex = 63;
@@ -120,6 +128,8 @@
             // 
             // pnlPasswordEdit
             // 
+            this.pnlPasswordEdit.Controls.Add(this.btnCancel2);
+            this.pnlPasswordEdit.Controls.Add(this.btnConfirm2);
             this.pnlPasswordEdit.Controls.Add(this.btnConfirmPass);
             this.pnlPasswordEdit.Controls.Add(this.btnCancelPass);
             this.pnlPasswordEdit.Controls.Add(this.tboxRePassEdit);
@@ -128,17 +138,16 @@
             this.pnlPasswordEdit.Controls.Add(this.label8);
             this.pnlPasswordEdit.Controls.Add(this.label7);
             this.pnlPasswordEdit.Controls.Add(this.label5);
-            this.pnlPasswordEdit.Controls.Add(this.label3);
             this.pnlPasswordEdit.Controls.Add(this.label9);
             this.pnlPasswordEdit.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlPasswordEdit.Location = new System.Drawing.Point(0, 250);
             this.pnlPasswordEdit.Name = "pnlPasswordEdit";
-            this.pnlPasswordEdit.Size = new System.Drawing.Size(742, 100);
+            this.pnlPasswordEdit.Size = new System.Drawing.Size(905, 100);
             this.pnlPasswordEdit.TabIndex = 8;
             // 
             // btnConfirmPass
             // 
-            this.btnConfirmPass.Location = new System.Drawing.Point(696, 66);
+            this.btnConfirmPass.Location = new System.Drawing.Point(570, 67);
             this.btnConfirmPass.Name = "btnConfirmPass";
             this.btnConfirmPass.Size = new System.Drawing.Size(36, 23);
             this.btnConfirmPass.TabIndex = 72;
@@ -148,7 +157,7 @@
             // 
             // btnCancelPass
             // 
-            this.btnCancelPass.Location = new System.Drawing.Point(696, 6);
+            this.btnCancelPass.Location = new System.Drawing.Point(570, 20);
             this.btnCancelPass.Name = "btnCancelPass";
             this.btnCancelPass.Size = new System.Drawing.Size(36, 23);
             this.btnCancelPass.TabIndex = 65;
@@ -223,7 +232,7 @@
             // 
             this.label3.BackColor = System.Drawing.SystemColors.Control;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 0.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(0, 97);
+            this.label3.Location = new System.Drawing.Point(0, 347);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(742, 3);
             this.label3.TabIndex = 65;
@@ -242,6 +251,9 @@
             // 
             // pnlUsernameEdit
             // 
+            this.pnlUsernameEdit.Controls.Add(this.customTextBox1);
+            this.pnlUsernameEdit.Controls.Add(this.btnCancel);
+            this.pnlUsernameEdit.Controls.Add(this.btnConfirm);
             this.pnlUsernameEdit.Controls.Add(this.btnConfirmUser);
             this.pnlUsernameEdit.Controls.Add(this.btnCancelUser);
             this.pnlUsernameEdit.Controls.Add(this.tboxRePassUser);
@@ -255,12 +267,12 @@
             this.pnlUsernameEdit.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlUsernameEdit.Location = new System.Drawing.Point(0, 75);
             this.pnlUsernameEdit.Name = "pnlUsernameEdit";
-            this.pnlUsernameEdit.Size = new System.Drawing.Size(742, 100);
+            this.pnlUsernameEdit.Size = new System.Drawing.Size(905, 100);
             this.pnlUsernameEdit.TabIndex = 10;
             // 
             // btnConfirmUser
             // 
-            this.btnConfirmUser.Location = new System.Drawing.Point(696, 71);
+            this.btnConfirmUser.Location = new System.Drawing.Point(725, 60);
             this.btnConfirmUser.Name = "btnConfirmUser";
             this.btnConfirmUser.Size = new System.Drawing.Size(36, 23);
             this.btnConfirmUser.TabIndex = 73;
@@ -270,7 +282,7 @@
             // 
             // btnCancelUser
             // 
-            this.btnCancelUser.Location = new System.Drawing.Point(696, 6);
+            this.btnCancelUser.Location = new System.Drawing.Point(725, 20);
             this.btnCancelUser.Name = "btnCancelUser";
             this.btnCancelUser.Size = new System.Drawing.Size(36, 23);
             this.btnCancelUser.TabIndex = 72;
@@ -315,7 +327,7 @@
             // 
             // tboxUsername
             // 
-            this.tboxUsername.Location = new System.Drawing.Point(108, 25);
+            this.tboxUsername.Location = new System.Drawing.Point(462, 28);
             this.tboxUsername.Name = "tboxUsername";
             this.tboxUsername.Size = new System.Drawing.Size(243, 20);
             this.tboxUsername.TabIndex = 75;
@@ -362,6 +374,7 @@
             // 
             // pnlUsername
             // 
+            this.pnlUsername.Controls.Add(this.btnEdit);
             this.pnlUsername.Controls.Add(this.btnUserEdit);
             this.pnlUsername.Controls.Add(this.label10);
             this.pnlUsername.Controls.Add(this.lblUsername);
@@ -369,12 +382,12 @@
             this.pnlUsername.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlUsername.Location = new System.Drawing.Point(0, 0);
             this.pnlUsername.Name = "pnlUsername";
-            this.pnlUsername.Size = new System.Drawing.Size(742, 75);
+            this.pnlUsername.Size = new System.Drawing.Size(905, 75);
             this.pnlUsername.TabIndex = 9;
             // 
             // btnUserEdit
             // 
-            this.btnUserEdit.Location = new System.Drawing.Point(696, 7);
+            this.btnUserEdit.Location = new System.Drawing.Point(424, 16);
             this.btnUserEdit.Name = "btnUserEdit";
             this.btnUserEdit.Size = new System.Drawing.Size(36, 23);
             this.btnUserEdit.TabIndex = 63;
@@ -412,6 +425,142 @@
             this.lbluser.TabIndex = 52;
             this.lbluser.Text = "  Username";
             // 
+            // btnEdit
+            // 
+            this.btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.btnEdit.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.btnEdit.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnEdit.BorderRadius = 15;
+            this.btnEdit.BorderSize = 0;
+            this.btnEdit.FlatAppearance.BorderSize = 0;
+            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEdit.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEdit.ForeColor = System.Drawing.Color.White;
+            this.btnEdit.Location = new System.Drawing.Point(767, 26);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(110, 30);
+            this.btnEdit.TabIndex = 73;
+            this.btnEdit.Text = "Edit";
+            this.btnEdit.TextColor = System.Drawing.Color.White;
+            this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.customButton1_Click);
+            // 
+            // btnConfirm
+            // 
+            this.btnConfirm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.btnConfirm.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.btnConfirm.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnConfirm.BorderRadius = 15;
+            this.btnConfirm.BorderSize = 0;
+            this.btnConfirm.FlatAppearance.BorderSize = 0;
+            this.btnConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfirm.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfirm.ForeColor = System.Drawing.Color.White;
+            this.btnConfirm.Location = new System.Drawing.Point(767, 13);
+            this.btnConfirm.Name = "btnConfirm";
+            this.btnConfirm.Size = new System.Drawing.Size(110, 30);
+            this.btnConfirm.TabIndex = 78;
+            this.btnConfirm.Text = "Confirm";
+            this.btnConfirm.TextColor = System.Drawing.Color.White;
+            this.btnConfirm.UseVisualStyleBackColor = false;
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.btnCancel.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.btnCancel.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnCancel.BorderRadius = 15;
+            this.btnCancel.BorderSize = 0;
+            this.btnCancel.FlatAppearance.BorderSize = 0;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.ForeColor = System.Drawing.Color.White;
+            this.btnCancel.Location = new System.Drawing.Point(767, 60);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(110, 30);
+            this.btnCancel.TabIndex = 79;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.TextColor = System.Drawing.Color.White;
+            this.btnCancel.UseVisualStyleBackColor = false;
+            // 
+            // btnEdit2
+            // 
+            this.btnEdit2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.btnEdit2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.btnEdit2.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnEdit2.BorderRadius = 15;
+            this.btnEdit2.BorderSize = 0;
+            this.btnEdit2.FlatAppearance.BorderSize = 0;
+            this.btnEdit2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEdit2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEdit2.ForeColor = System.Drawing.Color.White;
+            this.btnEdit2.Location = new System.Drawing.Point(767, 26);
+            this.btnEdit2.Name = "btnEdit2";
+            this.btnEdit2.Size = new System.Drawing.Size(110, 30);
+            this.btnEdit2.TabIndex = 65;
+            this.btnEdit2.Text = "Edit";
+            this.btnEdit2.TextColor = System.Drawing.Color.White;
+            this.btnEdit2.UseVisualStyleBackColor = false;
+            // 
+            // btnConfirm2
+            // 
+            this.btnConfirm2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.btnConfirm2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.btnConfirm2.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnConfirm2.BorderRadius = 15;
+            this.btnConfirm2.BorderSize = 0;
+            this.btnConfirm2.FlatAppearance.BorderSize = 0;
+            this.btnConfirm2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfirm2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfirm2.ForeColor = System.Drawing.Color.White;
+            this.btnConfirm2.Location = new System.Drawing.Point(767, 15);
+            this.btnConfirm2.Name = "btnConfirm2";
+            this.btnConfirm2.Size = new System.Drawing.Size(110, 30);
+            this.btnConfirm2.TabIndex = 73;
+            this.btnConfirm2.Text = "Confirm";
+            this.btnConfirm2.TextColor = System.Drawing.Color.White;
+            this.btnConfirm2.UseVisualStyleBackColor = false;
+            // 
+            // btnCancel2
+            // 
+            this.btnCancel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.btnCancel2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.btnCancel2.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnCancel2.BorderRadius = 15;
+            this.btnCancel2.BorderSize = 0;
+            this.btnCancel2.FlatAppearance.BorderSize = 0;
+            this.btnCancel2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel2.ForeColor = System.Drawing.Color.White;
+            this.btnCancel2.Location = new System.Drawing.Point(767, 60);
+            this.btnCancel2.Name = "btnCancel2";
+            this.btnCancel2.Size = new System.Drawing.Size(110, 30);
+            this.btnCancel2.TabIndex = 74;
+            this.btnCancel2.Text = "Cancel";
+            this.btnCancel2.TextColor = System.Drawing.Color.White;
+            this.btnCancel2.UseVisualStyleBackColor = false;
+            // 
+            // customTextBox1
+            // 
+            this.customTextBox1.BackColor = System.Drawing.SystemColors.Window;
+            this.customTextBox1.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.customTextBox1.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.customTextBox1.BorderRadius = 0;
+            this.customTextBox1.BorderSize = 2;
+            this.customTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.customTextBox1.Location = new System.Drawing.Point(108, 10);
+            this.customTextBox1.Multiline = false;
+            this.customTextBox1.Name = "customTextBox1";
+            this.customTextBox1.Padding = new System.Windows.Forms.Padding(7);
+            this.customTextBox1.PasswordChar = false;
+            this.customTextBox1.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.customTextBox1.PlaceholderText = "";
+            this.customTextBox1.Size = new System.Drawing.Size(243, 31);
+            this.customTextBox1.TabIndex = 80;
+            this.customTextBox1.Texts = "";
+            this.customTextBox1.UnderlinedStyle = false;
+            // 
             // SecurityDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -421,8 +570,9 @@
             this.Controls.Add(this.pnlPassword);
             this.Controls.Add(this.pnlUsernameEdit);
             this.Controls.Add(this.pnlUsername);
+            this.Controls.Add(this.label3);
             this.Name = "SecurityDetails";
-            this.Size = new System.Drawing.Size(742, 410);
+            this.Size = new System.Drawing.Size(905, 523);
             this.Load += new System.EventHandler(this.SecurityDetails_Load);
             this.pnlPassword.ResumeLayout(false);
             this.pnlPasswordEdit.ResumeLayout(false);
@@ -467,5 +617,12 @@
         private System.Windows.Forms.Button btnCancelPass;
         private System.Windows.Forms.Button btnConfirmUser;
         private System.Windows.Forms.Button btnCancelUser;
+        private Materials.CustomButton btnEdit;
+        private Materials.CustomButton btnCancel;
+        private Materials.CustomButton btnConfirm;
+        private Materials.CustomButton btnEdit2;
+        private Materials.CustomButton btnConfirm2;
+        private Materials.CustomButton btnCancel2;
+        private CustomControls.RJControls.CustomTextBox customTextBox1;
     }
 }
