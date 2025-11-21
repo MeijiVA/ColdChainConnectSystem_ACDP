@@ -326,7 +326,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer
             // 
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.customerid.DefaultCellStyle = dataGridViewCellStyle3;
-            this.customerid.HeaderText = "Customer ID";
+            this.customerid.HeaderText = "Cust. ID";
             this.customerid.MinimumWidth = 2;
             this.customerid.Name = "customerid";
             this.customerid.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -336,7 +336,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer
             // 
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.customername.DefaultCellStyle = dataGridViewCellStyle4;
-            this.customername.HeaderText = "Customer Name";
+            this.customername.HeaderText = "Cust. Name";
             this.customername.Name = "customername";
             this.customername.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.customername.Width = 90;
@@ -345,7 +345,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer
             // 
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.phonenumber.DefaultCellStyle = dataGridViewCellStyle5;
-            this.phonenumber.HeaderText = "Phone Number";
+            this.phonenumber.HeaderText = "Phone #";
             this.phonenumber.Name = "phonenumber";
             this.phonenumber.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.phonenumber.Width = 70;
@@ -363,7 +363,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer
             // 
             dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.paymentterm.DefaultCellStyle = dataGridViewCellStyle7;
-            this.paymentterm.HeaderText = "Payment Term";
+            this.paymentterm.HeaderText = "Pymt. Term";
             this.paymentterm.Name = "paymentterm";
             this.paymentterm.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 

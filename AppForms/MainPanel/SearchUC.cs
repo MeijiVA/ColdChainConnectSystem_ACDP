@@ -217,7 +217,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
                         SelectedFilterClass.SelectedFilter = "";
                         break;
                     case "ID":
-                        SelectedFilterClass.SelectedFilter = "[numid]";
+                        SelectedFilterClass.SelectedFilter = "[NumID]";
                         break;
                     case "SupID":
                         SelectedFilterClass.SelectedFilter = "[SupplierID]";
@@ -283,17 +283,23 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
                     case "ID":
                         SelectedFilterClass.SelectedFilter = "[numid]";
                         break;
-                    case "SKU":
-                        SelectedFilterClass.SelectedFilter = "[skucode]";
+                    case "C.Name":
+                        SelectedFilterClass.SelectedFilter = "[CustomerName]";
                         break;
-                    case "Desc":
-                        SelectedFilterClass.SelectedFilter = "[Description]";
+                    case "Phone#":
+                        SelectedFilterClass.SelectedFilter = "[PhoneNumber]";
                         break;
-                    case "Qty":
-                        SelectedFilterClass.SelectedFilter = "[quantity]";
+                    case "Adrs.":
+                        SelectedFilterClass.SelectedFilter = "[Address]";
                         break;
-                    case "Expry":
-                        SelectedFilterClass.SelectedFilter = "[expiry]";
+                    case "PayTerm":
+                        SelectedFilterClass.SelectedFilter = "[PaymentTerm]";
+                        break;
+                    case "R.Date":
+                        SelectedFilterClass.SelectedFilter = "[RegistrationDate]";
+                        break;
+                    case "Status":
+                        SelectedFilterClass.SelectedFilter = "[Status]";
                         break;
                         //FOR SUPPLIER
                 }
@@ -314,15 +320,30 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
                     cbxFilter.Items.Add("Expry");
                     break;
                 case "supform":
-                    cbxFilter.Items.Add("Supplier Name");
+                    cbxFilter.Items.Add("SupID");
+                    cbxFilter.Items.Add("C.Name");
+                    cbxFilter.Items.Add("C.Person");
+                    cbxFilter.Items.Add("C.Num");
+                    cbxFilter.Items.Add("Adrs.");
+                    cbxFilter.Items.Add("PayTerm");
                     break;
 
                 case "salform":
-                    cbxFilter.Items.Add("Customer Name");
+                    cbxFilter.Items.Add("Sal.ID");
+                    cbxFilter.Items.Add("C.ID");
+                    cbxFilter.Items.Add("S.Date");
+                    cbxFilter.Items.Add("Qty");
+                    cbxFilter.Items.Add("Price");
+                    cbxFilter.Items.Add("Status");
                     break;
 
                 case "custform":
-                    cbxFilter.Items.Add("Customer Name");
+                    cbxFilter.Items.Add("C.Name");
+                    cbxFilter.Items.Add("Phone#");
+                    cbxFilter.Items.Add("Adrs.");
+                    cbxFilter.Items.Add("PayTerm");
+                    cbxFilter.Items.Add("R.Date");
+                    cbxFilter.Items.Add("Status");
                     break;
                 default:
                     break;
