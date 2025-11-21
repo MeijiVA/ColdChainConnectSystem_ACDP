@@ -28,6 +28,9 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Settings
                 Clickable[i] = true;
             }
 
+            LabelStatus("hide", lblPersDetail, 3, "");
+            LabelStatus("hide", lblSecurity, 4, "");
+            LabelStatus("hide", lblAudit, 5, "");
             LabelStatus("hide", lblExtra4,3, "");
             LabelStatus("hide", lblExtra5,4, "");
             LabelStatus("hide", lblExtra6,5, "");
@@ -37,14 +40,13 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Settings
             case "admin":
                     LabelStatus("show", lblPersDetail, 0,"Personal Detail");
                     LabelStatus("show", lblSecurity, 1, "Security");
-                    LabelStatus("show", lblEmployee, 2, "Employee Management");
+                    LabelStatus("show", lblAudit, 2, "Audit Log");
                     break;
             case "assist":
             case "sales":
             case "inv":
                     LabelStatus("show", lblPersDetail, 0, "Personal Detail");
                     LabelStatus("show", lblSecurity, 1, "Security");
-                    LabelStatus("hide", lblEmployee, 2,"");
                     break;
             }
         }
@@ -71,7 +73,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Settings
         {
             lblPersDetail.Location = new Point(lblPersDetail.Location.X, 0);
             lblSecurity.Location = new Point(lblSecurity.Location.X, 0);
-            lblEmployee.Location = new Point(lblEmployee.Location.X, 0);
+            lblAudit.Location = new Point(lblAudit.Location.X, 0);
             lblExtra4.Location = new Point(lblExtra4.Location.X, 0);
             lblExtra5.Location = new Point(lblExtra5.Location.X, 0);
             lblExtra6.Location = new Point(lblExtra6.Location.X, 0);
@@ -101,8 +103,8 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Settings
         {
             if (Clickable[2] == true)
             {
-                LabelClick(lblEmployee);
-                SettingsInstance.i.NavigateTo(SettingForm.empf);
+                LabelClick(lblExtra4);
+
             }
         }
 
@@ -110,7 +112,8 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Settings
         {
             if (Clickable[3] == true)
             {
-                LabelClick(lblExtra4);
+                LabelClick(lblAudit);
+                /*SettingsInstance.i.NavigateTo(SettingForm.empf);*/
             }
         }
 
@@ -130,5 +133,9 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Settings
             }
         }
 
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

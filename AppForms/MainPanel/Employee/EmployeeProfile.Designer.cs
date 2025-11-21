@@ -31,7 +31,7 @@
             this.empprofile = new System.Windows.Forms.Label();
             this.AddressUserControl = new ColdChainConnectSystem_ACDP.AppForms.Header.Settings.PersonalDetails.AddressInformation();
             this.PersonalUserControl = new ColdChainConnectSystem_ACDP.AppForms.Header.Settings.PersonalDetails.Personal_Information();
-            this.ContactUserControl = new ColdChainConnectSystem_ACDP.AppForms.Header.Settings.PersonalDetails.ContactInformation();
+            this.ContactUserControl = new ColdChainConnectSystem_ACDP.AppForms.Header.Settings.PersonalDetails.AccountInformation();
             this.lblEmpID = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -49,6 +49,7 @@
             // 
             // AddressUserControl
             // 
+            this.AddressUserControl.BackColor = System.Drawing.Color.White;
             this.AddressUserControl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.AddressUserControl.Barangay = "label2";
             this.AddressUserControl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -126,7 +127,7 @@
         private System.Windows.Forms.Label empprofile;
         private PersonalDetails.AddressInformation AddressUserControl;
         private PersonalDetails.Personal_Information PersonalUserControl;
-        private PersonalDetails.ContactInformation ContactUserControl;
+        private PersonalDetails.AccountInformation ContactUserControl;
         private System.Windows.Forms.Label lblEmpID;
     }
 }

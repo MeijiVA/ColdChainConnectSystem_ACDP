@@ -1,4 +1,5 @@
-﻿using ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer;
+﻿using ColdChainConnectSystem_ACDP.AppForms.Header.Settings.Employee;
+using ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer;
 using ColdChainConnectSystem_ACDP.AppForms.MainPanel.Dashboard;
 using ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory;
 using ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales;
@@ -53,7 +54,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.SidePanel
             btnSupMan.Show();
             btnSalesMan.Show();
             btnCusMan.Show();
-            btnEmpMan.Hide();//unused
+            btnEmpMan.Show();
             switch (LoginForm.verify)
             {
                 
@@ -128,7 +129,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.SidePanel
         {
             CurrentFormClass.setPreviousFormTo("empform");
             SelectedTab(btnEmpMan);
-            MainInstance.i.NavigateTo(InventoryInstance.i = new InventoryForm());
+            MainInstance.i.NavigateTo(EmployeeInstance.i = new EmployeeForm());
         }
 
  

@@ -130,7 +130,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 145);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(242, 53);
+            this.panel3.Size = new System.Drawing.Size(577, 53);
             this.panel3.TabIndex = 9;
             // 
             // customTextBox2
@@ -177,7 +177,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 39);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(242, 53);
+            this.panel2.Size = new System.Drawing.Size(577, 53);
             this.panel2.TabIndex = 8;
             // 
             // customTextBox1
@@ -253,7 +253,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(242, 39);
+            this.panel1.Size = new System.Drawing.Size(577, 39);
             this.panel1.TabIndex = 7;
             // 
             // label2
@@ -275,13 +275,14 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 92);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(242, 53);
+            this.panel4.Size = new System.Drawing.Size(577, 53);
             this.panel4.TabIndex = 10;
             // 
             // cbxCity
             // 
             this.cbxCity.BackColor = System.Drawing.Color.White;
             this.cbxCity.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.cbxCity.BorderRadius = 0;
             this.cbxCity.BorderSize = 1;
             this.cbxCity.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
             this.cbxCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
@@ -301,6 +302,7 @@
             // 
             this.cbxProvince.BackColor = System.Drawing.Color.White;
             this.cbxProvince.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.cbxProvince.BorderRadius = 0;
             this.cbxProvince.BorderSize = 1;
             this.cbxProvince.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
             this.cbxProvince.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
@@ -408,7 +410,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "AddressEdit";
-            this.Size = new System.Drawing.Size(242, 180);
+            this.Size = new System.Drawing.Size(577, 267);
             this.Load += new System.EventHandler(this.AddressEdit_Load);
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

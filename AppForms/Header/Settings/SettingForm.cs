@@ -23,7 +23,6 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Settings
         public SettingForm()
         {
             InitializeComponent();
-            dc.SetDisplayRectangle(setlbl, 50, 50, 50, 50);
         }
 
 

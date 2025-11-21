@@ -28,23 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.setlbl = new System.Windows.Forms.Label();
             this.tabsSetting = new ColdChainConnectSystem_ACDP.AppForms.MainPanel.Settings.settingsTabControl();
             this.pnlDisplaySettings = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
+            this.lblSettings = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
             this.SuspendLayout();
-            // 
-            // setlbl
-            // 
-            this.setlbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.setlbl.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.setlbl.ForeColor = System.Drawing.Color.White;
-            this.setlbl.Location = new System.Drawing.Point(18, 15);
-            this.setlbl.Name = "setlbl";
-            this.setlbl.Size = new System.Drawing.Size(765, 44);
-            this.setlbl.TabIndex = 0;
-            this.setlbl.Text = "   Settings";
-            this.setlbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.setlbl.Click += new System.EventHandler(this.setlbl_Click);
             // 
             // tabsSetting
             // 
@@ -69,6 +56,24 @@
             this.pnlDisplaySettings.TabIndex = 0;
             this.pnlDisplaySettings.TextColor = System.Drawing.Color.White;
             // 
+            // lblSettings
+            // 
+            this.lblSettings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.lblSettings.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.lblSettings.BorderColor = System.Drawing.Color.Transparent;
+            this.lblSettings.BorderRadius = 10;
+            this.lblSettings.BorderSize = 0;
+            this.lblSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblSettings.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.lblSettings.ForeColor = System.Drawing.Color.White;
+            this.lblSettings.Location = new System.Drawing.Point(18, 15);
+            this.lblSettings.Name = "lblSettings";
+            this.lblSettings.Size = new System.Drawing.Size(765, 44);
+            this.lblSettings.TabIndex = 0;
+            this.lblSettings.Text = "   Settings";
+            this.lblSettings.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblSettings.TextColor = System.Drawing.Color.White;
+            // 
             // SettingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -77,7 +82,7 @@
             this.ClientSize = new System.Drawing.Size(798, 570);
             this.Controls.Add(this.pnlDisplaySettings);
             this.Controls.Add(this.tabsSetting);
-            this.Controls.Add(this.setlbl);
+            this.Controls.Add(this.lblSettings);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SettingForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -87,9 +92,8 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label setlbl;
         private settingsTabControl tabsSetting;
         public Materials.CustomPanel pnlDisplaySettings;
+        private Materials.CustomLabel lblSettings;
     }
 }
