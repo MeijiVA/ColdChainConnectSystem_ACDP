@@ -330,8 +330,10 @@
     <Compile Include="AppForms\SidePanel\UserAccountControl.Designer.cs">
       <DependentUpon>UserAccountControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="ClassResources\Connection\SalesClass.cs" />
-    <Compile Include="ClassResources\Connection\InvExcelClass.cs" />
+    <Compile Include="ClassResources\Connection\TableView\SupplierClass.cs" />
+    <Compile Include="ClassResources\Connection\TableView\CustomerClass.cs" />
+    <Compile Include="ClassResources\Connection\TableView\SalesClass.cs" />
+    <Compile Include="ClassResources\Connection\Excel\InvExcelClass.cs" />
     <Compile Include="ClassResources\Instances\CustomerInstance.cs" />
     <Compile Include="ClassResources\Instances\SupplierInstance.cs" />
     <Compile Include="ClassResources\Instances\InventoryInstance.cs" />
@@ -348,7 +350,7 @@
     <Compile Include="AppForms\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ClassResources\Connection\InventoryClass.cs" />
+    <Compile Include="ClassResources\Connection\TableView\InventoryClass.cs" />
     <Compile Include="ClassResources\Display\Tables\SelectedFilterClass.cs" />
     <Compile Include="ClassResources\Display\Tables\DataGridViewButtons.cs" />
     <Compile Include="ClassResources\Display\Tables\InventoryColumn.cs" />
