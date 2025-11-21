@@ -13,21 +13,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
 {
     internal class CustomerClass
     {
-        public static Image getImage(string imgStr)
-        {
-            Image i;
-            if (File.Exists(Directory.GetCurrentDirectory() + "\\InventoryImage\\" + imgStr))
-            {
-                i = Image.FromFile(Directory.GetCurrentDirectory() + "\\InventoryImage\\" + imgStr);
-                return i;
-            }
-            else
-            {
-                i = Properties.Resources.CCC_GrayLogo;
-                return i;
-            }
-        }
-        public static int loadInventoryData(DataGridView dgv, Label lblPage, Label lblPageNum, int currentPageIndex)
+        public static int loadCustomerData(DataGridView dgv, Label lblPage, Label lblPageNum, int currentPageIndex)
         {
             int totalRows = 0;
             int totalPages = 0;
@@ -35,24 +21,21 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
             String query;
             SqlConnection con = ConnectionClass.Connection();
             con.Open();
-            query = "SELECT COUNT(*) FROM Inventory";
+            query = "SELECT COUNT(*) FROM Customer";
             using (SqlCommand count = new SqlCommand(query, con))
             {
                 totalRows = (int)count.ExecuteScalar();
                 totalPages = (int)Math.Ceiling((double)totalRows / PageSize);
                 lblPage.Text = totalPages.ToString();
-                query = $"SELECT [numid],[skucode],[description],[image],[unitprice],[kg],[quantity],[expiry] FROM Inventory ORDER BY numid OFFSET {(currentPageIndex - 1) * PageSize} ROWS FETCH NEXT {PageSize} ROWS ONLY";
+                query = $"SELECT [customerid],[customername],[phonenumber],[address],[paymentterm],[registrationdate],[status] FROM Customer ORDER BY [customerid] OFFSET {(currentPageIndex - 1) * PageSize} ROWS FETCH NEXT {PageSize} ROWS ONLY";
                 using (SqlCommand data = new SqlCommand(query, con))
                 {
                     using (var reader = data.ExecuteReader())
                     {
                         while (reader.Read())
                         {
-                            double amount = double.Parse(reader[4].ToString()) * double.Parse(reader[6].ToString());
-
-                            //  0        0    1    2    3     4        blank   5      6         7            8              9
-                            //checkbox,  id, sku, desc,img,unitprice, amount, kg, quantity, buttonedit, button view, button delete
-                            dgv.Rows.Add(new object[] { 0, reader[0].ToString(), reader[1].ToString(), reader[2].ToString(), getImage(reader[3].ToString()), reader[4].ToString(), amount, reader[5].ToString(), reader[6].ToString() });
+                            //[customerid],[customername],[phonenumber],[address],[paymentterm],[registrationdate],[status]
+                            dgv.Rows.Add(new object[] { 0, reader[0].ToString(), reader[1].ToString(), reader[2].ToString(), reader[3].ToString(), reader[4].ToString(), Convert.ToDateTime(reader[5]).ToString("yyyy-MM-dd"), reader[6].ToString() });
                         }//while reader loop
                     }//reader
                     con.Close();
@@ -63,7 +46,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
         }//method
 
 
-        public static int loadInventoryData(DataGridView dgv, Label lblPage, Label lblPageNum, int currentPageIndex, string searchQuery)
+        public static int loadCustomerData(DataGridView dgv, Label lblPage, Label lblPageNum, int currentPageIndex, string searchQuery)
         {
             int totalRows = 0;
             int totalPages = 0;
@@ -78,7 +61,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
 
 
 
-            query = $"SELECT COUNT(*) FROM Inventory {searchQuery}";
+            query = $"SELECT COUNT(*) FROM Customer {searchQuery}";
             using (SqlCommand count = new SqlCommand(query, con))
             {
                 totalRows = (int)count.ExecuteScalar();
@@ -86,18 +69,15 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                 lblPage.Text = totalPages.ToString();
 
                 Console.WriteLine(totalRows + " TR " + totalPages + "TP");
-                query = $"SELECT [numid],[skucode],[description],[image],[unitprice],[kg],[quantity],[expiry] FROM Inventory {searchQuery} ORDER BY numid OFFSET {(currentPageIndex - 1) * PageSize} ROWS FETCH NEXT {PageSize} ROWS ONLY";
+                query = $"SELECT [customerid],[customername],[phonenumber],[address],[paymentterm],[registrationdate],[status] FROM Customer {searchQuery} ORDER BY [customerid] OFFSET {(currentPageIndex - 1) * PageSize} ROWS FETCH NEXT {PageSize} ROWS ONLY";
                 using (SqlCommand data = new SqlCommand(query, con))
                 {
                     using (var reader = data.ExecuteReader())
                     {
                         while (reader.Read())
                         {
-                            double amount = double.Parse(reader[4].ToString()) * double.Parse(reader[6].ToString());
-
-                            //  0        0    1    2    3     4        blank   5      6         7            8              9
-                            //checkbox,  id, sku, desc,img,unitprice, amount, kg, quantity, buttonedit, button view, button delete
-                            dgv.Rows.Add(new object[] { 0, reader[0].ToString(), reader[1].ToString(), reader[2].ToString(), getImage(reader[3].ToString()), reader[4].ToString(), amount, reader[5].ToString(), reader[6].ToString() });
+                            //[customerid],[customername],[phonenumber],[address],[paymentterm],[registrationdate],[status]
+                            dgv.Rows.Add(new object[] { 0, reader[0].ToString(), reader[1].ToString(), reader[2].ToString(), reader[3].ToString(), reader[4].ToString(), Convert.ToDateTime(reader[5]).ToString("yyyy-MM-dd"), reader[6].ToString() });
                         }//while reader loop
                     }//reader
                     con.Close();
@@ -109,17 +89,14 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
 
 
 
-        public static bool writeInventoryData(string sku, string desc, string unitp, string img, string kg, string quantity, string expiry)
+        public static bool writeCustomerData(string customerid, string customername, string phonenumber, string address, string paymentterm, string registrationdate, string status)
         {
-            if(!(sku.Equals("") || sku.Equals("") || desc.Equals("") || unitp.Equals("") || kg.Equals("") || quantity.Equals("") || expiry.Equals("")))
+            if(!(customerid.Equals("") || customername.Equals("") || phonenumber.Equals("") || address.Equals("") || paymentterm.Equals("") || registrationdate.Equals("") || status.Equals("")))
             {
                 try
                 {
-                    if (img == "")
-                    {
-                        img = "NoImage.png";
-                    }
-                    string query = $"INSERT INTO Inventory([skucode],[description],[image],[unitprice],[kg],[quantity],[expiry]) VALUES('{sku}', '{desc}', '{img}', CAST({unitp} AS Decimal(18, 2)), {kg}, {quantity}, N'{expiry}')";
+                    //[customerid],[customername],[phonenumber],[address],[paymentterm],[registrationdate],[status]
+                    string query = $"INSERT INTO Customer([customerid],[customername],[phonenumber],[address],[paymentterm],[registrationdate],[status]) VALUES('{customerid}', '{customername}', '{phonenumber}', {address}, {paymentterm}, {registrationdate}, N'{status}')";
 
                     SqlConnection con = ConnectionClass.Connection();
                     using (SqlCommand cmd = new SqlCommand(query, con))

@@ -13,7 +13,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
 {
     internal class SalesClass
     {
-        public static int loadInventoryData(DataGridView dgv, Label lblPage, Label lblPageNum, int currentPageIndex)
+        public static int loadSalesData(DataGridView dgv, Label lblPage, Label lblPageNum, int currentPageIndex)
         {
             int totalRows = 0;
             int totalPages = 0;
@@ -27,7 +27,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                 totalRows = (int)count.ExecuteScalar();
                 totalPages = (int)Math.Ceiling((double)totalRows / PageSize);
                 lblPage.Text = totalPages.ToString();
-                query = $"SELECT [salesid],[customerid],[salesdate],[productid],[quantity],[unitprice],[status] FROM Sales ORDER BY [salesid] OFFSET {(currentPageIndex - 1) * PageSize} ROWS FETCH NEXT {PageSize} ROWS ONLY";
+                query = $"SELECT a.[salesid],a.[customerid],a.[salesdate],a.[productid],a.[quantity],i.[unitprice],a.[status] FROM Sales as a JOIN Inventory AS i ON   a.[productid] = i.[numid] ORDER BY [salesid] OFFSET {(currentPageIndex - 1) * PageSize} ROWS FETCH NEXT {PageSize} ROWS ONLY";
                 using (SqlCommand data = new SqlCommand(query, con))
                 {
                     using (var reader = data.ExecuteReader())
@@ -35,7 +35,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                         while (reader.Read())
                         {
                             //[salesid],[customerid],[salesdate],[productid],[quantity],[unitprice],[status]
-                            dgv.Rows.Add(new object[] { 0, reader[0].ToString(), reader[1].ToString(), reader[2].ToString(), reader[3].ToString(), reader[4].ToString(), reader[5].ToString(), reader[6].ToString() });
+                            dgv.Rows.Add(new object[] { 0, reader[0].ToString(), reader[1].ToString(), Convert.ToDateTime(reader[2]).ToString("yyyy-MM-dd"), reader[3].ToString(), reader[4].ToString(), reader[5].ToString(), reader[6].ToString() });
                         }//while reader loop
                     }//reader
                     con.Close();
@@ -46,7 +46,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
         }//method
 
 
-        public static int loadInventoryData(DataGridView dgv, Label lblPage, Label lblPageNum, int currentPageIndex, string searchQuery)
+        public static int loadSalesData(DataGridView dgv, Label lblPage, Label lblPageNum, int currentPageIndex, string searchQuery)
         {
             int totalRows = 0;
             int totalPages = 0;
@@ -69,7 +69,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                 lblPage.Text = totalPages.ToString();
 
                 Console.WriteLine(totalRows + " TR " + totalPages + "TP");
-                query = $"SELECT [salesid],[customerid],[salesdate],[productid],[quantity],[unitprice],[status] FROM Sales {searchQuery} ORDER BY [salesid] OFFSET {(currentPageIndex - 1) * PageSize} ROWS FETCH NEXT {PageSize} ROWS ONLY";
+                query = $"SELECT a.[salesid],a.[customerid],a.[salesdate],a.[productid],a.[quantity],i.[unitprice],a.[status] FROM Sales as a JOIN Inventory AS i ON   a.[productid] = i.[numid] {searchQuery} ORDER BY [salesid] OFFSET {(currentPageIndex - 1) * PageSize} ROWS FETCH NEXT {PageSize} ROWS ONLY";
                 using (SqlCommand data = new SqlCommand(query, con))
                 {
                     using (var reader = data.ExecuteReader())
@@ -91,13 +91,13 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
 
 
         //[salesid],[customerid],[salesdate],[productid],[quantity],[unitprice],[status]
-        public static bool writeInventoryData(string sid, string custid, string sdate, string prodid, string quantity, string unitprice, string status)
+        public static bool writeSalesData(string sid, string custid, string sdate, string prodid, string quantity, string status)
         {
-            if(!(sid.Equals("") || custid.Equals("") || sdate.Equals("") || prodid.Equals("") || quantity.Equals("") || unitprice.Equals("") || status.Equals("")))
+            if(!(sid.Equals("") || custid.Equals("") || sdate.Equals("") || prodid.Equals("") || quantity.Equals("") || status.Equals("")))
             {
                 try
                 {
-                    string query = $"INSERT INTO Sales([salesid],[customerid],[salesdate],[productid],[quantity],[unitprice],[status]) VALUES('{sid}', '{custid}', '{sdate}', '{prodid}', {quantity}, {unitprice}, N'{status}')";
+                    string query = $"INSERT INTO Sales([salesid],[customerid],[salesdate],[productid],[quantity],[status]) VALUES('{sid}', '{custid}', '{sdate}', '{prodid}', {quantity}, N'{status}')";
 
                     SqlConnection con = ConnectionClass.Connection();
                     using (SqlCommand cmd = new SqlCommand(query, con))

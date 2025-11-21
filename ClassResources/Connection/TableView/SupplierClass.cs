@@ -15,7 +15,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
 
     {
 
-        public static int loadInventoryData(DataGridView dgv, Label lblPage, Label lblPageNum, int currentPageIndex)
+        public static int loadSupplierData(DataGridView dgv, Label lblPage, Label lblPageNum, int currentPageIndex)
         {
             int totalRows = 0;
             int totalPages = 0;
@@ -49,7 +49,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
         }//method
 
 
-        public static int loadInventoryData(DataGridView dgv, Label lblPage, Label lblPageNum, int currentPageIndex, string searchQuery)
+        public static int loadSupplierData(DataGridView dgv, Label lblPage, Label lblPageNum, int currentPageIndex, string searchQuery)
         {
             int totalRows = 0;
             int totalPages = 0;
@@ -95,7 +95,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
 
 
 
-        public static bool writeInventoryData(string supid, string compname, string contper, string contnum, string address, string payment)
+        public static bool writeSupplierData(string supid, string compname, string contper, string contnum, string address, string payment)
         {
             if(!(supid.Equals("") || compname.Equals("") || contper.Equals("") || contnum.Equals("") || address.Equals("") || payment.Equals("")))
             {

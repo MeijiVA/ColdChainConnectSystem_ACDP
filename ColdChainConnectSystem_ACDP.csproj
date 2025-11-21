@@ -240,11 +240,11 @@
     <Compile Include="AppForms\MainPanel\Customer\AddCustomerForm.Designer.cs">
       <DependentUpon>AddCustomerForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AppForms\MainPanel\Customer\InventoryForm.cs">
+    <Compile Include="AppForms\MainPanel\Customer\CustomerForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AppForms\MainPanel\Customer\InventoryForm.Designer.cs">
-      <DependentUpon>InventoryForm.cs</DependentUpon>
+    <Compile Include="AppForms\MainPanel\Customer\CustomerForm.Designer.cs">
+      <DependentUpon>CustomerForm.cs</DependentUpon>
     </Compile>
     <Compile Include="AppForms\MainPanel\Dashboard\DashoardForm.cs">
       <SubType>Form</SubType>
@@ -437,8 +437,8 @@
     <EmbeddedResource Include="AppForms\MainPanel\Customer\AddCustomerForm.resx">
       <DependentUpon>AddCustomerForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AppForms\MainPanel\Customer\InventoryForm.resx">
-      <DependentUpon>InventoryForm.cs</DependentUpon>
+    <EmbeddedResource Include="AppForms\MainPanel\Customer\CustomerForm.resx">
+      <DependentUpon>CustomerForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AppForms\MainPanel\Dashboard\DashoardForm.resx">
       <DependentUpon>DashoardForm.cs</DependentUpon>

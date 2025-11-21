@@ -31,12 +31,12 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Supplier
             currentPageIndex = 1;//!!!!!!!!!!!!!!!!!!!
             SelectedFilterClass.SelectedFilter = "";
             dgvTable.Rows.Clear();
-            totalPages = SupplierClass.loadInventoryData(dgvTable, lblMaxPage, lblPageNum, currentPageIndex);
+            totalPages = SupplierClass.loadSupplierData(dgvTable, lblMaxPage, lblPageNum, currentPageIndex);
         }
         private void searchUC1_Load(object sender, EventArgs e)
         {
             currentPageIndex = 1;//!!!!!!!!!!!!!!!!!!!
-            totalPages = SupplierClass.loadInventoryData(dgvTable, lblMaxPage, lblPageNum, currentPageIndex);
+            totalPages = SupplierClass.loadSupplierData(dgvTable, lblMaxPage, lblPageNum, currentPageIndex);
         }
 
         private void btnNext_Click(object sender, EventArgs e)
@@ -45,14 +45,14 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Supplier
             {
                 dgvTable.Rows.Clear();
                 lblPageNum.Text = (currentPageIndex += 1).ToString();
-                totalPages = SupplierClass.loadInventoryData(dgvTable, lblMaxPage, lblPageNum, currentPageIndex);
+                totalPages = SupplierClass.loadSupplierData(dgvTable, lblMaxPage, lblPageNum, currentPageIndex);
             }//no search query
             else if ((currentPageIndex < Convert.ToInt32(totalPages)) && !(SelectedFilterClass.SelectedFilter.Equals("")))
             {
                 dgvTable.Rows.Clear();
                 lblPageNum.Text = (currentPageIndex += 1).ToString();
                 string query = "WHERE " + SelectedFilterClass.SelectedFilter + " LIKE '%" + SearchBar.searchTXT + "%' ";
-                totalPages = SupplierClass.loadInventoryData(dgvTable, lblMaxPage, lblPageNum, currentPageIndex, query);
+                totalPages = SupplierClass.loadSupplierData(dgvTable, lblMaxPage, lblPageNum, currentPageIndex, query);
             }//has search query
             else if (currentPageIndex < totalPages)
             {
@@ -60,7 +60,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Supplier
                 dgvTable.Rows.Clear();
                 lblPageNum.Text = (currentPageIndex += 1).ToString();
                 string query = $"WHERE supplierid LIKE '%{(SearchBar.searchTXT)}%' OR companyname LIKE '%{(SearchBar.searchTXT)}%' OR contactperson LIKE '%{(SearchBar.searchTXT)}%' OR contactnum LIKE '%{(SearchBar.searchTXT)}%' OR address LIKE '%{(SearchBar.searchTXT)}%' OR paymentterm  LIKE '%{(SearchBar.searchTXT)}%'";
-                totalPages = SupplierClass.loadInventoryData(dgvTable, lblMaxPage, lblPageNum, currentPageIndex, query);
+                totalPages = SupplierClass.loadSupplierData(dgvTable, lblMaxPage, lblPageNum, currentPageIndex, query);
             }// has search query ALL
         }
 
@@ -70,21 +70,21 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Supplier
             {
                 dgvTable.Rows.Clear();
                 lblPageNum.Text = (currentPageIndex -= 1).ToString();
-                totalPages = SupplierClass.loadInventoryData(dgvTable, lblMaxPage, lblPageNum, currentPageIndex);
+                totalPages = SupplierClass.loadSupplierData(dgvTable, lblMaxPage, lblPageNum, currentPageIndex);
             }//no search query
             else if ((currentPageIndex > 1) && !(SelectedFilterClass.SelectedFilter.Equals("")))
             {
                 dgvTable.Rows.Clear();
                 lblPageNum.Text = (currentPageIndex -= 1).ToString();
                 string query = "WHERE " + SelectedFilterClass.SelectedFilter + " LIKE '%" + SearchBar.searchTXT + "%' ";
-                totalPages = SupplierClass.loadInventoryData(dgvTable, lblMaxPage, lblPageNum, currentPageIndex, query);
+                totalPages = SupplierClass.loadSupplierData(dgvTable, lblMaxPage, lblPageNum, currentPageIndex, query);
             }//has search query
             else if (currentPageIndex > 1)
             {
                 dgvTable.Rows.Clear();
                 lblPageNum.Text = (currentPageIndex -= 1).ToString();
                 string query = $"WHERE supplierid LIKE '%{(SearchBar.searchTXT)}%' OR companyname LIKE '%{(SearchBar.searchTXT)}%' OR contactperson LIKE '%{(SearchBar.searchTXT)}%' OR contactnum LIKE '%{(SearchBar.searchTXT)}%' OR address LIKE '%{(SearchBar.searchTXT)}%' OR paymentterm  LIKE '%{(SearchBar.searchTXT)}%'";
-                totalPages = SupplierClass.loadInventoryData(dgvTable, lblMaxPage, lblPageNum, currentPageIndex, query);
+                totalPages = SupplierClass.loadSupplierData(dgvTable, lblMaxPage, lblPageNum, currentPageIndex, query);
             }// has search query ALL
         }
 
@@ -103,7 +103,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Supplier
                     lblPageNum.Text = "1";
                     currentPageIndex = 1;//!!!!!!!!!!!!!!!!!!!
                     dgvTable.Rows.Clear();
-                    totalPages = SupplierClass.loadInventoryData(dgvTable, lblMaxPage, lblPageNum, currentPageIndex);
+                    totalPages = SupplierClass.loadSupplierData(dgvTable, lblMaxPage, lblPageNum, currentPageIndex);
 
                 }
                 else if (SelectedFilterClass.SelectedFilter.Equals(""))
@@ -112,7 +112,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Supplier
                     currentPageIndex = 1;//!!!!!!!!!!!!!!!!!!!
                     dgvTable.Rows.Clear();
                     string query = $"WHERE supplierid LIKE '%{(SearchBar.searchTXT)}%' OR companyname LIKE '%{(SearchBar.searchTXT)}%' OR contactperson LIKE '%{(SearchBar.searchTXT)}%' OR contactnum LIKE '%{(SearchBar.searchTXT)}%' OR address LIKE '%{(SearchBar.searchTXT)}%' OR paymentterm  LIKE '%{(SearchBar.searchTXT)}%'";
-                    totalPages = SupplierClass.loadInventoryData(dgvTable, lblMaxPage, lblPageNum, currentPageIndex, query);
+                    totalPages = SupplierClass.loadSupplierData(dgvTable, lblMaxPage, lblPageNum, currentPageIndex, query);
                 }
                 else
                 {
@@ -120,7 +120,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Supplier
                     currentPageIndex = 1;//!!!!!!!!!!!!!!!!!!!
                     dgvTable.Rows.Clear();
                     string query = " WHERE " + SelectedFilterClass.SelectedFilter + " LIKE '%" + SearchBar.searchTXT + "%' ";
-                    totalPages = SupplierClass.loadInventoryData(dgvTable, lblMaxPage, lblPageNum, currentPageIndex, query);
+                    totalPages = SupplierClass.loadSupplierData(dgvTable, lblMaxPage, lblPageNum, currentPageIndex, query);
                 }
 
             }

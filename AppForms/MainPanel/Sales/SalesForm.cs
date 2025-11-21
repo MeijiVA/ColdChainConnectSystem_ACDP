@@ -31,12 +31,12 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
             currentPageIndex = 1;//!!!!!!!!!!!!!!!!!!!
             SelectedFilterClass.SelectedFilter = "";
             dgvTable.Rows.Clear();
-            totalPages = SalesClass.loadInventoryData(dgvTable, lblMaxPage, lblPageNum, currentPageIndex);
+            totalPages = SalesClass.loadSalesData(dgvTable, lblMaxPage, lblPageNum, currentPageIndex);
         }
         private void searchUC1_Load(object sender, EventArgs e)
         {
             currentPageIndex = 1;//!!!!!!!!!!!!!!!!!!!
-            totalPages = SalesClass.loadInventoryData(dgvTable, lblMaxPage, lblPageNum, currentPageIndex);
+            totalPages = SalesClass.loadSalesData(dgvTable, lblMaxPage, lblPageNum, currentPageIndex);
         }
 
         private void btnNext_Click(object sender, EventArgs e)
@@ -45,21 +45,21 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
             {
                 dgvTable.Rows.Clear();
                 lblPageNum.Text = (currentPageIndex += 1).ToString();
-                totalPages = SalesClass.loadInventoryData(dgvTable, lblMaxPage, lblPageNum, currentPageIndex);
+                totalPages = SalesClass.loadSalesData(dgvTable, lblMaxPage, lblPageNum, currentPageIndex);
             }//no search query
             else if ((currentPageIndex < Convert.ToInt32(totalPages)) && !(SelectedFilterClass.SelectedFilter.Equals("")))
             {
                 dgvTable.Rows.Clear();
                 lblPageNum.Text = (currentPageIndex += 1).ToString();
                 string query = "WHERE " + SelectedFilterClass.SelectedFilter + " LIKE '%" + SearchBar.searchTXT + "%' ";
-                totalPages = SalesClass.loadInventoryData(dgvTable, lblMaxPage, lblPageNum, currentPageIndex, query);
+                totalPages = SalesClass.loadSalesData(dgvTable, lblMaxPage, lblPageNum, currentPageIndex, query);
             }//has search query
             else if (currentPageIndex < totalPages)
             {
                 dgvTable.Rows.Clear();
                 lblPageNum.Text = (currentPageIndex += 1).ToString();
                 string query = $"WHERE numid LIKE '%{(SearchBar.searchTXT)}%' OR skucode LIKE '%{(SearchBar.searchTXT)}%' OR quantity LIKE '%{(SearchBar.searchTXT)}%' OR expiry LIKE '%{(SearchBar.searchTXT)}%' OR descript LIKE '%{(SearchBar.searchTXT)}%' OR ";
-                totalPages = SalesClass.loadInventoryData(dgvTable, lblMaxPage, lblPageNum, currentPageIndex, query);
+                totalPages = SalesClass.loadSalesData(dgvTable, lblMaxPage, lblPageNum, currentPageIndex, query);
             }// has search query ALL
         }
 
@@ -69,21 +69,21 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
             {
                 dgvTable.Rows.Clear();
                 lblPageNum.Text = (currentPageIndex -= 1).ToString();
-                totalPages = SalesClass.loadInventoryData(dgvTable, lblMaxPage, lblPageNum, currentPageIndex);
+                totalPages = SalesClass.loadSalesData(dgvTable, lblMaxPage, lblPageNum, currentPageIndex);
             }//no search query
             else if ((currentPageIndex > 1) && !(SelectedFilterClass.SelectedFilter.Equals("")))
             {
                 dgvTable.Rows.Clear();
                 lblPageNum.Text = (currentPageIndex -= 1).ToString();
                 string query = "WHERE " + SelectedFilterClass.SelectedFilter + " LIKE '%" + SearchBar.searchTXT + "%' ";
-                totalPages = SalesClass.loadInventoryData(dgvTable, lblMaxPage, lblPageNum, currentPageIndex, query);
+                totalPages = SalesClass.loadSalesData(dgvTable, lblMaxPage, lblPageNum, currentPageIndex, query);
             }//has search query
             else if (currentPageIndex > 1)
             {
                 dgvTable.Rows.Clear();
                 lblPageNum.Text = (currentPageIndex -= 1).ToString();
                 string query = $"WHERE numid LIKE '%{(SearchBar.searchTXT)}%' OR skucode LIKE '%{(SearchBar.searchTXT)}%' OR quantity LIKE '%{(SearchBar.searchTXT)}%' OR expiry LIKE '%{(SearchBar.searchTXT)}%' OR descript LIKE '%{(SearchBar.searchTXT)}%'";
-                totalPages = SalesClass.loadInventoryData(dgvTable, lblMaxPage, lblPageNum, currentPageIndex, query);
+                totalPages = SalesClass.loadSalesData(dgvTable, lblMaxPage, lblPageNum, currentPageIndex, query);
             }// has search query ALL
         }
 
@@ -102,7 +102,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
                     lblPageNum.Text = "1";
                     currentPageIndex = 1;//!!!!!!!!!!!!!!!!!!!
                     dgvTable.Rows.Clear();
-                    totalPages = SalesClass.loadInventoryData(dgvTable, lblMaxPage, lblPageNum, currentPageIndex);
+                    totalPages = SalesClass.loadSalesData(dgvTable, lblMaxPage, lblPageNum, currentPageIndex);
 
                 }
                 else if (SelectedFilterClass.SelectedFilter.Equals(""))
@@ -111,7 +111,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
                     currentPageIndex = 1;//!!!!!!!!!!!!!!!!!!!
                     dgvTable.Rows.Clear();
                     string query = $"WHERE numid LIKE '%{(SearchBar.searchTXT)}%' OR skucode LIKE '%{(SearchBar.searchTXT)}%' OR quantity LIKE '%{(SearchBar.searchTXT)}%' OR expiry LIKE '%{(SearchBar.searchTXT)}%' OR descript LIKE '%{(SearchBar.searchTXT)}%' ";
-                    totalPages = SalesClass.loadInventoryData(dgvTable, lblMaxPage, lblPageNum, currentPageIndex, query);
+                    totalPages = SalesClass.loadSalesData(dgvTable, lblMaxPage, lblPageNum, currentPageIndex, query);
                 }
                 else
                 {
@@ -119,7 +119,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
                     currentPageIndex = 1;//!!!!!!!!!!!!!!!!!!!
                     dgvTable.Rows.Clear();
                     string query = " WHERE " + SelectedFilterClass.SelectedFilter + " LIKE '%" + SearchBar.searchTXT + "%' ";
-                    totalPages = SalesClass.loadInventoryData(dgvTable, lblMaxPage, lblPageNum, currentPageIndex, query);
+                    totalPages = SalesClass.loadSalesData(dgvTable, lblMaxPage, lblPageNum, currentPageIndex, query);
                 }
 
             }
