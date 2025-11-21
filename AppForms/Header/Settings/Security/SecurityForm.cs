@@ -25,6 +25,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.PersonalDetails
             {
                 p = p + "*";
             }
+            lblEmpID.Text = ConnectionClass.empid;
             sdUserControl.PasswordLength = p;
             sdUserControl.UsernameView = ConnectionClass.username;
         }

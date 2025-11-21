@@ -1,6 +1,6 @@
 ﻿namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.PersonalDetails
 {
-    partial class ContactInformation
+    partial class AccountInformation
     {
         /// <summary> 
         /// Required designer variable.

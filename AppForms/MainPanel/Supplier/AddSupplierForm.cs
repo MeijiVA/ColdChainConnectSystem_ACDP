@@ -1,4 +1,5 @@
-﻿using ColdChainConnectSystem_ACDP.ClassResources;
+﻿using ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales;
+using ColdChainConnectSystem_ACDP.ClassResources;
 using ColdChainConnectSystem_ACDP.ClassResources.Instances;
 using ColdChainConnectSystem_ACDP.Popup;
 using System;
@@ -6,12 +7,12 @@ using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 
-namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
+namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Supplier
 {
-    public partial class AddItemInventoryForm : Form
+    public partial class AddSupplierForm : Form
     {
         CustomMessageBox cmb;
-        public AddItemInventoryForm()
+        public AddSupplierForm()
         {
             InitializeComponent();
             string downloadsPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), "Downloads");
@@ -20,7 +21,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
-            MainInstance.i.NavigateTo(new InventoryForm());
+            MainInstance.i.NavigateTo(new SupplierForm());
         }
 
         private void btnImage_Click(object sender, EventArgs e)
@@ -70,7 +71,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
                         }//if has image
                         pbxImage.BackgroundImage.Save(filePath + System.IO.Path.GetFileName(fileName));
                         this.Close();
-                        MainInstance.i.NavigateTo(new InventoryForm());
+                        MainInstance.i.NavigateTo(new SalesForm());
                     }
                     catch (Exception ex)
                     {

@@ -28,18 +28,18 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
 
         private void invDisplaydgv_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (table.Columns[e.ColumnIndex].Name == "deleteCol")
+            if (invDisplaydgv.Columns[e.ColumnIndex].Name == "deleteCol")
             {
                 if (MessageBox.Show("Are you sure you want to delete this item from the Database?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    table.Rows.RemoveAt(e.RowIndex);
+                    invDisplaydgv.Rows.RemoveAt(e.RowIndex);
                 }
             }
-            if (table.Columns[e.ColumnIndex].Name == "editCol")
+            if (invDisplaydgv.Columns[e.ColumnIndex].Name == "editCol")
             {
 
             }
-            if (table.Columns[e.ColumnIndex].Name == "viewCol")
+            if (invDisplaydgv.Columns[e.ColumnIndex].Name == "viewCol")
             {
 
             }
@@ -52,13 +52,15 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
 
         private void invDisplaydgv_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
         {
-
-                using (Pen p = new Pen(Color.FromArgb(07, 07, 96), 2)) // Define pen for the line
+            if (e.RowIndex % 2 == 0) // For even-indexed rows
+            {
+                using (Pen p = new Pen(Color.FromArgb(58, 58, 82), 2)) // Define pen for the line
                 {
                     // Calculate the position for the line
                     int y = e.RowBounds.Bottom - 1;
                     e.Graphics.DrawLine(p, e.RowBounds.Left + 10, y, e.RowBounds.Right - 10, y);
                 }
+            }
         }
     }
 }

@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace ColdChainConnectSystem_ACDP.ClassResources
 {
-    internal class InventoryClass
+    internal class SalesClass
     {
         public static Image getImage(string imgStr)
         {
@@ -41,7 +41,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                 totalRows = (int)count.ExecuteScalar();
                 totalPages = (int)Math.Ceiling((double)totalRows / PageSize);
                 lblPage.Text = totalPages.ToString();
-                query = $"SELECT [numid],[skucode],[description],[image],[unitprice],[kg],[quantity],[expiry] FROM Inventory ORDER BY numid OFFSET {(currentPageIndex - 1) * PageSize} ROWS FETCH NEXT {PageSize} ROWS ONLY";
+                query = $"SELECT numid, skucode, descript, image, unitprice, kg, quantity, expiry FROM Inventory ORDER BY numid OFFSET {(currentPageIndex - 1) * PageSize} ROWS FETCH NEXT {PageSize} ROWS ONLY";
                 using (SqlCommand data = new SqlCommand(query, con))
                 {
                     using (var reader = data.ExecuteReader())
@@ -86,7 +86,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                 lblPage.Text = totalPages.ToString();
 
                 Console.WriteLine(totalRows + " TR " + totalPages + "TP");
-                query = $"SELECT [numid],[skucode],[description],[image],[unitprice],[kg],[quantity],[expiry] FROM Inventory {searchQuery} ORDER BY numid OFFSET {(currentPageIndex - 1) * PageSize} ROWS FETCH NEXT {PageSize} ROWS ONLY";
+                query = $"SELECT numid,skucode, descript, image, unitprice, kg, quantity, expiry FROM Inventory {searchQuery} ORDER BY numid OFFSET {(currentPageIndex - 1) * PageSize} ROWS FETCH NEXT {PageSize} ROWS ONLY";
                 using (SqlCommand data = new SqlCommand(query, con))
                 {
                     using (var reader = data.ExecuteReader())
@@ -119,7 +119,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                     {
                         img = "NoImage.png";
                     }
-                    string query = $"INSERT INTO Inventory([skucode],[description],[image],[unitprice],[kg],[quantity],[expiry]) VALUES('{sku}', '{desc}', '{img}', CAST({unitp} AS Decimal(18, 2)), {kg}, {quantity}, N'{expiry}')";
+                    string query = $"INSERT INTO Inventory(skucode, descript, image, unitprice, kg, quantity, expiry) VALUES('{sku}', '{desc}', '{img}', CAST({unitp} AS Decimal(18, 2)), {kg}, {quantity}, N'{expiry}')";
 
                     SqlConnection con = ConnectionClass.Connection();
                     using (SqlCommand cmd = new SqlCommand(query, con))

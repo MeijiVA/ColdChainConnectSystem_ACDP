@@ -19,7 +19,6 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
 
     internal class ConnectionClass
     {
-        static CustomMessageBox cmb;
         public static string empid { get; set; }
         public static string username { get; set; }
         public static string fname { get; set; }
@@ -64,11 +63,11 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
             StreamReader sr = new StreamReader(filePath);
             db = sr.ReadLine();
             sr.Close();
-            string database = "Data Source = database; Initial Catalog = ColdChainConnectACDP_DB; User ID = username; Password = password; TrustServerCertificate = True";
+            string database = "Data Source = @database; Initial Catalog = ColdChainConnectACDP_DB; User ID = @username; Password = @password; TrustServerCertificate = True";
             //Data Source = ANNEX - PC00; Initial Catalog = ColdChainConnectACDP_DB; User ID = bautista.369742; Password = ***********; Trust Server Certificate = True
-            database = database.Replace("database", db);
-            database = database.Replace("username", username);
-            database = database.Replace("password", pass);
+            database = database.Replace("@database", db);
+            database = database.Replace("@username", username);
+            database = database.Replace("@password", pass);
             Console.WriteLine(database);
             return new SqlConnection(database);
         }
@@ -89,8 +88,9 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                     string[] token = input.Split(',');
                     username = token[0];
                     pass = token[1];
-                    query = @"SELECT empid, username, fname, mname, lname, contnum,"
-                            + "address, age, dob, position, status, sex, email FROM Employees";
+                Console.WriteLine(username +" "+ pass);
+                query = @"SELECT [empid], [username], [firstname], [middlename], [lastname], [contactnum],"
+                            + "[address], [age], [dateofbirth], [position], [status], [sex], [email] FROM Employees";
                     SqlConnection con = Connection();
                     using (SqlCommand cmd = new SqlCommand(query, con))
                     {
@@ -99,7 +99,8 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                         {
                             while (reader.Read())
                             {
-                                if (username.Equals(reader[1].ToString()))
+                            Console.WriteLine(reader[1] +"here");
+                            if (username.Equals(reader[1].ToString()))
                                 {
                                     empid = reader[0].ToString();
                                     username = reader[1].ToString();
@@ -149,38 +150,33 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                 //if not found
                 if (e.Message.Contains("Server"))
                 {
-                    cmb = new CustomMessageBox("Server", "Invalid Server.");
-                    cmb.ShowDialog();
+                    new CustomMessageBox("Server", "Invalid Server.").ShowDialog();
                     File.Delete(filePath);
                 }
                 // if credentials bad
                 else if (e.Message.Contains("Login"))
                 {
-                    cmb = new CustomMessageBox("Credentials", "Invalid Credentials.");
-                    cmb.ShowDialog();
+                   new CustomMessageBox("Credentials", "Invalid Credentials. " + e.Message).ShowDialog();
                 }
                 else
                 {
-                    MessageBox.Show(e.Message);
+                    new CustomMessageBox("File Not Found", e.Message).ShowDialog();
                 }
 
 
                 }
                 catch (InactiveException e)
                 {
-                cmb = new CustomMessageBox("Inactivity", e.Message);
-                cmb.ShowDialog();
+                new CustomMessageBox("Inactive", e.Message).ShowDialog();
                 }
                 catch (UnknownPositionException e)
                 {
-                cmb = new CustomMessageBox("Position Problem", e.Message);
-                cmb.ShowDialog();
+                new CustomMessageBox("Position Problem", e.Message).ShowDialog();
                 }
                 catch (Exception e)
                 {
-                cmb = new CustomMessageBox("Exception", e.Message);
-                cmb.ShowDialog();
-            }
+                new CustomMessageBox("Exception", e.Message).ShowDialog();
+                }
         return "default";
         }
 
@@ -213,7 +209,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
             }
             catch(Exception e)
             {
-                MessageBox.Show(e.Message);
+                new CustomMessageBox("File Not Found", e.Message, MessageBoxButtons.OK).ShowDialog();
             }
         }
 

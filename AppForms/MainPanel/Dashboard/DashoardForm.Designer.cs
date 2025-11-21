@@ -94,10 +94,11 @@
             this.totalProdpnl.Size = new System.Drawing.Size(201, 100);
             this.totalProdpnl.TabIndex = 15;
             // 
-            // DashboardPanel
+            // DashoardForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(798, 570);
             this.Controls.Add(this.greetPanel1);
             this.Controls.Add(this.panel9);
@@ -107,8 +108,9 @@
             this.Controls.Add(this.totalSales);
             this.Controls.Add(this.totalCustpnl);
             this.Controls.Add(this.totalProdpnl);
+            this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "DashboardPanel";
+            this.Name = "DashoardForm";
             this.Text = "DashboardPanel";
             this.ResumeLayout(false);
 

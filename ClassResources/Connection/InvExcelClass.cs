@@ -2,26 +2,96 @@
 using ColdChainConnectSystem_ACDP.ClassResources.Instances;
 using ColdChainConnectSystem_ACDP.Popup;
 using ExcelDataReader;
+using Microsoft.CSharp.RuntimeBinder;
 using Microsoft.Office.Interop.Excel;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.Odbc;
 using System.Data.OleDb;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Drawing.Printing;
 using System.IO;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Z.Dapper.Plus;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace ColdChainConnectSystem_ACDP.ClassResources.Connection
 {
-    internal static class InvExcelClass
+    internal class InvExcelClass
     {
+        public static void Import(String ofd)
+        {
+
+            Microsoft.Office.Interop.Excel.Application excelApp = new Microsoft.Office.Interop.Excel.Application();
+            Workbook excelWorkbook = excelApp.Workbooks.Open(ofd);
+            Worksheet excelWorksheet = (Worksheet)excelWorkbook.Sheets[1]; // Assuming data is in the first sheet
+            Range excelRange = excelWorksheet.UsedRange;
+
+            SqlConnection con = ConnectionClass.Connection();
+
+            try
+            {//skucode,unitprice,kg,quantity,expiry,image,descript
+                con.Open();//[numid],[skucode],[description],[image],[unitprice],[kg],[quantity],[expiry]
+                String query = "INSERT INTO Inventory ([skucode],[unitprice],[kg],[quantity],[expiry],[image],[description]) VALUES";
+                if ((excelRange.Cells[1, 1] as Range).Value == "Inventory")
+                {
+                    
+                }
+                for (int row = 3; row <= excelRange.Rows.Count; row++)
+                {
+                    String skucode = "" + (excelRange.Cells[row, 2] as Range).Value;
+                    String unitprice = "" + (excelRange.Cells[row, 4] as Range).Value;
+                    String kg = "" + (excelRange.Cells[row, 6] as Range).Value;
+                    String qty = "" + (excelRange.Cells[row, 7] as Range).Value;
+
+                    DateTime date = Convert.ToDateTime((excelRange.Cells[row, 8] as Range).Value);
+                    String expiry = date.ToString("MM/dd/yyyy");
+                    // I have to switch these places because SQL only acccepts MM/dd/yyyy while excel autoconverts to MM/dd/yyyy
+
+                    String image = "Image.png";
+                    String desc = "" + (excelRange.Cells[row, 3] as Microsoft.Office.Interop.Excel.Range).Value;
+                    query = query + $"('{skucode}',{unitprice},{kg},{qty},'{expiry}','{image}','{desc}')";
+                    if (row != excelRange.Rows.Count)
+                    {
+                        query = query + ",\n";
+                    }
+                }
+                Console.WriteLine(query);
+                using (SqlCommand command = new SqlCommand(query, con))
+                {
+                    //ID	SKU Code	Description	Unit Price	Amount	Weight(KG)	Quantity	Expiry Date
+                    command.ExecuteNonQuery();
+                }
+                new CustomMessageBox("Import", "Import has been completed.", MessageBoxButtons.OK).ShowDialog();
+            }
+            catch(RuntimeBinderException ex)
+            {
+                new CustomMessageBox("RunTimeBinder Exception",ex.Message,MessageBoxButtons.OK).ShowDialog();
+            }
+            catch(Exception ex)
+            {
+                new CustomMessageBox("Exception",ex.Message,MessageBoxButtons.OK).ShowDialog();
+            }
+            finally
+            {
+                con.Close();
+                excelWorkbook.Close();
+                excelApp.Quit();
+            }
+        }
+
+
+
+
+
+
+
         public static void Export(String searchQuery, String ofd)
         {
             string Filter = "";
@@ -40,7 +110,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources.Connection
                 {
                     Filter = " WHERE " + SelectedFilterClass.SelectedFilter + " LIKE '%" + searchQuery + "%' ";
                 }
-                query = $"SELECT numid AS \"ID\",skucode AS \"SKU Code\" , descript AS \"Description\",unitprice AS \"Unit Price\", unitprice * quantity AS \"Amount\", kg AS \"Weight(KG)\", quantity AS \"Quantity\", expiry AS \"Expiry Date\"FROM Inventory {Filter} ORDER BY numid;";
+                query = $"SELECT [numid] AS \"ID\",[skucode] AS \"SKU Code\" , [description] AS \"Description\",[unitprice] AS \"Unit Price\", [unitprice] * [quantity] AS \"Amount\", [kg] AS \"Weight(KG)\", [quantity] AS \"Quantity\", [expiry] AS \"Expiry Date\"FROM Inventory {Filter} ORDER BY numid;";
                 Console.WriteLine(query);
                 ExportDataFromTable(query, ofd);
             }
@@ -54,6 +124,10 @@ namespace ColdChainConnectSystem_ACDP.ClassResources.Connection
         //not mine, don't edit xd
         public static void ExportDataFromTable(string query, String ofd)
         {
+            // Create a new Excel application and workbook
+            Microsoft.Office.Interop.Excel.Application excelApp = new Microsoft.Office.Interop.Excel.Application();
+            Workbook excelWorkbook = excelApp.Workbooks.Add();
+            Worksheet excelWorksheet = excelWorkbook.Worksheets[1];
             try
             {
                 if (File.Exists(ofd))
@@ -67,36 +141,37 @@ namespace ColdChainConnectSystem_ACDP.ClassResources.Connection
                     {
                         using (SqlDataReader reader = command.ExecuteReader())
                         {
-                            // Create a new Excel application and workbook
-                            Microsoft.Office.Interop.Excel.Application excelApp = new Microsoft.Office.Interop.Excel.Application();
-                            Workbook excelWorkbook = excelApp.Workbooks.Add();
-                            Worksheet excelWorksheet = excelWorkbook.Worksheets[1];
-
                             // Add the headers to the first row
+                            excelWorksheet.Cells[1, 1].Value = "Inventory";
                             int col = 1;
                             for (int i = 0; i < reader.FieldCount; i++)
                             {
-                                excelWorksheet.Cells[1, col].Value2 = reader.GetName(i);
+                                excelWorksheet.Cells[2, col].Value2 = reader.GetName(i);
                                 col++;
                             }
 
                             // Iterate through the rows of data and insert them into the worksheet, starting from the second row
-                            int row = 2;
+                            int row = 3;
                             while (reader.Read())
                             {
                                 col = 1;
                                 for (int i = 0; i < reader.FieldCount; i++)
                                 {
-                                    excelWorksheet.Cells[row, col].Value2 = reader[i];
+                                    if (i == 7)
+                                    {
+                                        DateTime date = Convert.ToDateTime(reader[7].ToString());
+                                        excelWorksheet.Cells[row, col].Value2 = date.ToString("MM/dd/yyyy");
+                                    } else
+                                    {
+                                        excelWorksheet.Cells[row, col].Value2 = reader[i].ToString();
+                                    }
+     
                                     col++;
                                 }
                                 row++;
                             }
+                            new CustomMessageBox("Export", "Export has been completed.", MessageBoxButtons.OK).ShowDialog();
 
-                            // Save the workbook and close the Excel application
-                            excelWorkbook.SaveAs(ofd);
-                            excelWorkbook.Close();
-                            excelApp.Quit();
                         }
                     }
                 }
@@ -105,10 +180,15 @@ namespace ColdChainConnectSystem_ACDP.ClassResources.Connection
 
             catch (Exception ex)
             {
-                CustomMessageBox cmb = new CustomMessageBox("Export Problem",ex.Message,MessageBoxButtons.OK);
-                cmb.ShowDialog();
+                new CustomMessageBox("Export Problem",ex.Message,MessageBoxButtons.OK).ShowDialog();
             }
-
+            finally
+            {
+                // Save the workbook and close the Excel application
+                excelWorkbook.SaveAs(ofd);
+                excelWorkbook.Close();
+                excelApp.Quit();
+            }
 
         }
     }

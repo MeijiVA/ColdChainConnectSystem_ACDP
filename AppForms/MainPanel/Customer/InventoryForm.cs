@@ -15,13 +15,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Z.BulkOperations.Internal.InformationSchema;
 
-namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
+namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer
 {
-    public partial class InventoryForm : Form
+    public partial class CustomerForm : Form
     {
         int currentPageIndex = 0;
         public int totalPages = 0 ;
-        public InventoryForm()
+        public CustomerForm()
         {
             InitializeComponent();
         }

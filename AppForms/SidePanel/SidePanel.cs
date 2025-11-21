@@ -1,5 +1,8 @@
-﻿using ColdChainConnectSystem_ACDP.AppForms.MainPanel.Dashboard;
+﻿using ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer;
+using ColdChainConnectSystem_ACDP.AppForms.MainPanel.Dashboard;
 using ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory;
+using ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales;
+using ColdChainConnectSystem_ACDP.AppForms.MainPanel.Supplier;
 using ColdChainConnectSystem_ACDP.ClassResources;
 using ColdChainConnectSystem_ACDP.ClassResources.Instances;
 using System;
@@ -23,10 +26,9 @@ namespace ColdChainConnectSystem_ACDP.AppForms.SidePanel
         {
             InitializeComponent();
         }
-
+        String baseblue = "#070760";
         private void SelectedTab(Button b)
         {
-            String baseblue = "#070760";
             btnDashboard.BackColor = Color.White;
             btnInvMan.BackColor = Color.White; 
             btnSupMan.BackColor = Color.White;
@@ -42,7 +44,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.SidePanel
             btnEmpMan.ForeColor = dc.SetCustomColor(baseblue);
 
             b.BackColor = dc.SetCustomColor(baseblue);
-            b.ForeColor = Color.White;
+            b.ForeColor = dc.SetCustomColor("#FFFFFF");
         }
         private void Admin_Load(object sender, EventArgs e)
         {
@@ -105,24 +107,30 @@ namespace ColdChainConnectSystem_ACDP.AppForms.SidePanel
         {
             CurrentFormClass.setPreviousFormTo("supform");
             SelectedTab(btnSupMan);
+            MainInstance.i.NavigateTo(SupplierInstance.i = new SupplierForm());
         }
 
         private void salesmanbbtn_Click(object sender, EventArgs e)
         {
             CurrentFormClass.setPreviousFormTo("salform");
             SelectedTab(btnSalesMan);
+            MainInstance.i.NavigateTo(SalesInstance.i = new SalesForm());
         }
 
         private void custmanbtn_Click(object sender, EventArgs e)
         {
             CurrentFormClass.setPreviousFormTo("custform");
             SelectedTab(btnCusMan);
+            MainInstance.i.NavigateTo(CustomerInstance.i = new CustomerForm());
         }
 
         private void empmanbtn_Click(object sender, EventArgs e)
         {
             CurrentFormClass.setPreviousFormTo("empform");
             SelectedTab(btnEmpMan);
+            MainInstance.i.NavigateTo(InventoryInstance.i = new InventoryForm());
         }
+
+ 
     }
 }

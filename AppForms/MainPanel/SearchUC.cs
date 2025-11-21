@@ -1,4 +1,5 @@
-﻿using ColdChainConnectSystem_ACDP.ClassResources;
+﻿using ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales;
+using ColdChainConnectSystem_ACDP.ClassResources;
 using ColdChainConnectSystem_ACDP.ClassResources.Connection;
 using ColdChainConnectSystem_ACDP.ClassResources.Display;
 using ColdChainConnectSystem_ACDP.ClassResources.Instances;
@@ -22,7 +23,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
 {
     public partial class SearchUC : UserControl
     {
-        DisplayClass dc = new DisplayClass();
+
         public SearchUC()
         {
             InitializeComponent();
@@ -137,6 +138,8 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
                     MainInstance.i.NavigateTo(addItem);
                     break;
                 case "supform":
+                    AddTransactionSalesForm addTrans = new AddTransactionSalesForm();
+                    MainInstance.i.NavigateTo(addTrans);
                     break;
                 case "salform":
                     break;
@@ -149,11 +152,15 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
 
         private void btnImport_Click(object sender, EventArgs e)
         {
-            Console.WriteLine("HERE IMPORT at " + CurrentFormClass.form);
-    
             switch (CurrentFormClass.form)
             {
                 case "invform":
+                    if (ofdImport.ShowDialog() == DialogResult.OK)
+                    {
+
+                        InvExcelClass.Import(ofdImport.FileName);
+                        InventoryInstance.i.UpdateTable();
+                    }
                     break;
                 case "supform":
                     break;
@@ -178,6 +185,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
                     {
 
                         InvExcelClass.Export(txtSearch.Text, ofdExport.FileName);
+                        InventoryInstance.i.UpdateTable();
                     }
                     break;
                 case "supform":
@@ -190,6 +198,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
                     break;
             }
         }
+
 
     }
 }
