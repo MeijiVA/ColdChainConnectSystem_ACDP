@@ -88,7 +88,7 @@
             "Filter"});
             this.cbxFilter.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.cbxFilter.ListTextColor = System.Drawing.Color.DimGray;
-            this.cbxFilter.Location = new System.Drawing.Point(299, 16);
+            this.cbxFilter.Location = new System.Drawing.Point(302, 15);
             this.cbxFilter.MinimumSize = new System.Drawing.Size(40, 30);
             this.cbxFilter.Name = "cbxFilter";
             this.cbxFilter.Padding = new System.Windows.Forms.Padding(1);
