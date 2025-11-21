@@ -219,20 +219,23 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
                     case "ID":
                         SelectedFilterClass.SelectedFilter = "[numid]";
                         break;
-                    case "SKU":
-                        SelectedFilterClass.SelectedFilter = "[skucode]";
+                    case "SupID":
+                        SelectedFilterClass.SelectedFilter = "[SupplierID]";
                         break;
-                    case "Price":
-                        SelectedFilterClass.SelectedFilter = "[UnitPrice]";
+                    case "C.Name":
+                        SelectedFilterClass.SelectedFilter = "[CompanyName]";
                         break;
-                    case "Desc":
-                        SelectedFilterClass.SelectedFilter = "[Description]";
+                    case "C.Person":
+                        SelectedFilterClass.SelectedFilter = "[ContactPerson]";
                         break;
-                    case "Qty":
-                        SelectedFilterClass.SelectedFilter = "[quantity]";
+                    case "C.Num":
+                        SelectedFilterClass.SelectedFilter = "[ContactNumber]";
                         break;
-                    case "Expry":
-                        SelectedFilterClass.SelectedFilter = "[expiry]";
+                    case "Adrs.":
+                        SelectedFilterClass.SelectedFilter = "[Address]";
+                        break;
+                    case "PayTerm":
+                        SelectedFilterClass.SelectedFilter = "[PaymentTerm]";
                         break;
                         //FOR SUPPLIER
                 }
@@ -246,21 +249,27 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
                         SelectedFilterClass.SelectedFilter = "";
                         break;
                     case "ID":
-                        SelectedFilterClass.SelectedFilter = "[numid]";
+                        SelectedFilterClass.SelectedFilter = "a.[numid]";
                         break;
-                    case "SKU":
-                        SelectedFilterClass.SelectedFilter = "[skucode]";
+                    case "Sal.ID":
+                        SelectedFilterClass.SelectedFilter = "a.[SalesID]";
                         break;
-                    case "Desc.":
-                        SelectedFilterClass.SelectedFilter = "[Description]";
+                    case "C.ID":
+                        SelectedFilterClass.SelectedFilter = "a.[CustomerID]";
                         break;
-                    case "Qty.":
-                        SelectedFilterClass.SelectedFilter = "[quantity]";
+                    case "S.Date":
+                        SelectedFilterClass.SelectedFilter = "a.[SalesDate]";
                         break;
-                    case "ExpDate":
-                        SelectedFilterClass.SelectedFilter = "[expiry]";
+                    case "Qty":
+                        SelectedFilterClass.SelectedFilter = "a.[Quantity]";
                         break;
-                        //FOR SUPPLIER
+                    case "Price":
+                        SelectedFilterClass.SelectedFilter = "i.[UnitPrice]";
+                        break;
+                    case "Status":
+                        SelectedFilterClass.SelectedFilter = "a.[Status]";
+                        break;
+                        //FOR Sales
                 }
             }
             else if (IfIsCustomerFilter())
