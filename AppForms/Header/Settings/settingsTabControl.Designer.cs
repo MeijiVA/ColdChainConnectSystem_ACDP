@@ -30,10 +30,10 @@
         {
             this.lblPersDetail = new System.Windows.Forms.Label();
             this.lblSecurity = new System.Windows.Forms.Label();
-            this.lblExtra4 = new System.Windows.Forms.Label();
+            this.lblExtra3 = new System.Windows.Forms.Label();
             this.lblAudit = new System.Windows.Forms.Label();
-            this.lblExtra5 = new System.Windows.Forms.Label();
-            this.lblExtra6 = new System.Windows.Forms.Label();
+            this.lblExtra1 = new System.Windows.Forms.Label();
+            this.lblExtra2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -41,7 +41,6 @@
             // lblPersDetail
             // 
             this.lblPersDetail.BackColor = System.Drawing.Color.White;
-            this.lblPersDetail.Dock = System.Windows.Forms.DockStyle.Left;
             this.lblPersDetail.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
             this.lblPersDetail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(9)))), ((int)(((byte)(76)))));
             this.lblPersDetail.Location = new System.Drawing.Point(0, 0);
@@ -55,7 +54,6 @@
             // lblSecurity
             // 
             this.lblSecurity.BackColor = System.Drawing.Color.White;
-            this.lblSecurity.Dock = System.Windows.Forms.DockStyle.Left;
             this.lblSecurity.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
             this.lblSecurity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(9)))), ((int)(((byte)(76)))));
             this.lblSecurity.Location = new System.Drawing.Point(120, 0);
@@ -66,24 +64,22 @@
             this.lblSecurity.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.lblSecurity.Click += new System.EventHandler(this.lblSecurity_Click);
             // 
-            // lblExtra4
+            // lblExtra3
             // 
-            this.lblExtra4.BackColor = System.Drawing.Color.White;
-            this.lblExtra4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lblExtra4.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
-            this.lblExtra4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(9)))), ((int)(((byte)(76)))));
-            this.lblExtra4.Location = new System.Drawing.Point(600, 0);
-            this.lblExtra4.Name = "lblExtra4";
-            this.lblExtra4.Size = new System.Drawing.Size(120, 30);
-            this.lblExtra4.TabIndex = 2;
-            this.lblExtra4.Text = "Extra4";
-            this.lblExtra4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.lblExtra4.Click += new System.EventHandler(this.lblExtra3_Click);
+            this.lblExtra3.BackColor = System.Drawing.Color.White;
+            this.lblExtra3.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
+            this.lblExtra3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(9)))), ((int)(((byte)(76)))));
+            this.lblExtra3.Location = new System.Drawing.Point(600, 0);
+            this.lblExtra3.Name = "lblExtra3";
+            this.lblExtra3.Size = new System.Drawing.Size(120, 30);
+            this.lblExtra3.TabIndex = 2;
+            this.lblExtra3.Text = "Extra3";
+            this.lblExtra3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.lblExtra3.Click += new System.EventHandler(this.lblExtra3_Click);
             // 
             // lblAudit
             // 
             this.lblAudit.BackColor = System.Drawing.Color.White;
-            this.lblAudit.Dock = System.Windows.Forms.DockStyle.Left;
             this.lblAudit.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
             this.lblAudit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(9)))), ((int)(((byte)(76)))));
             this.lblAudit.Location = new System.Drawing.Point(240, 0);
@@ -92,42 +88,40 @@
             this.lblAudit.TabIndex = 3;
             this.lblAudit.Text = "Audit Log";
             this.lblAudit.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.lblAudit.Click += new System.EventHandler(this.lblExtra4_Click);
+            this.lblAudit.Click += new System.EventHandler(this.lblAudit_Click);
             // 
-            // lblExtra5
+            // lblExtra1
             // 
-            this.lblExtra5.BackColor = System.Drawing.Color.White;
-            this.lblExtra5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lblExtra5.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
-            this.lblExtra5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(9)))), ((int)(((byte)(76)))));
-            this.lblExtra5.Location = new System.Drawing.Point(360, 0);
-            this.lblExtra5.Name = "lblExtra5";
-            this.lblExtra5.Size = new System.Drawing.Size(120, 30);
-            this.lblExtra5.TabIndex = 4;
-            this.lblExtra5.Text = "Extra2";
-            this.lblExtra5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.lblExtra5.Click += new System.EventHandler(this.lblExtra5_Click);
+            this.lblExtra1.BackColor = System.Drawing.Color.White;
+            this.lblExtra1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
+            this.lblExtra1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(9)))), ((int)(((byte)(76)))));
+            this.lblExtra1.Location = new System.Drawing.Point(360, 0);
+            this.lblExtra1.Name = "lblExtra1";
+            this.lblExtra1.Size = new System.Drawing.Size(120, 30);
+            this.lblExtra1.TabIndex = 4;
+            this.lblExtra1.Text = "Extra1";
+            this.lblExtra1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.lblExtra1.Click += new System.EventHandler(this.lblExtra1_Click);
             // 
-            // lblExtra6
+            // lblExtra2
             // 
-            this.lblExtra6.BackColor = System.Drawing.Color.White;
-            this.lblExtra6.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lblExtra6.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
-            this.lblExtra6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(9)))), ((int)(((byte)(76)))));
-            this.lblExtra6.Location = new System.Drawing.Point(480, 0);
-            this.lblExtra6.Name = "lblExtra6";
-            this.lblExtra6.Size = new System.Drawing.Size(120, 30);
-            this.lblExtra6.TabIndex = 5;
-            this.lblExtra6.Text = "Extra3";
-            this.lblExtra6.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.lblExtra6.Click += new System.EventHandler(this.lblExtra6_Click);
+            this.lblExtra2.BackColor = System.Drawing.Color.White;
+            this.lblExtra2.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
+            this.lblExtra2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(9)))), ((int)(((byte)(76)))));
+            this.lblExtra2.Location = new System.Drawing.Point(480, 0);
+            this.lblExtra2.Name = "lblExtra2";
+            this.lblExtra2.Size = new System.Drawing.Size(120, 30);
+            this.lblExtra2.TabIndex = 5;
+            this.lblExtra2.Text = "Extra2";
+            this.lblExtra2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.lblExtra2.Click += new System.EventHandler(this.lblExtra2_Click);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.panel1.Controls.Add(this.lblExtra4);
-            this.panel1.Controls.Add(this.lblExtra6);
-            this.panel1.Controls.Add(this.lblExtra5);
+            this.panel1.Controls.Add(this.lblExtra3);
+            this.panel1.Controls.Add(this.lblExtra2);
+            this.panel1.Controls.Add(this.lblExtra1);
             this.panel1.Controls.Add(this.lblAudit);
             this.panel1.Controls.Add(this.lblSecurity);
             this.panel1.Controls.Add(this.lblPersDetail);
@@ -154,10 +148,10 @@
 
         private System.Windows.Forms.Label lblPersDetail;
         private System.Windows.Forms.Label lblSecurity;
-        private System.Windows.Forms.Label lblExtra4;
+        private System.Windows.Forms.Label lblExtra3;
         private System.Windows.Forms.Label lblAudit;
-        private System.Windows.Forms.Label lblExtra5;
-        private System.Windows.Forms.Label lblExtra6;
+        private System.Windows.Forms.Label lblExtra1;
+        private System.Windows.Forms.Label lblExtra2;
         private System.Windows.Forms.Panel panel1;
     }
 }

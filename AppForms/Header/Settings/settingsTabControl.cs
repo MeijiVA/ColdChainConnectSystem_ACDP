@@ -31,9 +31,9 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Settings
             LabelStatus("hide", lblPersDetail, 3, "");
             LabelStatus("hide", lblSecurity, 4, "");
             LabelStatus("hide", lblAudit, 5, "");
-            LabelStatus("hide", lblExtra4,3, "");
-            LabelStatus("hide", lblExtra5,4, "");
-            LabelStatus("hide", lblExtra6,5, "");
+            LabelStatus("hide", lblExtra3,3, "");
+            LabelStatus("hide", lblExtra1,4, "");
+            LabelStatus("hide", lblExtra2,5, "");
 
             switch (LoginForm.verify)
             {
@@ -74,9 +74,9 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Settings
             lblPersDetail.Location = new Point(lblPersDetail.Location.X, 0);
             lblSecurity.Location = new Point(lblSecurity.Location.X, 0);
             lblAudit.Location = new Point(lblAudit.Location.X, 0);
-            lblExtra4.Location = new Point(lblExtra4.Location.X, 0);
-            lblExtra5.Location = new Point(lblExtra5.Location.X, 0);
-            lblExtra6.Location = new Point(lblExtra6.Location.X, 0);
+            lblExtra3.Location = new Point(lblExtra3.Location.X, 0);
+            lblExtra1.Location = new Point(lblExtra1.Location.X, 0);
+            lblExtra2.Location = new Point(lblExtra2.Location.X, 0);
             l.Location = new Point(l.Location.X, -3);
         }
 
@@ -99,43 +99,38 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Settings
             }
         }
 
-        private void lblExtra3_Click(object sender, EventArgs e)
+        private void lblAudit_Click(object sender, EventArgs e)
         {
             if (Clickable[2] == true)
-            {
-                LabelClick(lblExtra4);
-
-            }
-        }
-
-        private void lblExtra4_Click(object sender, EventArgs e)
-        {
-            if (Clickable[3] == true)
             {
                 LabelClick(lblAudit);
                 /*SettingsInstance.i.NavigateTo(SettingForm.empf);*/
             }
         }
 
-        private void lblExtra5_Click(object sender, EventArgs e)
+        private void lblExtra1_Click(object sender, EventArgs e)
+        {
+            if (Clickable[3] == true)
+            {
+                LabelClick(lblExtra1);
+
+            }
+        }
+
+        private void lblExtra2_Click(object sender, EventArgs e)
         {
             if (Clickable[4] == true)
             {
-                LabelClick(lblExtra5);
+                LabelClick(lblExtra2);
             }
         }
 
-        private void lblExtra6_Click(object sender, EventArgs e)
+        private void lblExtra3_Click(object sender, EventArgs e)
         {
             if (Clickable[5] == true)
             {
-                LabelClick(lblExtra6);
+                LabelClick(lblExtra3);
             }
-        }
-
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }
