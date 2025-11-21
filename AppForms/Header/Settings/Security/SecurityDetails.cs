@@ -122,5 +122,10 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.PersonalDetails
                     break;
             }
         }
+
+        private void customButton1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
