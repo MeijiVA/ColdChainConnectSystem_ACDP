@@ -11,6 +11,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.Common;
 using System.Diagnostics;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.IdentityModel.Tokens;
@@ -43,66 +44,40 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
         {
 
         }
-
-        private void cbxFilter_OnSelectedIndexChanged(object sender, EventArgs e)
+        private bool IfIsInventoryFilter()
         {
-            switch (cbxFilter.Texts)
+            if (CurrentFormClass.form.Equals("invform"))
             {
-                case "Filter":
-                case "All":
-                SelectedFilterClass.SelectedFilter = "";
-                    break;
-                case "ID":
-                    SelectedFilterClass.SelectedFilter = "numid";
-                    break;
-                case "SKU":
-                    SelectedFilterClass.SelectedFilter = "skucode";
-                    break;
-                case "Desc":
-                    SelectedFilterClass.SelectedFilter = "descript";
-                    break;
-                case "Qty":
-                    SelectedFilterClass.SelectedFilter = "quantity";
-                    break;
-                case "Expry":
-                    SelectedFilterClass.SelectedFilter = "expiry";
-                    break;
-                //FOR INVENTORY
-
-
+                return true;
             }
-
+            return false;
+        }
+        private bool IfIsSupplierFilter()
+        {
+            if (CurrentFormClass.form.Equals("supform"))
+            {
+                return true;
+            }
+            return false;
+        }
+        private bool IfIsSalesFilter()
+        {
+            if (CurrentFormClass.form.Equals("salform"))
+            {
+                return true;
+            }
+            return false;
+        }
+        private bool IfIsCustomerFilter()
+        {
+            if (CurrentFormClass.form.Equals("custform"))
+            {
+                return true;
+            }
+            return false;
         }
 
-        private void cbxFilter_Load(object sender, EventArgs e)
-        {
-            Console.WriteLine("HERE at " + CurrentFormClass.form);
 
-            switch (CurrentFormClass.form)
-            {
-                case "invform":
-                    cbxFilter.Items.Add("All");
-                    cbxFilter.Items.Add("ID");
-                    cbxFilter.Items.Add("SKU");
-                    cbxFilter.Items.Add("Desc");
-                    cbxFilter.Items.Add("Qty");
-                    cbxFilter.Items.Add("Expry");
-                    break;
-                case "supform":
-                    cbxFilter.Items.Add("Supplier Name");
-                    break;
-
-                case "salform":
-                    cbxFilter.Items.Add("Customer Name");
-                    break;
-
-                case "custform":
-                    cbxFilter.Items.Add("Customer Name");
-                    break;
-                default:
-                    break;
-            }
-        }
 
 
         private void txtSearch_KeyPress(object sender, KeyPressEventArgs e)
@@ -205,6 +180,144 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
             }
         }
 
+        private void cbxFilter_OnSelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (IfIsInventoryFilter())
+            {
+                switch (cbxFilter.Texts)
+                {
+                    case "Filter":
+                    case "All":
+                        SelectedFilterClass.SelectedFilter = "";
+                        break;
+                    case "ID":
+                        SelectedFilterClass.SelectedFilter = "[numid]";
+                        break;
+                    case "SKU":
+                        SelectedFilterClass.SelectedFilter = "[skucode]";
+                        break;
+                    case "Desc":
+                        SelectedFilterClass.SelectedFilter = "[Description]";
+                        break;
+                    case "Qty":
+                        SelectedFilterClass.SelectedFilter = "[quantity]";
+                        break;
+                    case "Expry":
+                        SelectedFilterClass.SelectedFilter = "[expiry]";
+                        break;
+                        //FOR INVENTORY
+                }
+            }
+            else if (IfIsSupplierFilter())
+            {
+                switch (cbxFilter.Texts)
+                {
+                    case "Filter":
+                    case "All":
+                        SelectedFilterClass.SelectedFilter = "";
+                        break;
+                    case "ID":
+                        SelectedFilterClass.SelectedFilter = "[numid]";
+                        break;
+                    case "SKU":
+                        SelectedFilterClass.SelectedFilter = "[skucode]";
+                        break;
+                    case "Price":
+                        SelectedFilterClass.SelectedFilter = "[UnitPrice]";
+                        break;
+                    case "Desc":
+                        SelectedFilterClass.SelectedFilter = "[Description]";
+                        break;
+                    case "Qty":
+                        SelectedFilterClass.SelectedFilter = "[quantity]";
+                        break;
+                    case "Expry":
+                        SelectedFilterClass.SelectedFilter = "[expiry]";
+                        break;
+                        //FOR SUPPLIER
+                }
+            }
+            else if (IfIsSalesFilter())
+            {
+                switch (cbxFilter.Texts)
+                {
+                    case "Filter":
+                    case "All":
+                        SelectedFilterClass.SelectedFilter = "";
+                        break;
+                    case "ID":
+                        SelectedFilterClass.SelectedFilter = "[numid]";
+                        break;
+                    case "SKU":
+                        SelectedFilterClass.SelectedFilter = "[skucode]";
+                        break;
+                    case "Desc.":
+                        SelectedFilterClass.SelectedFilter = "[Description]";
+                        break;
+                    case "Qty.":
+                        SelectedFilterClass.SelectedFilter = "[quantity]";
+                        break;
+                    case "ExpDate":
+                        SelectedFilterClass.SelectedFilter = "[expiry]";
+                        break;
+                        //FOR SUPPLIER
+                }
+            }
+            else if (IfIsCustomerFilter())
+            {
+                switch (cbxFilter.Texts)
+                {
+                    case "Filter":
+                    case "All":
+                        SelectedFilterClass.SelectedFilter = "";
+                        break;
+                    case "ID":
+                        SelectedFilterClass.SelectedFilter = "[numid]";
+                        break;
+                    case "SKU":
+                        SelectedFilterClass.SelectedFilter = "[skucode]";
+                        break;
+                    case "Desc":
+                        SelectedFilterClass.SelectedFilter = "[Description]";
+                        break;
+                    case "Qty":
+                        SelectedFilterClass.SelectedFilter = "[quantity]";
+                        break;
+                    case "Expry":
+                        SelectedFilterClass.SelectedFilter = "[expiry]";
+                        break;
+                        //FOR SUPPLIER
+                }
+            }
+        }
 
+        private void cbxFilter_Load(object sender, EventArgs e)
+        {
+            Console.WriteLine("HERE at " + CurrentFormClass.form);
+            cbxFilter.Items.Add("All");
+            cbxFilter.Items.Add("ID");
+            switch (CurrentFormClass.form)
+            {
+                case "invform":
+                    cbxFilter.Items.Add("SKU");
+                    cbxFilter.Items.Add("Desc");
+                    cbxFilter.Items.Add("Qty");
+                    cbxFilter.Items.Add("Expry");
+                    break;
+                case "supform":
+                    cbxFilter.Items.Add("Supplier Name");
+                    break;
+
+                case "salform":
+                    cbxFilter.Items.Add("Customer Name");
+                    break;
+
+                case "custform":
+                    cbxFilter.Items.Add("Customer Name");
+                    break;
+                default:
+                    break;
+            }
+        }
     }
 }
