@@ -54,7 +54,7 @@
             this.AddressUserControl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.AddressUserControl.City = "label4";
             this.AddressUserControl.HouseNum = "label1";
-            this.AddressUserControl.Location = new System.Drawing.Point(11, 308);
+            this.AddressUserControl.Location = new System.Drawing.Point(25, 320);
             this.AddressUserControl.Name = "AddressUserControl";
             this.AddressUserControl.Postal = "label3";
             this.AddressUserControl.Province = "label3";
@@ -70,7 +70,7 @@
             this.PersonalUserControl.First_NameInfo = "label1";
             this.PersonalUserControl.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.PersonalUserControl.Last_NameInfo = "label4";
-            this.PersonalUserControl.Location = new System.Drawing.Point(11, 93);
+            this.PersonalUserControl.Location = new System.Drawing.Point(25, 89);
             this.PersonalUserControl.Middle_NameInfo = "label2";
             this.PersonalUserControl.Name = "PersonalUserControl";
             this.PersonalUserControl.SexInfo = "label3";
@@ -84,10 +84,10 @@
             this.ContactUserControl.ConNum = "Ow yeah";
             this.ContactUserControl.EmailInfo = "email";
             this.ContactUserControl.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ContactUserControl.Location = new System.Drawing.Point(506, 62);
+            this.ContactUserControl.Location = new System.Drawing.Point(492, 89);
             this.ContactUserControl.Name = "ContactUserControl";
             this.ContactUserControl.PositionInfo = "position";
-            this.ContactUserControl.Size = new System.Drawing.Size(280, 446);
+            this.ContactUserControl.Size = new System.Drawing.Size(280, 431);
             this.ContactUserControl.StatusInfo = "status";
             this.ContactUserControl.TabIndex = 69;
             // 
@@ -96,7 +96,7 @@
             this.lblEmpID.BackColor = System.Drawing.Color.Transparent;
             this.lblEmpID.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.lblEmpID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.lblEmpID.Location = new System.Drawing.Point(11, 62);
+            this.lblEmpID.Location = new System.Drawing.Point(22, 62);
             this.lblEmpID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEmpID.Name = "lblEmpID";
             this.lblEmpID.Size = new System.Drawing.Size(450, 18);
