@@ -19,54 +19,80 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.Employee
         public ShowEmployee()
         {
             InitializeComponent();
+
+
+
+
+
+            DetermineStatusColor();
         }
         [Category("Data")]
-        public string EMPID { get; set; }
-
-        [Category("Data")]
-        public string EmployeeName { get; set; }
-
-        [Category("Data")]
-        public string Position { get; set; }
-
-        [Category("Data")]
-        public string Status { get; set; }
-
-        public void UpdateDisplay()
+        public string EmpID
         {
-            if (!string.IsNullOrEmpty(EMPID))
+            get { return lblEmpID.Text; }
+            set { lblEmpID.Text = value; }
+        }
+        [Category("Data")]
+        public string EmployeeName
+        {
+            get { return lblName.Text; }
+            set { lblName.Text = value; }
+        }
+
+        [Category("Data")]
+        public string Position
+        {
+            get { return lblPosition.Text; }
+            set { lblPosition.Text = value; }
+        }
+
+        [Category("Data")]
+        public string Status
+        {
+            get { return lblStatus.Text; }
+            set { lblStatus.Text = value; }
+        }
+
+        public void DetermineStatusColor()
+        {
+
+            if (lblStatus.Text.Equals("Active"))
             {
-                // Display employee name or ID
-                if (!string.IsNullOrEmpty(EmployeeName))
-                {
-                    lblEMP.Text = EmployeeName;
-                }
-                else
-                {
-                    lblEMP.Text = "ID: " + EMPID;
-                }
+                lblStatus.ForeColor = System.Drawing.Color.FromArgb(107, 188, 59);
             }
-            else
+            else if (lblStatus.Text.Equals("Inactive"))
             {
-                lblEMP.Text = "No Employee";
+                lblStatus.ForeColor = System.Drawing.Color.FromArgb(115, 115, 115);
             }
         }
 
-        private void customButton1_Click(object sender, EventArgs e)
+
+
+        private void lblStatus_TextChanged(object sender, EventArgs e)
         {
-            EmployeeProfile empProfile = new EmployeeProfile(this.EMPID);
-            MainInstance.i.NavigateTo(empProfile);
+            if (lblStatus.Text.Equals("Active"))
+            {
+                lblStatus.ForeColor = System.Drawing.Color.FromArgb(107, 188, 59);
+            }
+            else if (lblStatus.Text.Equals("Inactive"))
+            {
+                lblStatus.ForeColor = System.Drawing.Color.FromArgb(115, 115, 115);
+            }
         }
 
-        private void customButton2_Click(object sender, EventArgs e)
+        private void View_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void customButton3_Click(object sender, EventArgs e)
+        private void Edit_Click(object sender, EventArgs e)
         {
-            AddTransactionSalesForm add = new AddTransactionSalesForm();
-            SettingsInstance.i.pnlDisplaySettings.Controls.Add(add);
+
+        }
+
+        private void Delete_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
