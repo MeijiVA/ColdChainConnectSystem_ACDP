@@ -127,5 +127,10 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.PersonalDetails
         {
 
         }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
