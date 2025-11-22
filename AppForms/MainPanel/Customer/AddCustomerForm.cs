@@ -23,24 +23,6 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer
             MainInstance.i.NavigateTo(new CustomerForm());
         }
 
-        private void btnImage_Click(object sender, EventArgs e)
-        {
-            ofdSaveImage.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.gif;*.bmp";
-            ofdSaveImage.Title = "Select an Image File";
-
-            if (ofdSaveImage.ShowDialog() == DialogResult.OK)
-            {
-                try
-                {
-                    // Load the selected image into the PictureBox
-                    pbxImage.BackgroundImage = Image.FromFile(ofdSaveImage.FileName);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error loading image: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-        }
 
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -48,27 +30,12 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer
             cmb = new CustomMessageBox("Add Item", "Confirm?", MessageBoxButtons.OKCancel);
             if (cmb.ShowDialog() == DialogResult.OK)
             {
-                if (InventoryClass.writeInventoryData(txtCustomerID.Texts, txtAddress.Texts, System.IO.Path.GetFileName(ofdSaveImage.FileName), txtPhoneNumber.Texts, txtCustomerName.Texts, dpExpiry.Value.ToString("yyyy-MM-dd")))
+                //fix this later meiji ok!
+               /* if (CustomerClass.writeCustomerData())*/
                 {
                     try
                     {
-                        string fileName;
-                        string filePath = Directory.GetCurrentDirectory() + "\\InventoryImage\\";
-                        if (!Directory.Exists(filePath))
-                        {
-                            // Create the directory
-                            Directory.CreateDirectory(filePath);
-                        }//no directory
-                        Console.WriteLine(ofdSaveImage.FileName);
-                        if (ofdSaveImage.FileName.Equals(""))
-                        {
-                            fileName = "NoImage.png";
-                        }// if no image selected
-                        else
-                        {
-                            fileName = ofdSaveImage.FileName;
-                        }//if has image
-                        pbxImage.BackgroundImage.Save(filePath + System.IO.Path.GetFileName(fileName));
+
                         this.Close();
                         MainInstance.i.NavigateTo(new CustomerForm());
                     }

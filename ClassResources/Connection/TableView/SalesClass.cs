@@ -21,13 +21,15 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
             String query;
             SqlConnection con = ConnectionClass.Connection();
             con.Open();
-            query = "SELECT COUNT(*) FROM Sales";
+            query = "SELECT COUNT(*) FROM Sales AS A JOIN Inventory AS i ON  a.[productid] = i.[numid] ";
             using (SqlCommand count = new SqlCommand(query, con))
             {
                 totalRows = (int)count.ExecuteScalar();
                 totalPages = (int)Math.Ceiling((double)totalRows / PageSize);
                 lblPage.Text = totalPages.ToString();
+                Console.WriteLine(query);
                 query = $"SELECT a.[salesid],a.[customerid],a.[salesdate],a.[productid],a.[quantity],i.[unitprice],a.[status] FROM Sales as a JOIN Inventory AS i ON   a.[productid] = i.[numid] ORDER BY [salesid] OFFSET {(currentPageIndex - 1) * PageSize} ROWS FETCH NEXT {PageSize} ROWS ONLY";
+                Console.WriteLine(query);
                 using (SqlCommand data = new SqlCommand(query, con))
                 {
                     using (var reader = data.ExecuteReader())
@@ -61,7 +63,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
 
 
 
-            query = $"SELECT COUNT(*) FROM Sales {searchQuery}";
+            query = $"SELECT COUNT(*) FROM Sales AS A JOIN Inventory AS i ON  a.[productid] = i.[numid]  {searchQuery}";
             using (SqlCommand count = new SqlCommand(query, con))
             {
                 totalRows = (int)count.ExecuteScalar();
@@ -69,15 +71,15 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                 lblPage.Text = totalPages.ToString();
 
                 Console.WriteLine(totalRows + " TR " + totalPages + "TP");
+                Console.WriteLine(query);
                 query = $"SELECT a.[salesid],a.[customerid],a.[salesdate],a.[productid],a.[quantity],i.[unitprice],a.[status] FROM Sales as a JOIN Inventory AS i ON   a.[productid] = i.[numid] {searchQuery} ORDER BY [salesid] OFFSET {(currentPageIndex - 1) * PageSize} ROWS FETCH NEXT {PageSize} ROWS ONLY";
+                Console.WriteLine(query);
                 using (SqlCommand data = new SqlCommand(query, con))
                 {
                     using (var reader = data.ExecuteReader())
                     {
                         while (reader.Read())
                         {
-                            double amount = double.Parse(reader[4].ToString()) * double.Parse(reader[6].ToString());
-
                             //[salesid],[customerid],[salesdate],[productid],[quantity],[unitprice],[status]
                             dgv.Rows.Add(new object[] { 0, reader[0].ToString(), reader[1].ToString(), reader[2].ToString(), reader[3].ToString(), reader[4].ToString(), reader[5].ToString(), reader[6].ToString() });
                         }//while reader loop

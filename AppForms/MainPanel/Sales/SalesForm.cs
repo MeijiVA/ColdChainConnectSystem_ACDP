@@ -58,7 +58,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
             {
                 dgvTable.Rows.Clear();
                 lblPageNum.Text = (currentPageIndex += 1).ToString();
-                string query = $"WHERE a.[numid] LIKE '%{(SearchBar.searchTXT)}%' OR a.[SalesID] LIKE '%{(SearchBar.searchTXT)}%' OR a.[CustomerID] LIKE '%{(SearchBar.searchTXT)}%' OR a.[SalesDate] LIKE '%{(SearchBar.searchTXT)}%' OR a.[Quantity] LIKE '%{(SearchBar.searchTXT)}%' OR a.[UnitPrice] LIKE '%{(SearchBar.searchTXT)}%' OR a.[Status]LIKE '%{(SearchBar.searchTXT)}%' OR";
+                string query = $"WHERE a.[numid] LIKE '%{(SearchBar.searchTXT)}%' OR a.[SalesID] LIKE '%{(SearchBar.searchTXT)}%' OR a.[CustomerID] LIKE '%{(SearchBar.searchTXT)}%' OR a.[SalesDate] LIKE '%{(SearchBar.searchTXT)}%' OR a.[Quantity] LIKE '%{(SearchBar.searchTXT)}%' OR a.[UnitPrice] LIKE '%{(SearchBar.searchTXT)}%' OR a.[Status]LIKE '%{(SearchBar.searchTXT)}%'";
                 totalPages = SalesClass.loadSalesData(dgvTable, lblMaxPage, lblPageNum, currentPageIndex, query);
             }// has search query ALL
         }
@@ -82,7 +82,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
             {
                 dgvTable.Rows.Clear();
                 lblPageNum.Text = (currentPageIndex -= 1).ToString();
-                string query = $"WHERE a.[numid] LIKE '%{(SearchBar.searchTXT)}%' OR a.[SalesID] LIKE '%{(SearchBar.searchTXT)}%' OR a.[CustomerID] LIKE '%{(SearchBar.searchTXT)}%' OR a.[SalesDate] LIKE '%{(SearchBar.searchTXT)}%' OR a.[Quantity] LIKE '%{(SearchBar.searchTXT)}%' OR a.[UnitPrice] LIKE '%{(SearchBar.searchTXT)}%' OR a.[Status]LIKE '%{(SearchBar.searchTXT)}%' OR"; 
+                string query = $"WHERE a.[numid] LIKE '%{(SearchBar.searchTXT)}%' OR a.[SalesID] LIKE '%{(SearchBar.searchTXT)}%' OR a.[CustomerID] LIKE '%{(SearchBar.searchTXT)}%' OR a.[SalesDate] LIKE '%{(SearchBar.searchTXT)}%' OR a.[Quantity] LIKE '%{(SearchBar.searchTXT)}%' OR a.[UnitPrice] LIKE '%{(SearchBar.searchTXT)}%' OR a.[Status]LIKE '%{(SearchBar.searchTXT)}%'"; 
                 totalPages = SalesClass.loadSalesData(dgvTable, lblMaxPage, lblPageNum, currentPageIndex, query);
             }// has search query ALL
         }
@@ -110,7 +110,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
                     lblPageNum.Text = "1";
                     currentPageIndex = 1;//!!!!!!!!!!!!!!!!!!!
                     dgvTable.Rows.Clear();
-                    string query = $"WHERE a.[numid] LIKE '%{(SearchBar.searchTXT)}%' OR a.[SalesID] LIKE '%{(SearchBar.searchTXT)}%' OR a.[CustomerID] LIKE '%{(SearchBar.searchTXT)}%' OR a.[SalesDate] LIKE '%{(SearchBar.searchTXT)}%' OR a.[Quantity] LIKE '%{(SearchBar.searchTXT)}%' OR a.[UnitPrice] LIKE '%{(SearchBar.searchTXT)}%' OR a.[Status]LIKE '%{(SearchBar.searchTXT)}%' OR";
+                    string query = $"WHERE a.[numid] LIKE '%{(SearchBar.searchTXT)}%' OR a.[SalesID] LIKE '%{(SearchBar.searchTXT)}%' OR a.[CustomerID] LIKE '%{(SearchBar.searchTXT)}%' OR a.[SalesDate] LIKE '%{(SearchBar.searchTXT)}%' OR a.[Quantity] LIKE '%{(SearchBar.searchTXT)}%' OR a.[UnitPrice] LIKE '%{(SearchBar.searchTXT)}%' OR a.[Status]LIKE '%{(SearchBar.searchTXT)}%'";
                     totalPages = SalesClass.loadSalesData(dgvTable, lblMaxPage, lblPageNum, currentPageIndex, query);
                 }
                 else
