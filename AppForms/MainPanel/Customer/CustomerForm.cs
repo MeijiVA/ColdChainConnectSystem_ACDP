@@ -57,7 +57,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer
             {
                 dgvTable.Rows.Clear();
                 lblPageNum.Text = (currentPageIndex += 1).ToString();
-                string query = $"WHERE numid LIKE '%{(SearchBar.searchTXT)}%' OR skucode LIKE '%{(SearchBar.searchTXT)}%' OR quantity LIKE '%{(SearchBar.searchTXT)}%' OR expiry LIKE '%{(SearchBar.searchTXT)}%' OR descript LIKE '%{(SearchBar.searchTXT)}%' OR ";
+                string query = $"WHERE [numid] LIKE '%{(SearchBar.searchTXT)}%' OR [CustomerID] LIKE '%{(SearchBar.searchTXT)}%' OR [CustomerName] LIKE '%{(SearchBar.searchTXT)}%' OR [PhoneNumber] LIKE '%{(SearchBar.searchTXT)}%' OR [Address] LIKE '%{(SearchBar.searchTXT)}%' OR [PaymentTerm] LIKE '%{(SearchBar.searchTXT)}%' OR [RegistrationDate] LIKE '%{(SearchBar.searchTXT)}%' OR [Status] LIKE '%{(SearchBar.searchTXT)}%' OR ";
                 totalPages = CustomerClass.loadCustomerData(dgvTable, lblMaxPage, lblPageNum, currentPageIndex, query);
             }// has search query ALL
         }
@@ -81,7 +81,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer
             {
                 dgvTable.Rows.Clear();
                 lblPageNum.Text = (currentPageIndex -= 1).ToString();
-                string query = $"WHERE numid LIKE '%{(SearchBar.searchTXT)}%' OR skucode LIKE '%{(SearchBar.searchTXT)}%' OR quantity LIKE '%{(SearchBar.searchTXT)}%' OR expiry LIKE '%{(SearchBar.searchTXT)}%' OR descript LIKE '%{(SearchBar.searchTXT)}%'";
+                string query = $"WHERE [numid] LIKE '%{(SearchBar.searchTXT)}%' OR [CustomerID] LIKE '%{(SearchBar.searchTXT)}%' OR [CustomerName] LIKE '%{(SearchBar.searchTXT)}%' OR [PhoneNumber] LIKE '%{(SearchBar.searchTXT)}%' OR [Address] LIKE '%{(SearchBar.searchTXT)}%' OR [PaymentTerm] LIKE '%{(SearchBar.searchTXT)}%' OR [RegistrationDate] LIKE '%{(SearchBar.searchTXT)}%' OR [Status] LIKE '%{(SearchBar.searchTXT)}%' OR "; 
                 totalPages = CustomerClass.loadCustomerData(dgvTable, lblMaxPage, lblPageNum, currentPageIndex, query);
             }// has search query ALL
         }
@@ -109,7 +109,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer
                     lblPageNum.Text = "1";
                     currentPageIndex = 1;//!!!!!!!!!!!!!!!!!!!
                     dgvTable.Rows.Clear();
-                    string query = $"WHERE numid LIKE '%{(SearchBar.searchTXT)}%' OR skucode LIKE '%{(SearchBar.searchTXT)}%' OR quantity LIKE '%{(SearchBar.searchTXT)}%' OR expiry LIKE '%{(SearchBar.searchTXT)}%' OR descript LIKE '%{(SearchBar.searchTXT)}%' ";
+                    string query = $"WHERE [numid] LIKE '%{(SearchBar.searchTXT)}%' OR [CustomerID] LIKE '%{(SearchBar.searchTXT)}%' OR [CustomerName] LIKE '%{(SearchBar.searchTXT)}%' OR [PhoneNumber] LIKE '%{(SearchBar.searchTXT)}%' OR [Address] LIKE '%{(SearchBar.searchTXT)}%' OR [PaymentTerm] LIKE '%{(SearchBar.searchTXT)}%' OR [RegistrationDate] LIKE '%{(SearchBar.searchTXT)}%' OR [Status] LIKE '%{(SearchBar.searchTXT)}%' OR "; 
                     totalPages = CustomerClass.loadCustomerData(dgvTable, lblMaxPage, lblPageNum, currentPageIndex, query);
                 }
                 else

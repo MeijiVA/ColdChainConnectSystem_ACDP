@@ -283,6 +283,9 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
                     case "ID":
                         SelectedFilterClass.SelectedFilter = "[numid]";
                         break;
+                    case "C.ID":
+                        SelectedFilterClass.SelectedFilter = "[CustomerID]";
+                        break;
                     case "C.Name":
                         SelectedFilterClass.SelectedFilter = "[CustomerName]";
                         break;
