@@ -59,7 +59,7 @@
             this.lblName.BorderRadius = 10;
             this.lblName.BorderSize = 0;
             this.lblName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblName.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Bold);
+            this.lblName.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F);
             this.lblName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.lblName.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblName.Location = new System.Drawing.Point(8, 61);
@@ -120,7 +120,7 @@
             this.lblUsername.BorderRadius = 10;
             this.lblUsername.BorderSize = 0;
             this.lblUsername.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblUsername.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Bold);
+            this.lblUsername.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F);
             this.lblUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.lblUsername.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblUsername.Location = new System.Drawing.Point(8, 39);
