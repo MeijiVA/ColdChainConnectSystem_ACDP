@@ -16,5 +16,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.Employee
         {
             InitializeComponent();
         }
+
+
     }
 }

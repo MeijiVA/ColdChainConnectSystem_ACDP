@@ -48,9 +48,10 @@
             this.customButton1.Name = "customButton1";
             this.customButton1.Size = new System.Drawing.Size(78, 40);
             this.customButton1.TabIndex = 0;
-            this.customButton1.Text = "customButton1";
+            this.customButton1.Text = "View";
             this.customButton1.TextColor = System.Drawing.Color.White;
             this.customButton1.UseVisualStyleBackColor = false;
+            this.customButton1.Click += new System.EventHandler(this.customButton1_Click);
             // 
             // customButton2
             // 
@@ -106,6 +107,7 @@
             this.lblEMP.Text = "customLabel1";
             this.lblEMP.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblEMP.TextColor = System.Drawing.Color.White;
+            this.lblEMP.Click += new System.EventHandler(this.lblEMP_Click);
             // 
             // ShowEmployee
             // 
