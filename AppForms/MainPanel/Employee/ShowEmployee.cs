@@ -26,39 +26,6 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.Employee
 
             DetermineStatusColor();
         }
-        [Category("Data")]
-        public string EmpID
-        {
-            get { return lblEmpID.Text; }
-            set { lblEmpID.Text = value; }
-        }
-        [Category("Data")]
-        public string Username
-        {
-            get { return lblUsername.Text; }
-            set { lblUsername.Text = value; }
-        }
-        [Category("Data")]
-
-        public string EmployeeName
-        {
-            get { return lblUsername.Text; }
-            set { lblUsername.Text = value; }
-        }
-
-        [Category("Data")]
-        public string Position
-        {
-            get { return lblPosition.Text; }
-            set { lblPosition.Text = value; }
-        }
-
-        [Category("Data")]
-        public string Status
-        {
-            get { return lblStatus.Text; }
-            set { lblStatus.Text = value; }
-        }
 
         public void DetermineStatusColor()
         {
