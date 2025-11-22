@@ -37,16 +37,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lblHouseNum = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.lbl3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.btnEdit = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.lblPersInfo = new System.Windows.Forms.Label();
             this.lblProvince = new System.Windows.Forms.Label();
             this.lbl4 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.lblBarangay = new System.Windows.Forms.Label();
             this.lbl1 = new System.Windows.Forms.Label();
+            this.lbl3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lblPersInfo = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -142,6 +141,26 @@
             this.panel4.Size = new System.Drawing.Size(450, 53);
             this.panel4.TabIndex = 6;
             // 
+            // lblProvince
+            // 
+            this.lblProvince.Location = new System.Drawing.Point(230, 30);
+            this.lblProvince.Name = "lblProvince";
+            this.lblProvince.Size = new System.Drawing.Size(216, 16);
+            this.lblProvince.TabIndex = 58;
+            this.lblProvince.Text = "label3";
+            // 
+            // lbl4
+            // 
+            this.lbl4.BackColor = System.Drawing.Color.Transparent;
+            this.lbl4.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            this.lbl4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.lbl4.Location = new System.Drawing.Point(225, 5);
+            this.lbl4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl4.Name = "lbl4";
+            this.lbl4.Size = new System.Drawing.Size(225, 16);
+            this.lbl4.TabIndex = 56;
+            this.lbl4.Text = "  Province";
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.label1);
@@ -154,6 +173,26 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(450, 53);
             this.panel2.TabIndex = 4;
+            // 
+            // lblBarangay
+            // 
+            this.lblBarangay.Location = new System.Drawing.Point(230, 30);
+            this.lblBarangay.Name = "lblBarangay";
+            this.lblBarangay.Size = new System.Drawing.Size(217, 16);
+            this.lblBarangay.TabIndex = 55;
+            this.lblBarangay.Text = "label2";
+            // 
+            // lbl1
+            // 
+            this.lbl1.BackColor = System.Drawing.Color.Transparent;
+            this.lbl1.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            this.lbl1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.lbl1.Location = new System.Drawing.Point(225, 5);
+            this.lbl1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl1.Name = "lbl1";
+            this.lbl1.Size = new System.Drawing.Size(225, 16);
+            this.lbl1.TabIndex = 53;
+            this.lbl1.Text = "  Barangay";
             // 
             // lbl3
             // 
@@ -176,22 +215,9 @@
             this.label4.Size = new System.Drawing.Size(447, 2);
             this.label4.TabIndex = 65;
             // 
-            // btnEdit
-            // 
-            this.btnEdit.BackColor = System.Drawing.Color.Gainsboro;
-            this.btnEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnEdit.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(96)))));
-            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEdit.Location = new System.Drawing.Point(400, 9);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(37, 23);
-            this.btnEdit.TabIndex = 64;
-            this.btnEdit.UseVisualStyleBackColor = false;
-            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.btnEdit);
             this.panel1.Controls.Add(this.lblPersInfo);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -211,46 +237,6 @@
             this.lblPersInfo.TabIndex = 63;
             this.lblPersInfo.Text = "       Address Information";
             this.lblPersInfo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblProvince
-            // 
-            this.lblProvince.Location = new System.Drawing.Point(230, 30);
-            this.lblProvince.Name = "lblProvince";
-            this.lblProvince.Size = new System.Drawing.Size(216, 16);
-            this.lblProvince.TabIndex = 58;
-            this.lblProvince.Text = "label3";
-            // 
-            // lbl4
-            // 
-            this.lbl4.BackColor = System.Drawing.Color.Transparent;
-            this.lbl4.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
-            this.lbl4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.lbl4.Location = new System.Drawing.Point(225, 5);
-            this.lbl4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl4.Name = "lbl4";
-            this.lbl4.Size = new System.Drawing.Size(225, 16);
-            this.lbl4.TabIndex = 56;
-            this.lbl4.Text = "  Province";
-            // 
-            // lblBarangay
-            // 
-            this.lblBarangay.Location = new System.Drawing.Point(230, 30);
-            this.lblBarangay.Name = "lblBarangay";
-            this.lblBarangay.Size = new System.Drawing.Size(217, 16);
-            this.lblBarangay.TabIndex = 55;
-            this.lblBarangay.Text = "label2";
-            // 
-            // lbl1
-            // 
-            this.lbl1.BackColor = System.Drawing.Color.Transparent;
-            this.lbl1.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
-            this.lbl1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.lbl1.Location = new System.Drawing.Point(225, 5);
-            this.lbl1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl1.Name = "lbl1";
-            this.lbl1.Size = new System.Drawing.Size(225, 16);
-            this.lbl1.TabIndex = 53;
-            this.lbl1.Text = "  Barangay";
             // 
             // AddressInformation
             // 
@@ -285,7 +271,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lbl3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblPersInfo;
         private System.Windows.Forms.Label lblProvince;
