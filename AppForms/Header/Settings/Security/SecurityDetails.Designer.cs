@@ -35,6 +35,9 @@
             this.lblPassword = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.pnlPasswordEdit = new System.Windows.Forms.Panel();
+            this.customTextBox6 = new CustomControls.RJControls.CustomTextBox();
+            this.customTextBox5 = new CustomControls.RJControls.CustomTextBox();
+            this.customTextBox4 = new CustomControls.RJControls.CustomTextBox();
             this.btnCancel2 = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
             this.btnConfirm2 = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
             this.btnConfirmPass = new System.Windows.Forms.Button();
@@ -48,6 +51,8 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pnlUsernameEdit = new System.Windows.Forms.Panel();
+            this.customTextBox3 = new CustomControls.RJControls.CustomTextBox();
+            this.customTextBox2 = new CustomControls.RJControls.CustomTextBox();
             this.customTextBox1 = new CustomControls.RJControls.CustomTextBox();
             this.btnCancel = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
             this.btnConfirm = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
@@ -67,11 +72,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
             this.lbluser = new System.Windows.Forms.Label();
-            this.customTextBox2 = new CustomControls.RJControls.CustomTextBox();
-            this.customTextBox3 = new CustomControls.RJControls.CustomTextBox();
-            this.customTextBox4 = new CustomControls.RJControls.CustomTextBox();
-            this.customTextBox5 = new CustomControls.RJControls.CustomTextBox();
-            this.customTextBox6 = new CustomControls.RJControls.CustomTextBox();
             this.pnlPassword.SuspendLayout();
             this.pnlPasswordEdit.SuspendLayout();
             this.pnlUsernameEdit.SuspendLayout();
@@ -171,6 +171,72 @@
             this.pnlPasswordEdit.Name = "pnlPasswordEdit";
             this.pnlPasswordEdit.Size = new System.Drawing.Size(905, 150);
             this.pnlPasswordEdit.TabIndex = 8;
+            // 
+            // customTextBox6
+            // 
+            this.customTextBox6.BackColor = System.Drawing.SystemColors.Window;
+            this.customTextBox6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.customTextBox6.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.customTextBox6.BorderRadius = 0;
+            this.customTextBox6.BorderSize = 2;
+            this.customTextBox6.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customTextBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.customTextBox6.Location = new System.Drawing.Point(108, 99);
+            this.customTextBox6.Margin = new System.Windows.Forms.Padding(4);
+            this.customTextBox6.Multiline = false;
+            this.customTextBox6.Name = "customTextBox6";
+            this.customTextBox6.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.customTextBox6.PasswordChar = false;
+            this.customTextBox6.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.customTextBox6.PlaceholderText = "";
+            this.customTextBox6.Size = new System.Drawing.Size(243, 30);
+            this.customTextBox6.TabIndex = 77;
+            this.customTextBox6.Texts = "";
+            this.customTextBox6.UnderlinedStyle = false;
+            // 
+            // customTextBox5
+            // 
+            this.customTextBox5.BackColor = System.Drawing.SystemColors.Window;
+            this.customTextBox5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.customTextBox5.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.customTextBox5.BorderRadius = 0;
+            this.customTextBox5.BorderSize = 2;
+            this.customTextBox5.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customTextBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.customTextBox5.Location = new System.Drawing.Point(108, 59);
+            this.customTextBox5.Margin = new System.Windows.Forms.Padding(4);
+            this.customTextBox5.Multiline = false;
+            this.customTextBox5.Name = "customTextBox5";
+            this.customTextBox5.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.customTextBox5.PasswordChar = false;
+            this.customTextBox5.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.customTextBox5.PlaceholderText = "";
+            this.customTextBox5.Size = new System.Drawing.Size(243, 30);
+            this.customTextBox5.TabIndex = 76;
+            this.customTextBox5.Texts = "";
+            this.customTextBox5.UnderlinedStyle = false;
+            // 
+            // customTextBox4
+            // 
+            this.customTextBox4.BackColor = System.Drawing.SystemColors.Window;
+            this.customTextBox4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.customTextBox4.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.customTextBox4.BorderRadius = 0;
+            this.customTextBox4.BorderSize = 2;
+            this.customTextBox4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customTextBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.customTextBox4.Location = new System.Drawing.Point(109, 19);
+            this.customTextBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.customTextBox4.Multiline = false;
+            this.customTextBox4.Name = "customTextBox4";
+            this.customTextBox4.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.customTextBox4.PasswordChar = false;
+            this.customTextBox4.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.customTextBox4.PlaceholderText = "";
+            this.customTextBox4.Size = new System.Drawing.Size(243, 30);
+            this.customTextBox4.TabIndex = 75;
+            this.customTextBox4.Texts = "";
+            this.customTextBox4.UnderlinedStyle = false;
             // 
             // btnCancel2
             // 
@@ -337,10 +403,54 @@
             this.pnlUsernameEdit.Size = new System.Drawing.Size(905, 150);
             this.pnlUsernameEdit.TabIndex = 10;
             // 
+            // customTextBox3
+            // 
+            this.customTextBox3.BackColor = System.Drawing.SystemColors.Window;
+            this.customTextBox3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.customTextBox3.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.customTextBox3.BorderRadius = 0;
+            this.customTextBox3.BorderSize = 2;
+            this.customTextBox3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customTextBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.customTextBox3.Location = new System.Drawing.Point(108, 98);
+            this.customTextBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.customTextBox3.Multiline = false;
+            this.customTextBox3.Name = "customTextBox3";
+            this.customTextBox3.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.customTextBox3.PasswordChar = false;
+            this.customTextBox3.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.customTextBox3.PlaceholderText = "";
+            this.customTextBox3.Size = new System.Drawing.Size(243, 30);
+            this.customTextBox3.TabIndex = 82;
+            this.customTextBox3.Texts = "";
+            this.customTextBox3.UnderlinedStyle = false;
+            // 
+            // customTextBox2
+            // 
+            this.customTextBox2.BackColor = System.Drawing.SystemColors.Window;
+            this.customTextBox2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.customTextBox2.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.customTextBox2.BorderRadius = 0;
+            this.customTextBox2.BorderSize = 2;
+            this.customTextBox2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customTextBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.customTextBox2.Location = new System.Drawing.Point(108, 60);
+            this.customTextBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.customTextBox2.Multiline = false;
+            this.customTextBox2.Name = "customTextBox2";
+            this.customTextBox2.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.customTextBox2.PasswordChar = false;
+            this.customTextBox2.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.customTextBox2.PlaceholderText = "";
+            this.customTextBox2.Size = new System.Drawing.Size(243, 30);
+            this.customTextBox2.TabIndex = 81;
+            this.customTextBox2.Texts = "";
+            this.customTextBox2.UnderlinedStyle = false;
+            // 
             // customTextBox1
             // 
             this.customTextBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.customTextBox1.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.customTextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.customTextBox1.BorderFocusColor = System.Drawing.Color.HotPink;
             this.customTextBox1.BorderRadius = 0;
             this.customTextBox1.BorderSize = 2;
@@ -572,116 +682,6 @@
             this.lbluser.Size = new System.Drawing.Size(225, 16);
             this.lbluser.TabIndex = 52;
             this.lbluser.Text = "  Username";
-            // 
-            // customTextBox2
-            // 
-            this.customTextBox2.BackColor = System.Drawing.SystemColors.Window;
-            this.customTextBox2.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.customTextBox2.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.customTextBox2.BorderRadius = 0;
-            this.customTextBox2.BorderSize = 2;
-            this.customTextBox2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customTextBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.customTextBox2.Location = new System.Drawing.Point(108, 60);
-            this.customTextBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.customTextBox2.Multiline = false;
-            this.customTextBox2.Name = "customTextBox2";
-            this.customTextBox2.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.customTextBox2.PasswordChar = false;
-            this.customTextBox2.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.customTextBox2.PlaceholderText = "";
-            this.customTextBox2.Size = new System.Drawing.Size(243, 30);
-            this.customTextBox2.TabIndex = 81;
-            this.customTextBox2.Texts = "";
-            this.customTextBox2.UnderlinedStyle = false;
-            // 
-            // customTextBox3
-            // 
-            this.customTextBox3.BackColor = System.Drawing.SystemColors.Window;
-            this.customTextBox3.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.customTextBox3.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.customTextBox3.BorderRadius = 0;
-            this.customTextBox3.BorderSize = 2;
-            this.customTextBox3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customTextBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.customTextBox3.Location = new System.Drawing.Point(108, 98);
-            this.customTextBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.customTextBox3.Multiline = false;
-            this.customTextBox3.Name = "customTextBox3";
-            this.customTextBox3.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.customTextBox3.PasswordChar = false;
-            this.customTextBox3.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.customTextBox3.PlaceholderText = "";
-            this.customTextBox3.Size = new System.Drawing.Size(243, 30);
-            this.customTextBox3.TabIndex = 82;
-            this.customTextBox3.Texts = "";
-            this.customTextBox3.UnderlinedStyle = false;
-            // 
-            // customTextBox4
-            // 
-            this.customTextBox4.BackColor = System.Drawing.SystemColors.Window;
-            this.customTextBox4.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.customTextBox4.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.customTextBox4.BorderRadius = 0;
-            this.customTextBox4.BorderSize = 2;
-            this.customTextBox4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customTextBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.customTextBox4.Location = new System.Drawing.Point(109, 19);
-            this.customTextBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.customTextBox4.Multiline = false;
-            this.customTextBox4.Name = "customTextBox4";
-            this.customTextBox4.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.customTextBox4.PasswordChar = false;
-            this.customTextBox4.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.customTextBox4.PlaceholderText = "";
-            this.customTextBox4.Size = new System.Drawing.Size(243, 30);
-            this.customTextBox4.TabIndex = 75;
-            this.customTextBox4.Texts = "";
-            this.customTextBox4.UnderlinedStyle = false;
-            // 
-            // customTextBox5
-            // 
-            this.customTextBox5.BackColor = System.Drawing.SystemColors.Window;
-            this.customTextBox5.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.customTextBox5.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.customTextBox5.BorderRadius = 0;
-            this.customTextBox5.BorderSize = 2;
-            this.customTextBox5.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customTextBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.customTextBox5.Location = new System.Drawing.Point(108, 59);
-            this.customTextBox5.Margin = new System.Windows.Forms.Padding(4);
-            this.customTextBox5.Multiline = false;
-            this.customTextBox5.Name = "customTextBox5";
-            this.customTextBox5.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.customTextBox5.PasswordChar = false;
-            this.customTextBox5.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.customTextBox5.PlaceholderText = "";
-            this.customTextBox5.Size = new System.Drawing.Size(243, 30);
-            this.customTextBox5.TabIndex = 76;
-            this.customTextBox5.Texts = "";
-            this.customTextBox5.UnderlinedStyle = false;
-            // 
-            // customTextBox6
-            // 
-            this.customTextBox6.BackColor = System.Drawing.SystemColors.Window;
-            this.customTextBox6.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.customTextBox6.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.customTextBox6.BorderRadius = 0;
-            this.customTextBox6.BorderSize = 2;
-            this.customTextBox6.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customTextBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.customTextBox6.Location = new System.Drawing.Point(108, 99);
-            this.customTextBox6.Margin = new System.Windows.Forms.Padding(4);
-            this.customTextBox6.Multiline = false;
-            this.customTextBox6.Name = "customTextBox6";
-            this.customTextBox6.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.customTextBox6.PasswordChar = false;
-            this.customTextBox6.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.customTextBox6.PlaceholderText = "";
-            this.customTextBox6.Size = new System.Drawing.Size(243, 30);
-            this.customTextBox6.TabIndex = 77;
-            this.customTextBox6.Texts = "";
-            this.customTextBox6.UnderlinedStyle = false;
             // 
             // SecurityDetails
             // 
