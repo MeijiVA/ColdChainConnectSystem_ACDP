@@ -31,10 +31,11 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Supplier
             if (cmb.ShowDialog() == DialogResult.OK)
             {
                 /*if (InventoryClass.writeInventoryData(txtSKU.Texts, txtDescription.Texts, txtContactPerson.Texts, System.IO.Path.GetFileName(ofdSaveImage.FileName), txtContactNumber.Texts, txtQuantity.Texts, dpExpiry.Value.ToString("yyyy-MM-dd")))
-                */{
+                */
+                {
                     try
                     {
-                       
+
                         this.Close();
                         MainInstance.i.NavigateTo(new SalesForm());
                     }
@@ -77,7 +78,12 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Supplier
 
         private void AddItemInventoryForm_Load(object sender, EventArgs e)
         {
-
+            // Add payment term values
+            cbPaymentTerm.Items.Clear();
+            cbPaymentTerm.Items.Add("GCASH");
+            cbPaymentTerm.Items.Add("CASH");
+            cbPaymentTerm.Items.Add("MAYA");
+            cbPaymentTerm.Items.Add("BANK");
         }
 
 

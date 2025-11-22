@@ -31,7 +31,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer
             if (cmb.ShowDialog() == DialogResult.OK)
             {
                 //fix this later meiji ok!
-               /* if (CustomerClass.writeCustomerData())*/
+                /* if (CustomerClass.writeCustomerData())*/
                 {
                     try
                     {
@@ -78,7 +78,20 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer
 
         private void AddItemInventoryForm_Load(object sender, EventArgs e)
         {
+            // Add payment term values
+            cbPaymentTerm.Items.Clear();
+            cbPaymentTerm.Items.Add("GCASH");
+            cbPaymentTerm.Items.Add("CASH");
+            cbPaymentTerm.Items.Add("MAYA");
+            cbPaymentTerm.Items.Add("BANK");
 
+            // Add customer status values
+            cbStatus.Items.Clear();
+            cbStatus.Items.Add("Active");
+            cbStatus.Items.Add("Inactive");
+
+            // Set default date to today
+            dpExpiry.Value = DateTime.Now;
         }
 
 

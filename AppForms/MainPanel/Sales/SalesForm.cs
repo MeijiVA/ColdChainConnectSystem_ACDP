@@ -20,7 +20,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
     public partial class SalesForm : Form
     {
         int currentPageIndex = 0;
-        public int totalPages = 0 ;
+        public int totalPages = 0;
         public SalesForm()
         {
             InitializeComponent();
@@ -65,7 +65,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
 
         private void btnPrev_Click(object sender, EventArgs e)
         {
-            if ((SearchBar.txtSearch.Text.Equals("Search Term") || SearchBar.txtSearch.Text.Equals("")) && (currentPageIndex  > 1) || (SelectedFilterClass.SelectedFilter.Equals("") && (currentPageIndex > 1)))
+            if ((SearchBar.txtSearch.Text.Equals("Search Term") || SearchBar.txtSearch.Text.Equals("")) && (currentPageIndex > 1) || (SelectedFilterClass.SelectedFilter.Equals("") && (currentPageIndex > 1)))
             {
                 dgvTable.Rows.Clear();
                 lblPageNum.Text = (currentPageIndex -= 1).ToString();
@@ -82,7 +82,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
             {
                 dgvTable.Rows.Clear();
                 lblPageNum.Text = (currentPageIndex -= 1).ToString();
-                string query = $"WHERE a.[numid] LIKE '%{(SearchBar.searchTXT)}%' OR a.[SalesID] LIKE '%{(SearchBar.searchTXT)}%' OR a.[CustomerID] LIKE '%{(SearchBar.searchTXT)}%' OR a.[SalesDate] LIKE '%{(SearchBar.searchTXT)}%' OR a.[Quantity] LIKE '%{(SearchBar.searchTXT)}%' OR a.[UnitPrice] LIKE '%{(SearchBar.searchTXT)}%' OR a.[Status]LIKE '%{(SearchBar.searchTXT)}%'"; 
+                string query = $"WHERE a.[numid] LIKE '%{(SearchBar.searchTXT)}%' OR a.[SalesID] LIKE '%{(SearchBar.searchTXT)}%' OR a.[CustomerID] LIKE '%{(SearchBar.searchTXT)}%' OR a.[SalesDate] LIKE '%{(SearchBar.searchTXT)}%' OR a.[Quantity] LIKE '%{(SearchBar.searchTXT)}%' OR a.[UnitPrice] LIKE '%{(SearchBar.searchTXT)}%' OR a.[Status]LIKE '%{(SearchBar.searchTXT)}%'";
                 totalPages = SalesClass.loadSalesData(dgvTable, lblMaxPage, lblPageNum, currentPageIndex, query);
             }// has search query ALL
         }
@@ -136,6 +136,28 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
                 // Calculate the position for the line
                 int y = e.RowBounds.Bottom - 1;
                 e.Graphics.DrawLine(p, e.RowBounds.Left + 10, y, e.RowBounds.Right - 10, y);
+            }
+        }
+
+        private void dgvTable_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            // Add status indicator for sales status column
+            if (dgvTable.Columns[e.ColumnIndex].Name == "quant" && e.RowIndex >= 0)
+            {
+                if (dgvTable.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+                {
+                    string status = dgvTable.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString().ToLower();
+                    if (status == "paid")
+                    {
+                        // Green for paid
+                        e.CellStyle.BackColor = Color.FromArgb(200, 255, 200);
+                    }
+                    else if (status == "unpaid")
+                    {
+                        // Red for unpaid
+                        e.CellStyle.BackColor = Color.FromArgb(255, 200, 200);
+                    }
+                }
             }
         }
 

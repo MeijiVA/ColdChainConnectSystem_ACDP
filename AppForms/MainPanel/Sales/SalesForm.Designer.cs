@@ -283,6 +283,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
             this.dgvTable.TabIndex = 7;
             this.dgvTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTable_CellContentClick_1);
             this.dgvTable.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dgvTable_RowPostPaint_1);
+            this.dgvTable.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvTable_CellFormatting);
             // 
             // rowCbox
             // 

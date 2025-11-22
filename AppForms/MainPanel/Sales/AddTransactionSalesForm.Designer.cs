@@ -294,6 +294,7 @@
             this.cbProductID.Size = new System.Drawing.Size(248, 37);
             this.cbProductID.TabIndex = 29;
             this.cbProductID.Texts = "";
+
             // 
             // AddTransactionSalesForm
             // 

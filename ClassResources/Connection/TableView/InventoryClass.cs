@@ -1,4 +1,5 @@
 ﻿
+using ColdChainConnectSystem_ACDP.Materials;
 using ColdChainConnectSystem_ACDP.Popup;
 using System;
 using System.Collections.Generic;
@@ -111,7 +112,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
 
         public static bool writeInventoryData(string sku, string desc, string unitp, string img, string kg, string quantity, string expiry)
         {
-            if(!(sku.Equals("") || sku.Equals("") || desc.Equals("") || unitp.Equals("") || kg.Equals("") || quantity.Equals("") || expiry.Equals("")))
+            if (!(sku.Equals("") || sku.Equals("") || desc.Equals("") || unitp.Equals("") || kg.Equals("") || quantity.Equals("") || expiry.Equals("")))
             {
                 try
                 {
@@ -139,15 +140,61 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
             }
             else
             {
-                new CustomMessageBox("Missing Element","Fill in all required Fields.", MessageBoxButtons.OK).ShowDialog();
+                new CustomMessageBox("Missing Element", "Fill in all required Fields.", MessageBoxButtons.OK).ShowDialog();
                 return false;
             }
         }
 
+        public static void loadProductIDs(ComboBox cb)
+        {
+            try
+            {
+                cb.Items.Clear();
+                string query = "SELECT [numid] FROM Inventory ORDER BY [numid]";
+                SqlConnection con = ConnectionClass.Connection();
+                con.Open();
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            cb.Items.Add(reader[0].ToString());
+                        }
+                    }
+                    con.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                new CustomMessageBox("Exception", ex.Message, MessageBoxButtons.OK).ShowDialog();
+            }
+        }
 
+        public static string getProductInfo(string productID, string field)
+        {
+            try
+            {
+                string query = $"SELECT [{field}] FROM Inventory WHERE [numid] = '{productID}'";
+                SqlConnection con = ConnectionClass.Connection();
+                con.Open();
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    object result = cmd.ExecuteScalar();
+                    con.Close();
+                    return result != null ? result.ToString() : "";
+                }
+            }
+            catch (Exception ex)
+            {
+                new CustomMessageBox("Exception", ex.Message, MessageBoxButtons.OK).ShowDialog();
+                return "";
+            }
+        }
 
-
-
-
+        internal static void loadProductIDs(CustomComboBox cbProductID)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -20,7 +20,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
     public partial class InventoryForm : Form
     {
         int currentPageIndex = 0;
-        public int totalPages = 0 ;
+        public int totalPages = 0;
         public InventoryForm()
         {
             InitializeComponent();
@@ -64,7 +64,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
 
         private void btnPrev_Click(object sender, EventArgs e)
         {
-            if ((SearchBar.txtSearch.Text.Equals("Search Term") || SearchBar.txtSearch.Text.Equals("")) && (currentPageIndex  > 1) || (SelectedFilterClass.SelectedFilter.Equals("") && (currentPageIndex > 1)))
+            if ((SearchBar.txtSearch.Text.Equals("Search Term") || SearchBar.txtSearch.Text.Equals("")) && (currentPageIndex > 1) || (SelectedFilterClass.SelectedFilter.Equals("") && (currentPageIndex > 1)))
             {
                 dgvTable.Rows.Clear();
                 lblPageNum.Text = (currentPageIndex -= 1).ToString();
@@ -135,6 +135,36 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
                 // Calculate the position for the line
                 int y = e.RowBounds.Bottom - 1;
                 e.Graphics.DrawLine(p, e.RowBounds.Left + 10, y, e.RowBounds.Right - 10, y);
+            }
+        }
+
+        private void dgvTable_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            // Add light indicator for quantity column
+            if (dgvTable.Columns[e.ColumnIndex].Name == "quant" && e.RowIndex >= 0)
+            {
+                if (dgvTable.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+                {
+                    string quantityStr = dgvTable.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+                    if (int.TryParse(quantityStr, out int quantity))
+                    {
+                        if (quantity < 50)
+                        {
+                            // Red for low stock
+                            e.CellStyle.BackColor = Color.FromArgb(255, 200, 200);
+                        }
+                        else if (quantity >= 51 && quantity <= 100)
+                        {
+                            // Yellow for medium stock
+                            e.CellStyle.BackColor = Color.FromArgb(255, 255, 200);
+                        }
+                        else if (quantity >= 101)
+                        {
+                            // Green for sufficient stock
+                            e.CellStyle.BackColor = Color.FromArgb(200, 255, 200);
+                        }
+                    }
+                }
             }
         }
 

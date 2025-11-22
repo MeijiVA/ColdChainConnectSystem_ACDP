@@ -20,7 +20,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer
     public partial class CustomerForm : Form
     {
         int currentPageIndex = 0;
-        public int totalPages = 0 ;
+        public int totalPages = 0;
         public CustomerForm()
         {
             InitializeComponent();
@@ -64,7 +64,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer
 
         private void btnPrev_Click(object sender, EventArgs e)
         {
-            if ((SearchBar.txtSearch.Text.Equals("Search Term") || SearchBar.txtSearch.Text.Equals("")) && (currentPageIndex  > 1) || (SelectedFilterClass.SelectedFilter.Equals("") && (currentPageIndex > 1)))
+            if ((SearchBar.txtSearch.Text.Equals("Search Term") || SearchBar.txtSearch.Text.Equals("")) && (currentPageIndex > 1) || (SelectedFilterClass.SelectedFilter.Equals("") && (currentPageIndex > 1)))
             {
                 dgvTable.Rows.Clear();
                 lblPageNum.Text = (currentPageIndex -= 1).ToString();
@@ -81,7 +81,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer
             {
                 dgvTable.Rows.Clear();
                 lblPageNum.Text = (currentPageIndex -= 1).ToString();
-                string query = $"WHERE [numid] LIKE '%{(SearchBar.searchTXT)}%' OR [CustomerID] LIKE '%{(SearchBar.searchTXT)}%' OR [CustomerName] LIKE '%{(SearchBar.searchTXT)}%' OR [PhoneNumber] LIKE '%{(SearchBar.searchTXT)}%' OR [Address] LIKE '%{(SearchBar.searchTXT)}%' OR [PaymentTerm] LIKE '%{(SearchBar.searchTXT)}%' OR [RegistrationDate] LIKE '%{(SearchBar.searchTXT)}%' OR [Status] LIKE '%{(SearchBar.searchTXT)}%' OR "; 
+                string query = $"WHERE [numid] LIKE '%{(SearchBar.searchTXT)}%' OR [CustomerID] LIKE '%{(SearchBar.searchTXT)}%' OR [CustomerName] LIKE '%{(SearchBar.searchTXT)}%' OR [PhoneNumber] LIKE '%{(SearchBar.searchTXT)}%' OR [Address] LIKE '%{(SearchBar.searchTXT)}%' OR [PaymentTerm] LIKE '%{(SearchBar.searchTXT)}%' OR [RegistrationDate] LIKE '%{(SearchBar.searchTXT)}%' OR [Status] LIKE '%{(SearchBar.searchTXT)}%' OR ";
                 totalPages = CustomerClass.loadCustomerData(dgvTable, lblMaxPage, lblPageNum, currentPageIndex, query);
             }// has search query ALL
         }
@@ -109,7 +109,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer
                     lblPageNum.Text = "1";
                     currentPageIndex = 1;//!!!!!!!!!!!!!!!!!!!
                     dgvTable.Rows.Clear();
-                    string query = $"WHERE [numid] LIKE '%{(SearchBar.searchTXT)}%' OR [CustomerID] LIKE '%{(SearchBar.searchTXT)}%' OR [CustomerName] LIKE '%{(SearchBar.searchTXT)}%' OR [PhoneNumber] LIKE '%{(SearchBar.searchTXT)}%' OR [Address] LIKE '%{(SearchBar.searchTXT)}%' OR [PaymentTerm] LIKE '%{(SearchBar.searchTXT)}%' OR [RegistrationDate] LIKE '%{(SearchBar.searchTXT)}%' OR [Status] LIKE '%{(SearchBar.searchTXT)}%' OR "; 
+                    string query = $"WHERE [numid] LIKE '%{(SearchBar.searchTXT)}%' OR [CustomerID] LIKE '%{(SearchBar.searchTXT)}%' OR [CustomerName] LIKE '%{(SearchBar.searchTXT)}%' OR [PhoneNumber] LIKE '%{(SearchBar.searchTXT)}%' OR [Address] LIKE '%{(SearchBar.searchTXT)}%' OR [PaymentTerm] LIKE '%{(SearchBar.searchTXT)}%' OR [RegistrationDate] LIKE '%{(SearchBar.searchTXT)}%' OR [Status] LIKE '%{(SearchBar.searchTXT)}%' OR ";
                     totalPages = CustomerClass.loadCustomerData(dgvTable, lblMaxPage, lblPageNum, currentPageIndex, query);
                 }
                 else
@@ -135,6 +135,28 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer
                 // Calculate the position for the line
                 int y = e.RowBounds.Bottom - 1;
                 e.Graphics.DrawLine(p, e.RowBounds.Left + 10, y, e.RowBounds.Right - 10, y);
+            }
+        }
+
+        private void dgvTable_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            // Add status indicator for customer status column
+            if (dgvTable.Columns[e.ColumnIndex].Name == "status" && e.RowIndex >= 0)
+            {
+                if (dgvTable.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+                {
+                    string status = dgvTable.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString().ToLower();
+                    if (status == "active")
+                    {
+                        // Green for active
+                        e.CellStyle.BackColor = Color.FromArgb(200, 255, 200);
+                    }
+                    else if (status == "inactive")
+                    {
+                        // Red for inactive
+                        e.CellStyle.BackColor = Color.FromArgb(255, 200, 200);
+                    }
+                }
             }
         }
 

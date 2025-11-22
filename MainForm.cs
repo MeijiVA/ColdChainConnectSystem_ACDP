@@ -1,4 +1,11 @@
-﻿using System;
+﻿using ColdChainConnectSystem_ACDP.AppForms.Header.Settings;
+using ColdChainConnectSystem_ACDP.AppForms.Header.Settings.PersonalDetails;
+using ColdChainConnectSystem_ACDP.AppForms.MainPanel.Dashboard;
+using ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory;
+using ColdChainConnectSystem_ACDP.AppForms.MainPanel.Settings;
+using ColdChainConnectSystem_ACDP.ClassResources;
+using ColdChainConnectSystem_ACDP.ClassResources.Instances;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,11 +17,6 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ColdChainConnectSystem_ACDP.ClassResources.Instances;
-using ColdChainConnectSystem_ACDP.AppForms.MainPanel.Dashboard;
-using ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory;
-using ColdChainConnectSystem_ACDP.ClassResources;
-using ColdChainConnectSystem_ACDP.AppForms.MainPanel.Settings;
 
 namespace ColdChainConnectSystem_ACDP
 {
@@ -24,7 +26,7 @@ namespace ColdChainConnectSystem_ACDP
         public MainForm()
         {
             InitializeComponent();
-            
+
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -117,11 +119,30 @@ namespace ColdChainConnectSystem_ACDP
             {
                 MainInstance.i.NavigateTo(SettingsInstance.i);
                 settingFlag = 0;
+                // Automatically navigate to PersonalDetailsForm after form loads
+                SettingsInstance.i.Load += SettingsForm_Load;
             }
             else if (settingFlag == 0)
             {
                 MainInstance.i.NavigateTo(currentForm(CurrentFormClass.form));
                 settingFlag = 1;
+            }
+        }
+
+        private void SettingsForm_Load(object sender, EventArgs e)
+        {
+            // Remove the event handler to avoid multiple calls
+            SettingsInstance.i.Load -= SettingsForm_Load;
+            // Navigate to PersonalDetailsForm
+            if (SettingForm.pdf != null)
+            {
+                SettingsInstance.i.NavigateTo(SettingForm.pdf);
+            }
+            else
+            {
+                // Initialize if not already done
+                SettingForm.pdf = new PersonalDetailsForm();
+                SettingsInstance.i.NavigateTo(SettingForm.pdf);
             }
         }
 
