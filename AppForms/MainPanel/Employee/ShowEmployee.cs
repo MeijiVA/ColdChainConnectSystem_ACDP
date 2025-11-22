@@ -21,12 +21,42 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.Employee
             InitializeComponent();
         }
         [Category("Data")]
-        public string EMPID
+        public string EMPID { get; set; }
+
+        [Category("Data")]
+        public string EmployeeName { get; set; }
+
+        [Category("Data")]
+        public string Position { get; set; }
+
+        [Category("Data")]
+        public string Status { get; set; }
+
+        public void UpdateDisplay()
         {
-            get { return lblEMP.Text; }
-            set { lblEMP.Text = value; }
+            if (!string.IsNullOrEmpty(EMPID))
+            {
+                // Display employee name or ID
+                if (!string.IsNullOrEmpty(EmployeeName))
+                {
+                    lblEMP.Text = EmployeeName;
+                }
+                else
+                {
+                    lblEMP.Text = "ID: " + EMPID;
+                }
+            }
+            else
+            {
+                lblEMP.Text = "No Employee";
+            }
         }
 
+        private void customButton1_Click(object sender, EventArgs e)
+        {
+            EmployeeProfile empProfile = new EmployeeProfile(this.EMPID);
+            MainInstance.i.NavigateTo(empProfile);
+        }
 
         private void customButton2_Click(object sender, EventArgs e)
         {
@@ -37,19 +67,6 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.Employee
         {
             AddTransactionSalesForm add = new AddTransactionSalesForm();
             SettingsInstance.i.pnlDisplaySettings.Controls.Add(add);
-        }
-
-        private void lblEMP_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void customButton1_Click(object sender, EventArgs e)
-        {
-
-            EmployeeProfile empProfile = new EmployeeProfile(this.EMPID);
-            MainInstance.i.NavigateTo(empProfile);
-
         }
     }
 }
