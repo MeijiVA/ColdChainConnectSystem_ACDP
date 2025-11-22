@@ -27,7 +27,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                 totalRows = (int)count.ExecuteScalar();
                 totalPages = (int)Math.Ceiling((double)totalRows / PageSize);
                 lblPage.Text = totalPages.ToString();
-                query = $"SELECT [customerid],[customername],[phonenumber],[address],[paymentterm],[registrationdate],[status] FROM Customer ORDER BY [customerid] OFFSET {(currentPageIndex - 1) * PageSize} ROWS FETCH NEXT {PageSize} ROWS ONLY";
+                query = $"SELECT [customerid],[customername],[phonenumber],[address],[paymentterm],[registrationdate],[status] FROM Customer ORDER BY [numid] OFFSET {(currentPageIndex - 1) * PageSize} ROWS FETCH NEXT {PageSize} ROWS ONLY";
                 using (SqlCommand data = new SqlCommand(query, con))
                 {
                     using (var reader = data.ExecuteReader())
@@ -69,7 +69,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                 lblPage.Text = totalPages.ToString();
 
                 Console.WriteLine(totalRows + " TR " + totalPages + "TP");
-                query = $"SELECT [customerid],[customername],[phonenumber],[address],[paymentterm],[registrationdate],[status] FROM Customer {searchQuery} ORDER BY [customerid] OFFSET {(currentPageIndex - 1) * PageSize} ROWS FETCH NEXT {PageSize} ROWS ONLY";
+                query = $"SELECT [customerid],[customername],[phonenumber],[address],[paymentterm],[registrationdate],[status] FROM Customer {searchQuery} ORDER BY [numid] OFFSET {(currentPageIndex - 1) * PageSize} ROWS FETCH NEXT {PageSize} ROWS ONLY";
                 using (SqlCommand data = new SqlCommand(query, con))
                 {
                     using (var reader = data.ExecuteReader())

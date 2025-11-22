@@ -81,7 +81,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
             {
                 dgvTable.Rows.Clear();
                 lblPageNum.Text = (currentPageIndex -= 1).ToString();
-                string query = $"WHERE numid LIKE '%{(SearchBar.searchTXT)}%' OR skucode LIKE '%{(SearchBar.searchTXT)}%' OR quantity LIKE '%{(SearchBar.searchTXT)}%' OR expiry LIKE '%{(SearchBar.searchTXT)}%' OR descript LIKE '%{(SearchBar.searchTXT)}%'";
+                string query = $"WHERE [numid] LIKE '% {(SearchBar.searchTXT)} %' OR [skucode] LIKE '% {(SearchBar.searchTXT)} %' OR [quantity] LIKE '% {(SearchBar.searchTXT)} %' OR [expiry] LIKE '% {(SearchBar.searchTXT)} %' OR [description] LIKE '% {(SearchBar.searchTXT)} %' ";
                 totalPages = InventoryClass.loadInventoryData(dgvTable, lblMaxPage, lblPageNum, currentPageIndex, query);
             }// has search query ALL
         }
