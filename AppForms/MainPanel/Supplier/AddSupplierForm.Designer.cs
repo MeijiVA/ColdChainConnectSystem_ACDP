@@ -29,41 +29,27 @@
         private void InitializeComponent()
         {
             this.ofdSaveImage = new System.Windows.Forms.OpenFileDialog();
-            this.pbxImage = new System.Windows.Forms.PictureBox();
             this.btnExit = new System.Windows.Forms.Button();
-            this.lblDescription = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblExpiry = new System.Windows.Forms.Label();
-            this.lblKG = new System.Windows.Forms.Label();
-            this.lblQuantity = new System.Windows.Forms.Label();
-            this.lblSKU = new System.Windows.Forms.Label();
-            this.dpExpiry = new ColdChainConnectSystem_ACDP.Materials.CustomDatePicker();
+            this.lblCompanyName = new System.Windows.Forms.Label();
+            this.lblContactPerson = new System.Windows.Forms.Label();
+            this.lblContactNumber = new System.Windows.Forms.Label();
+            this.lblAddress = new System.Windows.Forms.Label();
+            this.lblSupplierID = new System.Windows.Forms.Label();
             this.txtSKU = new CustomControls.RJControls.CustomTextBox();
-            this.txtQuantity = new CustomControls.RJControls.CustomTextBox();
-            this.txtWeight = new CustomControls.RJControls.CustomTextBox();
-            this.txtUnitPrice = new CustomControls.RJControls.CustomTextBox();
-            this.txtDescription = new CustomControls.RJControls.CustomTextBox();
-            this.btnImage = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
+            this.txtContactNumber = new CustomControls.RJControls.CustomTextBox();
+            this.txtContactPerson = new CustomControls.RJControls.CustomTextBox();
             this.lbl = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
             this.btnAdd = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxImage)).BeginInit();
+            this.txtCompanyName = new CustomControls.RJControls.CustomTextBox();
+            this.txtAddress = new CustomControls.RJControls.CustomTextBox();
+            this.lblPaymenTerm = new System.Windows.Forms.Label();
+            this.cbPaymentTerm = new ColdChainConnectSystem_ACDP.Materials.CustomComboBox();
             this.SuspendLayout();
             // 
             // ofdSaveImage
             // 
             this.ofdSaveImage.InitialDirectory = "string downloadsPath = Path.Combine(Environment.GetFolderPath(Environment.Special" +
     "Folder.UserProfile), \"Downloads\");";
-            // 
-            // pbxImage
-            // 
-            this.pbxImage.BackgroundImage = global::ColdChainConnectSystem_ACDP.Properties.Resources.NoImage1;
-            this.pbxImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbxImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbxImage.Location = new System.Drawing.Point(624, 83);
-            this.pbxImage.Name = "pbxImage";
-            this.pbxImage.Size = new System.Drawing.Size(150, 150);
-            this.pbxImage.TabIndex = 2;
-            this.pbxImage.TabStop = false;
             // 
             // btnExit
             // 
@@ -81,85 +67,60 @@
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // lblDescription
+            // lblCompanyName
             // 
-            this.lblDescription.AutoSize = true;
-            this.lblDescription.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10F);
-            this.lblDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.lblDescription.Location = new System.Drawing.Point(39, 145);
-            this.lblDescription.Name = "lblDescription";
-            this.lblDescription.Size = new System.Drawing.Size(85, 16);
-            this.lblDescription.TabIndex = 17;
-            this.lblDescription.Text = "Description";
+            this.lblCompanyName.AutoSize = true;
+            this.lblCompanyName.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10F);
+            this.lblCompanyName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.lblCompanyName.Location = new System.Drawing.Point(39, 145);
+            this.lblCompanyName.Name = "lblCompanyName";
+            this.lblCompanyName.Size = new System.Drawing.Size(113, 16);
+            this.lblCompanyName.TabIndex = 17;
+            this.lblCompanyName.Text = "Company Name";
             // 
-            // label1
+            // lblContactPerson
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10F);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.label1.Location = new System.Drawing.Point(39, 285);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 16);
-            this.label1.TabIndex = 18;
-            this.label1.Text = "Unit Price";
+            this.lblContactPerson.AutoSize = true;
+            this.lblContactPerson.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10F);
+            this.lblContactPerson.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.lblContactPerson.Location = new System.Drawing.Point(39, 206);
+            this.lblContactPerson.Name = "lblContactPerson";
+            this.lblContactPerson.Size = new System.Drawing.Size(110, 16);
+            this.lblContactPerson.TabIndex = 18;
+            this.lblContactPerson.Text = "Contact Person";
             // 
-            // lblExpiry
+            // lblContactNumber
             // 
-            this.lblExpiry.AutoSize = true;
-            this.lblExpiry.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10F);
-            this.lblExpiry.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.lblExpiry.Location = new System.Drawing.Point(307, 353);
-            this.lblExpiry.Name = "lblExpiry";
-            this.lblExpiry.Size = new System.Drawing.Size(50, 16);
-            this.lblExpiry.TabIndex = 20;
-            this.lblExpiry.Text = "Expiry";
+            this.lblContactNumber.AutoSize = true;
+            this.lblContactNumber.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10F);
+            this.lblContactNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.lblContactNumber.Location = new System.Drawing.Point(39, 267);
+            this.lblContactNumber.Name = "lblContactNumber";
+            this.lblContactNumber.Size = new System.Drawing.Size(117, 16);
+            this.lblContactNumber.TabIndex = 21;
+            this.lblContactNumber.Text = "Contact Number";
             // 
-            // lblKG
+            // lblAddress
             // 
-            this.lblKG.AutoSize = true;
-            this.lblKG.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10F);
-            this.lblKG.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.lblKG.Location = new System.Drawing.Point(39, 353);
-            this.lblKG.Name = "lblKG";
-            this.lblKG.Size = new System.Drawing.Size(89, 16);
-            this.lblKG.TabIndex = 21;
-            this.lblKG.Text = "Weight (KG)";
+            this.lblAddress.AutoSize = true;
+            this.lblAddress.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10F);
+            this.lblAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.lblAddress.Location = new System.Drawing.Point(39, 328);
+            this.lblAddress.Name = "lblAddress";
+            this.lblAddress.Size = new System.Drawing.Size(65, 16);
+            this.lblAddress.TabIndex = 22;
+            this.lblAddress.Text = "Address";
             // 
-            // lblQuantity
+            // lblSupplierID
             // 
-            this.lblQuantity.AutoSize = true;
-            this.lblQuantity.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10F);
-            this.lblQuantity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.lblQuantity.Location = new System.Drawing.Point(307, 285);
-            this.lblQuantity.Name = "lblQuantity";
-            this.lblQuantity.Size = new System.Drawing.Size(64, 16);
-            this.lblQuantity.TabIndex = 22;
-            this.lblQuantity.Text = "Quantity";
-            // 
-            // lblSKU
-            // 
-            this.lblSKU.AutoSize = true;
-            this.lblSKU.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10F);
-            this.lblSKU.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.lblSKU.Location = new System.Drawing.Point(39, 83);
-            this.lblSKU.Name = "lblSKU";
-            this.lblSKU.Size = new System.Drawing.Size(76, 16);
-            this.lblSKU.TabIndex = 23;
-            this.lblSKU.Text = "SKU Code";
-            // 
-            // dpExpiry
-            // 
-            this.dpExpiry.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.dpExpiry.BorderSize = 0;
-            this.dpExpiry.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.dpExpiry.Location = new System.Drawing.Point(295, 382);
-            this.dpExpiry.MinimumSize = new System.Drawing.Size(4, 35);
-            this.dpExpiry.Name = "dpExpiry";
-            this.dpExpiry.Size = new System.Drawing.Size(250, 35);
-            this.dpExpiry.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.dpExpiry.TabIndex = 19;
-            this.dpExpiry.TextColor = System.Drawing.Color.White;
-            this.dpExpiry.Value = new System.DateTime(2025, 11, 27, 0, 0, 0, 0);
+            this.lblSupplierID.AutoSize = true;
+            this.lblSupplierID.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10F);
+            this.lblSupplierID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.lblSupplierID.Location = new System.Drawing.Point(39, 83);
+            this.lblSupplierID.Name = "lblSupplierID";
+            this.lblSupplierID.Size = new System.Drawing.Size(82, 16);
+            this.lblSupplierID.TabIndex = 23;
+            this.lblSupplierID.Text = "Supplier ID";
             // 
             // txtSKU
             // 
@@ -183,116 +144,51 @@
             this.txtSKU.Texts = "";
             this.txtSKU.UnderlinedStyle = false;
             // 
-            // txtQuantity
+            // txtContactNumber
             // 
-            this.txtQuantity.BackColor = System.Drawing.SystemColors.Window;
-            this.txtQuantity.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.txtQuantity.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(150)))));
-            this.txtQuantity.BorderRadius = 10;
-            this.txtQuantity.BorderSize = 2;
-            this.txtQuantity.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14F);
-            this.txtQuantity.ForeColor = System.Drawing.Color.Black;
-            this.txtQuantity.Location = new System.Drawing.Point(295, 305);
-            this.txtQuantity.Margin = new System.Windows.Forms.Padding(4);
-            this.txtQuantity.Multiline = false;
-            this.txtQuantity.Name = "txtQuantity";
-            this.txtQuantity.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtQuantity.PasswordChar = false;
-            this.txtQuantity.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtQuantity.PlaceholderText = "";
-            this.txtQuantity.Size = new System.Drawing.Size(250, 37);
-            this.txtQuantity.TabIndex = 14;
-            this.txtQuantity.Texts = "";
-            this.txtQuantity.UnderlinedStyle = false;
-            this.txtQuantity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtQuantity_KeyPress);
+            this.txtContactNumber.BackColor = System.Drawing.SystemColors.Window;
+            this.txtContactNumber.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.txtContactNumber.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(150)))));
+            this.txtContactNumber.BorderRadius = 10;
+            this.txtContactNumber.BorderSize = 2;
+            this.txtContactNumber.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14F);
+            this.txtContactNumber.ForeColor = System.Drawing.Color.Black;
+            this.txtContactNumber.Location = new System.Drawing.Point(24, 287);
+            this.txtContactNumber.Margin = new System.Windows.Forms.Padding(4);
+            this.txtContactNumber.Multiline = false;
+            this.txtContactNumber.Name = "txtContactNumber";
+            this.txtContactNumber.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtContactNumber.PasswordChar = false;
+            this.txtContactNumber.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtContactNumber.PlaceholderText = "";
+            this.txtContactNumber.Size = new System.Drawing.Size(250, 37);
+            this.txtContactNumber.TabIndex = 13;
+            this.txtContactNumber.Texts = "";
+            this.txtContactNumber.UnderlinedStyle = false;
+            this.txtContactNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.customTextBox6_KeyPress);
             // 
-            // txtWeight
+            // txtContactPerson
             // 
-            this.txtWeight.BackColor = System.Drawing.SystemColors.Window;
-            this.txtWeight.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.txtWeight.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(150)))));
-            this.txtWeight.BorderRadius = 10;
-            this.txtWeight.BorderSize = 2;
-            this.txtWeight.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14F);
-            this.txtWeight.ForeColor = System.Drawing.Color.Black;
-            this.txtWeight.Location = new System.Drawing.Point(22, 381);
-            this.txtWeight.Margin = new System.Windows.Forms.Padding(4);
-            this.txtWeight.Multiline = false;
-            this.txtWeight.Name = "txtWeight";
-            this.txtWeight.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtWeight.PasswordChar = false;
-            this.txtWeight.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtWeight.PlaceholderText = "";
-            this.txtWeight.Size = new System.Drawing.Size(250, 37);
-            this.txtWeight.TabIndex = 13;
-            this.txtWeight.Texts = "";
-            this.txtWeight.UnderlinedStyle = false;
-            this.txtWeight.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.customTextBox6_KeyPress);
-            // 
-            // txtUnitPrice
-            // 
-            this.txtUnitPrice.BackColor = System.Drawing.SystemColors.Window;
-            this.txtUnitPrice.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.txtUnitPrice.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(150)))));
-            this.txtUnitPrice.BorderRadius = 10;
-            this.txtUnitPrice.BorderSize = 2;
-            this.txtUnitPrice.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14F);
-            this.txtUnitPrice.ForeColor = System.Drawing.Color.Black;
-            this.txtUnitPrice.Location = new System.Drawing.Point(22, 305);
-            this.txtUnitPrice.Margin = new System.Windows.Forms.Padding(4);
-            this.txtUnitPrice.Multiline = false;
-            this.txtUnitPrice.Name = "txtUnitPrice";
-            this.txtUnitPrice.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtUnitPrice.PasswordChar = false;
-            this.txtUnitPrice.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtUnitPrice.PlaceholderText = "";
-            this.txtUnitPrice.Size = new System.Drawing.Size(250, 37);
-            this.txtUnitPrice.TabIndex = 10;
-            this.txtUnitPrice.Texts = "";
-            this.txtUnitPrice.UnderlinedStyle = false;
-            this.txtUnitPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUnitPrice_KeyPress);
-            // 
-            // txtDescription
-            // 
-            this.txtDescription.BackColor = System.Drawing.SystemColors.Window;
-            this.txtDescription.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.txtDescription.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(150)))));
-            this.txtDescription.BorderRadius = 10;
-            this.txtDescription.BorderSize = 2;
-            this.txtDescription.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14F);
-            this.txtDescription.ForeColor = System.Drawing.Color.Black;
-            this.txtDescription.Location = new System.Drawing.Point(23, 165);
-            this.txtDescription.Margin = new System.Windows.Forms.Padding(4);
-            this.txtDescription.Multiline = true;
-            this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtDescription.PasswordChar = false;
-            this.txtDescription.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtDescription.PlaceholderText = "";
-            this.txtDescription.Size = new System.Drawing.Size(575, 110);
-            this.txtDescription.TabIndex = 9;
-            this.txtDescription.Texts = "";
-            this.txtDescription.UnderlinedStyle = false;
-            // 
-            // btnImage
-            // 
-            this.btnImage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.btnImage.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.btnImage.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnImage.BorderRadius = 10;
-            this.btnImage.BorderSize = 0;
-            this.btnImage.FlatAppearance.BorderSize = 0;
-            this.btnImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnImage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnImage.ForeColor = System.Drawing.Color.White;
-            this.btnImage.Location = new System.Drawing.Point(624, 251);
-            this.btnImage.Name = "btnImage";
-            this.btnImage.Size = new System.Drawing.Size(150, 40);
-            this.btnImage.TabIndex = 8;
-            this.btnImage.Text = "Select Image";
-            this.btnImage.TextColor = System.Drawing.Color.White;
-            this.btnImage.UseVisualStyleBackColor = false;
-            this.btnImage.Click += new System.EventHandler(this.btnImage_Click);
+            this.txtContactPerson.BackColor = System.Drawing.SystemColors.Window;
+            this.txtContactPerson.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.txtContactPerson.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(150)))));
+            this.txtContactPerson.BorderRadius = 10;
+            this.txtContactPerson.BorderSize = 2;
+            this.txtContactPerson.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14F);
+            this.txtContactPerson.ForeColor = System.Drawing.Color.Black;
+            this.txtContactPerson.Location = new System.Drawing.Point(24, 226);
+            this.txtContactPerson.Margin = new System.Windows.Forms.Padding(4);
+            this.txtContactPerson.Multiline = false;
+            this.txtContactPerson.Name = "txtContactPerson";
+            this.txtContactPerson.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtContactPerson.PasswordChar = false;
+            this.txtContactPerson.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtContactPerson.PlaceholderText = "";
+            this.txtContactPerson.Size = new System.Drawing.Size(564, 37);
+            this.txtContactPerson.TabIndex = 10;
+            this.txtContactPerson.Texts = "";
+            this.txtContactPerson.UnderlinedStyle = false;
+            this.txtContactPerson.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUnitPrice_KeyPress);
             // 
             // lbl
             // 
@@ -309,7 +205,7 @@
             this.lbl.Name = "lbl";
             this.lbl.Size = new System.Drawing.Size(758, 55);
             this.lbl.TabIndex = 1;
-            this.lbl.Text = "     Add Transaction (Sales)";
+            this.lbl.Text = "     Add Supplier";
             this.lbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lbl.TextColor = System.Drawing.Color.White;
             this.lbl.UseMnemonic = false;
@@ -334,35 +230,107 @@
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // AddTransactionSalesForm
+            // txtCompanyName
+            // 
+            this.txtCompanyName.BackColor = System.Drawing.SystemColors.Window;
+            this.txtCompanyName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.txtCompanyName.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(150)))));
+            this.txtCompanyName.BorderRadius = 10;
+            this.txtCompanyName.BorderSize = 2;
+            this.txtCompanyName.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14F);
+            this.txtCompanyName.ForeColor = System.Drawing.Color.Black;
+            this.txtCompanyName.Location = new System.Drawing.Point(22, 165);
+            this.txtCompanyName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCompanyName.Multiline = false;
+            this.txtCompanyName.Name = "txtCompanyName";
+            this.txtCompanyName.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtCompanyName.PasswordChar = false;
+            this.txtCompanyName.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtCompanyName.PlaceholderText = "";
+            this.txtCompanyName.Size = new System.Drawing.Size(566, 37);
+            this.txtCompanyName.TabIndex = 24;
+            this.txtCompanyName.Texts = "";
+            this.txtCompanyName.UnderlinedStyle = false;
+            // 
+            // txtAddress
+            // 
+            this.txtAddress.BackColor = System.Drawing.SystemColors.Window;
+            this.txtAddress.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.txtAddress.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(150)))));
+            this.txtAddress.BorderRadius = 10;
+            this.txtAddress.BorderSize = 2;
+            this.txtAddress.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14F);
+            this.txtAddress.ForeColor = System.Drawing.Color.Black;
+            this.txtAddress.Location = new System.Drawing.Point(24, 348);
+            this.txtAddress.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAddress.Multiline = true;
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtAddress.PasswordChar = false;
+            this.txtAddress.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtAddress.PlaceholderText = "";
+            this.txtAddress.Size = new System.Drawing.Size(564, 81);
+            this.txtAddress.TabIndex = 25;
+            this.txtAddress.Texts = "";
+            this.txtAddress.UnderlinedStyle = false;
+            // 
+            // lblPaymenTerm
+            // 
+            this.lblPaymenTerm.AutoSize = true;
+            this.lblPaymenTerm.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10F);
+            this.lblPaymenTerm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.lblPaymenTerm.Location = new System.Drawing.Point(39, 433);
+            this.lblPaymenTerm.Name = "lblPaymenTerm";
+            this.lblPaymenTerm.Size = new System.Drawing.Size(99, 16);
+            this.lblPaymenTerm.TabIndex = 26;
+            this.lblPaymenTerm.Text = "Paymen Term";
+            // 
+            // cbPaymentTerm
+            // 
+            this.cbPaymentTerm.BackColor = System.Drawing.Color.White;
+            this.cbPaymentTerm.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.cbPaymentTerm.BorderRadius = 0;
+            this.cbPaymentTerm.BorderSize = 0;
+            this.cbPaymentTerm.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cbPaymentTerm.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cbPaymentTerm.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.cbPaymentTerm.ForeColor = System.Drawing.Color.DimGray;
+            this.cbPaymentTerm.IconColor = System.Drawing.Color.Navy;
+            this.cbPaymentTerm.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.cbPaymentTerm.ListTextColor = System.Drawing.Color.DimGray;
+            this.cbPaymentTerm.Location = new System.Drawing.Point(24, 461);
+            this.cbPaymentTerm.MinimumSize = new System.Drawing.Size(200, 30);
+            this.cbPaymentTerm.Name = "cbPaymentTerm";
+            this.cbPaymentTerm.Size = new System.Drawing.Size(205, 37);
+            this.cbPaymentTerm.TabIndex = 28;
+            this.cbPaymentTerm.Texts = "";
+            // 
+            // AddSupplierForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(798, 570);
-            this.Controls.Add(this.lblSKU);
-            this.Controls.Add(this.lblQuantity);
-            this.Controls.Add(this.lblKG);
-            this.Controls.Add(this.lblExpiry);
-            this.Controls.Add(this.dpExpiry);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.lblDescription);
+            this.Controls.Add(this.cbPaymentTerm);
+            this.Controls.Add(this.lblPaymenTerm);
+            this.Controls.Add(this.txtAddress);
+            this.Controls.Add(this.txtCompanyName);
+            this.Controls.Add(this.lblSupplierID);
+            this.Controls.Add(this.lblAddress);
+            this.Controls.Add(this.lblContactNumber);
+            this.Controls.Add(this.lblContactPerson);
+            this.Controls.Add(this.lblCompanyName);
             this.Controls.Add(this.txtSKU);
-            this.Controls.Add(this.txtQuantity);
-            this.Controls.Add(this.txtWeight);
-            this.Controls.Add(this.txtUnitPrice);
-            this.Controls.Add(this.txtDescription);
-            this.Controls.Add(this.btnImage);
+            this.Controls.Add(this.txtContactNumber);
+            this.Controls.Add(this.txtContactPerson);
             this.Controls.Add(this.btnExit);
-            this.Controls.Add(this.pbxImage);
             this.Controls.Add(this.lbl);
             this.Controls.Add(this.btnAdd);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "AddTransactionSalesForm";
+            this.Name = "AddSupplierForm";
             this.Padding = new System.Windows.Forms.Padding(20);
             this.Text = "AddItemInventoryForm";
             this.Load += new System.EventHandler(this.AddItemInventoryForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pbxImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -373,20 +341,18 @@
         private Materials.CustomButton btnAdd;
         private Materials.CustomLabel lbl;
         private System.Windows.Forms.OpenFileDialog ofdSaveImage;
-        private System.Windows.Forms.PictureBox pbxImage;
         private System.Windows.Forms.Button btnExit;
-        private Materials.CustomButton btnImage;
-        private CustomControls.RJControls.CustomTextBox txtDescription;
-        private CustomControls.RJControls.CustomTextBox txtUnitPrice;
-        private CustomControls.RJControls.CustomTextBox txtQuantity;
-        private CustomControls.RJControls.CustomTextBox txtWeight;
+        private CustomControls.RJControls.CustomTextBox txtContactPerson;
+        private CustomControls.RJControls.CustomTextBox txtContactNumber;
         private CustomControls.RJControls.CustomTextBox txtSKU;
-        private System.Windows.Forms.Label lblDescription;
-        private System.Windows.Forms.Label label1;
-        private Materials.CustomDatePicker dpExpiry;
-        private System.Windows.Forms.Label lblExpiry;
-        private System.Windows.Forms.Label lblKG;
-        private System.Windows.Forms.Label lblQuantity;
-        private System.Windows.Forms.Label lblSKU;
+        private System.Windows.Forms.Label lblCompanyName;
+        private System.Windows.Forms.Label lblContactPerson;
+        private System.Windows.Forms.Label lblContactNumber;
+        private System.Windows.Forms.Label lblAddress;
+        private System.Windows.Forms.Label lblSupplierID;
+        private CustomControls.RJControls.CustomTextBox txtCompanyName;
+        private CustomControls.RJControls.CustomTextBox txtAddress;
+        private System.Windows.Forms.Label lblPaymenTerm;
+        private Materials.CustomComboBox cbPaymentTerm;
     }
 }
