@@ -58,11 +58,11 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.Employee
 
             if (lblStatus.Text.Equals("Active"))
             {
-                lblStatus.ForeColor = System.Drawing.Color.FromArgb(107, 188, 59);
+                lblStatus.BackColor = System.Drawing.Color.FromArgb(107, 188, 59);
             }
             else if (lblStatus.Text.Equals("Inactive"))
             {
-                lblStatus.ForeColor = System.Drawing.Color.FromArgb(115, 115, 115);
+                lblStatus.BackColor = System.Drawing.Color.FromArgb(115, 115, 115);
             }
         }
 
@@ -70,14 +70,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.Employee
 
         private void lblStatus_TextChanged(object sender, EventArgs e)
         {
-            if (lblStatus.Text.Equals("Active"))
-            {
-                lblStatus.ForeColor = System.Drawing.Color.FromArgb(107, 188, 59);
-            }
-            else if (lblStatus.Text.Equals("Inactive"))
-            {
-                lblStatus.ForeColor = System.Drawing.Color.FromArgb(115, 115, 115);
-            }
+            DetermineStatusColor();
         }
 
         private void View_Click(object sender, EventArgs e)

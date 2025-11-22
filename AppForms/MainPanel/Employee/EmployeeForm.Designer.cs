@@ -57,7 +57,6 @@
             // showEmployee1
             // 
             this.showEmployee1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.showEmployee1.EMPID = "";
             this.showEmployee1.Location = new System.Drawing.Point(14, 11);
             this.showEmployee1.Name = "showEmployee1";
             this.showEmployee1.Padding = new System.Windows.Forms.Padding(5);
@@ -67,7 +66,6 @@
             // showEmployee2
             // 
             this.showEmployee2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.showEmployee2.EMPID = "";
             this.showEmployee2.Location = new System.Drawing.Point(508, 197);
             this.showEmployee2.Name = "showEmployee2";
             this.showEmployee2.Padding = new System.Windows.Forms.Padding(5);
@@ -77,7 +75,6 @@
             // showEmployee3
             // 
             this.showEmployee3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.showEmployee3.EMPID = "";
             this.showEmployee3.Location = new System.Drawing.Point(261, 11);
             this.showEmployee3.Name = "showEmployee3";
             this.showEmployee3.Padding = new System.Windows.Forms.Padding(5);
@@ -87,7 +84,6 @@
             // showEmployee4
             // 
             this.showEmployee4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.showEmployee4.EMPID = "";
             this.showEmployee4.Location = new System.Drawing.Point(508, 11);
             this.showEmployee4.Name = "showEmployee4";
             this.showEmployee4.Padding = new System.Windows.Forms.Padding(5);
@@ -97,7 +93,6 @@
             // showEmployee5
             // 
             this.showEmployee5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.showEmployee5.EMPID = "";
             this.showEmployee5.Location = new System.Drawing.Point(14, 197);
             this.showEmployee5.Name = "showEmployee5";
             this.showEmployee5.Padding = new System.Windows.Forms.Padding(5);
@@ -107,7 +102,6 @@
             // showEmployee6
             // 
             this.showEmployee6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.showEmployee6.EMPID = "";
             this.showEmployee6.Location = new System.Drawing.Point(261, 197);
             this.showEmployee6.Name = "showEmployee6";
             this.showEmployee6.Padding = new System.Windows.Forms.Padding(5);
