@@ -41,11 +41,9 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.Employee
             for (int i = 0; i < maxEmployees; i++)
             {
                 ShowEmployee showEmp = new ShowEmployee();
-                showEmp.EMPID = employees[i][0]; // empid
                 showEmp.EmployeeName = employees[i][2] + " " + employees[i][4]; // firstname + lastname
                 showEmp.Position = employees[i][5]; // position
                 showEmp.Status = employees[i][6]; // status
-                showEmp.UpdateDisplay(); // Update the display with employee data
                 showEmp.BorderStyle = BorderStyle.FixedSingle;
                 showEmp.Padding = new Padding(5);
                 showEmp.Size = new Size(241, 180);
@@ -59,7 +57,6 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.Employee
             for (int i = employees.Count; i < 6; i++)
             {
                 ShowEmployee showEmp = new ShowEmployee();
-                showEmp.EMPID = ""; // Empty placeholder
                 showEmp.BorderStyle = BorderStyle.FixedSingle;
                 showEmp.Padding = new Padding(5);
                 showEmp.Size = new Size(241, 180);
