@@ -90,7 +90,7 @@
             this.ContactUserControl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ContactUserControl.ConNum = "Ow yeah";
             this.ContactUserControl.EmailInfo = "email";
-            this.ContactUserControl.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ContactUserControl.ForeColor = System.Drawing.Color.Black;
             this.ContactUserControl.Location = new System.Drawing.Point(495, 112);
             this.ContactUserControl.Name = "ContactUserControl";
             this.ContactUserControl.PositionInfo = "position";
@@ -105,7 +105,7 @@
             this.PersonalUserControl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PersonalUserControl.DOBInfo = "label3";
             this.PersonalUserControl.First_NameInfo = "label1";
-            this.PersonalUserControl.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.PersonalUserControl.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.PersonalUserControl.Last_NameInfo = "label4";
             this.PersonalUserControl.Location = new System.Drawing.Point(28, 112);
             this.PersonalUserControl.Middle_NameInfo = "label2";

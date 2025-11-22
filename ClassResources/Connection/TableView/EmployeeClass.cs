@@ -96,7 +96,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
         }
 
         /// <summary>
-        /// Gets employee data by employee ID
+        /// Gets employee data by employee ID (basic info)
         /// </summary>
         public static string[] GetEmployeeByID(string empID)
         {
@@ -130,6 +130,55 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
             catch (Exception ex)
             {
                 new CustomMessageBox("Error", "Failed to load employee: " + ex.Message, MessageBoxButtons.OK).ShowDialog();
+            }
+
+            return null;
+        }
+
+        /// <summary>
+        /// Gets complete employee details by employee ID including all personal information
+        /// Returns: [empid, username, firstname, middlename, lastname, contactnum, address, age, dateofbirth, position, status, sex, email]
+        /// </summary>
+        public static string[] GetEmployeeFullDetails(string empID)
+        {
+            try
+            {
+                string query = @"SELECT [empid], [username], [firstname], [middlename], [lastname], [contactnum], 
+                                [address], [age], [dateofbirth], [position], [status], [sex], [email] 
+                                FROM Employees WHERE [empid] = @empid";
+                SqlConnection con = ConnectionClass.Connection();
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    cmd.Parameters.AddWithValue("@empid", empID);
+                    con.Open();
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            return new string[]
+                            {
+                                reader[0].ToString().Trim(), // empid
+                                reader[1].ToString().Trim(), // username
+                                reader[2].ToString().Trim(), // firstname
+                                reader[3].ToString().Trim(), // middlename
+                                reader[4].ToString().Trim(), // lastname
+                                reader[5].ToString().Trim(), // contactnum
+                                reader[6].ToString().Trim(), // address
+                                reader[7].ToString().Trim(), // age
+                                reader[8].ToString().Trim(), // dateofbirth
+                                reader[9].ToString().Trim(), // position
+                                reader[10].ToString().Trim(), // status
+                                reader[11].ToString().Trim(), // sex
+                                reader[12].ToString().Trim() // email
+                            };
+                        }
+                    }
+                    con.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                new CustomMessageBox("Error", "Failed to load employee details: " + ex.Message, MessageBoxButtons.OK).ShowDialog();
             }
 
             return null;
