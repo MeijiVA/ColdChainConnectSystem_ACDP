@@ -33,14 +33,14 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.Employee
 
         private void LoadEmployeeData()
         {
-            if (string.IsNullOrEmpty(employeeID))
+         /*   if (string.IsNullOrEmpty(employeeID))
             {
                 lblEmpID.Text = "Employee ID: Not Specified";
                 return;
             }
 
             // Load full employee details from database
-            string[] employeeData = EmployeeClass.GetEmployeeFullDetails(employeeID);
+
 
             if (employeeData == null || employeeData.Length < 13)
             {
@@ -93,7 +93,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.Employee
                     // If address is not in expected format, show the whole address
                     AddressUserControl.HouseNum = address;
                 }
-            }
+            }*/
         }
 
         private void btnExit_Click(object sender, EventArgs e)

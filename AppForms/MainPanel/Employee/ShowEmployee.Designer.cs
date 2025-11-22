@@ -28,112 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnView = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
-            this.btnEdit = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
-            this.btnDelete = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
-            this.lblEmpID = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
-            this.lblStatus = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.lblName = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
             this.lblPosition = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.lblStatus = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
+            this.lblUsername = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
+            this.lblEmpID = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
+            this.btnDelete = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
+            this.btnEdit = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
+            this.btnView = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btnView
+            // flowLayoutPanel1
             // 
-            this.btnView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.btnView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.btnView.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnView.BorderRadius = 10;
-            this.btnView.BorderSize = 0;
-            this.btnView.FlatAppearance.BorderSize = 0;
-            this.btnView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnView.ForeColor = System.Drawing.Color.White;
-            this.btnView.Location = new System.Drawing.Point(54, 132);
-            this.btnView.Name = "btnView";
-            this.btnView.Size = new System.Drawing.Size(40, 40);
-            this.btnView.TabIndex = 0;
-            this.btnView.Text = "View";
-            this.btnView.TextColor = System.Drawing.Color.White;
-            this.btnView.UseVisualStyleBackColor = false;
-            this.btnView.Click += new System.EventHandler(this.View_Click);
-            // 
-            // btnEdit
-            // 
-            this.btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.btnEdit.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.btnEdit.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnEdit.BorderRadius = 10;
-            this.btnEdit.BorderSize = 0;
-            this.btnEdit.FlatAppearance.BorderSize = 0;
-            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEdit.ForeColor = System.Drawing.Color.White;
-            this.btnEdit.Location = new System.Drawing.Point(100, 132);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(40, 40);
-            this.btnEdit.TabIndex = 1;
-            this.btnEdit.Text = "Edit";
-            this.btnEdit.TextColor = System.Drawing.Color.White;
-            this.btnEdit.UseVisualStyleBackColor = false;
-            this.btnEdit.Click += new System.EventHandler(this.Edit_Click);
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.btnDelete.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.btnDelete.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnDelete.BorderRadius = 10;
-            this.btnDelete.BorderSize = 0;
-            this.btnDelete.FlatAppearance.BorderSize = 0;
-            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(146, 132);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(40, 40);
-            this.btnDelete.TabIndex = 2;
-            this.btnDelete.Text = "del";
-            this.btnDelete.TextColor = System.Drawing.Color.White;
-            this.btnDelete.UseVisualStyleBackColor = false;
-            this.btnDelete.Click += new System.EventHandler(this.Delete_Click);
-            // 
-            // lblEmpID
-            // 
-            this.lblEmpID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.lblEmpID.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.lblEmpID.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.lblEmpID.BorderRadius = 10;
-            this.lblEmpID.BorderSize = 0;
-            this.lblEmpID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblEmpID.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmpID.ForeColor = System.Drawing.Color.White;
-            this.lblEmpID.Location = new System.Drawing.Point(8, 5);
-            this.lblEmpID.Name = "lblEmpID";
-            this.lblEmpID.Size = new System.Drawing.Size(225, 34);
-            this.lblEmpID.TabIndex = 3;
-            this.lblEmpID.Text = "Employee ID Here";
-            this.lblEmpID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblEmpID.TextColor = System.Drawing.Color.White;
-            // 
-            // lblStatus
-            // 
-            this.lblStatus.AutoSize = true;
-            this.lblStatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(188)))), ((int)(((byte)(59)))));
-            this.lblStatus.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(188)))), ((int)(((byte)(59)))));
-            this.lblStatus.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.lblStatus.BorderRadius = 10;
-            this.lblStatus.BorderSize = 0;
-            this.lblStatus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblStatus.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8F);
-            this.lblStatus.ForeColor = System.Drawing.Color.White;
-            this.lblStatus.Location = new System.Drawing.Point(78, 5);
-            this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
-            this.lblStatus.Size = new System.Drawing.Size(60, 22);
-            this.lblStatus.TabIndex = 4;
-            this.lblStatus.Text = "Active";
-            this.lblStatus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblStatus.TextColor = System.Drawing.Color.White;
-            this.lblStatus.TextChanged += new System.EventHandler(this.lblStatus_TextChanged);
+            this.flowLayoutPanel1.Controls.Add(this.lblPosition);
+            this.flowLayoutPanel1.Controls.Add(this.lblStatus);
+            this.flowLayoutPanel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(8, 92);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(200, 34);
+            this.flowLayoutPanel1.TabIndex = 7;
             // 
             // lblName
             // 
@@ -146,10 +62,10 @@
             this.lblName.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Bold);
             this.lblName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.lblName.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblName.Location = new System.Drawing.Point(8, 47);
+            this.lblName.Location = new System.Drawing.Point(8, 61);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(225, 22);
-            this.lblName.TabIndex = 5;
+            this.lblName.TabIndex = 8;
             this.lblName.Text = "Name Here";
             this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblName.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
@@ -175,23 +91,128 @@
             this.lblPosition.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblPosition.TextColor = System.Drawing.Color.White;
             // 
-            // flowLayoutPanel1
+            // lblStatus
             // 
-            this.flowLayoutPanel1.Controls.Add(this.lblPosition);
-            this.flowLayoutPanel1.Controls.Add(this.lblStatus);
-            this.flowLayoutPanel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(8, 72);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(200, 34);
-            this.flowLayoutPanel1.TabIndex = 7;
+            this.lblStatus.AutoSize = true;
+            this.lblStatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(188)))), ((int)(((byte)(59)))));
+            this.lblStatus.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(188)))), ((int)(((byte)(59)))));
+            this.lblStatus.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.lblStatus.BorderRadius = 10;
+            this.lblStatus.BorderSize = 0;
+            this.lblStatus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblStatus.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8F);
+            this.lblStatus.ForeColor = System.Drawing.Color.White;
+            this.lblStatus.Location = new System.Drawing.Point(78, 5);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
+            this.lblStatus.Size = new System.Drawing.Size(60, 22);
+            this.lblStatus.TabIndex = 4;
+            this.lblStatus.Text = "Active";
+            this.lblStatus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblStatus.TextColor = System.Drawing.Color.White;
+            this.lblStatus.TextChanged += new System.EventHandler(this.lblStatus_TextChanged);
+            // 
+            // lblUsername
+            // 
+            this.lblUsername.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblUsername.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblUsername.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.lblUsername.BorderRadius = 10;
+            this.lblUsername.BorderSize = 0;
+            this.lblUsername.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblUsername.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Bold);
+            this.lblUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.lblUsername.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblUsername.Location = new System.Drawing.Point(8, 39);
+            this.lblUsername.Name = "lblUsername";
+            this.lblUsername.Size = new System.Drawing.Size(225, 22);
+            this.lblUsername.TabIndex = 5;
+            this.lblUsername.Text = "Username Here";
+            this.lblUsername.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblUsername.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            // 
+            // lblEmpID
+            // 
+            this.lblEmpID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.lblEmpID.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.lblEmpID.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.lblEmpID.BorderRadius = 10;
+            this.lblEmpID.BorderSize = 0;
+            this.lblEmpID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblEmpID.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmpID.ForeColor = System.Drawing.Color.White;
+            this.lblEmpID.Location = new System.Drawing.Point(8, 5);
+            this.lblEmpID.Name = "lblEmpID";
+            this.lblEmpID.Size = new System.Drawing.Size(225, 34);
+            this.lblEmpID.TabIndex = 3;
+            this.lblEmpID.Text = "Employee ID Here";
+            this.lblEmpID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblEmpID.TextColor = System.Drawing.Color.White;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.btnDelete.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.btnDelete.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnDelete.BorderRadius = 10;
+            this.btnDelete.BorderSize = 0;
+            this.btnDelete.FlatAppearance.BorderSize = 0;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.Location = new System.Drawing.Point(146, 132);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(40, 40);
+            this.btnDelete.TabIndex = 2;
+            this.btnDelete.Text = "del";
+            this.btnDelete.TextColor = System.Drawing.Color.White;
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.Delete_Click);
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.btnEdit.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.btnEdit.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnEdit.BorderRadius = 10;
+            this.btnEdit.BorderSize = 0;
+            this.btnEdit.FlatAppearance.BorderSize = 0;
+            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEdit.ForeColor = System.Drawing.Color.White;
+            this.btnEdit.Location = new System.Drawing.Point(100, 132);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(40, 40);
+            this.btnEdit.TabIndex = 1;
+            this.btnEdit.Text = "Edit";
+            this.btnEdit.TextColor = System.Drawing.Color.White;
+            this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.Edit_Click);
+            // 
+            // btnView
+            // 
+            this.btnView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.btnView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.btnView.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnView.BorderRadius = 10;
+            this.btnView.BorderSize = 0;
+            this.btnView.FlatAppearance.BorderSize = 0;
+            this.btnView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnView.ForeColor = System.Drawing.Color.White;
+            this.btnView.Location = new System.Drawing.Point(54, 132);
+            this.btnView.Name = "btnView";
+            this.btnView.Size = new System.Drawing.Size(40, 40);
+            this.btnView.TabIndex = 0;
+            this.btnView.Text = "View";
+            this.btnView.TextColor = System.Drawing.Color.White;
+            this.btnView.UseVisualStyleBackColor = false;
+            this.btnView.Click += new System.EventHandler(this.View_Click);
             // 
             // ShowEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.lblName);
+            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.lblUsername);
             this.Controls.Add(this.lblEmpID);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnEdit);
@@ -210,10 +231,11 @@
         private Materials.CustomButton btnView;
         private Materials.CustomButton btnEdit;
         private Materials.CustomButton btnDelete;
-        private Materials.CustomLabel lblEmpID;
-        private Materials.CustomLabel lblStatus;
-        private Materials.CustomLabel lblName;
-        private Materials.CustomLabel lblPosition;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        public Materials.CustomLabel lblEmpID;
+        public Materials.CustomLabel lblStatus;
+        public Materials.CustomLabel lblUsername;
+        public Materials.CustomLabel lblPosition;
+        public Materials.CustomLabel lblName;
     }
 }

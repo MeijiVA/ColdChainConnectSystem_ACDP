@@ -33,10 +33,17 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.Employee
             set { lblEmpID.Text = value; }
         }
         [Category("Data")]
+        public string Username
+        {
+            get { return lblUsername.Text; }
+            set { lblUsername.Text = value; }
+        }
+        [Category("Data")]
+
         public string EmployeeName
         {
-            get { return lblName.Text; }
-            set { lblName.Text = value; }
+            get { return lblUsername.Text; }
+            set { lblUsername.Text = value; }
         }
 
         [Category("Data")]
