@@ -148,13 +148,15 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer
                     string status = dgvTable.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString().ToLower();
                     if (status == "active")
                     {
-                        // Green for active
+                        // green
                         e.CellStyle.BackColor = Color.FromArgb(200, 255, 200);
+                        e.CellStyle.ForeColor = Color.FromArgb(107, 188, 59);
                     }
                     else if (status == "inactive")
                     {
-                        // Red for inactive
+                        // red
                         e.CellStyle.BackColor = Color.FromArgb(255, 200, 200);
+                        e.CellStyle.ForeColor = Color.FromArgb(255, 27, 20);
                     }
                 }
             }

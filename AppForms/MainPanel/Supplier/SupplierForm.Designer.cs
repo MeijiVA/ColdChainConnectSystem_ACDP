@@ -205,8 +205,8 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Supplier
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F);
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Empty;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Empty;
             this.dgvTable.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvTable.BackgroundColor = System.Drawing.Color.White;
             this.dgvTable.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -218,8 +218,8 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Supplier
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Empty;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Empty;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvTable.ColumnHeadersHeight = 35;
@@ -240,8 +240,8 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Supplier
             dataGridViewCellStyle7.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F);
             dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             dataGridViewCellStyle7.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvTable.DefaultCellStyle = dataGridViewCellStyle7;
             this.dgvTable.EnableHeadersVisualStyles = false;
@@ -254,8 +254,8 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Supplier
             dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             dataGridViewCellStyle8.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.Empty;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Empty;
             dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvTable.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvTable.RowHeadersVisible = false;
@@ -271,7 +271,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Supplier
             this.dgvTable.RowTemplate.DefaultCellStyle.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
             this.dgvTable.RowTemplate.DefaultCellStyle.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvTable.RowTemplate.Height = 40;
-            this.dgvTable.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTable.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvTable.Size = new System.Drawing.Size(755, 442);
             this.dgvTable.TabIndex = 7;
             this.dgvTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTable_CellContentClick_1);

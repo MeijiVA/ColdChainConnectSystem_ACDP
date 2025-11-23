@@ -152,16 +152,19 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
                         {
                             // Red for low stock
                             e.CellStyle.BackColor = Color.FromArgb(255, 200, 200);
+                            e.CellStyle.ForeColor = Color.FromArgb(255, 27, 20);
                         }
                         else if (quantity >= 51 && quantity <= 100)
                         {
                             // Yellow for medium stock
                             e.CellStyle.BackColor = Color.FromArgb(255, 255, 200);
+                            e.CellStyle.ForeColor = Color.FromArgb(230, 230, 10);
                         }
                         else if (quantity >= 101)
                         {
                             // Green for sufficient stock
                             e.CellStyle.BackColor = Color.FromArgb(200, 255, 200);
+                            e.CellStyle.ForeColor = Color.FromArgb(107, 188, 59);
                         }
                     }
                 }

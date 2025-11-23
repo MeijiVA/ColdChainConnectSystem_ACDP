@@ -142,20 +142,24 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
         private void dgvTable_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             // Add status indicator for sales status column
-            if (dgvTable.Columns[e.ColumnIndex].Name == "quant" && e.RowIndex >= 0)
+            if (dgvTable.Columns[e.ColumnIndex].Name == "status" && e.RowIndex >= 0)
             {
                 if (dgvTable.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
                 {
                     string status = dgvTable.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString().ToLower();
                     if (status == "paid")
                     {
-                        // Green for paid
+                        // paid
                         e.CellStyle.BackColor = Color.FromArgb(200, 255, 200);
+                        e.CellStyle.ForeColor = Color.FromArgb(107, 188, 59);
+
                     }
                     else if (status == "unpaid")
                     {
-                        // Red for unpaid
+                        // unpaid
                         e.CellStyle.BackColor = Color.FromArgb(255, 200, 200);
+                        e.CellStyle.ForeColor = Color.FromArgb(255, 27, 20);
+
                     }
                 }
             }
