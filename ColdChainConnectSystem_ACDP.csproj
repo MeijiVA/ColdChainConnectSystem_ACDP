@@ -337,6 +337,7 @@
       <DependentUpon>UserAccountControl.cs</DependentUpon>
     </Compile>
     <Compile Include="ClassResources\Connection\Excel\CustExcelClass.cs" />
+    <Compile Include="ClassResources\Connection\Excel\SalesExcelClass.cs" />
     <Compile Include="ClassResources\Connection\Excel\SupExcelClass.cs" />
     <Compile Include="ClassResources\Connection\TableView\EmployeeClass.cs" />
     <Compile Include="ClassResources\Connection\TableView\SupplierClass.cs" />
