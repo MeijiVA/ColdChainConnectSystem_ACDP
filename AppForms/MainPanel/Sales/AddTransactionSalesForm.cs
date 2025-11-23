@@ -71,9 +71,6 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
 
         private void AddItemInventoryForm_Load(object sender, EventArgs e)
         {
-            // Load productIDs into combo box
-            InventoryClass.loadProductIDs(cbProductID);
-
             // Add status values
             cbStatus.Items.Clear();
             cbStatus.Items.Add("paid");

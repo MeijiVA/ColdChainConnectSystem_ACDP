@@ -192,9 +192,5 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
             }
         }
 
-        internal static void loadProductIDs(CustomComboBox cbProductID)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

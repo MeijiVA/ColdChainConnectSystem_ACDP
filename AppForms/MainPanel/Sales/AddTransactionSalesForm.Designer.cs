@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ofdSaveImage = new System.Windows.Forms.OpenFileDialog();
             this.btnExit = new System.Windows.Forms.Button();
             this.lblCustomerID = new System.Windows.Forms.Label();
             this.lblSalesDate = new System.Windows.Forms.Label();
@@ -45,11 +44,6 @@
             this.lblProductID = new System.Windows.Forms.Label();
             this.cbProductID = new ColdChainConnectSystem_ACDP.Materials.CustomComboBox();
             this.SuspendLayout();
-            // 
-            // ofdSaveImage
-            // 
-            this.ofdSaveImage.InitialDirectory = "string downloadsPath = Path.Combine(Environment.GetFolderPath(Environment.Special" +
-    "Folder.UserProfile), \"Downloads\");";
             // 
             // btnExit
             // 
@@ -260,7 +254,7 @@
             this.cbStatus.Location = new System.Drawing.Point(310, 163);
             this.cbStatus.MinimumSize = new System.Drawing.Size(200, 30);
             this.cbStatus.Name = "cbStatus";
-            this.cbStatus.Size = new System.Drawing.Size(205, 37);
+            this.cbStatus.Size = new System.Drawing.Size(250, 37);
             this.cbStatus.TabIndex = 27;
             this.cbStatus.Texts = "";
             // 
@@ -294,7 +288,6 @@
             this.cbProductID.Size = new System.Drawing.Size(248, 37);
             this.cbProductID.TabIndex = 29;
             this.cbProductID.Texts = "";
-
             // 
             // AddTransactionSalesForm
             // 
@@ -331,7 +324,6 @@
 
         private Materials.CustomButton btnAdd;
         private Materials.CustomLabel lbl;
-        private System.Windows.Forms.OpenFileDialog ofdSaveImage;
         private System.Windows.Forms.Button btnExit;
         private CustomControls.RJControls.CustomTextBox txtCustomerID;
         private CustomControls.RJControls.CustomTextBox txtQuantity;
