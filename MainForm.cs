@@ -5,6 +5,7 @@ using ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory;
 using ColdChainConnectSystem_ACDP.AppForms.MainPanel.Settings;
 using ColdChainConnectSystem_ACDP.ClassResources;
 using ColdChainConnectSystem_ACDP.ClassResources.Instances;
+using ColdChainConnectSystem_ACDP.Popup;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -104,7 +105,11 @@ namespace ColdChainConnectSystem_ACDP
         }
         private void logoutBtn_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.Cancel;
+            if(new CustomMessageBox("Log Out","Are you sure you want to log out?",MessageBoxButtons.OKCancel).ShowDialog() == DialogResult.OK)
+            {
+                this.DialogResult = DialogResult.Cancel;
+            }
+
         }
 
         private void userAccountControl1_Load(object sender, EventArgs e)
