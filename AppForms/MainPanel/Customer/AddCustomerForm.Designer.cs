@@ -198,6 +198,7 @@
             this.lbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lbl.TextColor = System.Drawing.Color.White;
             this.lbl.UseMnemonic = false;
+            this.lbl.Click += new System.EventHandler(this.lbl_Click);
             // 
             // btnAdd
             // 

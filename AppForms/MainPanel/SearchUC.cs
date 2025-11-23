@@ -163,7 +163,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
                     if (ofdImport.ShowDialog() == DialogResult.OK)
                     {
 
-                        InvExcelClass.Import(ofdImport.FileName);
+                        CustExcelClass.Import(ofdImport.FileName);
                         CustomerInstance.i.UpdateTable();
                     }
                     break;
@@ -206,6 +206,13 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
                     }
                     break;
                 case "custform":
+                    Console.WriteLine(txtSearch.Text + " | " + cbxFilter.Texts + " | " + ofdExport.FileName + " | " + SelectedFilterClass.SelectedFilter);
+                    if (ofdExport.ShowDialog() == DialogResult.OK)
+                    {
+
+                        CustExcelClass.Export(txtSearch.Text, ofdExport.FileName);
+                        CustomerInstance.i.UpdateTable();
+                    }
                     break;
                 default:
                     break;

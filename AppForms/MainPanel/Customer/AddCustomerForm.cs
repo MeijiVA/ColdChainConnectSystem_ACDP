@@ -109,5 +109,10 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer
                 }
             }
         }
+
+        private void lbl_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

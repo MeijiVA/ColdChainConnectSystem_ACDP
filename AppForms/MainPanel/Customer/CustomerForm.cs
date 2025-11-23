@@ -57,7 +57,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer
             {
                 dgvTable.Rows.Clear();
                 lblPageNum.Text = (currentPageIndex += 1).ToString();
-                string query = $"WHERE [numid] LIKE '%{(SearchBar.searchTXT)}%' OR [CustomerID] LIKE '%{(SearchBar.searchTXT)}%' OR [CustomerName] LIKE '%{(SearchBar.searchTXT)}%' OR [PhoneNumber] LIKE '%{(SearchBar.searchTXT)}%' OR [Address] LIKE '%{(SearchBar.searchTXT)}%' OR [PaymentTerm] LIKE '%{(SearchBar.searchTXT)}%' OR [RegistrationDate] LIKE '%{(SearchBar.searchTXT)}%' OR [Status] LIKE '%{(SearchBar.searchTXT)}%' OR ";
+                string query = $"WHERE [numid] LIKE '%{(SearchBar.searchTXT)}%' OR [CustomerID] LIKE '%{(SearchBar.searchTXT)}%' OR [CustomerName] LIKE '%{(SearchBar.searchTXT)}%' OR [PhoneNumber] LIKE '%{(SearchBar.searchTXT)}%' OR [Address] LIKE '%{(SearchBar.searchTXT)}%' OR [PaymentTerm] LIKE '%{(SearchBar.searchTXT)}%' OR [RegistrationDate] LIKE '%{(SearchBar.searchTXT)}%' OR [Status] LIKE '%{(SearchBar.searchTXT)}%'   ";
                 totalPages = CustomerClass.loadCustomerData(dgvTable, lblMaxPage, lblPageNum, currentPageIndex, query);
             }// has search query ALL
         }
@@ -81,7 +81,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer
             {
                 dgvTable.Rows.Clear();
                 lblPageNum.Text = (currentPageIndex -= 1).ToString();
-                string query = $"WHERE [numid] LIKE '%{(SearchBar.searchTXT)}%' OR [CustomerID] LIKE '%{(SearchBar.searchTXT)}%' OR [CustomerName] LIKE '%{(SearchBar.searchTXT)}%' OR [PhoneNumber] LIKE '%{(SearchBar.searchTXT)}%' OR [Address] LIKE '%{(SearchBar.searchTXT)}%' OR [PaymentTerm] LIKE '%{(SearchBar.searchTXT)}%' OR [RegistrationDate] LIKE '%{(SearchBar.searchTXT)}%' OR [Status] LIKE '%{(SearchBar.searchTXT)}%' OR ";
+                string query = $"WHERE [numid] LIKE '%{(SearchBar.searchTXT)}%' OR [CustomerID] LIKE '%{(SearchBar.searchTXT)}%' OR [CustomerName] LIKE '%{(SearchBar.searchTXT)}%' OR [PhoneNumber] LIKE '%{(SearchBar.searchTXT)}%' OR [Address] LIKE '%{(SearchBar.searchTXT)}%' OR [PaymentTerm] LIKE '%{(SearchBar.searchTXT)}%' OR [RegistrationDate] LIKE '%{(SearchBar.searchTXT)}%' OR [Status] LIKE '%{(SearchBar.searchTXT)}%'  ";
                 totalPages = CustomerClass.loadCustomerData(dgvTable, lblMaxPage, lblPageNum, currentPageIndex, query);
             }// has search query ALL
         }
