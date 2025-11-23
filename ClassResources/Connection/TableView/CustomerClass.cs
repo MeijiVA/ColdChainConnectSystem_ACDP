@@ -89,14 +89,13 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
 
 
 
-        public static bool writeCustomerData(string customerid, string customername, string phonenumber, string address, string paymentterm, string registrationdate, string status)
+        public static bool writeCustomerData(string customername, string phonenumber, string registrationdate, string address, string paymentterm, string status)
         {
-            if(!(customerid.Equals("") || customername.Equals("") || phonenumber.Equals("") || address.Equals("") || paymentterm.Equals("") || registrationdate.Equals("") || status.Equals("")))
+            if(!(customername.Equals("") || phonenumber.Equals("") || address.Equals("") || paymentterm.Equals("") || registrationdate.Equals("") || status.Equals("")))
             {
                 try
                 {
-                    //[customerid],[customername],[phonenumber],[address],[paymentterm],[registrationdate],[status]
-                    string query = $"INSERT INTO Customer([customerid],[customername],[phonenumber],[address],[paymentterm],[registrationdate],[status]) VALUES('{customerid}', '{customername}', '{phonenumber}', {address}, {paymentterm}, {registrationdate}, N'{status}')";
+                    string query = $"INSERT INTO Customer([customername],[phonenumber],[address],[paymentterm],[registrationdate],[status]) VALUES( '{customername}', '{phonenumber}', '{address}','{paymentterm}','{registrationdate}', N'{status}')";
 
                     SqlConnection con = ConnectionClass.Connection();
                     using (SqlCommand cmd = new SqlCommand(query, con))

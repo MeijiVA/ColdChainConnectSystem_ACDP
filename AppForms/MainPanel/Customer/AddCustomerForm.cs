@@ -27,17 +27,24 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            cmb = new CustomMessageBox("Add Item", "Confirm?", MessageBoxButtons.OKCancel);
+            cmb = new CustomMessageBox("Add Supplier", "Confirm?", MessageBoxButtons.OKCancel);
             if (cmb.ShowDialog() == DialogResult.OK)
             {
-                //fix this later meiji ok!
-                /* if (CustomerClass.writeCustomerData())*/
                 {
                     try
                     {
-
-                        this.Close();
-                        MainInstance.i.NavigateTo(new CustomerForm());
+                        if (txtHouseNum.Texts.Equals("") || txtBarangay.Texts.Equals("") || cbxCity.Texts.Equals("") || cbxProvince.Texts.Equals("") || txtPostalCode.Texts.Equals(""))
+                        {
+                            throw new Exception("Fill in all Fields");
+                        }
+                        String Address = txtHouseNum.Texts + "," + txtBarangay.Texts + "," + cbxCity.Texts + "," + cbxProvince.Texts + "," + txtPostalCode.Texts;
+                        Console.WriteLine(Address);
+                        if (CustomerClass.writeCustomerData(txtCustomerName.Texts, txtPhoneNumber.Texts, dpRegDate.Value.ToString("yyyy-MM-dd"), Address, cbxPaymentTerm.Texts, cbxStatus.Texts))
+                        {//custName phonenum regdate address payterm status
+                            this.Close();
+                            MainInstance.i.NavigateTo(CustomerInstance.i);
+                            CustomerInstance.i.UpdateTable();
+                        }
                     }
                     catch (Exception ex)
                     {
@@ -47,10 +54,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer
                 }
 
             }
-            //  0        0    1    2    3     4        blank   5      6         7            8              9
-            //checkbox,  id, sku, desc,img,unitprice, amount, kg, quantity, buttonedit, button view, button delete
         }
-
         private void customTextBox6_KeyPress(object sender, KeyPressEventArgs e)
         {
 
@@ -62,10 +66,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer
 
         private void txtQuantity_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-            }
+
         }
 
         private void txtUnitPrice_KeyPress(object sender, KeyPressEventArgs e)
@@ -79,21 +80,34 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer
         private void AddItemInventoryForm_Load(object sender, EventArgs e)
         {
             // Add payment term values
-            cbPaymentTerm.Items.Clear();
-            cbPaymentTerm.Items.Add("GCASH");
-            cbPaymentTerm.Items.Add("CASH");
-            cbPaymentTerm.Items.Add("MAYA");
-            cbPaymentTerm.Items.Add("BANK");
+            cbxPaymentTerm.Items.Clear();
+            cbxPaymentTerm.Items.Add("GCASH");
+            cbxPaymentTerm.Items.Add("CASH");
+            cbxPaymentTerm.Items.Add("MAYA");
+            cbxPaymentTerm.Items.Add("BANK");
 
             // Add customer status values
-            cbStatus.Items.Clear();
-            cbStatus.Items.Add("Active");
-            cbStatus.Items.Add("Inactive");
+            cbxStatus.Items.Clear();
+            cbxStatus.Items.Add("Active");
+            cbxStatus.Items.Add("Inactive");
 
             // Set default date to today
-            dpExpiry.Value = DateTime.Now;
+            dpRegDate.Value = DateTime.Now;
         }
 
-
+        private void cbxProvince_OnSelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            cbxCity.Items.Clear();
+            cbxCity.Texts = "";
+            foreach (string i in MunicipalityListClass.municipality)
+            {
+                string[] current = i.Split(',');
+                string selected = " " + cbxProvince.Texts;
+                if (current[1].Equals(selected))
+                {
+                    cbxCity.Items.Add(current[0]);
+                }
+            }
+        }
     }
 }

@@ -44,6 +44,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Supplier
                         {
                             this.Close();
                             MainInstance.i.NavigateTo(SupplierInstance.i);
+                            CustomerInstance.i.UpdateTable();
                         }
                     }
                     catch (Exception ex)
