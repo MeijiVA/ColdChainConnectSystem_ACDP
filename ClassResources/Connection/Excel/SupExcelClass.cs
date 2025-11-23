@@ -10,7 +10,7 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace ColdChainConnectSystem_ACDP.ClassResources.Connection
 {
-    internal class InvExcelClass
+    internal class SupExcelClass
     {
         public static void Import(String ofd)
         {
@@ -25,25 +25,19 @@ namespace ColdChainConnectSystem_ACDP.ClassResources.Connection
             try
             {//skucode,unitprice,kg,quantity,expiry,image,descript
                 con.Open();//[numid],[skucode],[description],[image],[unitprice],[kg],[quantity],[expiry]
-                String query = "INSERT INTO Inventory ([skucode],[unitprice],[kg],[quantity],[expiry],[image],[description]) VALUES";
-                if ((excelRange.Cells[1, 1] as Range).Value == "Inventory")
+                String query = $"INSERT INTO Supplier([companyname],[contactperson],[contactnum],[address],[paymentterm]) VALUES";
+                if ((excelRange.Cells[1, 1] as Range).Value == "Supplier")
                 {
                     
                 }
                 for (int row = 3; row <= excelRange.Rows.Count; row++)
                 {
-                    String skucode = "" + (excelRange.Cells[row, 2] as Range).Value;
-                    String unitprice = "" + (excelRange.Cells[row, 4] as Range).Value;
-                    String kg = "" + (excelRange.Cells[row, 6] as Range).Value;
-                    String qty = "" + (excelRange.Cells[row, 7] as Range).Value;
-
-                    DateTime date = Convert.ToDateTime((excelRange.Cells[row, 8] as Range).Value);
-                    String expiry = date.ToString("MM/dd/yyyy");
-                    // I have to switch these places because SQL only acccepts MM/dd/yyyy while excel autoconverts to MM/dd/yyyy
-
-                    String image = "Image.png";
-                    String desc = "" + (excelRange.Cells[row, 3] as Microsoft.Office.Interop.Excel.Range).Value;
-                    query = query + $"('{skucode}',{unitprice},{kg},{qty},'{expiry}','{image}','{desc}')";
+                    String compname = "" + (excelRange.Cells[row, 3] as Range).Value;
+                    String contperson = "" + (excelRange.Cells[row, 4] as Range).Value;
+                    String contnum = "" + (excelRange.Cells[row, 5] as Range).Value;
+                    String address = "" + (excelRange.Cells[row, 6] as Range).Value;
+                    String payterm = "" + (excelRange.Cells[row, 7] as Range).Value;
+                    query = query + $"('{compname}','{contperson}','{contnum}','{address}','{payterm}')";
                     if (row != excelRange.Rows.Count)
                     {
                         query = query + ",\n";
@@ -91,13 +85,13 @@ namespace ColdChainConnectSystem_ACDP.ClassResources.Connection
                 }
                 else if (SelectedFilterClass.SelectedFilter.Equals(""))
                 {
-                    Filter = $"WHERE numid LIKE '%{(searchQuery)}%' OR skucode LIKE '%{(searchQuery)}%' OR quantity LIKE '%{(searchQuery)}%' OR expiry LIKE '%{(searchQuery)}%' OR descript LIKE '%{(searchQuery)}%' ";
+                    query = $"WHERE supplierid LIKE '%{(searchQuery)}%' OR companyname LIKE '%{(searchQuery)}%' OR contactperson LIKE '%{(searchQuery)}%' OR contactnum LIKE '%{(searchQuery)}%' OR address LIKE '%{(searchQuery)}%' OR paymentterm  LIKE '%{(searchQuery)}%'";
                 }
                 else
                 {
                     Filter = " WHERE " + SelectedFilterClass.SelectedFilter + " LIKE '%" + searchQuery + "%' ";
                 }
-                query = $"SELECT [numid] AS \"ID\",[skucode] AS \"SKU Code\" , [description] AS \"Description\",[unitprice] AS \"Unit Price\", [unitprice] * [quantity] AS \"Amount\", [kg] AS \"Weight(KG)\", [quantity] AS \"Quantity\", [expiry] AS \"Expiry Date\"FROM Inventory {Filter} ORDER BY numid;";
+                query = $"SELECT [numid] AS \"ID\",[supplierid] AS \"Supplier ID\" , [companyname] AS \"Company Name\",[contactperson] AS \"Contact Person\", [contactnum] AS \"Contact Number\", [address] AS \"Address\", [PaymentTerm] AS \"Payment Term\" FROM Supplier {Filter} ORDER BY numid;";
                 Console.WriteLine(query);
                 ExportDataFromTable(query, ofd);
             }
@@ -129,7 +123,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources.Connection
                         using (SqlDataReader reader = command.ExecuteReader())
                         {
                             // Add the headers to the first row
-                            excelWorksheet.Cells[1, 1].Value = "Inventory";
+                            excelWorksheet.Cells[1, 1].Value = "Supplier";
                             int col = 1;
                             for (int i = 0; i < reader.FieldCount; i++)
                             {
@@ -144,15 +138,8 @@ namespace ColdChainConnectSystem_ACDP.ClassResources.Connection
                                 col = 1;
                                 for (int i = 0; i < reader.FieldCount; i++)
                                 {
-                                    if (i == 7)
-                                    {
-                                        DateTime date = Convert.ToDateTime(reader[7].ToString());
-                                        excelWorksheet.Cells[row, col].Value2 = date.ToString("MM/dd/yyyy");
-                                    } else
-                                    {
+
                                         excelWorksheet.Cells[row, col].Value2 = reader[i].ToString();
-                                    }
-     
                                     col++;
                                 }
                                 row++;

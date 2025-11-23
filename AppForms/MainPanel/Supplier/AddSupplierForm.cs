@@ -2,6 +2,7 @@
 using ColdChainConnectSystem_ACDP.ClassResources;
 using ColdChainConnectSystem_ACDP.ClassResources.Instances;
 using ColdChainConnectSystem_ACDP.Popup;
+using Microsoft.Office.Interop.Excel;
 using System;
 using System.Drawing;
 using System.IO;
@@ -27,17 +28,23 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Supplier
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            cmb = new CustomMessageBox("Add Item", "Confirm?", MessageBoxButtons.OKCancel);
+            cmb = new CustomMessageBox("Add Supplier", "Confirm?", MessageBoxButtons.OKCancel);
             if (cmb.ShowDialog() == DialogResult.OK)
             {
-                /*if (InventoryClass.writeInventoryData(txtSKU.Texts, txtDescription.Texts, txtContactPerson.Texts, System.IO.Path.GetFileName(ofdSaveImage.FileName), txtContactNumber.Texts, txtQuantity.Texts, dpExpiry.Value.ToString("yyyy-MM-dd")))
-                */
                 {
                     try
                     {
-
-                        this.Close();
-                        MainInstance.i.NavigateTo(new SalesForm());
+                        if (txtHouseNum.Texts.Equals("") || txtBarangay.Texts.Equals("") || cbxCity.Texts.Equals("") || cbxProvince.Texts.Equals("") || txtPostalCode.Texts.Equals(""))
+                        {
+                            throw new Exception("Fill in all Fields");
+                        }
+                        String Address = txtHouseNum.Texts + "," + txtBarangay.Texts +","+ cbxCity.Texts +","+ cbxProvince.Texts +"," +txtPostalCode.Texts;
+                        Console.WriteLine(Address);
+                        if(SupplierClass.writeSupplierData(txtCompanyName.Texts,txtContactPerson.Texts,txtContactNumber.Texts,Address, cbxPaymentTerm.Texts))
+                        {
+                            this.Close();
+                            MainInstance.i.NavigateTo(SupplierInstance.i);
+                        }
                     }
                     catch (Exception ex)
                     {
@@ -79,13 +86,26 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Supplier
         private void AddItemInventoryForm_Load(object sender, EventArgs e)
         {
             // Add payment term values
-            cbPaymentTerm.Items.Clear();
-            cbPaymentTerm.Items.Add("GCASH");
-            cbPaymentTerm.Items.Add("CASH");
-            cbPaymentTerm.Items.Add("MAYA");
-            cbPaymentTerm.Items.Add("BANK");
+            cbxPaymentTerm.Items.Clear();
+            cbxPaymentTerm.Items.Add("GCASH");
+            cbxPaymentTerm.Items.Add("CASH");
+            cbxPaymentTerm.Items.Add("MAYA");
+            cbxPaymentTerm.Items.Add("BANK");
         }
 
-
+        private void cbxProvince_OnSelectedIndexChanged(object sender, EventArgs e)
+        {
+            cbxCity.Items.Clear();
+            cbxCity.Texts = "";
+            foreach (string i in MunicipalityListClass.municipality)
+            {
+                string[] current = i.Split(',');
+                string selected = " " + cbxProvince.Texts;
+                if (current[1].Equals(selected))
+                {
+                    cbxCity.Items.Add(current[0]);
+                }
+            }
+        }
     }
 }

@@ -95,14 +95,14 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
 
 
 
-        public static bool writeSupplierData(string supid, string compname, string contper, string contnum, string address, string payment)
+        public static bool writeSupplierData(string compname, string contper, string contnum, string address, string payment)
         {
-            if(!(supid.Equals("") || compname.Equals("") || contper.Equals("") || contnum.Equals("") || address.Equals("") || payment.Equals("")))
+            if(!(compname.Equals("") || contper.Equals("") || contnum.Equals("") || address.Equals("") || payment.Equals("")))
             {
                 try
                 {
-                    string query = $"INSERT INTO Supplier([supplierid],[companyname],[contactperson],[contactnum],[address],[paymentterm]) VALUES('{supid}', '{compname}', '{contper}', '{contnum}', {address}, {payment})";
-
+                    string query = $"INSERT INTO Supplier([companyname],[contactperson],[contactnum],[address],[paymentterm]) VALUES('{compname}', '{contper}', '{contnum}', '{address}', '{payment}')";
+                    Console.WriteLine(query);
                     SqlConnection con = ConnectionClass.Connection();
                     using (SqlCommand cmd = new SqlCommand(query, con))
                     {

@@ -144,10 +144,28 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
                     }
                     break;
                 case "supform":
+                    if (ofdImport.ShowDialog() == DialogResult.OK)
+                    {
+
+                        SupExcelClass.Import(ofdImport.FileName);
+                        SupplierInstance.i.UpdateTable();
+                    }
                     break;
                 case "salform":
+                    if (ofdImport.ShowDialog() == DialogResult.OK)
+                    {
+
+                        InvExcelClass.Import(ofdImport.FileName);
+                        SalesInstance.i.UpdateTable();
+                    }
                     break;
                 case "custform":
+                    if (ofdImport.ShowDialog() == DialogResult.OK)
+                    {
+
+                        InvExcelClass.Import(ofdImport.FileName);
+                        CustomerInstance.i.UpdateTable();
+                    }
                     break;
                 default:
                     break;
@@ -170,8 +188,22 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
                     }
                     break;
                 case "supform":
+                    Console.WriteLine(txtSearch.Text + " | " + cbxFilter.Texts + " | " + ofdExport.FileName + " | " + SelectedFilterClass.SelectedFilter);
+                    if (ofdExport.ShowDialog() == DialogResult.OK)
+                    {
+
+                        SupExcelClass.Export(txtSearch.Text, ofdExport.FileName);
+                        SupplierInstance.i.UpdateTable();
+                    }
                     break;
                 case "salform":
+                    Console.WriteLine(txtSearch.Text + " | " + cbxFilter.Texts + " | " + ofdExport.FileName + " | " + SelectedFilterClass.SelectedFilter);
+                    if (ofdExport.ShowDialog() == DialogResult.OK)
+                    {
+
+                        InvExcelClass.Export(txtSearch.Text, ofdExport.FileName);
+                        InventoryInstance.i.UpdateTable();
+                    }
                     break;
                 case "custform":
                     break;

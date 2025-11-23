@@ -336,6 +336,7 @@
     <Compile Include="AppForms\SidePanel\UserAccountControl.Designer.cs">
       <DependentUpon>UserAccountControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="ClassResources\Connection\Excel\SupExcelClass.cs" />
     <Compile Include="ClassResources\Connection\TableView\EmployeeClass.cs" />
     <Compile Include="ClassResources\Connection\TableView\SupplierClass.cs" />
     <Compile Include="ClassResources\Connection\TableView\CustomerClass.cs" />
@@ -391,11 +392,6 @@
       <DependentUpon>CustomTextBox.cs</DependentUpon>
     </Compile>
     <Compile Include="Materials\CustomDatePicker.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Materials\DropDown\MenuColorTable.cs" />
-    <Compile Include="Materials\DropDown\MenuRenderer.cs" />
-    <Compile Include="Materials\DropDown\RJDropdownMenu.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Popup\CustomMessageBox.cs">
