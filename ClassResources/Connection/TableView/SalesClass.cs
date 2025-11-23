@@ -93,15 +93,23 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
 
 
         //[salesid],[customerid],[salesdate],[productid],[quantity],[unitprice],[status]
-        public static bool writeSalesData(string sid, string custid, string sdate, string prodid, string quantity, string status)
+        public static bool writeSalesData( string custid, string sdate, string prodid, string quantity, string status)
         {
-            if(!(sid.Equals("") || custid.Equals("") || sdate.Equals("") || prodid.Equals("") || quantity.Equals("") || status.Equals("")))
+            if(!(custid.Equals("") || sdate.Equals("") || prodid.Equals("") || quantity.Equals("") || status.Equals("")))
             {
                 try
                 {
-                    string query = $"INSERT INTO Sales([salesid],[customerid],[salesdate],[productid],[quantity],[status]) VALUES('{sid}', '{custid}', '{sdate}', '{prodid}', {quantity}, N'{status}')";
+                    string query = $"INSERT INTO Sales([customerid],[salesdate],[productid],[quantity],[status]) VALUES( '{custid}', '{sdate}', '{prodid}', {quantity}, N'{status}')";
 
                     SqlConnection con = ConnectionClass.Connection();
+                    using (SqlCommand cmd = new SqlCommand(query, con))
+                    {
+                        Console.WriteLine(query);
+                        con.Open();
+                        cmd.ExecuteNonQuery();
+                        con.Close();
+                    }
+                    query = $"UPDATE Inventory SET [quantity] = [quantity] - {quantity} WHERE [numid] = {prodid}";
                     using (SqlCommand cmd = new SqlCommand(query, con))
                     {
                         Console.WriteLine(query);

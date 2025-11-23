@@ -148,7 +148,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
                     string quantityStr = dgvTable.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
                     if (int.TryParse(quantityStr, out int quantity))
                     {
-                        if (quantity < 50)
+                        if (quantity <= 50)
                         {
                             // Red for low stock
                             e.CellStyle.BackColor = Color.FromArgb(255, 200, 200);

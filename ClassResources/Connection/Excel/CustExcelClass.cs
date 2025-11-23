@@ -5,6 +5,7 @@ using Microsoft.Office.Interop.Excel;
 using System;
 using System.Data.SqlClient;
 using System.IO;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using static System.Net.Mime.MediaTypeNames;
 
@@ -70,6 +71,22 @@ namespace ColdChainConnectSystem_ACDP.ClassResources.Connection
                 con.Close();
                 excelWorkbook.Close();
                 excelApp.Quit();
+                if (excelRange != null)
+                {
+                    Marshal.FinalReleaseComObject(excelRange);
+                }
+                if (excelWorksheet != null)
+                {
+                    Marshal.FinalReleaseComObject(excelWorksheet);
+                }
+                if (excelWorkbook != null)
+                {
+                    Marshal.FinalReleaseComObject(excelWorkbook);
+                }
+                if (excelApp != null)
+                {
+                    Marshal.FinalReleaseComObject(excelApp);
+                }
             }
         }
 
@@ -176,6 +193,18 @@ namespace ColdChainConnectSystem_ACDP.ClassResources.Connection
                 excelWorkbook.SaveAs(ofd);
                 excelWorkbook.Close();
                 excelApp.Quit();
+                if (excelWorksheet != null)
+                {
+                    Marshal.FinalReleaseComObject(excelWorksheet);
+                }
+                if (excelWorkbook != null)
+                {
+                    Marshal.FinalReleaseComObject(excelWorkbook);
+                }
+                if (excelApp != null)
+                {
+                    Marshal.FinalReleaseComObject(excelApp);
+                }
             }
 
         }

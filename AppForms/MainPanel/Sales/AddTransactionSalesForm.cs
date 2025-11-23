@@ -1,11 +1,13 @@
 ﻿using ColdChainConnectSystem_ACDP.ClassResources;
 using ColdChainConnectSystem_ACDP.ClassResources.Instances;
 using ColdChainConnectSystem_ACDP.Popup;
+using Microsoft.Office.Interop.Excel;
 using System;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
+using System.Net.NetworkInformation;
 using System.Windows.Forms;
-using System.Data.SqlClient;
 
 namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
 {
@@ -26,22 +28,26 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            cmb = new CustomMessageBox("Add Item", "Confirm?", MessageBoxButtons.OKCancel);
+            cmb = new CustomMessageBox("Add Supplier", "Confirm?", MessageBoxButtons.OKCancel);
             if (cmb.ShowDialog() == DialogResult.OK)
             {
-                if (SalesClass.writeSalesData(txtSales.Texts, txtCustomerID.Texts, dpSalesDate.Value.ToString("yyyy-MM-dd"), cbProductID.Texts, txtQuantity.Texts, cbStatus.Texts))
                 {
                     try
                     {
-                        this.Close();
-                        MainInstance.i.NavigateTo(new SalesForm());
+                        String[] ProdID = cbProductID.Texts.ToString().Trim().Split('|');
+                        if (SalesClass.writeSalesData(cbCustomerID.Texts, dpSalesDate.Value.ToString("yyyy-MM-dd"), ProdID[0], tbQuantity.Value.ToString(),cbStatus.Texts))
+                        {//custName phonenum regdate address payterm status
+                            this.Close();
+                            MainInstance.i.NavigateTo(SalesInstance.i);
+                            SalesInstance.i.UpdateTable();
+                        }
                     }
                     catch (Exception ex)
                     {
-                        cmb = new CustomMessageBox("Missing Element", ex.Message, MessageBoxButtons.OK);
-                        cmb.Show();
+                        new CustomMessageBox("Missing Element", ex.Message, MessageBoxButtons.OK).ShowDialog();
                     }
                 }
+
             }
         }
 
@@ -80,32 +86,62 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
             dpSalesDate.Value = DateTime.Now;
         }
 
-        private void cbProductID_SelectedIndexChanged(object sender, EventArgs e)
+        private void cbProductID_Load(object sender, EventArgs e)
+        {
+            string query = $"SELECT [numid], [skucode] FROM Inventory";
+            SqlConnection con = ConnectionClass.Connection();
+            con.Open();
+            using (SqlCommand cmd = new SqlCommand(query, con))
+            {
+                using (var reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        cbProductID.Items.Add(reader[0].ToString() + " | " + reader[1].ToString());
+                    }
+                }
+            }
+            con.Close();
+        }
+
+
+        double totalValuePrice;
+        private void tbQuantity_MouseMove(object sender, MouseEventArgs e)
+        {
+            totalValuePrice = Convert.ToDouble(lblUnitPrice.Text) * tbQuantity.Value;
+        }
+        private void tbQuantity_Scroll(object sender, EventArgs e)
+        {
+            lblQuantityValue.Text =""+ tbQuantity.Value;
+            totalValuePrice = Convert.ToDouble(lblUnitPrice.Text) * tbQuantity.Value;
+            lblPrice.Text = "" + totalValuePrice;
+        }
+
+
+
+
+        private void cbProductID_OnSelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbProductID.SelectedItem != null)
             {
-                string productID = cbProductID.SelectedItem.ToString();
-
-                // Get the most recent sale for this product to populate fields as reference
+                string[] productID = cbProductID.SelectedItem.ToString().Trim().Split('|');
                 try
                 {
-                    string query = $"SELECT TOP 1 [customerid], [status], [quantity], [salesdate] FROM Sales WHERE [productid] = '{productID}' ORDER BY [salesdate] DESC";
+                    string query = $"SELECT [quantity], [unitprice] FROM Inventory WHERE [numid] = {productID[0]} ";
                     SqlConnection con = ConnectionClass.Connection();
                     con.Open();
+                    Console.WriteLine(query);
                     using (SqlCommand cmd = new SqlCommand(query, con))
                     {
                         using (var reader = cmd.ExecuteReader())
                         {
                             if (reader.Read())
                             {
-                                // Populate fields with the most recent sale data (except salesID which should be unique)
-                                txtCustomerID.Texts = reader[0].ToString();
-                                cbStatus.Texts = reader[1].ToString();
-                                txtQuantity.Texts = reader[2].ToString();
-                                if (reader[3] != DBNull.Value)
-                                {
-                                    dpSalesDate.Value = Convert.ToDateTime(reader[3]);
-                                }
+                                tbQuantity.Maximum = Convert.ToInt32(reader[0].ToString());
+                                lblUnitPrice.Text  = reader[1].ToString();
+                                lblPrice.Text =""+ Math.Round(1 * Convert.ToDouble(reader[1].ToString()),2);
+                                tbQuantity.Value = 1;
+                                lblQuantityValue.Text = "" + tbQuantity.Value;
                             }
                         }
                     }
@@ -113,15 +149,61 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
                 }
                 catch (Exception ex)
                 {
-                    // If no previous sales exist, just populate productID
-                    // User can fill in other fields manually
+                    new CustomMessageBox("Exception", ex.Message, MessageBoxButtons.OK).ShowDialog();
                 }
             }
         }
 
-        private void lblExpiry_Click(object sender, EventArgs e)
+        private void customComboBox1_Load(object sender, EventArgs e)
         {
+            string query = $"SELECT [CustomerID] FROM Customer";
+            SqlConnection con = ConnectionClass.Connection();
+            con.Open();
+            using (SqlCommand cmd = new SqlCommand(query, con))
+            {
+                using (var reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        cbCustomerID.Items.Add(reader[0].ToString());
+                    }
+                }
+            }
+            con.Close();
+        }
 
+        private void cbCustomerID_OnSelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(cbCustomerID.SelectedItem != null)
+            {
+                String custName = cbCustomerID.SelectedItem.ToString().Trim();
+                Console.WriteLine(custName);
+                try
+                {
+                    String query = $"SELECT [CustomerName] FROM Customer WHERE [CustomerID] = '{custName}'";
+                    SqlConnection con = ConnectionClass.Connection();
+                    con.Open();
+                    Console.WriteLine(query);
+                    using (SqlCommand cmd = new SqlCommand(query, con))
+                    {
+                        using (var reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                lblCustomerName.Text = (reader[0].ToString());
+                                Console.WriteLine(reader[0].ToString() + "hererr");
+                            }
+                        }
+                    }
+                    con.Close();
+                }
+                catch (Exception)
+                {
+
+                }
+                
+            }
+            
         }
     }
 }

@@ -48,8 +48,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer
                     }
                     catch (Exception ex)
                     {
-                        cmb = new CustomMessageBox("Missing Element", ex.Message, MessageBoxButtons.OK);
-                        cmb.Show();
+                        new CustomMessageBox("Missing Element", ex.Message, MessageBoxButtons.OK).ShowDialog();
                     }
                 }
 
