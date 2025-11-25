@@ -54,7 +54,8 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.Employee
 
         private void Edit_Click(object sender, EventArgs e)
         {
-
+            MainInstance.i.NavigateTo(new EmployeeProfile());
+            //EmpID References 
         }
 
         private void Delete_Click(object sender, EventArgs e)
@@ -65,6 +66,12 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.Employee
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        public string Empid
+        {
+            get { return lblEmpID.Text; }
+            set { lblEmpID.Text = value; }
         }
     }
 }
