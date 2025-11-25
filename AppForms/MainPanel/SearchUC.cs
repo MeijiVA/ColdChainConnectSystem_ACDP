@@ -201,8 +201,8 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
                     if (ofdExport.ShowDialog() == DialogResult.OK)
                     {
 
-                        InvExcelClass.Export(txtSearch.Text, ofdExport.FileName);
-                        InventoryInstance.i.UpdateTable();
+                        SalesExcelClass.Export(txtSearch.Text, ofdExport.FileName);
+                        SalesInstance.i.UpdateTable();
                     }
                     break;
                 case "custform":
@@ -210,7 +210,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
                     if (ofdExport.ShowDialog() == DialogResult.OK)
                     {
 
-                        SalesExcelClass.Export(txtSearch.Text, ofdExport.FileName);
+                        CustExcelClass.Export(txtSearch.Text, ofdExport.FileName);
                         CustomerInstance.i.UpdateTable();
                     }
                     break;

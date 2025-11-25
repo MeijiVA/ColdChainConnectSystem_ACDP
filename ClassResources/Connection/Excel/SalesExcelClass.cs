@@ -18,33 +18,29 @@ namespace ColdChainConnectSystem_ACDP.ClassResources.Connection
 
             Microsoft.Office.Interop.Excel.Application excelApp = new Microsoft.Office.Interop.Excel.Application();
             Workbook excelWorkbook = excelApp.Workbooks.Open(ofd);
-            Worksheet excelWorksheet = (Worksheet)excelWorkbook.Sheets[1]; // Assuming data is in the first sheet
+            Worksheet excelWorksheet = (Worksheet)excelWorkbook.Sheets[1]; 
             Range excelRange = excelWorksheet.UsedRange;
 
             SqlConnection con = ConnectionClass.Connection();
 
             try
-            {//skucode,unitprice,kg,quantity,expiry,image,descript
-                con.Open();//[numid],[skucode],[description],[image],[unitprice],[kg],[quantity],[expiry]
-                String query = "INSERT INTO Inventory ([skucode],[unitprice],[kg],[quantity],[expiry],[image],[description]) VALUES";
-                if ((excelRange.Cells[1, 1] as Range).Value == "Inventory")
+            {
+                con.Open();
+                String query = "INSERT INTO Sales ([CustomerID],[SalesDate],[ProductID],[Quantity],[Status]) VALUES";
+                if ((excelRange.Cells[1, 1] as Range).Value == "Sales")
                 {
                     
                 }
                 for (int row = 3; row <= excelRange.Rows.Count; row++)
                 {
-                    String skucode = "" + (excelRange.Cells[row, 2] as Range).Value;
-                    String unitprice = "" + (excelRange.Cells[row, 4] as Range).Value;
-                    String kg = "" + (excelRange.Cells[row, 6] as Range).Value;
-                    String qty = "" + (excelRange.Cells[row, 7] as Range).Value;
+                    String cid = "" + (excelRange.Cells[row, 3] as Microsoft.Office.Interop.Excel.Range).Value;
+                    DateTime date = Convert.ToDateTime((excelRange.Cells[row, 4] as Range).Value);
+                    String salesdate = date.ToString("MM/dd/yyyy");
+                    String prodid = "" + (excelRange.Cells[row, 5] as Microsoft.Office.Interop.Excel.Range).Value;
+                    String quant = "" + (excelRange.Cells[row, 6] as Microsoft.Office.Interop.Excel.Range).Value;
+                    String stat = "" + (excelRange.Cells[row, 8] as Microsoft.Office.Interop.Excel.Range).Value;
 
-                    DateTime date = Convert.ToDateTime((excelRange.Cells[row, 8] as Range).Value);
-                    String expiry = date.ToString("MM/dd/yyyy");
-                    // I have to switch these places because SQL only acccepts MM/dd/yyyy while excel autoconverts to MM/dd/yyyy
-
-                    String image = "Image.png";
-                    String desc = "" + (excelRange.Cells[row, 3] as Microsoft.Office.Interop.Excel.Range).Value;
-                    query = query + $"('{skucode}',{unitprice},{kg},{qty},'{expiry}','{image}','{desc}')";
+                    query = query + $"('{cid}','{salesdate}',{prodid},{quant},'{stat}')";
                     if (row != excelRange.Rows.Count)
                     {
                         query = query + ",\n";
@@ -53,7 +49,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources.Connection
                 Console.WriteLine(query);
                 using (SqlCommand command = new SqlCommand(query, con))
                 {
-                    //ID	SKU Code	Description	Unit Price	Amount	Weight(KG)	Quantity	Expiry Date
+
                     command.ExecuteNonQuery();
                 }
                 new CustomMessageBox("Import", "Import has been completed.", MessageBoxButtons.OK).ShowDialog();
@@ -108,13 +104,13 @@ namespace ColdChainConnectSystem_ACDP.ClassResources.Connection
                 }
                 else if (SelectedFilterClass.SelectedFilter.Equals(""))
                 {
-                    Filter = $"WHERE numid LIKE '%{(searchQuery)}%' OR skucode LIKE '%{(searchQuery)}%' OR quantity LIKE '%{(searchQuery)}%' OR expiry LIKE '%{(searchQuery)}%' OR descript LIKE '%{(searchQuery)}%' ";
+                    Filter = $"WHERE [numid] LIKE '%{(searchQuery)}%' OR [customerid] LIKE '%{(searchQuery)}%' OR [SalesDate] LIKE '%{(searchQuery)}%' OR [ProductID] LIKE '%{(searchQuery)}%' OR [Quantity] LIKE '%{(searchQuery)}%' OR [Status] LIKE '%{(searchQuery)}%'";
                 }
                 else
                 {
                     Filter = " WHERE " + SelectedFilterClass.SelectedFilter + " LIKE '%" + searchQuery + "%' ";
                 }
-                query = $"SELECT [numid] AS \"ID\",[skucode] AS \"SKU Code\" , [description] AS \"Description\",[unitprice] AS \"Unit Price\", [unitprice] * [quantity] AS \"Amount\", [kg] AS \"Weight(KG)\", [quantity] AS \"Quantity\", [expiry] AS \"Expiry Date\"FROM Inventory {Filter} ORDER BY numid;";
+                query = $"SELECT s.[numID] AS \"ID\",s.[SalesID] AS \"SalesID\",s.[CustomerID] AS \"CustomerID\" , s.[SalesDate] AS \"Sales Date\",s.[ProductID] AS \"Product ID\",s.[Quantity] AS \"Quantity\",s.[Quantity] * i.[UnitPrice] AS \"Total\", s.[Status] AS \"Status\" FROM Sales AS s JOIN Inventory AS i ON  s.[productid] = i.[numid] {Filter} ORDER BY s.numid;";
                 Console.WriteLine(query);
                 ExportDataFromTable(query, ofd);
             }
@@ -146,7 +142,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources.Connection
                         using (SqlDataReader reader = command.ExecuteReader())
                         {
                             // Add the headers to the first row
-                            excelWorksheet.Cells[1, 1].Value = "Inventory";
+                            excelWorksheet.Cells[1, 1].Value = "Sales";
                             int col = 1;
                             for (int i = 0; i < reader.FieldCount; i++)
                             {
@@ -161,9 +157,9 @@ namespace ColdChainConnectSystem_ACDP.ClassResources.Connection
                                 col = 1;
                                 for (int i = 0; i < reader.FieldCount; i++)
                                 {
-                                    if (i == 7)
+                                    if (i == 3)
                                     {
-                                        DateTime date = Convert.ToDateTime(reader[7].ToString());
+                                        DateTime date = Convert.ToDateTime(reader[3].ToString());
                                         excelWorksheet.Cells[row, col].Value2 = date.ToString("MM/dd/yyyy");
                                     } else
                                     {
