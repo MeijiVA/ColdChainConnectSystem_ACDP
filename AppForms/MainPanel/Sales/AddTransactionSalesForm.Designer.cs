@@ -39,6 +39,7 @@
             this.dpSalesDate = new ColdChainConnectSystem_ACDP.Materials.CustomDatePicker();
             this.lbl = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
             this.btnAdd = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
+            this.lblSalesID = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
             this.SuspendLayout();
             // 
             // btnExit
@@ -220,12 +221,32 @@
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
+            // lblSalesID
+            // 
+            this.lblSalesID.AutoSize = true;
+            this.lblSalesID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.lblSalesID.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.lblSalesID.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.lblSalesID.BorderRadius = 0;
+            this.lblSalesID.BorderSize = 0;
+            this.lblSalesID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblSalesID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.lblSalesID.ForeColor = System.Drawing.Color.White;
+            this.lblSalesID.Location = new System.Drawing.Point(250, 38);
+            this.lblSalesID.Name = "lblSalesID";
+            this.lblSalesID.Size = new System.Drawing.Size(99, 20);
+            this.lblSalesID.TabIndex = 41;
+            this.lblSalesID.Text = "Sales ID <-";
+            this.lblSalesID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblSalesID.TextColor = System.Drawing.Color.White;
+            // 
             // AddTransactionSalesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(798, 570);
+            this.Controls.Add(this.lblSalesID);
             this.Controls.Add(this.btnRemoveTab);
             this.Controls.Add(this.btnAddTab);
             this.Controls.Add(this.tcSales);
@@ -260,5 +281,6 @@
         private System.Windows.Forms.TabControl tcSales;
         private Materials.CustomButton btnAddTab;
         private Materials.CustomButton btnRemoveTab;
+        private Materials.CustomLabel lblSalesID;
     }
 }
