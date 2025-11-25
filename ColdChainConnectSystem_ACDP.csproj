@@ -282,6 +282,12 @@
     <Compile Include="AppForms\MainPanel\Inventory\InventoryForm.Designer.cs">
       <DependentUpon>InventoryForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AppForms\MainPanel\Sales\ItemTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AppForms\MainPanel\Sales\ItemTab.Designer.cs">
+      <DependentUpon>ItemTab.cs</DependentUpon>
+    </Compile>
     <Compile Include="AppForms\MainPanel\Sales\AddTransactionSalesForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -468,6 +474,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AppForms\MainPanel\Sales\AddTransactionSalesForm.resx">
       <DependentUpon>AddTransactionSalesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\MainPanel\Sales\ItemTab.resx">
+      <DependentUpon>ItemTab.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AppForms\MainPanel\Sales\SalesForm.resx">
       <DependentUpon>SalesForm.cs</DependentUpon>

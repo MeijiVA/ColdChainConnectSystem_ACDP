@@ -28,7 +28,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            cmb = new CustomMessageBox("Add Supplier", "Confirm?", MessageBoxButtons.OKCancel);
+           /* cmb = new CustomMessageBox("Add Supplier", "Confirm?", MessageBoxButtons.OKCancel);
             if (cmb.ShowDialog() == DialogResult.OK)
             {
                 {
@@ -48,111 +48,26 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
                     }
                 }
 
-            }
+            }*/
         }
 
-        private void customTextBox6_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-        }
 
-        private void txtQuantity_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-        }
 
-        private void txtUnitPrice_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
-            {
-                e.Handled = true;
-            }
-        }
-
+        int tabNum;
         private void AddItemInventoryForm_Load(object sender, EventArgs e)
         {
-            // Add status values
-            cbStatus.Items.Clear();
-            cbStatus.Items.Add("paid");
-            cbStatus.Items.Add("unpaid");
+            tabNum = 1;
+            tcSales.TabPages.Add("Item " + tabNum);
 
             // Set default date to today
             dpSalesDate.Value = DateTime.Now;
         }
 
-        private void cbProductID_Load(object sender, EventArgs e)
-        {
-            string query = $"SELECT [numid], [skucode] FROM Inventory";
-            SqlConnection con = ConnectionClass.Connection();
-            con.Open();
-            using (SqlCommand cmd = new SqlCommand(query, con))
-            {
-                using (var reader = cmd.ExecuteReader())
-                {
-                    while (reader.Read())
-                    {
-                        cbProductID.Items.Add(reader[0].ToString() + " | " + reader[1].ToString());
-                    }
-                }
-            }
-            con.Close();
-        }
-
-
-        double totalValuePrice;
-        private void tbQuantity_MouseMove(object sender, MouseEventArgs e)
-        {
-            totalValuePrice = Convert.ToDouble(lblUnitPrice.Text) * tbQuantity.Value;
-        }
-        private void tbQuantity_Scroll(object sender, EventArgs e)
-        {
-            lblQuantityValue.Text =""+ tbQuantity.Value;
-            totalValuePrice = Convert.ToDouble(lblUnitPrice.Text) * tbQuantity.Value;
-            lblPrice.Text = "" + totalValuePrice;
-        }
 
 
 
 
-        private void cbProductID_OnSelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cbProductID.SelectedItem != null)
-            {
-                string[] productID = cbProductID.SelectedItem.ToString().Trim().Split('|');
-                try
-                {
-                    string query = $"SELECT [quantity], [unitprice] FROM Inventory WHERE [numid] = {productID[0]} ";
-                    SqlConnection con = ConnectionClass.Connection();
-                    con.Open();
-                    Console.WriteLine(query);
-                    using (SqlCommand cmd = new SqlCommand(query, con))
-                    {
-                        using (var reader = cmd.ExecuteReader())
-                        {
-                            if (reader.Read())
-                            {
-                                tbQuantity.Maximum = Convert.ToInt32(reader[0].ToString());
-                                lblUnitPrice.Text  = reader[1].ToString();
-                                lblPrice.Text =""+ Math.Round(1 * Convert.ToDouble(reader[1].ToString()),2);
-                                tbQuantity.Value = 1;
-                                lblQuantityValue.Text = "" + tbQuantity.Value;
-                            }
-                        }
-                    }
-                    con.Close();
-                }
-                catch (Exception ex)
-                {
-                    new CustomMessageBox("Exception", ex.Message, MessageBoxButtons.OK).ShowDialog();
-                }
-            }
-        }
+
 
         private void customComboBox1_Load(object sender, EventArgs e)
         {
@@ -204,6 +119,37 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
                 
             }
             
+        }
+
+        private void btnAddTab_Click(object sender, EventArgs e)
+        {
+            if (tabNum <= 10)
+            {
+                tabNum++;
+                tcSales.TabPages.Add("Item " + tabNum);
+            }
+            else
+            {
+                new CustomMessageBox("Tabs", "You can only have 10 Concurrent Tabs.", MessageBoxButtons.OK).ShowDialog();
+            }
+
+        }
+
+        private void btnRemoveTab_Click(object sender, EventArgs e)
+        {
+            if (tabNum > 0)
+            {
+                tabNum--;
+                TabPage tab = new TabPage("Item " + tabNum);
+                ItemTab it = new ItemTab();
+                it.Dock = DockStyle.Fill;
+                tab.Controls.Add(it);
+                tcSales.TabPages.Add(tab);
+            }
+            else
+            {
+                new CustomMessageBox("Tabs", "You must atleast have 1 Tab Open.", MessageBoxButtons.OK).ShowDialog();
+            }
         }
     }
 }
