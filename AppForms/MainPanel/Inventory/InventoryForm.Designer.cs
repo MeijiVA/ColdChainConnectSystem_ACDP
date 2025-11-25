@@ -54,8 +54,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.actionlbl = new System.Windows.Forms.Label();
             this.dgvTable = new System.Windows.Forms.DataGridView();
-            this.btnCheck = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
-            this.SearchBar = new ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory.SearchUC();
             this.rowCbox = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.skucode = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -68,6 +66,8 @@
             this.viewCol = new System.Windows.Forms.DataGridViewImageColumn();
             this.editCol = new System.Windows.Forms.DataGridViewImageColumn();
             this.deleteCol = new System.Windows.Forms.DataGridViewImageColumn();
+            this.btnCheck = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
+            this.SearchBar = new ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory.SearchUC();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTable)).BeginInit();
             this.SuspendLayout();
@@ -285,36 +285,6 @@
             this.dgvTable.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvTable_CellFormatting);
             this.dgvTable.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dgvTable_RowPostPaint);
             // 
-            // btnCheck
-            // 
-            this.btnCheck.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.btnCheck.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.btnCheck.BackgroundImage = global::ColdChainConnectSystem_ACDP.Properties.Resources.Arrow_left_circle;
-            this.btnCheck.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnCheck.BorderColor = System.Drawing.Color.Empty;
-            this.btnCheck.BorderRadius = 0;
-            this.btnCheck.BorderSize = 0;
-            this.btnCheck.FlatAppearance.BorderSize = 0;
-            this.btnCheck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCheck.ForeColor = System.Drawing.Color.Transparent;
-            this.btnCheck.Location = new System.Drawing.Point(286, 32);
-            this.btnCheck.Name = "btnCheck";
-            this.btnCheck.Size = new System.Drawing.Size(25, 25);
-            this.btnCheck.TabIndex = 3;
-            this.btnCheck.TextColor = System.Drawing.Color.Transparent;
-            this.btnCheck.UseVisualStyleBackColor = false;
-            this.btnCheck.Click += new System.EventHandler(this.btnCheck_Click);
-            // 
-            // SearchBar
-            // 
-            this.SearchBar.BackColor = System.Drawing.Color.Transparent;
-            this.SearchBar.Location = new System.Drawing.Point(22, 12);
-            this.SearchBar.Name = "SearchBar";
-            this.SearchBar.searchTXT = "Search Term";
-            this.SearchBar.Size = new System.Drawing.Size(755, 65);
-            this.SearchBar.TabIndex = 0;
-            this.SearchBar.Load += new System.EventHandler(this.searchUC1_Load);
-            // 
             // rowCbox
             // 
             this.rowCbox.HeaderText = "";
@@ -443,6 +413,36 @@
             this.deleteCol.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.deleteCol.ToolTipText = "Deletes the row.";
             this.deleteCol.Width = 25;
+            // 
+            // btnCheck
+            // 
+            this.btnCheck.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.btnCheck.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.btnCheck.BackgroundImage = global::ColdChainConnectSystem_ACDP.Properties.Resources.Arrow_left_circle;
+            this.btnCheck.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCheck.BorderColor = System.Drawing.Color.Empty;
+            this.btnCheck.BorderRadius = 0;
+            this.btnCheck.BorderSize = 0;
+            this.btnCheck.FlatAppearance.BorderSize = 0;
+            this.btnCheck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCheck.ForeColor = System.Drawing.Color.Transparent;
+            this.btnCheck.Location = new System.Drawing.Point(286, 32);
+            this.btnCheck.Name = "btnCheck";
+            this.btnCheck.Size = new System.Drawing.Size(25, 25);
+            this.btnCheck.TabIndex = 3;
+            this.btnCheck.TextColor = System.Drawing.Color.Transparent;
+            this.btnCheck.UseVisualStyleBackColor = false;
+            this.btnCheck.Click += new System.EventHandler(this.btnCheck_Click);
+            // 
+            // SearchBar
+            // 
+            this.SearchBar.BackColor = System.Drawing.Color.Transparent;
+            this.SearchBar.Location = new System.Drawing.Point(22, 12);
+            this.SearchBar.Name = "SearchBar";
+            this.SearchBar.searchTXT = "Search Term";
+            this.SearchBar.Size = new System.Drawing.Size(755, 65);
+            this.SearchBar.TabIndex = 0;
+            this.SearchBar.Load += new System.EventHandler(this.searchUC1_Load);
             // 
             // InventoryForm
             // 

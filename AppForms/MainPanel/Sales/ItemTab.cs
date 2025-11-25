@@ -20,7 +20,36 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
             InitializeComponent();
         }
 
-        private void cbProductID_OnSelectedIndexChanged(object sender, EventArgs e)
+        double totalValuePrice;
+
+
+        private void ItemTab_Load(object sender, EventArgs e)
+        {
+            // Add status values
+            cbStatus.Items.Clear();
+            cbStatus.Items.Add("paid");
+            cbStatus.Items.Add("unpaid");
+        }
+
+        private void cbProductID_Load(object sender, EventArgs e)
+        {
+            string query = $"SELECT [NUMID] , [SKUCODE] FROM Inventory";
+            SqlConnection con = ConnectionClass.Connection();
+            con.Open();
+            using (SqlCommand cmd = new SqlCommand(query, con))
+            {
+                using (var reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        cbProductID.Items.Add(reader[0].ToString() + " | " + reader[1].ToString());
+                    }
+                }
+            }
+            con.Close();
+        }
+
+        private void cbProductID_OnSelectedIndexChanged_1(object sender, EventArgs e)
         {
             if (cbProductID.SelectedItem != null)
             {
@@ -54,26 +83,43 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
             }
         }
 
-        double totalValuePrice;
-        private void tbQuantity_MouseMove(object sender, MouseEventArgs e)
-        {
-            totalValuePrice = Convert.ToDouble(lblUnitPrice.Text) * tbQuantity.Value;
-        }
-
-        private void tbQuantity_Scroll(object sender, EventArgs e)
+        private void tbQuantity_Scroll_1(object sender, EventArgs e)
         {
             lblQuantityValue.Text = "" + tbQuantity.Value;
             totalValuePrice = Convert.ToDouble(lblUnitPrice.Text) * tbQuantity.Value;
             lblPrice.Text = "" + totalValuePrice;
         }
 
-        private void ItemTab_Load(object sender, EventArgs e)
+        private void tbQuantity_MouseMove(object sender, MouseEventArgs e)
         {
-            // Add status values
-            cbStatus.Items.Clear();
-            cbStatus.Items.Add("paid");
-            cbStatus.Items.Add("unpaid");
+            totalValuePrice = Convert.ToDouble(lblUnitPrice.Text) * tbQuantity.Value;
         }
-    }
 
+        public string BatchID
+        {
+            get { return cbProductID.Texts; }
+        }
+        public string UnitPrice
+        {
+            get { return lblUnitPrice.Text; }
+        }
+        public string Quantity
+        {
+            get { return lblQuantityValue.Text; }
+        }
+        public string Status
+        {
+            get { return cbStatus.Text; }
+        }
+
+
+
+
+
+
+
+
+
+
+    }
 }

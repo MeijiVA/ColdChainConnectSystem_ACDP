@@ -62,7 +62,6 @@
             this.tabPanel.Controls.Add(this.lblQuantity);
             this.tabPanel.Controls.Add(this.lblStatus);
             this.tabPanel.Controls.Add(this.tbQuantity);
-            this.tabPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabPanel.ForeColor = System.Drawing.Color.White;
             this.tabPanel.Location = new System.Drawing.Point(0, 0);
             this.tabPanel.Name = "tabPanel";
@@ -162,6 +161,8 @@
             this.cbProductID.Size = new System.Drawing.Size(200, 37);
             this.cbProductID.TabIndex = 51;
             this.cbProductID.Texts = "";
+            this.cbProductID.OnSelectedIndexChanged += new System.EventHandler(this.cbProductID_OnSelectedIndexChanged_1);
+            this.cbProductID.Load += new System.EventHandler(this.cbProductID_Load);
             // 
             // lblProductID
             // 
@@ -229,11 +230,12 @@
             this.tbQuantity.TabIndex = 52;
             this.tbQuantity.TickStyle = System.Windows.Forms.TickStyle.None;
             this.tbQuantity.Value = 1;
+            this.tbQuantity.Scroll += new System.EventHandler(this.tbQuantity_Scroll_1);
+            this.tbQuantity.MouseMove += new System.Windows.Forms.MouseEventHandler(this.tbQuantity_MouseMove);
             // 
             // ItemTab
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.tabPanel);
             this.Name = "ItemTab";

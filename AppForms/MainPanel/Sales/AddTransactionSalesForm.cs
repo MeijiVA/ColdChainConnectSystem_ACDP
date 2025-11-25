@@ -53,12 +53,13 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
 
 
 
-        int tabNum;
         private void AddItemInventoryForm_Load(object sender, EventArgs e)
         {
-            tabNum = 1;
-            tcSales.TabPages.Add("Item " + tabNum);
+            TabPage tab = new TabPage("Item " + 1);
+            ItemTab it = new ItemTab();
 
+            tab.Controls.Add(it);
+            tcSales.TabPages.Add(tab);
             // Set default date to today
             dpSalesDate.Value = DateTime.Now;
         }
@@ -123,10 +124,15 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
 
         private void btnAddTab_Click(object sender, EventArgs e)
         {
-            if (tabNum <= 10)
+            // Get the index of the last tab page
+            int NextTabIndex = tcSales.TabPages.Count + 1;
+            if (NextTabIndex <= 10)
             {
-                tabNum++;
-                tcSales.TabPages.Add("Item " + tabNum);
+                TabPage tab = new TabPage("Item " + NextTabIndex);
+                ItemTab it = new ItemTab();
+                
+                tab.Controls.Add(it);
+                tcSales.TabPages.Add(tab);
             }
             else
             {
@@ -137,18 +143,19 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
 
         private void btnRemoveTab_Click(object sender, EventArgs e)
         {
-            if (tabNum > 0)
+            // Check if there are any tab pages to remove
+            if (tcSales.TabPages.Count > 1)
             {
-                tabNum--;
-                TabPage tab = new TabPage("Item " + tabNum);
-                ItemTab it = new ItemTab();
-                it.Dock = DockStyle.Fill;
-                tab.Controls.Add(it);
-                tcSales.TabPages.Add(tab);
+                // Get the index of the last tab page
+                int lastTabIndex = tcSales.TabPages.Count - 1;
+
+                // Remove the tab page at the last index
+                tcSales.TabPages.RemoveAt(lastTabIndex);
             }
             else
             {
-                new CustomMessageBox("Tabs", "You must atleast have 1 Tab Open.", MessageBoxButtons.OK).ShowDialog();
+                // Optionally, inform the user that there are no tabs to remove
+                new CustomMessageBox("Tabs", "You must have atleast 1 Item", MessageBoxButtons.OK).ShowDialog();
             }
         }
     }

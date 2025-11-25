@@ -31,14 +31,14 @@
             this.btnExit = new System.Windows.Forms.Button();
             this.lblCustomerID = new System.Windows.Forms.Label();
             this.lblSalesDate = new System.Windows.Forms.Label();
+            this.tcSales = new System.Windows.Forms.TabControl();
+            this.btnRemoveTab = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
+            this.btnAddTab = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
+            this.lblCustomerName = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
             this.cbCustomerID = new ColdChainConnectSystem_ACDP.Materials.CustomComboBox();
             this.dpSalesDate = new ColdChainConnectSystem_ACDP.Materials.CustomDatePicker();
             this.lbl = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
             this.btnAdd = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
-            this.lblCustomerName = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
-            this.tcSales = new System.Windows.Forms.TabControl();
-            this.btnAddTab = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
-            this.btnRemoveTab = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
             this.SuspendLayout();
             // 
             // btnExit
@@ -78,6 +78,70 @@
             this.lblSalesDate.Size = new System.Drawing.Size(79, 16);
             this.lblSalesDate.TabIndex = 20;
             this.lblSalesDate.Text = "Sales Date";
+            // 
+            // tcSales
+            // 
+            this.tcSales.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tcSales.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.tcSales.Location = new System.Drawing.Point(24, 157);
+            this.tcSales.Name = "tcSales";
+            this.tcSales.Padding = new System.Drawing.Point(0, 0);
+            this.tcSales.SelectedIndex = 0;
+            this.tcSales.Size = new System.Drawing.Size(754, 344);
+            this.tcSales.TabIndex = 38;
+            // 
+            // btnRemoveTab
+            // 
+            this.btnRemoveTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.btnRemoveTab.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.btnRemoveTab.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnRemoveTab.BorderRadius = 0;
+            this.btnRemoveTab.BorderSize = 0;
+            this.btnRemoveTab.FlatAppearance.BorderSize = 0;
+            this.btnRemoveTab.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRemoveTab.ForeColor = System.Drawing.Color.White;
+            this.btnRemoveTab.Location = new System.Drawing.Point(70, 508);
+            this.btnRemoveTab.Name = "btnRemoveTab";
+            this.btnRemoveTab.Size = new System.Drawing.Size(40, 40);
+            this.btnRemoveTab.TabIndex = 40;
+            this.btnRemoveTab.TextColor = System.Drawing.Color.White;
+            this.btnRemoveTab.UseVisualStyleBackColor = false;
+            this.btnRemoveTab.Click += new System.EventHandler(this.btnRemoveTab_Click);
+            // 
+            // btnAddTab
+            // 
+            this.btnAddTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.btnAddTab.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.btnAddTab.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnAddTab.BorderRadius = 0;
+            this.btnAddTab.BorderSize = 0;
+            this.btnAddTab.FlatAppearance.BorderSize = 0;
+            this.btnAddTab.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddTab.ForeColor = System.Drawing.Color.White;
+            this.btnAddTab.Location = new System.Drawing.Point(24, 508);
+            this.btnAddTab.Name = "btnAddTab";
+            this.btnAddTab.Size = new System.Drawing.Size(40, 40);
+            this.btnAddTab.TabIndex = 39;
+            this.btnAddTab.TextColor = System.Drawing.Color.White;
+            this.btnAddTab.UseVisualStyleBackColor = false;
+            this.btnAddTab.Click += new System.EventHandler(this.btnAddTab_Click);
+            // 
+            // lblCustomerName
+            // 
+            this.lblCustomerName.BackColor = System.Drawing.Color.White;
+            this.lblCustomerName.BackgroundColor = System.Drawing.Color.White;
+            this.lblCustomerName.BorderColor = System.Drawing.Color.Transparent;
+            this.lblCustomerName.BorderRadius = 0;
+            this.lblCustomerName.BorderSize = 0;
+            this.lblCustomerName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblCustomerName.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10F);
+            this.lblCustomerName.ForeColor = System.Drawing.Color.Black;
+            this.lblCustomerName.Location = new System.Drawing.Point(251, 104);
+            this.lblCustomerName.Name = "lblCustomerName";
+            this.lblCustomerName.Size = new System.Drawing.Size(186, 37);
+            this.lblCustomerName.TabIndex = 37;
+            this.lblCustomerName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblCustomerName.TextColor = System.Drawing.Color.Black;
             // 
             // cbCustomerID
             // 
@@ -155,68 +219,6 @@
             this.btnAdd.TextColor = System.Drawing.Color.White;
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // lblCustomerName
-            // 
-            this.lblCustomerName.BackColor = System.Drawing.Color.White;
-            this.lblCustomerName.BackgroundColor = System.Drawing.Color.White;
-            this.lblCustomerName.BorderColor = System.Drawing.Color.Transparent;
-            this.lblCustomerName.BorderRadius = 0;
-            this.lblCustomerName.BorderSize = 0;
-            this.lblCustomerName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblCustomerName.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10F);
-            this.lblCustomerName.ForeColor = System.Drawing.Color.Black;
-            this.lblCustomerName.Location = new System.Drawing.Point(251, 104);
-            this.lblCustomerName.Name = "lblCustomerName";
-            this.lblCustomerName.Size = new System.Drawing.Size(186, 37);
-            this.lblCustomerName.TabIndex = 37;
-            this.lblCustomerName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblCustomerName.TextColor = System.Drawing.Color.Black;
-            // 
-            // tcSales
-            // 
-            this.tcSales.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.tcSales.Location = new System.Drawing.Point(24, 157);
-            this.tcSales.Name = "tcSales";
-            this.tcSales.SelectedIndex = 0;
-            this.tcSales.Size = new System.Drawing.Size(754, 344);
-            this.tcSales.TabIndex = 38;
-            // 
-            // btnAddTab
-            // 
-            this.btnAddTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.btnAddTab.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.btnAddTab.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnAddTab.BorderRadius = 0;
-            this.btnAddTab.BorderSize = 0;
-            this.btnAddTab.FlatAppearance.BorderSize = 0;
-            this.btnAddTab.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddTab.ForeColor = System.Drawing.Color.White;
-            this.btnAddTab.Location = new System.Drawing.Point(24, 508);
-            this.btnAddTab.Name = "btnAddTab";
-            this.btnAddTab.Size = new System.Drawing.Size(40, 40);
-            this.btnAddTab.TabIndex = 39;
-            this.btnAddTab.TextColor = System.Drawing.Color.White;
-            this.btnAddTab.UseVisualStyleBackColor = false;
-            this.btnAddTab.Click += new System.EventHandler(this.btnAddTab_Click);
-            // 
-            // btnRemoveTab
-            // 
-            this.btnRemoveTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.btnRemoveTab.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.btnRemoveTab.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnRemoveTab.BorderRadius = 0;
-            this.btnRemoveTab.BorderSize = 0;
-            this.btnRemoveTab.FlatAppearance.BorderSize = 0;
-            this.btnRemoveTab.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRemoveTab.ForeColor = System.Drawing.Color.White;
-            this.btnRemoveTab.Location = new System.Drawing.Point(70, 508);
-            this.btnRemoveTab.Name = "btnRemoveTab";
-            this.btnRemoveTab.Size = new System.Drawing.Size(40, 40);
-            this.btnRemoveTab.TabIndex = 40;
-            this.btnRemoveTab.TextColor = System.Drawing.Color.White;
-            this.btnRemoveTab.UseVisualStyleBackColor = false;
-            this.btnRemoveTab.Click += new System.EventHandler(this.btnRemoveTab_Click);
             // 
             // AddTransactionSalesForm
             // 
