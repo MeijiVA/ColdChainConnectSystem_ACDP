@@ -353,6 +353,7 @@
     <Compile Include="ClassResources\Connection\Excel\InvExcelClass.cs" />
     <Compile Include="ClassResources\Instances\CustomerInstance.cs" />
     <Compile Include="ClassResources\Instances\EmployeeInstance.cs" />
+    <Compile Include="ClassResources\Instances\ItemTabInstance.cs" />
     <Compile Include="ClassResources\Instances\SupplierInstance.cs" />
     <Compile Include="ClassResources\Instances\InventoryInstance.cs" />
     <Compile Include="ClassResources\Instances\MainInstance.cs" />

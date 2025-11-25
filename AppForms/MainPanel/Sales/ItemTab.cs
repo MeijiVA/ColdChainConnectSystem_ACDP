@@ -95,19 +95,15 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
             totalValuePrice = Convert.ToDouble(lblUnitPrice.Text) * tbQuantity.Value;
         }
 
-        public string BatchID
+        public string getBatchID
         {
             get { return cbProductID.Texts; }
         }
-        public string UnitPrice
-        {
-            get { return lblUnitPrice.Text; }
-        }
-        public string Quantity
+        public string getQuantity
         {
             get { return lblQuantityValue.Text; }
         }
-        public string Status
+        public string getStatus
         {
             get { return cbStatus.Text; }
         }

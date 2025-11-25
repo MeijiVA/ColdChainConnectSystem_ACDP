@@ -28,14 +28,21 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-           /* cmb = new CustomMessageBox("Add Supplier", "Confirm?", MessageBoxButtons.OKCancel);
+            cmb = new CustomMessageBox("Add Supplier", "Confirm?", MessageBoxButtons.OKCancel);
             if (cmb.ShowDialog() == DialogResult.OK)
             {
+                String[][] table = new string[10][3];
+                for(int num = 0; num < tcSales.TabPages.Count ;num++)
                 {
-                    try
+                   String[] productID = GetTab(num).getBatchID.Trim().Split('|'); //removes SKUCODE
+                    table[num][0] = productID[0];
+                    table[num][0] = GetTab(num).getQuantity;
+                    table[num][0] = GetTab(num).getStatus;
+                }
+                try
                     {
-                        String[] ProdID = cbProductID.Texts.ToString().Trim().Split('|');
-                        if (SalesClass.writeSalesData(cbCustomerID.Texts, dpSalesDate.Value.ToString("yyyy-MM-dd"), ProdID[0], tbQuantity.Value.ToString(),cbStatus.Texts))
+                        String[] ProdID = ItemTabInstance.it0.getBatchID.Trim().Split('|');
+                        if (SalesClass.writeSalesData(cbCustomerID.Texts, dpSalesDate.Value.ToString("yyyy-MM-dd"), ProdID[0], tbQuantity.Value.ToString(), cbStatus.Texts))
                         {//custName phonenum regdate address payterm status
                             this.Close();
                             MainInstance.i.NavigateTo(SalesInstance.i);
@@ -46,9 +53,9 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
                     {
                         new CustomMessageBox("Missing Element", ex.Message, MessageBoxButtons.OK).ShowDialog();
                     }
-                }
+                
 
-            }*/
+            }
         }
 
 
@@ -56,7 +63,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
         private void AddItemInventoryForm_Load(object sender, EventArgs e)
         {
             TabPage tab = new TabPage("Item " + 1);
-            ItemTab it = new ItemTab();
+            ItemTab it = GetTab(0);
 
             tab.Controls.Add(it);
             tcSales.TabPages.Add(tab);
@@ -125,14 +132,15 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
         private void btnAddTab_Click(object sender, EventArgs e)
         {
             // Get the index of the last tab page
-            int NextTabIndex = tcSales.TabPages.Count + 1;
-            if (NextTabIndex <= 10)
+            int NextTabIndex = tcSales.TabPages.Count;
+            if (NextTabIndex < 10)
             {
-                TabPage tab = new TabPage("Item " + NextTabIndex);
-                ItemTab it = new ItemTab();
+                TabPage tab = new TabPage("Item " + NextTabIndex+1);
+                ItemTab it = GetTab(NextTabIndex);
                 
                 tab.Controls.Add(it);
                 tcSales.TabPages.Add(tab);
+               
             }
             else
             {
@@ -140,6 +148,45 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
             }
 
         }
+        private ItemTab GetTab(int i)
+        {
+            switch (i)
+            {
+                case 0:
+                    ItemTabInstance.it0 = new ItemTab();
+                    return ItemTabInstance.it0;
+                case 1:
+                    ItemTabInstance.it1 = new ItemTab();
+                    return ItemTabInstance.it1;
+                case 2:
+                    ItemTabInstance.it2 = new ItemTab();
+                    return ItemTabInstance.it2;
+                case 3:
+                    ItemTabInstance.it3 = new ItemTab();
+                    return ItemTabInstance.it3;
+                case 4:
+                    ItemTabInstance.it4 = new ItemTab();
+                    return ItemTabInstance.it4;
+                case 5:
+                    ItemTabInstance.it5 = new ItemTab();
+                    return ItemTabInstance.it5;
+                case 6:
+                    ItemTabInstance.it6 = new ItemTab();
+                    return ItemTabInstance.it6;
+                case 7:
+                    ItemTabInstance.it7 = new ItemTab();
+                    return ItemTabInstance.it7;
+                case 8:
+                    ItemTabInstance.it8 = new ItemTab();
+                    return ItemTabInstance.it8;
+                case 9:
+                    ItemTabInstance.it9 = new ItemTab();
+                    return ItemTabInstance.it9;
+            }
+            return new ItemTab();
+        } 
+
+
 
         private void btnRemoveTab_Click(object sender, EventArgs e)
         {
