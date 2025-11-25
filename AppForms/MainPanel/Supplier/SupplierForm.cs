@@ -145,9 +145,12 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Supplier
         {
             if (dgvTable.Columns[e.ColumnIndex].Name == "deleteCol")
             {
-                if (new CustomMessageBox("Delete Row", "Are you sure you want to delete this item from the Database?", MessageBoxButtons.OKCancel).ShowDialog() == DialogResult.Yes)
+                if (new CustomMessageBox("Delete Row", "Are you sure you want to delete this item from the Database?", MessageBoxButtons.OKCancel).ShowDialog() == DialogResult.OK)
                 {
-                    dgvTable.Rows.RemoveAt(e.RowIndex);
+                    String cellValue = Convert.ToString(dgvTable.Rows[e.RowIndex].Cells["numid"].FormattedValue);
+                    
+                    UpdateTable();
+
                 }
             }
             if (dgvTable.Columns[e.ColumnIndex].Name == "editCol")
