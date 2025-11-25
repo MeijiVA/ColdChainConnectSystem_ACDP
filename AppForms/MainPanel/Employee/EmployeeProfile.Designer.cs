@@ -201,6 +201,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "EmployeeProfile";
             this.Text = "EmployeeProfile";
+            this.Load += new System.EventHandler(this.EmployeeProfile_Load);
             this.customPanel3.ResumeLayout(false);
             this.customPanel2.ResumeLayout(false);
             this.customPanel1.ResumeLayout(false);

@@ -25,14 +25,10 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.Employee
             employeeID = empID;
         }
 
-        private void EmployeeProfile_Load(object sender, EventArgs e)
-        {
-            LoadEmployeeData();
-        }
-
         private void LoadEmployeeData()
         {
-         
+            //query <---
+            PersonalUserControl.AgeInfo = "test";
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -47,6 +43,19 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.Employee
             {
                 MainInstance.i.NavigateTo(new EmployeeForm());
             }
+        }
+
+        private void EmployeeProfile_Load(object sender, EventArgs e)
+        {
+            LoadEmployeeData();
+            //String var = reader[0].ToString().Split(',');
+            string[] address = ConnectionClass.address.Split(',');
+            AddressUserControl.HouseNum = address[0];
+            AddressUserControl.Barangay = address[1];
+            AddressUserControl.City = address[2];
+            AddressUserControl.Province = address[3];
+            AddressUserControl.Postal = address[4];
+
         }
     }
 }
