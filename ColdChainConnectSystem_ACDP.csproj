@@ -403,6 +403,12 @@
     <Compile Include="Materials\CustomDatePicker.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Materials\ToggleSliderComponent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Materials\ToggleSliderComponent.Designer.cs">
+      <DependentUpon>ToggleSliderComponent.cs</DependentUpon>
+    </Compile>
     <Compile Include="Popup\CustomMessageBox.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -510,6 +516,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Materials\CustomTextBox.resx">
       <DependentUpon>CustomTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Materials\ToggleSliderComponent.resx">
+      <DependentUpon>ToggleSliderComponent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Popup\CustomMessageBox.resx">
       <DependentUpon>CustomMessageBox.cs</DependentUpon>

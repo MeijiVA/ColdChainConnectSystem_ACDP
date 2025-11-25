@@ -61,5 +61,10 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.Employee
         {
 
         }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

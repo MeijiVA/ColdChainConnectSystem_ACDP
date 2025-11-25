@@ -82,7 +82,7 @@ namespace ColdChainConnectSystem_ACDP
             MainInstance.i = new MainForm();
             SettingsInstance.i = new SettingForm();
 
-                string accountCredentials = (txtUser.Texts = "AntonDelaPena") + "," + (txtPass.Texts = "123123123");
+                string accountCredentials = (txtUser.Texts = "AntonDelaPena2") + "," + (txtPass.Texts = "123123123");
                 verify = ConnectionClass.LoginAccount(accountCredentials);
                 switch (verify)
                 {

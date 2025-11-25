@@ -35,7 +35,7 @@
             // 
             this.flpEmployee.AutoScroll = true;
             this.flpEmployee.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flpEmployee.Location = new System.Drawing.Point(12, 75);
+            this.flpEmployee.Location = new System.Drawing.Point(12, 47);
             this.flpEmployee.Name = "flpEmployee";
             this.flpEmployee.Padding = new System.Windows.Forms.Padding(11, 8, 11, 8);
             this.flpEmployee.Size = new System.Drawing.Size(766, 483);
