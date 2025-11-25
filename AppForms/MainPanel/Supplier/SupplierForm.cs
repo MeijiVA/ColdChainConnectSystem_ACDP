@@ -148,7 +148,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Supplier
                 if (new CustomMessageBox("Delete Row", "Are you sure you want to delete this item from the Database?", MessageBoxButtons.OKCancel).ShowDialog() == DialogResult.OK)
                 {
                     String cellValue = Convert.ToString(dgvTable.Rows[e.RowIndex].Cells["numid"].FormattedValue);
-                    
+                    //"DELETE FROM Supplier WHERE numid = cellvalue;"
                     UpdateTable();
 
                 }
