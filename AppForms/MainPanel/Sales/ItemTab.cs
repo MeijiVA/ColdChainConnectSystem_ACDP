@@ -33,7 +33,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
 
         private void cbProductID_Load(object sender, EventArgs e)
         {
-            string query = $"SELECT [NUMID] , [SKUCODE] FROM Inventory";
+            string query = $"SELECT [NUMID] , [SKUCODE] FROM Inventory WHERE [quantity] > 0";
             SqlConnection con = ConnectionClass.Connection();
             con.Open();
             using (SqlCommand cmd = new SqlCommand(query, con))
@@ -95,31 +95,22 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
             totalValuePrice = Convert.ToDouble(lblUnitPrice.Text) * tbQuantity.Value;
         }
 
-        public string BatchID
+        public string getBatchID
         {
             get { return cbProductID.Texts; }
         }
-        public string UnitPrice
-        {
-            get { return lblUnitPrice.Text; }
-        }
-        public string Quantity
+        public string getQuantity
         {
             get { return lblQuantityValue.Text; }
         }
-        public string Status
+        public string getStatus
         {
-            get { return cbStatus.Text; }
+            get { return cbStatus.Texts; }
         }
 
+        private void cbStatus_OnSelectedIndexChanged(object sender, EventArgs e)
+        {
 
-
-
-
-
-
-
-
-
+        }
     }
 }

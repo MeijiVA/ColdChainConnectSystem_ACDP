@@ -16,5 +16,10 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Dashboard
         {
             InitializeComponent();
         }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

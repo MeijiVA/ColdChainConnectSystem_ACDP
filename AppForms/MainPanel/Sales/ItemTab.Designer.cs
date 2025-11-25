@@ -195,6 +195,7 @@
             this.cbStatus.Size = new System.Drawing.Size(250, 37);
             this.cbStatus.TabIndex = 49;
             this.cbStatus.Texts = "";
+            this.cbStatus.OnSelectedIndexChanged += new System.EventHandler(this.cbStatus_OnSelectedIndexChanged);
             // 
             // lblQuantity
             // 

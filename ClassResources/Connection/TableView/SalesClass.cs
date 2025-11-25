@@ -1,6 +1,7 @@
 ﻿
 using ColdChainConnectSystem_ACDP.Popup;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -93,14 +94,13 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
 
 
         //[salesid],[customerid],[salesdate],[productid],[quantity],[unitprice],[status]
-        public static bool writeSalesData( string custid, string sdate, string prodid, string quantity, string status)
+        public static bool writeSalesData(string salesid,string custid, string sdate, string prodid, string quantity, string status)
         {
-            if(!(custid.Equals("") || sdate.Equals("") || prodid.Equals("") || quantity.Equals("") || status.Equals("")))
+            if(!(salesid.Equals("") || custid.Equals("") || sdate.Equals("") || prodid.Equals("") || quantity.Equals("") || status.Equals("")))
             {
                 try
                 {
-                    string query = $"INSERT INTO Sales([customerid],[salesdate],[productid],[quantity],[status]) VALUES( '{custid}', '{sdate}', '{prodid}', {quantity}, N'{status}')";
-
+                    string query = $"INSERT INTO Sales([salesid],[customerid],[salesdate],[productid],[quantity],[status]) VALUES('{salesid}', '{custid}', '{sdate}',{prodid}, {quantity}, N'{status}')";
                     SqlConnection con = ConnectionClass.Connection();
                     using (SqlCommand cmd = new SqlCommand(query, con))
                     {
@@ -133,7 +133,29 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
         }
 
 
-
+        public static string getNewSalesID()
+        {
+            String var = "";
+            String query = "SELECT TOP 1[SalesID] FROM Sales ORDER BY [numid] DESC";
+            SqlConnection con = ConnectionClass.Connection();
+            using (SqlCommand cmd = new SqlCommand(query, con))
+            {
+                con.Open();
+                using (var reader = cmd.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        var = reader[0].ToString();
+                        var = var.Replace("SLS-00", "");
+                        int i = Convert.ToInt32(var) + 1;
+                        var = "SLS-00" + i;
+                    }
+                    else return "";
+                }
+                con.Close();
+            }
+            return var;
+        }
 
 
 
