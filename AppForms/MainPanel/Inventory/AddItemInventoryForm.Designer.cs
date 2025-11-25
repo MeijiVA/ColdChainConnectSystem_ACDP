@@ -46,6 +46,8 @@
             this.btnImage = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
             this.lbl = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
             this.btnAdd = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cbxSupplier = new ColdChainConnectSystem_ACDP.Materials.CustomComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbxImage)).BeginInit();
             this.SuspendLayout();
             // 
@@ -334,12 +336,46 @@
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10F);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.label2.Location = new System.Drawing.Point(312, 83);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(64, 16);
+            this.label2.TabIndex = 25;
+            this.label2.Text = "Supplier";
+            // 
+            // cbxSupplier
+            // 
+            this.cbxSupplier.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cbxSupplier.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.cbxSupplier.BorderRadius = 0;
+            this.cbxSupplier.BorderSize = 2;
+            this.cbxSupplier.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cbxSupplier.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.cbxSupplier.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.cbxSupplier.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.cbxSupplier.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.cbxSupplier.ListTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.cbxSupplier.Location = new System.Drawing.Point(310, 103);
+            this.cbxSupplier.MinimumSize = new System.Drawing.Size(200, 30);
+            this.cbxSupplier.Name = "cbxSupplier";
+            this.cbxSupplier.Padding = new System.Windows.Forms.Padding(2);
+            this.cbxSupplier.Size = new System.Drawing.Size(235, 37);
+            this.cbxSupplier.TabIndex = 26;
+            this.cbxSupplier.Texts = "";
+            this.cbxSupplier.OnSelectedIndexChanged += new System.EventHandler(this.cbxSupplier_OnSelectedIndexChanged);
+            // 
             // AddItemInventoryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(798, 570);
+            this.Controls.Add(this.cbxSupplier);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.lblSKU);
             this.Controls.Add(this.lblQuantity);
             this.Controls.Add(this.lblKG);
@@ -388,5 +424,7 @@
         private System.Windows.Forms.Label lblKG;
         private System.Windows.Forms.Label lblQuantity;
         private System.Windows.Forms.Label lblSKU;
+        private System.Windows.Forms.Label label2;
+        private Materials.CustomComboBox cbxSupplier;
     }
 }

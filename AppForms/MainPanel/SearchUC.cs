@@ -235,6 +235,9 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
                     case "SKU":
                         SelectedFilterClass.SelectedFilter = "[skucode]";
                         break;
+                    case "SupID":
+                        SelectedFilterClass.SelectedFilter = "[SupplierID]";
+                        break;
                     case "Desc":
                         SelectedFilterClass.SelectedFilter = "[Description]";
                         break;
@@ -357,6 +360,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
             {
                 case "invform":
                     cbxFilter.Items.Add("SKU");
+                    cbxFilter.Items.Add("SupID");
                     cbxFilter.Items.Add("Desc");
                     cbxFilter.Items.Add("Qty");
                     cbxFilter.Items.Add("Expry");

@@ -26,7 +26,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources.Connection
             try
             {//skucode,unitprice,kg,quantity,expiry,image,descript
                 con.Open();//[numid],[skucode],[description],[image],[unitprice],[kg],[quantity],[expiry]
-                String query = "INSERT INTO Inventory ([skucode],[unitprice],[kg],[quantity],[expiry],[image],[description]) VALUES";
+                String query = "INSERT INTO Inventory ([skucode],[unitprice],[kg],[quantity],[expiry],[image],[description],[supplierid]) VALUES";
                 if ((excelRange.Cells[1, 1] as Range).Value == "Inventory")
                 {
                     
@@ -41,10 +41,10 @@ namespace ColdChainConnectSystem_ACDP.ClassResources.Connection
                     DateTime date = Convert.ToDateTime((excelRange.Cells[row, 8] as Range).Value);
                     String expiry = date.ToString("MM/dd/yyyy");
                     // I have to switch these places because SQL only acccepts MM/dd/yyyy while excel autoconverts to MM/dd/yyyy
-
+                    String supid = "" + (excelRange.Cells[row, 5] as Microsoft.Office.Interop.Excel.Range).Value;
                     String image = "Image.png";
                     String desc = "" + (excelRange.Cells[row, 3] as Microsoft.Office.Interop.Excel.Range).Value;
-                    query = query + $"('{skucode}',{unitprice},{kg},{qty},'{expiry}','{image}','{desc}')";
+                    query = query + $"('{skucode}',{unitprice},{kg},{qty},'{expiry}','{image}','{desc}','{supid}')";
                     if (row != excelRange.Rows.Count)
                     {
                         query = query + ",\n";
@@ -108,13 +108,13 @@ namespace ColdChainConnectSystem_ACDP.ClassResources.Connection
                 }
                 else if (SelectedFilterClass.SelectedFilter.Equals(""))
                 {
-                    Filter = $"WHERE numid LIKE '%{(searchQuery)}%' OR skucode LIKE '%{(searchQuery)}%' OR quantity LIKE '%{(searchQuery)}%' OR expiry LIKE '%{(searchQuery)}%' OR descript LIKE '%{(searchQuery)}%' ";
+                    Filter = $"WHERE numid LIKE '%{(searchQuery)}%' OR skucode LIKE '%{(searchQuery)}%' OR quantity LIKE '%{(searchQuery)}%' OR expiry LIKE '%{(searchQuery)}%' OR descript LIKE '%{(searchQuery)}%' OR quantity LIKE '%{(searchQuery)}%' OR expiry LIKE '%{(searchQuery)}%' OR [supplierid] LIKE '%{(searchQuery)}%'";
                 }
                 else
                 {
                     Filter = " WHERE " + SelectedFilterClass.SelectedFilter + " LIKE '%" + searchQuery + "%' ";
                 }
-                query = $"SELECT [numid] AS \"ID\",[skucode] AS \"SKU Code\" , [description] AS \"Description\",[unitprice] AS \"Unit Price\", [unitprice] * [quantity] AS \"Amount\", [kg] AS \"Weight(KG)\", [quantity] AS \"Quantity\", [expiry] AS \"Expiry Date\"FROM Inventory {Filter} ORDER BY numid;";
+                query = $"SELECT [numid] AS \"ID\",[skucode] AS \"SKU Code\" , [description] AS \"Description\",[unitprice] AS \"Unit Price\", [SupplierID] AS \"Supplier\", [kg] AS \"Weight(KG)\", [quantity] AS \"Quantity\", [expiry] AS \"Expiry Date\" FROM Inventory {Filter} ORDER BY numid;";
                 Console.WriteLine(query);
                 ExportDataFromTable(query, ofd);
             }
@@ -165,6 +165,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources.Connection
                                     {
                                         DateTime date = Convert.ToDateTime(reader[7].ToString());
                                         excelWorksheet.Cells[row, col].Value2 = date.ToString("MM/dd/yyyy");
+                                        Console.WriteLine(date.ToString("MM/dd/yyyy"));
                                     } else
                                     {
                                         excelWorksheet.Cells[row, col].Value2 = reader[i].ToString();
