@@ -55,8 +55,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.actionlbl = new System.Windows.Forms.Label();
             this.dgvTable = new System.Windows.Forms.DataGridView();
+            this.btnCheck = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
+            this.SearchBar = new ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory.SearchUC();
             this.rowCbox = new System.Windows.Forms.DataGridViewImageColumn();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.skucode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.desc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.img = new System.Windows.Forms.DataGridViewImageColumn();
@@ -67,8 +69,6 @@
             this.viewCol = new System.Windows.Forms.DataGridViewImageColumn();
             this.editCol = new System.Windows.Forms.DataGridViewImageColumn();
             this.deleteCol = new System.Windows.Forms.DataGridViewImageColumn();
-            this.btnCheck = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
-            this.SearchBar = new ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory.SearchUC();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTable)).BeginInit();
@@ -244,7 +244,7 @@
             this.dgvTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.rowCbox,
-            this.id,
+            this.numid,
             this.skucode,
             this.desc,
             this.img,
@@ -298,6 +298,36 @@
             this.dgvTable.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvTable_CellFormatting);
             this.dgvTable.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dgvTable_RowPostPaint);
             // 
+            // btnCheck
+            // 
+            this.btnCheck.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.btnCheck.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.btnCheck.BackgroundImage = global::ColdChainConnectSystem_ACDP.Properties.Resources.Arrow_left_circle;
+            this.btnCheck.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCheck.BorderColor = System.Drawing.Color.Empty;
+            this.btnCheck.BorderRadius = 0;
+            this.btnCheck.BorderSize = 0;
+            this.btnCheck.FlatAppearance.BorderSize = 0;
+            this.btnCheck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCheck.ForeColor = System.Drawing.Color.Transparent;
+            this.btnCheck.Location = new System.Drawing.Point(286, 32);
+            this.btnCheck.Name = "btnCheck";
+            this.btnCheck.Size = new System.Drawing.Size(25, 25);
+            this.btnCheck.TabIndex = 3;
+            this.btnCheck.TextColor = System.Drawing.Color.Transparent;
+            this.btnCheck.UseVisualStyleBackColor = false;
+            this.btnCheck.Click += new System.EventHandler(this.btnCheck_Click);
+            // 
+            // SearchBar
+            // 
+            this.SearchBar.BackColor = System.Drawing.Color.Transparent;
+            this.SearchBar.Location = new System.Drawing.Point(22, 12);
+            this.SearchBar.Name = "SearchBar";
+            this.SearchBar.searchTXT = "Search Term";
+            this.SearchBar.Size = new System.Drawing.Size(755, 65);
+            this.SearchBar.TabIndex = 0;
+            this.SearchBar.Load += new System.EventHandler(this.searchUC1_Load);
+            // 
             // rowCbox
             // 
             this.rowCbox.HeaderText = "";
@@ -306,16 +336,16 @@
             this.rowCbox.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.rowCbox.Width = 20;
             // 
-            // id
+            // numid
             // 
-            this.id.HeaderText = "";
-            this.id.MinimumWidth = 2;
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            this.id.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.id.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.id.Visible = false;
-            this.id.Width = 2;
+            this.numid.HeaderText = "";
+            this.numid.MinimumWidth = 2;
+            this.numid.Name = "numid";
+            this.numid.ReadOnly = true;
+            this.numid.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.numid.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.numid.Visible = false;
+            this.numid.Width = 2;
             // 
             // skucode
             // 
@@ -439,36 +469,6 @@
             this.deleteCol.ToolTipText = "Deletes the row.";
             this.deleteCol.Width = 25;
             // 
-            // btnCheck
-            // 
-            this.btnCheck.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.btnCheck.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.btnCheck.BackgroundImage = global::ColdChainConnectSystem_ACDP.Properties.Resources.Arrow_left_circle;
-            this.btnCheck.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnCheck.BorderColor = System.Drawing.Color.Empty;
-            this.btnCheck.BorderRadius = 0;
-            this.btnCheck.BorderSize = 0;
-            this.btnCheck.FlatAppearance.BorderSize = 0;
-            this.btnCheck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCheck.ForeColor = System.Drawing.Color.Transparent;
-            this.btnCheck.Location = new System.Drawing.Point(286, 32);
-            this.btnCheck.Name = "btnCheck";
-            this.btnCheck.Size = new System.Drawing.Size(25, 25);
-            this.btnCheck.TabIndex = 3;
-            this.btnCheck.TextColor = System.Drawing.Color.Transparent;
-            this.btnCheck.UseVisualStyleBackColor = false;
-            this.btnCheck.Click += new System.EventHandler(this.btnCheck_Click);
-            // 
-            // SearchBar
-            // 
-            this.SearchBar.BackColor = System.Drawing.Color.Transparent;
-            this.SearchBar.Location = new System.Drawing.Point(22, 12);
-            this.SearchBar.Name = "SearchBar";
-            this.SearchBar.searchTXT = "Search Term";
-            this.SearchBar.Size = new System.Drawing.Size(755, 65);
-            this.SearchBar.TabIndex = 0;
-            this.SearchBar.Load += new System.EventHandler(this.searchUC1_Load);
-            // 
             // InventoryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -508,8 +508,9 @@
         private Materials.CustomButton btnCheck;
         private System.Windows.Forms.Label actionlbl;
         public System.Windows.Forms.DataGridView dgvTable;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridViewImageColumn rowCbox;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numid;
         private System.Windows.Forms.DataGridViewTextBoxColumn skucode;
         private System.Windows.Forms.DataGridViewTextBoxColumn desc;
         private System.Windows.Forms.DataGridViewImageColumn img;
@@ -520,6 +521,5 @@
         private System.Windows.Forms.DataGridViewImageColumn viewCol;
         private System.Windows.Forms.DataGridViewImageColumn editCol;
         private System.Windows.Forms.DataGridViewImageColumn deleteCol;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

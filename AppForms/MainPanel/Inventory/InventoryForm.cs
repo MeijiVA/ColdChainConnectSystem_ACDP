@@ -1,5 +1,6 @@
 ﻿using ColdChainConnectSystem_ACDP.ClassResources;
 using ColdChainConnectSystem_ACDP.ClassResources.Connection;
+using ColdChainConnectSystem_ACDP.ClassResources.Connection.TableView;
 using ColdChainConnectSystem_ACDP.ClassResources.Display;
 using ColdChainConnectSystem_ACDP.ClassResources.Display.Tables;
 using ColdChainConnectSystem_ACDP.Popup;
@@ -175,9 +176,12 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
         {
             if (dgvTable.Columns[e.ColumnIndex].Name == "deleteCol")
             {
-                if (new CustomMessageBox("Delete Row", "Are you sure you want to delete this item from the Database?", MessageBoxButtons.OKCancel).ShowDialog() == DialogResult.Yes)
+                if (new CustomMessageBox("Delete Row", "Are you sure you want to delete this item from the Database?", MessageBoxButtons.OKCancel).ShowDialog() == DialogResult.OK)
                 {
-                    dgvTable.Rows.RemoveAt(e.RowIndex);
+                    String cellValue = Convert.ToString(dgvTable.Rows[e.RowIndex].Cells["numid"].FormattedValue);
+                    DeleteItem.Delete(cellValue, "Inventory");
+                    UpdateTable();
+
                 }
             }
             if (dgvTable.Columns[e.ColumnIndex].Name == "editCol")
