@@ -39,7 +39,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.invDisplaydgv = new System.Windows.Forms.DataGridView();
-            this.actionlbl = new System.Windows.Forms.Label();
             this.rowCbox = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.skucode = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,6 +51,7 @@
             this.viewCol = new System.Windows.Forms.DataGridViewImageColumn();
             this.editCol = new System.Windows.Forms.DataGridViewImageColumn();
             this.deleteCol = new System.Windows.Forms.DataGridViewImageColumn();
+            this.actionlbl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.invDisplaydgv)).BeginInit();
             this.SuspendLayout();
             // 
@@ -107,7 +107,6 @@
             dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.invDisplaydgv.DefaultCellStyle = dataGridViewCellStyle7;
-            this.invDisplaydgv.Dock = System.Windows.Forms.DockStyle.Left;
             this.invDisplaydgv.EnableHeadersVisualStyles = false;
             this.invDisplaydgv.GridColor = System.Drawing.Color.White;
             this.invDisplaydgv.Location = new System.Drawing.Point(0, 0);
@@ -139,18 +138,6 @@
             this.invDisplaydgv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.invDisplaydgv_CellContentClick);
             this.invDisplaydgv.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.invDisplaydgv_RowPostPaint);
             this.invDisplaydgv.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.invDisplaydgv_RowsAdded);
-            // 
-            // actionlbl
-            // 
-            this.actionlbl.AutoSize = true;
-            this.actionlbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.actionlbl.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.actionlbl.ForeColor = System.Drawing.Color.White;
-            this.actionlbl.Location = new System.Drawing.Point(695, 11);
-            this.actionlbl.Name = "actionlbl";
-            this.actionlbl.Size = new System.Drawing.Size(41, 12);
-            this.actionlbl.TabIndex = 1;
-            this.actionlbl.Text = "Action";
             // 
             // rowCbox
             // 
@@ -261,6 +248,18 @@
             this.deleteCol.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.deleteCol.ToolTipText = "Deletes the row.";
             this.deleteCol.Width = 25;
+            // 
+            // actionlbl
+            // 
+            this.actionlbl.AutoSize = true;
+            this.actionlbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.actionlbl.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.actionlbl.ForeColor = System.Drawing.Color.White;
+            this.actionlbl.Location = new System.Drawing.Point(695, 11);
+            this.actionlbl.Name = "actionlbl";
+            this.actionlbl.Size = new System.Drawing.Size(41, 12);
+            this.actionlbl.TabIndex = 1;
+            this.actionlbl.Text = "Action";
             // 
             // DisplayTableUC
             // 

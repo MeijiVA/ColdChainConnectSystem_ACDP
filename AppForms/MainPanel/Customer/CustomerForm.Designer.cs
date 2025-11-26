@@ -319,7 +319,8 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer
             // 
             this.rowCbox.HeaderText = "";
             this.rowCbox.Name = "rowCbox";
-            this.rowCbox.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.rowCbox.ReadOnly = true;
+            this.rowCbox.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.rowCbox.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.rowCbox.Width = 20;
             // 
@@ -330,6 +331,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer
             this.customerid.HeaderText = "Cust. ID";
             this.customerid.MinimumWidth = 2;
             this.customerid.Name = "customerid";
+            this.customerid.ReadOnly = true;
             this.customerid.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.customerid.Width = 70;
             // 
@@ -339,6 +341,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer
             this.customername.DefaultCellStyle = dataGridViewCellStyle4;
             this.customername.HeaderText = "Cust. Name";
             this.customername.Name = "customername";
+            this.customername.ReadOnly = true;
             this.customername.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.customername.Width = 90;
             // 
@@ -348,6 +351,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer
             this.phonenumber.DefaultCellStyle = dataGridViewCellStyle5;
             this.phonenumber.HeaderText = "Phone #";
             this.phonenumber.Name = "phonenumber";
+            this.phonenumber.ReadOnly = true;
             this.phonenumber.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.phonenumber.Width = 70;
             // 
@@ -358,6 +362,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer
             this.address.DefaultCellStyle = dataGridViewCellStyle6;
             this.address.HeaderText = "Address";
             this.address.Name = "address";
+            this.address.ReadOnly = true;
             this.address.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // paymentterm
@@ -366,6 +371,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer
             this.paymentterm.DefaultCellStyle = dataGridViewCellStyle7;
             this.paymentterm.HeaderText = "Pymt. Term";
             this.paymentterm.Name = "paymentterm";
+            this.paymentterm.ReadOnly = true;
             this.paymentterm.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // registrationdate
@@ -374,6 +380,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer
             this.registrationdate.DefaultCellStyle = dataGridViewCellStyle8;
             this.registrationdate.HeaderText = "Reg. Date";
             this.registrationdate.Name = "registrationdate";
+            this.registrationdate.ReadOnly = true;
             this.registrationdate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.registrationdate.Width = 70;
             // 
@@ -383,6 +390,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer
             this.status.DefaultCellStyle = dataGridViewCellStyle9;
             this.status.HeaderText = "Status";
             this.status.Name = "status";
+            this.status.ReadOnly = true;
             this.status.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.status.Width = 40;
             // 
@@ -396,6 +404,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer
             this.viewCol.Image = global::ColdChainConnectSystem_ACDP.Properties.Resources.viewBtn;
             this.viewCol.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.viewCol.Name = "viewCol";
+            this.viewCol.ReadOnly = true;
             this.viewCol.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.viewCol.ToolTipText = "Views further information about the row.";
             this.viewCol.Width = 25;
@@ -410,6 +419,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer
             this.editCol.Image = global::ColdChainConnectSystem_ACDP.Properties.Resources.editBtn;
             this.editCol.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.editCol.Name = "editCol";
+            this.editCol.ReadOnly = true;
             this.editCol.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.editCol.ToolTipText = "Edits the information of the selected row.";
             this.editCol.Width = 25;
@@ -424,6 +434,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer
             this.deleteCol.Image = global::ColdChainConnectSystem_ACDP.Properties.Resources.delBtn;
             this.deleteCol.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.deleteCol.Name = "deleteCol";
+            this.deleteCol.ReadOnly = true;
             this.deleteCol.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.deleteCol.ToolTipText = "Deletes the row.";
             this.deleteCol.Width = 25;

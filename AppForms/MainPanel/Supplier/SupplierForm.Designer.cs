@@ -43,14 +43,14 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Supplier
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblOf = new System.Windows.Forms.Label();
             this.lblMaxPage = new System.Windows.Forms.Label();
+            this.lblPageNum = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
             this.lblPage = new System.Windows.Forms.Label();
+            this.btnNext = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
+            this.btnPrev = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
             this.label1 = new System.Windows.Forms.Label();
             this.actionlbl = new System.Windows.Forms.Label();
             this.dgvTable = new System.Windows.Forms.DataGridView();
             this.btnCheck = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
-            this.lblPageNum = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
-            this.btnNext = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
-            this.btnPrev = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
             this.SearchBar = new ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory.SearchUC();
             this.rowCbox = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.numid = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -103,6 +103,24 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Supplier
             this.lblMaxPage.TabIndex = 5;
             this.lblMaxPage.Text = "25";
             // 
+            // lblPageNum
+            // 
+            this.lblPageNum.BackColor = System.Drawing.Color.White;
+            this.lblPageNum.BackgroundColor = System.Drawing.Color.White;
+            this.lblPageNum.BorderColor = System.Drawing.Color.DimGray;
+            this.lblPageNum.BorderRadius = 10;
+            this.lblPageNum.BorderSize = 1;
+            this.lblPageNum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblPageNum.ForeColor = System.Drawing.Color.Gray;
+            this.lblPageNum.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblPageNum.Location = new System.Drawing.Point(661, 2);
+            this.lblPageNum.Name = "lblPageNum";
+            this.lblPageNum.Size = new System.Drawing.Size(48, 30);
+            this.lblPageNum.TabIndex = 4;
+            this.lblPageNum.Text = " 1";
+            this.lblPageNum.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblPageNum.TextColor = System.Drawing.Color.Gray;
+            // 
             // lblPage
             // 
             this.lblPage.AutoSize = true;
@@ -113,6 +131,46 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Supplier
             this.lblPage.Size = new System.Drawing.Size(34, 14);
             this.lblPage.TabIndex = 3;
             this.lblPage.Text = "Page:";
+            // 
+            // btnNext
+            // 
+            this.btnNext.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.btnNext.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.btnNext.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(255)))));
+            this.btnNext.BorderRadius = 10;
+            this.btnNext.BorderSize = 0;
+            this.btnNext.FlatAppearance.BorderSize = 0;
+            this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNext.ForeColor = System.Drawing.Color.White;
+            this.btnNext.Location = new System.Drawing.Point(571, 2);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(46, 30);
+            this.btnNext.TabIndex = 2;
+            this.btnNext.Text = "Next";
+            this.btnNext.TextColor = System.Drawing.Color.White;
+            this.btnNext.UseVisualStyleBackColor = false;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
+            // 
+            // btnPrev
+            // 
+            this.btnPrev.BackColor = System.Drawing.Color.White;
+            this.btnPrev.BackgroundColor = System.Drawing.Color.White;
+            this.btnPrev.BorderColor = System.Drawing.Color.DimGray;
+            this.btnPrev.BorderRadius = 10;
+            this.btnPrev.BorderSize = 1;
+            this.btnPrev.FlatAppearance.BorderSize = 0;
+            this.btnPrev.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrev.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrev.ForeColor = System.Drawing.Color.Gray;
+            this.btnPrev.Location = new System.Drawing.Point(519, 1);
+            this.btnPrev.Name = "btnPrev";
+            this.btnPrev.Size = new System.Drawing.Size(46, 30);
+            this.btnPrev.TabIndex = 1;
+            this.btnPrev.Text = "Prev";
+            this.btnPrev.TextColor = System.Drawing.Color.Gray;
+            this.btnPrev.UseVisualStyleBackColor = false;
+            this.btnPrev.Click += new System.EventHandler(this.btnPrev_Click);
             // 
             // label1
             // 
@@ -235,64 +293,6 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Supplier
             this.btnCheck.UseVisualStyleBackColor = false;
             this.btnCheck.Click += new System.EventHandler(this.btnCheck_Click);
             // 
-            // lblPageNum
-            // 
-            this.lblPageNum.BackColor = System.Drawing.Color.White;
-            this.lblPageNum.BackgroundColor = System.Drawing.Color.White;
-            this.lblPageNum.BorderColor = System.Drawing.Color.DimGray;
-            this.lblPageNum.BorderRadius = 10;
-            this.lblPageNum.BorderSize = 1;
-            this.lblPageNum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblPageNum.ForeColor = System.Drawing.Color.Gray;
-            this.lblPageNum.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblPageNum.Location = new System.Drawing.Point(661, 2);
-            this.lblPageNum.Name = "lblPageNum";
-            this.lblPageNum.Size = new System.Drawing.Size(48, 30);
-            this.lblPageNum.TabIndex = 4;
-            this.lblPageNum.Text = " 1";
-            this.lblPageNum.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblPageNum.TextColor = System.Drawing.Color.Gray;
-            // 
-            // btnNext
-            // 
-            this.btnNext.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.btnNext.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.btnNext.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(255)))));
-            this.btnNext.BorderRadius = 10;
-            this.btnNext.BorderSize = 0;
-            this.btnNext.FlatAppearance.BorderSize = 0;
-            this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNext.ForeColor = System.Drawing.Color.White;
-            this.btnNext.Location = new System.Drawing.Point(571, 2);
-            this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(46, 30);
-            this.btnNext.TabIndex = 2;
-            this.btnNext.Text = "Next";
-            this.btnNext.TextColor = System.Drawing.Color.White;
-            this.btnNext.UseVisualStyleBackColor = false;
-            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
-            // 
-            // btnPrev
-            // 
-            this.btnPrev.BackColor = System.Drawing.Color.White;
-            this.btnPrev.BackgroundColor = System.Drawing.Color.White;
-            this.btnPrev.BorderColor = System.Drawing.Color.DimGray;
-            this.btnPrev.BorderRadius = 10;
-            this.btnPrev.BorderSize = 1;
-            this.btnPrev.FlatAppearance.BorderSize = 0;
-            this.btnPrev.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPrev.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrev.ForeColor = System.Drawing.Color.Gray;
-            this.btnPrev.Location = new System.Drawing.Point(519, 1);
-            this.btnPrev.Name = "btnPrev";
-            this.btnPrev.Size = new System.Drawing.Size(46, 30);
-            this.btnPrev.TabIndex = 1;
-            this.btnPrev.Text = "Prev";
-            this.btnPrev.TextColor = System.Drawing.Color.Gray;
-            this.btnPrev.UseVisualStyleBackColor = false;
-            this.btnPrev.Click += new System.EventHandler(this.btnPrev_Click);
-            // 
             // SearchBar
             // 
             this.SearchBar.BackColor = System.Drawing.Color.Transparent;
@@ -306,13 +306,15 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Supplier
             // 
             this.rowCbox.HeaderText = "";
             this.rowCbox.Name = "rowCbox";
-            this.rowCbox.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.rowCbox.ReadOnly = true;
+            this.rowCbox.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.rowCbox.Width = 20;
             // 
             // numid
             // 
             this.numid.HeaderText = "";
             this.numid.Name = "numid";
+            this.numid.ReadOnly = true;
             this.numid.Visible = false;
             // 
             // supplierid
@@ -320,6 +322,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Supplier
             this.supplierid.HeaderText = "Supplier ID";
             this.supplierid.MinimumWidth = 2;
             this.supplierid.Name = "supplierid";
+            this.supplierid.ReadOnly = true;
             this.supplierid.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.supplierid.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.supplierid.Width = 80;
@@ -328,6 +331,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Supplier
             // 
             this.companyname.HeaderText = "Company Name";
             this.companyname.Name = "companyname";
+            this.companyname.ReadOnly = true;
             this.companyname.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.companyname.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.companyname.Width = 120;
@@ -338,6 +342,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Supplier
             this.contactperson.DefaultCellStyle = dataGridViewCellStyle3;
             this.contactperson.HeaderText = "Contact Person";
             this.contactperson.Name = "contactperson";
+            this.contactperson.ReadOnly = true;
             this.contactperson.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.contactperson.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.contactperson.Width = 120;
@@ -346,6 +351,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Supplier
             // 
             this.contactnum.HeaderText = "Contact Number";
             this.contactnum.Name = "contactnum";
+            this.contactnum.ReadOnly = true;
             this.contactnum.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.contactnum.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
@@ -353,6 +359,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Supplier
             // 
             this.address.HeaderText = "Address";
             this.address.Name = "address";
+            this.address.ReadOnly = true;
             this.address.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.address.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.address.Width = 150;
@@ -361,6 +368,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Supplier
             // 
             this.paymentterm.HeaderText = "Payment Term";
             this.paymentterm.Name = "paymentterm";
+            this.paymentterm.ReadOnly = true;
             this.paymentterm.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.paymentterm.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.paymentterm.Width = 90;
@@ -375,6 +383,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Supplier
             this.viewCol.Image = global::ColdChainConnectSystem_ACDP.Properties.Resources.viewBtn;
             this.viewCol.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.viewCol.Name = "viewCol";
+            this.viewCol.ReadOnly = true;
             this.viewCol.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.viewCol.ToolTipText = "Views further information about the row.";
             this.viewCol.Width = 25;
@@ -389,7 +398,6 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Supplier
             this.editCol.Image = global::ColdChainConnectSystem_ACDP.Properties.Resources.editBtn;
             this.editCol.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.editCol.Name = "editCol";
-            this.editCol.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.editCol.ToolTipText = "Edits the information of the selected row.";
             this.editCol.Width = 25;
             // 
@@ -403,6 +411,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Supplier
             this.deleteCol.Image = global::ColdChainConnectSystem_ACDP.Properties.Resources.delBtn;
             this.deleteCol.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.deleteCol.Name = "deleteCol";
+            this.deleteCol.ReadOnly = true;
             this.deleteCol.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.deleteCol.ToolTipText = "Deletes the row.";
             this.deleteCol.Width = 25;

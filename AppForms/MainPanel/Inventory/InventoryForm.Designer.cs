@@ -54,6 +54,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.actionlbl = new System.Windows.Forms.Label();
             this.dgvTable = new System.Windows.Forms.DataGridView();
+            this.btnCheck = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
+            this.SearchBar = new ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory.SearchUC();
             this.rowCbox = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.skucode = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -66,8 +68,6 @@
             this.viewCol = new System.Windows.Forms.DataGridViewImageColumn();
             this.editCol = new System.Windows.Forms.DataGridViewImageColumn();
             this.deleteCol = new System.Windows.Forms.DataGridViewImageColumn();
-            this.btnCheck = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
-            this.SearchBar = new ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory.SearchUC();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTable)).BeginInit();
             this.SuspendLayout();
@@ -285,135 +285,6 @@
             this.dgvTable.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvTable_CellFormatting);
             this.dgvTable.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dgvTable_RowPostPaint);
             // 
-            // rowCbox
-            // 
-            this.rowCbox.HeaderText = "";
-            this.rowCbox.Name = "rowCbox";
-            this.rowCbox.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.rowCbox.Width = 20;
-            // 
-            // id
-            // 
-            this.id.HeaderText = "";
-            this.id.MinimumWidth = 2;
-            this.id.Name = "id";
-            this.id.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.id.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.id.Visible = false;
-            this.id.Width = 2;
-            // 
-            // skucode
-            // 
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.skucode.DefaultCellStyle = dataGridViewCellStyle3;
-            this.skucode.HeaderText = "SKU Code";
-            this.skucode.Name = "skucode";
-            this.skucode.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.skucode.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.skucode.Width = 90;
-            // 
-            // desc
-            // 
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.desc.DefaultCellStyle = dataGridViewCellStyle4;
-            this.desc.HeaderText = "Description";
-            this.desc.Name = "desc";
-            this.desc.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.desc.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.desc.Width = 170;
-            // 
-            // img
-            // 
-            this.img.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle5.NullValue")));
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.img.DefaultCellStyle = dataGridViewCellStyle5;
-            this.img.HeaderText = "Image";
-            this.img.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.img.Name = "img";
-            this.img.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // unitp
-            // 
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.unitp.DefaultCellStyle = dataGridViewCellStyle6;
-            this.unitp.HeaderText = "Unit Price";
-            this.unitp.Name = "unitp";
-            this.unitp.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.unitp.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // supid
-            // 
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.supid.DefaultCellStyle = dataGridViewCellStyle7;
-            this.supid.HeaderText = "Supplier ID";
-            this.supid.Name = "supid";
-            this.supid.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.supid.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // kg
-            // 
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.kg.DefaultCellStyle = dataGridViewCellStyle8;
-            this.kg.HeaderText = "KG";
-            this.kg.Name = "kg";
-            this.kg.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.kg.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.kg.Width = 40;
-            // 
-            // quant
-            // 
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.quant.DefaultCellStyle = dataGridViewCellStyle9;
-            this.quant.HeaderText = "Quantity";
-            this.quant.Name = "quant";
-            this.quant.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.quant.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.quant.Width = 70;
-            // 
-            // viewCol
-            // 
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle10.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle10.NullValue")));
-            dataGridViewCellStyle10.Padding = new System.Windows.Forms.Padding(0, 10, 0, 10);
-            this.viewCol.DefaultCellStyle = dataGridViewCellStyle10;
-            this.viewCol.HeaderText = "";
-            this.viewCol.Image = global::ColdChainConnectSystem_ACDP.Properties.Resources.viewBtn;
-            this.viewCol.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.viewCol.Name = "viewCol";
-            this.viewCol.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.viewCol.ToolTipText = "Views further information about the row.";
-            this.viewCol.Width = 25;
-            // 
-            // editCol
-            // 
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle11.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle11.NullValue")));
-            dataGridViewCellStyle11.Padding = new System.Windows.Forms.Padding(0, 10, 0, 10);
-            this.editCol.DefaultCellStyle = dataGridViewCellStyle11;
-            this.editCol.HeaderText = "";
-            this.editCol.Image = global::ColdChainConnectSystem_ACDP.Properties.Resources.editBtn;
-            this.editCol.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.editCol.Name = "editCol";
-            this.editCol.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.editCol.ToolTipText = "Edits the information of the selected row.";
-            this.editCol.Width = 25;
-            // 
-            // deleteCol
-            // 
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle12.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle12.NullValue")));
-            dataGridViewCellStyle12.Padding = new System.Windows.Forms.Padding(0, 10, 0, 10);
-            this.deleteCol.DefaultCellStyle = dataGridViewCellStyle12;
-            this.deleteCol.HeaderText = "";
-            this.deleteCol.Image = global::ColdChainConnectSystem_ACDP.Properties.Resources.delBtn;
-            this.deleteCol.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.deleteCol.Name = "deleteCol";
-            this.deleteCol.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.deleteCol.ToolTipText = "Deletes the row.";
-            this.deleteCol.Width = 25;
-            // 
             // btnCheck
             // 
             this.btnCheck.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
@@ -443,6 +314,147 @@
             this.SearchBar.Size = new System.Drawing.Size(755, 65);
             this.SearchBar.TabIndex = 0;
             this.SearchBar.Load += new System.EventHandler(this.searchUC1_Load);
+            // 
+            // rowCbox
+            // 
+            this.rowCbox.HeaderText = "";
+            this.rowCbox.Name = "rowCbox";
+            this.rowCbox.ReadOnly = true;
+            this.rowCbox.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.rowCbox.Width = 20;
+            // 
+            // id
+            // 
+            this.id.HeaderText = "";
+            this.id.MinimumWidth = 2;
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.id.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.id.Visible = false;
+            this.id.Width = 2;
+            // 
+            // skucode
+            // 
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.skucode.DefaultCellStyle = dataGridViewCellStyle3;
+            this.skucode.HeaderText = "SKU Code";
+            this.skucode.Name = "skucode";
+            this.skucode.ReadOnly = true;
+            this.skucode.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.skucode.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.skucode.Width = 90;
+            // 
+            // desc
+            // 
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.desc.DefaultCellStyle = dataGridViewCellStyle4;
+            this.desc.HeaderText = "Description";
+            this.desc.Name = "desc";
+            this.desc.ReadOnly = true;
+            this.desc.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.desc.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.desc.Width = 170;
+            // 
+            // img
+            // 
+            this.img.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle5.NullValue")));
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.img.DefaultCellStyle = dataGridViewCellStyle5;
+            this.img.HeaderText = "Image";
+            this.img.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.img.Name = "img";
+            this.img.ReadOnly = true;
+            this.img.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // unitp
+            // 
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.unitp.DefaultCellStyle = dataGridViewCellStyle6;
+            this.unitp.HeaderText = "Unit Price";
+            this.unitp.Name = "unitp";
+            this.unitp.ReadOnly = true;
+            this.unitp.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.unitp.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // supid
+            // 
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.supid.DefaultCellStyle = dataGridViewCellStyle7;
+            this.supid.HeaderText = "Supplier ID";
+            this.supid.Name = "supid";
+            this.supid.ReadOnly = true;
+            this.supid.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.supid.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // kg
+            // 
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.kg.DefaultCellStyle = dataGridViewCellStyle8;
+            this.kg.HeaderText = "KG";
+            this.kg.Name = "kg";
+            this.kg.ReadOnly = true;
+            this.kg.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.kg.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.kg.Width = 40;
+            // 
+            // quant
+            // 
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.quant.DefaultCellStyle = dataGridViewCellStyle9;
+            this.quant.HeaderText = "Quantity";
+            this.quant.Name = "quant";
+            this.quant.ReadOnly = true;
+            this.quant.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.quant.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.quant.Width = 70;
+            // 
+            // viewCol
+            // 
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle10.NullValue")));
+            dataGridViewCellStyle10.Padding = new System.Windows.Forms.Padding(0, 10, 0, 10);
+            this.viewCol.DefaultCellStyle = dataGridViewCellStyle10;
+            this.viewCol.HeaderText = "";
+            this.viewCol.Image = global::ColdChainConnectSystem_ACDP.Properties.Resources.viewBtn;
+            this.viewCol.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.viewCol.Name = "viewCol";
+            this.viewCol.ReadOnly = true;
+            this.viewCol.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.viewCol.ToolTipText = "Views further information about the row.";
+            this.viewCol.Width = 25;
+            // 
+            // editCol
+            // 
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle11.NullValue")));
+            dataGridViewCellStyle11.Padding = new System.Windows.Forms.Padding(0, 10, 0, 10);
+            this.editCol.DefaultCellStyle = dataGridViewCellStyle11;
+            this.editCol.HeaderText = "";
+            this.editCol.Image = global::ColdChainConnectSystem_ACDP.Properties.Resources.editBtn;
+            this.editCol.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.editCol.Name = "editCol";
+            this.editCol.ReadOnly = true;
+            this.editCol.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.editCol.ToolTipText = "Edits the information of the selected row.";
+            this.editCol.Width = 25;
+            // 
+            // deleteCol
+            // 
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle12.NullValue")));
+            dataGridViewCellStyle12.Padding = new System.Windows.Forms.Padding(0, 10, 0, 10);
+            this.deleteCol.DefaultCellStyle = dataGridViewCellStyle12;
+            this.deleteCol.HeaderText = "";
+            this.deleteCol.Image = global::ColdChainConnectSystem_ACDP.Properties.Resources.delBtn;
+            this.deleteCol.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.deleteCol.Name = "deleteCol";
+            this.deleteCol.ReadOnly = true;
+            this.deleteCol.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.deleteCol.ToolTipText = "Deletes the row.";
+            this.deleteCol.Width = 25;
             // 
             // InventoryForm
             // 

@@ -638,6 +638,12 @@
   <ItemGroup>
     <None Include="Resources\FemaleIcon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Paid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Unpaid.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\Microsoft.Data.SqlClient.SNI.6.0.2\build\net462\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('packages\Microsoft.Data.SqlClient.SNI.6.0.2\build\net462\Microsoft.Data.SqlClient.SNI.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
