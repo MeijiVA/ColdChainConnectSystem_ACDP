@@ -29,7 +29,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                 totalPages = (int)Math.Ceiling((double)totalRows / PageSize);
                 lblPage.Text = totalPages.ToString();
                 Console.WriteLine(query);
-                query = $"SELECT a.[salesid],a.[customerid],a.[salesdate],a.[productid],a.[quantity],i.[unitprice],(a.[quantity] * i.[unitprice])AS TOTAL,a.[status] FROM Sales as a JOIN Inventory AS i ON   a.[productid] = i.[numid] ORDER BY a.[numid] OFFSET {(currentPageIndex - 1) * PageSize} ROWS FETCH NEXT {PageSize} ROWS ONLY";
+                query = $"SELECT a.[numid], a.[salesid],a.[customerid],a.[salesdate],a.[productid],a.[quantity],i.[unitprice],(a.[quantity] * i.[unitprice])AS TOTAL,a.[status] FROM Sales as a JOIN Inventory AS i ON   a.[productid] = i.[numid] ORDER BY a.[numid] OFFSET {(currentPageIndex - 1) * PageSize} ROWS FETCH NEXT {PageSize} ROWS ONLY";
                 Console.WriteLine(query);
                 using (SqlCommand data = new SqlCommand(query, con))
                 {
@@ -38,7 +38,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                         while (reader.Read())
                         {
                             //[salesid],[customerid],[salesdate],[productid],[quantity],[unitprice],[status]
-                            dgv.Rows.Add(new object[] { 0, reader[0].ToString(), reader[1].ToString(), Convert.ToDateTime(reader[2]).ToString("yyyy-MM-dd"), reader[3].ToString(), reader[4].ToString(), reader[5].ToString(), reader[6].ToString(), reader[7].ToString() });
+                            dgv.Rows.Add(new object[] { 0, reader[0].ToString(), reader[1].ToString(), reader[2].ToString(), Convert.ToDateTime(reader[3]).ToString("yyyy-MM-dd"), reader[4].ToString(), reader[5].ToString(), reader[6].ToString(), reader[7].ToString(), reader[8].ToString() });
                         }//while reader loop
                     }//reader
                     con.Close();
@@ -73,7 +73,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
 
                 Console.WriteLine(totalRows + " TR " + totalPages + "TP");
                 Console.WriteLine(query);
-                query = $"SELECT a.[salesid],a.[customerid],a.[salesdate],a.[productid],a.[quantity],i.[unitprice],(a.[quantity] * i.[unitprice]) AS TOTAL,a.[status] FROM Sales as a JOIN Inventory AS i ON   a.[productid] = i.[numid] {searchQuery} ORDER BY a.[numid] OFFSET {(currentPageIndex - 1) * PageSize} ROWS FETCH NEXT {PageSize} ROWS ONLY";
+                query = $"SELECT a.[numid], a.[salesid],a.[customerid],a.[salesdate],a.[productid],a.[quantity],i.[unitprice],(a.[quantity] * i.[unitprice]) AS TOTAL,a.[status] FROM Sales as a JOIN Inventory AS i ON   a.[productid] = i.[numid] {searchQuery} ORDER BY a.[numid] OFFSET {(currentPageIndex - 1) * PageSize} ROWS FETCH NEXT {PageSize} ROWS ONLY";
                 Console.WriteLine(query);
                 using (SqlCommand data = new SqlCommand(query, con))
                 {
@@ -82,7 +82,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                         while (reader.Read())
                         {
                             //[salesid],[customerid],[salesdate],[productid],[quantity],[unitprice],[status]
-                            dgv.Rows.Add(new object[] { 0, reader[0].ToString(), reader[1].ToString(), reader[2].ToString(), reader[3].ToString(), reader[4].ToString(), reader[5].ToString(), reader[6].ToString() });
+                            dgv.Rows.Add(new object[] { 0, reader[0].ToString(), reader[1].ToString(), reader[2].ToString(), Convert.ToDateTime(reader[3]).ToString("yyyy-MM-dd"), reader[4].ToString(), reader[5].ToString(), reader[6].ToString(), reader[7].ToString(), reader[8].ToString() });
                         }//while reader loop
                     }//reader
                     con.Close();

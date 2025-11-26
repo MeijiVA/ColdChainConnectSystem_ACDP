@@ -6,14 +6,38 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Globalization;
 using System.IdentityModel.Tokens;
 using System.IO;
+using System.Security.Policy;
 using System.Windows.Forms;
 
 namespace ColdChainConnectSystem_ACDP.ClassResources
 {
     internal class InventoryClass
     {
+        public static Image CheckDate(DateTime expiryDate)
+        {
+            Image i;
+            var bestByDate = DateTime.Today.AddMonths(2);
+            //3 to 4 months best to sell frozen goods
+            if (expiryDate >= bestByDate)
+            {
+                i = Properties.Resources.Expiry_Green_;
+                return i;//color green = good;
+            }
+            else if (expiryDate <= bestByDate && expiryDate >= DateTime.Today)
+            {
+                i = Properties.Resources.Expiry_Yellow_;
+                return i;//color yellow = still ok;
+            }
+            else 
+            {
+                i = Properties.Resources.Expiry_Red_;
+                return i;//color red = bad;
+            }
+
+        }
         public static Image getImage(string imgStr)
         {
             Image i;
@@ -52,7 +76,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
 
                             //  0        0    1    2    3     4         5      6      7       8              9          10
                             //checkbox,  id, sku, desc,img,unitprice, suppid, kg, quantity, buttonedit, button view, button delete
-                            dgv.Rows.Add(new object[] { 0, reader[0].ToString(), reader[1].ToString(), reader[2].ToString(), getImage(reader[3].ToString()), reader[4].ToString(), reader[5].ToString(), reader[6].ToString(), reader[7].ToString() });
+                            dgv.Rows.Add(new object[] { CheckDate(Convert.ToDateTime(reader[8])), reader[0].ToString(), reader[1].ToString(), reader[2].ToString(), getImage(reader[3].ToString()), reader[4].ToString(), reader[5].ToString(), reader[6].ToString(), reader[7].ToString() });
                         }//while reader loop
                     }//reader
                     con.Close();

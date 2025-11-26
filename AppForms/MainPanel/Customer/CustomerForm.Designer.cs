@@ -53,12 +53,12 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer
             this.lblPage = new System.Windows.Forms.Label();
             this.btnNext = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
             this.btnPrev = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
-            this.label1 = new System.Windows.Forms.Label();
             this.actionlbl = new System.Windows.Forms.Label();
             this.btnCheck = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
             this.SearchBar = new ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory.SearchUC();
             this.dgvTable = new System.Windows.Forms.DataGridView();
             this.rowCbox = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.numid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.customerid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.customername = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.phonenumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -81,7 +81,6 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer
             this.panel1.Controls.Add(this.lblPage);
             this.panel1.Controls.Add(this.btnNext);
             this.panel1.Controls.Add(this.btnPrev);
-            this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(22, 528);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(755, 35);
@@ -178,16 +177,6 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer
             this.btnPrev.UseVisualStyleBackColor = false;
             this.btnPrev.Click += new System.EventHandler(this.btnPrev_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 8.25F);
-            this.label1.Location = new System.Drawing.Point(3, 11);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(54, 14);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "legends : ";
-            // 
             // actionlbl
             // 
             this.actionlbl.AutoSize = true;
@@ -262,6 +251,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer
             this.dgvTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.rowCbox,
+            this.numid,
             this.customerid,
             this.customername,
             this.phonenumber,
@@ -323,6 +313,12 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer
             this.rowCbox.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.rowCbox.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.rowCbox.Width = 20;
+            // 
+            // numid
+            // 
+            this.numid.HeaderText = "";
+            this.numid.Name = "numid";
+            this.numid.Visible = false;
             // 
             // customerid
             // 
@@ -467,7 +463,6 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer
 
         private SearchUC SearchBar;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
         private Materials.CustomButton btnPrev;
         private System.Windows.Forms.Label lblPage;
         private Materials.CustomButton btnNext;
@@ -478,6 +473,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer
         private System.Windows.Forms.Label actionlbl;
         public System.Windows.Forms.DataGridView dgvTable;
         private System.Windows.Forms.DataGridViewCheckBoxColumn rowCbox;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numid;
         private System.Windows.Forms.DataGridViewTextBoxColumn customerid;
         private System.Windows.Forms.DataGridViewTextBoxColumn customername;
         private System.Windows.Forms.DataGridViewTextBoxColumn phonenumber;

@@ -27,7 +27,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                 totalRows = (int)count.ExecuteScalar();
                 totalPages = (int)Math.Ceiling((double)totalRows / PageSize);
                 lblPage.Text = totalPages.ToString();
-                query = $"SELECT [customerid],[customername],[phonenumber],[address],[paymentterm],[registrationdate],[status] FROM Customer ORDER BY [numid] OFFSET {(currentPageIndex - 1) * PageSize} ROWS FETCH NEXT {PageSize} ROWS ONLY";
+                query = $"SELECT [numid],[customerid],[customername],[phonenumber],[address],[paymentterm],[registrationdate],[status] FROM Customer ORDER BY [numid] OFFSET {(currentPageIndex - 1) * PageSize} ROWS FETCH NEXT {PageSize} ROWS ONLY";
                 using (SqlCommand data = new SqlCommand(query, con))
                 {
                     using (var reader = data.ExecuteReader())
@@ -35,7 +35,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                         while (reader.Read())
                         {
                             //[customerid],[customername],[phonenumber],[address],[paymentterm],[registrationdate],[status]
-                            dgv.Rows.Add(new object[] { 0, reader[0].ToString(), reader[1].ToString(), reader[2].ToString(), reader[3].ToString(), reader[4].ToString(), Convert.ToDateTime(reader[5]).ToString("yyyy-MM-dd"), reader[6].ToString() });
+                            dgv.Rows.Add(new object[] { 0, reader[0].ToString(), reader[1].ToString(), reader[2].ToString(), reader[3].ToString(), reader[4].ToString(), reader[5].ToString(), Convert.ToDateTime(reader[6]).ToString("yyyy-MM-dd"), reader[7].ToString() });
                         }//while reader loop
                     }//reader
                     con.Close();
@@ -69,15 +69,15 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                 lblPage.Text = totalPages.ToString();
 
                 Console.WriteLine(totalRows + " TR " + totalPages + "TP");
-                query = $"SELECT [customerid],[customername],[phonenumber],[address],[paymentterm],[registrationdate],[status] FROM Customer {searchQuery} ORDER BY [numid] OFFSET {(currentPageIndex - 1) * PageSize} ROWS FETCH NEXT {PageSize} ROWS ONLY";
+                query = $"SELECT [numid],[customerid],[customername],[phonenumber],[address],[paymentterm],[registrationdate],[status] FROM Customer {searchQuery} ORDER BY [numid] OFFSET {(currentPageIndex - 1) * PageSize} ROWS FETCH NEXT {PageSize} ROWS ONLY";
                 using (SqlCommand data = new SqlCommand(query, con))
                 {
                     using (var reader = data.ExecuteReader())
                     {
                         while (reader.Read())
                         {
-                            //[customerid],[customername],[phonenumber],[address],[paymentterm],[registrationdate],[status]
-                            dgv.Rows.Add(new object[] { 0, reader[0].ToString(), reader[1].ToString(), reader[2].ToString(), reader[3].ToString(), reader[4].ToString(), Convert.ToDateTime(reader[5]).ToString("yyyy-MM-dd"), reader[6].ToString() });
+                            //[numid],[customerid],[customername],[phonenumber],[address],[paymentterm],[registrationdate],[status]
+                            dgv.Rows.Add(new object[] { 0, reader[0].ToString(), reader[1].ToString(), reader[2].ToString(), reader[3].ToString(), reader[4].ToString(), reader[5].ToString(), Convert.ToDateTime(reader[6]).ToString("yyyy-MM-dd"), reader[7].ToString() });
                         }//while reader loop
                     }//reader
                     con.Close();
