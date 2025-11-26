@@ -1,6 +1,6 @@
 ﻿namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Supplier
 {
-    partial class AddSupplierForm
+    partial class AddSupplier
     {
         /// <summary>
         /// Required designer variable.

@@ -1,6 +1,6 @@
 ﻿namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer
 {
-    partial class AddCustomerForm
+    partial class AddCustomer
     {
         /// <summary>
         /// Required designer variable.

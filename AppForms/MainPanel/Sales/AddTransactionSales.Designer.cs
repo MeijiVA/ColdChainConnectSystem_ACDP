@@ -1,6 +1,6 @@
 ﻿namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
 {
-    partial class AddTransactionSalesForm
+    partial class AddTransactionSales
     {
         /// <summary>
         /// Required designer variable.

@@ -12,10 +12,10 @@ using System.Windows.Forms;
 
 namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
 {
-    public partial class AddTransactionSalesForm : Form
+    public partial class AddTransactionSales : Form
     {
         CustomMessageBox cmb;
-        public AddTransactionSalesForm()
+        public AddTransactionSales()
         {
             InitializeComponent();
             string downloadsPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), "Downloads");

@@ -9,10 +9,10 @@ using System.Windows.Forms;
 
 namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
 {
-    public partial class AddItemInventoryForm : Form
+    public partial class AddItemInventory : Form
     {
         CustomMessageBox cmb;
-        public AddItemInventoryForm()
+        public AddItemInventory()
         {
             InitializeComponent();
             string downloadsPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), "Downloads");

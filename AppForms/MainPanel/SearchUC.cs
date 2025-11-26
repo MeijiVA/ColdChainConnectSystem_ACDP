@@ -111,19 +111,19 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
             switch (CurrentFormClass.form)
             {
                 case "invform":
-                    AddItemInventoryForm addItem = new AddItemInventoryForm();
+                    AddItemInventory addItem = new AddItemInventory();
                     MainInstance.i.NavigateTo(addItem);
                     break;
                 case "supform":
-                    AddSupplierForm addTransaction = new AddSupplierForm();
+                    AddSupplier addTransaction = new AddSupplier();
                     MainInstance.i.NavigateTo(addTransaction);
                     break;
                 case "salform":
-                    AddTransactionSalesForm addTrans = new AddTransactionSalesForm();
+                    AddTransactionSales addTrans = new AddTransactionSales();
                     MainInstance.i.NavigateTo(addTrans);
                     break;
                 case "custform":
-                    AddCustomerForm addCust = new AddCustomerForm();
+                    AddCustomer addCust = new AddCustomer();
                     MainInstance.i.NavigateTo(addCust);
                     break;
                 default:
