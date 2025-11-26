@@ -282,6 +282,12 @@
     <Compile Include="AppForms\MainPanel\Inventory\InventoryForm.Designer.cs">
       <DependentUpon>InventoryForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AppForms\MainPanel\Inventory\UsrCntrlLegend.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AppForms\MainPanel\Inventory\UsrCntrlLegend.Designer.cs">
+      <DependentUpon>UsrCntrlLegend.cs</DependentUpon>
+    </Compile>
     <Compile Include="AppForms\MainPanel\Sales\ItemTab.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -478,6 +484,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AppForms\MainPanel\Inventory\InventoryForm.resx">
       <DependentUpon>InventoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\MainPanel\Inventory\UsrCntrlLegend.resx">
+      <DependentUpon>UsrCntrlLegend.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AppForms\MainPanel\Sales\AddTransactionSalesForm.resx">
       <DependentUpon>AddTransactionSalesForm.cs</DependentUpon>

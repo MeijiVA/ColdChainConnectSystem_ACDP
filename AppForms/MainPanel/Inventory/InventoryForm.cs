@@ -186,12 +186,29 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
             }
             if (dgvTable.Columns[e.ColumnIndex].Name == "editCol")
             {
+                if (new CustomMessageBox("Delete Row", "Are you sure you want to delete this item from the Database?", MessageBoxButtons.OKCancel).ShowDialog() == DialogResult.OK)
+                {
+                    String cellValue = Convert.ToString(dgvTable.Rows[e.RowIndex].Cells["numid"].FormattedValue);
+                    DeleteItem.Delete(cellValue, "Inventory");
+                    UpdateTable();
 
+                }
             }
             if (dgvTable.Columns[e.ColumnIndex].Name == "viewCol")
             {
 
             }
+        }
+
+        private void lblLegends_MouseHover(object sender, EventArgs e)
+        {
+                uc.Visible = true;
+        }
+
+
+        private void lblLegends_MouseLeave(object sender, EventArgs e)
+        {
+                uc.Visible = false;
         }
     }
 }
