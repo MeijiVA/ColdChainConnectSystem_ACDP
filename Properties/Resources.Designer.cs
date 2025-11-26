@@ -273,6 +273,16 @@ namespace ColdChainConnectSystem_ACDP.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap Paid {
+            get {
+                object obj = ResourceManager.GetObject("Paid", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap passhide {
             get {
                 object obj = ResourceManager.GetObject("passhide", resourceCulture);
@@ -326,6 +336,16 @@ namespace ColdChainConnectSystem_ACDP.Properties {
         public static System.Drawing.Bitmap Sherma {
             get {
                 object obj = ResourceManager.GetObject("Sherma", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Unpaid {
+            get {
+                object obj = ResourceManager.GetObject("Unpaid", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

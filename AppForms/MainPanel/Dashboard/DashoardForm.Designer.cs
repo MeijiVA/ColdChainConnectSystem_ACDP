@@ -28,60 +28,159 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.greetPanel1 = new ColdChainConnectSystem_ACDP.AppForms.MainPanel.Dashboard.GreetPanel();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashoardForm));
             this.panel9 = new System.Windows.Forms.Panel();
+            this.tableTransaction = new System.Windows.Forms.DataGridView();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
             this.profitGenpnl = new System.Windows.Forms.Panel();
             this.totalSales = new System.Windows.Forms.Panel();
             this.totalCustpnl = new System.Windows.Forms.Panel();
             this.totalProdpnl = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
             this.sqlCommandBuilder1 = new Microsoft.Data.SqlClient.SqlCommandBuilder();
-            this.customPanel1 = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
-            this.customPanel2 = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
-            this.customPanel3 = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
-            this.customPanel4 = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
-            this.customPanel5 = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
-            this.customLabel1 = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.customLabel2 = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
-            this.clblProducts = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
-            this.customLabel4 = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
-            this.customLabel5 = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
-            this.customLabel6 = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
-            this.customLabel7 = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
-            this.customLabel8 = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
-            this.customLabel3 = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
-            this.customLabel9 = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
+            this.greetPanel1 = new ColdChainConnectSystem_ACDP.AppForms.MainPanel.Dashboard.GreetPanel();
             this.customLabel10 = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
-            this.dataGridViewlatestransaction = new System.Windows.Forms.DataGridView();
+            this.customPanel5 = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
+            this.customLabel9 = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
+            this.customPanel4 = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
+            this.customLabel3 = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
+            this.customPanel3 = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
+            this.customLabel8 = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
+            this.customPanel7 = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
+            this.clblProfit = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
+            this.lblTitleProfit = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
+            this.customPanel6 = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
+            this.clblSales = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
+            this.lblTitleSales = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
+            this.customPanel2 = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
+            this.clblCustomer = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
+            this.lblTitleCust = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
+            this.customPanel1 = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
+            this.clblProducts = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
+            this.lblTitleProd = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
+            this.customLabel1 = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.amt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numproduct = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Status = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tableTransaction)).BeginInit();
             this.panel6.SuspendLayout();
+            this.profitGenpnl.SuspendLayout();
+            this.totalSales.SuspendLayout();
             this.totalCustpnl.SuspendLayout();
             this.totalProdpnl.SuspendLayout();
-            this.customPanel1.SuspendLayout();
-            this.customPanel2.SuspendLayout();
-            this.customPanel3.SuspendLayout();
-            this.customPanel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.customPanel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewlatestransaction)).BeginInit();
+            this.customPanel4.SuspendLayout();
+            this.customPanel3.SuspendLayout();
+            this.customPanel7.SuspendLayout();
+            this.customPanel6.SuspendLayout();
+            this.customPanel2.SuspendLayout();
+            this.customPanel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // greetPanel1
-            // 
-            this.greetPanel1.Location = new System.Drawing.Point(0, 0);
-            this.greetPanel1.Name = "greetPanel1";
-            this.greetPanel1.Size = new System.Drawing.Size(798, 51);
-            this.greetPanel1.TabIndex = 22;
             // 
             // panel9
             // 
-            this.panel9.Controls.Add(this.dataGridViewlatestransaction);
+            this.panel9.Controls.Add(this.tableTransaction);
             this.panel9.Controls.Add(this.customLabel10);
             this.panel9.Location = new System.Drawing.Point(0, 275);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(400, 295);
             this.panel9.TabIndex = 20;
+            // 
+            // tableTransaction
+            // 
+            this.tableTransaction.AllowUserToAddRows = false;
+            this.tableTransaction.AllowUserToDeleteRows = false;
+            this.tableTransaction.AllowUserToResizeColumns = false;
+            this.tableTransaction.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(233)))), ((int)(((byte)(240)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(233)))), ((int)(((byte)(240)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.tableTransaction.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.tableTransaction.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.tableTransaction.BackgroundColor = System.Drawing.Color.White;
+            this.tableTransaction.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tableTransaction.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.tableTransaction.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
+            this.tableTransaction.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tableTransaction.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.tableTransaction.ColumnHeadersHeight = 35;
+            this.tableTransaction.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.tableTransaction.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id,
+            this.amt,
+            this.numproduct,
+            this.Status});
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tableTransaction.DefaultCellStyle = dataGridViewCellStyle5;
+            this.tableTransaction.EnableHeadersVisualStyles = false;
+            this.tableTransaction.GridColor = System.Drawing.Color.White;
+            this.tableTransaction.Location = new System.Drawing.Point(10, 35);
+            this.tableTransaction.MultiSelect = false;
+            this.tableTransaction.Name = "tableTransaction";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tableTransaction.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.tableTransaction.RowHeadersVisible = false;
+            this.tableTransaction.RowHeadersWidth = 15;
+            this.tableTransaction.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            dataGridViewCellStyle7.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.tableTransaction.RowsDefaultCellStyle = dataGridViewCellStyle7;
+            this.tableTransaction.RowTemplate.DefaultCellStyle.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            this.tableTransaction.RowTemplate.Height = 40;
+            this.tableTransaction.Size = new System.Drawing.Size(380, 248);
+            this.tableTransaction.TabIndex = 1;
             // 
             // panel7
             // 
@@ -102,17 +201,32 @@
             this.panel6.Size = new System.Drawing.Size(400, 127);
             this.panel6.TabIndex = 16;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.label5.Location = new System.Drawing.Point(7, 12);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(83, 18);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Schedule";
+            // 
             // profitGenpnl
             // 
+            this.profitGenpnl.Controls.Add(this.customPanel7);
             this.profitGenpnl.Location = new System.Drawing.Point(598, 50);
             this.profitGenpnl.Name = "profitGenpnl";
+            this.profitGenpnl.Padding = new System.Windows.Forms.Padding(10);
             this.profitGenpnl.Size = new System.Drawing.Size(200, 100);
             this.profitGenpnl.TabIndex = 21;
             // 
             // totalSales
             // 
+            this.totalSales.Controls.Add(this.customPanel6);
             this.totalSales.Location = new System.Drawing.Point(399, 50);
             this.totalSales.Name = "totalSales";
+            this.totalSales.Padding = new System.Windows.Forms.Padding(10);
             this.totalSales.Size = new System.Drawing.Size(200, 100);
             this.totalSales.TabIndex = 19;
             // 
@@ -134,116 +248,107 @@
             this.totalProdpnl.Size = new System.Drawing.Size(201, 100);
             this.totalProdpnl.TabIndex = 15;
             // 
-            // label5
+            // dataGridView1
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.label5.Location = new System.Drawing.Point(7, 12);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(83, 18);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Schedule";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(233)))), ((int)(((byte)(240)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            dataGridViewCellStyle8.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(233)))), ((int)(((byte)(240)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle8;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dataGridView1.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
+            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            dataGridViewCellStyle9.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            this.dataGridView1.ColumnHeadersHeight = 35;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3});
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F);
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle11.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle11;
+            this.dataGridView1.EnableHeadersVisualStyles = false;
+            this.dataGridView1.GridColor = System.Drawing.Color.White;
+            this.dataGridView1.Location = new System.Drawing.Point(409, 310);
+            this.dataGridView1.MultiSelect = false;
+            this.dataGridView1.Name = "dataGridView1";
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            dataGridViewCellStyle12.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowHeadersWidth = 15;
+            this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F);
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            dataGridViewCellStyle13.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle13;
+            this.dataGridView1.RowTemplate.DefaultCellStyle.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            this.dataGridView1.RowTemplate.Height = 40;
+            this.dataGridView1.Size = new System.Drawing.Size(380, 248);
+            this.dataGridView1.TabIndex = 2;
             // 
-            // customPanel1
+            // dataGridViewTextBoxColumn1
             // 
-            this.customPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.customPanel1.BackgroundColor = System.Drawing.Color.Transparent;
-            this.customPanel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.customPanel1.BorderRadius = 15;
-            this.customPanel1.BorderSize = 1;
-            this.customPanel1.Controls.Add(this.customLabel4);
-            this.customPanel1.Controls.Add(this.clblProducts);
-            this.customPanel1.Controls.Add(this.customLabel2);
-            this.customPanel1.Controls.Add(this.customLabel1);
-            this.customPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.customPanel1.ForeColor = System.Drawing.Color.White;
-            this.customPanel1.Location = new System.Drawing.Point(10, 10);
-            this.customPanel1.Name = "customPanel1";
-            this.customPanel1.Size = new System.Drawing.Size(181, 80);
-            this.customPanel1.TabIndex = 1;
-            this.customPanel1.TextColor = System.Drawing.Color.White;
+            this.dataGridViewTextBoxColumn1.FillWeight = 102.502F;
+            this.dataGridViewTextBoxColumn1.HeaderText = "Sales ID";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // customPanel2
+            // dataGridViewTextBoxColumn2
             // 
-            this.customPanel2.BackColor = System.Drawing.Color.Transparent;
-            this.customPanel2.BackgroundColor = System.Drawing.Color.Transparent;
-            this.customPanel2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.customPanel2.BorderRadius = 15;
-            this.customPanel2.BorderSize = 1;
-            this.customPanel2.Controls.Add(this.customLabel7);
-            this.customPanel2.Controls.Add(this.customLabel6);
-            this.customPanel2.Controls.Add(this.customLabel5);
-            this.customPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.customPanel2.ForeColor = System.Drawing.Color.White;
-            this.customPanel2.Location = new System.Drawing.Point(10, 10);
-            this.customPanel2.Name = "customPanel2";
-            this.customPanel2.Size = new System.Drawing.Size(180, 80);
-            this.customPanel2.TabIndex = 0;
-            this.customPanel2.TextColor = System.Drawing.Color.White;
+            this.dataGridViewTextBoxColumn2.FillWeight = 104.079F;
+            this.dataGridViewTextBoxColumn2.HeaderText = "Amount";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // customPanel3
+            // dataGridViewTextBoxColumn3
             // 
-            this.customPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.customPanel3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.customPanel3.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.customPanel3.BorderRadius = 15;
-            this.customPanel3.BorderSize = 0;
-            this.customPanel3.Controls.Add(this.customLabel8);
-            this.customPanel3.ForeColor = System.Drawing.Color.White;
-            this.customPanel3.Location = new System.Drawing.Point(10, 38);
-            this.customPanel3.Name = "customPanel3";
-            this.customPanel3.Size = new System.Drawing.Size(98, 66);
-            this.customPanel3.TabIndex = 5;
-            this.customPanel3.TextColor = System.Drawing.Color.White;
-            // 
-            // customPanel4
-            // 
-            this.customPanel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.customPanel4.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.customPanel4.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.customPanel4.BorderRadius = 15;
-            this.customPanel4.BorderSize = 0;
-            this.customPanel4.Controls.Add(this.customLabel3);
-            this.customPanel4.ForeColor = System.Drawing.Color.White;
-            this.customPanel4.Location = new System.Drawing.Point(153, 38);
-            this.customPanel4.Name = "customPanel4";
-            this.customPanel4.Size = new System.Drawing.Size(98, 66);
-            this.customPanel4.TabIndex = 6;
-            this.customPanel4.TextColor = System.Drawing.Color.White;
-            // 
-            // customPanel5
-            // 
-            this.customPanel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.customPanel5.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.customPanel5.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.customPanel5.BorderRadius = 15;
-            this.customPanel5.BorderSize = 0;
-            this.customPanel5.Controls.Add(this.customLabel9);
-            this.customPanel5.ForeColor = System.Drawing.Color.White;
-            this.customPanel5.Location = new System.Drawing.Point(292, 38);
-            this.customPanel5.Name = "customPanel5";
-            this.customPanel5.Size = new System.Drawing.Size(98, 66);
-            this.customPanel5.TabIndex = 6;
-            this.customPanel5.TextColor = System.Drawing.Color.White;
-            // 
-            // customLabel1
-            // 
-            this.customLabel1.AutoSize = true;
-            this.customLabel1.BackgroundColor = System.Drawing.Color.Transparent;
-            this.customLabel1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.customLabel1.BorderRadius = 0;
-            this.customLabel1.BorderSize = 0;
-            this.customLabel1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customLabel1.ForeColor = System.Drawing.Color.White;
-            this.customLabel1.Location = new System.Drawing.Point(12, 11);
-            this.customLabel1.Name = "customLabel1";
-            this.customLabel1.Size = new System.Drawing.Size(73, 13);
-            this.customLabel1.TabIndex = 0;
-            this.customLabel1.Text = "customLabel1";
-            this.customLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.customLabel1.TextColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle10;
+            this.dataGridViewTextBoxColumn3.FillWeight = 104.079F;
+            this.dataGridViewTextBoxColumn3.HeaderText = "# of Products";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // customLabel2
             // 
@@ -254,167 +359,22 @@
             this.customLabel2.BorderRadius = 0;
             this.customLabel2.BorderSize = 0;
             this.customLabel2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customLabel2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customLabel2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.customLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.customLabel2.Location = new System.Drawing.Point(12, 10);
+            this.customLabel2.Location = new System.Drawing.Point(410, 289);
             this.customLabel2.Name = "customLabel2";
-            this.customLabel2.Size = new System.Drawing.Size(102, 15);
-            this.customLabel2.TabIndex = 1;
-            this.customLabel2.Text = "Total Products";
+            this.customLabel2.Size = new System.Drawing.Size(159, 18);
+            this.customLabel2.TabIndex = 2;
+            this.customLabel2.Text = "Popular Product(?)";
             this.customLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.customLabel2.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             // 
-            // clblProducts
+            // greetPanel1
             // 
-            this.clblProducts.AutoSize = true;
-            this.clblProducts.BackColor = System.Drawing.Color.Transparent;
-            this.clblProducts.BackgroundColor = System.Drawing.Color.Transparent;
-            this.clblProducts.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.clblProducts.BorderRadius = 0;
-            this.clblProducts.BorderSize = 0;
-            this.clblProducts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.clblProducts.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clblProducts.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.clblProducts.Location = new System.Drawing.Point(12, 28);
-            this.clblProducts.Name = "clblProducts";
-            this.clblProducts.Size = new System.Drawing.Size(38, 18);
-            this.clblProducts.TabIndex = 2;
-            this.clblProducts.Text = "265";
-            this.clblProducts.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.clblProducts.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            // 
-            // customLabel4
-            // 
-            this.customLabel4.AutoSize = true;
-            this.customLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.customLabel4.BackgroundColor = System.Drawing.Color.Transparent;
-            this.customLabel4.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.customLabel4.BorderRadius = 0;
-            this.customLabel4.BorderSize = 0;
-            this.customLabel4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customLabel4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.customLabel4.Location = new System.Drawing.Point(70, 57);
-            this.customLabel4.Name = "customLabel4";
-            this.customLabel4.Size = new System.Drawing.Size(108, 12);
-            this.customLabel4.TabIndex = 3;
-            this.customLabel4.Text = "Up from Yesterday";
-            this.customLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.customLabel4.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            // 
-            // customLabel5
-            // 
-            this.customLabel5.AutoSize = true;
-            this.customLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.customLabel5.BackgroundColor = System.Drawing.Color.Transparent;
-            this.customLabel5.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.customLabel5.BorderRadius = 0;
-            this.customLabel5.BorderSize = 0;
-            this.customLabel5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customLabel5.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.customLabel5.Location = new System.Drawing.Point(12, 10);
-            this.customLabel5.Name = "customLabel5";
-            this.customLabel5.Size = new System.Drawing.Size(114, 15);
-            this.customLabel5.TabIndex = 4;
-            this.customLabel5.Text = "Total Customers";
-            this.customLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.customLabel5.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            // 
-            // customLabel6
-            // 
-            this.customLabel6.AutoSize = true;
-            this.customLabel6.BackColor = System.Drawing.Color.Transparent;
-            this.customLabel6.BackgroundColor = System.Drawing.Color.Transparent;
-            this.customLabel6.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.customLabel6.BorderRadius = 0;
-            this.customLabel6.BorderSize = 0;
-            this.customLabel6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customLabel6.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.customLabel6.Location = new System.Drawing.Point(12, 28);
-            this.customLabel6.Name = "customLabel6";
-            this.customLabel6.Size = new System.Drawing.Size(28, 18);
-            this.customLabel6.TabIndex = 4;
-            this.customLabel6.Text = "55";
-            this.customLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.customLabel6.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            // 
-            // customLabel7
-            // 
-            this.customLabel7.AutoSize = true;
-            this.customLabel7.BackColor = System.Drawing.Color.Transparent;
-            this.customLabel7.BackgroundColor = System.Drawing.Color.Transparent;
-            this.customLabel7.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.customLabel7.BorderRadius = 0;
-            this.customLabel7.BorderSize = 0;
-            this.customLabel7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customLabel7.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.customLabel7.Location = new System.Drawing.Point(69, 57);
-            this.customLabel7.Name = "customLabel7";
-            this.customLabel7.Size = new System.Drawing.Size(108, 12);
-            this.customLabel7.TabIndex = 4;
-            this.customLabel7.Text = "Up from Yesterday";
-            this.customLabel7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.customLabel7.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            // 
-            // customLabel8
-            // 
-            this.customLabel8.AutoSize = true;
-            this.customLabel8.BackColor = System.Drawing.Color.Transparent;
-            this.customLabel8.BackgroundColor = System.Drawing.Color.Transparent;
-            this.customLabel8.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.customLabel8.BorderRadius = 0;
-            this.customLabel8.BorderSize = 0;
-            this.customLabel8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customLabel8.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customLabel8.ForeColor = System.Drawing.Color.White;
-            this.customLabel8.Location = new System.Drawing.Point(7, 12);
-            this.customLabel8.Name = "customLabel8";
-            this.customLabel8.Size = new System.Drawing.Size(53, 18);
-            this.customLabel8.TabIndex = 0;
-            this.customLabel8.Text = "08:00";
-            this.customLabel8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.customLabel8.TextColor = System.Drawing.Color.White;
-            // 
-            // customLabel3
-            // 
-            this.customLabel3.AutoSize = true;
-            this.customLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.customLabel3.BackgroundColor = System.Drawing.Color.Transparent;
-            this.customLabel3.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.customLabel3.BorderRadius = 0;
-            this.customLabel3.BorderSize = 0;
-            this.customLabel3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customLabel3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customLabel3.ForeColor = System.Drawing.Color.White;
-            this.customLabel3.Location = new System.Drawing.Point(7, 12);
-            this.customLabel3.Name = "customLabel3";
-            this.customLabel3.Size = new System.Drawing.Size(53, 18);
-            this.customLabel3.TabIndex = 1;
-            this.customLabel3.Text = "12:00";
-            this.customLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.customLabel3.TextColor = System.Drawing.Color.White;
-            // 
-            // customLabel9
-            // 
-            this.customLabel9.AutoSize = true;
-            this.customLabel9.BackColor = System.Drawing.Color.Transparent;
-            this.customLabel9.BackgroundColor = System.Drawing.Color.Transparent;
-            this.customLabel9.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.customLabel9.BorderRadius = 0;
-            this.customLabel9.BorderSize = 0;
-            this.customLabel9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customLabel9.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customLabel9.ForeColor = System.Drawing.Color.White;
-            this.customLabel9.Location = new System.Drawing.Point(7, 12);
-            this.customLabel9.Name = "customLabel9";
-            this.customLabel9.Size = new System.Drawing.Size(53, 18);
-            this.customLabel9.TabIndex = 2;
-            this.customLabel9.Text = "12:00";
-            this.customLabel9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.customLabel9.TextColor = System.Drawing.Color.White;
+            this.greetPanel1.Location = new System.Drawing.Point(0, 0);
+            this.greetPanel1.Name = "greetPanel1";
+            this.greetPanel1.Size = new System.Drawing.Size(798, 51);
+            this.greetPanel1.TabIndex = 22;
             // 
             // customLabel10
             // 
@@ -435,15 +395,387 @@
             this.customLabel10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.customLabel10.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             // 
-            // dataGridViewlatestransaction
+            // customPanel5
             // 
-            this.dataGridViewlatestransaction.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridViewlatestransaction.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewlatestransaction.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.dataGridViewlatestransaction.Location = new System.Drawing.Point(11, 35);
-            this.dataGridViewlatestransaction.Name = "dataGridViewlatestransaction";
-            this.dataGridViewlatestransaction.Size = new System.Drawing.Size(376, 248);
-            this.dataGridViewlatestransaction.TabIndex = 1;
+            this.customPanel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.customPanel5.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.customPanel5.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.customPanel5.BorderRadius = 15;
+            this.customPanel5.BorderSize = 0;
+            this.customPanel5.Controls.Add(this.customLabel9);
+            this.customPanel5.ForeColor = System.Drawing.Color.White;
+            this.customPanel5.Location = new System.Drawing.Point(292, 38);
+            this.customPanel5.Name = "customPanel5";
+            this.customPanel5.Size = new System.Drawing.Size(98, 66);
+            this.customPanel5.TabIndex = 6;
+            this.customPanel5.TextColor = System.Drawing.Color.White;
+            // 
+            // customLabel9
+            // 
+            this.customLabel9.AutoSize = true;
+            this.customLabel9.BackColor = System.Drawing.Color.Transparent;
+            this.customLabel9.BackgroundColor = System.Drawing.Color.Transparent;
+            this.customLabel9.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.customLabel9.BorderRadius = 0;
+            this.customLabel9.BorderSize = 0;
+            this.customLabel9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.customLabel9.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customLabel9.ForeColor = System.Drawing.Color.White;
+            this.customLabel9.Location = new System.Drawing.Point(7, 12);
+            this.customLabel9.Name = "customLabel9";
+            this.customLabel9.Size = new System.Drawing.Size(53, 18);
+            this.customLabel9.TabIndex = 2;
+            this.customLabel9.Text = "12:00";
+            this.customLabel9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.customLabel9.TextColor = System.Drawing.Color.White;
+            // 
+            // customPanel4
+            // 
+            this.customPanel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.customPanel4.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.customPanel4.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.customPanel4.BorderRadius = 15;
+            this.customPanel4.BorderSize = 0;
+            this.customPanel4.Controls.Add(this.customLabel3);
+            this.customPanel4.ForeColor = System.Drawing.Color.White;
+            this.customPanel4.Location = new System.Drawing.Point(153, 38);
+            this.customPanel4.Name = "customPanel4";
+            this.customPanel4.Size = new System.Drawing.Size(98, 66);
+            this.customPanel4.TabIndex = 6;
+            this.customPanel4.TextColor = System.Drawing.Color.White;
+            // 
+            // customLabel3
+            // 
+            this.customLabel3.AutoSize = true;
+            this.customLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.customLabel3.BackgroundColor = System.Drawing.Color.Transparent;
+            this.customLabel3.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.customLabel3.BorderRadius = 0;
+            this.customLabel3.BorderSize = 0;
+            this.customLabel3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.customLabel3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customLabel3.ForeColor = System.Drawing.Color.White;
+            this.customLabel3.Location = new System.Drawing.Point(7, 12);
+            this.customLabel3.Name = "customLabel3";
+            this.customLabel3.Size = new System.Drawing.Size(53, 18);
+            this.customLabel3.TabIndex = 1;
+            this.customLabel3.Text = "12:00";
+            this.customLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.customLabel3.TextColor = System.Drawing.Color.White;
+            // 
+            // customPanel3
+            // 
+            this.customPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.customPanel3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.customPanel3.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.customPanel3.BorderRadius = 15;
+            this.customPanel3.BorderSize = 0;
+            this.customPanel3.Controls.Add(this.customLabel8);
+            this.customPanel3.ForeColor = System.Drawing.Color.White;
+            this.customPanel3.Location = new System.Drawing.Point(10, 38);
+            this.customPanel3.Name = "customPanel3";
+            this.customPanel3.Size = new System.Drawing.Size(98, 66);
+            this.customPanel3.TabIndex = 5;
+            this.customPanel3.TextColor = System.Drawing.Color.White;
+            // 
+            // customLabel8
+            // 
+            this.customLabel8.AutoSize = true;
+            this.customLabel8.BackColor = System.Drawing.Color.Transparent;
+            this.customLabel8.BackgroundColor = System.Drawing.Color.Transparent;
+            this.customLabel8.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.customLabel8.BorderRadius = 0;
+            this.customLabel8.BorderSize = 0;
+            this.customLabel8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.customLabel8.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customLabel8.ForeColor = System.Drawing.Color.White;
+            this.customLabel8.Location = new System.Drawing.Point(7, 12);
+            this.customLabel8.Name = "customLabel8";
+            this.customLabel8.Size = new System.Drawing.Size(53, 18);
+            this.customLabel8.TabIndex = 0;
+            this.customLabel8.Text = "08:00";
+            this.customLabel8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.customLabel8.TextColor = System.Drawing.Color.White;
+            // 
+            // customPanel7
+            // 
+            this.customPanel7.BackColor = System.Drawing.Color.Transparent;
+            this.customPanel7.BackgroundColor = System.Drawing.Color.Transparent;
+            this.customPanel7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.customPanel7.BorderRadius = 15;
+            this.customPanel7.BorderSize = 1;
+            this.customPanel7.Controls.Add(this.clblProfit);
+            this.customPanel7.Controls.Add(this.lblTitleProfit);
+            this.customPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.customPanel7.ForeColor = System.Drawing.Color.White;
+            this.customPanel7.Location = new System.Drawing.Point(10, 10);
+            this.customPanel7.Name = "customPanel7";
+            this.customPanel7.Size = new System.Drawing.Size(180, 80);
+            this.customPanel7.TabIndex = 2;
+            this.customPanel7.TextColor = System.Drawing.Color.White;
+            // 
+            // clblProfit
+            // 
+            this.clblProfit.AutoSize = true;
+            this.clblProfit.BackColor = System.Drawing.Color.Transparent;
+            this.clblProfit.BackgroundColor = System.Drawing.Color.Transparent;
+            this.clblProfit.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.clblProfit.BorderRadius = 0;
+            this.clblProfit.BorderSize = 0;
+            this.clblProfit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clblProfit.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clblProfit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.clblProfit.Location = new System.Drawing.Point(12, 28);
+            this.clblProfit.Name = "clblProfit";
+            this.clblProfit.Size = new System.Drawing.Size(28, 18);
+            this.clblProfit.TabIndex = 4;
+            this.clblProfit.Text = "55";
+            this.clblProfit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.clblProfit.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            // 
+            // lblTitleProfit
+            // 
+            this.lblTitleProfit.AutoSize = true;
+            this.lblTitleProfit.BackColor = System.Drawing.Color.Transparent;
+            this.lblTitleProfit.BackgroundColor = System.Drawing.Color.Transparent;
+            this.lblTitleProfit.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.lblTitleProfit.BorderRadius = 0;
+            this.lblTitleProfit.BorderSize = 0;
+            this.lblTitleProfit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblTitleProfit.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitleProfit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.lblTitleProfit.Location = new System.Drawing.Point(12, 10);
+            this.lblTitleProfit.Name = "lblTitleProfit";
+            this.lblTitleProfit.Size = new System.Drawing.Size(122, 15);
+            this.lblTitleProfit.TabIndex = 4;
+            this.lblTitleProfit.Text = "Profits Generated";
+            this.lblTitleProfit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTitleProfit.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            // 
+            // customPanel6
+            // 
+            this.customPanel6.BackColor = System.Drawing.Color.Transparent;
+            this.customPanel6.BackgroundColor = System.Drawing.Color.Transparent;
+            this.customPanel6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.customPanel6.BorderRadius = 15;
+            this.customPanel6.BorderSize = 1;
+            this.customPanel6.Controls.Add(this.clblSales);
+            this.customPanel6.Controls.Add(this.lblTitleSales);
+            this.customPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.customPanel6.ForeColor = System.Drawing.Color.White;
+            this.customPanel6.Location = new System.Drawing.Point(10, 10);
+            this.customPanel6.Name = "customPanel6";
+            this.customPanel6.Size = new System.Drawing.Size(180, 80);
+            this.customPanel6.TabIndex = 1;
+            this.customPanel6.TextColor = System.Drawing.Color.White;
+            // 
+            // clblSales
+            // 
+            this.clblSales.AutoSize = true;
+            this.clblSales.BackColor = System.Drawing.Color.Transparent;
+            this.clblSales.BackgroundColor = System.Drawing.Color.Transparent;
+            this.clblSales.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.clblSales.BorderRadius = 0;
+            this.clblSales.BorderSize = 0;
+            this.clblSales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clblSales.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clblSales.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.clblSales.Location = new System.Drawing.Point(12, 28);
+            this.clblSales.Name = "clblSales";
+            this.clblSales.Size = new System.Drawing.Size(28, 18);
+            this.clblSales.TabIndex = 4;
+            this.clblSales.Text = "55";
+            this.clblSales.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.clblSales.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            // 
+            // lblTitleSales
+            // 
+            this.lblTitleSales.AutoSize = true;
+            this.lblTitleSales.BackColor = System.Drawing.Color.Transparent;
+            this.lblTitleSales.BackgroundColor = System.Drawing.Color.Transparent;
+            this.lblTitleSales.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.lblTitleSales.BorderRadius = 0;
+            this.lblTitleSales.BorderSize = 0;
+            this.lblTitleSales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblTitleSales.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitleSales.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.lblTitleSales.Location = new System.Drawing.Point(12, 10);
+            this.lblTitleSales.Name = "lblTitleSales";
+            this.lblTitleSales.Size = new System.Drawing.Size(79, 15);
+            this.lblTitleSales.TabIndex = 4;
+            this.lblTitleSales.Text = "Total Sales";
+            this.lblTitleSales.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTitleSales.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            // 
+            // customPanel2
+            // 
+            this.customPanel2.BackColor = System.Drawing.Color.Transparent;
+            this.customPanel2.BackgroundColor = System.Drawing.Color.Transparent;
+            this.customPanel2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.customPanel2.BorderRadius = 15;
+            this.customPanel2.BorderSize = 1;
+            this.customPanel2.Controls.Add(this.clblCustomer);
+            this.customPanel2.Controls.Add(this.lblTitleCust);
+            this.customPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.customPanel2.ForeColor = System.Drawing.Color.White;
+            this.customPanel2.Location = new System.Drawing.Point(10, 10);
+            this.customPanel2.Name = "customPanel2";
+            this.customPanel2.Size = new System.Drawing.Size(180, 80);
+            this.customPanel2.TabIndex = 0;
+            this.customPanel2.TextColor = System.Drawing.Color.White;
+            // 
+            // clblCustomer
+            // 
+            this.clblCustomer.AutoSize = true;
+            this.clblCustomer.BackColor = System.Drawing.Color.Transparent;
+            this.clblCustomer.BackgroundColor = System.Drawing.Color.Transparent;
+            this.clblCustomer.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.clblCustomer.BorderRadius = 0;
+            this.clblCustomer.BorderSize = 0;
+            this.clblCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clblCustomer.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clblCustomer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.clblCustomer.Location = new System.Drawing.Point(12, 28);
+            this.clblCustomer.Name = "clblCustomer";
+            this.clblCustomer.Size = new System.Drawing.Size(28, 18);
+            this.clblCustomer.TabIndex = 4;
+            this.clblCustomer.Text = "55";
+            this.clblCustomer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.clblCustomer.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            // 
+            // lblTitleCust
+            // 
+            this.lblTitleCust.AutoSize = true;
+            this.lblTitleCust.BackColor = System.Drawing.Color.Transparent;
+            this.lblTitleCust.BackgroundColor = System.Drawing.Color.Transparent;
+            this.lblTitleCust.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.lblTitleCust.BorderRadius = 0;
+            this.lblTitleCust.BorderSize = 0;
+            this.lblTitleCust.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblTitleCust.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitleCust.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.lblTitleCust.Location = new System.Drawing.Point(12, 10);
+            this.lblTitleCust.Name = "lblTitleCust";
+            this.lblTitleCust.Size = new System.Drawing.Size(114, 15);
+            this.lblTitleCust.TabIndex = 4;
+            this.lblTitleCust.Text = "Total Customers";
+            this.lblTitleCust.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTitleCust.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            // 
+            // customPanel1
+            // 
+            this.customPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.customPanel1.BackgroundColor = System.Drawing.Color.Transparent;
+            this.customPanel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.customPanel1.BorderRadius = 15;
+            this.customPanel1.BorderSize = 1;
+            this.customPanel1.Controls.Add(this.clblProducts);
+            this.customPanel1.Controls.Add(this.lblTitleProd);
+            this.customPanel1.Controls.Add(this.customLabel1);
+            this.customPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.customPanel1.ForeColor = System.Drawing.Color.White;
+            this.customPanel1.Location = new System.Drawing.Point(10, 10);
+            this.customPanel1.Name = "customPanel1";
+            this.customPanel1.Size = new System.Drawing.Size(181, 80);
+            this.customPanel1.TabIndex = 1;
+            this.customPanel1.TextColor = System.Drawing.Color.White;
+            // 
+            // clblProducts
+            // 
+            this.clblProducts.AutoSize = true;
+            this.clblProducts.BackColor = System.Drawing.Color.Transparent;
+            this.clblProducts.BackgroundColor = System.Drawing.Color.Transparent;
+            this.clblProducts.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.clblProducts.BorderRadius = 0;
+            this.clblProducts.BorderSize = 0;
+            this.clblProducts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clblProducts.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clblProducts.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.clblProducts.Location = new System.Drawing.Point(12, 28);
+            this.clblProducts.Name = "clblProducts";
+            this.clblProducts.Size = new System.Drawing.Size(38, 18);
+            this.clblProducts.TabIndex = 2;
+            this.clblProducts.Text = "265";
+            this.clblProducts.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.clblProducts.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            // 
+            // lblTitleProd
+            // 
+            this.lblTitleProd.AutoSize = true;
+            this.lblTitleProd.BackColor = System.Drawing.Color.Transparent;
+            this.lblTitleProd.BackgroundColor = System.Drawing.Color.Transparent;
+            this.lblTitleProd.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.lblTitleProd.BorderRadius = 0;
+            this.lblTitleProd.BorderSize = 0;
+            this.lblTitleProd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblTitleProd.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitleProd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.lblTitleProd.Location = new System.Drawing.Point(12, 10);
+            this.lblTitleProd.Name = "lblTitleProd";
+            this.lblTitleProd.Size = new System.Drawing.Size(102, 15);
+            this.lblTitleProd.TabIndex = 1;
+            this.lblTitleProd.Text = "Total Products";
+            this.lblTitleProd.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTitleProd.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            // 
+            // customLabel1
+            // 
+            this.customLabel1.AutoSize = true;
+            this.customLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.customLabel1.BackgroundColor = System.Drawing.Color.Transparent;
+            this.customLabel1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.customLabel1.BorderRadius = 0;
+            this.customLabel1.BorderSize = 0;
+            this.customLabel1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.customLabel1.ForeColor = System.Drawing.Color.White;
+            this.customLabel1.Location = new System.Drawing.Point(12, 11);
+            this.customLabel1.Name = "customLabel1";
+            this.customLabel1.Size = new System.Drawing.Size(73, 13);
+            this.customLabel1.TabIndex = 0;
+            this.customLabel1.Text = "customLabel1";
+            this.customLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.customLabel1.TextColor = System.Drawing.Color.White;
+            // 
+            // id
+            // 
+            this.id.FillWeight = 102.502F;
+            this.id.HeaderText = "Sales ID";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.id.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // amt
+            // 
+            this.amt.FillWeight = 104.079F;
+            this.amt.HeaderText = "Amount";
+            this.amt.Name = "amt";
+            this.amt.ReadOnly = true;
+            this.amt.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.amt.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // numproduct
+            // 
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.numproduct.DefaultCellStyle = dataGridViewCellStyle3;
+            this.numproduct.FillWeight = 104.079F;
+            this.numproduct.HeaderText = "# of Products";
+            this.numproduct.Name = "numproduct";
+            this.numproduct.ReadOnly = true;
+            this.numproduct.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.numproduct.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Status
+            // 
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle4.NullValue")));
+            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(10);
+            this.Status.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Status.HeaderText = "Status";
+            this.Status.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.Status.Name = "Status";
+            this.Status.ReadOnly = true;
+            this.Status.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // DashoardForm
             // 
@@ -451,6 +783,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(798, 570);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.customLabel2);
             this.Controls.Add(this.greetPanel1);
             this.Controls.Add(this.panel9);
             this.Controls.Add(this.panel7);
@@ -463,24 +797,33 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DashoardForm";
             this.Text = "DashboardPanel";
+            this.Load += new System.EventHandler(this.DashoardForm_Load);
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tableTransaction)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            this.profitGenpnl.ResumeLayout(false);
+            this.totalSales.ResumeLayout(false);
             this.totalCustpnl.ResumeLayout(false);
             this.totalProdpnl.ResumeLayout(false);
-            this.customPanel1.ResumeLayout(false);
-            this.customPanel1.PerformLayout();
-            this.customPanel2.ResumeLayout(false);
-            this.customPanel2.PerformLayout();
-            this.customPanel3.ResumeLayout(false);
-            this.customPanel3.PerformLayout();
-            this.customPanel4.ResumeLayout(false);
-            this.customPanel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.customPanel5.ResumeLayout(false);
             this.customPanel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewlatestransaction)).EndInit();
+            this.customPanel4.ResumeLayout(false);
+            this.customPanel4.PerformLayout();
+            this.customPanel3.ResumeLayout(false);
+            this.customPanel3.PerformLayout();
+            this.customPanel7.ResumeLayout(false);
+            this.customPanel7.PerformLayout();
+            this.customPanel6.ResumeLayout(false);
+            this.customPanel6.PerformLayout();
+            this.customPanel2.ResumeLayout(false);
+            this.customPanel2.PerformLayout();
+            this.customPanel1.ResumeLayout(false);
+            this.customPanel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -501,17 +844,30 @@
         private Materials.CustomPanel customPanel3;
         private Materials.CustomPanel customPanel5;
         private Materials.CustomPanel customPanel4;
-        private Materials.CustomLabel customLabel4;
         private Materials.CustomLabel clblProducts;
-        private Materials.CustomLabel customLabel2;
+        private Materials.CustomLabel lblTitleProd;
         private Materials.CustomLabel customLabel1;
-        private Materials.CustomLabel customLabel7;
-        private Materials.CustomLabel customLabel6;
-        private Materials.CustomLabel customLabel5;
+        private Materials.CustomLabel clblCustomer;
+        private Materials.CustomLabel lblTitleCust;
         private Materials.CustomLabel customLabel8;
         private Materials.CustomLabel customLabel9;
         private Materials.CustomLabel customLabel3;
         private Materials.CustomLabel customLabel10;
-        private System.Windows.Forms.DataGridView dataGridViewlatestransaction;
+        private Materials.CustomPanel customPanel6;
+        private Materials.CustomLabel clblSales;
+        private Materials.CustomLabel lblTitleSales;
+        private Materials.CustomPanel customPanel7;
+        private Materials.CustomLabel clblProfit;
+        private Materials.CustomLabel lblTitleProfit;
+        public System.Windows.Forms.DataGridView tableTransaction;
+        private Materials.CustomLabel customLabel2;
+        public System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn amt;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numproduct;
+        private System.Windows.Forms.DataGridViewImageColumn Status;
     }
 }
