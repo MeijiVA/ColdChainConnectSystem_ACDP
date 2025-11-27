@@ -104,7 +104,12 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.PersonalDetails
                     {
                         if (ChangeCredentialsClass.ChangePassword(tboxCurrPass, tboxNewPassEdit, tboxRePassEdit))
                         {
-                            lblPassword.Text = ConnectionClass.pass;
+                            String passChar = "";
+                            for (int i = 0;i < ConnectionClass.pass.Length ;i++ )
+                            {
+                                passChar = passChar + "*"; 
+                            }
+                            lblPassword.Text = passChar;
                             tboxCurrPass.Text = "";
                             tboxNewPassEdit.Text = "";
                             tboxRePassEdit.Text = "";
