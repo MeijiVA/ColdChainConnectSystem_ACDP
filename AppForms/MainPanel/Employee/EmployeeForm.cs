@@ -1,4 +1,5 @@
 ﻿using ColdChainConnectSystem_ACDP.ClassResources;
+using ColdChainConnectSystem_ACDP.ClassResources.Instances;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,13 +23,18 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.Employee
 
         private void EmployeeForm_Load(object sender, EventArgs ea)
         {
-            flpEmployee.Controls.Clear();
+            LoadAllEmployees();
+        }
+
+        public void LoadAllEmployees()
+        {
+            EmployeeInstance.i.flpEmployee.Controls.Clear();
             int numEmp = EmployeeClass.GetTotalEmployees();
-            for (int i = 1;i <= numEmp;i++)
+            for (int i = 1; i <= numEmp; i++)
             {
                 ShowEmployee e = new ShowEmployee();
                 EmployeeClass.LoadAllEmployees(i, e.lblEmpID, e.lblUsername, e.lblName, e.lblPosition, e.lblStatus);
-                flpEmployee.Controls.Add(e);
+                EmployeeInstance.i.flpEmployee.Controls.Add(e);
             }
         }
     }

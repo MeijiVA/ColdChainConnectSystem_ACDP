@@ -37,40 +37,34 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.PersonalDetails
             pnlPasswordEdit.Hide();
         }
 
-        private void btnPassEdit_Click(object sender, EventArgs e)
-        {
-            pnlPassword.Hide(); 
-            pnlPasswordEdit.Show();
-        }
-
-        private void btnUserEdit_Click(object sender, EventArgs e)
+        private void btnEdit_Click(object sender, EventArgs e)
         {
             pnlUsername.Hide();
             pnlUsernameEdit.Show();
         }
 
-        private void btnCancelUser_Click(object sender, EventArgs e)
+        private void btnEdit2_Click(object sender, EventArgs e)
+        {
+            pnlPassword.Hide();
+            pnlPasswordEdit.Show();
+        }
+        private void btnCancel_Click(object sender, EventArgs e)
         {
             pnlUsername.Show();
             pnlUsernameEdit.Hide();
         }
 
-        private void btnCancelPass_Click(object sender, EventArgs e)
-        {
-            pnlPassword.Show();
-            pnlPasswordEdit.Hide();
-        }
 
-        private void btnConfirmUser_Click(object sender, EventArgs e)
+        private void btnConfirm_Click(object sender, EventArgs e)
         {
-            switch (new CustomMessageBox("Change Username", "Are you sure you want to change your Username?", MessageBoxButtons.OKCancel).ShowDialog()) 
+            switch (new CustomMessageBox("Change Username", "Are you sure you want to change your Username?", MessageBoxButtons.OKCancel).ShowDialog())
             {
                 case DialogResult.OK:
-                    if (!tboxUsername.Text.Equals("") || !tboxPassUser.Text.Equals("") || !tboxRePassUser.Text.Equals(""))
+                    if (!tboxUsername.Texts.Equals("") || !tboxPassUser.Texts.Equals("") || !tboxRePassUser.Texts.Equals(""))
                     {
                         if (ChangeCredentialsClass.SameUsernameWith(tboxUsername) != true)
                         {
-                            if(ChangeCredentialsClass.ChangeUsername(tboxUsername, tboxPassUser, tboxRePassUser))
+                            if (ChangeCredentialsClass.ChangeUsername(tboxUsername, tboxPassUser, tboxRePassUser))
                             {
                                 lblUsername.Text = ConnectionClass.username;
                                 tboxUsername.Text = "";
@@ -89,19 +83,24 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.PersonalDetails
                     {
                         new CustomMessageBox("Change Username", "Please insert the required Values.").ShowDialog();
                     }
-                        break;
+                    break;
                 case DialogResult.Cancel:
                     break;
             }
         }
 
-        private void btnConfirmPass_Click(object sender, EventArgs e)
+        private void btnCancel2_Click(object sender, EventArgs e)
         {
-            
+            pnlPassword.Show();
+            pnlPasswordEdit.Hide();
+        }
+
+        private void btnConfirm2_Click(object sender, EventArgs e)
+        {
             switch (new CustomMessageBox("Change Password", "Are you sure you want to change your Password?", MessageBoxButtons.OKCancel).ShowDialog())
             {
                 case DialogResult.OK:
-                    if (!tboxCurrPass.Text.Equals("") || !tboxNewPassEdit.Text.Equals("") || !tboxRePassEdit.Text.Equals(""))
+                    if (!tboxCurrPass.Texts.Equals("") || !tboxNewPassEdit.Texts.Equals("") || !tboxRePassEdit.Texts.Equals(""))
                     {
                         if (ChangeCredentialsClass.ChangePassword(tboxCurrPass, tboxNewPassEdit, tboxRePassEdit))
                         {
@@ -121,16 +120,6 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.PersonalDetails
                 case DialogResult.Cancel:
                     break;
             }
-        }
-
-        private void customButton1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label11_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

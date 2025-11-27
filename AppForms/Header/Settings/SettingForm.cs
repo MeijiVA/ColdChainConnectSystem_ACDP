@@ -55,6 +55,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Settings
             pdf = new PersonalDetailsForm();
             secf = new SecurityForm();
             empf = new EmployeeForm();
+            this.NavigateTo(pdf);
         }
     }
 }

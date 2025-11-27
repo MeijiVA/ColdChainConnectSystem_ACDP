@@ -53,7 +53,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.Employee
                         this.AddressContainer.Province = address[3];
                         this.AddressContainer.Postal = address[4];
                         this.PersonalContainer.AgeInfo = reader[8].ToString();
-                        this.PersonalContainer.DOBInfo = reader[9].ToString();
+                        this.PersonalContainer.DOBInfo = Convert.ToDateTime(reader[9]).ToString("yyyy-MM-dd");
                         this.AccountContainer.PositionInfo = reader[10].ToString();
                         this.AccountContainer.StatusInfo = reader[11].ToString();
                         this.PersonalContainer.SexInfo = reader[12].ToString();
@@ -84,14 +84,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.Employee
             if (EmployeeInstance.i != null)
             {
                 MainInstance.i.NavigateTo(EmployeeInstance.i);
-                EmployeeInstance.i.flpEmployee.Controls.Clear();
-                int numEmp = EmployeeClass.GetTotalEmployees();
-                for (int i = 1; i <= numEmp; i++)
-                {
-                    ShowEmployee showEmp = new ShowEmployee();
-                    EmployeeClass.LoadAllEmployees(i, showEmp.lblEmpID, showEmp.lblUsername, showEmp.lblName, showEmp.lblPosition, showEmp.lblStatus);
-                    EmployeeInstance.i.flpEmployee.Controls.Add(showEmp);
-                }
+                EmployeeInstance.i.LoadAllEmployees();
             }
             else
             {

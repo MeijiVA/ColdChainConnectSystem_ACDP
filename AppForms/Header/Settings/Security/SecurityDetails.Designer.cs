@@ -29,49 +29,37 @@
         private void InitializeComponent()
         {
             this.pnlPassword = new System.Windows.Forms.Panel();
-            this.btnEdit2 = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnPassEdit = new System.Windows.Forms.Button();
             this.lblPassword = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.pnlPasswordEdit = new System.Windows.Forms.Panel();
-            this.customTextBox6 = new CustomControls.RJControls.CustomTextBox();
-            this.customTextBox5 = new CustomControls.RJControls.CustomTextBox();
-            this.customTextBox4 = new CustomControls.RJControls.CustomTextBox();
-            this.btnCancel2 = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
-            this.btnConfirm2 = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
-            this.btnConfirmPass = new System.Windows.Forms.Button();
-            this.btnCancelPass = new System.Windows.Forms.Button();
-            this.tboxRePassEdit = new System.Windows.Forms.TextBox();
-            this.tboxNewPassEdit = new System.Windows.Forms.TextBox();
-            this.tboxCurrPass = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pnlUsernameEdit = new System.Windows.Forms.Panel();
-            this.customTextBox3 = new CustomControls.RJControls.CustomTextBox();
-            this.customTextBox2 = new CustomControls.RJControls.CustomTextBox();
-            this.customTextBox1 = new CustomControls.RJControls.CustomTextBox();
-            this.btnCancel = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
-            this.btnConfirm = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
-            this.btnConfirmUser = new System.Windows.Forms.Button();
-            this.btnCancelUser = new System.Windows.Forms.Button();
-            this.tboxRePassUser = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.tboxPassUser = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.tboxUsername = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.pnlUsername = new System.Windows.Forms.Panel();
-            this.btnEdit = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
-            this.btnUserEdit = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
             this.lbluser = new System.Windows.Forms.Label();
+            this.tboxRePassEdit = new CustomControls.RJControls.CustomTextBox();
+            this.tboxNewPassEdit = new CustomControls.RJControls.CustomTextBox();
+            this.tboxCurrPass = new CustomControls.RJControls.CustomTextBox();
+            this.btnCancel2 = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
+            this.btnConfirm2 = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
+            this.btnEdit2 = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
+            this.tboxRePassUser = new CustomControls.RJControls.CustomTextBox();
+            this.tboxPassUser = new CustomControls.RJControls.CustomTextBox();
+            this.tboxUsername = new CustomControls.RJControls.CustomTextBox();
+            this.btnCancel = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
+            this.btnConfirm = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
+            this.btnEdit = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
             this.pnlPassword.SuspendLayout();
             this.pnlPasswordEdit.SuspendLayout();
             this.pnlUsernameEdit.SuspendLayout();
@@ -82,33 +70,13 @@
             // 
             this.pnlPassword.Controls.Add(this.btnEdit2);
             this.pnlPassword.Controls.Add(this.label2);
-            this.pnlPassword.Controls.Add(this.btnPassEdit);
             this.pnlPassword.Controls.Add(this.lblPassword);
             this.pnlPassword.Controls.Add(this.label4);
             this.pnlPassword.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlPassword.Location = new System.Drawing.Point(0, 225);
             this.pnlPassword.Name = "pnlPassword";
-            this.pnlPassword.Size = new System.Drawing.Size(905, 75);
+            this.pnlPassword.Size = new System.Drawing.Size(766, 75);
             this.pnlPassword.TabIndex = 6;
-            // 
-            // btnEdit2
-            // 
-            this.btnEdit2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.btnEdit2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.btnEdit2.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnEdit2.BorderRadius = 15;
-            this.btnEdit2.BorderSize = 0;
-            this.btnEdit2.FlatAppearance.BorderSize = 0;
-            this.btnEdit2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEdit2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEdit2.ForeColor = System.Drawing.Color.White;
-            this.btnEdit2.Location = new System.Drawing.Point(767, 22);
-            this.btnEdit2.Name = "btnEdit2";
-            this.btnEdit2.Size = new System.Drawing.Size(110, 30);
-            this.btnEdit2.TabIndex = 65;
-            this.btnEdit2.Text = "Edit";
-            this.btnEdit2.TextColor = System.Drawing.Color.White;
-            this.btnEdit2.UseVisualStyleBackColor = false;
             // 
             // label2
             // 
@@ -118,16 +86,6 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(903, 10);
             this.label2.TabIndex = 64;
-            // 
-            // btnPassEdit
-            // 
-            this.btnPassEdit.Location = new System.Drawing.Point(725, 26);
-            this.btnPassEdit.Name = "btnPassEdit";
-            this.btnPassEdit.Size = new System.Drawing.Size(36, 23);
-            this.btnPassEdit.TabIndex = 63;
-            this.btnPassEdit.Text = "edit";
-            this.btnPassEdit.UseVisualStyleBackColor = true;
-            this.btnPassEdit.Click += new System.EventHandler(this.btnPassEdit_Click);
             // 
             // lblPassword
             // 
@@ -152,16 +110,11 @@
             // 
             // pnlPasswordEdit
             // 
-            this.pnlPasswordEdit.Controls.Add(this.customTextBox6);
-            this.pnlPasswordEdit.Controls.Add(this.customTextBox5);
-            this.pnlPasswordEdit.Controls.Add(this.customTextBox4);
-            this.pnlPasswordEdit.Controls.Add(this.btnCancel2);
-            this.pnlPasswordEdit.Controls.Add(this.btnConfirm2);
-            this.pnlPasswordEdit.Controls.Add(this.btnConfirmPass);
-            this.pnlPasswordEdit.Controls.Add(this.btnCancelPass);
             this.pnlPasswordEdit.Controls.Add(this.tboxRePassEdit);
             this.pnlPasswordEdit.Controls.Add(this.tboxNewPassEdit);
             this.pnlPasswordEdit.Controls.Add(this.tboxCurrPass);
+            this.pnlPasswordEdit.Controls.Add(this.btnCancel2);
+            this.pnlPasswordEdit.Controls.Add(this.btnConfirm2);
             this.pnlPasswordEdit.Controls.Add(this.label8);
             this.pnlPasswordEdit.Controls.Add(this.label7);
             this.pnlPasswordEdit.Controls.Add(this.label5);
@@ -169,156 +122,8 @@
             this.pnlPasswordEdit.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlPasswordEdit.Location = new System.Drawing.Point(0, 300);
             this.pnlPasswordEdit.Name = "pnlPasswordEdit";
-            this.pnlPasswordEdit.Size = new System.Drawing.Size(905, 150);
+            this.pnlPasswordEdit.Size = new System.Drawing.Size(766, 150);
             this.pnlPasswordEdit.TabIndex = 8;
-            // 
-            // customTextBox6
-            // 
-            this.customTextBox6.BackColor = System.Drawing.SystemColors.Window;
-            this.customTextBox6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.customTextBox6.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.customTextBox6.BorderRadius = 0;
-            this.customTextBox6.BorderSize = 2;
-            this.customTextBox6.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customTextBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.customTextBox6.Location = new System.Drawing.Point(108, 99);
-            this.customTextBox6.Margin = new System.Windows.Forms.Padding(4);
-            this.customTextBox6.Multiline = false;
-            this.customTextBox6.Name = "customTextBox6";
-            this.customTextBox6.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.customTextBox6.PasswordChar = false;
-            this.customTextBox6.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.customTextBox6.PlaceholderText = "";
-            this.customTextBox6.Size = new System.Drawing.Size(243, 30);
-            this.customTextBox6.TabIndex = 77;
-            this.customTextBox6.Texts = "";
-            this.customTextBox6.UnderlinedStyle = false;
-            // 
-            // customTextBox5
-            // 
-            this.customTextBox5.BackColor = System.Drawing.SystemColors.Window;
-            this.customTextBox5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.customTextBox5.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.customTextBox5.BorderRadius = 0;
-            this.customTextBox5.BorderSize = 2;
-            this.customTextBox5.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customTextBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.customTextBox5.Location = new System.Drawing.Point(108, 59);
-            this.customTextBox5.Margin = new System.Windows.Forms.Padding(4);
-            this.customTextBox5.Multiline = false;
-            this.customTextBox5.Name = "customTextBox5";
-            this.customTextBox5.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.customTextBox5.PasswordChar = false;
-            this.customTextBox5.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.customTextBox5.PlaceholderText = "";
-            this.customTextBox5.Size = new System.Drawing.Size(243, 30);
-            this.customTextBox5.TabIndex = 76;
-            this.customTextBox5.Texts = "";
-            this.customTextBox5.UnderlinedStyle = false;
-            // 
-            // customTextBox4
-            // 
-            this.customTextBox4.BackColor = System.Drawing.SystemColors.Window;
-            this.customTextBox4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.customTextBox4.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.customTextBox4.BorderRadius = 0;
-            this.customTextBox4.BorderSize = 2;
-            this.customTextBox4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customTextBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.customTextBox4.Location = new System.Drawing.Point(109, 19);
-            this.customTextBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.customTextBox4.Multiline = false;
-            this.customTextBox4.Name = "customTextBox4";
-            this.customTextBox4.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.customTextBox4.PasswordChar = false;
-            this.customTextBox4.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.customTextBox4.PlaceholderText = "";
-            this.customTextBox4.Size = new System.Drawing.Size(243, 30);
-            this.customTextBox4.TabIndex = 75;
-            this.customTextBox4.Texts = "";
-            this.customTextBox4.UnderlinedStyle = false;
-            // 
-            // btnCancel2
-            // 
-            this.btnCancel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.btnCancel2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.btnCancel2.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnCancel2.BorderRadius = 15;
-            this.btnCancel2.BorderSize = 0;
-            this.btnCancel2.FlatAppearance.BorderSize = 0;
-            this.btnCancel2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel2.ForeColor = System.Drawing.Color.White;
-            this.btnCancel2.Location = new System.Drawing.Point(767, 60);
-            this.btnCancel2.Name = "btnCancel2";
-            this.btnCancel2.Size = new System.Drawing.Size(110, 30);
-            this.btnCancel2.TabIndex = 74;
-            this.btnCancel2.Text = "Cancel";
-            this.btnCancel2.TextColor = System.Drawing.Color.White;
-            this.btnCancel2.UseVisualStyleBackColor = false;
-            // 
-            // btnConfirm2
-            // 
-            this.btnConfirm2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.btnConfirm2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.btnConfirm2.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnConfirm2.BorderRadius = 15;
-            this.btnConfirm2.BorderSize = 0;
-            this.btnConfirm2.FlatAppearance.BorderSize = 0;
-            this.btnConfirm2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConfirm2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfirm2.ForeColor = System.Drawing.Color.White;
-            this.btnConfirm2.Location = new System.Drawing.Point(767, 15);
-            this.btnConfirm2.Name = "btnConfirm2";
-            this.btnConfirm2.Size = new System.Drawing.Size(110, 30);
-            this.btnConfirm2.TabIndex = 73;
-            this.btnConfirm2.Text = "Confirm";
-            this.btnConfirm2.TextColor = System.Drawing.Color.White;
-            this.btnConfirm2.UseVisualStyleBackColor = false;
-            // 
-            // btnConfirmPass
-            // 
-            this.btnConfirmPass.Location = new System.Drawing.Point(725, 67);
-            this.btnConfirmPass.Name = "btnConfirmPass";
-            this.btnConfirmPass.Size = new System.Drawing.Size(36, 23);
-            this.btnConfirmPass.TabIndex = 72;
-            this.btnConfirmPass.Text = "chk";
-            this.btnConfirmPass.UseVisualStyleBackColor = true;
-            this.btnConfirmPass.Click += new System.EventHandler(this.btnConfirmPass_Click);
-            // 
-            // btnCancelPass
-            // 
-            this.btnCancelPass.Location = new System.Drawing.Point(725, 19);
-            this.btnCancelPass.Name = "btnCancelPass";
-            this.btnCancelPass.Size = new System.Drawing.Size(36, 23);
-            this.btnCancelPass.TabIndex = 65;
-            this.btnCancelPass.Text = "cancel";
-            this.btnCancelPass.UseVisualStyleBackColor = true;
-            this.btnCancelPass.Click += new System.EventHandler(this.btnCancelPass_Click);
-            // 
-            // tboxRePassEdit
-            // 
-            this.tboxRePassEdit.Location = new System.Drawing.Point(462, 88);
-            this.tboxRePassEdit.Name = "tboxRePassEdit";
-            this.tboxRePassEdit.PasswordChar = '*';
-            this.tboxRePassEdit.Size = new System.Drawing.Size(243, 20);
-            this.tboxRePassEdit.TabIndex = 71;
-            // 
-            // tboxNewPassEdit
-            // 
-            this.tboxNewPassEdit.Location = new System.Drawing.Point(462, 53);
-            this.tboxNewPassEdit.Name = "tboxNewPassEdit";
-            this.tboxNewPassEdit.PasswordChar = '*';
-            this.tboxNewPassEdit.Size = new System.Drawing.Size(243, 20);
-            this.tboxNewPassEdit.TabIndex = 70;
-            // 
-            // tboxCurrPass
-            // 
-            this.tboxCurrPass.Location = new System.Drawing.Point(462, 21);
-            this.tboxCurrPass.Name = "tboxCurrPass";
-            this.tboxCurrPass.PasswordChar = '*';
-            this.tboxCurrPass.Size = new System.Drawing.Size(243, 20);
-            this.tboxCurrPass.TabIndex = 69;
             // 
             // label8
             // 
@@ -382,157 +187,21 @@
             // 
             // pnlUsernameEdit
             // 
-            this.pnlUsernameEdit.Controls.Add(this.customTextBox3);
-            this.pnlUsernameEdit.Controls.Add(this.customTextBox2);
-            this.pnlUsernameEdit.Controls.Add(this.customTextBox1);
+            this.pnlUsernameEdit.Controls.Add(this.tboxRePassUser);
+            this.pnlUsernameEdit.Controls.Add(this.tboxPassUser);
+            this.pnlUsernameEdit.Controls.Add(this.tboxUsername);
             this.pnlUsernameEdit.Controls.Add(this.btnCancel);
             this.pnlUsernameEdit.Controls.Add(this.btnConfirm);
-            this.pnlUsernameEdit.Controls.Add(this.btnConfirmUser);
-            this.pnlUsernameEdit.Controls.Add(this.btnCancelUser);
-            this.pnlUsernameEdit.Controls.Add(this.tboxRePassUser);
             this.pnlUsernameEdit.Controls.Add(this.label1);
-            this.pnlUsernameEdit.Controls.Add(this.tboxPassUser);
             this.pnlUsernameEdit.Controls.Add(this.label6);
-            this.pnlUsernameEdit.Controls.Add(this.tboxUsername);
             this.pnlUsernameEdit.Controls.Add(this.label11);
             this.pnlUsernameEdit.Controls.Add(this.label13);
             this.pnlUsernameEdit.Controls.Add(this.label12);
             this.pnlUsernameEdit.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlUsernameEdit.Location = new System.Drawing.Point(0, 75);
             this.pnlUsernameEdit.Name = "pnlUsernameEdit";
-            this.pnlUsernameEdit.Size = new System.Drawing.Size(905, 150);
+            this.pnlUsernameEdit.Size = new System.Drawing.Size(766, 150);
             this.pnlUsernameEdit.TabIndex = 10;
-            // 
-            // customTextBox3
-            // 
-            this.customTextBox3.BackColor = System.Drawing.SystemColors.Window;
-            this.customTextBox3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.customTextBox3.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.customTextBox3.BorderRadius = 0;
-            this.customTextBox3.BorderSize = 2;
-            this.customTextBox3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customTextBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.customTextBox3.Location = new System.Drawing.Point(108, 98);
-            this.customTextBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.customTextBox3.Multiline = false;
-            this.customTextBox3.Name = "customTextBox3";
-            this.customTextBox3.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.customTextBox3.PasswordChar = false;
-            this.customTextBox3.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.customTextBox3.PlaceholderText = "";
-            this.customTextBox3.Size = new System.Drawing.Size(243, 30);
-            this.customTextBox3.TabIndex = 82;
-            this.customTextBox3.Texts = "";
-            this.customTextBox3.UnderlinedStyle = false;
-            // 
-            // customTextBox2
-            // 
-            this.customTextBox2.BackColor = System.Drawing.SystemColors.Window;
-            this.customTextBox2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.customTextBox2.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.customTextBox2.BorderRadius = 0;
-            this.customTextBox2.BorderSize = 2;
-            this.customTextBox2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customTextBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.customTextBox2.Location = new System.Drawing.Point(108, 60);
-            this.customTextBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.customTextBox2.Multiline = false;
-            this.customTextBox2.Name = "customTextBox2";
-            this.customTextBox2.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.customTextBox2.PasswordChar = false;
-            this.customTextBox2.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.customTextBox2.PlaceholderText = "";
-            this.customTextBox2.Size = new System.Drawing.Size(243, 30);
-            this.customTextBox2.TabIndex = 81;
-            this.customTextBox2.Texts = "";
-            this.customTextBox2.UnderlinedStyle = false;
-            // 
-            // customTextBox1
-            // 
-            this.customTextBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.customTextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.customTextBox1.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.customTextBox1.BorderRadius = 0;
-            this.customTextBox1.BorderSize = 2;
-            this.customTextBox1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.customTextBox1.Location = new System.Drawing.Point(108, 20);
-            this.customTextBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.customTextBox1.Multiline = false;
-            this.customTextBox1.Name = "customTextBox1";
-            this.customTextBox1.Padding = new System.Windows.Forms.Padding(7);
-            this.customTextBox1.PasswordChar = false;
-            this.customTextBox1.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.customTextBox1.PlaceholderText = "";
-            this.customTextBox1.Size = new System.Drawing.Size(243, 30);
-            this.customTextBox1.TabIndex = 80;
-            this.customTextBox1.Texts = "";
-            this.customTextBox1.UnderlinedStyle = false;
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.btnCancel.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.btnCancel.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnCancel.BorderRadius = 15;
-            this.btnCancel.BorderSize = 0;
-            this.btnCancel.FlatAppearance.BorderSize = 0;
-            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Location = new System.Drawing.Point(767, 60);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(110, 30);
-            this.btnCancel.TabIndex = 79;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.TextColor = System.Drawing.Color.White;
-            this.btnCancel.UseVisualStyleBackColor = false;
-            // 
-            // btnConfirm
-            // 
-            this.btnConfirm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.btnConfirm.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.btnConfirm.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnConfirm.BorderRadius = 15;
-            this.btnConfirm.BorderSize = 0;
-            this.btnConfirm.FlatAppearance.BorderSize = 0;
-            this.btnConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConfirm.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfirm.ForeColor = System.Drawing.Color.White;
-            this.btnConfirm.Location = new System.Drawing.Point(767, 13);
-            this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(110, 30);
-            this.btnConfirm.TabIndex = 78;
-            this.btnConfirm.Text = "Confirm";
-            this.btnConfirm.TextColor = System.Drawing.Color.White;
-            this.btnConfirm.UseVisualStyleBackColor = false;
-            // 
-            // btnConfirmUser
-            // 
-            this.btnConfirmUser.Location = new System.Drawing.Point(725, 60);
-            this.btnConfirmUser.Name = "btnConfirmUser";
-            this.btnConfirmUser.Size = new System.Drawing.Size(36, 23);
-            this.btnConfirmUser.TabIndex = 73;
-            this.btnConfirmUser.Text = "chk";
-            this.btnConfirmUser.UseVisualStyleBackColor = true;
-            this.btnConfirmUser.Click += new System.EventHandler(this.btnConfirmUser_Click);
-            // 
-            // btnCancelUser
-            // 
-            this.btnCancelUser.Location = new System.Drawing.Point(725, 20);
-            this.btnCancelUser.Name = "btnCancelUser";
-            this.btnCancelUser.Size = new System.Drawing.Size(36, 23);
-            this.btnCancelUser.TabIndex = 72;
-            this.btnCancelUser.Text = "cancel";
-            this.btnCancelUser.UseVisualStyleBackColor = true;
-            this.btnCancelUser.Click += new System.EventHandler(this.btnCancelUser_Click);
-            // 
-            // tboxRePassUser
-            // 
-            this.tboxRePassUser.Location = new System.Drawing.Point(462, 106);
-            this.tboxRePassUser.Name = "tboxRePassUser";
-            this.tboxRePassUser.Size = new System.Drawing.Size(243, 20);
-            this.tboxRePassUser.TabIndex = 77;
             // 
             // label1
             // 
@@ -542,13 +211,6 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(906, 10);
             this.label1.TabIndex = 63;
-            // 
-            // tboxPassUser
-            // 
-            this.tboxPassUser.Location = new System.Drawing.Point(462, 63);
-            this.tboxPassUser.Name = "tboxPassUser";
-            this.tboxPassUser.Size = new System.Drawing.Size(243, 20);
-            this.tboxPassUser.TabIndex = 76;
             // 
             // label6
             // 
@@ -562,13 +224,6 @@
             this.label6.TabIndex = 52;
             this.label6.Text = "  Username";
             // 
-            // tboxUsername
-            // 
-            this.tboxUsername.Location = new System.Drawing.Point(462, 28);
-            this.tboxUsername.Name = "tboxUsername";
-            this.tboxUsername.Size = new System.Drawing.Size(243, 20);
-            this.tboxUsername.TabIndex = 75;
-            // 
             // label11
             // 
             this.label11.BackColor = System.Drawing.Color.Transparent;
@@ -581,7 +236,6 @@
             this.label11.Size = new System.Drawing.Size(106, 15);
             this.label11.TabIndex = 74;
             this.label11.Text = "  Re-enter Password";
-            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // label13
             // 
@@ -613,45 +267,14 @@
             // pnlUsername
             // 
             this.pnlUsername.Controls.Add(this.btnEdit);
-            this.pnlUsername.Controls.Add(this.btnUserEdit);
             this.pnlUsername.Controls.Add(this.label10);
             this.pnlUsername.Controls.Add(this.lblUsername);
             this.pnlUsername.Controls.Add(this.lbluser);
             this.pnlUsername.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlUsername.Location = new System.Drawing.Point(0, 0);
             this.pnlUsername.Name = "pnlUsername";
-            this.pnlUsername.Size = new System.Drawing.Size(905, 75);
+            this.pnlUsername.Size = new System.Drawing.Size(766, 75);
             this.pnlUsername.TabIndex = 9;
-            // 
-            // btnEdit
-            // 
-            this.btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.btnEdit.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.btnEdit.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnEdit.BorderRadius = 15;
-            this.btnEdit.BorderSize = 0;
-            this.btnEdit.FlatAppearance.BorderSize = 0;
-            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEdit.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEdit.ForeColor = System.Drawing.Color.White;
-            this.btnEdit.Location = new System.Drawing.Point(767, 23);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(110, 30);
-            this.btnEdit.TabIndex = 73;
-            this.btnEdit.Text = "Edit";
-            this.btnEdit.TextColor = System.Drawing.Color.White;
-            this.btnEdit.UseVisualStyleBackColor = false;
-            this.btnEdit.Click += new System.EventHandler(this.customButton1_Click);
-            // 
-            // btnUserEdit
-            // 
-            this.btnUserEdit.Location = new System.Drawing.Point(725, 27);
-            this.btnUserEdit.Name = "btnUserEdit";
-            this.btnUserEdit.Size = new System.Drawing.Size(36, 23);
-            this.btnUserEdit.TabIndex = 63;
-            this.btnUserEdit.Text = "edit";
-            this.btnUserEdit.UseVisualStyleBackColor = true;
-            this.btnUserEdit.Click += new System.EventHandler(this.btnUserEdit_Click);
             // 
             // label10
             // 
@@ -683,6 +306,259 @@
             this.lbluser.TabIndex = 52;
             this.lbluser.Text = "  Username";
             // 
+            // tboxRePassEdit
+            // 
+            this.tboxRePassEdit.BackColor = System.Drawing.SystemColors.Window;
+            this.tboxRePassEdit.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.tboxRePassEdit.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.tboxRePassEdit.BorderRadius = 0;
+            this.tboxRePassEdit.BorderSize = 2;
+            this.tboxRePassEdit.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tboxRePassEdit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tboxRePassEdit.Location = new System.Drawing.Point(108, 99);
+            this.tboxRePassEdit.Margin = new System.Windows.Forms.Padding(4);
+            this.tboxRePassEdit.Multiline = false;
+            this.tboxRePassEdit.Name = "tboxRePassEdit";
+            this.tboxRePassEdit.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.tboxRePassEdit.PasswordChar = false;
+            this.tboxRePassEdit.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.tboxRePassEdit.PlaceholderText = "";
+            this.tboxRePassEdit.Size = new System.Drawing.Size(243, 30);
+            this.tboxRePassEdit.TabIndex = 77;
+            this.tboxRePassEdit.Texts = "";
+            this.tboxRePassEdit.UnderlinedStyle = false;
+            // 
+            // tboxNewPassEdit
+            // 
+            this.tboxNewPassEdit.BackColor = System.Drawing.SystemColors.Window;
+            this.tboxNewPassEdit.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.tboxNewPassEdit.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.tboxNewPassEdit.BorderRadius = 0;
+            this.tboxNewPassEdit.BorderSize = 2;
+            this.tboxNewPassEdit.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tboxNewPassEdit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tboxNewPassEdit.Location = new System.Drawing.Point(108, 59);
+            this.tboxNewPassEdit.Margin = new System.Windows.Forms.Padding(4);
+            this.tboxNewPassEdit.Multiline = false;
+            this.tboxNewPassEdit.Name = "tboxNewPassEdit";
+            this.tboxNewPassEdit.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.tboxNewPassEdit.PasswordChar = false;
+            this.tboxNewPassEdit.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.tboxNewPassEdit.PlaceholderText = "";
+            this.tboxNewPassEdit.Size = new System.Drawing.Size(243, 30);
+            this.tboxNewPassEdit.TabIndex = 76;
+            this.tboxNewPassEdit.Texts = "";
+            this.tboxNewPassEdit.UnderlinedStyle = false;
+            // 
+            // tboxCurrPass
+            // 
+            this.tboxCurrPass.BackColor = System.Drawing.SystemColors.Window;
+            this.tboxCurrPass.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.tboxCurrPass.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.tboxCurrPass.BorderRadius = 0;
+            this.tboxCurrPass.BorderSize = 2;
+            this.tboxCurrPass.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tboxCurrPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tboxCurrPass.Location = new System.Drawing.Point(109, 19);
+            this.tboxCurrPass.Margin = new System.Windows.Forms.Padding(4);
+            this.tboxCurrPass.Multiline = false;
+            this.tboxCurrPass.Name = "tboxCurrPass";
+            this.tboxCurrPass.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.tboxCurrPass.PasswordChar = false;
+            this.tboxCurrPass.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.tboxCurrPass.PlaceholderText = "";
+            this.tboxCurrPass.Size = new System.Drawing.Size(243, 30);
+            this.tboxCurrPass.TabIndex = 75;
+            this.tboxCurrPass.Texts = "";
+            this.tboxCurrPass.UnderlinedStyle = false;
+            // 
+            // btnCancel2
+            // 
+            this.btnCancel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.btnCancel2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.btnCancel2.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnCancel2.BorderRadius = 15;
+            this.btnCancel2.BorderSize = 0;
+            this.btnCancel2.FlatAppearance.BorderSize = 0;
+            this.btnCancel2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel2.ForeColor = System.Drawing.Color.White;
+            this.btnCancel2.Location = new System.Drawing.Point(600, 20);
+            this.btnCancel2.Name = "btnCancel2";
+            this.btnCancel2.Size = new System.Drawing.Size(110, 30);
+            this.btnCancel2.TabIndex = 74;
+            this.btnCancel2.Text = "Cancel";
+            this.btnCancel2.TextColor = System.Drawing.Color.White;
+            this.btnCancel2.UseVisualStyleBackColor = false;
+            this.btnCancel2.Click += new System.EventHandler(this.btnCancel2_Click);
+            // 
+            // btnConfirm2
+            // 
+            this.btnConfirm2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.btnConfirm2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.btnConfirm2.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnConfirm2.BorderRadius = 15;
+            this.btnConfirm2.BorderSize = 0;
+            this.btnConfirm2.FlatAppearance.BorderSize = 0;
+            this.btnConfirm2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfirm2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfirm2.ForeColor = System.Drawing.Color.White;
+            this.btnConfirm2.Location = new System.Drawing.Point(600, 99);
+            this.btnConfirm2.Name = "btnConfirm2";
+            this.btnConfirm2.Size = new System.Drawing.Size(110, 30);
+            this.btnConfirm2.TabIndex = 73;
+            this.btnConfirm2.Text = "Confirm";
+            this.btnConfirm2.TextColor = System.Drawing.Color.White;
+            this.btnConfirm2.UseVisualStyleBackColor = false;
+            this.btnConfirm2.Click += new System.EventHandler(this.btnConfirm2_Click);
+            // 
+            // btnEdit2
+            // 
+            this.btnEdit2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.btnEdit2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.btnEdit2.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnEdit2.BorderRadius = 15;
+            this.btnEdit2.BorderSize = 0;
+            this.btnEdit2.FlatAppearance.BorderSize = 0;
+            this.btnEdit2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEdit2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEdit2.ForeColor = System.Drawing.Color.White;
+            this.btnEdit2.Location = new System.Drawing.Point(600, 20);
+            this.btnEdit2.Name = "btnEdit2";
+            this.btnEdit2.Size = new System.Drawing.Size(110, 30);
+            this.btnEdit2.TabIndex = 65;
+            this.btnEdit2.Text = "Edit";
+            this.btnEdit2.TextColor = System.Drawing.Color.White;
+            this.btnEdit2.UseVisualStyleBackColor = false;
+            this.btnEdit2.Click += new System.EventHandler(this.btnEdit2_Click);
+            // 
+            // tboxRePassUser
+            // 
+            this.tboxRePassUser.AccessibleDescription = "";
+            this.tboxRePassUser.BackColor = System.Drawing.SystemColors.Window;
+            this.tboxRePassUser.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.tboxRePassUser.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.tboxRePassUser.BorderRadius = 0;
+            this.tboxRePassUser.BorderSize = 2;
+            this.tboxRePassUser.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tboxRePassUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tboxRePassUser.Location = new System.Drawing.Point(108, 98);
+            this.tboxRePassUser.Margin = new System.Windows.Forms.Padding(4);
+            this.tboxRePassUser.Multiline = false;
+            this.tboxRePassUser.Name = "tboxRePassUser";
+            this.tboxRePassUser.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.tboxRePassUser.PasswordChar = false;
+            this.tboxRePassUser.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.tboxRePassUser.PlaceholderText = "";
+            this.tboxRePassUser.Size = new System.Drawing.Size(243, 30);
+            this.tboxRePassUser.TabIndex = 82;
+            this.tboxRePassUser.Texts = "";
+            this.tboxRePassUser.UnderlinedStyle = false;
+            // 
+            // tboxPassUser
+            // 
+            this.tboxPassUser.BackColor = System.Drawing.SystemColors.Window;
+            this.tboxPassUser.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.tboxPassUser.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.tboxPassUser.BorderRadius = 0;
+            this.tboxPassUser.BorderSize = 2;
+            this.tboxPassUser.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tboxPassUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tboxPassUser.Location = new System.Drawing.Point(108, 60);
+            this.tboxPassUser.Margin = new System.Windows.Forms.Padding(4);
+            this.tboxPassUser.Multiline = false;
+            this.tboxPassUser.Name = "tboxPassUser";
+            this.tboxPassUser.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.tboxPassUser.PasswordChar = false;
+            this.tboxPassUser.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.tboxPassUser.PlaceholderText = "";
+            this.tboxPassUser.Size = new System.Drawing.Size(243, 30);
+            this.tboxPassUser.TabIndex = 81;
+            this.tboxPassUser.Texts = "";
+            this.tboxPassUser.UnderlinedStyle = false;
+            // 
+            // tboxUsername
+            // 
+            this.tboxUsername.BackColor = System.Drawing.SystemColors.Window;
+            this.tboxUsername.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.tboxUsername.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.tboxUsername.BorderRadius = 0;
+            this.tboxUsername.BorderSize = 2;
+            this.tboxUsername.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tboxUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tboxUsername.Location = new System.Drawing.Point(108, 20);
+            this.tboxUsername.Margin = new System.Windows.Forms.Padding(4);
+            this.tboxUsername.Multiline = false;
+            this.tboxUsername.Name = "tboxUsername";
+            this.tboxUsername.Padding = new System.Windows.Forms.Padding(7);
+            this.tboxUsername.PasswordChar = false;
+            this.tboxUsername.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.tboxUsername.PlaceholderText = "";
+            this.tboxUsername.Size = new System.Drawing.Size(243, 30);
+            this.tboxUsername.TabIndex = 80;
+            this.tboxUsername.Texts = "";
+            this.tboxUsername.UnderlinedStyle = false;
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.btnCancel.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.btnCancel.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnCancel.BorderRadius = 15;
+            this.btnCancel.BorderSize = 0;
+            this.btnCancel.FlatAppearance.BorderSize = 0;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.ForeColor = System.Drawing.Color.White;
+            this.btnCancel.Location = new System.Drawing.Point(600, 20);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(110, 30);
+            this.btnCancel.TabIndex = 79;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.TextColor = System.Drawing.Color.White;
+            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // btnConfirm
+            // 
+            this.btnConfirm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.btnConfirm.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.btnConfirm.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnConfirm.BorderRadius = 15;
+            this.btnConfirm.BorderSize = 0;
+            this.btnConfirm.FlatAppearance.BorderSize = 0;
+            this.btnConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfirm.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfirm.ForeColor = System.Drawing.Color.White;
+            this.btnConfirm.Location = new System.Drawing.Point(600, 98);
+            this.btnConfirm.Name = "btnConfirm";
+            this.btnConfirm.Size = new System.Drawing.Size(110, 30);
+            this.btnConfirm.TabIndex = 78;
+            this.btnConfirm.Text = "Confirm";
+            this.btnConfirm.TextColor = System.Drawing.Color.White;
+            this.btnConfirm.UseVisualStyleBackColor = false;
+            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.btnEdit.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.btnEdit.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnEdit.BorderRadius = 15;
+            this.btnEdit.BorderSize = 0;
+            this.btnEdit.FlatAppearance.BorderSize = 0;
+            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEdit.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEdit.ForeColor = System.Drawing.Color.White;
+            this.btnEdit.Location = new System.Drawing.Point(600, 20);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(110, 30);
+            this.btnEdit.TabIndex = 73;
+            this.btnEdit.Text = "Edit";
+            this.btnEdit.TextColor = System.Drawing.Color.White;
+            this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            // 
             // SecurityDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -694,13 +570,11 @@
             this.Controls.Add(this.pnlUsername);
             this.Controls.Add(this.label3);
             this.Name = "SecurityDetails";
-            this.Size = new System.Drawing.Size(905, 465);
+            this.Size = new System.Drawing.Size(766, 458);
             this.Load += new System.EventHandler(this.SecurityDetails_Load);
             this.pnlPassword.ResumeLayout(false);
             this.pnlPasswordEdit.ResumeLayout(false);
-            this.pnlPasswordEdit.PerformLayout();
             this.pnlUsernameEdit.ResumeLayout(false);
-            this.pnlUsernameEdit.PerformLayout();
             this.pnlUsername.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -712,44 +586,32 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel pnlPasswordEdit;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button btnPassEdit;
         private System.Windows.Forms.Panel pnlUsernameEdit;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel pnlUsername;
-        private System.Windows.Forms.Button btnUserEdit;
         private System.Windows.Forms.Label lblUsername;
         private System.Windows.Forms.Label lbluser;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox tboxRePassEdit;
-        private System.Windows.Forms.TextBox tboxNewPassEdit;
-        private System.Windows.Forms.TextBox tboxCurrPass;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox tboxRePassUser;
-        private System.Windows.Forms.TextBox tboxPassUser;
-        private System.Windows.Forms.TextBox tboxUsername;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Button btnConfirmPass;
-        private System.Windows.Forms.Button btnCancelPass;
-        private System.Windows.Forms.Button btnConfirmUser;
-        private System.Windows.Forms.Button btnCancelUser;
         private Materials.CustomButton btnEdit;
         private Materials.CustomButton btnCancel;
         private Materials.CustomButton btnConfirm;
         private Materials.CustomButton btnEdit2;
         private Materials.CustomButton btnConfirm2;
         private Materials.CustomButton btnCancel2;
-        private CustomControls.RJControls.CustomTextBox customTextBox1;
-        private CustomControls.RJControls.CustomTextBox customTextBox2;
-        private CustomControls.RJControls.CustomTextBox customTextBox3;
-        private CustomControls.RJControls.CustomTextBox customTextBox6;
-        private CustomControls.RJControls.CustomTextBox customTextBox5;
-        private CustomControls.RJControls.CustomTextBox customTextBox4;
+        private CustomControls.RJControls.CustomTextBox tboxUsername;
+        private CustomControls.RJControls.CustomTextBox tboxPassUser;
+        private CustomControls.RJControls.CustomTextBox tboxRePassUser;
+        private CustomControls.RJControls.CustomTextBox tboxRePassEdit;
+        private CustomControls.RJControls.CustomTextBox tboxNewPassEdit;
+        private CustomControls.RJControls.CustomTextBox tboxCurrPass;
     }
 }

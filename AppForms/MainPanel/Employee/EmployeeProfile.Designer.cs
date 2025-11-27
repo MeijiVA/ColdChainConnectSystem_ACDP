@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.btnExit = new System.Windows.Forms.Button();
+            this.tscStatus = new ToggleSlider.ToggleSliderComponent();
+            this.customButton1 = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
             this.customPanel3 = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
             this.AccountContainer = new ColdChainConnectSystem_ACDP.AppForms.Header.Settings.PersonalDetails.AccountInformation();
             this.customPanel2 = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
@@ -37,8 +39,6 @@
             this.customPanel1 = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
             this.PersonalContainer = new ColdChainConnectSystem_ACDP.AppForms.Header.Settings.PersonalDetails.Personal_Information();
             this.lbl = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
-            this.customButton1 = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
-            this.tscStatus = new ToggleSlider.ToggleSliderComponent();
             this.customPanel3.SuspendLayout();
             this.customPanel2.SuspendLayout();
             this.customPanel1.SuspendLayout();
@@ -60,6 +60,42 @@
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // tscStatus
+            // 
+            this.tscStatus.AutoSize = true;
+            this.tscStatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.tscStatus.Checked = true;
+            this.tscStatus.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            this.tscStatus.ForeColor = System.Drawing.Color.White;
+            this.tscStatus.Location = new System.Drawing.Point(347, 86);
+            this.tscStatus.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tscStatus.Name = "tscStatus";
+            this.tscStatus.Size = new System.Drawing.Size(119, 30);
+            this.tscStatus.TabIndex = 77;
+            this.tscStatus.ToggleBarText = "Active";
+            this.tscStatus.ToggleCircleColor = System.Drawing.Color.Green;
+            this.tscStatus.ToggleColorBar = System.Drawing.Color.Gray;
+            this.tscStatus.CheckChanged += new System.EventHandler(this.tscStatus_CheckChanged);
+            // 
+            // customButton1
+            // 
+            this.customButton1.BackColor = System.Drawing.Color.Transparent;
+            this.customButton1.BackgroundColor = System.Drawing.Color.Transparent;
+            this.customButton1.BackgroundImage = global::ColdChainConnectSystem_ACDP.Properties.Resources.editBtn;
+            this.customButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.customButton1.BorderColor = System.Drawing.Color.Peru;
+            this.customButton1.BorderRadius = 0;
+            this.customButton1.BorderSize = 0;
+            this.customButton1.FlatAppearance.BorderSize = 0;
+            this.customButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.customButton1.ForeColor = System.Drawing.Color.White;
+            this.customButton1.Location = new System.Drawing.Point(732, 79);
+            this.customButton1.Name = "customButton1";
+            this.customButton1.Size = new System.Drawing.Size(43, 40);
+            this.customButton1.TabIndex = 76;
+            this.customButton1.TextColor = System.Drawing.Color.White;
+            this.customButton1.UseVisualStyleBackColor = false;
+            // 
             // customPanel3
             // 
             this.customPanel3.BackColor = System.Drawing.Color.White;
@@ -78,15 +114,15 @@
             // AccountContainer
             // 
             this.AccountContainer.BackColor = System.Drawing.Color.White;
-            this.AccountContainer.ConNum = "Ow yeah";
+            this.AccountContainer.ConNum = "Contact Number here";
             this.AccountContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.AccountContainer.EmailInfo = "email";
+            this.AccountContainer.EmailInfo = "Email  here";
             this.AccountContainer.ForeColor = System.Drawing.Color.Black;
             this.AccountContainer.Location = new System.Drawing.Point(0, 0);
             this.AccountContainer.Name = "AccountContainer";
-            this.AccountContainer.PositionInfo = "position";
+            this.AccountContainer.PositionInfo = "Position here";
             this.AccountContainer.Size = new System.Drawing.Size(280, 422);
-            this.AccountContainer.StatusInfo = "status";
+            this.AccountContainer.StatusInfo = "Status here";
             this.AccountContainer.TabIndex = 65;
             // 
             // customPanel2
@@ -108,15 +144,15 @@
             // 
             this.AddressContainer.BackColor = System.Drawing.Color.White;
             this.AddressContainer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.AddressContainer.Barangay = "test";
-            this.AddressContainer.City = "label4";
+            this.AddressContainer.Barangay = "BRGY  here";
+            this.AddressContainer.City = "City  here";
             this.AddressContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.AddressContainer.ForeColor = System.Drawing.Color.Black;
-            this.AddressContainer.HouseNum = "label1";
+            this.AddressContainer.HouseNum = "H.Num here";
             this.AddressContainer.Location = new System.Drawing.Point(0, 0);
             this.AddressContainer.Name = "AddressContainer";
-            this.AddressContainer.Postal = "label3";
-            this.AddressContainer.Province = "label3";
+            this.AddressContainer.Postal = "Postal here";
+            this.AddressContainer.Province = "Province here";
             this.AddressContainer.Size = new System.Drawing.Size(450, 200);
             this.AddressContainer.TabIndex = 66;
             // 
@@ -156,17 +192,17 @@
             // 
             // PersonalContainer
             // 
-            this.PersonalContainer.AgeInfo = "label3";
+            this.PersonalContainer.AgeInfo = "AGE here";
             this.PersonalContainer.BackColor = System.Drawing.Color.White;
-            this.PersonalContainer.DOBInfo = "label3";
+            this.PersonalContainer.DOBInfo = "DOB here";
             this.PersonalContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PersonalContainer.First_NameInfo = "label1";
+            this.PersonalContainer.First_NameInfo = "FNAME here";
             this.PersonalContainer.ForeColor = System.Drawing.Color.Black;
-            this.PersonalContainer.Last_NameInfo = "label4";
+            this.PersonalContainer.Last_NameInfo = "LNAME here";
             this.PersonalContainer.Location = new System.Drawing.Point(0, 0);
-            this.PersonalContainer.Middle_NameInfo = "label2";
+            this.PersonalContainer.Middle_NameInfo = "MNAME here";
             this.PersonalContainer.Name = "PersonalContainer";
-            this.PersonalContainer.SexInfo = "label3";
+            this.PersonalContainer.SexInfo = "GENDER here";
             this.PersonalContainer.Size = new System.Drawing.Size(450, 200);
             this.PersonalContainer.TabIndex = 0;
             // 
@@ -188,42 +224,6 @@
             this.lbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lbl.TextColor = System.Drawing.Color.White;
             this.lbl.UseMnemonic = false;
-            // 
-            // customButton1
-            // 
-            this.customButton1.BackColor = System.Drawing.Color.Transparent;
-            this.customButton1.BackgroundColor = System.Drawing.Color.Transparent;
-            this.customButton1.BackgroundImage = global::ColdChainConnectSystem_ACDP.Properties.Resources.editBtn;
-            this.customButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.customButton1.BorderColor = System.Drawing.Color.Peru;
-            this.customButton1.BorderRadius = 0;
-            this.customButton1.BorderSize = 0;
-            this.customButton1.FlatAppearance.BorderSize = 0;
-            this.customButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customButton1.ForeColor = System.Drawing.Color.White;
-            this.customButton1.Location = new System.Drawing.Point(732, 79);
-            this.customButton1.Name = "customButton1";
-            this.customButton1.Size = new System.Drawing.Size(43, 40);
-            this.customButton1.TabIndex = 76;
-            this.customButton1.TextColor = System.Drawing.Color.White;
-            this.customButton1.UseVisualStyleBackColor = false;
-            // 
-            // tscStatus
-            // 
-            this.tscStatus.AutoSize = true;
-            this.tscStatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.tscStatus.Checked = true;
-            this.tscStatus.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
-            this.tscStatus.ForeColor = System.Drawing.Color.White;
-            this.tscStatus.Location = new System.Drawing.Point(347, 86);
-            this.tscStatus.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tscStatus.Name = "tscStatus";
-            this.tscStatus.Size = new System.Drawing.Size(119, 30);
-            this.tscStatus.TabIndex = 77;
-            this.tscStatus.ToggleBarText = "Active";
-            this.tscStatus.ToggleCircleColor = System.Drawing.Color.Green;
-            this.tscStatus.ToggleColorBar = System.Drawing.Color.Gray;
-            this.tscStatus.CheckChanged += new System.EventHandler(this.tscStatus_CheckChanged);
             // 
             // EmployeeProfile
             // 
