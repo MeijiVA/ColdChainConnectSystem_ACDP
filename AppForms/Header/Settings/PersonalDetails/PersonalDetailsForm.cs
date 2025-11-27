@@ -17,6 +17,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings
         public PersonalDetailsForm()
         {
             InitializeComponent();
+            this.DoubleBuffered = true; // Apply to the form
         }
 
         private void PersonalDetailsForm_Load(object sender, EventArgs e)

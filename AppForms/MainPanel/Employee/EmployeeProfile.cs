@@ -31,6 +31,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.Employee
         {
             InitializeComponent();
             editFlag = false;
+            this.DoubleBuffered = true; // Apply to the form
 
         }
 
@@ -253,15 +254,19 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.Employee
         {
             if (!editFlag)
             {
+                this.SuspendLayout();
                 EditEmployeeData();
                 btnSave.Visible = true;
                 editFlag = true;
+                this.ResumeLayout();
             }
             else if (editFlag)
             {
+                this.SuspendLayout();
                 LoadEmployeeData();
                 btnSave.Visible = false;
                 editFlag = false;
+                this.ResumeLayout();
             }
 
         }
@@ -336,5 +341,6 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.Employee
         {
 
         }
+
     }
 }

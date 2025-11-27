@@ -163,7 +163,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Supplier
             {
                 VarView.id = cellValue;
                 ViewSupplier vs = new ViewSupplier();
-                vs.Show();
+                vs.Show(this);
             }
         }
 

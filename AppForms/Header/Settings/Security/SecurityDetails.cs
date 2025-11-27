@@ -18,7 +18,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.PersonalDetails
         public SecurityDetails()
         {
             InitializeComponent();
-
+            this.DoubleBuffered = true; // Apply to the form
         }
         public string PasswordLength 
         {
@@ -128,6 +128,11 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.PersonalDetails
         }
 
         private void pnlPassword_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pnlUsernameEdit_Paint(object sender, PaintEventArgs e)
         {
 
         }

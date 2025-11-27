@@ -26,6 +26,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.SidePanel
         public SidePanel()
         {
             InitializeComponent();
+            this.DoubleBuffered = true; // Apply to the form
         }
         String baseblue = "#070760";
         private void SelectedTab(Button b)

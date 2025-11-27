@@ -15,6 +15,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
         public EditItemInventory()
         {
             InitializeComponent();
+            this.DoubleBuffered = true; // Apply to the form
         }
     }
 }

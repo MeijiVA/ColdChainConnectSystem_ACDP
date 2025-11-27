@@ -26,6 +26,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
         public SalesForm()
         {
             InitializeComponent();
+            this.DoubleBuffered = true; // Apply to the form
         }
 
         private void SalesForm_Load(object sender, EventArgs e)
@@ -187,7 +188,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
             {
                 VarView.id = cellValue;
                 ViewTransactionSales vt = new ViewTransactionSales();
-                vt.Show();
+                vt.Show(this);
             }
         }
     }

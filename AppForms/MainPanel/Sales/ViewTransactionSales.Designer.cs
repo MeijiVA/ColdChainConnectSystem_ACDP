@@ -222,11 +222,13 @@
             this.btnExitView.Text = "Exit View";
             this.btnExitView.TextColor = System.Drawing.Color.White;
             this.btnExitView.UseVisualStyleBackColor = false;
+            this.btnExitView.Click += new System.EventHandler(this.btnExitView_Click);
             // 
             // ViewTransactionSales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(600, 393);
             this.Controls.Add(this.btnExitView);
             this.Controls.Add(this.dpExpiry);
@@ -243,6 +245,7 @@
             this.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ViewTransactionSales";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ViewTransactionSales";
             this.Load += new System.EventHandler(this.ViewTransactionSales_Load);
             this.ResumeLayout(false);

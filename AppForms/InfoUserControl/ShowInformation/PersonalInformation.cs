@@ -17,6 +17,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.PersonalDetails
         public Personal_Information()
         {
             InitializeComponent();
+            this.DoubleBuffered = true; // Apply to the form
         }
 
         public string First_NameInfo

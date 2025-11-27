@@ -26,6 +26,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
         public InventoryForm()
         {
             InitializeComponent();
+            this.DoubleBuffered = true; // Apply to the form
         }
         private void InventoryForm_Load(object sender, EventArgs e)
         {
@@ -193,7 +194,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
             {
                 VarView.id = cellValue;
                 ViewItemInventory vi = new ViewItemInventory();
-                vi.Show();
+                vi.Show(this);
             }
         }
 

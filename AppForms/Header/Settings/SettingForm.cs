@@ -23,6 +23,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Settings
         public SettingForm()
         {
             InitializeComponent();
+            this.DoubleBuffered = true; // Apply to the form
         }
 
 
@@ -56,6 +57,11 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Settings
             secf = new SecurityForm();
             empf = new EmployeeForm();
             this.NavigateTo(pdf);
+        }
+
+        private void pnlDisplaySettings_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

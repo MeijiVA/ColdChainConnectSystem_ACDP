@@ -163,8 +163,8 @@
             // 
             // pnlPersonal
             // 
-            this.pnlPersonal.BackColor = System.Drawing.Color.Transparent;
-            this.pnlPersonal.BackgroundColor = System.Drawing.Color.Transparent;
+            this.pnlPersonal.BackColor = System.Drawing.Color.White;
+            this.pnlPersonal.BackgroundColor = System.Drawing.Color.White;
             this.pnlPersonal.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.pnlPersonal.BorderRadius = 15;
             this.pnlPersonal.BorderSize = 0;

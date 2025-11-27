@@ -38,11 +38,13 @@ namespace ColdChainConnectSystem_ACDP
 
         public void NavigateTo(Form screen)
         {
+            DisplayPanel.SuspendLayout();
             DisplayPanel.Controls.Clear();
             screen.Dock = DockStyle.Fill;
             screen.TopLevel = false;
             DisplayPanel.Controls.Add(screen);
             screen.Show();
+            DisplayPanel.ResumeLayout();
         }
 
 

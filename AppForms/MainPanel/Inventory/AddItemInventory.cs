@@ -15,6 +15,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
         public AddItemInventory()
         {
             InitializeComponent();
+            this.DoubleBuffered = true; // Apply to the form
             string downloadsPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), "Downloads");
         }
 

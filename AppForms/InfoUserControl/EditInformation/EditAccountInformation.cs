@@ -15,6 +15,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.PersonalDetails
         public EditAccountInformation()
         {
             InitializeComponent();
+            this.DoubleBuffered = true; // Apply to the form
         }
         public string PositionInfo
         {

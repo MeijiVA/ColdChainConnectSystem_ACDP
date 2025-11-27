@@ -17,6 +17,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Dashboard
         public GreetPanel()
         {
             InitializeComponent();
+            this.DoubleBuffered = true; // Apply to the form
         }
 
         private void GreetPanel_Load(object sender, EventArgs e)

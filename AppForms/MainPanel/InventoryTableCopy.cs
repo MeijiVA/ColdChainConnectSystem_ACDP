@@ -19,6 +19,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
         public DisplayTableUC()
         {
             InitializeComponent();
+            this.DoubleBuffered = true; // Apply to the form
         }
 
         private void DisplayTableUC_Load(object sender, EventArgs e)

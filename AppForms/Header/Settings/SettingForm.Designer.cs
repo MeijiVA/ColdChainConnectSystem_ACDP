@@ -55,6 +55,7 @@
             this.pnlDisplaySettings.Size = new System.Drawing.Size(766, 458);
             this.pnlDisplaySettings.TabIndex = 0;
             this.pnlDisplaySettings.TextColor = System.Drawing.Color.White;
+            this.pnlDisplaySettings.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlDisplaySettings_Paint);
             // 
             // lblSettings
             // 

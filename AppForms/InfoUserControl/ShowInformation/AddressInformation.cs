@@ -16,6 +16,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.PersonalDetails
         public AddressInformation()
         {
             InitializeComponent();
+            this.DoubleBuffered = true; // Apply to the form
         }
         public string HouseNum
         {

@@ -30,6 +30,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
         public SearchUC()
         {
             InitializeComponent();
+            this.DoubleBuffered = true; // Apply to the form
             ofdExport.Filter = "Excel Worksheets|*.xls;*.xlsx;*.xlsm";
             ofdImport.Filter = "Excel Worksheets|*.xls;*.xlsx;*.xlsm";
         }

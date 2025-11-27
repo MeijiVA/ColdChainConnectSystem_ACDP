@@ -20,6 +20,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Settings
         public settingsTabControl()
         {
             InitializeComponent();
+            this.DoubleBuffered = true; // Apply to the form
         }
         private void settingsTabControl_Load(object sender, EventArgs e)
         {

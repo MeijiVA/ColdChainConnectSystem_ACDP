@@ -178,6 +178,7 @@
             this.customLabel4.Size = new System.Drawing.Size(460, 67);
             this.customLabel4.TabIndex = 32;
             this.customLabel4.Text = "customLabel4";
+            this.customLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.customLabel4.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             // 
             // label5
@@ -246,6 +247,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(600, 393);
             this.Controls.Add(this.btnExitView);
             this.Controls.Add(this.pictureBox2);
@@ -264,6 +266,7 @@
             this.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ViewItemInventory";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ViewEditInventoryForm";
             this.Load += new System.EventHandler(this.ViewEditInventory_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

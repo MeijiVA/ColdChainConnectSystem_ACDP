@@ -19,6 +19,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.Employee
         public EmployeeForm()
         {
             InitializeComponent();
+            this.DoubleBuffered = true; // Apply to the form
         }
 
         private void EmployeeForm_Load(object sender, EventArgs ea)

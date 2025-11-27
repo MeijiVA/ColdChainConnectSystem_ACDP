@@ -22,6 +22,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Dashboard
         public DashoardForm()
         {
             InitializeComponent();
+            this.DoubleBuffered = true; // Apply to the form
         }
         private void DashoardForm_Load(object sender, EventArgs e)
         {

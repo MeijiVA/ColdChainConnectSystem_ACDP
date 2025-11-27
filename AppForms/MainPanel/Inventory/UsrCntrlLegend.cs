@@ -16,6 +16,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
         public UsrCntrlLegend()
         {
             InitializeComponent();
+            this.DoubleBuffered = true; // Apply to the form
         }
     }
 }

@@ -17,6 +17,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.SidePanel
         public UserAccountControl()
         {
             InitializeComponent();
+            this.DoubleBuffered = true; // Apply to the form
         }
 
         private void UserControl1_Load(object sender, EventArgs e)

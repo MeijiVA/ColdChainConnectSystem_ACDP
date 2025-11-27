@@ -18,6 +18,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
         public ItemTab()
         {
             InitializeComponent();
+            this.DoubleBuffered = true; // Apply to the form
         }
 
         double totalValuePrice;
