@@ -318,11 +318,11 @@
     <Compile Include="AppForms\MainPanel\Inventory\UsrCntrlLegend.Designer.cs">
       <DependentUpon>UsrCntrlLegend.cs</DependentUpon>
     </Compile>
-    <Compile Include="AppForms\MainPanel\Inventory\ViewEditInventory.cs">
+    <Compile Include="AppForms\MainPanel\Inventory\ViewItemInventory.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AppForms\MainPanel\Inventory\ViewEditInventory.Designer.cs">
-      <DependentUpon>ViewEditInventory.cs</DependentUpon>
+    <Compile Include="AppForms\MainPanel\Inventory\ViewItemInventory.Designer.cs">
+      <DependentUpon>ViewItemInventory.cs</DependentUpon>
     </Compile>
     <Compile Include="AppForms\MainPanel\Sales\EditTransactionSales.cs">
       <SubType>Form</SubType>
@@ -426,6 +426,7 @@
     <Compile Include="ClassResources\Instances\MainInstance.cs" />
     <Compile Include="ClassResources\Instances\SalesInstance.cs" />
     <Compile Include="ClassResources\Instances\SettingsInstance.cs" />
+    <Compile Include="ClassResources\Instances\VarView.cs" />
     <Compile Include="ClassResources\Security\ChangeCredentialsClass.cs" />
     <Compile Include="ClassResources\Connection\ConnectionClass.cs" />
     <Compile Include="ClassResources\Display\CurrentFormClass.cs" />
@@ -563,8 +564,8 @@
     <EmbeddedResource Include="AppForms\MainPanel\Inventory\UsrCntrlLegend.resx">
       <DependentUpon>UsrCntrlLegend.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AppForms\MainPanel\Inventory\ViewEditInventory.resx">
-      <DependentUpon>ViewEditInventory.cs</DependentUpon>
+    <EmbeddedResource Include="AppForms\MainPanel\Inventory\ViewItemInventory.resx">
+      <DependentUpon>ViewItemInventory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AppForms\MainPanel\Sales\AddTransactionSales.resx">
       <DependentUpon>AddTransactionSales.cs</DependentUpon>
