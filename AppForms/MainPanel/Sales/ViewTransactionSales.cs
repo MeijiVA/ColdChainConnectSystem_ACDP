@@ -36,16 +36,28 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
 
         private void ViewTransactionSales_Load(object sender, EventArgs e)
         {
-            string query = $"SELECT * FROM Sales WHERE [numid] = {ClassResources.Instances.VarView.id}";
+            string query = $"SELECT a.[numid], a.[salesid],a.[customerid], c.[customername],a.[salesdate],a.[productid], i.[skucode],a.[quantity],i.[unitprice],(a.[quantity] * i.[unitprice]) AS TOTAL,a.[status] FROM Sales as a JOIN Inventory AS i ON a.[productid] = i.[numid] JOIN Customer AS c ON c.[customerid] = a.[customerid] WHERE a.[numid] = {ClassResources.Instances.VarView.id}";
             SqlConnection con = ConnectionClass.Connection();
             con.Open();
+            Console.WriteLine(query);
             using (SqlCommand cmd = new SqlCommand(query, con))
             {
                 using (var reader = cmd.ExecuteReader())
                 {
                     if (reader.Read())
-                    {//num  custid custname phonenum address payterm regdate status
+                    {//num sales cust sales
                         lblID.Text = "  [" + reader[0].ToString() + "] ( Sale ID : " + reader[1].ToString() + ")";
+                        lblCustomerID.Text = reader[2].ToString();
+                        lblCustomerName.Text = reader[3].ToString();
+                        dpSalesDate.Value = Convert.ToDateTime(reader[4]);
+                        lblProductID.Text = reader[5].ToString();
+                        lblSku.Text = reader[6].ToString();
+                        lblQuantity.Text = reader[7].ToString();
+                        lblUnitPrice.Text = reader[8].ToString();
+                        lblTotalPrice.Text = reader[9].ToString();
+                        lblStatus.Text = reader[10].ToString();
+
+
                     }
                 }
             }
