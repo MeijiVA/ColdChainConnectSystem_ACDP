@@ -32,13 +32,14 @@
             this.lblCustomer = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.lblDate = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
             this.label3 = new System.Windows.Forms.Label();
             this.lblProduct = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
             this.label4 = new System.Windows.Forms.Label();
             this.lblQuantity = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
             this.label5 = new System.Windows.Forms.Label();
             this.lblStatus = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
+            this.dpExpiry = new ColdChainConnectSystem_ACDP.Materials.CustomDatePicker();
+            this.btnExitView = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
             this.SuspendLayout();
             // 
             // lblID
@@ -86,49 +87,30 @@
             this.label1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(12, 58);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(39, 14);
+            this.label1.Size = new System.Drawing.Size(97, 14);
             this.label1.TabIndex = 3;
-            this.label1.Text = "label1";
+            this.label1.Text = "Customer Name";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(12, 112);
+            this.label2.Location = new System.Drawing.Point(211, 55);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(39, 14);
+            this.label2.Size = new System.Drawing.Size(64, 14);
             this.label2.TabIndex = 5;
-            this.label2.Text = "label2";
-            // 
-            // lblDate
-            // 
-            this.lblDate.BackColor = System.Drawing.Color.White;
-            this.lblDate.BackgroundColor = System.Drawing.Color.White;
-            this.lblDate.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.lblDate.BorderRadius = 10;
-            this.lblDate.BorderSize = 2;
-            this.lblDate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblDate.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
-            this.lblDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.lblDate.Location = new System.Drawing.Point(12, 128);
-            this.lblDate.Name = "lblDate";
-            this.lblDate.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.lblDate.Size = new System.Drawing.Size(180, 30);
-            this.lblDate.TabIndex = 4;
-            this.lblDate.Text = "customLabel2";
-            this.lblDate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblDate.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.label2.Text = "Sales Date";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(12, 170);
+            this.label3.Location = new System.Drawing.Point(12, 112);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(39, 14);
+            this.label3.Size = new System.Drawing.Size(50, 14);
             this.label3.TabIndex = 7;
-            this.label3.Text = "label3";
+            this.label3.Text = "Product";
             // 
             // lblProduct
             // 
@@ -140,7 +122,7 @@
             this.lblProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblProduct.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
             this.lblProduct.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.lblProduct.Location = new System.Drawing.Point(12, 186);
+            this.lblProduct.Location = new System.Drawing.Point(12, 128);
             this.lblProduct.Name = "lblProduct";
             this.lblProduct.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.lblProduct.Size = new System.Drawing.Size(180, 30);
@@ -153,11 +135,11 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(12, 224);
+            this.label4.Location = new System.Drawing.Point(12, 166);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(39, 14);
+            this.label4.Size = new System.Drawing.Size(52, 14);
             this.label4.TabIndex = 9;
-            this.label4.Text = "label4";
+            this.label4.Text = "Quantity";
             // 
             // lblQuantity
             // 
@@ -169,7 +151,7 @@
             this.lblQuantity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblQuantity.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
             this.lblQuantity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.lblQuantity.Location = new System.Drawing.Point(12, 240);
+            this.lblQuantity.Location = new System.Drawing.Point(12, 182);
             this.lblQuantity.Name = "lblQuantity";
             this.lblQuantity.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.lblQuantity.Size = new System.Drawing.Size(180, 30);
@@ -182,11 +164,11 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(12, 279);
+            this.label5.Location = new System.Drawing.Point(12, 221);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(39, 14);
+            this.label5.Size = new System.Drawing.Size(42, 14);
             this.label5.TabIndex = 11;
-            this.label5.Text = "label5";
+            this.label5.Text = "Status";
             // 
             // lblStatus
             // 
@@ -198,7 +180,7 @@
             this.lblStatus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblStatus.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
             this.lblStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.lblStatus.Location = new System.Drawing.Point(12, 295);
+            this.lblStatus.Location = new System.Drawing.Point(12, 237);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.lblStatus.Size = new System.Drawing.Size(180, 30);
@@ -207,11 +189,47 @@
             this.lblStatus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblStatus.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             // 
+            // dpExpiry
+            // 
+            this.dpExpiry.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.dpExpiry.BorderSize = 2;
+            this.dpExpiry.CalendarTitleBackColor = System.Drawing.SystemColors.ControlText;
+            this.dpExpiry.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.dpExpiry.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
+            this.dpExpiry.Location = new System.Drawing.Point(211, 72);
+            this.dpExpiry.MinimumSize = new System.Drawing.Size(4, 30);
+            this.dpExpiry.Name = "dpExpiry";
+            this.dpExpiry.Size = new System.Drawing.Size(198, 30);
+            this.dpExpiry.SkinColor = System.Drawing.Color.White;
+            this.dpExpiry.TabIndex = 40;
+            this.dpExpiry.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            // 
+            // btnExitView
+            // 
+            this.btnExitView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.btnExitView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.btnExitView.BorderColor = System.Drawing.Color.Empty;
+            this.btnExitView.BorderRadius = 10;
+            this.btnExitView.BorderSize = 2;
+            this.btnExitView.FlatAppearance.BorderSize = 0;
+            this.btnExitView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExitView.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            this.btnExitView.ForeColor = System.Drawing.Color.White;
+            this.btnExitView.Location = new System.Drawing.Point(438, 341);
+            this.btnExitView.Name = "btnExitView";
+            this.btnExitView.Size = new System.Drawing.Size(150, 40);
+            this.btnExitView.TabIndex = 42;
+            this.btnExitView.Text = "Exit View";
+            this.btnExitView.TextColor = System.Drawing.Color.White;
+            this.btnExitView.UseVisualStyleBackColor = false;
+            // 
             // ViewTransactionSales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 393);
+            this.Controls.Add(this.btnExitView);
+            this.Controls.Add(this.dpExpiry);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.lblStatus);
             this.Controls.Add(this.label4);
@@ -219,7 +237,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblProduct);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.lblDate);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblCustomer);
             this.Controls.Add(this.lblID);
@@ -239,12 +256,13 @@
         private Materials.CustomLabel lblCustomer;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private Materials.CustomLabel lblDate;
         private System.Windows.Forms.Label label3;
         private Materials.CustomLabel lblProduct;
         private System.Windows.Forms.Label label4;
         private Materials.CustomLabel lblQuantity;
         private System.Windows.Forms.Label label5;
         private Materials.CustomLabel lblStatus;
+        private Materials.CustomDatePicker dpExpiry;
+        private Materials.CustomButton btnExitView;
     }
 }
