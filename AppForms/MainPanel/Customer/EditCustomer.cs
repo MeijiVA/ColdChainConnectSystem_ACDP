@@ -15,6 +15,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer
         public EditCustomer()
         {
             InitializeComponent();
+            this.DoubleBuffered = true; // Apply to the form
         }
     }
 }

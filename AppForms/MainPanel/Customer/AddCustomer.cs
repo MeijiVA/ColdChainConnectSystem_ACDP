@@ -15,6 +15,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer
         {
             InitializeComponent();
             string downloadsPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), "Downloads");
+            this.DoubleBuffered = true; // Apply to the form
         }
 
         private void btnExit_Click(object sender, EventArgs e)
