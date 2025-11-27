@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ColdChainConnectSystem_ACDP.ClassResources;
+using Microsoft.Office.Interop.Excel;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,7 +9,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ColdChainConnectSystem_ACDP.ClassResources;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.PersonalDetails
@@ -19,37 +20,37 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.PersonalDetails
             InitializeComponent();
         }
 
-        public string First_NameInfo
+        public string First_NAMEInfo
         {
-            get { return lblFName.Text; }
-            set { lblFName.Text = value; }
+            get { return txtFNAME.Texts; }
+            set { txtFNAME.Texts = value; }
         }
-        public string Middle_NameInfo
+        public string Middle_NAMEInfo
         {
-            get { return lblMName.Text; }
-            set { lblMName.Text = value; }
+            get { return txtMNAME.Texts; }
+            set { txtMNAME.Texts = value; }
         }
-        public string Last_NameInfo
+        public string Last_NAMEInfo
         {
-            get { return lblLName.Text; }
-            set { lblLName.Text = value; }
+            get { return txtLNAME.Texts; }
+            set { txtLNAME.Texts = value; }
         }
 
         public string AgeInfo
         {
-            get { return lblAge.Text; }
-            set { lblAge.Text = value; }
+            get { return txtAge.Texts; }
+            set { txtAge.Texts = value; }
         }
 
-        public string DOBInfo
+        public DateTime DOBInfo
         {
-            get { return lblDOB.Text; }
-            set { lblDOB.Text = value; }
+            get { return dpDOB.Value; }
+            set { dpDOB.Value = value; }
         }
         public string SexInfo
         {
-            get { return lblGender.Text; }
-            set { lblGender.Text = value; }
+            get { return cbSex.Texts; }
+            set { cbSex.Texts = value; }
         }
         private void panel2_Paint(object sender, PaintEventArgs e)
         {

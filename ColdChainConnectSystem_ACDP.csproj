@@ -186,12 +186,6 @@
     <Compile Include="AppForms\InfoUserControl\EditInformation\EditAccountInformation.Designer.cs">
       <DependentUpon>EditAccountInformation.cs</DependentUpon>
     </Compile>
-    <Compile Include="AppForms\InfoUserControl\EditInformation\EditAddressInformation.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="AppForms\InfoUserControl\EditInformation\EditAddressInformation.Designer.cs">
-      <DependentUpon>EditAddressInformation.cs</DependentUpon>
-    </Compile>
     <Compile Include="AppForms\InfoUserControl\EditInformation\EditPersonalInformation.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -210,11 +204,11 @@
     <Compile Include="AppForms\MainPanel\Customer\ViewCustomer.Designer.cs">
       <DependentUpon>ViewCustomer.cs</DependentUpon>
     </Compile>
-    <Compile Include="AppForms\MainPanel\Employee\AddressEdit.cs">
+    <Compile Include="AppForms\InfoUserControl\EditInformation\EditAddressInformation.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="AppForms\MainPanel\Employee\AddressEdit.Designer.cs">
-      <DependentUpon>AddressEdit.cs</DependentUpon>
+    <Compile Include="AppForms\InfoUserControl\EditInformation\EditAddressInformation.Designer.cs">
+      <DependentUpon>EditAddressInformation.cs</DependentUpon>
     </Compile>
     <Compile Include="AppForms\MainPanel\Employee\EmployeeForm.cs">
       <SubType>Form</SubType>
@@ -444,8 +438,6 @@
     </Compile>
     <Compile Include="ClassResources\Connection\TableView\InventoryClass.cs" />
     <Compile Include="ClassResources\Display\Tables\SelectedFilterClass.cs" />
-    <Compile Include="ClassResources\Display\Tables\DataGridViewButtons.cs" />
-    <Compile Include="ClassResources\Display\Tables\InventoryColumn.cs" />
     <Compile Include="ClassResources\Display\MunicipalityListClass.cs" />
     <Compile Include="ClassResources\Security\ConnectionAdmin.cs" />
     <Compile Include="MainForm.cs">
@@ -501,9 +493,6 @@
     <EmbeddedResource Include="AppForms\InfoUserControl\EditInformation\EditAccountInformation.resx">
       <DependentUpon>EditAccountInformation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AppForms\InfoUserControl\EditInformation\EditAddressInformation.resx">
-      <DependentUpon>EditAddressInformation.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="AppForms\InfoUserControl\EditInformation\EditPersonalInformation.resx">
       <DependentUpon>EditPersonalInformation.cs</DependentUpon>
     </EmbeddedResource>
@@ -513,8 +502,8 @@
     <EmbeddedResource Include="AppForms\MainPanel\Customer\ViewCustomer.resx">
       <DependentUpon>ViewCustomer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AppForms\MainPanel\Employee\AddressEdit.resx">
-      <DependentUpon>AddressEdit.cs</DependentUpon>
+    <EmbeddedResource Include="AppForms\InfoUserControl\EditInformation\EditAddressInformation.resx">
+      <DependentUpon>EditAddressInformation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AppForms\MainPanel\Employee\EmployeeForm.resx">
       <DependentUpon>EmployeeForm.cs</DependentUpon>

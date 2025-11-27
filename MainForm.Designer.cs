@@ -161,8 +161,8 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button logoutBtn;
         private System.Windows.Forms.Button btnSettings;
-        private AppForms.SidePanel.UserAccountControl uacUserProfile;
         private System.Windows.Forms.Button btnNotif;
         private AppForms.SidePanel.SidePanel sidePanel1;
+        public AppForms.SidePanel.UserAccountControl uacUserProfile;
     }
 }

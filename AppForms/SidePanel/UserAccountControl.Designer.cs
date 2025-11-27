@@ -48,6 +48,7 @@
             this.UAC_namelbl.TabIndex = 1;
             this.UAC_namelbl.Text = "Name";
             this.UAC_namelbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.UAC_namelbl.Click += new System.EventHandler(this.UAC_namelbl_Click);
             // 
             // UAC_positionlbl
             // 
@@ -100,7 +101,6 @@
             this.Controls.Add(this.pbxUser);
             this.Controls.Add(this.UAC_namelbl);
             this.Controls.Add(this.UAC_positionlbl);
-            this.Name = "UserAccountControl";
             this.Size = new System.Drawing.Size(200, 170);
             this.Load += new System.EventHandler(this.UserControl1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox1)).EndInit();

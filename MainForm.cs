@@ -114,7 +114,7 @@ namespace ColdChainConnectSystem_ACDP
 
         private void userAccountControl1_Load(object sender, EventArgs e)
         {
-            uacUserProfile.UAC_namelbl.Text = ConnectionClass.fname + " " + ConnectionClass.mname + " " + ConnectionClass.lname; ;
+            uacUserProfile.UAC_namelbl.Text = ConnectionClass.fname + " " + ConnectionClass.mname.Substring(0,1) + ". " + ConnectionClass.lname; 
             uacUserProfile.UAC_positionlbl.Text = ConnectionClass.position;
         }
 

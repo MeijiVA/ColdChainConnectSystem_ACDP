@@ -21,10 +21,10 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.PersonalDetails
             get { return lblPosition.Text; }
             set { lblPosition.Text = value; }
         }
-        public string ConNum
+        public string ContactInfo
         {
-            get { return lblConNum.Text; }
-            set { lblConNum.Text = value; }
+            get { return txtContact.Texts; }
+            set { txtContact.Texts = value; }
         }
 
         public string StatusInfo
@@ -35,8 +35,8 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.PersonalDetails
 
         public string EmailInfo
         {
-            get { return lblEmail.Text; }
-            set { lblEmail.Text = value; }
+            get { return txtEmail.Texts; }
+            set { txtEmail.Texts = value; }
         }
 
     }

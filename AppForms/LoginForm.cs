@@ -155,6 +155,7 @@ namespace ColdChainConnectSystem_ACDP
                         setupMainForm();
 
                         this.Hide();
+                        MainInstance.i.NavigateTo(new DashoardForm());
                         MainFormShow(MainInstance.i);
                         break;
 
@@ -162,6 +163,7 @@ namespace ColdChainConnectSystem_ACDP
                         setupMainForm();
 
                         this.Hide();
+                        MainInstance.i.NavigateTo(new DashoardForm());
                         MainFormShow(MainInstance.i);
                         break;
 
@@ -169,6 +171,7 @@ namespace ColdChainConnectSystem_ACDP
                         setupMainForm();
 
                         this.Hide();
+                        MainInstance.i.NavigateTo(new DashoardForm());
                         MainFormShow(MainInstance.i);
                         break;
 

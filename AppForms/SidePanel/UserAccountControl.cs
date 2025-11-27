@@ -34,5 +34,15 @@ namespace ColdChainConnectSystem_ACDP.AppForms.SidePanel
 
             }
         }
+
+        public String AccountName
+        {
+            get { return UAC_namelbl.Text; }
+            set { UAC_namelbl.Text = value; }
+        }
+        private void UAC_namelbl_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

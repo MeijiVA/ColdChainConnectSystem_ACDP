@@ -313,7 +313,7 @@ namespace ColdChainConnectSystem_ACDP.Materials
             cmbList.Width = lblText.Width;
             cmbList.Location = new Point()
             {
-                X = this.Width - this.Padding.Right+1 - cmbList.Width,
+                X = this.Width - this.Padding.Right - cmbList.Width,
                 Y = lblText.Bottom - cmbList.Height
             };
             if (cmbList.Height >= this.Height)
