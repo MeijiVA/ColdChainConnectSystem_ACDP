@@ -15,7 +15,6 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
 {
     public partial class DisplayTableUC : UserControl
     {
-        DisplayClass dc = new DisplayClass();
         public DisplayTableUC()
         {
             InitializeComponent();

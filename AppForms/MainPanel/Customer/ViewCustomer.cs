@@ -47,6 +47,17 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer
                     if (reader.Read())
                     {//num  custid custname phonenum address payterm regdate status
                         lblID.Text = "  [" + reader[0].ToString() + "] ( Customer ID :" + reader[1].ToString() + ")";
+                        lblCustomerName.Text = reader[2].ToString();
+                        lblPhoneNumber.Text = reader[3].ToString();
+                        String[] address = reader[4].ToString().Split(',');
+                        lblHouseNumber.Text = address[0];
+                        lblBarangay.Text = address[1];
+                        lblCity.Text = address[2];
+                        lblProvince.Text = address[3];
+                        lblPostal.Text = address[4];
+                        lblPaymentTerm.Text = reader[5].ToString();
+                        dpRegistrationDate.Value = Convert.ToDateTime(reader[6]);
+                        lblStatus.Text = reader[7].ToString();
                     }
                 }
             }

@@ -1,4 +1,5 @@
 ﻿using ColdChainConnectSystem_ACDP.ClassResources;
+using ColdChainConnectSystem_ACDP.ClassResources.Display;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -46,9 +47,32 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
                     if (reader.Read())
                     {//num  custid custname phonenum address payterm regdate status
                         lblID.Text = "  [" + reader[0].ToString() + "] ( SKU CODE : " + reader[1].ToString() + ")";
+                        lblUnitPrice.Text = reader[2].ToString();
+                        lblWeight.Text = reader[3].ToString();
+                        lblQuantity.Text = reader[4].ToString();
+                        dpExpiry.Value = Convert.ToDateTime(reader[5]);
+                        //pboxExpiry reader[6]
+                        lblDescription.Text = reader[7].ToString();
+                        lblSupplierID.Text = reader[8].ToString();
+                        pboxExpiry.BackgroundImage = InventoryClass.CheckDate(dpExpiry.Value);
+                        //QR CODE
+                        string dataToEncode = $"NUMID:{reader[0].ToString()},"
+                                             + $"SKUCODE:{reader[1].ToString()},"
+                                             + $"DESC:{reader[7].ToString()},"
+                                             + $"PRICE:{reader[2].ToString()},"
+                                             + $"WEIGHT(KG):{reader[3].ToString()},"
+                                             + $"QTY:{reader[4].ToString()},"
+                                             + $"EXPRY:{Convert.ToDateTime(reader[5]).ToString("yyyy-MM-dd")},"
+                                             + $"SUPID:{reader[8].ToString()}";
+                        Bitmap qrCodeBitmap = QREncoder.GenerateQRCode(dataToEncode, 100); // Adjust pixel size as needed
+                        pboxQR.BackgroundImage = qrCodeBitmap;
+
+
+
                     }
                 }
             }
+            con.Close();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

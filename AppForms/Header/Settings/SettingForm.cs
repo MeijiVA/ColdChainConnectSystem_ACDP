@@ -19,7 +19,6 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Settings
         public static SecurityForm secf;
         public static EmployeeForm empf;
         /*public static EmployeeForm ef = new EmployeeForm();*/
-        DisplayClass dc = new DisplayClass();
         public SettingForm()
         {
             InitializeComponent();

@@ -25,7 +25,6 @@ namespace ColdChainConnectSystem_ACDP
     {
         bool toggle = false;
         public static string verify;
-        DisplayClass dc = new DisplayClass();
         public LoginForm()
         {
             string baseBlue = "#070760";

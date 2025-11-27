@@ -26,10 +26,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
 
         private void ItemTab_Load(object sender, EventArgs e)
         {
-            // Add status values
-            cbStatus.Items.Clear();
-            cbStatus.Items.Add("paid");
-            cbStatus.Items.Add("unpaid");
+
         }
 
         private void cbProductID_Load(object sender, EventArgs e)
@@ -104,11 +101,6 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
         {
             get { return lblQuantityValue.Text; }
         }
-        public string getStatus
-        {
-            get { return cbStatus.Texts; }
-        }
-
         private void cbStatus_OnSelectedIndexChanged(object sender, EventArgs e)
         {
 

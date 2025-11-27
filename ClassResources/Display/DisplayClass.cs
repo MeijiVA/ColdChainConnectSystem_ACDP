@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QRCoder;
+using System.Drawing; // Required for System.Drawing.Common
 
 namespace ColdChainConnectSystem_ACDP
 {
@@ -26,7 +28,6 @@ namespace ColdChainConnectSystem_ACDP
 
     internal class DisplayClass : CColor
     {
-
         public override Image SetImageOpacity(Image image, float opacity)
         {
             Bitmap bmp = new Bitmap(image.Width, image.Height);

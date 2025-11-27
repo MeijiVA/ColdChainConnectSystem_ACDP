@@ -38,15 +38,11 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
                     String[,] table = new string[10,3];
                     for (int num = 0; num < numpages; num++)
                     {
-                    Console.WriteLine(num + " num");
-                    Console.WriteLine(numpages + "numpages");
                     String[] productID = GetTab(num).getBatchID.Trim().Split('|'); //removes SKUCODE
                     table[num, 0] = productID[0];
                     table[num, 1] = GetTab(num).getQuantity;
-                    table[num, 2] = GetTab(num).getStatus;
-                    Console.WriteLine(table[num, 0] +" " + table[num,1] + " " + table[num, 2]);
                         //cbCustomerID.Texts, dpSalesDate.Value.ToString("yyyy-MM-dd"), table[num,0] , table[num,1], table[num,2]
-                        if (SalesClass.writeSalesData(lblSalesID.Text, cbCustomerID.Texts, dpSalesDate.Value.ToString("yyyy-MM-dd"), table[num, 0], table[num, 1], table[num, 2]));
+                        if (SalesClass.writeSalesData(lblSalesID.Text, cbCustomerID.Texts, dpSalesDate.Value.ToString("yyyy-MM-dd"), table[num, 0], table[num, 1], cbStatus.Texts));
                     }
                 this.Close();
                 MainInstance.i.NavigateTo(SalesInstance.i);
@@ -63,6 +59,10 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
 
         private void AddItemInventoryForm_Load(object sender, EventArgs e)
         {
+            // Add status values
+            cbStatus.Items.Clear();
+            cbStatus.Items.Add("paid");
+            cbStatus.Items.Add("unpaid");
             AddItemInstance();
             numpages = 1;
             TabPage tab = new TabPage("Item " + 1);
@@ -118,7 +118,6 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
                             while (reader.Read())
                             {
                                 lblCustomerName.Text = (reader[0].ToString());
-                                Console.WriteLine(reader[0].ToString() + "hererr");
                             }
                         }
                     }

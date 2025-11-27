@@ -36,9 +36,7 @@
             this.lblUnitPrice = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
             this.cbProductID = new ColdChainConnectSystem_ACDP.Materials.CustomComboBox();
             this.lblProductID = new System.Windows.Forms.Label();
-            this.cbStatus = new ColdChainConnectSystem_ACDP.Materials.CustomComboBox();
             this.lblQuantity = new System.Windows.Forms.Label();
-            this.lblStatus = new System.Windows.Forms.Label();
             this.tbQuantity = new System.Windows.Forms.TrackBar();
             this.tabPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbQuantity)).BeginInit();
@@ -58,9 +56,7 @@
             this.tabPanel.Controls.Add(this.lblUnitPrice);
             this.tabPanel.Controls.Add(this.cbProductID);
             this.tabPanel.Controls.Add(this.lblProductID);
-            this.tabPanel.Controls.Add(this.cbStatus);
             this.tabPanel.Controls.Add(this.lblQuantity);
-            this.tabPanel.Controls.Add(this.lblStatus);
             this.tabPanel.Controls.Add(this.tbQuantity);
             this.tabPanel.ForeColor = System.Drawing.Color.White;
             this.tabPanel.Location = new System.Drawing.Point(0, 0);
@@ -175,28 +171,6 @@
             this.lblProductID.TabIndex = 50;
             this.lblProductID.Text = "Item Batch ID";
             // 
-            // cbStatus
-            // 
-            this.cbStatus.BackColor = System.Drawing.Color.White;
-            this.cbStatus.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.cbStatus.BorderRadius = 0;
-            this.cbStatus.BorderSize = 1;
-            this.cbStatus.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbStatus.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14F);
-            this.cbStatus.ForeColor = System.Drawing.Color.DimGray;
-            this.cbStatus.IconColor = System.Drawing.Color.Navy;
-            this.cbStatus.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.cbStatus.ListTextColor = System.Drawing.Color.DimGray;
-            this.cbStatus.Location = new System.Drawing.Point(29, 161);
-            this.cbStatus.MinimumSize = new System.Drawing.Size(200, 30);
-            this.cbStatus.Name = "cbStatus";
-            this.cbStatus.Padding = new System.Windows.Forms.Padding(1);
-            this.cbStatus.Size = new System.Drawing.Size(250, 37);
-            this.cbStatus.TabIndex = 49;
-            this.cbStatus.Texts = "";
-            this.cbStatus.OnSelectedIndexChanged += new System.EventHandler(this.cbStatus_OnSelectedIndexChanged);
-            // 
             // lblQuantity
             // 
             this.lblQuantity.AutoSize = true;
@@ -207,17 +181,6 @@
             this.lblQuantity.Size = new System.Drawing.Size(64, 16);
             this.lblQuantity.TabIndex = 48;
             this.lblQuantity.Text = "Quantity";
-            // 
-            // lblStatus
-            // 
-            this.lblStatus.AutoSize = true;
-            this.lblStatus.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10F);
-            this.lblStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.lblStatus.Location = new System.Drawing.Point(26, 142);
-            this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(50, 16);
-            this.lblStatus.TabIndex = 47;
-            this.lblStatus.Text = "Status";
             // 
             // tbQuantity
             // 
@@ -259,9 +222,7 @@
         private Materials.CustomLabel lblUnitPrice;
         private Materials.CustomComboBox cbProductID;
         private System.Windows.Forms.Label lblProductID;
-        private Materials.CustomComboBox cbStatus;
         private System.Windows.Forms.Label lblQuantity;
-        private System.Windows.Forms.Label lblStatus;
         private System.Windows.Forms.TrackBar tbQuantity;
     }
 }

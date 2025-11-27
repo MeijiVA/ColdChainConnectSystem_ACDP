@@ -103,6 +103,11 @@
       <HintPath>packages\Microsoft.Office.Interop.Excel.16.0.18925.20022\lib\net40\Microsoft.Office.Interop.Excel.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="QRCoder, Version=1.7.0.0, Culture=neutral, PublicKeyToken=c4ed5b9ae8358a28, processorArchitecture=MSIL">
+      <HintPath>packages\QRCoder.1.7.0\lib\net40\QRCoder.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
@@ -175,6 +180,7 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
     <Reference Include="Z.Dapper.Plus, Version=9.0.0.0, Culture=neutral, PublicKeyToken=59b66d028979105b, processorArchitecture=MSIL">
       <HintPath>packages\Z.Dapper.Plus.9.0.0\lib\net45\Z.Dapper.Plus.dll</HintPath>
     </Reference>
@@ -417,6 +423,7 @@
     <Compile Include="ClassResources\Connection\TableView\CustomerClass.cs" />
     <Compile Include="ClassResources\Connection\TableView\SalesClass.cs" />
     <Compile Include="ClassResources\Connection\Excel\InvExcelClass.cs" />
+    <Compile Include="ClassResources\Display\QREncoder.cs" />
     <Compile Include="ClassResources\Instances\CustomerInstance.cs" />
     <Compile Include="ClassResources\Instances\EmployeeInstance.cs" />
     <Compile Include="ClassResources\Instances\ItemTabInstance.cs" />
