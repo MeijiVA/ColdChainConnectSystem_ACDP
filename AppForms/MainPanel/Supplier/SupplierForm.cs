@@ -1,7 +1,9 @@
-﻿using ColdChainConnectSystem_ACDP.ClassResources;
+﻿using ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory;
+using ColdChainConnectSystem_ACDP.ClassResources;
 using ColdChainConnectSystem_ACDP.ClassResources.Connection;
 using ColdChainConnectSystem_ACDP.ClassResources.Connection.TableView;
 using ColdChainConnectSystem_ACDP.ClassResources.Display;
+using ColdChainConnectSystem_ACDP.ClassResources.Instances;
 using ColdChainConnectSystem_ACDP.Popup;
 using System;
 using System.Collections.Generic;
@@ -143,11 +145,11 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Supplier
 
         private void dgvTable_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
+            String cellValue = Convert.ToString(dgvTable.Rows[e.RowIndex].Cells["numid"].FormattedValue);
             if (dgvTable.Columns[e.ColumnIndex].Name == "deleteCol")
             {
                 if (new CustomMessageBox("Delete Row", "Are you sure you want to delete this item from the Database?", MessageBoxButtons.OKCancel).ShowDialog() == DialogResult.OK)
                 {
-                    String cellValue = Convert.ToString(dgvTable.Rows[e.RowIndex].Cells["numid"].FormattedValue);
                     DeleteItem.Delete(cellValue,"Supplier");
                     UpdateTable();
 
@@ -159,7 +161,9 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Supplier
             }
             if (dgvTable.Columns[e.ColumnIndex].Name == "viewCol")
             {
-
+                VarView.id = cellValue;
+                ViewSupplier vs = new ViewSupplier();
+                vs.Show();
             }
         }
 
