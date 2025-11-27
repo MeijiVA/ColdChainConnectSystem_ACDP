@@ -176,7 +176,7 @@
             this.lblID.BorderRadius = 10;
             this.lblID.BorderSize = 0;
             this.lblID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblID.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblID.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.lblID.ForeColor = System.Drawing.Color.White;
             this.lblID.Location = new System.Drawing.Point(12, 9);
             this.lblID.Name = "lblID";
