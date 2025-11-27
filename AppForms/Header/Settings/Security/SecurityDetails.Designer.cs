@@ -60,6 +60,7 @@
             this.btnCancel = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
             this.btnConfirm = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
             this.btnEdit = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
+            this.label14 = new System.Windows.Forms.Label();
             this.pnlPassword.SuspendLayout();
             this.pnlPasswordEdit.SuspendLayout();
             this.pnlUsernameEdit.SuspendLayout();
@@ -77,6 +78,7 @@
             this.pnlPassword.Name = "pnlPassword";
             this.pnlPassword.Size = new System.Drawing.Size(766, 75);
             this.pnlPassword.TabIndex = 6;
+            this.pnlPassword.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlPassword_Paint);
             // 
             // label2
             // 
@@ -89,6 +91,7 @@
             // 
             // lblPassword
             // 
+            this.lblPassword.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.lblPassword.ForeColor = System.Drawing.Color.Black;
             this.lblPassword.Location = new System.Drawing.Point(5, 40);
             this.lblPassword.Name = "lblPassword";
@@ -110,6 +113,7 @@
             // 
             // pnlPasswordEdit
             // 
+            this.pnlPasswordEdit.Controls.Add(this.label14);
             this.pnlPasswordEdit.Controls.Add(this.tboxRePassEdit);
             this.pnlPasswordEdit.Controls.Add(this.tboxNewPassEdit);
             this.pnlPasswordEdit.Controls.Add(this.tboxCurrPass);
@@ -128,25 +132,26 @@
             // label8
             // 
             this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Arial", 7F, System.Drawing.FontStyle.Bold);
+            this.label8.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.label8.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.label8.Location = new System.Drawing.Point(-1, 106);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(106, 15);
+            this.label8.Size = new System.Drawing.Size(154, 15);
             this.label8.TabIndex = 68;
             this.label8.Text = "  Re-enter Password";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label7
             // 
             this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Arial", 7F, System.Drawing.FontStyle.Bold);
+            this.label7.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.label7.Location = new System.Drawing.Point(-1, 69);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(106, 15);
+            this.label7.Size = new System.Drawing.Size(154, 15);
             this.label7.TabIndex = 67;
             this.label7.Text = "  New Password";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -154,12 +159,12 @@
             // label5
             // 
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Arial", 7F, System.Drawing.FontStyle.Bold);
+            this.label5.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.label5.Location = new System.Drawing.Point(-3, 28);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(106, 15);
+            this.label5.Size = new System.Drawing.Size(156, 15);
             this.label5.TabIndex = 66;
             this.label5.Text = "  Current Password";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -227,25 +232,26 @@
             // label11
             // 
             this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Arial", 7F, System.Drawing.FontStyle.Bold);
+            this.label11.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.label11.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.label11.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.label11.Location = new System.Drawing.Point(-2, 106);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(106, 15);
+            this.label11.Size = new System.Drawing.Size(155, 15);
             this.label11.TabIndex = 74;
             this.label11.Text = "  Re-enter Password";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label13
             // 
             this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("Arial", 7F, System.Drawing.FontStyle.Bold);
+            this.label13.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.label13.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.label13.Location = new System.Drawing.Point(-3, 28);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(106, 15);
+            this.label13.Size = new System.Drawing.Size(156, 15);
             this.label13.TabIndex = 72;
             this.label13.Text = "  New Username";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -253,13 +259,13 @@
             // label12
             // 
             this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Arial", 7F, System.Drawing.FontStyle.Bold);
+            this.label12.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.label12.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.label12.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.label12.Location = new System.Drawing.Point(-4, 68);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(106, 15);
+            this.label12.Size = new System.Drawing.Size(157, 15);
             this.label12.TabIndex = 73;
             this.label12.Text = "  Password";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -287,6 +293,7 @@
             // 
             // lblUsername
             // 
+            this.lblUsername.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.lblUsername.ForeColor = System.Drawing.Color.Black;
             this.lblUsername.Location = new System.Drawing.Point(5, 40);
             this.lblUsername.Name = "lblUsername";
@@ -315,7 +322,7 @@
             this.tboxRePassEdit.BorderSize = 2;
             this.tboxRePassEdit.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tboxRePassEdit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tboxRePassEdit.Location = new System.Drawing.Point(108, 99);
+            this.tboxRePassEdit.Location = new System.Drawing.Point(159, 99);
             this.tboxRePassEdit.Margin = new System.Windows.Forms.Padding(4);
             this.tboxRePassEdit.Multiline = false;
             this.tboxRePassEdit.Name = "tboxRePassEdit";
@@ -337,7 +344,7 @@
             this.tboxNewPassEdit.BorderSize = 2;
             this.tboxNewPassEdit.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tboxNewPassEdit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tboxNewPassEdit.Location = new System.Drawing.Point(108, 59);
+            this.tboxNewPassEdit.Location = new System.Drawing.Point(159, 59);
             this.tboxNewPassEdit.Margin = new System.Windows.Forms.Padding(4);
             this.tboxNewPassEdit.Multiline = false;
             this.tboxNewPassEdit.Name = "tboxNewPassEdit";
@@ -359,7 +366,7 @@
             this.tboxCurrPass.BorderSize = 2;
             this.tboxCurrPass.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tboxCurrPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tboxCurrPass.Location = new System.Drawing.Point(109, 19);
+            this.tboxCurrPass.Location = new System.Drawing.Point(160, 19);
             this.tboxCurrPass.Margin = new System.Windows.Forms.Padding(4);
             this.tboxCurrPass.Multiline = false;
             this.tboxCurrPass.Name = "tboxCurrPass";
@@ -442,7 +449,7 @@
             this.tboxRePassUser.BorderSize = 2;
             this.tboxRePassUser.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tboxRePassUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tboxRePassUser.Location = new System.Drawing.Point(108, 98);
+            this.tboxRePassUser.Location = new System.Drawing.Point(159, 98);
             this.tboxRePassUser.Margin = new System.Windows.Forms.Padding(4);
             this.tboxRePassUser.Multiline = false;
             this.tboxRePassUser.Name = "tboxRePassUser";
@@ -464,7 +471,7 @@
             this.tboxPassUser.BorderSize = 2;
             this.tboxPassUser.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tboxPassUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tboxPassUser.Location = new System.Drawing.Point(108, 60);
+            this.tboxPassUser.Location = new System.Drawing.Point(159, 60);
             this.tboxPassUser.Margin = new System.Windows.Forms.Padding(4);
             this.tboxPassUser.Multiline = false;
             this.tboxPassUser.Name = "tboxPassUser";
@@ -486,7 +493,7 @@
             this.tboxUsername.BorderSize = 2;
             this.tboxUsername.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tboxUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tboxUsername.Location = new System.Drawing.Point(108, 20);
+            this.tboxUsername.Location = new System.Drawing.Point(159, 22);
             this.tboxUsername.Margin = new System.Windows.Forms.Padding(4);
             this.tboxUsername.Multiline = false;
             this.tboxUsername.Name = "tboxUsername";
@@ -559,6 +566,15 @@
             this.btnEdit.UseVisualStyleBackColor = false;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
+            // label14
+            // 
+            this.label14.BackColor = System.Drawing.SystemColors.Control;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 0.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(-74, 143);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(903, 5);
+            this.label14.TabIndex = 78;
+            // 
             // SecurityDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -613,5 +629,6 @@
         private CustomControls.RJControls.CustomTextBox tboxRePassEdit;
         private CustomControls.RJControls.CustomTextBox tboxNewPassEdit;
         private CustomControls.RJControls.CustomTextBox tboxCurrPass;
+        private System.Windows.Forms.Label label14;
     }
 }

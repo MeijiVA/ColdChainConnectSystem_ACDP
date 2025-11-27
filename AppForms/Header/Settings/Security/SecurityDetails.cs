@@ -126,5 +126,10 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.PersonalDetails
                     break;
             }
         }
+
+        private void pnlPassword_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
