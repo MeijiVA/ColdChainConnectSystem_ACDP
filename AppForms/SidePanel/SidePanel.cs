@@ -22,6 +22,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.SidePanel
 {
     public partial class SidePanel : UserControl
     {
+        DisplayClass dc = new DisplayClass();
         public SidePanel()
         {
             InitializeComponent();

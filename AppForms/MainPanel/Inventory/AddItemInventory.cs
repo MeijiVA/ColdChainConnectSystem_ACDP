@@ -114,30 +114,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
 
         private void AddItemInventoryForm_Load(object sender, EventArgs e)
         {
-                try
-                {
-                    String query = $"SELECT [SupplierID], [CompanyName] FROM Supplier ";
-                    SqlConnection con = ConnectionClass.Connection();
-                    con.Open();
-                    Console.WriteLine(query);
-                    using (SqlCommand cmd = new SqlCommand(query, con))
-                    {
-                        using (var reader = cmd.ExecuteReader())
-                        {
-                            while (reader.Read())
-                            {
-                            cbxSupplier.Items.Add(reader[0].ToString() + " | " + reader[1].ToString());
-                            }
-                        }
-                    }
-                    con.Close();
-                }
-                catch (Exception ex)
-                {
-                new CustomMessageBox("Exception", ex.Message, MessageBoxButtons.OK).ShowDialog();
-                }
-
-
+            InventoryClass.SetSuppliers(cbxSupplier);
         }
 
         private void cbxSupplier_OnSelectedIndexChanged(object sender, EventArgs e)

@@ -16,6 +16,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Z.BulkOperations.Internal.InformationSchema;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
 {
@@ -188,7 +189,9 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
             }
             if (dgvTable.Columns[e.ColumnIndex].Name == "editCol")
             {
-
+                VarView.id = cellValue;
+                EditItemInventory ei = new EditItemInventory();
+                ei.Show(this);
             }
             if (dgvTable.Columns[e.ColumnIndex].Name == "viewCol")
             {

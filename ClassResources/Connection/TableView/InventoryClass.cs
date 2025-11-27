@@ -16,6 +16,31 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
 {
     internal class InventoryClass
     {
+        public static void SetSuppliers(CustomComboBox cbx)
+        {
+            try
+            {
+                String query = $"SELECT [SupplierID], [CompanyName] FROM Supplier ";
+                SqlConnection con = ConnectionClass.Connection();
+                con.Open();
+                Console.WriteLine(query);
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            cbx.Items.Add(reader[0].ToString() + " | " + reader[1].ToString());
+                        }
+                    }
+                }
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                new CustomMessageBox("Exception", ex.Message, MessageBoxButtons.OK).ShowDialog();
+            }
+        }
         public static Image CheckDate(DateTime expiryDate)
         {
             Image i;
@@ -167,7 +192,49 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
             }
         }
 
-        
+        public static bool updateInventoryData(string numid,string sku, string desc, string unitp, string img, string kg, string quantity, string expiry, string supid)
+        {
+            if (!(sku.Equals("") || sku.Equals("") || desc.Equals("") || unitp.Equals("") || kg.Equals("") || quantity.Equals("") || expiry.Equals("") || supid.Equals("")))
+            {
+                try
+                {
+                    if (img == "")
+                    {
+                        img = "NoImage.png";
+                    }
+                    string query = $"UPDATE Inventory SET [skucode] = '{sku}'," +
+                        $"[description] = '{desc}'," +
+                        $"[image] = '{img}'," +
+                        $"[unitprice] = CAST({unitp} AS Decimal(18, 2))," +
+                        $"[supplierid] =  '{supid}'" +
+                        $",[kg] = {kg}," +
+                        $"[quantity] = {quantity}," +
+                        $"[expiry] = N'{expiry}'" +
+                        $"WHERE [numid] = '{numid}'";
+
+                    SqlConnection con = ConnectionClass.Connection();
+                    using (SqlCommand cmd = new SqlCommand(query, con))
+                    {
+                        Console.WriteLine(query);
+                        con.Open();
+                        cmd.ExecuteNonQuery();
+                        con.Close();
+                        return true;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    new CustomMessageBox("Exception", ex.Message, MessageBoxButtons.OK).ShowDialog();
+                    return false;
+                }
+            }
+            else
+            {
+                new CustomMessageBox("Missing Element", "Fill in all required Fields.", MessageBoxButtons.OK).ShowDialog();
+                return false;
+            }
+        }
+
 
     }
 }

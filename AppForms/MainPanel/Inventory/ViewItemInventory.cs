@@ -66,7 +66,8 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
                                              + $"SUPID:{reader[8].ToString()}";
                         Bitmap qrCodeBitmap = QREncoder.GenerateQRCode(dataToEncode, 100); // Adjust pixel size as needed
                         pboxQR.BackgroundImage = qrCodeBitmap;
-
+                        //Image
+                        pboxImage.BackgroundImage = InventoryClass.getImage(reader[6].ToString());
 
 
                     }

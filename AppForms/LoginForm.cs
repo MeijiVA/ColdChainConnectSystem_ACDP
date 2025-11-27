@@ -23,6 +23,7 @@ namespace ColdChainConnectSystem_ACDP
 {
     public partial class LoginForm : Form
     {
+        DisplayClass dc = new DisplayClass();
         bool toggle = false;
         public static string verify;
         public LoginForm()
