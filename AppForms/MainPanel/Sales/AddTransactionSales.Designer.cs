@@ -171,6 +171,7 @@
             // 
             this.dpSalesDate.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.dpSalesDate.BorderSize = 0;
+            this.dpSalesDate.Enabled = false;
             this.dpSalesDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
             this.dpSalesDate.Location = new System.Drawing.Point(443, 104);
             this.dpSalesDate.MinimumSize = new System.Drawing.Size(4, 35);
@@ -240,7 +241,7 @@
             this.lblSalesID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblSalesID.TextColor = System.Drawing.Color.White;
             // 
-            // AddTransactionSalesForm
+            // AddTransactionSales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -259,7 +260,7 @@
             this.Controls.Add(this.lbl);
             this.Controls.Add(this.btnAdd);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "AddTransactionSalesForm";
+            this.Name = "AddTransactionSales";
             this.Padding = new System.Windows.Forms.Padding(20);
             this.Text = "AddItemInventoryForm";
             this.Load += new System.EventHandler(this.AddItemInventoryForm_Load);

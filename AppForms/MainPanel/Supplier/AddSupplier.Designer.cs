@@ -495,6 +495,7 @@
             this.cbxProvince.TabIndex = 74;
             this.cbxProvince.Texts = "";
             this.cbxProvince.OnSelectedIndexChanged += new System.EventHandler(this.cbxProvince_OnSelectedIndexChanged);
+            this.cbxProvince.Leave += new System.EventHandler(this.cbxProvince_Leave);
             // 
             // cbxCity
             // 
@@ -516,6 +517,7 @@
             this.cbxCity.Size = new System.Drawing.Size(231, 37);
             this.cbxCity.TabIndex = 29;
             this.cbxCity.Texts = "";
+            this.cbxCity.OnSelectedIndexChanged += new System.EventHandler(this.cbxCity_OnSelectedIndexChanged);
             // 
             // lbl4
             // 
@@ -649,7 +651,7 @@
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // AddSupplierForm
+            // AddSupplier
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -663,7 +665,7 @@
             this.Controls.Add(this.lbl);
             this.Controls.Add(this.btnAdd);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "AddSupplierForm";
+            this.Name = "AddSupplier";
             this.Padding = new System.Windows.Forms.Padding(20);
             this.Text = "AddItemInventoryForm";
             this.Load += new System.EventHandler(this.AddItemInventoryForm_Load);

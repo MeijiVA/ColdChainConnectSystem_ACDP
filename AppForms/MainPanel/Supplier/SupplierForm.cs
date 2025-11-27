@@ -2,7 +2,6 @@
 using ColdChainConnectSystem_ACDP.ClassResources.Connection;
 using ColdChainConnectSystem_ACDP.ClassResources.Connection.TableView;
 using ColdChainConnectSystem_ACDP.ClassResources.Display;
-using ColdChainConnectSystem_ACDP.ClassResources.Display.Tables;
 using ColdChainConnectSystem_ACDP.Popup;
 using System;
 using System.Collections.Generic;
