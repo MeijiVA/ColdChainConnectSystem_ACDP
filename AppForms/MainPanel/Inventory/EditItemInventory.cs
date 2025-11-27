@@ -36,7 +36,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
                 {
                     if (reader.Read())
                     {//num  custid custname phonenum address payterm regdate status
-                        lblID.Text = "  [" + reader[0].ToString() + "]";
+                        lblID.Text = "NUM ID : [" + reader[0].ToString() + "]";
                         lblSKU.Texts = reader[1].ToString();
                         lblUnitPrice.Texts = reader[2].ToString();
                         lblWeight.Texts = reader[3].ToString();

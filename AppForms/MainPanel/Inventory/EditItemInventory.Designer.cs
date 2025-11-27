@@ -331,7 +331,7 @@
             this.lblID.ForeColor = System.Drawing.Color.White;
             this.lblID.Location = new System.Drawing.Point(12, 11);
             this.lblID.Name = "lblID";
-            this.lblID.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.lblID.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.lblID.Size = new System.Drawing.Size(576, 41);
             this.lblID.TabIndex = 46;
             this.lblID.Text = "customLabel1";
