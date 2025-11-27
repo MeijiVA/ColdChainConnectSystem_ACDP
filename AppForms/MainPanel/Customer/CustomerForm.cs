@@ -2,6 +2,7 @@
 using ColdChainConnectSystem_ACDP.ClassResources.Connection;
 using ColdChainConnectSystem_ACDP.ClassResources.Connection.TableView;
 using ColdChainConnectSystem_ACDP.ClassResources.Display;
+using ColdChainConnectSystem_ACDP.ClassResources.Instances;
 using ColdChainConnectSystem_ACDP.Popup;
 using System;
 using System.Collections.Generic;
@@ -164,11 +165,12 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer
 
         private void dgvTable_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
+            String cellValue = Convert.ToString(dgvTable.Rows[e.RowIndex].Cells["numid"].FormattedValue);
             if (dgvTable.Columns[e.ColumnIndex].Name == "deleteCol")
             {
                 if (new CustomMessageBox("Delete Row", "Are you sure you want to delete this item from the Database?", MessageBoxButtons.OKCancel).ShowDialog() == DialogResult.OK)
                 {
-                    String cellValue = Convert.ToString(dgvTable.Rows[e.RowIndex].Cells["numid"].FormattedValue);
+                    
                     DeleteItem.Delete(cellValue, "Customer");
                     UpdateTable();
 
@@ -176,11 +178,14 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer
             }
             if (dgvTable.Columns[e.ColumnIndex].Name == "editCol")
             {
-
+                
             }
             if (dgvTable.Columns[e.ColumnIndex].Name == "viewCol")
             {
-
+                VarView.id = cellValue;
+                ViewCustomer vc = new ViewCustomer();
+                vc.Show();
+                
             }
         }
     }
