@@ -35,7 +35,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Supplier
 
         private void ViewSupplier_Load(object sender, EventArgs e)
         {
-            string query = $"SELECT * FROM Inventory WHERE [numid] = {ClassResources.Instances.VarView.id}";
+            string query = $"SELECT * FROM Supplier WHERE [numid] = {ClassResources.Instances.VarView.id}";
             SqlConnection con = ConnectionClass.Connection();
             con.Open();
             using (SqlCommand cmd = new SqlCommand(query, con))
@@ -45,6 +45,16 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Supplier
                     if (reader.Read())
                     {//num  custid custname phonenum address payterm regdate status
                         lblID.Text = "  [" + reader[0].ToString() + "] ( Supplier ID : " + reader[1].ToString() + ")";
+                        lblCompanyName.Text = reader[2].ToString();
+                        lblContactPerson.Text = reader[3].ToString();
+                        lblContactNum.Text = reader[4].ToString();
+                        String[] address = reader[5].ToString().Split(',');
+                        lblHouseNumber.Text = address[0];
+                        lblBarangay.Text = address[1];
+                        lblCity.Text = address[2];  
+                        lblProvince.Text = address[3];
+                        lblPostal.Text = address[4];
+                        lblPaymentTerm.Text = reader[6].ToString();
                     }
                 }
             }
