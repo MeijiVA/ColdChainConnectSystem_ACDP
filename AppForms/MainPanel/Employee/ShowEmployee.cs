@@ -54,8 +54,8 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.Employee
 
         private void Edit_Click(object sender, EventArgs e)
         {
-            MainInstance.i.NavigateTo(new EmployeeProfile());
-            //EmpID References 
+            ProfileInstance.empid = this.lblEmpID.Text;
+            MainInstance.i.NavigateTo(ProfileInstance.i = new EmployeeProfile());
         }
 
         private void Delete_Click(object sender, EventArgs e)

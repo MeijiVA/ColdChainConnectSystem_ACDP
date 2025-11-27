@@ -216,22 +216,22 @@
     <Compile Include="AppForms\MainPanel\Employee\ShowEmployee.Designer.cs">
       <DependentUpon>ShowEmployee.cs</DependentUpon>
     </Compile>
-    <Compile Include="AppForms\Header\Settings\PersonalDetails\AddressInformation.cs">
+    <Compile Include="AppForms\InfoUserControl\AddressInformation.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="AppForms\Header\Settings\PersonalDetails\AddressInformation.Designer.cs">
+    <Compile Include="AppForms\InfoUserControl\AddressInformation.Designer.cs">
       <DependentUpon>AddressInformation.cs</DependentUpon>
     </Compile>
-    <Compile Include="AppForms\Header\Settings\PersonalDetails\AccountInformation.cs">
+    <Compile Include="AppForms\InfoUserControl\AccountInformation.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="AppForms\Header\Settings\PersonalDetails\AccountInformation.Designer.cs">
+    <Compile Include="AppForms\InfoUserControl\AccountInformation.Designer.cs">
       <DependentUpon>AccountInformation.cs</DependentUpon>
     </Compile>
-    <Compile Include="AppForms\Header\Settings\PersonalDetails\PersonalInformation.cs">
+    <Compile Include="AppForms\InfoUserControl\PersonalInformation.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="AppForms\Header\Settings\PersonalDetails\PersonalInformation.Designer.cs">
+    <Compile Include="AppForms\InfoUserControl\PersonalInformation.Designer.cs">
       <DependentUpon>PersonalInformation.cs</DependentUpon>
     </Compile>
     <Compile Include="AppForms\Header\Settings\PersonalDetails\PersonalDetailsForm.cs">
@@ -408,6 +408,7 @@
     <Compile Include="ClassResources\Instances\CustomerInstance.cs" />
     <Compile Include="ClassResources\Instances\EmployeeInstance.cs" />
     <Compile Include="ClassResources\Instances\ItemTabInstance.cs" />
+    <Compile Include="ClassResources\Instances\ProfileInstance.cs" />
     <Compile Include="ClassResources\Instances\SupplierInstance.cs" />
     <Compile Include="ClassResources\Instances\InventoryInstance.cs" />
     <Compile Include="ClassResources\Instances\MainInstance.cs" />
@@ -496,13 +497,13 @@
     <EmbeddedResource Include="AppForms\MainPanel\Employee\ShowEmployee.resx">
       <DependentUpon>ShowEmployee.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AppForms\Header\Settings\PersonalDetails\AddressInformation.resx">
+    <EmbeddedResource Include="AppForms\InfoUserControl\AddressInformation.resx">
       <DependentUpon>AddressInformation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AppForms\Header\Settings\PersonalDetails\AccountInformation.resx">
+    <EmbeddedResource Include="AppForms\InfoUserControl\AccountInformation.resx">
       <DependentUpon>AccountInformation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AppForms\Header\Settings\PersonalDetails\PersonalInformation.resx">
+    <EmbeddedResource Include="AppForms\InfoUserControl\PersonalInformation.resx">
       <DependentUpon>PersonalInformation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AppForms\Header\Settings\PersonalDetails\PersonalDetailsForm.resx">

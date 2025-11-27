@@ -58,6 +58,6 @@
 
         #endregion
 
-        private System.Windows.Forms.FlowLayoutPanel flpEmployee;
+        public System.Windows.Forms.FlowLayoutPanel flpEmployee;
     }
 }

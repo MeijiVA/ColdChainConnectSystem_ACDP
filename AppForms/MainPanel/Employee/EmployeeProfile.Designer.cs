@@ -30,13 +30,15 @@
         {
             this.btnExit = new System.Windows.Forms.Button();
             this.customPanel3 = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
-            this.ContactUserControl = new ColdChainConnectSystem_ACDP.AppForms.Header.Settings.PersonalDetails.AccountInformation();
+            this.AccountContainer = new ColdChainConnectSystem_ACDP.AppForms.Header.Settings.PersonalDetails.AccountInformation();
             this.customPanel2 = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
-            this.AddressUserControl = new ColdChainConnectSystem_ACDP.AppForms.Header.Settings.PersonalDetails.AddressInformation();
+            this.AddressContainer = new ColdChainConnectSystem_ACDP.AppForms.Header.Settings.PersonalDetails.AddressInformation();
             this.lblEmpID = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
             this.customPanel1 = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
-            this.PersonalUserControl = new ColdChainConnectSystem_ACDP.AppForms.Header.Settings.PersonalDetails.Personal_Information();
+            this.PersonalContainer = new ColdChainConnectSystem_ACDP.AppForms.Header.Settings.PersonalDetails.Personal_Information();
             this.lbl = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
+            this.customButton1 = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
+            this.tscStatus = new ToggleSlider.ToggleSliderComponent();
             this.customPanel3.SuspendLayout();
             this.customPanel2.SuspendLayout();
             this.customPanel1.SuspendLayout();
@@ -65,27 +67,27 @@
             this.customPanel3.BorderColor = System.Drawing.Color.Empty;
             this.customPanel3.BorderRadius = 15;
             this.customPanel3.BorderSize = 0;
-            this.customPanel3.Controls.Add(this.ContactUserControl);
+            this.customPanel3.Controls.Add(this.AccountContainer);
             this.customPanel3.ForeColor = System.Drawing.Color.White;
-            this.customPanel3.Location = new System.Drawing.Point(495, 110);
+            this.customPanel3.Location = new System.Drawing.Point(495, 129);
             this.customPanel3.Name = "customPanel3";
-            this.customPanel3.Size = new System.Drawing.Size(280, 441);
+            this.customPanel3.Size = new System.Drawing.Size(280, 422);
             this.customPanel3.TabIndex = 75;
             this.customPanel3.TextColor = System.Drawing.Color.White;
             // 
-            // ContactUserControl
+            // AccountContainer
             // 
-            this.ContactUserControl.BackColor = System.Drawing.Color.White;
-            this.ContactUserControl.ConNum = "Ow yeah";
-            this.ContactUserControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ContactUserControl.EmailInfo = "email";
-            this.ContactUserControl.ForeColor = System.Drawing.Color.Black;
-            this.ContactUserControl.Location = new System.Drawing.Point(0, 0);
-            this.ContactUserControl.Name = "ContactUserControl";
-            this.ContactUserControl.PositionInfo = "position";
-            this.ContactUserControl.Size = new System.Drawing.Size(280, 441);
-            this.ContactUserControl.StatusInfo = "status";
-            this.ContactUserControl.TabIndex = 65;
+            this.AccountContainer.BackColor = System.Drawing.Color.White;
+            this.AccountContainer.ConNum = "Ow yeah";
+            this.AccountContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.AccountContainer.EmailInfo = "email";
+            this.AccountContainer.ForeColor = System.Drawing.Color.Black;
+            this.AccountContainer.Location = new System.Drawing.Point(0, 0);
+            this.AccountContainer.Name = "AccountContainer";
+            this.AccountContainer.PositionInfo = "position";
+            this.AccountContainer.Size = new System.Drawing.Size(280, 422);
+            this.AccountContainer.StatusInfo = "status";
+            this.AccountContainer.TabIndex = 65;
             // 
             // customPanel2
             // 
@@ -94,7 +96,7 @@
             this.customPanel2.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.customPanel2.BorderRadius = 15;
             this.customPanel2.BorderSize = 0;
-            this.customPanel2.Controls.Add(this.AddressUserControl);
+            this.customPanel2.Controls.Add(this.AddressContainer);
             this.customPanel2.ForeColor = System.Drawing.Color.White;
             this.customPanel2.Location = new System.Drawing.Point(28, 351);
             this.customPanel2.Name = "customPanel2";
@@ -102,21 +104,21 @@
             this.customPanel2.TabIndex = 74;
             this.customPanel2.TextColor = System.Drawing.Color.White;
             // 
-            // AddressUserControl
+            // AddressContainer
             // 
-            this.AddressUserControl.BackColor = System.Drawing.Color.White;
-            this.AddressUserControl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.AddressUserControl.Barangay = "test";
-            this.AddressUserControl.City = "label4";
-            this.AddressUserControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.AddressUserControl.ForeColor = System.Drawing.Color.Black;
-            this.AddressUserControl.HouseNum = "label1";
-            this.AddressUserControl.Location = new System.Drawing.Point(0, 0);
-            this.AddressUserControl.Name = "AddressUserControl";
-            this.AddressUserControl.Postal = "label3";
-            this.AddressUserControl.Province = "label3";
-            this.AddressUserControl.Size = new System.Drawing.Size(450, 200);
-            this.AddressUserControl.TabIndex = 66;
+            this.AddressContainer.BackColor = System.Drawing.Color.White;
+            this.AddressContainer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.AddressContainer.Barangay = "test";
+            this.AddressContainer.City = "label4";
+            this.AddressContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.AddressContainer.ForeColor = System.Drawing.Color.Black;
+            this.AddressContainer.HouseNum = "label1";
+            this.AddressContainer.Location = new System.Drawing.Point(0, 0);
+            this.AddressContainer.Name = "AddressContainer";
+            this.AddressContainer.Postal = "label3";
+            this.AddressContainer.Province = "label3";
+            this.AddressContainer.Size = new System.Drawing.Size(450, 200);
+            this.AddressContainer.TabIndex = 66;
             // 
             // lblEmpID
             // 
@@ -129,9 +131,9 @@
             this.lblEmpID.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.lblEmpID.ForeColor = System.Drawing.Color.White;
             this.lblEmpID.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblEmpID.Location = new System.Drawing.Point(25, 81);
+            this.lblEmpID.Location = new System.Drawing.Point(28, 79);
             this.lblEmpID.Name = "lblEmpID";
-            this.lblEmpID.Size = new System.Drawing.Size(454, 37);
+            this.lblEmpID.Size = new System.Drawing.Size(451, 40);
             this.lblEmpID.TabIndex = 68;
             this.lblEmpID.Text = "   Employee ID Here";
             this.lblEmpID.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -144,7 +146,7 @@
             this.customPanel1.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.customPanel1.BorderRadius = 15;
             this.customPanel1.BorderSize = 0;
-            this.customPanel1.Controls.Add(this.PersonalUserControl);
+            this.customPanel1.Controls.Add(this.PersonalContainer);
             this.customPanel1.ForeColor = System.Drawing.Color.White;
             this.customPanel1.Location = new System.Drawing.Point(29, 129);
             this.customPanel1.Name = "customPanel1";
@@ -152,21 +154,21 @@
             this.customPanel1.TabIndex = 73;
             this.customPanel1.TextColor = System.Drawing.Color.White;
             // 
-            // PersonalUserControl
+            // PersonalContainer
             // 
-            this.PersonalUserControl.AgeInfo = "label3";
-            this.PersonalUserControl.BackColor = System.Drawing.Color.White;
-            this.PersonalUserControl.DOBInfo = "label3";
-            this.PersonalUserControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PersonalUserControl.First_NameInfo = "label1";
-            this.PersonalUserControl.ForeColor = System.Drawing.Color.Black;
-            this.PersonalUserControl.Last_NameInfo = "label4";
-            this.PersonalUserControl.Location = new System.Drawing.Point(0, 0);
-            this.PersonalUserControl.Middle_NameInfo = "label2";
-            this.PersonalUserControl.Name = "PersonalUserControl";
-            this.PersonalUserControl.SexInfo = "label3";
-            this.PersonalUserControl.Size = new System.Drawing.Size(450, 200);
-            this.PersonalUserControl.TabIndex = 0;
+            this.PersonalContainer.AgeInfo = "label3";
+            this.PersonalContainer.BackColor = System.Drawing.Color.White;
+            this.PersonalContainer.DOBInfo = "label3";
+            this.PersonalContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PersonalContainer.First_NameInfo = "label1";
+            this.PersonalContainer.ForeColor = System.Drawing.Color.Black;
+            this.PersonalContainer.Last_NameInfo = "label4";
+            this.PersonalContainer.Location = new System.Drawing.Point(0, 0);
+            this.PersonalContainer.Middle_NameInfo = "label2";
+            this.PersonalContainer.Name = "PersonalContainer";
+            this.PersonalContainer.SexInfo = "label3";
+            this.PersonalContainer.Size = new System.Drawing.Size(450, 200);
+            this.PersonalContainer.TabIndex = 0;
             // 
             // lbl
             // 
@@ -187,11 +189,49 @@
             this.lbl.TextColor = System.Drawing.Color.White;
             this.lbl.UseMnemonic = false;
             // 
+            // customButton1
+            // 
+            this.customButton1.BackColor = System.Drawing.Color.Transparent;
+            this.customButton1.BackgroundColor = System.Drawing.Color.Transparent;
+            this.customButton1.BackgroundImage = global::ColdChainConnectSystem_ACDP.Properties.Resources.editBtn;
+            this.customButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.customButton1.BorderColor = System.Drawing.Color.Peru;
+            this.customButton1.BorderRadius = 0;
+            this.customButton1.BorderSize = 0;
+            this.customButton1.FlatAppearance.BorderSize = 0;
+            this.customButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.customButton1.ForeColor = System.Drawing.Color.White;
+            this.customButton1.Location = new System.Drawing.Point(732, 79);
+            this.customButton1.Name = "customButton1";
+            this.customButton1.Size = new System.Drawing.Size(43, 40);
+            this.customButton1.TabIndex = 76;
+            this.customButton1.TextColor = System.Drawing.Color.White;
+            this.customButton1.UseVisualStyleBackColor = false;
+            // 
+            // tscStatus
+            // 
+            this.tscStatus.AutoSize = true;
+            this.tscStatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.tscStatus.Checked = true;
+            this.tscStatus.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            this.tscStatus.ForeColor = System.Drawing.Color.White;
+            this.tscStatus.Location = new System.Drawing.Point(347, 86);
+            this.tscStatus.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tscStatus.Name = "tscStatus";
+            this.tscStatus.Size = new System.Drawing.Size(119, 30);
+            this.tscStatus.TabIndex = 77;
+            this.tscStatus.ToggleBarText = "Active";
+            this.tscStatus.ToggleCircleColor = System.Drawing.Color.Green;
+            this.tscStatus.ToggleColorBar = System.Drawing.Color.Gray;
+            this.tscStatus.CheckChanged += new System.EventHandler(this.tscStatus_CheckChanged);
+            // 
             // EmployeeProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(798, 570);
+            this.Controls.Add(this.tscStatus);
+            this.Controls.Add(this.customButton1);
             this.Controls.Add(this.customPanel3);
             this.Controls.Add(this.customPanel2);
             this.Controls.Add(this.lblEmpID);
@@ -206,6 +246,7 @@
             this.customPanel2.ResumeLayout(false);
             this.customPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -213,11 +254,13 @@
         private System.Windows.Forms.Button btnExit;
         private Materials.CustomLabel lbl;
         private Materials.CustomPanel customPanel1;
-        private PersonalDetails.Personal_Information PersonalUserControl;
+        private PersonalDetails.Personal_Information PersonalContainer;
         private Materials.CustomLabel lblEmpID;
         private Materials.CustomPanel customPanel2;
-        private PersonalDetails.AddressInformation AddressUserControl;
+        private PersonalDetails.AddressInformation AddressContainer;
         private Materials.CustomPanel customPanel3;
-        private PersonalDetails.AccountInformation ContactUserControl;
+        private PersonalDetails.AccountInformation AccountContainer;
+        private Materials.CustomButton customButton1;
+        private ToggleSlider.ToggleSliderComponent tscStatus;
     }
 }

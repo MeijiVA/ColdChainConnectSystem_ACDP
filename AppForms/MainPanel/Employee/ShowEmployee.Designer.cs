@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.posStatus = new System.Windows.Forms.FlowLayoutPanel();
-            this.lblName = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
             this.lblPosition = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
             this.lblStatus = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
+            this.lblName = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
             this.lblUsername = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
             this.pnlNameTab = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
             this.lblEmpID = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
@@ -53,25 +53,6 @@
             this.posStatus.Size = new System.Drawing.Size(221, 34);
             this.posStatus.TabIndex = 7;
             this.posStatus.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
-            // 
-            // lblName
-            // 
-            this.lblName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblName.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblName.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.lblName.BorderRadius = 10;
-            this.lblName.BorderSize = 0;
-            this.lblName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblName.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F);
-            this.lblName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.lblName.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblName.Location = new System.Drawing.Point(20, 52);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(143, 22);
-            this.lblName.TabIndex = 8;
-            this.lblName.Text = "Name Here";
-            this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblName.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             // 
             // lblPosition
             // 
@@ -114,6 +95,25 @@
             this.lblStatus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblStatus.TextColor = System.Drawing.Color.White;
             this.lblStatus.TextChanged += new System.EventHandler(this.lblStatus_TextChanged);
+            // 
+            // lblName
+            // 
+            this.lblName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblName.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblName.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.lblName.BorderRadius = 10;
+            this.lblName.BorderSize = 0;
+            this.lblName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblName.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F);
+            this.lblName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.lblName.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblName.Location = new System.Drawing.Point(20, 52);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(143, 22);
+            this.lblName.TabIndex = 8;
+            this.lblName.Text = "Name Here";
+            this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblName.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             // 
             // lblUsername
             // 
