@@ -30,15 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             this.DisplayPanel = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.logoutBtn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnSettings = new System.Windows.Forms.Button();
             this.btnNotif = new System.Windows.Forms.Button();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.sidePanel1 = new ColdChainConnectSystem_ACDP.AppForms.SidePanel.SidePanel();
+            this.logoutBtn = new System.Windows.Forms.Button();
             this.uacUserProfile = new ColdChainConnectSystem_ACDP.AppForms.SidePanel.UserAccountControl();
-            this.panel1.SuspendLayout();
+            this.sidePanel1 = new ColdChainConnectSystem_ACDP.AppForms.SidePanel.SidePanel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
@@ -46,42 +44,18 @@
             // DisplayPanel
             // 
             this.DisplayPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
-            this.DisplayPanel.Location = new System.Drawing.Point(237, 30);
+            this.DisplayPanel.Location = new System.Drawing.Point(226, 30);
             this.DisplayPanel.Name = "DisplayPanel";
-            this.DisplayPanel.Size = new System.Drawing.Size(798, 570);
+            this.DisplayPanel.Size = new System.Drawing.Size(810, 570);
             this.DisplayPanel.TabIndex = 0;
             this.DisplayPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.DisplayPanel_Paint);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.logoutBtn);
-            this.panel1.Location = new System.Drawing.Point(0, 554);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 46);
-            this.panel1.TabIndex = 3;
-            // 
-            // logoutBtn
-            // 
-            this.logoutBtn.BackgroundImage = global::ColdChainConnectSystem_ACDP.Properties.Resources.LogoutButton;
-            this.logoutBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.logoutBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.logoutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.logoutBtn.ForeColor = System.Drawing.Color.Transparent;
-            this.logoutBtn.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.logoutBtn.Location = new System.Drawing.Point(50, 12);
-            this.logoutBtn.Name = "logoutBtn";
-            this.logoutBtn.Size = new System.Drawing.Size(93, 25);
-            this.logoutBtn.TabIndex = 0;
-            this.logoutBtn.UseVisualStyleBackColor = true;
-            this.logoutBtn.Click += new System.EventHandler(this.logoutBtn_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::ColdChainConnectSystem_ACDP.Properties.Resources.ACDPLogo;
-            this.pictureBox1.Location = new System.Drawing.Point(21, 1);
+            this.pictureBox1.Location = new System.Drawing.Point(48, 1);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(74, 30);
+            this.pictureBox1.Size = new System.Drawing.Size(108, 42);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -115,6 +89,33 @@
             this.btnNotif.TabIndex = 6;
             this.btnNotif.UseVisualStyleBackColor = true;
             // 
+            // logoutBtn
+            // 
+            this.logoutBtn.BackgroundImage = global::ColdChainConnectSystem_ACDP.Properties.Resources.LogoutButton;
+            this.logoutBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.logoutBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.logoutBtn.FlatAppearance.BorderSize = 0;
+            this.logoutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.logoutBtn.ForeColor = System.Drawing.Color.Transparent;
+            this.logoutBtn.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.logoutBtn.Location = new System.Drawing.Point(55, 568);
+            this.logoutBtn.Name = "logoutBtn";
+            this.logoutBtn.Size = new System.Drawing.Size(90, 20);
+            this.logoutBtn.TabIndex = 0;
+            this.logoutBtn.UseVisualStyleBackColor = true;
+            this.logoutBtn.Click += new System.EventHandler(this.logoutBtn_Click);
+            // 
+            // uacUserProfile
+            // 
+            this.uacUserProfile.AccountName = "Name";
+            this.uacUserProfile.BackColor = System.Drawing.Color.Transparent;
+            this.uacUserProfile.Location = new System.Drawing.Point(12, 49);
+            this.uacUserProfile.Name = "uacUserProfile";
+            this.uacUserProfile.Padding = new System.Windows.Forms.Padding(27, 0, 27, 0);
+            this.uacUserProfile.Size = new System.Drawing.Size(177, 163);
+            this.uacUserProfile.TabIndex = 5;
+            this.uacUserProfile.Load += new System.EventHandler(this.userAccountControl1_Load);
+            // 
             // sidePanel1
             // 
             this.sidePanel1.BackColor = System.Drawing.Color.Transparent;
@@ -123,16 +124,6 @@
             this.sidePanel1.Size = new System.Drawing.Size(231, 355);
             this.sidePanel1.TabIndex = 7;
             // 
-            // uacUserProfile
-            // 
-            this.uacUserProfile.AccountName = "Name";
-            this.uacUserProfile.BackColor = System.Drawing.Color.Transparent;
-            this.uacUserProfile.Location = new System.Drawing.Point(0, 30);
-            this.uacUserProfile.Name = "uacUserProfile";
-            this.uacUserProfile.Size = new System.Drawing.Size(200, 185);
-            this.uacUserProfile.TabIndex = 5;
-            this.uacUserProfile.Load += new System.EventHandler(this.userAccountControl1_Load);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -140,11 +131,11 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.BackgroundImage = global::ColdChainConnectSystem_ACDP.Properties.Resources.MainForm1;
             this.ClientSize = new System.Drawing.Size(1035, 600);
+            this.Controls.Add(this.logoutBtn);
             this.Controls.Add(this.uacUserProfile);
             this.Controls.Add(this.sidePanel1);
             this.Controls.Add(this.btnNotif);
             this.Controls.Add(this.btnSettings);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.DisplayPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -157,7 +148,6 @@
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MainForm_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MainForm_MouseMove);
-            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
@@ -167,12 +157,11 @@
         #endregion
         private System.Windows.Forms.PictureBox pictureBox1;
         public System.Windows.Forms.Panel DisplayPanel;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button logoutBtn;
         private System.Windows.Forms.Button btnSettings;
         private System.Windows.Forms.Button btnNotif;
         private AppForms.SidePanel.SidePanel sidePanel1;
         public AppForms.SidePanel.UserAccountControl uacUserProfile;
         private System.Windows.Forms.BindingSource bindingSource1;
+        private System.Windows.Forms.Button logoutBtn;
     }
 }

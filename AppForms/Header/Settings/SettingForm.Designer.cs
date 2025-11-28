@@ -35,7 +35,7 @@
             // 
             // tabsSetting
             // 
-            this.tabsSetting.BackColor = System.Drawing.Color.White;
+            this.tabsSetting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
             this.tabsSetting.Location = new System.Drawing.Point(22, 62);
             this.tabsSetting.Name = "tabsSetting";
             this.tabsSetting.Size = new System.Drawing.Size(756, 35);
@@ -79,7 +79,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
             this.ClientSize = new System.Drawing.Size(798, 570);
             this.Controls.Add(this.pnlDisplaySettings);
             this.Controls.Add(this.tabsSetting);

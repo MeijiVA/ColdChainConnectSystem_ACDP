@@ -40,7 +40,8 @@
             // 
             // lblPersDetail
             // 
-            this.lblPersDetail.BackColor = System.Drawing.Color.White;
+            this.lblPersDetail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
+            this.lblPersDetail.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblPersDetail.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
             this.lblPersDetail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(9)))), ((int)(((byte)(76)))));
             this.lblPersDetail.Location = new System.Drawing.Point(0, 0);
@@ -50,11 +51,11 @@
             this.lblPersDetail.Text = "Personal  Details";
             this.lblPersDetail.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.lblPersDetail.Click += new System.EventHandler(this.lblPersDetail_Click);
-            this.lblPersDetail.Cursor = System.Windows.Forms.Cursors.Hand;
             // 
             // lblSecurity
             // 
-            this.lblSecurity.BackColor = System.Drawing.Color.White;
+            this.lblSecurity.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
+            this.lblSecurity.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblSecurity.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
             this.lblSecurity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(9)))), ((int)(((byte)(76)))));
             this.lblSecurity.Location = new System.Drawing.Point(120, 0);
@@ -64,11 +65,10 @@
             this.lblSecurity.Text = "Security";
             this.lblSecurity.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.lblSecurity.Click += new System.EventHandler(this.lblSecurity_Click);
-            this.lblSecurity.Cursor = System.Windows.Forms.Cursors.Hand;
             // 
             // lblExtra3
             // 
-            this.lblExtra3.BackColor = System.Drawing.Color.White;
+            this.lblExtra3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
             this.lblExtra3.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
             this.lblExtra3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(9)))), ((int)(((byte)(76)))));
             this.lblExtra3.Location = new System.Drawing.Point(600, 0);
@@ -81,7 +81,8 @@
             // 
             // lblAudit
             // 
-            this.lblAudit.BackColor = System.Drawing.Color.White;
+            this.lblAudit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
+            this.lblAudit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblAudit.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
             this.lblAudit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(9)))), ((int)(((byte)(76)))));
             this.lblAudit.Location = new System.Drawing.Point(240, 0);
@@ -91,11 +92,10 @@
             this.lblAudit.Text = "Audit Log";
             this.lblAudit.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.lblAudit.Click += new System.EventHandler(this.lblAudit_Click);
-            this.lblAudit.Cursor = System.Windows.Forms.Cursors.Hand;
             // 
             // lblExtra1
             // 
-            this.lblExtra1.BackColor = System.Drawing.Color.White;
+            this.lblExtra1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
             this.lblExtra1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
             this.lblExtra1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(9)))), ((int)(((byte)(76)))));
             this.lblExtra1.Location = new System.Drawing.Point(360, 0);
@@ -108,7 +108,7 @@
             // 
             // lblExtra2
             // 
-            this.lblExtra2.BackColor = System.Drawing.Color.White;
+            this.lblExtra2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
             this.lblExtra2.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
             this.lblExtra2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(9)))), ((int)(((byte)(76)))));
             this.lblExtra2.Location = new System.Drawing.Point(480, 0);
@@ -137,7 +137,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
             this.Controls.Add(this.panel1);
             this.Name = "settingsTabControl";
             this.Size = new System.Drawing.Size(765, 35);
