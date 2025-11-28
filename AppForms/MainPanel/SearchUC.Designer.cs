@@ -76,8 +76,8 @@
             // 
             // cbxFilter
             // 
-            this.cbxFilter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(6)))), ((int)(((byte)(60)))));
-            this.cbxFilter.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(6)))), ((int)(((byte)(60)))));
+            this.cbxFilter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(160)))));
+            this.cbxFilter.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(160)))));
             this.cbxFilter.BorderRadius = 10;
             this.cbxFilter.BorderSize = 1;
             this.cbxFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
@@ -100,8 +100,8 @@
             // 
             // pnlSearch
             // 
-            this.pnlSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.pnlSearch.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.pnlSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(160)))));
+            this.pnlSearch.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(160)))));
             this.pnlSearch.BorderColor = System.Drawing.Color.White;
             this.pnlSearch.BorderRadius = 10;
             this.pnlSearch.BorderSize = 1;
@@ -117,7 +117,7 @@
             // 
             // txtSearch
             // 
-            this.txtSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.txtSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(160)))));
             this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSearch.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
@@ -128,6 +128,7 @@
             this.txtSearch.Size = new System.Drawing.Size(200, 14);
             this.txtSearch.TabIndex = 6;
             this.txtSearch.Text = "Search Term";
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             this.txtSearch.Enter += new System.EventHandler(this.txtSearch_Enter);
             this.txtSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSearch_KeyPress);
             this.txtSearch.Leave += new System.EventHandler(this.txtSearch_Leave);
