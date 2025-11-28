@@ -63,7 +63,7 @@
             this.customPanel1.Location = new System.Drawing.Point(22, 12);
             this.customPanel1.Name = "customPanel1";
             this.customPanel1.Padding = new System.Windows.Forms.Padding(15);
-            this.customPanel1.Size = new System.Drawing.Size(755, 65);
+            this.customPanel1.Size = new System.Drawing.Size(755, 50);
             this.customPanel1.TabIndex = 4;
             this.customPanel1.TextColor = System.Drawing.Color.White;
             // 
@@ -80,7 +80,9 @@
             this.btnAddEmp.FlatAppearance.BorderSize = 0;
             this.btnAddEmp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddEmp.ForeColor = System.Drawing.Color.White;
-            this.btnAddEmp.Location = new System.Drawing.Point(313, 15);
+            this.btnAddEmp.GradientColor1 = System.Drawing.Color.Empty;
+            this.btnAddEmp.GradientColor2 = System.Drawing.Color.Empty;
+            this.btnAddEmp.Location = new System.Drawing.Point(299, 8);
             this.btnAddEmp.Name = "btnAddEmp";
             this.btnAddEmp.Size = new System.Drawing.Size(154, 36);
             this.btnAddEmp.TabIndex = 0;
@@ -98,7 +100,7 @@
             this.pnlSearch.Controls.Add(this.txtSearch);
             this.pnlSearch.Controls.Add(this.pictureBox1);
             this.pnlSearch.ForeColor = System.Drawing.Color.White;
-            this.pnlSearch.Location = new System.Drawing.Point(18, 15);
+            this.pnlSearch.Location = new System.Drawing.Point(15, 8);
             this.pnlSearch.Name = "pnlSearch";
             this.pnlSearch.Padding = new System.Windows.Forms.Padding(40, 10, 2, 2);
             this.pnlSearch.Size = new System.Drawing.Size(278, 35);

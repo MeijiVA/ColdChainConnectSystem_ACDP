@@ -81,6 +81,7 @@
             // 
             this.testButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(120)))));
             this.testButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.testButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.testButton.FlatAppearance.BorderSize = 0;
             this.testButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.testButton.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -92,7 +93,6 @@
             this.testButton.Text = "Login";
             this.testButton.UseVisualStyleBackColor = false;
             this.testButton.Click += new System.EventHandler(this.testButton_Click);
-            this.testButton.Cursor = System.Windows.Forms.Cursors.Hand;
             // 
             // LogoACDPpBox
             // 
@@ -145,11 +145,14 @@
             this.btnTogglePassword.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btnTogglePassword.BorderRadius = 0;
             this.btnTogglePassword.BorderSize = 0;
+            this.btnTogglePassword.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTogglePassword.FlatAppearance.BorderSize = 0;
             this.btnTogglePassword.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnTogglePassword.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnTogglePassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTogglePassword.ForeColor = System.Drawing.Color.White;
+            this.btnTogglePassword.GradientColor1 = System.Drawing.Color.Empty;
+            this.btnTogglePassword.GradientColor2 = System.Drawing.Color.Empty;
             this.btnTogglePassword.Location = new System.Drawing.Point(265, 266);
             this.btnTogglePassword.Name = "btnTogglePassword";
             this.btnTogglePassword.Size = new System.Drawing.Size(25, 29);
@@ -188,10 +191,13 @@
             this.btnLogin.BorderColor = System.Drawing.Color.Empty;
             this.btnLogin.BorderRadius = 10;
             this.btnLogin.BorderSize = 0;
+            this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogin.FlatAppearance.BorderSize = 0;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12.75F);
             this.btnLogin.ForeColor = System.Drawing.Color.White;
+            this.btnLogin.GradientColor1 = System.Drawing.Color.Empty;
+            this.btnLogin.GradientColor2 = System.Drawing.Color.Empty;
             this.btnLogin.Location = new System.Drawing.Point(115, 326);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(124, 51);
