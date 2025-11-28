@@ -83,7 +83,7 @@
             this.panel1.Controls.Add(this.lblPage);
             this.panel1.Controls.Add(this.btnNext);
             this.panel1.Controls.Add(this.btnPrev);
-            this.panel1.Location = new System.Drawing.Point(22, 528);
+            this.panel1.Location = new System.Drawing.Point(22, 520);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(755, 35);
             this.panel1.TabIndex = 2;
@@ -95,6 +95,7 @@
             this.lblLegends.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.lblLegends.BorderRadius = 10;
             this.lblLegends.BorderSize = 0;
+            this.lblLegends.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblLegends.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblLegends.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLegends.ForeColor = System.Drawing.Color.White;
@@ -107,7 +108,6 @@
             this.lblLegends.TextColor = System.Drawing.Color.White;
             this.lblLegends.MouseLeave += new System.EventHandler(this.lblLegends_MouseLeave);
             this.lblLegends.MouseHover += new System.EventHandler(this.lblLegends_MouseHover);
-            this.lblLegends.Cursor = System.Windows.Forms.Cursors.Hand;
             // 
             // lblOf
             // 
@@ -138,6 +138,7 @@
             this.lblPageNum.BorderColor = System.Drawing.Color.DimGray;
             this.lblPageNum.BorderRadius = 10;
             this.lblPageNum.BorderSize = 1;
+            this.lblPageNum.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblPageNum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblPageNum.ForeColor = System.Drawing.Color.Gray;
             this.lblPageNum.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -148,7 +149,6 @@
             this.lblPageNum.Text = " 1";
             this.lblPageNum.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblPageNum.TextColor = System.Drawing.Color.Gray;
-            this.lblPageNum.Cursor = System.Windows.Forms.Cursors.Hand;
             // 
             // lblPage
             // 
@@ -168,10 +168,14 @@
             this.btnNext.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(255)))));
             this.btnNext.BorderRadius = 10;
             this.btnNext.BorderSize = 0;
+            this.btnNext.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNext.FlatAppearance.BorderSize = 0;
             this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNext.ForeColor = System.Drawing.Color.White;
+            this.btnNext.GradientColor1 = System.Drawing.Color.Transparent;
+            this.btnNext.GradientColor2 = System.Drawing.Color.Transparent;
+            this.btnNext.GradientTextColor = System.Drawing.Color.Transparent;
             this.btnNext.Location = new System.Drawing.Point(571, 2);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(46, 30);
@@ -188,10 +192,14 @@
             this.btnPrev.BorderColor = System.Drawing.Color.DimGray;
             this.btnPrev.BorderRadius = 10;
             this.btnPrev.BorderSize = 1;
+            this.btnPrev.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPrev.FlatAppearance.BorderSize = 0;
             this.btnPrev.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrev.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrev.ForeColor = System.Drawing.Color.Gray;
+            this.btnPrev.GradientColor1 = System.Drawing.Color.Transparent;
+            this.btnPrev.GradientColor2 = System.Drawing.Color.Transparent;
+            this.btnPrev.GradientTextColor = System.Drawing.Color.Transparent;
             this.btnPrev.Location = new System.Drawing.Point(519, 1);
             this.btnPrev.Name = "btnPrev";
             this.btnPrev.Size = new System.Drawing.Size(46, 30);
@@ -207,7 +215,7 @@
             this.actionlbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.actionlbl.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.actionlbl.ForeColor = System.Drawing.Color.White;
-            this.actionlbl.Location = new System.Drawing.Point(717, 93);
+            this.actionlbl.Location = new System.Drawing.Point(717, 74);
             this.actionlbl.Name = "actionlbl";
             this.actionlbl.Size = new System.Drawing.Size(41, 12);
             this.actionlbl.TabIndex = 5;
@@ -227,7 +235,7 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.dgvTable.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvTable.BackgroundColor = System.Drawing.Color.White;
+            this.dgvTable.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dgvTable.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvTable.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvTable.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
@@ -267,7 +275,7 @@
             this.dgvTable.DefaultCellStyle = dataGridViewCellStyle14;
             this.dgvTable.EnableHeadersVisualStyles = false;
             this.dgvTable.GridColor = System.Drawing.Color.White;
-            this.dgvTable.Location = new System.Drawing.Point(22, 82);
+            this.dgvTable.Location = new System.Drawing.Point(22, 63);
             this.dgvTable.MultiSelect = false;
             this.dgvTable.Name = "dgvTable";
             dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -449,7 +457,7 @@
             // uc
             // 
             this.uc.BackColor = System.Drawing.SystemColors.Control;
-            this.uc.Location = new System.Drawing.Point(22, 411);
+            this.uc.Location = new System.Drawing.Point(22, 404);
             this.uc.Name = "uc";
             this.uc.Size = new System.Drawing.Size(137, 124);
             this.uc.TabIndex = 9;
@@ -464,10 +472,14 @@
             this.btnCheck.BorderColor = System.Drawing.Color.Empty;
             this.btnCheck.BorderRadius = 0;
             this.btnCheck.BorderSize = 0;
+            this.btnCheck.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCheck.FlatAppearance.BorderSize = 0;
             this.btnCheck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCheck.ForeColor = System.Drawing.Color.Transparent;
-            this.btnCheck.Location = new System.Drawing.Point(286, 32);
+            this.btnCheck.GradientColor1 = System.Drawing.Color.Transparent;
+            this.btnCheck.GradientColor2 = System.Drawing.Color.Transparent;
+            this.btnCheck.GradientTextColor = System.Drawing.Color.Transparent;
+            this.btnCheck.Location = new System.Drawing.Point(286, 25);
             this.btnCheck.Name = "btnCheck";
             this.btnCheck.Size = new System.Drawing.Size(25, 25);
             this.btnCheck.TabIndex = 3;
@@ -481,7 +493,7 @@
             this.SearchBar.Location = new System.Drawing.Point(22, 12);
             this.SearchBar.Name = "SearchBar";
             this.SearchBar.searchTXT = "Search Term";
-            this.SearchBar.Size = new System.Drawing.Size(755, 65);
+            this.SearchBar.Size = new System.Drawing.Size(755, 50);
             this.SearchBar.TabIndex = 0;
             this.SearchBar.Load += new System.EventHandler(this.searchUC1_Load);
             // 
@@ -489,7 +501,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(798, 570);
             this.Controls.Add(this.uc);
             this.Controls.Add(this.actionlbl);

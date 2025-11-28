@@ -214,6 +214,7 @@
             this.btnAdd.ForeColor = System.Drawing.Color.White;
             this.btnAdd.GradientColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnAdd.GradientColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnAdd.GradientTextColor = System.Drawing.Color.Transparent;
             this.btnAdd.Location = new System.Drawing.Point(624, 507);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(150, 40);
@@ -601,7 +602,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(798, 570);
             this.Controls.Add(this.lblgeen);
             this.Controls.Add(this.customPanel2);

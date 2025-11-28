@@ -210,5 +210,10 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer
         {
             dgvTable.Cursor = Cursors.Default;
         }
+
+        private void actionlbl_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

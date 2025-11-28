@@ -61,8 +61,8 @@
             // 
             // customPanel2
             // 
-            this.customPanel2.BackColor = System.Drawing.Color.White;
-            this.customPanel2.BackgroundColor = System.Drawing.Color.White;
+            this.customPanel2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.customPanel2.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.customPanel2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.customPanel2.BorderRadius = 15;
             this.customPanel2.BorderSize = 1;

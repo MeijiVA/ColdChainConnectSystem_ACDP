@@ -44,8 +44,8 @@
             // 
             // tabPanel
             // 
-            this.tabPanel.BackColor = System.Drawing.Color.White;
-            this.tabPanel.BackgroundColor = System.Drawing.Color.White;
+            this.tabPanel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabPanel.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.tabPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.tabPanel.BorderRadius = 15;
             this.tabPanel.BorderSize = 2;
@@ -103,8 +103,8 @@
             // lblQuantityValue
             // 
             this.lblQuantityValue.AutoSize = true;
-            this.lblQuantityValue.BackColor = System.Drawing.Color.White;
-            this.lblQuantityValue.BackgroundColor = System.Drawing.Color.White;
+            this.lblQuantityValue.BackColor = System.Drawing.Color.Transparent;
+            this.lblQuantityValue.BackgroundColor = System.Drawing.Color.Transparent;
             this.lblQuantityValue.BorderColor = System.Drawing.Color.Transparent;
             this.lblQuantityValue.BorderRadius = 0;
             this.lblQuantityValue.BorderSize = 0;
@@ -184,7 +184,7 @@
             // 
             // tbQuantity
             // 
-            this.tbQuantity.BackColor = System.Drawing.Color.White;
+            this.tbQuantity.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tbQuantity.Cursor = System.Windows.Forms.Cursors.SizeWE;
             this.tbQuantity.Location = new System.Drawing.Point(29, 110);
             this.tbQuantity.Maximum = 60;
@@ -200,7 +200,7 @@
             // ItemTab
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.Controls.Add(this.tabPanel);
             this.Name = "ItemTab";
             this.Size = new System.Drawing.Size(746, 311);

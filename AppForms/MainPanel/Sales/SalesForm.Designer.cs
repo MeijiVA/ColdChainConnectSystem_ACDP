@@ -30,22 +30,22 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle46 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle47 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle58 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle59 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle60 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle48 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle49 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle50 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle51 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle52 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle53 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle54 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle55 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SalesForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle56 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle57 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblOf = new System.Windows.Forms.Label();
             this.lblMaxPage = new System.Windows.Forms.Label();
@@ -82,7 +82,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
             this.panel1.Controls.Add(this.lblPage);
             this.panel1.Controls.Add(this.btnNext);
             this.panel1.Controls.Add(this.btnPrev);
-            this.panel1.Location = new System.Drawing.Point(22, 528);
+            this.panel1.Location = new System.Drawing.Point(22, 520);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(755, 35);
             this.panel1.TabIndex = 2;
@@ -116,6 +116,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
             this.lblPageNum.BorderColor = System.Drawing.Color.DimGray;
             this.lblPageNum.BorderRadius = 10;
             this.lblPageNum.BorderSize = 1;
+            this.lblPageNum.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblPageNum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblPageNum.ForeColor = System.Drawing.Color.Gray;
             this.lblPageNum.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -126,7 +127,6 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
             this.lblPageNum.Text = " 1";
             this.lblPageNum.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblPageNum.TextColor = System.Drawing.Color.Gray;
-            this.lblPageNum.Cursor = System.Windows.Forms.Cursors.Hand;
             // 
             // lblPage
             // 
@@ -146,10 +146,14 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
             this.btnNext.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(255)))));
             this.btnNext.BorderRadius = 10;
             this.btnNext.BorderSize = 0;
+            this.btnNext.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNext.FlatAppearance.BorderSize = 0;
             this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNext.ForeColor = System.Drawing.Color.White;
+            this.btnNext.GradientColor1 = System.Drawing.Color.Transparent;
+            this.btnNext.GradientColor2 = System.Drawing.Color.Transparent;
+            this.btnNext.GradientTextColor = System.Drawing.Color.Transparent;
             this.btnNext.Location = new System.Drawing.Point(571, 2);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(46, 30);
@@ -166,10 +170,14 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
             this.btnPrev.BorderColor = System.Drawing.Color.DimGray;
             this.btnPrev.BorderRadius = 10;
             this.btnPrev.BorderSize = 1;
+            this.btnPrev.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPrev.FlatAppearance.BorderSize = 0;
             this.btnPrev.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrev.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrev.ForeColor = System.Drawing.Color.Gray;
+            this.btnPrev.GradientColor1 = System.Drawing.Color.Transparent;
+            this.btnPrev.GradientColor2 = System.Drawing.Color.Transparent;
+            this.btnPrev.GradientTextColor = System.Drawing.Color.Transparent;
             this.btnPrev.Location = new System.Drawing.Point(519, 1);
             this.btnPrev.Name = "btnPrev";
             this.btnPrev.Size = new System.Drawing.Size(46, 30);
@@ -185,7 +193,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
             this.actionlbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.actionlbl.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.actionlbl.ForeColor = System.Drawing.Color.White;
-            this.actionlbl.Location = new System.Drawing.Point(715, 91);
+            this.actionlbl.Location = new System.Drawing.Point(717, 74);
             this.actionlbl.Name = "actionlbl";
             this.actionlbl.Size = new System.Drawing.Size(41, 12);
             this.actionlbl.TabIndex = 5;
@@ -197,28 +205,28 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
             this.dgvTable.AllowUserToDeleteRows = false;
             this.dgvTable.AllowUserToResizeColumns = false;
             this.dgvTable.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.dgvTable.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvTable.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle46.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle46.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle46.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F);
+            dataGridViewCellStyle46.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            dataGridViewCellStyle46.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            dataGridViewCellStyle46.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle46.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.dgvTable.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle46;
+            this.dgvTable.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dgvTable.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvTable.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvTable.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
             this.dgvTable.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle47.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle47.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            dataGridViewCellStyle47.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle47.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle47.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            dataGridViewCellStyle47.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            dataGridViewCellStyle47.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle47.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle47;
             this.dgvTable.ColumnHeadersHeight = 35;
             this.dgvTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -235,39 +243,39 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
             this.viewCol,
             this.editCol,
             this.deleteCol});
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F);
-            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            dataGridViewCellStyle13.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvTable.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle58.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle58.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle58.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F);
+            dataGridViewCellStyle58.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            dataGridViewCellStyle58.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            dataGridViewCellStyle58.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle58.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            dataGridViewCellStyle58.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvTable.DefaultCellStyle = dataGridViewCellStyle58;
             this.dgvTable.EnableHeadersVisualStyles = false;
             this.dgvTable.GridColor = System.Drawing.Color.White;
-            this.dgvTable.Location = new System.Drawing.Point(22, 80);
+            this.dgvTable.Location = new System.Drawing.Point(22, 63);
             this.dgvTable.MultiSelect = false;
             this.dgvTable.Name = "dgvTable";
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            dataGridViewCellStyle14.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvTable.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle59.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle59.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle59.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle59.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            dataGridViewCellStyle59.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            dataGridViewCellStyle59.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle59.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            dataGridViewCellStyle59.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTable.RowHeadersDefaultCellStyle = dataGridViewCellStyle59;
             this.dgvTable.RowHeadersVisible = false;
             this.dgvTable.RowHeadersWidth = 15;
             this.dgvTable.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F);
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            dataGridViewCellStyle15.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.dgvTable.RowsDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle60.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle60.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F);
+            dataGridViewCellStyle60.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            dataGridViewCellStyle60.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            dataGridViewCellStyle60.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle60.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.dgvTable.RowsDefaultCellStyle = dataGridViewCellStyle60;
             this.dgvTable.RowTemplate.DefaultCellStyle.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
             this.dgvTable.RowTemplate.DefaultCellStyle.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvTable.RowTemplate.Height = 40;
@@ -275,9 +283,9 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
             this.dgvTable.Size = new System.Drawing.Size(755, 442);
             this.dgvTable.TabIndex = 7;
             this.dgvTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTable_CellContentClick_1);
+            this.dgvTable.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvTable_CellFormatting);
             this.dgvTable.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTable_CellMouseEnter);
             this.dgvTable.CellMouseLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTable_CellMouseLeave);
-            this.dgvTable.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvTable_CellFormatting);
             this.dgvTable.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dgvTable_RowPostPaint_1);
             // 
             // rowCbox
@@ -296,8 +304,8 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
             // 
             // salesid
             // 
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.salesid.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle48.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.salesid.DefaultCellStyle = dataGridViewCellStyle48;
             this.salesid.HeaderText = "Sales ID";
             this.salesid.MinimumWidth = 2;
             this.salesid.Name = "salesid";
@@ -307,8 +315,8 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
             // 
             // custid
             // 
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.custid.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle49.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.custid.DefaultCellStyle = dataGridViewCellStyle49;
             this.custid.HeaderText = "Customer ID";
             this.custid.Name = "custid";
             this.custid.ReadOnly = true;
@@ -318,8 +326,8 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
             // 
             // slsdate
             // 
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.slsdate.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle50.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.slsdate.DefaultCellStyle = dataGridViewCellStyle50;
             this.slsdate.HeaderText = "Sales Date";
             this.slsdate.Name = "slsdate";
             this.slsdate.ReadOnly = true;
@@ -329,8 +337,8 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
             // 
             // prodid
             // 
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.prodid.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle51.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.prodid.DefaultCellStyle = dataGridViewCellStyle51;
             this.prodid.HeaderText = "Product ID";
             this.prodid.Name = "prodid";
             this.prodid.ReadOnly = true;
@@ -340,8 +348,8 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
             // 
             // quant
             // 
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.quant.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle52.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.quant.DefaultCellStyle = dataGridViewCellStyle52;
             this.quant.HeaderText = "Quantity";
             this.quant.Name = "quant";
             this.quant.ReadOnly = true;
@@ -350,8 +358,8 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
             // 
             // unitp
             // 
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.unitp.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle53.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.unitp.DefaultCellStyle = dataGridViewCellStyle53;
             this.unitp.HeaderText = "Unit Price";
             this.unitp.Name = "unitp";
             this.unitp.ReadOnly = true;
@@ -370,8 +378,8 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
             // 
             // status
             // 
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.status.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle54.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.status.DefaultCellStyle = dataGridViewCellStyle54;
             this.status.HeaderText = "Status";
             this.status.Name = "status";
             this.status.ReadOnly = true;
@@ -381,10 +389,10 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
             // 
             // viewCol
             // 
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle10.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle10.NullValue")));
-            dataGridViewCellStyle10.Padding = new System.Windows.Forms.Padding(0, 10, 0, 10);
-            this.viewCol.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle55.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle55.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle55.NullValue")));
+            dataGridViewCellStyle55.Padding = new System.Windows.Forms.Padding(0, 10, 0, 10);
+            this.viewCol.DefaultCellStyle = dataGridViewCellStyle55;
             this.viewCol.HeaderText = "";
             this.viewCol.Image = global::ColdChainConnectSystem_ACDP.Properties.Resources.viewBtn;
             this.viewCol.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
@@ -396,10 +404,10 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
             // 
             // editCol
             // 
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle11.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle11.NullValue")));
-            dataGridViewCellStyle11.Padding = new System.Windows.Forms.Padding(0, 10, 0, 10);
-            this.editCol.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle56.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle56.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle56.NullValue")));
+            dataGridViewCellStyle56.Padding = new System.Windows.Forms.Padding(0, 10, 0, 10);
+            this.editCol.DefaultCellStyle = dataGridViewCellStyle56;
             this.editCol.HeaderText = "";
             this.editCol.Image = global::ColdChainConnectSystem_ACDP.Properties.Resources.editBtn;
             this.editCol.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
@@ -411,10 +419,10 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
             // 
             // deleteCol
             // 
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle12.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle12.NullValue")));
-            dataGridViewCellStyle12.Padding = new System.Windows.Forms.Padding(0, 10, 0, 10);
-            this.deleteCol.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle57.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle57.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle57.NullValue")));
+            dataGridViewCellStyle57.Padding = new System.Windows.Forms.Padding(0, 10, 0, 10);
+            this.deleteCol.DefaultCellStyle = dataGridViewCellStyle57;
             this.deleteCol.HeaderText = "";
             this.deleteCol.Image = global::ColdChainConnectSystem_ACDP.Properties.Resources.delBtn;
             this.deleteCol.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
@@ -433,10 +441,14 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
             this.btnCheck.BorderColor = System.Drawing.Color.Empty;
             this.btnCheck.BorderRadius = 0;
             this.btnCheck.BorderSize = 0;
+            this.btnCheck.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCheck.FlatAppearance.BorderSize = 0;
             this.btnCheck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCheck.ForeColor = System.Drawing.Color.Transparent;
-            this.btnCheck.Location = new System.Drawing.Point(286, 32);
+            this.btnCheck.GradientColor1 = System.Drawing.Color.Transparent;
+            this.btnCheck.GradientColor2 = System.Drawing.Color.Transparent;
+            this.btnCheck.GradientTextColor = System.Drawing.Color.Transparent;
+            this.btnCheck.Location = new System.Drawing.Point(286, 25);
             this.btnCheck.Name = "btnCheck";
             this.btnCheck.Size = new System.Drawing.Size(25, 25);
             this.btnCheck.TabIndex = 3;
@@ -457,7 +469,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(798, 570);
             this.Controls.Add(this.actionlbl);
             this.Controls.Add(this.btnCheck);

@@ -232,10 +232,14 @@
             this.btnImage.BorderColor = System.Drawing.Color.Empty;
             this.btnImage.BorderRadius = 10;
             this.btnImage.BorderSize = 2;
+            this.btnImage.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnImage.FlatAppearance.BorderSize = 0;
             this.btnImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnImage.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.btnImage.ForeColor = System.Drawing.Color.White;
+            this.btnImage.GradientColor1 = System.Drawing.Color.Transparent;
+            this.btnImage.GradientColor2 = System.Drawing.Color.Transparent;
+            this.btnImage.GradientTextColor = System.Drawing.Color.Transparent;
             this.btnImage.Location = new System.Drawing.Point(463, 190);
             this.btnImage.Name = "btnImage";
             this.btnImage.Size = new System.Drawing.Size(125, 40);
@@ -252,10 +256,14 @@
             this.btnExitView.BorderColor = System.Drawing.Color.Empty;
             this.btnExitView.BorderRadius = 10;
             this.btnExitView.BorderSize = 2;
+            this.btnExitView.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnExitView.FlatAppearance.BorderSize = 0;
             this.btnExitView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExitView.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.btnExitView.ForeColor = System.Drawing.Color.White;
+            this.btnExitView.GradientColor1 = System.Drawing.Color.Transparent;
+            this.btnExitView.GradientColor2 = System.Drawing.Color.Transparent;
+            this.btnExitView.GradientTextColor = System.Drawing.Color.Transparent;
             this.btnExitView.Location = new System.Drawing.Point(438, 342);
             this.btnExitView.Name = "btnExitView";
             this.btnExitView.Size = new System.Drawing.Size(150, 40);
@@ -378,6 +386,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(600, 393);
             this.Controls.Add(this.lblSKU);
             this.Controls.Add(this.label6);

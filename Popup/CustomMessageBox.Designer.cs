@@ -42,7 +42,7 @@
             // lblDescription
             // 
             this.lblDescription.Cursor = System.Windows.Forms.Cursors.AppStarting;
-            this.lblDescription.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10F);
+            this.lblDescription.Font = new System.Drawing.Font("Arial", 10F);
             this.lblDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.lblDescription.Location = new System.Drawing.Point(11, 44);
             this.lblDescription.Name = "lblDescription";
@@ -71,10 +71,11 @@
             this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancel.FlatAppearance.BorderSize = 0;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.Font = new System.Drawing.Font("Arial", 10F);
             this.btnCancel.ForeColor = System.Drawing.Color.White;
             this.btnCancel.GradientColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnCancel.GradientColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnCancel.GradientTextColor = System.Drawing.Color.Transparent;
             this.btnCancel.Location = new System.Drawing.Point(68, 3);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(56, 40);
@@ -95,10 +96,11 @@
             this.btnOK.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnOK.FlatAppearance.BorderSize = 0;
             this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOK.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOK.Font = new System.Drawing.Font("Arial", 10F);
             this.btnOK.ForeColor = System.Drawing.Color.White;
             this.btnOK.GradientColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnOK.GradientColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnOK.GradientTextColor = System.Drawing.Color.Transparent;
             this.btnOK.Location = new System.Drawing.Point(6, 3);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(56, 40);
@@ -130,11 +132,11 @@
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10F);
+            this.lblTitle.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.lblTitle.ForeColor = System.Drawing.Color.White;
             this.lblTitle.Location = new System.Drawing.Point(20, 7);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(44, 16);
+            this.lblTitle.Size = new System.Drawing.Size(45, 16);
             this.lblTitle.TabIndex = 3;
             this.lblTitle.Text = "Label";
             // 

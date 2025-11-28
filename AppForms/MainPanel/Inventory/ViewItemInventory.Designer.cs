@@ -196,10 +196,14 @@
             this.btnExitView.BorderColor = System.Drawing.Color.Empty;
             this.btnExitView.BorderRadius = 10;
             this.btnExitView.BorderSize = 2;
+            this.btnExitView.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnExitView.FlatAppearance.BorderSize = 0;
             this.btnExitView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExitView.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.btnExitView.ForeColor = System.Drawing.Color.White;
+            this.btnExitView.GradientColor1 = System.Drawing.Color.Transparent;
+            this.btnExitView.GradientColor2 = System.Drawing.Color.Transparent;
+            this.btnExitView.GradientTextColor = System.Drawing.Color.Transparent;
             this.btnExitView.Location = new System.Drawing.Point(438, 341);
             this.btnExitView.Name = "btnExitView";
             this.btnExitView.Size = new System.Drawing.Size(150, 40);
@@ -304,8 +308,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(600, 393);
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ClientSize = new System.Drawing.Size(600, 390);
             this.Controls.Add(this.customPanel1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lblSupplierID);

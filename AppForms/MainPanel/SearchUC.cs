@@ -16,6 +16,7 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.IdentityModel.Tokens;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,10 +27,22 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
 {
     public partial class SearchUC : UserControl
     {
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn
+(
+int nLeftRect,     // x-coordinate of upper-left corner
+int nTopRect,      // y-coordinate of upper-left corner
+int nRightRect,    // x-coordinate of lower-right corner
+int nBottomRect,   // y-coordinate of lower-right corner
+int nWidthEllipse, // width of ellipse
+int nHeightEllipse // height of ellipse
+);
 
         public SearchUC()
         {
             InitializeComponent();
+            this.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
+
             this.DoubleBuffered = true; // Apply to the form
             ofdExport.Filter = "Excel Worksheets|*.xls;*.xlsx;*.xlsm";
             ofdImport.Filter = "Excel Worksheets|*.xls;*.xlsx;*.xlsm";

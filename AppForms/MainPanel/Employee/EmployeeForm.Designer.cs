@@ -82,6 +82,7 @@
             this.btnAddEmp.ForeColor = System.Drawing.Color.White;
             this.btnAddEmp.GradientColor1 = System.Drawing.Color.Empty;
             this.btnAddEmp.GradientColor2 = System.Drawing.Color.Empty;
+            this.btnAddEmp.GradientTextColor = System.Drawing.Color.Transparent;
             this.btnAddEmp.Location = new System.Drawing.Point(299, 8);
             this.btnAddEmp.Name = "btnAddEmp";
             this.btnAddEmp.Size = new System.Drawing.Size(154, 36);
@@ -140,7 +141,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
             this.ClientSize = new System.Drawing.Size(798, 570);
             this.Controls.Add(this.customPanel1);
             this.Controls.Add(this.flpEmployee);

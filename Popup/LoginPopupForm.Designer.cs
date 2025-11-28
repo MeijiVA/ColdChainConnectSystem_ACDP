@@ -39,13 +39,14 @@
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Arial", 10F);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.label1.Location = new System.Drawing.Point(13, 42);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(325, 32);
             this.label1.TabIndex = 7;
-            this.label1.Text = "The Current Data Source is not specified,\r\n Insert your Database\'s Data Source";
+            this.label1.Text = "The Current Data Source is not specified, \r\nInsert your Database\'s Data Source\r\n";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnOK
             // 
@@ -57,10 +58,11 @@
             this.btnOK.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnOK.FlatAppearance.BorderSize = 0;
             this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOK.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOK.Font = new System.Drawing.Font("Arial", 10F);
             this.btnOK.ForeColor = System.Drawing.Color.White;
             this.btnOK.GradientColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnOK.GradientColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnOK.GradientTextColor = System.Drawing.Color.Transparent;
             this.btnOK.Location = new System.Drawing.Point(283, 121);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(56, 40);
@@ -114,11 +116,11 @@
             // lbl
             // 
             this.lbl.AutoSize = true;
-            this.lbl.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10F);
+            this.lbl.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.lbl.ForeColor = System.Drawing.Color.White;
             this.lbl.Location = new System.Drawing.Point(20, 7);
             this.lbl.Name = "lbl";
-            this.lbl.Size = new System.Drawing.Size(75, 16);
+            this.lbl.Size = new System.Drawing.Size(76, 16);
             this.lbl.TabIndex = 3;
             this.lbl.Text = "Database ";
             // 

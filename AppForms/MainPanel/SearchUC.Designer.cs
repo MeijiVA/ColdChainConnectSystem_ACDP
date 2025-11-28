@@ -58,7 +58,7 @@
             this.customPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.customPanel1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.customPanel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.customPanel1.BorderRadius = 10;
+            this.customPanel1.BorderRadius = 0;
             this.customPanel1.BorderSize = 0;
             this.customPanel1.Controls.Add(this.cbxFilter);
             this.customPanel1.Controls.Add(this.pnlSearch);
@@ -159,6 +159,7 @@
             this.btnAddItem.ForeColor = System.Drawing.Color.White;
             this.btnAddItem.GradientColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnAddItem.GradientColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnAddItem.GradientTextColor = System.Drawing.Color.Transparent;
             this.btnAddItem.Location = new System.Drawing.Point(407, 7);
             this.btnAddItem.Name = "btnAddItem";
             this.btnAddItem.Size = new System.Drawing.Size(132, 35);
@@ -182,6 +183,7 @@
             this.btnImport.ForeColor = System.Drawing.Color.White;
             this.btnImport.GradientColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnImport.GradientColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnImport.GradientTextColor = System.Drawing.Color.Transparent;
             this.btnImport.Location = new System.Drawing.Point(545, 8);
             this.btnImport.Name = "btnImport";
             this.btnImport.Size = new System.Drawing.Size(94, 35);
@@ -205,6 +207,7 @@
             this.btnExport.ForeColor = System.Drawing.Color.White;
             this.btnExport.GradientColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnExport.GradientColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnExport.GradientTextColor = System.Drawing.Color.Transparent;
             this.btnExport.Location = new System.Drawing.Point(645, 7);
             this.btnExport.Name = "btnExport";
             this.btnExport.Size = new System.Drawing.Size(94, 35);

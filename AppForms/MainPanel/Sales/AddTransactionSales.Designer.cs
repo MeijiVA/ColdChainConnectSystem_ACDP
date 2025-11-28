@@ -100,9 +100,13 @@
             this.btnRemoveTab.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btnRemoveTab.BorderRadius = 0;
             this.btnRemoveTab.BorderSize = 0;
+            this.btnRemoveTab.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRemoveTab.FlatAppearance.BorderSize = 0;
             this.btnRemoveTab.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRemoveTab.ForeColor = System.Drawing.Color.White;
+            this.btnRemoveTab.GradientColor1 = System.Drawing.Color.Transparent;
+            this.btnRemoveTab.GradientColor2 = System.Drawing.Color.Transparent;
+            this.btnRemoveTab.GradientTextColor = System.Drawing.Color.Transparent;
             this.btnRemoveTab.Location = new System.Drawing.Point(70, 508);
             this.btnRemoveTab.Name = "btnRemoveTab";
             this.btnRemoveTab.Size = new System.Drawing.Size(40, 40);
@@ -118,9 +122,13 @@
             this.btnAddTab.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btnAddTab.BorderRadius = 0;
             this.btnAddTab.BorderSize = 0;
+            this.btnAddTab.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddTab.FlatAppearance.BorderSize = 0;
             this.btnAddTab.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddTab.ForeColor = System.Drawing.Color.White;
+            this.btnAddTab.GradientColor1 = System.Drawing.Color.Transparent;
+            this.btnAddTab.GradientColor2 = System.Drawing.Color.Transparent;
+            this.btnAddTab.GradientTextColor = System.Drawing.Color.Transparent;
             this.btnAddTab.Location = new System.Drawing.Point(24, 508);
             this.btnAddTab.Name = "btnAddTab";
             this.btnAddTab.Size = new System.Drawing.Size(40, 40);
@@ -131,8 +139,8 @@
             // 
             // lblCustomerName
             // 
-            this.lblCustomerName.BackColor = System.Drawing.Color.White;
-            this.lblCustomerName.BackgroundColor = System.Drawing.Color.White;
+            this.lblCustomerName.BackColor = System.Drawing.Color.Transparent;
+            this.lblCustomerName.BackgroundColor = System.Drawing.Color.Transparent;
             this.lblCustomerName.BorderColor = System.Drawing.Color.Transparent;
             this.lblCustomerName.BorderRadius = 0;
             this.lblCustomerName.BorderSize = 0;
@@ -143,6 +151,7 @@
             this.lblCustomerName.Name = "lblCustomerName";
             this.lblCustomerName.Size = new System.Drawing.Size(186, 37);
             this.lblCustomerName.TabIndex = 37;
+            this.lblCustomerName.Text = "Text Here lol";
             this.lblCustomerName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblCustomerName.TextColor = System.Drawing.Color.Black;
             // 
@@ -211,10 +220,14 @@
             this.btnAdd.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btnAdd.BorderRadius = 10;
             this.btnAdd.BorderSize = 0;
+            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAdd.FlatAppearance.BorderSize = 0;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.Color.White;
+            this.btnAdd.GradientColor1 = System.Drawing.Color.Transparent;
+            this.btnAdd.GradientColor2 = System.Drawing.Color.Transparent;
+            this.btnAdd.GradientTextColor = System.Drawing.Color.Transparent;
             this.btnAdd.Location = new System.Drawing.Point(624, 507);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(150, 40);
@@ -279,7 +292,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(798, 570);
             this.Controls.Add(this.cbStatus);
             this.Controls.Add(this.lblStatus);
