@@ -70,7 +70,7 @@
             this.customPanel1.Location = new System.Drawing.Point(0, 0);
             this.customPanel1.Name = "customPanel1";
             this.customPanel1.Padding = new System.Windows.Forms.Padding(15);
-            this.customPanel1.Size = new System.Drawing.Size(755, 65);
+            this.customPanel1.Size = new System.Drawing.Size(755, 50);
             this.customPanel1.TabIndex = 3;
             this.customPanel1.TextColor = System.Drawing.Color.White;
             // 
@@ -88,7 +88,7 @@
             "Filter"});
             this.cbxFilter.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.cbxFilter.ListTextColor = System.Drawing.Color.DimGray;
-            this.cbxFilter.Location = new System.Drawing.Point(302, 15);
+            this.cbxFilter.Location = new System.Drawing.Point(304, 7);
             this.cbxFilter.MinimumSize = new System.Drawing.Size(40, 30);
             this.cbxFilter.Name = "cbxFilter";
             this.cbxFilter.Padding = new System.Windows.Forms.Padding(1);
@@ -108,7 +108,7 @@
             this.pnlSearch.Controls.Add(this.txtSearch);
             this.pnlSearch.Controls.Add(this.pictureBox1);
             this.pnlSearch.ForeColor = System.Drawing.Color.White;
-            this.pnlSearch.Location = new System.Drawing.Point(18, 15);
+            this.pnlSearch.Location = new System.Drawing.Point(20, 7);
             this.pnlSearch.Name = "pnlSearch";
             this.pnlSearch.Padding = new System.Windows.Forms.Padding(40, 10, 2, 2);
             this.pnlSearch.Size = new System.Drawing.Size(278, 35);
@@ -153,10 +153,13 @@
             this.btnAddItem.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btnAddItem.BorderRadius = 10;
             this.btnAddItem.BorderSize = 0;
+            this.btnAddItem.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddItem.FlatAppearance.BorderSize = 0;
             this.btnAddItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddItem.ForeColor = System.Drawing.Color.White;
-            this.btnAddItem.Location = new System.Drawing.Point(405, 15);
+            this.btnAddItem.GradientColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnAddItem.GradientColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnAddItem.Location = new System.Drawing.Point(407, 7);
             this.btnAddItem.Name = "btnAddItem";
             this.btnAddItem.Size = new System.Drawing.Size(132, 35);
             this.btnAddItem.TabIndex = 0;
@@ -173,10 +176,13 @@
             this.btnImport.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btnImport.BorderRadius = 10;
             this.btnImport.BorderSize = 0;
+            this.btnImport.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnImport.FlatAppearance.BorderSize = 0;
             this.btnImport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnImport.ForeColor = System.Drawing.Color.White;
-            this.btnImport.Location = new System.Drawing.Point(543, 16);
+            this.btnImport.GradientColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnImport.GradientColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnImport.Location = new System.Drawing.Point(545, 8);
             this.btnImport.Name = "btnImport";
             this.btnImport.Size = new System.Drawing.Size(94, 35);
             this.btnImport.TabIndex = 2;
@@ -193,10 +199,13 @@
             this.btnExport.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btnExport.BorderRadius = 10;
             this.btnExport.BorderSize = 0;
+            this.btnExport.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnExport.FlatAppearance.BorderSize = 0;
             this.btnExport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExport.ForeColor = System.Drawing.Color.White;
-            this.btnExport.Location = new System.Drawing.Point(643, 15);
+            this.btnExport.GradientColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnExport.GradientColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnExport.Location = new System.Drawing.Point(645, 7);
             this.btnExport.Name = "btnExport";
             this.btnExport.Size = new System.Drawing.Size(94, 35);
             this.btnExport.TabIndex = 1;
@@ -211,7 +220,7 @@
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.customPanel1);
             this.Name = "SearchUC";
-            this.Size = new System.Drawing.Size(755, 65);
+            this.Size = new System.Drawing.Size(755, 50);
             this.customPanel1.ResumeLayout(false);
             this.pnlSearch.ResumeLayout(false);
             this.pnlSearch.PerformLayout();

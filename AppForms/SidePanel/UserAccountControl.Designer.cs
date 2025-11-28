@@ -40,12 +40,11 @@
             // 
             this.UAC_namelbl.BackColor = System.Drawing.Color.Transparent;
             this.UAC_namelbl.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.UAC_namelbl.Dock = System.Windows.Forms.DockStyle.Top;
             this.UAC_namelbl.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UAC_namelbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
-            this.UAC_namelbl.Location = new System.Drawing.Point(27, 146);
+            this.UAC_namelbl.Location = new System.Drawing.Point(0, 146);
             this.UAC_namelbl.Name = "UAC_namelbl";
-            this.UAC_namelbl.Size = new System.Drawing.Size(146, 15);
+            this.UAC_namelbl.Size = new System.Drawing.Size(200, 15);
             this.UAC_namelbl.TabIndex = 1;
             this.UAC_namelbl.Text = "Name";
             this.UAC_namelbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
