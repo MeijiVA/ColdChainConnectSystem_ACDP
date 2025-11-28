@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ColdChainConnectSystem_ACDP.ClassResources.Instances;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -27,6 +28,7 @@ namespace ColdChainConnectSystem_ACDP.Popup
         public CustomMessageBox(String lbl, String desc)
         {
             InitializeComponent();
+            MainInstance.o.Show(MainInstance.i);
             this.FormBorderStyle = FormBorderStyle.None;
             this.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
             btnOK.Visible = true;
@@ -38,6 +40,7 @@ namespace ColdChainConnectSystem_ACDP.Popup
             if (messageBoxButtons == MessageBoxButtons.OKCancel)
             {
                 InitializeComponent();
+                MainInstance.o.Show(MainInstance.i);
                 this.FormBorderStyle = FormBorderStyle.None;
                 this.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
                 btnOK.Visible = true;
@@ -48,6 +51,7 @@ namespace ColdChainConnectSystem_ACDP.Popup
             else if (messageBoxButtons == MessageBoxButtons.OK)
             {
                 InitializeComponent();
+                MainInstance.o.Show(MainInstance.i);
                 this.FormBorderStyle = FormBorderStyle.None;
                 this.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
                 btnOK.Visible = true;
@@ -70,17 +74,21 @@ namespace ColdChainConnectSystem_ACDP.Popup
         private void btnExit_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.Cancel;
+            MainInstance.o.Hide();
         }
 
         private void btnOK_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.OK;
+            MainInstance.o.Hide();
         }
 
         private void customButton1_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.Cancel;
+            MainInstance.o.Hide();
         }
+
         public Point mouseLoc;
         public Point bottleMouse;
         private void customPanel1_MouseDown(object sender, MouseEventArgs e)

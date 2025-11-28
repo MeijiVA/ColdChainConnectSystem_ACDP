@@ -631,6 +631,9 @@
     <EmbeddedResource Include="AppForms\SidePanel\UserAccountControl.resx">
       <DependentUpon>UserAccountControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ClassResources\Display\OverlayForm.resx">
+      <DependentUpon>OverlayForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>

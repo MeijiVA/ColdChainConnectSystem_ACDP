@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ColdChainConnectSystem_ACDP.ClassResources.Display;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources.Instances
 {
     internal class MainInstance
     {
-        public static MainForm i; 
+        public static MainForm i;
+        public static OverlayForm o;
     }
 }

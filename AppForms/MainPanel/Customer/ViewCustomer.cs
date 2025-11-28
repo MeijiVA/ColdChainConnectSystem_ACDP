@@ -65,7 +65,8 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer
 
         private void btnExitView_Click(object sender, EventArgs e)
         {
-            Close();
+            this.Close();
+            MainInstance.o.Hide();
         }
     }
 }

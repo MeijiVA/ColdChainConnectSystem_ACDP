@@ -4,6 +4,7 @@ using ColdChainConnectSystem_ACDP.AppForms.MainPanel.Dashboard;
 using ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory;
 using ColdChainConnectSystem_ACDP.AppForms.MainPanel.Settings;
 using ColdChainConnectSystem_ACDP.ClassResources;
+using ColdChainConnectSystem_ACDP.ClassResources.Display;
 using ColdChainConnectSystem_ACDP.ClassResources.Instances;
 using ColdChainConnectSystem_ACDP.Popup;
 using System;
@@ -27,7 +28,7 @@ namespace ColdChainConnectSystem_ACDP
         public MainForm()
         {
             InitializeComponent();
-
+            MainInstance.o = new OverlayForm();
         }
 
         private void MainForm_Load(object sender, EventArgs e)

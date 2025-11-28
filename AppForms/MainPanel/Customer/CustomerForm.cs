@@ -185,8 +185,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer
             {
                 VarView.id = cellValue;
                 ViewCustomer vc = new ViewCustomer();
-                vc.Show(this);
-
+                vc.Show();
             }
         }
 

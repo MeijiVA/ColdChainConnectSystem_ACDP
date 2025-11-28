@@ -39,6 +39,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "EditCustomer";
             this.Text = "EditCustomer";
+            this.Load += new System.EventHandler(this.EditCustomer_Load);
             this.ResumeLayout(false);
 
         }
