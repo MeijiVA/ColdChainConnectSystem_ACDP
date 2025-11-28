@@ -44,10 +44,10 @@
             // 
             this.flpEmployee.AutoScroll = true;
             this.flpEmployee.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flpEmployee.Location = new System.Drawing.Point(12, 83);
+            this.flpEmployee.Location = new System.Drawing.Point(4, 83);
             this.flpEmployee.Name = "flpEmployee";
             this.flpEmployee.Padding = new System.Windows.Forms.Padding(11, 8, 11, 8);
-            this.flpEmployee.Size = new System.Drawing.Size(766, 475);
+            this.flpEmployee.Size = new System.Drawing.Size(790, 475);
             this.flpEmployee.TabIndex = 0;
             // 
             // customPanel1
@@ -76,6 +76,7 @@
             this.btnAddEmp.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btnAddEmp.BorderRadius = 10;
             this.btnAddEmp.BorderSize = 0;
+            this.btnAddEmp.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddEmp.FlatAppearance.BorderSize = 0;
             this.btnAddEmp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddEmp.ForeColor = System.Drawing.Color.White;
@@ -85,6 +86,7 @@
             this.btnAddEmp.TabIndex = 0;
             this.btnAddEmp.TextColor = System.Drawing.Color.White;
             this.btnAddEmp.UseVisualStyleBackColor = false;
+            this.btnAddEmp.Click += new System.EventHandler(this.btnAddEmp_Click);
             // 
             // pnlSearch
             // 
@@ -116,6 +118,9 @@
             this.txtSearch.Size = new System.Drawing.Size(200, 14);
             this.txtSearch.TabIndex = 6;
             this.txtSearch.Text = "Search Term";
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
+            this.txtSearch.Enter += new System.EventHandler(this.txtSearch_Enter);
+            this.txtSearch.Leave += new System.EventHandler(this.txtSearch_Leave);
             // 
             // pictureBox1
             // 

@@ -36,6 +36,7 @@
             this.pnlNameTab = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
             this.lblEmpID = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
             this.btnView = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
+            this.btnDelete = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
             this.pnlShowEmp = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
             this.posStatus.SuspendLayout();
             this.pnlNameTab.SuspendLayout();
@@ -143,6 +144,7 @@
             this.pnlNameTab.BorderSize = 2;
             this.pnlNameTab.Controls.Add(this.lblEmpID);
             this.pnlNameTab.Controls.Add(this.btnView);
+            this.pnlNameTab.Controls.Add(this.btnDelete);
             this.pnlNameTab.ForeColor = System.Drawing.Color.White;
             this.pnlNameTab.Location = new System.Drawing.Point(11, 9);
             this.pnlNameTab.Name = "pnlNameTab";
@@ -164,7 +166,7 @@
             this.lblEmpID.ForeColor = System.Drawing.Color.White;
             this.lblEmpID.Location = new System.Drawing.Point(2, 2);
             this.lblEmpID.Name = "lblEmpID";
-            this.lblEmpID.Size = new System.Drawing.Size(180, 31);
+            this.lblEmpID.Size = new System.Drawing.Size(147, 31);
             this.lblEmpID.TabIndex = 3;
             this.lblEmpID.Text = "Employee ID Here";
             this.lblEmpID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -190,6 +192,29 @@
             this.btnView.TextColor = System.Drawing.Color.White;
             this.btnView.UseVisualStyleBackColor = false;
             this.btnView.Click += new System.EventHandler(this.Edit_Click);
+            this.btnView.Cursor = System.Windows.Forms.Cursors.Hand;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.btnDelete.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.btnDelete.BackgroundImage = global::ColdChainConnectSystem_ACDP.Properties.Resources.delBtn;
+            this.btnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnDelete.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnDelete.BorderRadius = 10;
+            this.btnDelete.BorderSize = 0;
+            this.btnDelete.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnDelete.FlatAppearance.BorderSize = 0;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.Location = new System.Drawing.Point(147, 2);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(35, 31);
+            this.btnDelete.TabIndex = 2;
+            this.btnDelete.TextColor = System.Drawing.Color.White;
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.Delete_Click);
+            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
             // 
             // pnlShowEmp
             // 
@@ -229,6 +254,7 @@
 
         #endregion
         private Materials.CustomButton btnView;
+        private Materials.CustomButton btnDelete;
         private System.Windows.Forms.FlowLayoutPanel posStatus;
         public Materials.CustomLabel lblEmpID;
         public Materials.CustomLabel lblStatus;

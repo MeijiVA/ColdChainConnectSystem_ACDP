@@ -60,7 +60,31 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.Employee
 
         private void Delete_Click(object sender, EventArgs e)
         {
+            DialogResult result = MessageBox.Show(
+                $"Are you sure you want to delete employee {lblEmpID.Text}?",
+                "Confirm Delete",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning
+            );
 
+            if (result == DialogResult.Yes)
+            {
+                bool success = EmployeeClass.DeleteEmployee(lblEmpID.Text);
+                if (success)
+                {
+                    MessageBox.Show("Employee deleted successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    // Remove this control from parent and refresh the list
+                    if (this.Parent != null)
+                    {
+                        this.Parent.Controls.Remove(this);
+                    }
+                    // Refresh the employee list
+                    if (EmployeeInstance.i != null)
+                    {
+                        EmployeeInstance.i.LoadAllEmployees();
+                    }
+                }
+            }
         }
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)

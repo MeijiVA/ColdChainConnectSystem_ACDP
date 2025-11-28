@@ -23,7 +23,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
             con.Close();
             return i;
         }
-        public static void LoadAllEmployees(int currentNum,Label lblemp, Label lbluser, Label lblname, Label lblpos, Label lblstatus)
+        public static void LoadAllEmployees(int currentNum, Label lblemp, Label lbluser, Label lblname, Label lblpos, Label lblstatus)
         {
             try
             {
@@ -51,6 +51,77 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
             catch (Exception ex)
             {
                 new CustomMessageBox("Error", "Failed to load employees: " + ex.Message, MessageBoxButtons.OK).ShowDialog();
+            }
+        }
+
+        public static bool SaveEmployee(string empID, string username, string firstName, string middleName,
+            string lastName, string contactNum, string address, string age, DateTime dob,
+            string position, string status, string sex, string email)
+        {
+            try
+            {
+                SqlConnection con = ConnectionClass.Connection();
+                string query = @"INSERT INTO Employees ([empid], [username], [firstname], [middlename], [lastname], 
+                    [contactnum], [address], [age], [dateofbirth], [position], [status], [sex], [email]) 
+                    VALUES (@EmpID, @Username, @FirstName, @MiddleName, @LastName, @ContactNum, @Address, 
+                    @Age, @DateOfBirth, @Position, @Status, @Sex, @Email)";
+
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    cmd.Parameters.AddWithValue("@EmpID", empID);
+                    cmd.Parameters.AddWithValue("@Username", username);
+                    cmd.Parameters.AddWithValue("@FirstName", firstName);
+                    cmd.Parameters.AddWithValue("@MiddleName", string.IsNullOrWhiteSpace(middleName) ? (object)DBNull.Value : middleName);
+                    cmd.Parameters.AddWithValue("@LastName", lastName);
+                    cmd.Parameters.AddWithValue("@ContactNum", string.IsNullOrWhiteSpace(contactNum) ? (object)DBNull.Value : contactNum);
+                    cmd.Parameters.AddWithValue("@Address", string.IsNullOrWhiteSpace(address) ? (object)DBNull.Value : address);
+                    if (string.IsNullOrWhiteSpace(age) || !int.TryParse(age, out int ageValue))
+                    {
+                        cmd.Parameters.AddWithValue("@Age", DBNull.Value);
+                    }
+                    else
+                    {
+                        cmd.Parameters.AddWithValue("@Age", ageValue);
+                    }
+                    cmd.Parameters.AddWithValue("@DateOfBirth", dob);
+                    cmd.Parameters.AddWithValue("@Position", position);
+                    cmd.Parameters.AddWithValue("@Status", status);
+                    cmd.Parameters.AddWithValue("@Sex", string.IsNullOrWhiteSpace(sex) ? (object)DBNull.Value : sex);
+                    cmd.Parameters.AddWithValue("@Email", string.IsNullOrWhiteSpace(email) ? (object)DBNull.Value : email);
+
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                    return true;
+                }
+            }
+            catch (Exception ex)
+            {
+                new CustomMessageBox("Error", "Failed to save employee: " + ex.Message, MessageBoxButtons.OK).ShowDialog();
+                return false;
+            }
+        }
+
+        public static bool DeleteEmployee(string empID)
+        {
+            try
+            {
+                SqlConnection con = ConnectionClass.Connection();
+                string query = "DELETE FROM Employees WHERE [empid] = @EmpID";
+
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    cmd.Parameters.AddWithValue("@EmpID", empID);
+                    con.Open();
+                    int rowsAffected = cmd.ExecuteNonQuery();
+                    con.Close();
+                    return rowsAffected > 0;
+                }
+            }
+            catch (Exception ex)
+            {
+                new CustomMessageBox("Error", "Failed to delete employee: " + ex.Message, MessageBoxButtons.OK).ShowDialog();
+                return false;
             }
         }
     }

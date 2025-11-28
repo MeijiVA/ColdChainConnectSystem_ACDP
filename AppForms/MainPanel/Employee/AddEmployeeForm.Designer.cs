@@ -53,6 +53,8 @@
             this.btnExit.Size = new System.Drawing.Size(27, 27);
             this.btnExit.TabIndex = 8;
             this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
             // 
             // btnSave
             // 
@@ -72,7 +74,9 @@
             this.btnSave.Text = "Save";
             this.btnSave.TextColor = System.Drawing.Color.White;
             this.btnSave.UseVisualStyleBackColor = false;
-            this.btnSave.Visible = false;
+            this.btnSave.Visible = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
             // 
             // tscStatus
             // 
@@ -89,6 +93,7 @@
             this.tscStatus.ToggleBarText = "Active";
             this.tscStatus.ToggleCircleColor = System.Drawing.Color.Green;
             this.tscStatus.ToggleColorBar = System.Drawing.Color.Gray;
+            this.tscStatus.CheckChanged += new System.EventHandler(this.tscStatus_CheckChanged);
             // 
             // lblEmpID
             // 
@@ -143,9 +148,9 @@
             this.editAccountInformation1.EmailInfo = "";
             this.editAccountInformation1.Location = new System.Drawing.Point(502, 122);
             this.editAccountInformation1.Name = "editAccountInformation1";
-            this.editAccountInformation1.PositionInfo = "label3";
+            this.editAccountInformation1.PositionInfo = "";
             this.editAccountInformation1.Size = new System.Drawing.Size(280, 430);
-            this.editAccountInformation1.StatusInfo = "label3";
+            this.editAccountInformation1.StatusInfo = "";
             this.editAccountInformation1.TabIndex = 77;
             // 
             // lbl
@@ -188,6 +193,7 @@
             this.empIDtbox.TabIndex = 83;
             this.empIDtbox.Texts = "";
             this.empIDtbox.UnderlinedStyle = false;
+            this.empIDtbox.TextChanged += new System.EventHandler(this.empIDtbox_TextChanged);
             // 
             // AddEmployeeForm
             // 
