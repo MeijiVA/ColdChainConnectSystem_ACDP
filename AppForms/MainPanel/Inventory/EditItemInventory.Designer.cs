@@ -268,7 +268,7 @@
             this.btnExitView.Name = "btnExitView";
             this.btnExitView.Size = new System.Drawing.Size(150, 40);
             this.btnExitView.TabIndex = 58;
-            this.btnExitView.Text = "Exit View";
+            this.btnExitView.Text = "Save";
             this.btnExitView.TextColor = System.Drawing.Color.White;
             this.btnExitView.UseVisualStyleBackColor = false;
             this.btnExitView.Click += new System.EventHandler(this.btnExitView_Click);

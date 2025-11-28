@@ -78,6 +78,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
                     pboxImage.BackgroundImage.Save(filePath + System.IO.Path.GetFileName(fileName));
                     this.Close();
                     MainInstance.i.NavigateTo(new InventoryForm());
+                    InventoryInstance.i.UpdateTable();
                 }
                 catch (Exception ex)
                 {

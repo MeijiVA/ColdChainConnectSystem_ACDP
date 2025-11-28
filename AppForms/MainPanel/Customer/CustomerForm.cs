@@ -1,4 +1,5 @@
-﻿using ColdChainConnectSystem_ACDP.ClassResources;
+﻿using ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory;
+using ColdChainConnectSystem_ACDP.ClassResources;
 using ColdChainConnectSystem_ACDP.ClassResources.Connection;
 using ColdChainConnectSystem_ACDP.ClassResources.Connection.TableView;
 using ColdChainConnectSystem_ACDP.ClassResources.Display;
@@ -179,7 +180,9 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer
             }
             if (dgvTable.Columns[e.ColumnIndex].Name == "editCol")
             {
-
+                VarView.id = cellValue;
+                EditCustomer ec = new EditCustomer();
+                ec.Show(this);
             }
             if (dgvTable.Columns[e.ColumnIndex].Name == "viewCol")
             {

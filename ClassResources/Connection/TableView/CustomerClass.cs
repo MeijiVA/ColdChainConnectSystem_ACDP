@@ -88,8 +88,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
         }//method
 
 
-
-        public static bool writeCustomerData(string customername, string phonenumber, string registrationdate, string address, string paymentterm, string status)
+    public static bool writeCustomerData(string customername, string phonenumber, string registrationdate, string address, string paymentterm, string status)
         {
             if(!(customername.Equals("") || phonenumber.Equals("") || address.Equals("") || paymentterm.Equals("") || registrationdate.Equals("") || status.Equals("")))
             {
@@ -120,10 +119,47 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
             }
         }
 
+    public static bool updateCustomerData(string numid, string customername, string phonenumber, string registrationdate, string address, string paymentterm, string status)
+    {
+        if (!(customername.Equals("") || phonenumber.Equals("") || address.Equals("") || paymentterm.Equals("") || registrationdate.Equals("") || status.Equals("")))
+        {
+            try
+            {
+                string query = $"  UPDATE Customer\r\n" +
+                        $"SET[customername] = '{customername}',\r\n    " +
+                        $"[phonenumber] = '{phonenumber}',\r\n    " +
+                        $"[address] = '{address}',\r\n    " +
+                        $"[paymentterm] = '{paymentterm}',\r\n    " +
+                        $"[registrationdate] = '{registrationdate}',\r\n    " +
+                        $"[status] = N'{status}'\r\n" +
+                        $"WHERE [numid] = {numid};";
 
-
-
-
-
+                SqlConnection con = ConnectionClass.Connection();
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    Console.WriteLine(query);
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                    return true;
+                }
+            }
+            catch (Exception ex)
+            {
+                new CustomMessageBox("Exception", ex.Message, MessageBoxButtons.OK).ShowDialog();
+                return false;
+            }
+        }
+        else
+        {
+            new CustomMessageBox("Missing Element", "Fill in all required Fields.", MessageBoxButtons.OK).ShowDialog();
+            return false;
+        }
     }
+
+
+
+
+
+}
 }
