@@ -368,7 +368,7 @@
             this.cbxSupplier.Texts = "";
             this.cbxSupplier.OnSelectedIndexChanged += new System.EventHandler(this.cbxSupplier_OnSelectedIndexChanged);
             // 
-            // AddItemInventoryForm
+            // AddItemInventory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -394,7 +394,7 @@
             this.Controls.Add(this.lbl);
             this.Controls.Add(this.btnAdd);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "AddItemInventoryForm";
+            this.Name = "AddItemInventory";
             this.Padding = new System.Windows.Forms.Padding(20);
             this.Text = "AddItemInventoryForm";
             this.Load += new System.EventHandler(this.AddItemInventoryForm_Load);

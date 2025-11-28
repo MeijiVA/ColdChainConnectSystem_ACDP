@@ -119,6 +119,7 @@
             // 
             // uacUserProfile
             // 
+            this.uacUserProfile.AccountName = "Name";
             this.uacUserProfile.BackColor = System.Drawing.Color.White;
             this.uacUserProfile.Location = new System.Drawing.Point(0, 30);
             this.uacUserProfile.Name = "uacUserProfile";

@@ -216,6 +216,12 @@
     <Compile Include="AppForms\InfoUserControl\EditInformation\EditAddressInformation.Designer.cs">
       <DependentUpon>EditAddressInformation.cs</DependentUpon>
     </Compile>
+    <Compile Include="AppForms\MainPanel\Employee\AddEmployeeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\MainPanel\Employee\AddEmployeeForm.Designer.cs">
+      <DependentUpon>AddEmployeeForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AppForms\MainPanel\Employee\EmployeeForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -513,6 +519,9 @@
     <EmbeddedResource Include="AppForms\InfoUserControl\EditInformation\EditAddressInformation.resx">
       <DependentUpon>EditAddressInformation.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\MainPanel\Employee\AddEmployeeForm.resx">
+      <DependentUpon>AddEmployeeForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AppForms\MainPanel\Employee\EmployeeForm.resx">
       <DependentUpon>EmployeeForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -762,6 +771,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ExpiryDateLegend.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\AddEmployeeBtn.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\Microsoft.Data.SqlClient.SNI.6.0.2\build\net462\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('packages\Microsoft.Data.SqlClient.SNI.6.0.2\build\net462\Microsoft.Data.SqlClient.SNI.targets')" />
