@@ -49,6 +49,7 @@
             this.UAC_namelbl.Text = "Name";
             this.UAC_namelbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.UAC_namelbl.Click += new System.EventHandler(this.UAC_namelbl_Click);
+            this.UAC_namelbl.Cursor = System.Windows.Forms.Cursors.Hand;
             // 
             // UAC_positionlbl
             // 
@@ -93,6 +94,8 @@
             this.pbxUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxUser.TabIndex = 3;
             this.pbxUser.TabStop = false;
+            this.pbxUser.Click += new System.EventHandler(this.UserAccountControl_Click);
+            this.pbxUser.Cursor = System.Windows.Forms.Cursors.Hand;
             // 
             // UserAccountControl
             // 

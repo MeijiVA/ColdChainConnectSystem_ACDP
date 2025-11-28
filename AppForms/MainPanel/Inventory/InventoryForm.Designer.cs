@@ -107,6 +107,7 @@
             this.lblLegends.TextColor = System.Drawing.Color.White;
             this.lblLegends.MouseLeave += new System.EventHandler(this.lblLegends_MouseLeave);
             this.lblLegends.MouseHover += new System.EventHandler(this.lblLegends_MouseHover);
+            this.lblLegends.Cursor = System.Windows.Forms.Cursors.Hand;
             // 
             // lblOf
             // 
@@ -147,6 +148,7 @@
             this.lblPageNum.Text = " 1";
             this.lblPageNum.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblPageNum.TextColor = System.Drawing.Color.Gray;
+            this.lblPageNum.Cursor = System.Windows.Forms.Cursors.Hand;
             // 
             // lblPage
             // 

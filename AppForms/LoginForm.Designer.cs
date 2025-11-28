@@ -92,6 +92,7 @@
             this.testButton.Text = "Login";
             this.testButton.UseVisualStyleBackColor = false;
             this.testButton.Click += new System.EventHandler(this.testButton_Click);
+            this.testButton.Cursor = System.Windows.Forms.Cursors.Hand;
             // 
             // LogoACDPpBox
             // 

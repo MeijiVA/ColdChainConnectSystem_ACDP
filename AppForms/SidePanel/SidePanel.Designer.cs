@@ -53,6 +53,7 @@
             this.btnEmpMan.Text = "Employee Management";
             this.btnEmpMan.UseVisualStyleBackColor = false;
             this.btnEmpMan.Click += new System.EventHandler(this.empmanbtn_Click);
+            this.btnEmpMan.Cursor = System.Windows.Forms.Cursors.Hand;
             // 
             // btnCusMan
             // 
@@ -68,6 +69,7 @@
             this.btnCusMan.Text = "Customer Management";
             this.btnCusMan.UseVisualStyleBackColor = true;
             this.btnCusMan.Click += new System.EventHandler(this.custmanbtn_Click);
+            this.btnCusMan.Cursor = System.Windows.Forms.Cursors.Hand;
             // 
             // btnSalesMan
             // 
@@ -83,6 +85,7 @@
             this.btnSalesMan.Text = "Sales Management";
             this.btnSalesMan.UseVisualStyleBackColor = true;
             this.btnSalesMan.Click += new System.EventHandler(this.salesmanbbtn_Click);
+            this.btnSalesMan.Cursor = System.Windows.Forms.Cursors.Hand;
             // 
             // btnSupMan
             // 
@@ -98,6 +101,7 @@
             this.btnSupMan.Text = "Supplier Management";
             this.btnSupMan.UseVisualStyleBackColor = true;
             this.btnSupMan.Click += new System.EventHandler(this.supmanbbtn_Click);
+            this.btnSupMan.Cursor = System.Windows.Forms.Cursors.Hand;
             // 
             // btnInvMan
             // 
@@ -113,6 +117,7 @@
             this.btnInvMan.Text = "Inventory Management";
             this.btnInvMan.UseVisualStyleBackColor = true;
             this.btnInvMan.Click += new System.EventHandler(this.invmanbtn_Click);
+            this.btnInvMan.Cursor = System.Windows.Forms.Cursors.Hand;
             // 
             // btnDashboard
             // 
@@ -129,6 +134,7 @@
             this.btnDashboard.Text = "Dashboard";
             this.btnDashboard.UseVisualStyleBackColor = false;
             this.btnDashboard.Click += new System.EventHandler(this.dashboardbtn_Click);
+            this.btnDashboard.Cursor = System.Windows.Forms.Cursors.Hand;
             // 
             // panel1
             // 

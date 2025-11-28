@@ -22,6 +22,13 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Employee
             editAccountInformation1.StatusInfo = "";
             tscStatus.Checked = true;
             UpdateStatusDisplay();
+
+            // Populate position combo box
+            cbxPosition.Items.Clear();
+            cbxPosition.Items.Add("Administrator");
+            cbxPosition.Items.Add("Assistant");
+            cbxPosition.Items.Add("Inventory");
+            cbxPosition.Items.Add("Sales");
         }
 
         private void lbl_Click(object sender, EventArgs e)
@@ -34,28 +41,9 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Employee
             MainInstance.i.NavigateTo(EmployeeInstance.i);
         }
 
-        private void empIDtbox_TextChanged(object sender, EventArgs e)
+        private void cbxPosition_OnSelectedIndexChanged(object sender, EventArgs e)
         {
-            string empID = empIDtbox.Texts.Trim().ToUpper();
-            string position = "";
-
-            if (empID.StartsWith("ADM"))
-            {
-                position = "Administrator";
-            }
-            else if (empID.StartsWith("AST"))
-            {
-                position = "Assistant";
-            }
-            else if (empID.StartsWith("INV"))
-            {
-                position = "Inventory";
-            }
-            else if (empID.StartsWith("SLS"))
-            {
-                position = "Sales";
-            }
-
+            string position = cbxPosition.Texts;
             editAccountInformation1.PositionInfo = position;
         }
 
@@ -81,9 +69,9 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Employee
         private void btnSave_Click(object sender, EventArgs e)
         {
             // Validate required fields
-            if (string.IsNullOrWhiteSpace(empIDtbox.Texts))
+            if (string.IsNullOrWhiteSpace(cbxPosition.Texts))
             {
-                new CustomMessageBox("Validation Error", "Please enter Employee ID.", MessageBoxButtons.OK).ShowDialog();
+                new CustomMessageBox("Validation Error", "Please select Position.", MessageBoxButtons.OK).ShowDialog();
                 return;
             }
 
@@ -95,13 +83,12 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Employee
             }
 
             // Get all the data
-            string empID = empIDtbox.Texts.Trim();
+            string position = cbxPosition.Texts.Trim();
             string firstName = editPersonalInformation1.First_NAMEInfo;
             string middleName = editPersonalInformation1.Middle_NAMEInfo;
             string lastName = editPersonalInformation1.Last_NAMEInfo;
             string contactNum = editAccountInformation1.ContactInfo;
             string email = editAccountInformation1.EmailInfo;
-            string position = editAccountInformation1.PositionInfo;
             string status = editAccountInformation1.StatusInfo;
             string age = editPersonalInformation1.AgeInfo;
             DateTime dob = editPersonalInformation1.DOBInfo;
@@ -113,6 +100,9 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Employee
                            editAddressInformation1.Municipality + "," +
                            editAddressInformation1.Province + "," +
                            editAddressInformation1.Postal;
+
+            // Generate EmpID based on position count
+            string empID = EmployeeClass.GenerateEmployeeID(position);
 
             // Generate username (can be improved)
             string username = "";

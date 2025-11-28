@@ -71,6 +71,7 @@
             this.logoutBtn.TabIndex = 0;
             this.logoutBtn.UseVisualStyleBackColor = true;
             this.logoutBtn.Click += new System.EventHandler(this.logoutBtn_Click);
+            this.logoutBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             // 
             // pictureBox1
             // 
@@ -95,6 +96,7 @@
             this.btnSettings.TabIndex = 4;
             this.btnSettings.UseVisualStyleBackColor = true;
             this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
+            this.btnSettings.Cursor = System.Windows.Forms.Cursors.Hand;
             // 
             // btnNotif
             // 
@@ -108,6 +110,7 @@
             this.btnNotif.Size = new System.Drawing.Size(17, 17);
             this.btnNotif.TabIndex = 6;
             this.btnNotif.UseVisualStyleBackColor = true;
+            this.btnNotif.Cursor = System.Windows.Forms.Cursors.Hand;
             // 
             // sidePanel1
             // 

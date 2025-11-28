@@ -22,7 +22,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Supplier
     public partial class SupplierForm : Form
     {
         int currentPageIndex = 0;
-        public int totalPages = 0 ;
+        public int totalPages = 0;
         public SupplierForm()
         {
             InitializeComponent();
@@ -68,7 +68,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Supplier
 
         private void btnPrev_Click(object sender, EventArgs e)
         {
-            if ((SearchBar.txtSearch.Text.Equals("Search Term") || SearchBar.txtSearch.Text.Equals("")) && (currentPageIndex  > 1) || (SelectedFilterClass.SelectedFilter.Equals("") && (currentPageIndex > 1)))
+            if ((SearchBar.txtSearch.Text.Equals("Search Term") || SearchBar.txtSearch.Text.Equals("")) && (currentPageIndex > 1) || (SelectedFilterClass.SelectedFilter.Equals("") && (currentPageIndex > 1)))
             {
                 dgvTable.Rows.Clear();
                 lblPageNum.Text = (currentPageIndex -= 1).ToString();
@@ -150,7 +150,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Supplier
             {
                 if (new CustomMessageBox("Delete Row", "Are you sure you want to delete this item from the Database?", MessageBoxButtons.OKCancel).ShowDialog() == DialogResult.OK)
                 {
-                    DeleteItem.Delete(cellValue,"Supplier");
+                    DeleteItem.Delete(cellValue, "Supplier");
                     UpdateTable();
 
                 }
@@ -165,6 +165,27 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Supplier
                 ViewSupplier vs = new ViewSupplier();
                 vs.Show(this);
             }
+        }
+
+        private void dgvTable_CellMouseEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            {
+                string columnName = dgvTable.Columns[e.ColumnIndex].Name;
+                if (columnName == "deleteCol" || columnName == "editCol" || columnName == "viewCol")
+                {
+                    dgvTable.Cursor = Cursors.Hand;
+                }
+                else
+                {
+                    dgvTable.Cursor = Cursors.Default;
+                }
+            }
+        }
+
+        private void dgvTable_CellMouseLeave(object sender, DataGridViewCellEventArgs e)
+        {
+            dgvTable.Cursor = Cursors.Default;
         }
 
         private void actionlbl_Click(object sender, EventArgs e)

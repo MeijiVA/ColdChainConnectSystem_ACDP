@@ -36,7 +36,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.Employee
             for (int i = 1; i <= numEmp; i++)
             {
                 ShowEmployee e = new ShowEmployee();
-                EmployeeClass.LoadAllEmployees(i, e.lblEmpID, e.lblUsername, e.lblName, e.lblPosition, e.lblStatus);
+                EmployeeClass.LoadAllEmployeesByRowNumber(i, e.lblEmpID, e.lblUsername, e.lblName, e.lblPosition, e.lblStatus);
                 showEmployeeControls.Add(e);
                 flpEmployee.Controls.Add(e);
             }

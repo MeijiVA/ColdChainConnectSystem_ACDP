@@ -191,5 +191,26 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
                 vt.Show(this);
             }
         }
+
+        private void dgvTable_CellMouseEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            {
+                string columnName = dgvTable.Columns[e.ColumnIndex].Name;
+                if (columnName == "deleteCol" || columnName == "editCol" || columnName == "viewCol")
+                {
+                    dgvTable.Cursor = Cursors.Hand;
+                }
+                else
+                {
+                    dgvTable.Cursor = Cursors.Default;
+                }
+            }
+        }
+
+        private void dgvTable_CellMouseLeave(object sender, DataGridViewCellEventArgs e)
+        {
+            dgvTable.Cursor = Cursors.Default;
+        }
     }
 }

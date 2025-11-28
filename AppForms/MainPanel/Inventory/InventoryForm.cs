@@ -203,13 +203,13 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
 
         private void lblLegends_MouseHover(object sender, EventArgs e)
         {
-                uc.Visible = true;
+            uc.Visible = true;
         }
 
 
         private void lblLegends_MouseLeave(object sender, EventArgs e)
         {
-                uc.Visible = false;
+            uc.Visible = false;
         }
     }
 }

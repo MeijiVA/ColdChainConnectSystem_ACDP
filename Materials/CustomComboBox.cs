@@ -65,6 +65,7 @@ namespace ColdChainConnectSystem_ACDP.Materials
             lblText.TextAlign = ContentAlignment.MiddleLeft;
             lblText.Padding = new Padding(8, 0, 0, 0);
             lblText.Font = new Font(this.Font.Name, 10F);
+            lblText.Cursor = Cursors.Hand;
             //->Attach label events to user control event
             lblText.Click += new EventHandler(Surface_Click);//Select combo box
             lblText.MouseEnter += new EventHandler(Surface_MouseEnter);
@@ -83,7 +84,7 @@ namespace ColdChainConnectSystem_ACDP.Materials
             this.Load += new System.EventHandler(this.RJComboBox_Load);
             this.borderRadius = 0;
             this.ResumeLayout();
-            
+
             AdjustComboBoxDimensions();
 
         }

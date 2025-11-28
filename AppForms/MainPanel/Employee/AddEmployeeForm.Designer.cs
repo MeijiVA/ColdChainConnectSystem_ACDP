@@ -31,12 +31,12 @@
             this.btnExit = new System.Windows.Forms.Button();
             this.btnSave = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
             this.tscStatus = new ToggleSlider.ToggleSliderComponent();
-            this.lblEmpID = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
+            this.lblPosition = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
             this.editPersonalInformation1 = new ColdChainConnectSystem_ACDP.AppForms.Header.Settings.PersonalDetails.EditPersonalInformation();
             this.editAddressInformation1 = new ColdChainConnectSystem_ACDP.AppForms.Header.Settings.Employee.EditAddressInformation();
             this.editAccountInformation1 = new ColdChainConnectSystem_ACDP.AppForms.Header.Settings.PersonalDetails.EditAccountInformation();
             this.lbl = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
-            this.empIDtbox = new CustomControls.RJControls.CustomTextBox();
+            this.cbxPosition = new ColdChainConnectSystem_ACDP.Materials.CustomComboBox();
             this.SuspendLayout();
             // 
             // btnExit
@@ -95,24 +95,24 @@
             this.tscStatus.ToggleColorBar = System.Drawing.Color.Gray;
             this.tscStatus.CheckChanged += new System.EventHandler(this.tscStatus_CheckChanged);
             // 
-            // lblEmpID
+            // lblPosition
             // 
-            this.lblEmpID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.lblEmpID.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.lblEmpID.BorderColor = System.Drawing.Color.Transparent;
-            this.lblEmpID.BorderRadius = 10;
-            this.lblEmpID.BorderSize = 0;
-            this.lblEmpID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblEmpID.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
-            this.lblEmpID.ForeColor = System.Drawing.Color.White;
-            this.lblEmpID.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblEmpID.Location = new System.Drawing.Point(28, 79);
-            this.lblEmpID.Name = "lblEmpID";
-            this.lblEmpID.Size = new System.Drawing.Size(451, 40);
-            this.lblEmpID.TabIndex = 80;
-            this.lblEmpID.Text = "   Employee ID:";
-            this.lblEmpID.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblEmpID.TextColor = System.Drawing.Color.White;
+            this.lblPosition.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.lblPosition.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.lblPosition.BorderColor = System.Drawing.Color.Transparent;
+            this.lblPosition.BorderRadius = 10;
+            this.lblPosition.BorderSize = 0;
+            this.lblPosition.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblPosition.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            this.lblPosition.ForeColor = System.Drawing.Color.White;
+            this.lblPosition.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblPosition.Location = new System.Drawing.Point(28, 79);
+            this.lblPosition.Name = "lblPosition";
+            this.lblPosition.Size = new System.Drawing.Size(451, 40);
+            this.lblPosition.TabIndex = 80;
+            this.lblPosition.Text = "   Position:";
+            this.lblPosition.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblPosition.TextColor = System.Drawing.Color.White;
             // 
             // editPersonalInformation1
             // 
@@ -172,38 +172,37 @@
             this.lbl.TextColor = System.Drawing.Color.White;
             this.lbl.UseMnemonic = false;
             // 
-            // empIDtbox
+            // cbxPosition
             // 
-            this.empIDtbox.BackColor = System.Drawing.SystemColors.Window;
-            this.empIDtbox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.empIDtbox.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.empIDtbox.BorderRadius = 0;
-            this.empIDtbox.BorderSize = 2;
-            this.empIDtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.empIDtbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.empIDtbox.Location = new System.Drawing.Point(141, 84);
-            this.empIDtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.empIDtbox.Multiline = false;
-            this.empIDtbox.Name = "empIDtbox";
-            this.empIDtbox.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.empIDtbox.PasswordChar = false;
-            this.empIDtbox.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.empIDtbox.PlaceholderText = "";
-            this.empIDtbox.Size = new System.Drawing.Size(151, 31);
-            this.empIDtbox.TabIndex = 83;
-            this.empIDtbox.Texts = "";
-            this.empIDtbox.UnderlinedStyle = false;
-            this.empIDtbox.TextChanged += new System.EventHandler(this.empIDtbox_TextChanged);
+            this.cbxPosition.BackColor = System.Drawing.Color.White;
+            this.cbxPosition.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.cbxPosition.BorderRadius = 0;
+            this.cbxPosition.BorderSize = 2;
+            this.cbxPosition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxPosition.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxPosition.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.cbxPosition.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.cbxPosition.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.cbxPosition.ListTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.cbxPosition.Location = new System.Drawing.Point(141, 84);
+            this.cbxPosition.MinimumSize = new System.Drawing.Size(200, 30);
+            this.cbxPosition.Name = "cbxPosition";
+            this.cbxPosition.Padding = new System.Windows.Forms.Padding(1);
+            this.cbxPosition.Size = new System.Drawing.Size(200, 31);
+            this.cbxPosition.TabIndex = 83;
+            this.cbxPosition.Texts = "";
+            this.cbxPosition.OnSelectedIndexChanged += new System.EventHandler(this.cbxPosition_OnSelectedIndexChanged);
+            this.cbxPosition.Cursor = System.Windows.Forms.Cursors.Hand;
             // 
             // AddEmployeeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(798, 570);
-            this.Controls.Add(this.empIDtbox);
+            this.Controls.Add(this.cbxPosition);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.tscStatus);
-            this.Controls.Add(this.lblEmpID);
+            this.Controls.Add(this.lblPosition);
             this.Controls.Add(this.editPersonalInformation1);
             this.Controls.Add(this.editAddressInformation1);
             this.Controls.Add(this.editAccountInformation1);
@@ -223,9 +222,9 @@
         private Header.Settings.PersonalDetails.EditAccountInformation editAccountInformation1;
         private Header.Settings.Employee.EditAddressInformation editAddressInformation1;
         private Header.Settings.PersonalDetails.EditPersonalInformation editPersonalInformation1;
-        private Materials.CustomLabel lblEmpID;
+        private Materials.CustomLabel lblPosition;
         private ToggleSlider.ToggleSliderComponent tscStatus;
         private Materials.CustomButton btnSave;
-        private CustomControls.RJControls.CustomTextBox empIDtbox;
+        private Materials.CustomComboBox cbxPosition;
     }
 }

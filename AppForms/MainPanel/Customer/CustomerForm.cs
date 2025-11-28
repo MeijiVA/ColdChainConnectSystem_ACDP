@@ -171,7 +171,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer
             {
                 if (new CustomMessageBox("Delete Row", "Are you sure you want to delete this item from the Database?", MessageBoxButtons.OKCancel).ShowDialog() == DialogResult.OK)
                 {
-                    
+
                     DeleteItem.Delete(cellValue, "Customer");
                     UpdateTable();
 
@@ -179,15 +179,36 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer
             }
             if (dgvTable.Columns[e.ColumnIndex].Name == "editCol")
             {
-                
+
             }
             if (dgvTable.Columns[e.ColumnIndex].Name == "viewCol")
             {
                 VarView.id = cellValue;
                 ViewCustomer vc = new ViewCustomer();
                 vc.Show(this);
-                
+
             }
+        }
+
+        private void dgvTable_CellMouseEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            {
+                string columnName = dgvTable.Columns[e.ColumnIndex].Name;
+                if (columnName == "deleteCol" || columnName == "editCol" || columnName == "viewCol")
+                {
+                    dgvTable.Cursor = Cursors.Hand;
+                }
+                else
+                {
+                    dgvTable.Cursor = Cursors.Default;
+                }
+            }
+        }
+
+        private void dgvTable_CellMouseLeave(object sender, DataGridViewCellEventArgs e)
+        {
+            dgvTable.Cursor = Cursors.Default;
         }
     }
 }

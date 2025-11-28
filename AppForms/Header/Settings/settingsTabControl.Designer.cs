@@ -50,6 +50,7 @@
             this.lblPersDetail.Text = "Personal  Details";
             this.lblPersDetail.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.lblPersDetail.Click += new System.EventHandler(this.lblPersDetail_Click);
+            this.lblPersDetail.Cursor = System.Windows.Forms.Cursors.Hand;
             // 
             // lblSecurity
             // 
@@ -63,6 +64,7 @@
             this.lblSecurity.Text = "Security";
             this.lblSecurity.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.lblSecurity.Click += new System.EventHandler(this.lblSecurity_Click);
+            this.lblSecurity.Cursor = System.Windows.Forms.Cursors.Hand;
             // 
             // lblExtra3
             // 
@@ -89,6 +91,7 @@
             this.lblAudit.Text = "Audit Log";
             this.lblAudit.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.lblAudit.Click += new System.EventHandler(this.lblAudit_Click);
+            this.lblAudit.Cursor = System.Windows.Forms.Cursors.Hand;
             // 
             // lblExtra1
             // 

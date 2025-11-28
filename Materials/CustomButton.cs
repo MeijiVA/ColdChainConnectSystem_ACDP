@@ -74,6 +74,7 @@ namespace ColdChainConnectSystem_ACDP.Materials
             this.Size = new Size(150, 40);
             this.BackColor = Color.MediumSlateBlue;
             this.ForeColor = Color.White;
+            this.Cursor = Cursors.Hand;
             this.Resize += new EventHandler(Button_Resize);
         }
 

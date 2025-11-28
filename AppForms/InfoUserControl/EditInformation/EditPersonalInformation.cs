@@ -60,7 +60,13 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.PersonalDetails
 
         private void Personal_Information_Load(object sender, EventArgs e)
         {
-
+            // Add Male and Female values to Sex combo box
+            if (cbSex.Items.Count == 0)
+            {
+                cbSex.Items.Clear();
+                cbSex.Items.Add("Male");
+                cbSex.Items.Add("Female");
+            }
         }
     }
 }

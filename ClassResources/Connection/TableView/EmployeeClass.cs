@@ -54,6 +54,45 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
             }
         }
 
+        public static void LoadAllEmployeesByRowNumber(int rowNumber, Label lblemp, Label lbluser, Label lblname, Label lblpos, Label lblstatus)
+        {
+            try
+            {
+                SqlConnection con = ConnectionClass.Connection();
+
+                // Use ROW_NUMBER() to get employees in order, handling gaps in numID
+                String query = $@"SELECT [empid], [username], [firstname], [lastname], [position], [status] 
+                    FROM (
+                        SELECT [empid], [username], [firstname], [lastname], [position], [status],
+                               ROW_NUMBER() OVER (ORDER BY [numID]) as RowNum
+                        FROM Employees
+                    ) AS RankedEmployees
+                    WHERE RowNum = {rowNumber}";
+
+                Console.WriteLine(query);
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    con.Open();
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            lblemp.Text = reader[0].ToString().Trim(); // empid
+                            lbluser.Text = reader[1].ToString().Trim(); // username
+                            lblname.Text = reader[3].ToString().Trim() + ", " + reader[2].ToString().Trim(); // lastname
+                            lblpos.Text = reader[4].ToString().Trim(); // pos
+                            lblstatus.Text = reader[5].ToString().Trim(); // status
+                        }
+                    }
+                    con.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                new CustomMessageBox("Error", "Failed to load employees: " + ex.Message, MessageBoxButtons.OK).ShowDialog();
+            }
+        }
+
         public static bool SaveEmployee(string empID, string username, string firstName, string middleName,
             string lastName, string contactNum, string address, string age, DateTime dob,
             string position, string status, string sex, string email)
@@ -122,6 +161,62 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
             {
                 new CustomMessageBox("Error", "Failed to delete employee: " + ex.Message, MessageBoxButtons.OK).ShowDialog();
                 return false;
+            }
+        }
+
+        public static string GenerateEmployeeID(string position)
+        {
+            try
+            {
+                SqlConnection con = ConnectionClass.Connection();
+                string prefix = "";
+
+                // Map position to prefix
+                switch (position.ToLower())
+                {
+                    case "administrator":
+                        prefix = "ADM";
+                        break;
+                    case "assistant":
+                        prefix = "AST";
+                        break;
+                    case "inventory":
+                        prefix = "INV";
+                        break;
+                    case "sales":
+                        prefix = "SLS";
+                        break;
+                    default:
+                        prefix = "EMP";
+                        break;
+                }
+
+                // Count employees with this position
+                string query = "SELECT COUNT(*) FROM Employees WHERE [position] = @Position";
+                int count = 0;
+
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    cmd.Parameters.AddWithValue("@Position", position);
+                    con.Open();
+                    object result = cmd.ExecuteScalar();
+                    if (result != null && result != DBNull.Value)
+                    {
+                        count = (int)result;
+                    }
+                    con.Close();
+                }
+
+                // Generate new EmpID (count + 1, formatted as 0001, 0002, etc.)
+                int nextNumber = count + 1;
+                string empID = $"{prefix}-{nextNumber:D4}";
+
+                return empID;
+            }
+            catch (Exception ex)
+            {
+                new CustomMessageBox("Error", "Failed to generate Employee ID: " + ex.Message, MessageBoxButtons.OK).ShowDialog();
+                return "EMP-0001";
             }
         }
     }
