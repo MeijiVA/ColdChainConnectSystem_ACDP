@@ -67,6 +67,7 @@
             this.cbtnDashboard.ForeColor = System.Drawing.Color.White;
             this.cbtnDashboard.GradientColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.cbtnDashboard.GradientColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(163)))));
+            this.cbtnDashboard.GradientTextColor = System.Drawing.Color.White;
             this.cbtnDashboard.Location = new System.Drawing.Point(3, 23);
             this.cbtnDashboard.Name = "cbtnDashboard";
             this.cbtnDashboard.Size = new System.Drawing.Size(220, 50);
@@ -90,6 +91,7 @@
             this.cbtnInventory.ForeColor = System.Drawing.Color.White;
             this.cbtnInventory.GradientColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.cbtnInventory.GradientColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(163)))));
+            this.cbtnInventory.GradientTextColor = System.Drawing.Color.White;
             this.cbtnInventory.Location = new System.Drawing.Point(3, 79);
             this.cbtnInventory.Name = "cbtnInventory";
             this.cbtnInventory.Size = new System.Drawing.Size(220, 50);
@@ -113,6 +115,7 @@
             this.cbtnSupplier.ForeColor = System.Drawing.Color.White;
             this.cbtnSupplier.GradientColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.cbtnSupplier.GradientColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(163)))));
+            this.cbtnSupplier.GradientTextColor = System.Drawing.Color.White;
             this.cbtnSupplier.Location = new System.Drawing.Point(3, 135);
             this.cbtnSupplier.Name = "cbtnSupplier";
             this.cbtnSupplier.Size = new System.Drawing.Size(220, 50);
@@ -136,6 +139,7 @@
             this.cbtnSales.ForeColor = System.Drawing.Color.White;
             this.cbtnSales.GradientColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.cbtnSales.GradientColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(163)))));
+            this.cbtnSales.GradientTextColor = System.Drawing.Color.White;
             this.cbtnSales.Location = new System.Drawing.Point(3, 191);
             this.cbtnSales.Name = "cbtnSales";
             this.cbtnSales.Size = new System.Drawing.Size(220, 50);
@@ -159,6 +163,7 @@
             this.cbtnCustomer.ForeColor = System.Drawing.Color.White;
             this.cbtnCustomer.GradientColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.cbtnCustomer.GradientColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(163)))));
+            this.cbtnCustomer.GradientTextColor = System.Drawing.Color.White;
             this.cbtnCustomer.Location = new System.Drawing.Point(3, 247);
             this.cbtnCustomer.Name = "cbtnCustomer";
             this.cbtnCustomer.Size = new System.Drawing.Size(220, 50);
@@ -182,6 +187,7 @@
             this.cbtnEmployee.ForeColor = System.Drawing.Color.White;
             this.cbtnEmployee.GradientColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.cbtnEmployee.GradientColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(163)))));
+            this.cbtnEmployee.GradientTextColor = System.Drawing.Color.White;
             this.cbtnEmployee.Location = new System.Drawing.Point(3, 303);
             this.cbtnEmployee.Name = "cbtnEmployee";
             this.cbtnEmployee.Size = new System.Drawing.Size(220, 50);

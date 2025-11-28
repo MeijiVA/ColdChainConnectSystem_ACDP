@@ -122,5 +122,23 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
 
         }
 
+        private void customButton1_Click(object sender, EventArgs e)
+        {
+            ofdSaveImage.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.gif;*.bmp";
+            ofdSaveImage.Title = "Select an Image File";
+
+            if (ofdSaveImage.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    // Load the selected image into the PictureBox
+                    pbxImage.BackgroundImage = Image.FromFile(ofdSaveImage.FileName);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error loading image: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
     }
 }

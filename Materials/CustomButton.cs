@@ -19,9 +19,12 @@ namespace ColdChainConnectSystem_ACDP.Materials
         private Color borderColor = Color.PaleVioletRed;
 
         [Category("Button Properties")]
-        public Color GradientColor1 { get; set; } = Color.AliceBlue;
+        public Color GradientTextColor { get; set; } = Color.Transparent;
+
         [Category("Button Properties")]
-        public Color GradientColor2 { get; set; } = Color.BurlyWood;
+        public Color GradientColor1 { get; set; } = Color.Transparent;
+        [Category("Button Properties")]
+        public Color GradientColor2 { get; set; } = Color.Transparent;
         //Properties
         [Category("Button Properties")]
         public int BorderSize
@@ -152,7 +155,7 @@ namespace ColdChainConnectSystem_ACDP.Materials
             }
 
             // Draw the button text
-            using (SolidBrush textBrush = new SolidBrush(TextColor))
+            using (SolidBrush textBrush = new SolidBrush(GradientTextColor))
             {
                 SizeF textSize = graphics.MeasureString(this.Text, this.Font);
                 PointF locationToDraw = new PointF();
