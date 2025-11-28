@@ -36,7 +36,7 @@
             this.editAddressInformation1 = new ColdChainConnectSystem_ACDP.AppForms.Header.Settings.Employee.EditAddressInformation();
             this.editAccountInformation1 = new ColdChainConnectSystem_ACDP.AppForms.Header.Settings.PersonalDetails.EditAccountInformation();
             this.lbl = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
-            this.customTextBox1 = new CustomControls.RJControls.CustomTextBox();
+            this.empIDtbox = new CustomControls.RJControls.CustomTextBox();
             this.SuspendLayout();
             // 
             // btnExit
@@ -65,7 +65,7 @@
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(682, 80);
+            this.btnSave.Location = new System.Drawing.Point(682, 78);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(100, 40);
             this.btnSave.TabIndex = 82;
@@ -141,7 +141,7 @@
             this.editAccountInformation1.BackColor = System.Drawing.Color.White;
             this.editAccountInformation1.ContactInfo = "";
             this.editAccountInformation1.EmailInfo = "";
-            this.editAccountInformation1.Location = new System.Drawing.Point(495, 122);
+            this.editAccountInformation1.Location = new System.Drawing.Point(502, 122);
             this.editAccountInformation1.Name = "editAccountInformation1";
             this.editAccountInformation1.PositionInfo = "label3";
             this.editAccountInformation1.Size = new System.Drawing.Size(280, 430);
@@ -167,34 +167,34 @@
             this.lbl.TextColor = System.Drawing.Color.White;
             this.lbl.UseMnemonic = false;
             // 
-            // customTextBox1
+            // empIDtbox
             // 
-            this.customTextBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.customTextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.customTextBox1.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.customTextBox1.BorderRadius = 0;
-            this.customTextBox1.BorderSize = 2;
-            this.customTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.customTextBox1.Location = new System.Drawing.Point(141, 84);
-            this.customTextBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.customTextBox1.Multiline = false;
-            this.customTextBox1.Name = "customTextBox1";
-            this.customTextBox1.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.customTextBox1.PasswordChar = false;
-            this.customTextBox1.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.customTextBox1.PlaceholderText = "";
-            this.customTextBox1.Size = new System.Drawing.Size(151, 31);
-            this.customTextBox1.TabIndex = 83;
-            this.customTextBox1.Texts = "";
-            this.customTextBox1.UnderlinedStyle = false;
+            this.empIDtbox.BackColor = System.Drawing.SystemColors.Window;
+            this.empIDtbox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.empIDtbox.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.empIDtbox.BorderRadius = 0;
+            this.empIDtbox.BorderSize = 2;
+            this.empIDtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.empIDtbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.empIDtbox.Location = new System.Drawing.Point(141, 84);
+            this.empIDtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.empIDtbox.Multiline = false;
+            this.empIDtbox.Name = "empIDtbox";
+            this.empIDtbox.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.empIDtbox.PasswordChar = false;
+            this.empIDtbox.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.empIDtbox.PlaceholderText = "";
+            this.empIDtbox.Size = new System.Drawing.Size(151, 31);
+            this.empIDtbox.TabIndex = 83;
+            this.empIDtbox.Texts = "";
+            this.empIDtbox.UnderlinedStyle = false;
             // 
             // AddEmployeeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(798, 570);
-            this.Controls.Add(this.customTextBox1);
+            this.Controls.Add(this.empIDtbox);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.tscStatus);
             this.Controls.Add(this.lblEmpID);
@@ -220,6 +220,6 @@
         private Materials.CustomLabel lblEmpID;
         private ToggleSlider.ToggleSliderComponent tscStatus;
         private Materials.CustomButton btnSave;
-        private CustomControls.RJControls.CustomTextBox customTextBox1;
+        private CustomControls.RJControls.CustomTextBox empIDtbox;
     }
 }
