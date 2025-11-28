@@ -6,6 +6,7 @@ using ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales;
 using ColdChainConnectSystem_ACDP.AppForms.MainPanel.Supplier;
 using ColdChainConnectSystem_ACDP.ClassResources;
 using ColdChainConnectSystem_ACDP.ClassResources.Instances;
+using ColdChainConnectSystem_ACDP.Materials;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,39 +24,32 @@ namespace ColdChainConnectSystem_ACDP.AppForms.SidePanel
     public partial class SidePanel : UserControl
     {
         DisplayClass dc = new DisplayClass();
+        CustomButton cbCurrent;
         public SidePanel()
         {
             InitializeComponent();
             this.DoubleBuffered = true; // Apply to the form
+            cbCurrent = cbtnDashboard;
         }
         String baseblue = "#070760";
-        private void SelectedTab(Button b)
+        private void SelectedTab(CustomButton b)
         {
-            btnDashboard.BackColor = Color.White;
-            btnInvMan.BackColor = Color.White; 
-            btnSupMan.BackColor = Color.White;
-            btnSalesMan.BackColor = Color.White;  
-            btnCusMan.BackColor = Color.White; 
-            btnEmpMan.BackColor = Color.White;
+            cbCurrent.GradientColor1 = ColorTranslator.FromHtml("#070760");
+            cbCurrent.GradientColor2 = ColorTranslator.FromHtml("#2B2BA3");
+            cbCurrent.Refresh();
 
-            btnDashboard.ForeColor = dc.SetCustomColor(baseblue);
-            btnInvMan.ForeColor = dc.SetCustomColor(baseblue);
-            btnSupMan.ForeColor = dc.SetCustomColor(baseblue);
-            btnSalesMan.ForeColor = dc.SetCustomColor(baseblue);
-            btnCusMan.ForeColor = dc.SetCustomColor(baseblue);
-            btnEmpMan.ForeColor = dc.SetCustomColor(baseblue);
-
-            b.BackColor = dc.SetCustomColor(baseblue);
-            b.ForeColor = dc.SetCustomColor("#FFFFFF");
+            b.GradientColor1 = ColorTranslator.FromHtml("#0347D9");
+            b.GradientColor2 = ColorTranslator.FromHtml("#2B2BA3");
+            cbCurrent = b;
         }
         private void Admin_Load(object sender, EventArgs e)
         {
-            btnDashboard.Show();
-            btnInvMan.Show();
-            btnSupMan.Show();
-            btnSalesMan.Show();
-            btnCusMan.Show();
-            btnEmpMan.Show();
+            cbtnDashboard.Show();
+            cbtnInventory.Show();
+            cbtnSupplier.Show();
+            cbtnSales.Show();
+            cbtnCustomer.Show();
+            cbtnEmployee.Show();
             switch (LoginForm.verify)
             {
                 
@@ -64,75 +58,64 @@ namespace ColdChainConnectSystem_ACDP.AppForms.SidePanel
                 case "assist":
                     break;
                 case "sales":
-                    btnSupMan.Hide();
-                    btnCusMan.Hide();
-                    btnEmpMan.Hide();
+                    cbtnSupplier.Hide();
+                    cbtnCustomer.Hide();
+                    cbtnEmployee.Hide();
                     break;
                 case "inv":
-                    btnCusMan.Hide();
-                    btnSalesMan.Hide();
-                    btnEmpMan.Hide();
+                    cbtnCustomer.Hide();
+                    cbtnSales.Hide();
+                    cbtnEmployee.Hide();
                     break;
             }
             //NOTE ADMIN = DASHBOARD, INV, SUPPLIER, SALES, CUST, EMP
             //NOTE ASSIST = DASHBOARD, INV, SUPPLIER, SALES, CUST
             //NOTE SALES = DASHBOARD, SALES, INV
             //NOTE INV = DASHBOARD,INV, SUPPLIER
-            dc.SetDisplayRectangle(btnDashboard,0,50,0,0);
-            dc.SetDisplayRectangle(btnInvMan, 0, 50, 0, 0);
-            dc.SetDisplayRectangle(btnSupMan, 0, 50, 0, 0);
-            dc.SetDisplayRectangle(btnSalesMan, 0, 50, 0, 0);
-            dc.SetDisplayRectangle(btnCusMan, 0, 50, 0, 0);
-            dc.SetDisplayRectangle(btnEmpMan, 0, 50, 0, 0);
-
-
         }
 
-
-
-        private void dashboardbtn_Click(object sender, EventArgs e)
+        private void cbtnDashboard_Click(object sender, EventArgs e)
         {
-            
-            SelectedTab(btnDashboard);
+
+            SelectedTab(cbtnDashboard);
             MainInstance.i.NavigateTo(new DashoardForm());
             CurrentFormClass.setPreviousFormTo("dbform");
         }
 
-        private void invmanbtn_Click(object sender, EventArgs e)
+        private void cbtnInventory_Click(object sender, EventArgs e)
         {
             CurrentFormClass.setPreviousFormTo("invform");
-            SelectedTab(btnInvMan);
+            SelectedTab(cbtnInventory);
             MainInstance.i.NavigateTo(InventoryInstance.i = new InventoryForm());
         }
 
-        private void supmanbbtn_Click(object sender, EventArgs e)
+        private void cbtnSupplier_Click(object sender, EventArgs e)
         {
             CurrentFormClass.setPreviousFormTo("supform");
-            SelectedTab(btnSupMan);
+            SelectedTab(cbtnSupplier);
             MainInstance.i.NavigateTo(SupplierInstance.i = new SupplierForm());
+
         }
 
-        private void salesmanbbtn_Click(object sender, EventArgs e)
+        private void cbtnSales_Click(object sender, EventArgs e)
         {
             CurrentFormClass.setPreviousFormTo("salform");
-            SelectedTab(btnSalesMan);
+            SelectedTab(cbtnSales);
             MainInstance.i.NavigateTo(SalesInstance.i = new SalesForm());
         }
 
-        private void custmanbtn_Click(object sender, EventArgs e)
+        private void cbtnCustomer_Click(object sender, EventArgs e)
         {
             CurrentFormClass.setPreviousFormTo("custform");
-            SelectedTab(btnCusMan);
+            SelectedTab(cbtnCustomer);
             MainInstance.i.NavigateTo(CustomerInstance.i = new CustomerForm());
         }
 
-        private void empmanbtn_Click(object sender, EventArgs e)
+        private void cbtnEmployee_Click(object sender, EventArgs e)
         {
             CurrentFormClass.setPreviousFormTo("empform");
-            SelectedTab(btnEmpMan);
+            SelectedTab(cbtnEmployee);
             MainInstance.i.NavigateTo(EmployeeInstance.i = new EmployeeForm());
         }
-
- 
     }
 }

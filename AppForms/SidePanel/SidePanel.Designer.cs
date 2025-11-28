@@ -28,148 +28,189 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnEmpMan = new System.Windows.Forms.Button();
-            this.btnCusMan = new System.Windows.Forms.Button();
-            this.btnSalesMan = new System.Windows.Forms.Button();
-            this.btnSupMan = new System.Windows.Forms.Button();
-            this.btnInvMan = new System.Windows.Forms.Button();
-            this.btnDashboard = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel1.SuspendLayout();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.cbtnDashboard = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
+            this.cbtnInventory = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
+            this.cbtnSupplier = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
+            this.cbtnSales = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
+            this.cbtnCustomer = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
+            this.cbtnEmployee = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btnEmpMan
+            // flowLayoutPanel1
             // 
-            this.btnEmpMan.BackColor = System.Drawing.Color.Transparent;
-            this.btnEmpMan.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnEmpMan.FlatAppearance.BorderSize = 0;
-            this.btnEmpMan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEmpMan.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
-            this.btnEmpMan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.btnEmpMan.Location = new System.Drawing.Point(0, 250);
-            this.btnEmpMan.Name = "btnEmpMan";
-            this.btnEmpMan.Size = new System.Drawing.Size(186, 50);
-            this.btnEmpMan.TabIndex = 0;
-            this.btnEmpMan.Text = "Employee Management";
-            this.btnEmpMan.UseVisualStyleBackColor = false;
-            this.btnEmpMan.Click += new System.EventHandler(this.empmanbtn_Click);
-            this.btnEmpMan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.flowLayoutPanel1.Controls.Add(this.cbtnDashboard);
+            this.flowLayoutPanel1.Controls.Add(this.cbtnInventory);
+            this.flowLayoutPanel1.Controls.Add(this.cbtnSupplier);
+            this.flowLayoutPanel1.Controls.Add(this.cbtnSales);
+            this.flowLayoutPanel1.Controls.Add(this.cbtnCustomer);
+            this.flowLayoutPanel1.Controls.Add(this.cbtnEmployee);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(0, 20, 20, 0);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(243, 385);
+            this.flowLayoutPanel1.TabIndex = 8;
             // 
-            // btnCusMan
+            // cbtnDashboard
             // 
-            this.btnCusMan.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnCusMan.FlatAppearance.BorderSize = 0;
-            this.btnCusMan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCusMan.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
-            this.btnCusMan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.btnCusMan.Location = new System.Drawing.Point(0, 200);
-            this.btnCusMan.Name = "btnCusMan";
-            this.btnCusMan.Size = new System.Drawing.Size(186, 50);
-            this.btnCusMan.TabIndex = 2;
-            this.btnCusMan.Text = "Customer Management";
-            this.btnCusMan.UseVisualStyleBackColor = true;
-            this.btnCusMan.Click += new System.EventHandler(this.custmanbtn_Click);
-            this.btnCusMan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbtnDashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cbtnDashboard.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cbtnDashboard.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cbtnDashboard.BorderRadius = 25;
+            this.cbtnDashboard.BorderSize = 0;
+            this.cbtnDashboard.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbtnDashboard.FlatAppearance.BorderSize = 0;
+            this.cbtnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbtnDashboard.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbtnDashboard.ForeColor = System.Drawing.Color.White;
+            this.cbtnDashboard.GradientColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.cbtnDashboard.GradientColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(163)))));
+            this.cbtnDashboard.Location = new System.Drawing.Point(3, 23);
+            this.cbtnDashboard.Name = "cbtnDashboard";
+            this.cbtnDashboard.Size = new System.Drawing.Size(220, 50);
+            this.cbtnDashboard.TabIndex = 0;
+            this.cbtnDashboard.Text = "                  Dashboard";
+            this.cbtnDashboard.TextColor = System.Drawing.Color.White;
+            this.cbtnDashboard.UseVisualStyleBackColor = false;
+            this.cbtnDashboard.Click += new System.EventHandler(this.cbtnDashboard_Click);
             // 
-            // btnSalesMan
+            // cbtnInventory
             // 
-            this.btnSalesMan.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSalesMan.FlatAppearance.BorderSize = 0;
-            this.btnSalesMan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalesMan.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
-            this.btnSalesMan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.btnSalesMan.Location = new System.Drawing.Point(0, 150);
-            this.btnSalesMan.Name = "btnSalesMan";
-            this.btnSalesMan.Size = new System.Drawing.Size(186, 50);
-            this.btnSalesMan.TabIndex = 3;
-            this.btnSalesMan.Text = "Sales Management";
-            this.btnSalesMan.UseVisualStyleBackColor = true;
-            this.btnSalesMan.Click += new System.EventHandler(this.salesmanbbtn_Click);
-            this.btnSalesMan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbtnInventory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cbtnInventory.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cbtnInventory.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cbtnInventory.BorderRadius = 25;
+            this.cbtnInventory.BorderSize = 0;
+            this.cbtnInventory.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbtnInventory.FlatAppearance.BorderSize = 0;
+            this.cbtnInventory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbtnInventory.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbtnInventory.ForeColor = System.Drawing.Color.White;
+            this.cbtnInventory.GradientColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.cbtnInventory.GradientColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(163)))));
+            this.cbtnInventory.Location = new System.Drawing.Point(3, 79);
+            this.cbtnInventory.Name = "cbtnInventory";
+            this.cbtnInventory.Size = new System.Drawing.Size(220, 50);
+            this.cbtnInventory.TabIndex = 1;
+            this.cbtnInventory.Text = "Inventory Management";
+            this.cbtnInventory.TextColor = System.Drawing.Color.White;
+            this.cbtnInventory.UseVisualStyleBackColor = false;
+            this.cbtnInventory.Click += new System.EventHandler(this.cbtnInventory_Click);
             // 
-            // btnSupMan
+            // cbtnSupplier
             // 
-            this.btnSupMan.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSupMan.FlatAppearance.BorderSize = 0;
-            this.btnSupMan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSupMan.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
-            this.btnSupMan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.btnSupMan.Location = new System.Drawing.Point(0, 100);
-            this.btnSupMan.Name = "btnSupMan";
-            this.btnSupMan.Size = new System.Drawing.Size(186, 50);
-            this.btnSupMan.TabIndex = 4;
-            this.btnSupMan.Text = "Supplier Management";
-            this.btnSupMan.UseVisualStyleBackColor = true;
-            this.btnSupMan.Click += new System.EventHandler(this.supmanbbtn_Click);
-            this.btnSupMan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbtnSupplier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cbtnSupplier.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cbtnSupplier.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cbtnSupplier.BorderRadius = 25;
+            this.cbtnSupplier.BorderSize = 0;
+            this.cbtnSupplier.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbtnSupplier.FlatAppearance.BorderSize = 0;
+            this.cbtnSupplier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbtnSupplier.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbtnSupplier.ForeColor = System.Drawing.Color.White;
+            this.cbtnSupplier.GradientColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.cbtnSupplier.GradientColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(163)))));
+            this.cbtnSupplier.Location = new System.Drawing.Point(3, 135);
+            this.cbtnSupplier.Name = "cbtnSupplier";
+            this.cbtnSupplier.Size = new System.Drawing.Size(220, 50);
+            this.cbtnSupplier.TabIndex = 2;
+            this.cbtnSupplier.Text = "   Supplier Management";
+            this.cbtnSupplier.TextColor = System.Drawing.Color.White;
+            this.cbtnSupplier.UseVisualStyleBackColor = false;
+            this.cbtnSupplier.Click += new System.EventHandler(this.cbtnSupplier_Click);
             // 
-            // btnInvMan
+            // cbtnSales
             // 
-            this.btnInvMan.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnInvMan.FlatAppearance.BorderSize = 0;
-            this.btnInvMan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInvMan.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
-            this.btnInvMan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.btnInvMan.Location = new System.Drawing.Point(0, 50);
-            this.btnInvMan.Name = "btnInvMan";
-            this.btnInvMan.Size = new System.Drawing.Size(186, 50);
-            this.btnInvMan.TabIndex = 5;
-            this.btnInvMan.Text = "Inventory Management";
-            this.btnInvMan.UseVisualStyleBackColor = true;
-            this.btnInvMan.Click += new System.EventHandler(this.invmanbtn_Click);
-            this.btnInvMan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbtnSales.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cbtnSales.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cbtnSales.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cbtnSales.BorderRadius = 25;
+            this.cbtnSales.BorderSize = 0;
+            this.cbtnSales.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbtnSales.FlatAppearance.BorderSize = 0;
+            this.cbtnSales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbtnSales.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbtnSales.ForeColor = System.Drawing.Color.White;
+            this.cbtnSales.GradientColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.cbtnSales.GradientColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(163)))));
+            this.cbtnSales.Location = new System.Drawing.Point(3, 191);
+            this.cbtnSales.Name = "cbtnSales";
+            this.cbtnSales.Size = new System.Drawing.Size(220, 50);
+            this.cbtnSales.TabIndex = 3;
+            this.cbtnSales.Text = "      Sales Management";
+            this.cbtnSales.TextColor = System.Drawing.Color.White;
+            this.cbtnSales.UseVisualStyleBackColor = false;
+            this.cbtnSales.Click += new System.EventHandler(this.cbtnSales_Click);
             // 
-            // btnDashboard
+            // cbtnCustomer
             // 
-            this.btnDashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.btnDashboard.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnDashboard.FlatAppearance.BorderSize = 0;
-            this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDashboard.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
-            this.btnDashboard.ForeColor = System.Drawing.Color.White;
-            this.btnDashboard.Location = new System.Drawing.Point(0, 0);
-            this.btnDashboard.Name = "btnDashboard";
-            this.btnDashboard.Size = new System.Drawing.Size(186, 50);
-            this.btnDashboard.TabIndex = 6;
-            this.btnDashboard.Text = "Dashboard";
-            this.btnDashboard.UseVisualStyleBackColor = false;
-            this.btnDashboard.Click += new System.EventHandler(this.dashboardbtn_Click);
-            this.btnDashboard.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbtnCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cbtnCustomer.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cbtnCustomer.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cbtnCustomer.BorderRadius = 25;
+            this.cbtnCustomer.BorderSize = 0;
+            this.cbtnCustomer.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbtnCustomer.FlatAppearance.BorderSize = 0;
+            this.cbtnCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbtnCustomer.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbtnCustomer.ForeColor = System.Drawing.Color.White;
+            this.cbtnCustomer.GradientColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.cbtnCustomer.GradientColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(163)))));
+            this.cbtnCustomer.Location = new System.Drawing.Point(3, 247);
+            this.cbtnCustomer.Name = "cbtnCustomer";
+            this.cbtnCustomer.Size = new System.Drawing.Size(220, 50);
+            this.cbtnCustomer.TabIndex = 4;
+            this.cbtnCustomer.Text = "Customer Management";
+            this.cbtnCustomer.TextColor = System.Drawing.Color.White;
+            this.cbtnCustomer.UseVisualStyleBackColor = false;
+            this.cbtnCustomer.Click += new System.EventHandler(this.cbtnCustomer_Click);
             // 
-            // panel1
+            // cbtnEmployee
             // 
-            this.panel1.Controls.Add(this.btnEmpMan);
-            this.panel1.Controls.Add(this.btnCusMan);
-            this.panel1.Controls.Add(this.btnSalesMan);
-            this.panel1.Controls.Add(this.btnSupMan);
-            this.panel1.Controls.Add(this.btnInvMan);
-            this.panel1.Controls.Add(this.btnDashboard);
-            this.panel1.Location = new System.Drawing.Point(0, 21);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(186, 315);
-            this.panel1.TabIndex = 7;
+            this.cbtnEmployee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cbtnEmployee.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cbtnEmployee.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cbtnEmployee.BorderRadius = 25;
+            this.cbtnEmployee.BorderSize = 0;
+            this.cbtnEmployee.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbtnEmployee.FlatAppearance.BorderSize = 0;
+            this.cbtnEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbtnEmployee.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbtnEmployee.ForeColor = System.Drawing.Color.White;
+            this.cbtnEmployee.GradientColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.cbtnEmployee.GradientColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(163)))));
+            this.cbtnEmployee.Location = new System.Drawing.Point(3, 303);
+            this.cbtnEmployee.Name = "cbtnEmployee";
+            this.cbtnEmployee.Size = new System.Drawing.Size(220, 50);
+            this.cbtnEmployee.TabIndex = 5;
+            this.cbtnEmployee.Text = "Employee Management";
+            this.cbtnEmployee.TextColor = System.Drawing.Color.White;
+            this.cbtnEmployee.UseVisualStyleBackColor = false;
+            this.cbtnEmployee.Click += new System.EventHandler(this.cbtnEmployee_Click);
             // 
             // SidePanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "SidePanel";
-            this.Size = new System.Drawing.Size(200, 355);
+            this.Size = new System.Drawing.Size(243, 385);
             this.Load += new System.EventHandler(this.Admin_Load);
-            this.panel1.ResumeLayout(false);
+            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnEmpMan;
-        private System.Windows.Forms.Button btnCusMan;
-        private System.Windows.Forms.Button btnSalesMan;
-        private System.Windows.Forms.Button btnSupMan;
-        private System.Windows.Forms.Button btnInvMan;
-        private System.Windows.Forms.Button btnDashboard;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private Materials.CustomButton cbtnDashboard;
+        private Materials.CustomButton cbtnInventory;
+        private Materials.CustomButton cbtnSupplier;
+        private Materials.CustomButton cbtnSales;
+        private Materials.CustomButton cbtnCustomer;
+        private Materials.CustomButton cbtnEmployee;
     }
 }
