@@ -207,10 +207,13 @@
             this.btnAdd.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btnAdd.BorderRadius = 10;
             this.btnAdd.BorderSize = 0;
+            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAdd.FlatAppearance.BorderSize = 0;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.Color.White;
+            this.btnAdd.GradientColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnAdd.GradientColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnAdd.Location = new System.Drawing.Point(624, 507);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(150, 40);
@@ -594,7 +597,7 @@
             this.lblgeen.TabIndex = 77;
             this.lblgeen.Text = "General Information";
             // 
-            // AddCustomerForm
+            // AddCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -608,7 +611,7 @@
             this.Controls.Add(this.lbl);
             this.Controls.Add(this.btnAdd);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "AddCustomerForm";
+            this.Name = "AddCustomer";
             this.Padding = new System.Windows.Forms.Padding(20);
             this.Text = "AddItemInventoryForm";
             this.Load += new System.EventHandler(this.AddItemInventoryForm_Load);

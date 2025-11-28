@@ -80,10 +80,13 @@
             this.btnExitView.BorderColor = System.Drawing.Color.Empty;
             this.btnExitView.BorderRadius = 10;
             this.btnExitView.BorderSize = 2;
+            this.btnExitView.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnExitView.FlatAppearance.BorderSize = 0;
             this.btnExitView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExitView.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.btnExitView.ForeColor = System.Drawing.Color.White;
+            this.btnExitView.GradientColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnExitView.GradientColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnExitView.Location = new System.Drawing.Point(438, 313);
             this.btnExitView.Name = "btnExitView";
             this.btnExitView.Size = new System.Drawing.Size(150, 40);
