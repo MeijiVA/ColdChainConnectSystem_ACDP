@@ -182,7 +182,9 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
             }
             if (dgvTable.Columns[e.ColumnIndex].Name == "editCol")
             {
-
+                VarView.id = cellValue;
+                EditTransactionSales et = new EditTransactionSales();
+                et.Show(this);
             }
             if (dgvTable.Columns[e.ColumnIndex].Name == "viewCol")
             {

@@ -159,5 +159,42 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
 
 
 
+
+        public static bool updateSalesData(string numid, string custid, string sdate, string quantity, string status)
+        {
+            if (!( custid.Equals("") || sdate.Equals("") || numid.Equals("") || quantity.Equals("") || status.Equals("")))
+            {
+                try
+                {
+                    string query = $"  UPDATE Sales SET\r\n" +
+                            $"[customerid] = '{custid}',\r\n    " +
+                            $"[salesdate] = '{sdate}',\r\n    " +
+                            $"[quantity] = '{quantity}',\r\n    " +
+                            $"[status] = '{status}'\r\n    " +
+                            $"WHERE [numid] = {numid};";
+
+                    SqlConnection con = ConnectionClass.Connection();
+                    using (SqlCommand cmd = new SqlCommand(query, con))
+                    {
+                        Console.WriteLine(query);
+                        con.Open();
+                        cmd.ExecuteNonQuery();
+                        con.Close();
+                        return true;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    new CustomMessageBox("Exception", ex.Message, MessageBoxButtons.OK).ShowDialog();
+                    return false;
+                }
+            }
+            else
+            {
+                new CustomMessageBox("Missing Element", "Fill in all required Fields.", MessageBoxButtons.OK).ShowDialog();
+                return false;
+            }
+        }
+
     }
 }

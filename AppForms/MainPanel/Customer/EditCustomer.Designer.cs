@@ -110,7 +110,7 @@
             this.lblPaymentTerm.AutoCompleteCustomSource.AddRange(new string[] {
             "GCASH",
             "PAYMAYA"});
-            this.lblPaymentTerm.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.lblPaymentTerm.BackColor = System.Drawing.Color.White;
             this.lblPaymentTerm.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.lblPaymentTerm.BorderRadius = 0;
             this.lblPaymentTerm.BorderSize = 2;
@@ -135,7 +135,7 @@
             // 
             // lblStatus
             // 
-            this.lblStatus.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.lblStatus.BackColor = System.Drawing.Color.White;
             this.lblStatus.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.lblStatus.BorderRadius = 0;
             this.lblStatus.BorderSize = 2;
@@ -227,7 +227,7 @@
             // 
             // lblProvince
             // 
-            this.lblProvince.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.lblProvince.BackColor = System.Drawing.Color.White;
             this.lblProvince.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.lblProvince.BorderRadius = 0;
             this.lblProvince.BorderSize = 2;
@@ -248,7 +248,7 @@
             // 
             // lblCity
             // 
-            this.lblCity.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.lblCity.BackColor = System.Drawing.Color.White;
             this.lblCity.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.lblCity.BorderRadius = 0;
             this.lblCity.BorderSize = 2;

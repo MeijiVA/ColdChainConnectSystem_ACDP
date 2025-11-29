@@ -36,7 +36,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
 
         private void ViewTransactionSales_Load(object sender, EventArgs e)
         {
-            string query = $"SELECT a.[numid], a.[salesid],a.[customerid], c.[customername],a.[salesdate],a.[productid], i.[skucode],a.[quantity],i.[unitprice],(a.[quantity] * i.[unitprice]) AS TOTAL,a.[status] a.CreatedBy FROM Sales as a JOIN Inventory AS i ON a.[productid] = i.[numid] JOIN Customer AS c ON c.[customerid] = a.[customerid] WHERE a.[numid] = {ClassResources.Instances.VarView.id}";
+            string query = $"SELECT a.[numid], a.[salesid],a.[customerid], c.[customername],a.[salesdate],a.[productid], i.[skucode],a.[quantity],i.[unitprice],(a.[quantity] * i.[unitprice]) AS TOTAL,a.[status], a.CreatedBy FROM Sales as a JOIN Inventory AS i ON a.[productid] = i.[numid] JOIN Customer AS c ON c.[customerid] = a.[customerid] WHERE a.[numid] = {ClassResources.Instances.VarView.id}";
             SqlConnection con = ConnectionClass.Connection();
             con.Open();
             Console.WriteLine(query);

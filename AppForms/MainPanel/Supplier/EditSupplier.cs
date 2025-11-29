@@ -52,7 +52,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Supplier
             String address = lblHouseNumber.Texts + "," + lblBarangay.Texts + "," + lblCity.Texts + "," + lblProvince.Texts + "," + lblPostal.Texts;
             if (SupplierClass.updateSupplierData(VarView.id, lblCompanyName.Texts, lblContactPerson.Texts, lblContactNum.Texts, address, lblPaymentTerm.Texts)) ;
             this.Close();
-            MainInstance.i.NavigateTo(CustomerInstance.i);
+            MainInstance.i.NavigateTo(SupplierInstance.i);
             SupplierInstance.i.UpdateTable();
         }
 
