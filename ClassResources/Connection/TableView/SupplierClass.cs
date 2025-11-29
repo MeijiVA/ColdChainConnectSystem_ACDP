@@ -129,6 +129,44 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
 
 
 
+        public static bool updateSupplierData(string numid, string companyname, string contactperson, string contactnum, string address, string paymentterm)
+        {
+            if (!(contactperson.Equals("") || companyname.Equals("") || address.Equals("") || paymentterm.Equals("") || contactnum.Equals("")))
+            {
+                try
+                {
+                    string query = $"  UPDATE Supplier\r\n" +
+                            $"SET[companyname] = '{companyname}',\r\n    " +
+                            $"[contactperson] = '{contactperson}',\r\n    " +
+                            $"[address] = '{address}',\r\n    " +
+                            $"[paymentterm] = '{paymentterm}',\r\n    " +
+                            $"[contactnum] = '{contactnum}'\r\n    " +
+                            $"WHERE [numid] = {numid};";
+
+                    SqlConnection con = ConnectionClass.Connection();
+                    using (SqlCommand cmd = new SqlCommand(query, con))
+                    {
+                        Console.WriteLine(query);
+                        con.Open();
+                        cmd.ExecuteNonQuery();
+                        con.Close();
+                        return true;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    new CustomMessageBox("Exception", ex.Message, MessageBoxButtons.OK).ShowDialog();
+                    return false;
+                }
+            }
+            else
+            {
+                new CustomMessageBox("Missing Element", "Fill in all required Fields.", MessageBoxButtons.OK).ShowDialog();
+                return false;
+            }
+        }
+
+
 
 
     }

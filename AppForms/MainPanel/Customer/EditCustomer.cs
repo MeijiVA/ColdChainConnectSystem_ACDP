@@ -78,5 +78,10 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer
             MainInstance.i.NavigateTo(CustomerInstance.i);
             CustomerInstance.i.UpdateTable();
         }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

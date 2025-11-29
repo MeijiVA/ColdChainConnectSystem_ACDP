@@ -51,6 +51,7 @@
             this.dpRegistrationDate = new ColdChainConnectSystem_ACDP.Materials.CustomDatePicker();
             this.btnSave = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
             this.lblID = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
+            this.btnExit = new System.Windows.Forms.Button();
             this.customPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -444,12 +445,29 @@
             this.lblID.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblID.TextColor = System.Drawing.Color.White;
             // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.btnExit.BackgroundImage = global::ColdChainConnectSystem_ACDP.Properties.Resources.Back;
+            this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F);
+            this.btnExit.ForeColor = System.Drawing.Color.White;
+            this.btnExit.Location = new System.Drawing.Point(552, 14);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(27, 27);
+            this.btnExit.TabIndex = 77;
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
             // EditCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(600, 365);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.lblPaymentTerm);
             this.Controls.Add(this.lblStatus);
             this.Controls.Add(this.lblCustomerName);
@@ -499,5 +517,6 @@
         private Materials.CustomComboBox lblPaymentTerm;
         private Materials.CustomComboBox lblProvince;
         private Materials.CustomComboBox lblCity;
+        private System.Windows.Forms.Button btnExit;
     }
 }

@@ -157,7 +157,9 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Supplier
             }
             if (dgvTable.Columns[e.ColumnIndex].Name == "editCol")
             {
-
+                VarView.id = cellValue;
+                EditSupplier es = new EditSupplier();
+                es.Show(this);
             }
             if (dgvTable.Columns[e.ColumnIndex].Name == "viewCol")
             {

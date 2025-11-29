@@ -194,10 +194,14 @@
             this.btnExitView.BorderColor = System.Drawing.Color.Empty;
             this.btnExitView.BorderRadius = 10;
             this.btnExitView.BorderSize = 2;
+            this.btnExitView.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnExitView.FlatAppearance.BorderSize = 0;
             this.btnExitView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExitView.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.btnExitView.ForeColor = System.Drawing.Color.White;
+            this.btnExitView.GradientColor1 = System.Drawing.Color.Transparent;
+            this.btnExitView.GradientColor2 = System.Drawing.Color.Transparent;
+            this.btnExitView.GradientTextColor = System.Drawing.Color.Transparent;
             this.btnExitView.Location = new System.Drawing.Point(438, 313);
             this.btnExitView.Name = "btnExitView";
             this.btnExitView.Size = new System.Drawing.Size(150, 40);
@@ -372,7 +376,7 @@
             this.lblCity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblCity.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
             this.lblCity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.lblCity.Location = new System.Drawing.Point(10, 85);
+            this.lblCity.Location = new System.Drawing.Point(10, 86);
             this.lblCity.Name = "lblCity";
             this.lblCity.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.lblCity.Size = new System.Drawing.Size(180, 30);
@@ -385,7 +389,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(600, 365);
             this.Controls.Add(this.customPanel1);
             this.Controls.Add(this.btnExitView);
