@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,6 +17,8 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
             MainForm.settingFlag = 1;
             Console.WriteLine(name);
         }
+
+        public static AddTransactionSales addTransInstance;
     }
 
 

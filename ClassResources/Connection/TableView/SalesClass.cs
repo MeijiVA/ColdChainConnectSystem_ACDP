@@ -94,13 +94,13 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
 
 
         //[salesid],[customerid],[salesdate],[productid],[quantity],[unitprice],[status]
-        public static bool writeSalesData(string salesid,string custid, string sdate, string prodid, string quantity, string status)
+        public static bool writeSalesData(string salesid,string custid, string sdate, string prodid, string quantity, string status, string createdby)
         {
-            if(!(salesid.Equals("") || custid.Equals("") || sdate.Equals("") || prodid.Equals("") || quantity.Equals("") || status.Equals("")))
+            if(!(salesid.Equals("") || custid.Equals("") || sdate.Equals("") || prodid.Equals("") || quantity.Equals("") || status.Equals("") || createdby.Equals("")))
             {
                 try
                 {
-                    string query = $"INSERT INTO Sales([salesid],[customerid],[salesdate],[productid],[quantity],[status]) VALUES('{salesid}', '{custid}', '{sdate}',{prodid}, {quantity}, N'{status}')";
+                    string query = $"INSERT INTO Sales([salesid],[customerid],[salesdate],[productid],[quantity],[status],[createdby]) VALUES('{salesid}', '{custid}', '{sdate}',{prodid}, {quantity}, N'{status}',N'{createdby}')";
                     SqlConnection con = ConnectionClass.Connection();
                     using (SqlCommand cmd = new SqlCommand(query, con))
                     {

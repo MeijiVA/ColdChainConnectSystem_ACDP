@@ -134,6 +134,7 @@ int nHeightEllipse // height of ellipse
                     break;
                 case "salform":
                     AddTransactionSales addTrans = new AddTransactionSales();
+                    CurrentFormClass.addTransInstance = addTrans;
                     MainInstance.i.NavigateTo(addTrans);
                     break;
                 case "custform":

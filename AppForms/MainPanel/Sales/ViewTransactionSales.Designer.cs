@@ -33,11 +33,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.lblUnitPrice = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
             this.lblSku = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
-            this.lblTotalPrice = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
             this.lblCustomerName = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
             this.btnExitView = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
             this.dpSalesDate = new ColdChainConnectSystem_ACDP.Materials.CustomDatePicker();
@@ -46,6 +44,11 @@
             this.lblProductID = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
             this.lblCustomerID = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
             this.lblID = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lblCreatedBy = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
+            this.lblPHP = new System.Windows.Forms.Label();
+            this.lblTotalPrice = new System.Windows.Forms.Label();
+            this.lblPriceTitle = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -99,16 +102,6 @@
             this.label5.TabIndex = 11;
             this.label5.Text = "Status";
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(384, 168);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(33, 14);
-            this.label7.TabIndex = 46;
-            this.label7.Text = "Total";
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -156,29 +149,10 @@
             this.lblSku.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblSku.TextColor = System.Drawing.Color.Black;
             // 
-            // lblTotalPrice
-            // 
-            this.lblTotalPrice.BackColor = System.Drawing.Color.White;
-            this.lblTotalPrice.BackgroundColor = System.Drawing.Color.White;
-            this.lblTotalPrice.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.lblTotalPrice.BorderRadius = 10;
-            this.lblTotalPrice.BorderSize = 2;
-            this.lblTotalPrice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblTotalPrice.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
-            this.lblTotalPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.lblTotalPrice.Location = new System.Drawing.Point(384, 184);
-            this.lblTotalPrice.Name = "lblTotalPrice";
-            this.lblTotalPrice.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.lblTotalPrice.Size = new System.Drawing.Size(180, 30);
-            this.lblTotalPrice.TabIndex = 45;
-            this.lblTotalPrice.Text = "customLabel4";
-            this.lblTotalPrice.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblTotalPrice.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            // 
             // lblCustomerName
             // 
-            this.lblCustomerName.BackColor = System.Drawing.Color.White;
-            this.lblCustomerName.BackgroundColor = System.Drawing.Color.White;
+            this.lblCustomerName.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.lblCustomerName.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.lblCustomerName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lblCustomerName.BorderRadius = 10;
             this.lblCustomerName.BorderSize = 2;
@@ -208,7 +182,7 @@
             this.btnExitView.GradientColor1 = System.Drawing.Color.Transparent;
             this.btnExitView.GradientColor2 = System.Drawing.Color.Transparent;
             this.btnExitView.GradientTextColor = System.Drawing.Color.Transparent;
-            this.btnExitView.Location = new System.Drawing.Point(438, 341);
+            this.btnExitView.Location = new System.Drawing.Point(438, 313);
             this.btnExitView.Name = "btnExitView";
             this.btnExitView.Size = new System.Drawing.Size(150, 40);
             this.btnExitView.TabIndex = 42;
@@ -330,17 +304,84 @@
             this.lblID.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblID.TextColor = System.Drawing.Color.White;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label6.Location = new System.Drawing.Point(9, 281);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(67, 14);
+            this.label6.TabIndex = 52;
+            this.label6.Text = "Created By";
+            // 
+            // lblCreatedBy
+            // 
+            this.lblCreatedBy.BackColor = System.Drawing.Color.White;
+            this.lblCreatedBy.BackgroundColor = System.Drawing.Color.White;
+            this.lblCreatedBy.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.lblCreatedBy.BorderRadius = 10;
+            this.lblCreatedBy.BorderSize = 2;
+            this.lblCreatedBy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblCreatedBy.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
+            this.lblCreatedBy.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.lblCreatedBy.Location = new System.Drawing.Point(9, 297);
+            this.lblCreatedBy.Name = "lblCreatedBy";
+            this.lblCreatedBy.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.lblCreatedBy.Size = new System.Drawing.Size(180, 30);
+            this.lblCreatedBy.TabIndex = 51;
+            this.lblCreatedBy.Text = "Created By";
+            this.lblCreatedBy.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblCreatedBy.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            // 
+            // lblPHP
+            // 
+            this.lblPHP.AutoSize = true;
+            this.lblPHP.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10F);
+            this.lblPHP.ForeColor = System.Drawing.Color.Green;
+            this.lblPHP.Location = new System.Drawing.Point(540, 78);
+            this.lblPHP.Name = "lblPHP";
+            this.lblPHP.Size = new System.Drawing.Size(36, 16);
+            this.lblPHP.TabIndex = 60;
+            this.lblPHP.Text = "PHP";
+            // 
+            // lblTotalPrice
+            // 
+            this.lblTotalPrice.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10F);
+            this.lblTotalPrice.ForeColor = System.Drawing.Color.Green;
+            this.lblTotalPrice.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblTotalPrice.Location = new System.Drawing.Point(425, 78);
+            this.lblTotalPrice.Name = "lblTotalPrice";
+            this.lblTotalPrice.Size = new System.Drawing.Size(117, 16);
+            this.lblTotalPrice.TabIndex = 59;
+            this.lblTotalPrice.Text = "0.00";
+            this.lblTotalPrice.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lblPriceTitle
+            // 
+            this.lblPriceTitle.AutoSize = true;
+            this.lblPriceTitle.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.lblPriceTitle.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10F);
+            this.lblPriceTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.lblPriceTitle.Location = new System.Drawing.Point(496, 58);
+            this.lblPriceTitle.Name = "lblPriceTitle";
+            this.lblPriceTitle.Size = new System.Drawing.Size(80, 16);
+            this.lblPriceTitle.TabIndex = 58;
+            this.lblPriceTitle.Text = "Total Price";
+            // 
             // ViewTransactionSales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(600, 393);
+            this.ClientSize = new System.Drawing.Size(600, 365);
+            this.Controls.Add(this.lblPHP);
+            this.Controls.Add(this.lblTotalPrice);
+            this.Controls.Add(this.lblPriceTitle);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.lblCreatedBy);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.lblUnitPrice);
             this.Controls.Add(this.lblSku);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.lblTotalPrice);
             this.Controls.Add(this.lblCustomerName);
             this.Controls.Add(this.btnExitView);
             this.Controls.Add(this.dpSalesDate);
@@ -380,10 +421,13 @@
         private Materials.CustomDatePicker dpSalesDate;
         private Materials.CustomButton btnExitView;
         private Materials.CustomLabel lblCustomerName;
-        private System.Windows.Forms.Label label7;
-        private Materials.CustomLabel lblTotalPrice;
         private Materials.CustomLabel lblSku;
         private System.Windows.Forms.Label label9;
         private Materials.CustomLabel lblUnitPrice;
+        private System.Windows.Forms.Label label6;
+        private Materials.CustomLabel lblCreatedBy;
+        private System.Windows.Forms.Label lblPHP;
+        private System.Windows.Forms.Label lblTotalPrice;
+        private System.Windows.Forms.Label lblPriceTitle;
     }
 }

@@ -1,4 +1,5 @@
 ﻿using ColdChainConnectSystem_ACDP.ClassResources;
+using ColdChainConnectSystem_ACDP.ClassResources.Instances;
 using ColdChainConnectSystem_ACDP.Popup;
 using System;
 using System.Collections.Generic;
@@ -22,20 +23,55 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
         }
 
         double totalValuePrice;
-
+        public String ChosenItem;
+        public bool AlreadyChosen;
 
         private void ItemTab_Load(object sender, EventArgs e)
         {
 
         }
+        public string WhereFilterQuery()
+        {
+             List<object> itemsToCheck = new List<object>
+             {
+            ItemTabInstance.it0.ChosenItem,
+            ItemTabInstance.it1.ChosenItem,
+            ItemTabInstance.it2.ChosenItem,
+            ItemTabInstance.it3.ChosenItem,
+            ItemTabInstance.it4.ChosenItem,
+            ItemTabInstance.it5.ChosenItem,
+            ItemTabInstance.it6.ChosenItem,
+            ItemTabInstance.it7.ChosenItem,
+            ItemTabInstance.it8.ChosenItem,
+            ItemTabInstance.it9.ChosenItem
+             };
+            var chosenItems = itemsToCheck.Where(item => item != null).ToList();
 
+            if (!chosenItems.Any())
+            {
+                return string.Empty; // Return empty string if no items are chosen.
+            }
+            string excludedIds = string.Join(", ", chosenItems);
+
+            string whereFilter = $"AND [numid] NOT IN ({excludedIds})";
+
+            // IMPORTANT SECURITY NOTE: This code is highly vulnerable to **SQL Injection**.
+            // The preferred and secure approach is to use **Parameterized Queries** // (e.g., using a DbCommand object), NOT string concatenation.
+            // If you MUST return a SQL string, this is the syntactically correct way, 
+            // but it is UNSAFE in a real-world application.
+
+            return whereFilter;
+        }
         private void cbProductID_Load(object sender, EventArgs e)
         {
-            string query = $"SELECT [NUMID] , [SKUCODE] FROM Inventory WHERE [quantity] > 0";
+            String FilterQuery = WhereFilterQuery();
+
+            string query = $"SELECT [NUMID] , [SKUCODE] FROM Inventory WHERE [quantity] > 0 {FilterQuery}";
             SqlConnection con = ConnectionClass.Connection();
+            Console.WriteLine(query);
             con.Open();
             using (SqlCommand cmd = new SqlCommand(query, con))
-            {
+            { 
                 using (var reader = cmd.ExecuteReader())
                 {
                     while (reader.Read())
@@ -69,6 +105,12 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
                                 lblPrice.Text = "" + Math.Round(1 * Convert.ToDouble(reader[1].ToString()), 2);
                                 tbQuantity.Value = 1;
                                 lblQuantityValue.Text = "" + tbQuantity.Value;
+                                ChosenItem = productID[0];
+                                if (!AlreadyChosen)
+                                {
+                                    CurrentFormClass.addTransInstance.btnAddTab.Enabled = true;
+                                    AlreadyChosen = true;
+                                }
                             }
                         }
                     }
@@ -79,6 +121,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
                     new CustomMessageBox("Exception", ex.Message, MessageBoxButtons.OK).ShowDialog();
                 }
             }
+
         }
 
         private void tbQuantity_Scroll_1(object sender, EventArgs e)

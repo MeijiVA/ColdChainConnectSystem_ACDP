@@ -32,6 +32,9 @@
             this.lblCustomerID = new System.Windows.Forms.Label();
             this.lblSalesDate = new System.Windows.Forms.Label();
             this.tcSales = new System.Windows.Forms.TabControl();
+            this.lblStatus = new System.Windows.Forms.Label();
+            this.cbStatus = new ColdChainConnectSystem_ACDP.Materials.CustomComboBox();
+            this.lblSalesID = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
             this.btnRemoveTab = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
             this.btnAddTab = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
             this.lblCustomerName = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
@@ -39,9 +42,6 @@
             this.dpSalesDate = new ColdChainConnectSystem_ACDP.Materials.CustomDatePicker();
             this.lbl = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
             this.btnAdd = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
-            this.lblSalesID = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
-            this.cbStatus = new ColdChainConnectSystem_ACDP.Materials.CustomComboBox();
-            this.lblStatus = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnExit
@@ -93,6 +93,57 @@
             this.tcSales.Size = new System.Drawing.Size(754, 344);
             this.tcSales.TabIndex = 38;
             // 
+            // lblStatus
+            // 
+            this.lblStatus.AutoSize = true;
+            this.lblStatus.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10F);
+            this.lblStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.lblStatus.Location = new System.Drawing.Point(299, 521);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(50, 16);
+            this.lblStatus.TabIndex = 50;
+            this.lblStatus.Text = "Status";
+            // 
+            // cbStatus
+            // 
+            this.cbStatus.BackColor = System.Drawing.Color.White;
+            this.cbStatus.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.cbStatus.BorderRadius = 0;
+            this.cbStatus.BorderSize = 1;
+            this.cbStatus.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbStatus.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14F);
+            this.cbStatus.ForeColor = System.Drawing.Color.DimGray;
+            this.cbStatus.IconColor = System.Drawing.Color.Navy;
+            this.cbStatus.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.cbStatus.ListTextColor = System.Drawing.Color.DimGray;
+            this.cbStatus.Location = new System.Drawing.Point(368, 510);
+            this.cbStatus.MinimumSize = new System.Drawing.Size(200, 30);
+            this.cbStatus.Name = "cbStatus";
+            this.cbStatus.Padding = new System.Windows.Forms.Padding(1);
+            this.cbStatus.Size = new System.Drawing.Size(250, 37);
+            this.cbStatus.TabIndex = 51;
+            this.cbStatus.Texts = "";
+            // 
+            // lblSalesID
+            // 
+            this.lblSalesID.AutoSize = true;
+            this.lblSalesID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.lblSalesID.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.lblSalesID.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.lblSalesID.BorderRadius = 0;
+            this.lblSalesID.BorderSize = 0;
+            this.lblSalesID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblSalesID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.lblSalesID.ForeColor = System.Drawing.Color.White;
+            this.lblSalesID.Location = new System.Drawing.Point(250, 38);
+            this.lblSalesID.Name = "lblSalesID";
+            this.lblSalesID.Size = new System.Drawing.Size(99, 20);
+            this.lblSalesID.TabIndex = 41;
+            this.lblSalesID.Text = "Sales ID <-";
+            this.lblSalesID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblSalesID.TextColor = System.Drawing.Color.White;
+            // 
             // btnRemoveTab
             // 
             this.btnRemoveTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
@@ -123,6 +174,7 @@
             this.btnAddTab.BorderRadius = 0;
             this.btnAddTab.BorderSize = 0;
             this.btnAddTab.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddTab.Enabled = false;
             this.btnAddTab.FlatAppearance.BorderSize = 0;
             this.btnAddTab.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddTab.ForeColor = System.Drawing.Color.White;
@@ -237,57 +289,6 @@
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // lblSalesID
-            // 
-            this.lblSalesID.AutoSize = true;
-            this.lblSalesID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.lblSalesID.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.lblSalesID.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.lblSalesID.BorderRadius = 0;
-            this.lblSalesID.BorderSize = 0;
-            this.lblSalesID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblSalesID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.lblSalesID.ForeColor = System.Drawing.Color.White;
-            this.lblSalesID.Location = new System.Drawing.Point(250, 38);
-            this.lblSalesID.Name = "lblSalesID";
-            this.lblSalesID.Size = new System.Drawing.Size(99, 20);
-            this.lblSalesID.TabIndex = 41;
-            this.lblSalesID.Text = "Sales ID <-";
-            this.lblSalesID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblSalesID.TextColor = System.Drawing.Color.White;
-            // 
-            // cbStatus
-            // 
-            this.cbStatus.BackColor = System.Drawing.Color.White;
-            this.cbStatus.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.cbStatus.BorderRadius = 0;
-            this.cbStatus.BorderSize = 1;
-            this.cbStatus.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbStatus.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14F);
-            this.cbStatus.ForeColor = System.Drawing.Color.DimGray;
-            this.cbStatus.IconColor = System.Drawing.Color.Navy;
-            this.cbStatus.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.cbStatus.ListTextColor = System.Drawing.Color.DimGray;
-            this.cbStatus.Location = new System.Drawing.Point(368, 510);
-            this.cbStatus.MinimumSize = new System.Drawing.Size(200, 30);
-            this.cbStatus.Name = "cbStatus";
-            this.cbStatus.Padding = new System.Windows.Forms.Padding(1);
-            this.cbStatus.Size = new System.Drawing.Size(250, 37);
-            this.cbStatus.TabIndex = 51;
-            this.cbStatus.Texts = "";
-            // 
-            // lblStatus
-            // 
-            this.lblStatus.AutoSize = true;
-            this.lblStatus.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10F);
-            this.lblStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.lblStatus.Location = new System.Drawing.Point(299, 521);
-            this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(50, 16);
-            this.lblStatus.TabIndex = 50;
-            this.lblStatus.Text = "Status";
-            // 
             // AddTransactionSales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -329,10 +330,10 @@
         private Materials.CustomComboBox cbCustomerID;
         private Materials.CustomLabel lblCustomerName;
         private System.Windows.Forms.TabControl tcSales;
-        private Materials.CustomButton btnAddTab;
         private Materials.CustomButton btnRemoveTab;
         private Materials.CustomLabel lblSalesID;
         private Materials.CustomComboBox cbStatus;
         private System.Windows.Forms.Label lblStatus;
+        public Materials.CustomButton btnAddTab;
     }
 }

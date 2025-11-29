@@ -451,6 +451,7 @@
             this.Controls.Add(this.label8);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "EditSupplier";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EditSupplier";
             this.Load += new System.EventHandler(this.EditSupplier_Load);
             this.customPanel1.ResumeLayout(false);
