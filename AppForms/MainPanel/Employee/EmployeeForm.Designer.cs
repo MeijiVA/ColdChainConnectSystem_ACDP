@@ -83,9 +83,9 @@
             this.btnAddEmp.GradientColor1 = System.Drawing.Color.Empty;
             this.btnAddEmp.GradientColor2 = System.Drawing.Color.Empty;
             this.btnAddEmp.GradientTextColor = System.Drawing.Color.Transparent;
-            this.btnAddEmp.Location = new System.Drawing.Point(299, 8);
+            this.btnAddEmp.Location = new System.Drawing.Point(319, 8);
             this.btnAddEmp.Name = "btnAddEmp";
-            this.btnAddEmp.Size = new System.Drawing.Size(154, 36);
+            this.btnAddEmp.Size = new System.Drawing.Size(142, 34);
             this.btnAddEmp.TabIndex = 0;
             this.btnAddEmp.TextColor = System.Drawing.Color.White;
             this.btnAddEmp.UseVisualStyleBackColor = false;
@@ -101,10 +101,10 @@
             this.pnlSearch.Controls.Add(this.txtSearch);
             this.pnlSearch.Controls.Add(this.pictureBox1);
             this.pnlSearch.ForeColor = System.Drawing.Color.White;
-            this.pnlSearch.Location = new System.Drawing.Point(15, 8);
+            this.pnlSearch.Location = new System.Drawing.Point(35, 10);
             this.pnlSearch.Name = "pnlSearch";
             this.pnlSearch.Padding = new System.Windows.Forms.Padding(40, 10, 2, 2);
-            this.pnlSearch.Size = new System.Drawing.Size(278, 35);
+            this.pnlSearch.Size = new System.Drawing.Size(278, 30);
             this.pnlSearch.TabIndex = 4;
             this.pnlSearch.TextColor = System.Drawing.Color.White;
             // 
@@ -112,13 +112,14 @@
             // 
             this.txtSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSearch.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtSearch.ForeColor = System.Drawing.Color.White;
-            this.txtSearch.Location = new System.Drawing.Point(40, 10);
+            this.txtSearch.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.txtSearch.Location = new System.Drawing.Point(40, 7);
             this.txtSearch.MaximumSize = new System.Drawing.Size(200, 30);
+            this.txtSearch.Multiline = true;
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(200, 14);
+            this.txtSearch.Size = new System.Drawing.Size(200, 18);
             this.txtSearch.TabIndex = 6;
             this.txtSearch.Text = "Search Term";
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
@@ -129,7 +130,7 @@
             // 
             this.pictureBox1.BackgroundImage = global::ColdChainConnectSystem_ACDP.Properties.Resources.searchIcon;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(10, 7);
+            this.pictureBox1.Location = new System.Drawing.Point(10, 4);
             this.pictureBox1.MaximumSize = new System.Drawing.Size(24, 24);
             this.pictureBox1.MinimumSize = new System.Drawing.Size(24, 24);
             this.pictureBox1.Name = "pictureBox1";
