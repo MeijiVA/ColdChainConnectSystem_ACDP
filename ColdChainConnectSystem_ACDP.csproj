@@ -204,6 +204,7 @@
     <Compile Include="AppForms\InfoUserControl\EditInformation\EditPersonalInformation.Designer.cs">
       <DependentUpon>EditPersonalInformation.cs</DependentUpon>
     </Compile>
+    <Compile Include="AppForms\MainPanel\CheckBoxHeaderCell.cs" />
     <Compile Include="AppForms\MainPanel\Customer\EditCustomer.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -46,17 +46,12 @@
             this.lblEmail = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.pbxProfile = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
-            this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxProfile)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -114,7 +109,7 @@
             this.panel3.Controls.Add(this.lblConNum);
             this.panel3.Controls.Add(this.label7);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 339);
+            this.panel3.Location = new System.Drawing.Point(0, 159);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(280, 53);
             this.panel3.TabIndex = 5;
@@ -142,7 +137,7 @@
             this.panel4.Controls.Add(this.lblStatus);
             this.panel4.Controls.Add(this.lbl2);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 286);
+            this.panel4.Location = new System.Drawing.Point(0, 106);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(280, 53);
             this.panel4.TabIndex = 6;
@@ -153,7 +148,7 @@
             this.panel2.Controls.Add(this.lblPosition);
             this.panel2.Controls.Add(this.lbl3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 233);
+            this.panel2.Location = new System.Drawing.Point(0, 53);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(280, 53);
             this.panel2.TabIndex = 4;
@@ -208,7 +203,7 @@
             this.panel5.Controls.Add(this.label3);
             this.panel5.Controls.Add(this.label6);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(0, 392);
+            this.panel5.Location = new System.Drawing.Point(0, 212);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(280, 53);
             this.panel5.TabIndex = 7;
@@ -242,36 +237,6 @@
             this.label6.TabIndex = 61;
             this.label6.Text = "  Email";
             // 
-            // label8
-            // 
-            this.label8.BackColor = System.Drawing.SystemColors.Control;
-            this.label8.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 0.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(10, 177);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(260, 3);
-            this.label8.TabIndex = 66;
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.label8);
-            this.panel6.Controls.Add(this.pbxProfile);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel6.Location = new System.Drawing.Point(0, 53);
-            this.panel6.Name = "panel6";
-            this.panel6.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
-            this.panel6.Size = new System.Drawing.Size(280, 180);
-            this.panel6.TabIndex = 67;
-            // 
-            // pbxProfile
-            // 
-            this.pbxProfile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbxProfile.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pbxProfile.Location = new System.Drawing.Point(10, 10);
-            this.pbxProfile.Name = "pbxProfile";
-            this.pbxProfile.Size = new System.Drawing.Size(260, 160);
-            this.pbxProfile.TabIndex = 0;
-            this.pbxProfile.TabStop = false;
             // 
             // label5
             // 
@@ -291,17 +256,14 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel1);
             this.Name = "ContactInformation";
-            this.Size = new System.Drawing.Size(280, 451);
+            this.Size = new System.Drawing.Size(280, 271);
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbxProfile)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -324,11 +286,8 @@
         private System.Windows.Forms.Label lblPersInfo;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.PictureBox pbxProfile;
         private System.Windows.Forms.Label label5;
     }
 }
