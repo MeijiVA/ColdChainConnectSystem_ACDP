@@ -14,6 +14,10 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
             this.DoubleBuffered = true;
         }
 
+        // Fixed size for all images - matching a reasonable viewing size
+        private const int FixedImageWidth = 400;
+        private const int FixedImageHeight = 400;
+
         public void SetImage(Image image, string description = "")
         {
             if (image != null)
@@ -21,36 +25,12 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
                 pictureBox.Image = image;
                 pictureBox.SizeMode = PictureBoxSizeMode.Zoom;
 
-                // Set form size based on popup sizes in the system (similar to CustomMessageBox but larger for images)
-                // Using a reasonable popup size: max 800x600
-                int maxWidth = 800;
-                int maxHeight = 600;
-
-                int imageWidth = image.Width;
-                int imageHeight = image.Height;
-
-                // Calculate aspect ratio
-                double aspectRatio = (double)imageWidth / imageHeight;
-
-                if (imageWidth > maxWidth || imageHeight > maxHeight)
-                {
-                    if (aspectRatio > 1)
-                    {
-                        // Landscape
-                        imageWidth = maxWidth;
-                        imageHeight = (int)(maxWidth / aspectRatio);
-                    }
-                    else
-                    {
-                        // Portrait
-                        imageHeight = maxHeight;
-                        imageWidth = (int)(maxHeight * aspectRatio);
-                    }
-                }
-
-                this.ClientSize = new Size(imageWidth + 20, imageHeight + 60);
-                pictureBox.Size = new Size(imageWidth, imageHeight);
+                // Set fixed size for all images - same size for every image
+                pictureBox.Size = new Size(FixedImageWidth, FixedImageHeight);
                 pictureBox.Location = new Point(10, 10);
+
+                // Set form size to match the fixed image size
+                this.ClientSize = new Size(FixedImageWidth + 20, FixedImageHeight + 60);
 
                 // Set form title based on description
                 if (!string.IsNullOrEmpty(description))
