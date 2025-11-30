@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.UAC_namelbl = new System.Windows.Forms.Label();
-            this.customPanel1 = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
             this.UAC_positionlbl = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
             this.pbxUser = new ColdChainConnectSystem_ACDP.Materials.CircularPictureBox();
             this.rjCircularPictureBox1 = new ColdChainConnectSystem_ACDP.Materials.CircularPictureBox();
-            this.customPanel1.SuspendLayout();
+            this.customPanel1 = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
             ((System.ComponentModel.ISupportInitialize)(this.pbxUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox1)).BeginInit();
+            this.customPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // UAC_namelbl
@@ -53,39 +53,20 @@
             this.UAC_namelbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.UAC_namelbl.Click += new System.EventHandler(this.UAC_namelbl_Click);
             // 
-            // customPanel1
-            // 
-            this.customPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.customPanel1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.customPanel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.customPanel1.BorderRadius = 0;
-            this.customPanel1.BorderSize = 0;
-            this.customPanel1.Controls.Add(this.UAC_positionlbl);
-            this.customPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.customPanel1.ForeColor = System.Drawing.Color.White;
-            this.customPanel1.Location = new System.Drawing.Point(27, 165);
-            this.customPanel1.Name = "customPanel1";
-            this.customPanel1.Padding = new System.Windows.Forms.Padding(0, 2, 2, 0);
-            this.customPanel1.Size = new System.Drawing.Size(146, 20);
-            this.customPanel1.TabIndex = 5;
-            this.customPanel1.TextColor = System.Drawing.Color.White;
-            // 
             // UAC_positionlbl
             // 
-            this.UAC_positionlbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.UAC_positionlbl.AutoSize = true;
             this.UAC_positionlbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
             this.UAC_positionlbl.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
             this.UAC_positionlbl.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.UAC_positionlbl.BorderRadius = 5;
             this.UAC_positionlbl.BorderSize = 0;
+            this.UAC_positionlbl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.UAC_positionlbl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.UAC_positionlbl.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold);
             this.UAC_positionlbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.UAC_positionlbl.Location = new System.Drawing.Point(19, 0);
+            this.UAC_positionlbl.Location = new System.Drawing.Point(10, 2);
             this.UAC_positionlbl.Name = "UAC_positionlbl";
-            this.UAC_positionlbl.Padding = new System.Windows.Forms.Padding(5, 3, 5, 3);
-            this.UAC_positionlbl.Size = new System.Drawing.Size(107, 19);
+            this.UAC_positionlbl.Size = new System.Drawing.Size(126, 16);
             this.UAC_positionlbl.TabIndex = 4;
             this.UAC_positionlbl.Text = "customLabel1";
             this.UAC_positionlbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -125,6 +106,23 @@
             this.rjCircularPictureBox1.TabIndex = 3;
             this.rjCircularPictureBox1.TabStop = false;
             // 
+            // customPanel1
+            // 
+            this.customPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.customPanel1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.customPanel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.customPanel1.BorderRadius = 0;
+            this.customPanel1.BorderSize = 0;
+            this.customPanel1.Controls.Add(this.UAC_positionlbl);
+            this.customPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.customPanel1.ForeColor = System.Drawing.Color.White;
+            this.customPanel1.Location = new System.Drawing.Point(27, 165);
+            this.customPanel1.Name = "customPanel1";
+            this.customPanel1.Padding = new System.Windows.Forms.Padding(10, 2, 10, 2);
+            this.customPanel1.Size = new System.Drawing.Size(146, 20);
+            this.customPanel1.TabIndex = 5;
+            this.customPanel1.TextColor = System.Drawing.Color.White;
+            // 
             // UserAccountControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -137,10 +135,9 @@
             this.Padding = new System.Windows.Forms.Padding(27, 0, 27, 0);
             this.Size = new System.Drawing.Size(200, 185);
             this.Load += new System.EventHandler(this.UserControl1_Load);
-            this.customPanel1.ResumeLayout(false);
-            this.customPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox1)).EndInit();
+            this.customPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
