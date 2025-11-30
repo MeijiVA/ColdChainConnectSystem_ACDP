@@ -74,7 +74,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
                 lblPageNum.Text = (currentPageIndex += 1).ToString();
                 // Sanitize search input to prevent SQL injection
                 string sanitizedSearch = SanitizeLikeInput(SearchBar.searchTXT);
-                string query = $"WHERE a.[numid] LIKE '%{sanitizedSearch}%' OR a.[SalesID] LIKE '%{sanitizedSearch}%' OR a.[CustomerID] LIKE '%{sanitizedSearch}%' OR a.[SalesDate] LIKE '%{sanitizedSearch}%' OR a.[Quantity] LIKE '%{sanitizedSearch}%' OR a.[UnitPrice] LIKE '%{sanitizedSearch}%' OR a.[Status]LIKE '%{sanitizedSearch}%'";
+                string query = $"WHERE a.[numid] LIKE '%{sanitizedSearch}%' OR a.[salesid] LIKE '%{sanitizedSearch}%' OR a.[customerid] LIKE '%{sanitizedSearch}%' OR a.[salesdate] LIKE '%{sanitizedSearch}%' OR a.[quantity] LIKE '%{sanitizedSearch}%' OR i.[unitprice] LIKE '%{sanitizedSearch}%' OR (a.[quantity] * i.[unitprice]) LIKE '%{sanitizedSearch}%' OR a.[status] LIKE '%{sanitizedSearch}%'";
                 totalPages = SalesClass.loadSalesData(dgvTable, lblMaxPage, lblPageNum, currentPageIndex, query);
             }// has search query ALL
         }
@@ -102,7 +102,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
                 lblPageNum.Text = (currentPageIndex -= 1).ToString();
                 // Sanitize search input to prevent SQL injection
                 string sanitizedSearch = SanitizeLikeInput(SearchBar.searchTXT);
-                string query = $"WHERE a.[numid] LIKE '%{sanitizedSearch}%' OR a.[SalesID] LIKE '%{sanitizedSearch}%' OR a.[CustomerID] LIKE '%{sanitizedSearch}%' OR a.[SalesDate] LIKE '%{sanitizedSearch}%' OR a.[Quantity] LIKE '%{sanitizedSearch}%' OR a.[UnitPrice] LIKE '%{sanitizedSearch}%' OR a.[Status]LIKE '%{sanitizedSearch}%'";
+                string query = $"WHERE a.[numid] LIKE '%{sanitizedSearch}%' OR a.[salesid] LIKE '%{sanitizedSearch}%' OR a.[customerid] LIKE '%{sanitizedSearch}%' OR a.[salesdate] LIKE '%{sanitizedSearch}%' OR a.[quantity] LIKE '%{sanitizedSearch}%' OR i.[unitprice] LIKE '%{sanitizedSearch}%' OR (a.[quantity] * i.[unitprice]) LIKE '%{sanitizedSearch}%' OR a.[status] LIKE '%{sanitizedSearch}%'";
                 totalPages = SalesClass.loadSalesData(dgvTable, lblMaxPage, lblPageNum, currentPageIndex, query);
             }// has search query ALL
         }
@@ -132,7 +132,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
                     dgvTable.Rows.Clear();
                     // Sanitize search input to prevent SQL injection
                     string sanitizedSearch = SanitizeLikeInput(SearchBar.searchTXT);
-                    string query = $"WHERE a.[numid] LIKE '%{sanitizedSearch}%' OR a.[SalesID] LIKE '%{sanitizedSearch}%' OR a.[CustomerID] LIKE '%{sanitizedSearch}%' OR a.[SalesDate] LIKE '%{sanitizedSearch}%' OR a.[Quantity] LIKE '%{sanitizedSearch}%' OR a.[UnitPrice] LIKE '%{sanitizedSearch}%' OR a.[Status]LIKE '%{sanitizedSearch}%'";
+                    string query = $"WHERE a.[numid] LIKE '%{sanitizedSearch}%' OR a.[salesid] LIKE '%{sanitizedSearch}%' OR a.[customerid] LIKE '%{sanitizedSearch}%' OR a.[salesdate] LIKE '%{sanitizedSearch}%' OR a.[quantity] LIKE '%{sanitizedSearch}%' OR i.[unitprice] LIKE '%{sanitizedSearch}%' OR (a.[quantity] * i.[unitprice]) LIKE '%{sanitizedSearch}%' OR a.[status] LIKE '%{sanitizedSearch}%'";
                     totalPages = SalesClass.loadSalesData(dgvTable, lblMaxPage, lblPageNum, currentPageIndex, query);
                 }
                 else

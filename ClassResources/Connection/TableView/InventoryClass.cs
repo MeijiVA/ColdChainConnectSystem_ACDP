@@ -143,10 +143,9 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                     {
                         while (reader.Read())
                         {
-                            double amount = double.Parse(reader[4].ToString()) * double.Parse(reader[6].ToString());
                             //  0        0    1    2    3     4         5      6      7       8              9          10
                             //checkbox,  id, sku, desc,img,unitprice, suppid, kg, quantity, buttonedit, button view, button delete
-                            dgv.Rows.Add(new object[] { 0, reader[0].ToString(), reader[1].ToString(), reader[2].ToString(), getImage(reader[3].ToString()), reader[4].ToString(), reader[5].ToString(), reader[6].ToString(), reader[7].ToString() });
+                            dgv.Rows.Add(new object[] { CheckDate(Convert.ToDateTime(reader[8])), reader[0].ToString(), reader[1].ToString(), reader[2].ToString(), getImage(reader[3].ToString()), reader[4].ToString(), reader[5].ToString(), reader[6].ToString(), reader[7].ToString() });
                         }//while reader loop
                     }//reader
                     con.Close();

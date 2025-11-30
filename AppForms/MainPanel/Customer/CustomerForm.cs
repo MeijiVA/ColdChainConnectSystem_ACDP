@@ -131,7 +131,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer
                     dgvTable.Rows.Clear();
                     // Sanitize search input to prevent SQL injection
                     string sanitizedSearch = SanitizeLikeInput(SearchBar.searchTXT);
-                    string query = $"WHERE [numid] LIKE '%{sanitizedSearch}%' OR [CustomerID] LIKE '%{sanitizedSearch}%' OR [CustomerName] LIKE '%{sanitizedSearch}%' OR [PhoneNumber] LIKE '%{sanitizedSearch}%' OR [Address] LIKE '%{sanitizedSearch}%' OR [PaymentTerm] LIKE '%{sanitizedSearch}%' OR [RegistrationDate] LIKE '%{sanitizedSearch}%' OR [Status] LIKE '%{sanitizedSearch}%' OR ";
+                    string query = $"WHERE [numid] LIKE '%{sanitizedSearch}%' OR [CustomerID] LIKE '%{sanitizedSearch}%' OR [CustomerName] LIKE '%{sanitizedSearch}%' OR [PhoneNumber] LIKE '%{sanitizedSearch}%' OR [Address] LIKE '%{sanitizedSearch}%' OR [PaymentTerm] LIKE '%{sanitizedSearch}%' OR [RegistrationDate] LIKE '%{sanitizedSearch}%' OR [Status] LIKE '%{sanitizedSearch}%'";
                     totalPages = CustomerClass.loadCustomerData(dgvTable, lblMaxPage, lblPageNum, currentPageIndex, query);
                 }
                 else
