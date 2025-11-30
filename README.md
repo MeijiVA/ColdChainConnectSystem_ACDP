@@ -1,37 +1,14 @@
-TO DO:
-======================================================================
-> FOR ALL TABLES
-  - VIEW, EDIT, DELETE buttons for FUNCTION
-
-======================================================================
-  MODULES
-
-> DASHBOARD
-  - LAHAT (based from FIGMA)
-
-> SALES 
-  - sales -> tab for multiple items
+TO DO ni kiel: 
 
 > EMPLOYEE
-  - Add Employee
-  - view edit delete button for Each Employees
+  - Add username textbox on add employee
+  - add warning message when employee username is taken na
 
-======================================================================
-> SIDE PANEL
-  - pfp will navigate to personal detail settings
-
-> NOTIF
-  - LAHAT
-
-> SETTINGS
-  - SETTINGS UI
-  - Security UI
-  - Audit Log
-  - will show personal details when at first
-
-======================================================================
+- ANTI SQL INJECTYIN
+- fix search sa bawat module
+- image viewer sa inventory
+- 
 more:
   - smooth down round border edges.
   - all interactable buttons will change the click cursor
-  - consistency sa placement ng buttons sa bawat forms. (search bar sa management modules)
-  - 
+
