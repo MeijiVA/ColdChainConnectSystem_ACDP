@@ -437,6 +437,7 @@
             this.Controls.Add(this.tbQuantity);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "EditTransactionSales";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EditTransactionSales";
             this.Load += new System.EventHandler(this.EditTransactionSales_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tbQuantity)).EndInit();

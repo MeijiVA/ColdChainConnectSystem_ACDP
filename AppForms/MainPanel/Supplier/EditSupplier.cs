@@ -60,5 +60,35 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Supplier
         {
             this.Close();
         }
+
+        private void lblProvince_OnSelectedIndexChanged(object sender, EventArgs e)
+        {
+            lblCity.Items.Clear();
+            lblCity.Texts = "";
+            foreach (string i in MunicipalityListClass.municipality)
+            {
+                string[] current = i.Split(',');
+                string selected = " " + lblProvince.Texts;
+                if (current[1].Equals(selected))
+                {
+                    lblCity.Items.Add(current[0]);
+                }
+            }
+        }
+
+        private void lblProvince_Leave(object sender, EventArgs e)
+        {
+            lblCity.Items.Clear();
+            lblCity.Texts = "";
+            foreach (string i in MunicipalityListClass.municipality)
+            {
+                string[] current = i.Split(',');
+                string selected = " " + lblProvince.Texts;
+                if (current[1].Equals(selected))
+                {
+                    lblCity.Items.Add(current[0]);
+                }
+            }
+        }
     }
 }

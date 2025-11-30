@@ -79,5 +79,10 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.Employee
                 }
             }
         }
+
+        private void cbxProvince_Layout(object sender, LayoutEventArgs e)
+        {
+
+        }
     }
 }

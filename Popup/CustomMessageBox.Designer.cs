@@ -56,9 +56,9 @@
             this.flowLayoutPanel1.Controls.Add(this.btnCancel);
             this.flowLayoutPanel1.Controls.Add(this.btnOK);
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(215, 118);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(208, 118);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(127, 44);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(134, 44);
             this.flowLayoutPanel1.TabIndex = 12;
             // 
             // btnCancel
@@ -76,9 +76,9 @@
             this.btnCancel.GradientColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnCancel.GradientColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnCancel.GradientTextColor = System.Drawing.Color.Transparent;
-            this.btnCancel.Location = new System.Drawing.Point(68, 3);
+            this.btnCancel.Location = new System.Drawing.Point(71, 3);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(56, 40);
+            this.btnCancel.Size = new System.Drawing.Size(60, 40);
             this.btnCancel.TabIndex = 11;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.TextColor = System.Drawing.Color.White;
@@ -101,7 +101,7 @@
             this.btnOK.GradientColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnOK.GradientColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnOK.GradientTextColor = System.Drawing.Color.Transparent;
-            this.btnOK.Location = new System.Drawing.Point(6, 3);
+            this.btnOK.Location = new System.Drawing.Point(9, 3);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(56, 40);
             this.btnOK.TabIndex = 10;

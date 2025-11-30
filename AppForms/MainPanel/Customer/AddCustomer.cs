@@ -113,5 +113,25 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer
         {
 
         }
+
+        private void cbxProvince_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbxProvince_Leave(object sender, EventArgs e)
+        {
+            cbxCity.Items.Clear();
+            cbxCity.Texts = "";
+            foreach (string i in MunicipalityListClass.municipality)
+            {
+                string[] current = i.Split(',');
+                string selected = " " + cbxProvince.Texts;
+                if (current[1].Equals(selected))
+                {
+                    cbxCity.Items.Add(current[0]);
+                }
+            }
+        }
     }
 }
