@@ -55,13 +55,6 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
             String query;
             SqlConnection con = ConnectionClass.Connection();
             con.Open();
-            if (searchQuery == "")
-            {
-
-            }
-
-
-
             query = $"SELECT COUNT(*) FROM Customer {searchQuery}";
             using (SqlCommand count = new SqlCommand(query, con))
             {
@@ -101,7 +94,6 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                     SqlConnection con = ConnectionClass.Connection();
                     using (SqlCommand cmd = new SqlCommand(query, con))
                     {
-                        con.Open();
                         con.Open();
                         cmd.ExecuteNonQuery();
                         con.Close();
