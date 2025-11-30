@@ -162,7 +162,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.Employee
                         this.EditAddressContainer.Postal = address[4];
                         this.EditPersonalContainer.AgeInfo = reader[8].ToString();
                         this.EditPersonalContainer.DOBInfo = Convert.ToDateTime(reader[9]);
-                        this.EditAccountContainer.PositionInfo = reader[10].ToString();
+                        this.EditAccountContainer.PositionInfoLabel = reader[10].ToString();
                         this.EditAccountContainer.StatusInfo = reader[11].ToString();
                         this.EditPersonalContainer.SexInfo = reader[12].ToString();
                         this.EditAccountContainer.EmailInfo = reader[13].ToString();

@@ -68,7 +68,6 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
             database = database.Replace("@database", db);
             database = database.Replace("@username", username);
             database = database.Replace("@password", pass);
-            Console.WriteLine(database);
             return new SqlConnection(database);
         }
         public static string LoginAccount(string input)
@@ -88,7 +87,6 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                     string[] token = input.Split(',');
                     username = token[0];
                     pass = token[1];
-                Console.WriteLine(username +" "+ pass);
                 query = @"SELECT [empid], [username], [firstname], [middlename], [lastname], [contactnum],"
                             + "[address], [age], [dateofbirth], [position], [status], [sex], [email] FROM Employees";
                     SqlConnection con = Connection();
@@ -99,7 +97,6 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                         {
                             while (reader.Read())
                             {
-                            Console.WriteLine(reader[1] +"here");
                             if (username.Equals(reader[1].ToString()))
                                 {
                                     empid = reader[0].ToString();
@@ -200,7 +197,6 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                         while ((_getText = sr.ReadLine()) != null)
                         {
                             sw.WriteLine(_getText);
-                            Console.WriteLine(_getText);
                         }
                         sw.Close();
                     }

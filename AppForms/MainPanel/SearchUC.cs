@@ -365,7 +365,6 @@ int nHeightEllipse // height of ellipse
 
         private void cbxFilter_Load(object sender, EventArgs e)
         {
-            Console.WriteLine("HERE at " + CurrentFormClass.form);
             cbxFilter.Items.Add("All");
             cbxFilter.Items.Add("ID");
             switch (CurrentFormClass.form)
