@@ -332,46 +332,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
                 headerCell.UpdateCheckState(allChecked);
             }
         }
-        PrintDocument printDoc = new PrintDocument();
-        private void button1_Click(object sender, EventArgs e)
-        {
-            printDoc.PrintPage += new PrintPageEventHandler(printDoc_PrintPage);
-            PrintDialog printDialog = new PrintDialog();
-            printDialog.Document = printDoc;
-            if (printDialog.ShowDialog() == DialogResult.OK)
-            {
-                printDoc.Print();
-            }
-        }
-
-
-    private void printDoc_PrintPage(object sender, PrintPageEventArgs e)
-        {
-            Graphics graphics = e.Graphics;
-            Font font = new Font("Courier New", 10);
-            float fontHeight = font.GetHeight();
-            int startX = 10;
-            int startY = 10;
-            int offset = 0;
-
-            // Draw receipt header
-            graphics.DrawString("Your Company Name", new Font("Courier New", 12, FontStyle.Bold), new SolidBrush(Color.Black), startX, startY + offset);
-            offset += (int)fontHeight + 5;
-            graphics.DrawString("Receipt", new Font("Courier New", 10, FontStyle.Bold), new SolidBrush(Color.Black), startX, startY + offset);
-            offset += (int)fontHeight + 10;
-
-            // Draw receipt items (example)
-            graphics.DrawString("Item 1: $10.00", font, new SolidBrush(Color.Black), startX, startY + offset);
-            offset += (int)fontHeight;
-            graphics.DrawString("Item 2: $5.50", font, new SolidBrush(Color.Black), startX, startY + offset);
-            offset += (int)fontHeight + 10;
-
-            // Draw total
-            graphics.DrawString("Total: $15.50", new Font("Courier New", 10, FontStyle.Bold), new SolidBrush(Color.Black), startX, startY + offset);
-
-            // Indicate if there are more pages (for multi-page documents)
-            e.HasMorePages = false;
-        }
+       
 
 
     }

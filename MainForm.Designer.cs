@@ -28,17 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.DisplayPanel = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnSettings = new System.Windows.Forms.Button();
             this.btnNotif = new System.Windows.Forms.Button();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.logoutBtn = new System.Windows.Forms.Button();
             this.uacUserProfile = new ColdChainConnectSystem_ACDP.AppForms.SidePanel.UserAccountControl();
             this.sidePanel1 = new ColdChainConnectSystem_ACDP.AppForms.SidePanel.SidePanel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // DisplayPanel
@@ -149,7 +146,6 @@
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MainForm_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MainForm_MouseMove);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -160,7 +156,6 @@
         private System.Windows.Forms.Button btnSettings;
         private System.Windows.Forms.Button btnNotif;
         public AppForms.SidePanel.UserAccountControl uacUserProfile;
-        private System.Windows.Forms.BindingSource bindingSource1;
         private System.Windows.Forms.Button logoutBtn;
         public AppForms.SidePanel.SidePanel sidePanel1;
     }

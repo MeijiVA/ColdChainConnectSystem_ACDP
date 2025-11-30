@@ -112,16 +112,6 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
             this.panel1.Size = new System.Drawing.Size(755, 35);
             this.panel1.TabIndex = 2;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(304, 5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(92, 31);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // lblOf
             // 
             this.lblOf.AutoSize = true;
