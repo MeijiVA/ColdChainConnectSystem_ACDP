@@ -2,6 +2,7 @@
 using ColdChainConnectSystem_ACDP.ClassResources;
 using ColdChainConnectSystem_ACDP.ClassResources.Connection;
 using ColdChainConnectSystem_ACDP.ClassResources.Connection.TableView;
+using ColdChainConnectSystem_ACDP.ClassResources.CustomControls;
 using ColdChainConnectSystem_ACDP.ClassResources.Display;
 using ColdChainConnectSystem_ACDP.ClassResources.Instances;
 using ColdChainConnectSystem_ACDP.Popup;
@@ -38,6 +39,11 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
             totalPages = InventoryClass.loadInventoryData(dgvTable, lblMaxPage, lblPageNum, currentPageIndex);
             // Subscribe to real-time search event
             SearchBar.SearchTextChanged += SearchBar_SearchTextChanged;
+            // Set custom header cell for checkbox column
+            if (dgvTable.Columns["rowCbox"] != null)
+            {
+                dgvTable.Columns["rowCbox"].HeaderCell = new CheckBoxHeaderCell();
+            }
         }
 
         private void SearchBar_SearchTextChanged(object sender, EventArgs e)
@@ -356,8 +362,11 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
                 }
             }
 
-            // Note: We can't directly set header checkbox, but we can track state
-            // The header checkbox will be handled via CellClick event
+            // Update custom header cell checkbox state
+            if (dgvTable.Columns["rowCbox"]?.HeaderCell is CheckBoxHeaderCell headerCell)
+            {
+                headerCell.UpdateCheckState(allChecked);
+            }
         }
 
     }

@@ -12,13 +12,10 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.PersonalDetails
 {
     public partial class EditAccountInformation : UserControl
     {
-        private OpenFileDialog ofdSaveImage;
-
         public EditAccountInformation()
         {
             InitializeComponent();
             this.DoubleBuffered = true; // Apply to the form
-            ofdSaveImage = new OpenFileDialog();
 
             // Initialize position combobox
             if (cbxPosition != null)
@@ -51,36 +48,6 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.PersonalDetails
         {
             get { return txtEmail.Texts; }
             set { txtEmail.Texts = value; }
-        }
-
-        public Image ProfileImage
-        {
-            get { return pbxProfile.BackgroundImage; }
-            set { pbxProfile.BackgroundImage = value; }
-        }
-
-        public string ImageFileName
-        {
-            get { return ofdSaveImage.FileName; }
-        }
-
-        private void btnSelectImage_Click(object sender, EventArgs e)
-        {
-            ofdSaveImage.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.gif;*.bmp";
-            ofdSaveImage.Title = "Select an Image File";
-
-            if (ofdSaveImage.ShowDialog() == DialogResult.OK)
-            {
-                try
-                {
-                    // Load the selected image into the PictureBox
-                    pbxProfile.BackgroundImage = Image.FromFile(ofdSaveImage.FileName);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error loading image: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
         }
 
         private void cbxPosition_OnSelectedIndexChanged(object sender, EventArgs e)

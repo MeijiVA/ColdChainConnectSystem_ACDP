@@ -49,17 +49,11 @@
             this.txtEmail = new CustomControls.RJControls.CustomTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.btnSelectImage = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
-            this.pbxProfile = new System.Windows.Forms.PictureBox();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
-            this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxProfile)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -101,7 +95,7 @@
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.label7);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 359);
+            this.panel3.Location = new System.Drawing.Point(0, 159);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(280, 53);
             this.panel3.TabIndex = 5;
@@ -152,7 +146,7 @@
             this.panel4.Controls.Add(this.label2);
             this.panel4.Controls.Add(this.lbl2);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 306);
+            this.panel4.Location = new System.Drawing.Point(0, 106);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(280, 53);
             this.panel4.TabIndex = 6;
@@ -189,7 +183,7 @@
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.lbl3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 253);
+            this.panel2.Location = new System.Drawing.Point(0, 53);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(280, 53);
             this.panel2.TabIndex = 4;
@@ -279,7 +273,7 @@
             this.panel5.Controls.Add(this.label3);
             this.panel5.Controls.Add(this.label6);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(0, 412);
+            this.panel5.Location = new System.Drawing.Point(0, 212);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(280, 53);
             this.panel5.TabIndex = 7;
@@ -327,60 +321,6 @@
             this.label6.TabIndex = 61;
             this.label6.Text = "  Email";
             // 
-            // label8
-            // 
-            this.label8.BackColor = System.Drawing.SystemColors.Control;
-            this.label8.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 0.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(10, 187);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(260, 3);
-            this.label8.TabIndex = 66;
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.btnSelectImage);
-            this.panel6.Controls.Add(this.label8);
-            this.panel6.Controls.Add(this.pbxProfile);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel6.Location = new System.Drawing.Point(0, 53);
-            this.panel6.Name = "panel6";
-            this.panel6.Padding = new System.Windows.Forms.Padding(10);
-            this.panel6.Size = new System.Drawing.Size(280, 200);
-            this.panel6.TabIndex = 67;
-            // 
-            // btnSelectImage
-            // 
-            this.btnSelectImage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.btnSelectImage.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.btnSelectImage.BorderColor = System.Drawing.Color.Empty;
-            this.btnSelectImage.BorderRadius = 10;
-            this.btnSelectImage.BorderSize = 2;
-            this.btnSelectImage.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSelectImage.FlatAppearance.BorderSize = 0;
-            this.btnSelectImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSelectImage.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
-            this.btnSelectImage.ForeColor = System.Drawing.Color.White;
-            this.btnSelectImage.GradientColor1 = System.Drawing.Color.Transparent;
-            this.btnSelectImage.GradientColor2 = System.Drawing.Color.Transparent;
-            this.btnSelectImage.GradientTextColor = System.Drawing.Color.Transparent;
-            this.btnSelectImage.Location = new System.Drawing.Point(65, 160);
-            this.btnSelectImage.Name = "btnSelectImage";
-            this.btnSelectImage.Size = new System.Drawing.Size(150, 30);
-            this.btnSelectImage.TabIndex = 70;
-            this.btnSelectImage.Text = "Select Image";
-            this.btnSelectImage.TextColor = System.Drawing.Color.White;
-            this.btnSelectImage.UseVisualStyleBackColor = false;
-            this.btnSelectImage.Click += new System.EventHandler(this.btnSelectImage_Click);
-            // 
-            // pbxProfile
-            // 
-            this.pbxProfile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbxProfile.Location = new System.Drawing.Point(65, 10);
-            this.pbxProfile.Name = "pbxProfile";
-            this.pbxProfile.Size = new System.Drawing.Size(150, 150);
-            this.pbxProfile.TabIndex = 0;
-            this.pbxProfile.TabStop = false;
             // 
             // EditAccountInformation
             // 
@@ -391,18 +331,15 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel1);
             this.Name = "EditAccountInformation";
-            this.Size = new System.Drawing.Size(280, 471);
+            this.Size = new System.Drawing.Size(280, 271);
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbxProfile)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -422,16 +359,12 @@
         private System.Windows.Forms.Label lblPersInfo;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.PictureBox pbxProfile;
         private System.Windows.Forms.Label label5;
         private CustomControls.RJControls.CustomTextBox txtContact;
         private CustomControls.RJControls.CustomTextBox txtEmail;
         private System.Windows.Forms.Label lblPosition;
         private System.Windows.Forms.Label lblStatus;
-        private Materials.CustomButton btnSelectImage;
         public ToggleSlider.ToggleSliderComponent tscStatus;
         private Materials.CustomComboBox cbxPosition;
     }
