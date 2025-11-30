@@ -89,19 +89,23 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.Employee
             pnlAccount.Controls.Add(AccountContainer);
             pnlPersonal.Controls.Add(PersonalContainer);
             pnlAddress.Controls.Add(AddressContainer);
+
+            // Hide toggle when viewing
+            this.tscStatus.Visible = false;
+
             Console.WriteLine(ProfileInstance.empid);
             String query = $"SELECT * FROM Employees WHERE EmpID = '{ProfileInstance.empid}'";
             SqlConnection con = ConnectionClass.Connection();
             con.Open();
             using (SqlCommand cmd = new SqlCommand(query, con))
             {//numid   | empid  | username  | first name  | middle name  | last name   | contact num  | address  | age  | date of birth  |  pos   |  status  | sex   | email
-                using(var reader = cmd.ExecuteReader())
+                using (var reader = cmd.ExecuteReader())
                 {
                     if (reader.Read())
                     {
                         ProfileInstance.id = reader[0].ToString();
                         this.lblEmpID.Text = "   " + reader[1].ToString();
-                        this.PersonalContainer.First_NameInfo= reader[3].ToString();
+                        this.PersonalContainer.First_NameInfo = reader[3].ToString();
                         this.PersonalContainer.Middle_NameInfo = reader[4].ToString();
                         this.PersonalContainer.Last_NameInfo = reader[5].ToString();
                         this.AccountContainer.ConNum = reader[6].ToString();
@@ -118,19 +122,6 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.Employee
                         this.AccountContainer.StatusInfo = reader[11].ToString();
                         this.PersonalContainer.SexInfo = reader[12].ToString();
                         this.AccountContainer.EmailInfo = reader[13].ToString();
-                        //Status Slider 
-                        if (this.AccountContainer.StatusInfo.ToLower().Equals("Active"))
-                        {
-                            this.tscStatus.Checked = true;
-                            this.tscStatus.ToggleBarText = "Active";
-                            this.tscStatus.ToggleCircleColor = Color.Green;
-                        }
-                        else if (this.AccountContainer.StatusInfo.ToLower().Equals("inactive"))
-                        {
-                            this.tscStatus.Checked = false;
-                            this.tscStatus.ToggleBarText = "Inactive";
-                            this.tscStatus.ToggleCircleColor = Color.Red;
-                        }
                     }
                 }
                 con.Close();
@@ -144,6 +135,10 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.Employee
             pnlAccount.Controls.Add(EditAccountContainer);
             pnlPersonal.Controls.Add(EditPersonalContainer);
             pnlAddress.Controls.Add(EditAddressContainer);
+
+            // Hide toggle beside empID, it will be in Account Information panel
+            this.tscStatus.Visible = false;
+
             Console.WriteLine(ProfileInstance.empid);
             String query = $"SELECT * FROM Employees WHERE EmpID = '{ProfileInstance.empid}'";
             SqlConnection con = ConnectionClass.Connection();
@@ -173,18 +168,28 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.Employee
                         this.EditAccountContainer.StatusInfo = reader[11].ToString();
                         this.EditPersonalContainer.SexInfo = reader[12].ToString();
                         this.EditAccountContainer.EmailInfo = reader[13].ToString();
-                        //Status Slider 
-                        if (this.EditAccountContainer.StatusInfo.ToLower().Equals("Active"))
+
+                        // Update position combobox in Account Information panel
+                        if (EditAccountContainer.cbxPosition != null)
                         {
-                            this.tscStatus.Checked = true;
-                            this.tscStatus.ToggleBarText = "Active";
-                            this.tscStatus.ToggleCircleColor = Color.Green;
+                            EditAccountContainer.cbxPosition.Texts = reader[10].ToString();
                         }
-                        else if (this.EditAccountContainer.StatusInfo.ToLower().Equals("inactive"))
+
+                        // Update status toggle in Account Information panel
+                        if (EditAccountContainer.tscStatus != null)
                         {
-                            this.tscStatus.Checked = false;
-                            this.tscStatus.ToggleBarText = "Inactive";
-                            this.tscStatus.ToggleCircleColor = Color.Red;
+                            if (reader[11].ToString().ToLower().Equals("active"))
+                            {
+                                EditAccountContainer.tscStatus.Checked = true;
+                                EditAccountContainer.tscStatus.ToggleBarText = "Active";
+                                EditAccountContainer.tscStatus.ToggleCircleColor = Color.Green;
+                            }
+                            else
+                            {
+                                EditAccountContainer.tscStatus.Checked = false;
+                                EditAccountContainer.tscStatus.ToggleBarText = "Inactive";
+                                EditAccountContainer.tscStatus.ToggleCircleColor = Color.Red;
+                            }
                         }
                     }
                 }
@@ -311,8 +316,22 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.Employee
                         command.Parameters.Add("@Address", SqlDbType.NVarChar).Value = address;
                         command.Parameters.Add("@Age", SqlDbType.Int).Value = this.EditPersonalContainer.AgeInfo; ;
                         command.Parameters.Add("@DateOfBirth", SqlDbType.Date).Value = this.EditPersonalContainer.DOBInfo;
-                        command.Parameters.Add("@Position", SqlDbType.NVarChar).Value = this.EditAccountContainer.PositionInfo;
-                        command.Parameters.Add("@Status", SqlDbType.NVarChar).Value = this.EditAccountContainer.StatusInfo;
+                        // Get position from combobox if available, otherwise from PositionInfo
+                        string position = this.EditAccountContainer.PositionInfo;
+                        if (this.EditAccountContainer.cbxPosition != null && !string.IsNullOrEmpty(this.EditAccountContainer.cbxPosition.Texts))
+                        {
+                            position = this.EditAccountContainer.cbxPosition.Texts;
+                        }
+
+                        // Get status from toggle if available, otherwise from StatusInfo
+                        string status = this.EditAccountContainer.StatusInfo;
+                        if (this.EditAccountContainer.tscStatus != null)
+                        {
+                            status = this.EditAccountContainer.tscStatus.Checked ? "Active" : "Inactive";
+                        }
+
+                        command.Parameters.Add("@Position", SqlDbType.NVarChar).Value = position;
+                        command.Parameters.Add("@Status", SqlDbType.NVarChar).Value = status;
                         command.Parameters.Add("@Sex", SqlDbType.NVarChar).Value = this.EditPersonalContainer.SexInfo;
                         command.Parameters.Add("@Email", SqlDbType.NVarChar).Value = this.EditAccountContainer.EmailInfo;
 

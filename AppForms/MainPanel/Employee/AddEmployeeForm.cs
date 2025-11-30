@@ -20,15 +20,30 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Employee
             InitializeComponent();
             editAccountInformation1.PositionInfo = "";
             editAccountInformation1.StatusInfo = "";
-            tscStatus.Checked = true;
-            UpdateStatusDisplay();
 
-            // Populate position combo box
-            cbxPosition.Items.Clear();
-            cbxPosition.Items.Add("Administrator");
-            cbxPosition.Items.Add("Assistant");
-            cbxPosition.Items.Add("Inventory");
-            cbxPosition.Items.Add("Sales");
+            // Hide header controls - they're now in Account Information panel
+            cbxPosition.Visible = false;
+            tscStatus.Visible = false;
+            lblPosition.Visible = false;
+
+            // Initialize position combobox in Account Information panel
+            if (editAccountInformation1.cbxPosition != null)
+            {
+                editAccountInformation1.cbxPosition.Items.Clear();
+                editAccountInformation1.cbxPosition.Items.Add("Administrator");
+                editAccountInformation1.cbxPosition.Items.Add("Assistant");
+                editAccountInformation1.cbxPosition.Items.Add("Inventory");
+                editAccountInformation1.cbxPosition.Items.Add("Sales");
+            }
+
+            // Initialize status toggle in Account Information panel
+            if (editAccountInformation1.tscStatus != null)
+            {
+                editAccountInformation1.tscStatus.Checked = true;
+                editAccountInformation1.tscStatus.ToggleBarText = "Active";
+                editAccountInformation1.tscStatus.ToggleCircleColor = Color.Green;
+                editAccountInformation1.StatusInfo = "Active";
+            }
         }
 
         private void lbl_Click(object sender, EventArgs e)
@@ -43,33 +58,18 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Employee
 
         private void cbxPosition_OnSelectedIndexChanged(object sender, EventArgs e)
         {
-            string position = cbxPosition.Texts;
-            editAccountInformation1.PositionInfo = position;
-        }
-
-        private void tscStatus_CheckChanged(object sender, EventArgs e)
-        {
-            UpdateStatusDisplay();
-        }
-
-        private void UpdateStatusDisplay()
-        {
-            if (tscStatus.Checked)
-            {
-                editAccountInformation1.StatusInfo = "Active";
-                tscStatus.ToggleBarText = "Active";
-            }
-            else
-            {
-                editAccountInformation1.StatusInfo = "Inactive";
-                tscStatus.ToggleBarText = "Inactive";
-            }
+            // This is now handled in EditAccountInformation
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
             // Validate required fields
-            if (string.IsNullOrWhiteSpace(cbxPosition.Texts))
+            string position = "";
+            if (editAccountInformation1.cbxPosition != null)
+            {
+                position = editAccountInformation1.cbxPosition.Texts;
+            }
+            if (string.IsNullOrWhiteSpace(position))
             {
                 new CustomMessageBox("Validation Error", "Please select Position.", MessageBoxButtons.OK).ShowDialog();
                 return;
@@ -83,13 +83,26 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Employee
             }
 
             // Get all the data
-            string position = cbxPosition.Texts.Trim();
+            if (editAccountInformation1.cbxPosition != null)
+            {
+                position = editAccountInformation1.cbxPosition.Texts.Trim();
+            }
             string firstName = editPersonalInformation1.First_NAMEInfo;
             string middleName = editPersonalInformation1.Middle_NAMEInfo;
             string lastName = editPersonalInformation1.Last_NAMEInfo;
             string contactNum = editAccountInformation1.ContactInfo;
             string email = editAccountInformation1.EmailInfo;
-            string status = editAccountInformation1.StatusInfo;
+
+            // Get status from toggle in Account Information panel
+            string status = "Active";
+            if (editAccountInformation1.tscStatus != null)
+            {
+                status = editAccountInformation1.tscStatus.Checked ? "Active" : "Inactive";
+            }
+            else
+            {
+                status = editAccountInformation1.StatusInfo;
+            }
             string age = editPersonalInformation1.AgeInfo;
             DateTime dob = editPersonalInformation1.DOBInfo;
             string sex = editPersonalInformation1.SexInfo;

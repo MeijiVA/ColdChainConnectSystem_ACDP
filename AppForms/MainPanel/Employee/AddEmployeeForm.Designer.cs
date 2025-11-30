@@ -93,7 +93,6 @@
             this.tscStatus.ToggleBarText = "Active";
             this.tscStatus.ToggleCircleColor = System.Drawing.Color.Green;
             this.tscStatus.ToggleColorBar = System.Drawing.Color.Gray;
-            this.tscStatus.CheckChanged += new System.EventHandler(this.tscStatus_CheckChanged);
             // 
             // lblPosition
             // 
@@ -149,7 +148,7 @@
             this.editAccountInformation1.Location = new System.Drawing.Point(502, 122);
             this.editAccountInformation1.Name = "editAccountInformation1";
             this.editAccountInformation1.PositionInfo = "";
-            this.editAccountInformation1.Size = new System.Drawing.Size(280, 430);
+            this.editAccountInformation1.Size = new System.Drawing.Size(280, 471);
             this.editAccountInformation1.StatusInfo = "";
             this.editAccountInformation1.TabIndex = 77;
             // 

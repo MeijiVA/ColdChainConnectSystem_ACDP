@@ -54,6 +54,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
             // 
             this.pictureBox.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox.Cursor = System.Windows.Forms.Cursors.Default;
             this.pictureBox.Location = new System.Drawing.Point(10, 10);
             this.pictureBox.Name = "pictureBox";
             this.pictureBox.Size = new System.Drawing.Size(400, 400);

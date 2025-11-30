@@ -114,7 +114,7 @@
             this.panel3.Controls.Add(this.lblConNum);
             this.panel3.Controls.Add(this.label7);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 318);
+            this.panel3.Location = new System.Drawing.Point(0, 339);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(280, 53);
             this.panel3.TabIndex = 5;
@@ -142,7 +142,7 @@
             this.panel4.Controls.Add(this.lblStatus);
             this.panel4.Controls.Add(this.lbl2);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 265);
+            this.panel4.Location = new System.Drawing.Point(0, 286);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(280, 53);
             this.panel4.TabIndex = 6;
@@ -153,7 +153,7 @@
             this.panel2.Controls.Add(this.lblPosition);
             this.panel2.Controls.Add(this.lbl3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 212);
+            this.panel2.Location = new System.Drawing.Point(0, 233);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(280, 53);
             this.panel2.TabIndex = 4;
@@ -208,7 +208,7 @@
             this.panel5.Controls.Add(this.label3);
             this.panel5.Controls.Add(this.label6);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(0, 371);
+            this.panel5.Location = new System.Drawing.Point(0, 392);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(280, 53);
             this.panel5.TabIndex = 7;
@@ -245,10 +245,11 @@
             // label8
             // 
             this.label8.BackColor = System.Drawing.SystemColors.Control;
+            this.label8.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 0.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(0, 156);
+            this.label8.Location = new System.Drawing.Point(10, 177);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(280, 3);
+            this.label8.Size = new System.Drawing.Size(260, 3);
             this.label8.TabIndex = 66;
             // 
             // panel6
@@ -258,14 +259,17 @@
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(0, 53);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(280, 159);
+            this.panel6.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.panel6.Size = new System.Drawing.Size(280, 180);
             this.panel6.TabIndex = 67;
             // 
             // pbxProfile
             // 
-            this.pbxProfile.Location = new System.Drawing.Point(63, 4);
+            this.pbxProfile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbxProfile.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pbxProfile.Location = new System.Drawing.Point(10, 10);
             this.pbxProfile.Name = "pbxProfile";
-            this.pbxProfile.Size = new System.Drawing.Size(150, 150);
+            this.pbxProfile.Size = new System.Drawing.Size(260, 160);
             this.pbxProfile.TabIndex = 0;
             this.pbxProfile.TabStop = false;
             // 
@@ -290,7 +294,7 @@
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel1);
             this.Name = "ContactInformation";
-            this.Size = new System.Drawing.Size(280, 430);
+            this.Size = new System.Drawing.Size(280, 451);
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
