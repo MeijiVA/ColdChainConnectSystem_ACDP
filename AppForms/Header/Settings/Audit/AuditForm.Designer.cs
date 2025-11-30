@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AuditForm));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -39,11 +38,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.customPanel1 = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
-            this.btnAddEmp = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
-            this.pnlSearch = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
-            this.txtSearch = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dgvTable = new System.Windows.Forms.DataGridView();
             this.numid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.user = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,94 +46,15 @@
             this.referenceid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.desc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.actiondate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customPanel1 = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
+            this.pnlSearch = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTable)).BeginInit();
             this.customPanel1.SuspendLayout();
             this.pnlSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTable)).BeginInit();
             this.SuspendLayout();
-            // 
-            // customPanel1
-            // 
-            this.customPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.customPanel1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.customPanel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.customPanel1.BorderRadius = 10;
-            this.customPanel1.BorderSize = 0;
-            this.customPanel1.Controls.Add(this.btnAddEmp);
-            this.customPanel1.Controls.Add(this.pnlSearch);
-            this.customPanel1.ForeColor = System.Drawing.Color.White;
-            this.customPanel1.Location = new System.Drawing.Point(5, 6);
-            this.customPanel1.Name = "customPanel1";
-            this.customPanel1.Padding = new System.Windows.Forms.Padding(15);
-            this.customPanel1.Size = new System.Drawing.Size(755, 50);
-            this.customPanel1.TabIndex = 5;
-            this.customPanel1.TextColor = System.Drawing.Color.White;
-            // 
-            // btnAddEmp
-            // 
-            this.btnAddEmp.BackColor = System.Drawing.Color.Transparent;
-            this.btnAddEmp.BackgroundColor = System.Drawing.Color.Transparent;
-            this.btnAddEmp.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAddEmp.BackgroundImage")));
-            this.btnAddEmp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAddEmp.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnAddEmp.BorderRadius = 10;
-            this.btnAddEmp.BorderSize = 0;
-            this.btnAddEmp.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddEmp.FlatAppearance.BorderSize = 0;
-            this.btnAddEmp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddEmp.ForeColor = System.Drawing.Color.White;
-            this.btnAddEmp.GradientColor1 = System.Drawing.Color.Empty;
-            this.btnAddEmp.GradientColor2 = System.Drawing.Color.Empty;
-            this.btnAddEmp.GradientTextColor = System.Drawing.Color.Transparent;
-            this.btnAddEmp.Location = new System.Drawing.Point(299, 8);
-            this.btnAddEmp.Name = "btnAddEmp";
-            this.btnAddEmp.Size = new System.Drawing.Size(154, 36);
-            this.btnAddEmp.TabIndex = 0;
-            this.btnAddEmp.TextColor = System.Drawing.Color.White;
-            this.btnAddEmp.UseVisualStyleBackColor = false;
-            // 
-            // pnlSearch
-            // 
-            this.pnlSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.pnlSearch.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.pnlSearch.BorderColor = System.Drawing.Color.White;
-            this.pnlSearch.BorderRadius = 10;
-            this.pnlSearch.BorderSize = 1;
-            this.pnlSearch.Controls.Add(this.txtSearch);
-            this.pnlSearch.Controls.Add(this.pictureBox1);
-            this.pnlSearch.ForeColor = System.Drawing.Color.White;
-            this.pnlSearch.Location = new System.Drawing.Point(15, 8);
-            this.pnlSearch.Name = "pnlSearch";
-            this.pnlSearch.Padding = new System.Windows.Forms.Padding(40, 10, 2, 2);
-            this.pnlSearch.Size = new System.Drawing.Size(278, 35);
-            this.pnlSearch.TabIndex = 4;
-            this.pnlSearch.TextColor = System.Drawing.Color.White;
-            // 
-            // txtSearch
-            // 
-            this.txtSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSearch.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.txtSearch.ForeColor = System.Drawing.Color.White;
-            this.txtSearch.Location = new System.Drawing.Point(40, 10);
-            this.txtSearch.MaximumSize = new System.Drawing.Size(200, 30);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(200, 14);
-            this.txtSearch.TabIndex = 6;
-            this.txtSearch.Text = "Search Term";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::ColdChainConnectSystem_ACDP.Properties.Resources.searchIcon;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(10, 7);
-            this.pictureBox1.MaximumSize = new System.Drawing.Size(24, 24);
-            this.pictureBox1.MinimumSize = new System.Drawing.Size(24, 24);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
             // 
             // dgvTable
             // 
@@ -297,6 +212,65 @@
             this.actiondate.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.actiondate.Width = 130;
             // 
+            // customPanel1
+            // 
+            this.customPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.customPanel1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.customPanel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.customPanel1.BorderRadius = 10;
+            this.customPanel1.BorderSize = 0;
+            this.customPanel1.Controls.Add(this.pnlSearch);
+            this.customPanel1.ForeColor = System.Drawing.Color.White;
+            this.customPanel1.Location = new System.Drawing.Point(5, 6);
+            this.customPanel1.Name = "customPanel1";
+            this.customPanel1.Padding = new System.Windows.Forms.Padding(15);
+            this.customPanel1.Size = new System.Drawing.Size(755, 50);
+            this.customPanel1.TabIndex = 5;
+            this.customPanel1.TextColor = System.Drawing.Color.White;
+            // 
+            // pnlSearch
+            // 
+            this.pnlSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.pnlSearch.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.pnlSearch.BorderColor = System.Drawing.Color.White;
+            this.pnlSearch.BorderRadius = 10;
+            this.pnlSearch.BorderSize = 1;
+            this.pnlSearch.Controls.Add(this.txtSearch);
+            this.pnlSearch.Controls.Add(this.pictureBox1);
+            this.pnlSearch.ForeColor = System.Drawing.Color.White;
+            this.pnlSearch.Location = new System.Drawing.Point(16, 7);
+            this.pnlSearch.Name = "pnlSearch";
+            this.pnlSearch.Padding = new System.Windows.Forms.Padding(40, 10, 2, 2);
+            this.pnlSearch.Size = new System.Drawing.Size(278, 35);
+            this.pnlSearch.TabIndex = 4;
+            this.pnlSearch.TextColor = System.Drawing.Color.White;
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSearch.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.txtSearch.ForeColor = System.Drawing.Color.White;
+            this.txtSearch.Location = new System.Drawing.Point(40, 10);
+            this.txtSearch.MaximumSize = new System.Drawing.Size(200, 30);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(200, 14);
+            this.txtSearch.TabIndex = 6;
+            this.txtSearch.Text = "Search Term";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::ColdChainConnectSystem_ACDP.Properties.Resources.searchIcon;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(10, 7);
+            this.pictureBox1.MaximumSize = new System.Drawing.Size(24, 24);
+            this.pictureBox1.MinimumSize = new System.Drawing.Size(24, 24);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
             // AuditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -309,11 +283,11 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "AuditForm";
             this.Load += new System.EventHandler(this.AuditForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTable)).EndInit();
             this.customPanel1.ResumeLayout(false);
             this.pnlSearch.ResumeLayout(false);
             this.pnlSearch.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTable)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -321,7 +295,6 @@
         #endregion
 
         private Materials.CustomPanel customPanel1;
-        private Materials.CustomButton btnAddEmp;
         private Materials.CustomPanel pnlSearch;
         public System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.PictureBox pictureBox1;

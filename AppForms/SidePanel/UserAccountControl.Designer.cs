@@ -94,13 +94,13 @@
             // pbxUser
             // 
             this.pbxUser.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
-            this.pbxUser.BorderColor = System.Drawing.Color.White;
+            this.pbxUser.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(68)))), ((int)(((byte)(212)))));
             this.pbxUser.BorderColor2 = System.Drawing.Color.White;
-            this.pbxUser.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            this.pbxUser.BorderSize = 3;
+            this.pbxUser.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            this.pbxUser.BorderSize = 7;
             this.pbxUser.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbxUser.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pbxUser.GradientAngle = 20F;
+            this.pbxUser.GradientAngle = 80F;
             this.pbxUser.Image = global::ColdChainConnectSystem_ACDP.Properties.Resources.NoImage1;
             this.pbxUser.Location = new System.Drawing.Point(27, 0);
             this.pbxUser.Name = "pbxUser";
