@@ -455,6 +455,7 @@
     <Compile Include="ClassResources\Instances\SalesInstance.cs" />
     <Compile Include="ClassResources\Instances\SettingsInstance.cs" />
     <Compile Include="ClassResources\Instances\VarView.cs" />
+    <Compile Include="ClassResources\Security\AuditLog.cs" />
     <Compile Include="ClassResources\Security\ChangeCredentialsClass.cs" />
     <Compile Include="ClassResources\Connection\ConnectionClass.cs" />
     <Compile Include="ClassResources\Display\CurrentFormClass.cs" />

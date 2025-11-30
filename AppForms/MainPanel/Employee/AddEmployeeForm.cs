@@ -27,14 +27,6 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Employee
             lblPosition.Visible = false;
 
             // Initialize position combobox in Account Information panel
-            if (editAccountInformation1.cbxPosition != null)
-            {
-                editAccountInformation1.cbxPosition.Items.Clear();
-                editAccountInformation1.cbxPosition.Items.Add("Administrator");
-                editAccountInformation1.cbxPosition.Items.Add("Assistant");
-                editAccountInformation1.cbxPosition.Items.Add("Inventory");
-                editAccountInformation1.cbxPosition.Items.Add("Sales");
-            }
 
             // Initialize status toggle in Account Information panel
             if (editAccountInformation1.tscStatus != null)
@@ -65,9 +57,9 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Employee
         {
             // Validate required fields
             string position = "";
-            if (editAccountInformation1.cbxPosition != null)
+            if (editAccountInformation1.PositionInfo != null)
             {
-                position = editAccountInformation1.cbxPosition.Texts;
+                position = editAccountInformation1.PositionInfo;
             }
             if (string.IsNullOrWhiteSpace(position))
             {
@@ -83,9 +75,9 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Employee
             }
 
             // Get all the data
-            if (editAccountInformation1.cbxPosition != null)
+            if (editAccountInformation1.PositionInfo != null)
             {
-                position = editAccountInformation1.cbxPosition.Texts.Trim();
+                position = editAccountInformation1.PositionInfo.Trim();
             }
             string firstName = editPersonalInformation1.First_NAMEInfo;
             string middleName = editPersonalInformation1.Middle_NAMEInfo;
