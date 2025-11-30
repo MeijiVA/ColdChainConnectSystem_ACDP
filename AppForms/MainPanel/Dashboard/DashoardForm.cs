@@ -93,6 +93,47 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Dashboard
                     con.Close();
                 }//sql command select query
                 tableExpiry.ClearSelection();
+
+
+                query = @"SELECT TOP 3 SkuCode, SUM(Quantity) AS TotalQuantity FROM [dbo].[Inventory] GROUP BY SkuCode ORDER BY TotalQuantity ASC;";
+
+                //Sku
+                List<System.Windows.Forms.Label> SKU = new List<System.Windows.Forms.Label>
+                {
+                lblSKU1,lblSKU2,lblSKU3
+                };
+                //Quantity
+                List<System.Windows.Forms.Label> quant = new List<System.Windows.Forms.Label>
+                {
+                lblquant1,lblquant2,lblquant3
+                };
+                con.Open();
+                using (SqlCommand command = new SqlCommand(query, con))
+                {
+                    using (var reader = command.ExecuteReader())
+                    {
+                        int i = 0;
+                        while (reader.Read())
+                        {
+                            SKU[i].Text = "["+reader[0].ToString()+ "]";
+                            quant[i].Text = reader[1].ToString();
+                            i++;
+                        }
+                    }
+
+                }
+
+
+
+
+
+
+
+
+
+
+
+
             }
             catch (Exception ex)
             {
@@ -121,6 +162,11 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Dashboard
         }
 
         private void tableExpiry_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void customPanel3_Paint(object sender, PaintEventArgs e)
         {
 
         }
