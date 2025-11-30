@@ -1,4 +1,5 @@
 ﻿
+using ColdChainConnectSystem_ACDP.ClassResources.Security;
 using ColdChainConnectSystem_ACDP.Materials;
 using ColdChainConnectSystem_ACDP.Popup;
 using System;
@@ -182,6 +183,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                         con.Open();
                         cmd.ExecuteNonQuery();
                         con.Close();
+                        AuditLog.AddAuditInfo("Add", GetInventoryID(), $"[{ConnectionClass.empid}] Added [{sku}] to [{CurrentFormClass.form}]");
                         return true;
                     }
                 }
@@ -232,6 +234,8 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                         con.Open();
                         cmd.ExecuteNonQuery();
                         con.Close();
+                        AuditLog.AddAuditInfo("Edit", numid, $"[{ConnectionClass.empid}] Edited [{sku}] to [{CurrentFormClass.form}]");
+
                         return true;
                     }
                 }
@@ -248,6 +252,32 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
             }
         }
 
+        public static String GetInventoryID()
+        {
+            int count = 0;
+            try
+            {
+                SqlConnection con = ConnectionClass.Connection();
+                string query = "SELECT COUNT(*) FROM Inventory";
+
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    con.Open();
+                    object result = cmd.ExecuteScalar();
+                    if (result != null && result != DBNull.Value)
+                    {
+                        count = (int)result;
+                    }
+                    con.Close();
+                    return count + "";
+                }
+            }
+            catch (Exception ex)
+            {
+                new CustomMessageBox("Exception", ex.Message, MessageBoxButtons.OK).ShowDialog();
+            }
+            return count + "";
+        }
 
     }
 }

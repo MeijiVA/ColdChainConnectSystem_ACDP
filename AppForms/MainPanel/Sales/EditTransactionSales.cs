@@ -1,5 +1,6 @@
 ﻿using ColdChainConnectSystem_ACDP.ClassResources;
 using ColdChainConnectSystem_ACDP.ClassResources.Instances;
+using ColdChainConnectSystem_ACDP.ClassResources.Security;
 using Microsoft.Office.Interop.Excel;
 using System;
 using System.Collections;
@@ -147,6 +148,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
                     con.Open();
                     cmd.ExecuteNonQuery();
                     con.Close();
+                    AuditLog.AddAuditInfo("Edit", salesid, $"[{ConnectionClass.empid}] Editted [{quantity}] from [{VarView.id}] in [invform]");
                 }
                 if (SalesClass.updateSalesData(VarView.id, lblCustomerID.Texts, dpSalesDate.Value.ToString("yyyy-MM-dd"), tbQuantity.Value.ToString(), lblStatus.Texts)) ;
             }

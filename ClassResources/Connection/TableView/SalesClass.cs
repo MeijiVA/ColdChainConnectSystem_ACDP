@@ -1,4 +1,5 @@
 ﻿
+using ColdChainConnectSystem_ACDP.ClassResources.Security;
 using ColdChainConnectSystem_ACDP.Popup;
 using System;
 using System.Collections;
@@ -57,12 +58,6 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
             String query;
             SqlConnection con = ConnectionClass.Connection();
             con.Open();
-            if (searchQuery == "")
-            {
-
-            }
-
-
 
             query = $"SELECT COUNT(*) FROM Sales AS A JOIN Inventory AS i ON  a.[productid] = i.[numid]  {searchQuery}";
             using (SqlCommand count = new SqlCommand(query, con))
@@ -108,6 +103,8 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                         con.Open();
                         cmd.ExecuteNonQuery();
                         con.Close();
+                        AuditLog.AddAuditInfo("Add", GetSalesID(), $"[{ConnectionClass.empid}] Added [{salesid}] to [{CurrentFormClass.form}]");
+
                     }
                     query = $"UPDATE Inventory SET [quantity] = [quantity] - {quantity} WHERE [numid] = {prodid}";
                     using (SqlCommand cmd = new SqlCommand(query, con))
@@ -116,6 +113,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                         con.Open();
                         cmd.ExecuteNonQuery();
                         con.Close();
+                        AuditLog.AddAuditInfo("Deducted", GetSalesID(), $"[{ConnectionClass.empid}] Deducted [{quantity}] from [{prodid}] in [invform]");
                         return true;
                     }
                 }
@@ -180,6 +178,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                         con.Open();
                         cmd.ExecuteNonQuery();
                         con.Close();
+                        AuditLog.AddAuditInfo("Edit", numid, $"[{ConnectionClass.empid}] Edited [{numid}] to [{CurrentFormClass.form}]");
                         return true;
                     }
                 }
@@ -194,6 +193,34 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                 new CustomMessageBox("Missing Element", "Fill in all required Fields.", MessageBoxButtons.OK).ShowDialog();
                 return false;
             }
+        }
+
+
+        public static String GetSalesID()
+        {
+            int count = 0;
+            try
+            {
+                SqlConnection con = ConnectionClass.Connection();
+                string query = "SELECT COUNT(*) FROM Salees";
+
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    con.Open();
+                    object result = cmd.ExecuteScalar();
+                    if (result != null && result != DBNull.Value)
+                    {
+                        count = (int)result;
+                    }
+                    con.Close();
+                    return count + "";
+                }
+            }
+            catch (Exception ex)
+            {
+                new CustomMessageBox("Exception", ex.Message, MessageBoxButtons.OK).ShowDialog();
+            }
+            return count + "";
         }
 
     }

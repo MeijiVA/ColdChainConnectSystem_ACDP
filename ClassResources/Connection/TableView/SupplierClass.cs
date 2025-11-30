@@ -1,4 +1,5 @@
 ﻿
+using ColdChainConnectSystem_ACDP.ClassResources.Security;
 using ColdChainConnectSystem_ACDP.Popup;
 using System;
 using System.Collections.Generic;
@@ -7,6 +8,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.IdentityModel.Tokens;
 using System.IO;
+using System.Runtime.Remoting.Metadata.W3cXsd2001;
 using System.Windows.Forms;
 
 namespace ColdChainConnectSystem_ACDP.ClassResources
@@ -108,6 +110,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                         con.Open();
                         cmd.ExecuteNonQuery();
                         con.Close();
+                        AuditLog.AddAuditInfo("Add", GetSupplierNumID(), $"[{ConnectionClass.empid}] Added [{compname}] to [{CurrentFormClass.form}]");
                         return true;
                     }
                 }
@@ -148,6 +151,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                         con.Open();
                         cmd.ExecuteNonQuery();
                         con.Close();
+                        AuditLog.AddAuditInfo("Add", numid, $"[{ConnectionClass.empid}] Edited [{numid}] from [{CurrentFormClass.form}]");
                         return true;
                     }
                 }
@@ -165,6 +169,33 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
         }
 
 
+
+        public static String GetSupplierNumID()
+        {
+            int count = 0;
+            try
+            {
+                SqlConnection con = ConnectionClass.Connection();
+                string query = "SELECT COUNT(*) FROM Supplier";
+
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    con.Open();
+                    object result = cmd.ExecuteScalar();
+                    if (result != null && result != DBNull.Value)
+                    {
+                        count = (int)result;
+                    }
+                    con.Close();
+                    return count + "";
+                }
+            }
+            catch (Exception ex)
+            {
+                new CustomMessageBox("Exception", ex.Message, MessageBoxButtons.OK).ShowDialog();
+            }
+            return count + "";
+        }
 
 
     }

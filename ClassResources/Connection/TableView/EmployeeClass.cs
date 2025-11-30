@@ -1,4 +1,5 @@
-﻿using ColdChainConnectSystem_ACDP.Popup;
+﻿using ColdChainConnectSystem_ACDP.ClassResources.Security;
+using ColdChainConnectSystem_ACDP.Popup;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -131,6 +132,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                     con.Open();
                     cmd.ExecuteNonQuery();
                     con.Close();
+                    AuditLog.AddAuditInfo("Add", empID, $"[{ConnectionClass.empid}] Added Employee [{empID}] from [{CurrentFormClass.form}]");
                     return true;
                 }
             }
@@ -154,6 +156,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                     con.Open();
                     int rowsAffected = cmd.ExecuteNonQuery();
                     con.Close();
+                    AuditLog.AddAuditInfo("Edit", empID, $"[{ConnectionClass.empid}] Deleted Employee [{empID}] from [{CurrentFormClass.form}]");
                     return rowsAffected > 0;
                 }
             }
@@ -219,6 +222,10 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                 return "EMP-0001";
             }
         }
+
+
+
+
     }
 }
 

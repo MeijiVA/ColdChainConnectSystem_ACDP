@@ -1,4 +1,5 @@
 ﻿
+using ColdChainConnectSystem_ACDP.ClassResources.Security;
 using ColdChainConnectSystem_ACDP.Popup;
 using System;
 using System.Collections.Generic;
@@ -88,37 +89,6 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
         }//method
 
 
-        public static string GenerateCustomerID()
-        {
-            try
-            {
-                SqlConnection con = ConnectionClass.Connection();
-                string query = "SELECT COUNT(*) FROM Customer";
-                int count = 0;
-
-                using (SqlCommand cmd = new SqlCommand(query, con))
-                {
-                    con.Open();
-                    object result = cmd.ExecuteScalar();
-                    if (result != null && result != DBNull.Value)
-                    {
-                        count = (int)result;
-                    }
-                    con.Close();
-                }
-
-                // Generate new CustomerID (count + 1, formatted as CUST-001, CUST-002, etc.)
-                int nextNumber = count + 1;
-                string customerID = $"CUST-{nextNumber:D3}";
-
-                return customerID;
-            }
-            catch (Exception ex)
-            {
-                new CustomMessageBox("Error", "Failed to generate Customer ID: " + ex.Message, MessageBoxButtons.OK).ShowDialog();
-                return "CUST-001";
-            }
-        }
 
         public static bool writeCustomerData(string customername, string phonenumber, string registrationdate, string address, string paymentterm, string status)
         {
@@ -127,17 +97,19 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                 try
                 {
                     // Generate CustomerID
-                    string customerID = GenerateCustomerID();
-                    string query = $"INSERT INTO Customer([customerid],[customername],[phonenumber],[address],[paymentterm],[registrationdate],[status]) VALUES( '{customerID}', '{customername}', '{phonenumber}', '{address}','{paymentterm}','{registrationdate}', N'{status}')";
+                    string query = $"INSERT INTO Customer([customername],[phonenumber],[address],[paymentterm],[registrationdate],[status]) VALUES( '{customername}', '{phonenumber}', '{address}','{paymentterm}','{registrationdate}', N'{status}')";
 
                     SqlConnection con = ConnectionClass.Connection();
                     using (SqlCommand cmd = new SqlCommand(query, con))
                     {
                         Console.WriteLine(query);
                         con.Open();
+                        con.Open();
                         cmd.ExecuteNonQuery();
                         con.Close();
+                        AuditLog.AddAuditInfo("Add", getCustomerNumID(), $"[{ConnectionClass.empid}] added [{customername}] to [{CurrentFormClass.form}]");
                         return true;
+
                     }
                 }
                 catch (Exception ex)
@@ -175,6 +147,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                         con.Open();
                         cmd.ExecuteNonQuery();
                         con.Close();
+                        AuditLog.AddAuditInfo("Edit", getCustomerNumID(), $"[{ConnectionClass.empid}] Edited [{numid})] to [{CurrentFormClass.form}]");
                         return true;
                     }
                 }
@@ -190,6 +163,37 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                 return false;
             }
         }
+
+
+
+
+        public static String getCustomerNumID()
+        {
+            int count = 0;
+            try
+            {
+                SqlConnection con = ConnectionClass.Connection();
+                string query = "SELECT COUNT(*) FROM Customer";
+
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    con.Open();
+                    object result = cmd.ExecuteScalar();
+                    if (result != null && result != DBNull.Value)
+                    {
+                        count = (int)result;
+                    }
+                    con.Close();
+                    return count + "";
+                }
+            }
+            catch (Exception ex)
+            {
+                new CustomMessageBox("Exception", ex.Message, MessageBoxButtons.OK).ShowDialog();
+            }
+            return count + "";
+        }
+
 
 
 
