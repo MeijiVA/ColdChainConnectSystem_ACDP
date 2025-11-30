@@ -62,7 +62,6 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
                             // Create the directory
                             Directory.CreateDirectory(filePath);
                         }//no directory
-                        Console.WriteLine(ofdSaveImage.FileName);
                         if (ofdSaveImage.FileName.Equals(""))
                         {
                             fileName = "NoImage.png";

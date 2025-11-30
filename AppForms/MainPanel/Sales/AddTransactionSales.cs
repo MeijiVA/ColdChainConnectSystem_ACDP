@@ -104,13 +104,11 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
             if(cbCustomerID.SelectedItem != null)
             {
                 String custName = cbCustomerID.SelectedItem.ToString().Trim();
-                Console.WriteLine(custName);
                 try
                 {
                     String query = $"SELECT [CustomerName] FROM Customer WHERE [CustomerID] = '{custName}'";
                     SqlConnection con = ConnectionClass.Connection();
                     con.Open();
-                    Console.WriteLine(query);
                     using (SqlCommand cmd = new SqlCommand(query, con))
                     {
                         using (var reader = cmd.ExecuteReader())

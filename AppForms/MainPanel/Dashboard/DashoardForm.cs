@@ -78,8 +78,6 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Dashboard
                "FROM [Inventory] " +
                "WHERE [Expiry] >= GETDATE() AND [Expiry] <= DATEADD(month, 1, GETDATE()) AND [Quantity] > 0 " +
                "ORDER BY [Expiry] ASC;";
-
-            Console.WriteLine(query);
             using (SqlCommand data = new SqlCommand(query, con))
             {
                 using (var reader = data.ExecuteReader())

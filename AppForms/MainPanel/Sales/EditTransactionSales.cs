@@ -30,13 +30,11 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
             if (lblCustomerID.SelectedItem != null)
             {
                 String custName = lblCustomerID.SelectedItem.ToString().Trim();
-                Console.WriteLine(custName);
                 try
                 {
                     String query = $"SELECT [CustomerName] FROM Customer WHERE [CustomerID] = '{custName}'";
                     SqlConnection con = ConnectionClass.Connection();
                     con.Open();
-                    Console.WriteLine(query);
                     using (SqlCommand cmd = new SqlCommand(query, con))
                     {
                         using (var reader = cmd.ExecuteReader())
@@ -87,7 +85,6 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
             string query = $"SELECT a.[numid], a.[salesid],a.[customerid], c.[customername],a.[salesdate],a.[productid], i.[skucode],a.[quantity],i.[unitprice],(a.[quantity] * i.[unitprice]) AS TOTAL,a.[status], a.[CreatedBy], i.[Quantity] FROM Sales as a JOIN Inventory AS i ON a.[productid] = i.[numid] JOIN Customer AS c ON c.[customerid] = a.[customerid] WHERE a.[numid] = {ClassResources.Instances.VarView.id}";
             SqlConnection con = ConnectionClass.Connection();
             con.Open();
-            Console.WriteLine(query);
             using (SqlCommand cmd = new SqlCommand(query, con))
             {
                 using (var reader = cmd.ExecuteReader())

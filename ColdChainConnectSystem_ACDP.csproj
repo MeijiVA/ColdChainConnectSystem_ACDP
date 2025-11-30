@@ -312,12 +312,6 @@
     <Compile Include="AppForms\MainPanel\Inventory\AddItemInventory.Designer.cs">
       <DependentUpon>AddItemInventory.cs</DependentUpon>
     </Compile>
-    <Compile Include="AppForms\MainPanel\InventoryTableCopy.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="AppForms\MainPanel\InventoryTableCopy.Designer.cs">
-      <DependentUpon>InventoryTableCopy.cs</DependentUpon>
-    </Compile>
     <Compile Include="AppForms\MainPanel\Inventory\EditItemInventory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -587,9 +581,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AppForms\MainPanel\Inventory\AddItemInventory.resx">
       <DependentUpon>AddItemInventory.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AppForms\MainPanel\InventoryTableCopy.resx">
-      <DependentUpon>InventoryTableCopy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AppForms\MainPanel\Inventory\EditItemInventory.resx">
       <DependentUpon>EditItemInventory.cs</DependentUpon>

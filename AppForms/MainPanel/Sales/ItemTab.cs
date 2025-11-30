@@ -68,7 +68,6 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
 
             string query = $"SELECT [NUMID] , [SKUCODE] FROM Inventory WHERE [quantity] > 0 {FilterQuery}";
             SqlConnection con = ConnectionClass.Connection();
-            Console.WriteLine(query);
             con.Open();
             using (SqlCommand cmd = new SqlCommand(query, con))
             { 
@@ -93,7 +92,6 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
                     string query = $"SELECT [quantity], [unitprice] FROM Inventory WHERE [numid] = {productID[0]} ";
                     SqlConnection con = ConnectionClass.Connection();
                     con.Open();
-                    Console.WriteLine(query);
                     using (SqlCommand cmd = new SqlCommand(query, con))
                     {
                         using (var reader = cmd.ExecuteReader())

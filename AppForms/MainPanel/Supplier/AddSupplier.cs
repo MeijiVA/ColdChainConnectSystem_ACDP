@@ -39,7 +39,6 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Supplier
                             throw new Exception("Fill in all Fields");
                         }
                         String Address = txtHouseNum.Texts + "," + txtBarangay.Texts +","+ cbxCity.Texts +","+ cbxProvince.Texts +"," +txtPostalCode.Texts;
-                        Console.WriteLine(Address);
                         if(SupplierClass.writeSupplierData(txtCompanyName.Texts,txtContactPerson.Texts,txtContactNumber.Texts,Address, cbxPaymentTerm.Texts))
                         {
                             this.Close();
@@ -101,7 +100,6 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Supplier
                 string selected = " " + cbxProvince.Texts;
                 if (current[1].Equals(selected))
                 {
-                    Console.WriteLine(current[0] + " " + current[1]);
                     cbxCity.Items.Add(current[0]);
                 }
             }
@@ -122,7 +120,6 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Supplier
                 string selected = " " + cbxProvince.Texts;
                 if (current[1].Equals(selected))
                 {
-                    Console.WriteLine(current[0] + " " + current[1]);
                     cbxCity.Items.Add(current[0]);
                 }
             }

@@ -124,7 +124,6 @@ int nHeightEllipse // height of ellipse
 
         private void btnAddItem_Click(object sender, EventArgs e)
         {
-            Console.WriteLine("HERE at " + CurrentFormClass.form);
             switch (CurrentFormClass.form)
             {
                 case "invform":
@@ -192,12 +191,10 @@ int nHeightEllipse // height of ellipse
 
         private void btnExport_Click(object sender, EventArgs e)
         {
-            Console.WriteLine("HERE at " + CurrentFormClass.form);
 
             switch (CurrentFormClass.form)
             {
                 case "invform":
-                    Console.WriteLine(txtSearch.Text + " | " + cbxFilter.Texts + " | " + ofdExport.FileName + " | " + SelectedFilterClass.SelectedFilter);
                     if (ofdExport.ShowDialog() == DialogResult.OK)
                     {
 
@@ -206,7 +203,6 @@ int nHeightEllipse // height of ellipse
                     }
                     break;
                 case "supform":
-                    Console.WriteLine(txtSearch.Text + " | " + cbxFilter.Texts + " | " + ofdExport.FileName + " | " + SelectedFilterClass.SelectedFilter);
                     if (ofdExport.ShowDialog() == DialogResult.OK)
                     {
 
@@ -215,7 +211,6 @@ int nHeightEllipse // height of ellipse
                     }
                     break;
                 case "salform":
-                    Console.WriteLine(txtSearch.Text + " | " + cbxFilter.Texts + " | " + ofdExport.FileName + " | " + SelectedFilterClass.SelectedFilter);
                     if (ofdExport.ShowDialog() == DialogResult.OK)
                     {
 
@@ -224,7 +219,6 @@ int nHeightEllipse // height of ellipse
                     }
                     break;
                 case "custform":
-                    Console.WriteLine(txtSearch.Text + " | " + cbxFilter.Texts + " | " + ofdExport.FileName + " | " + SelectedFilterClass.SelectedFilter);
                     if (ofdExport.ShowDialog() == DialogResult.OK)
                     {
 

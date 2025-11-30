@@ -93,7 +93,6 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.Employee
             // Hide toggle when viewing
             this.tscStatus.Visible = false;
 
-            Console.WriteLine(ProfileInstance.empid);
             String query = $"SELECT * FROM Employees WHERE EmpID = '{ProfileInstance.empid}'";
             SqlConnection con = ConnectionClass.Connection();
             con.Open();
@@ -138,8 +137,6 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.Employee
 
             // Hide toggle beside empID, it will be in Account Information panel
             this.tscStatus.Visible = false;
-
-            Console.WriteLine(ProfileInstance.empid);
             String query = $"SELECT * FROM Employees WHERE EmpID = '{ProfileInstance.empid}'";
             SqlConnection con = ConnectionClass.Connection();
             con.Open();

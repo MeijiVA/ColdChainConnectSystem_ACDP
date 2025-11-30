@@ -39,7 +39,6 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer
                             throw new Exception("Fill in all Fields");
                         }
                         String Address = txtHouseNum.Texts + "," + txtBarangay.Texts + "," + cbxCity.Texts + "," + cbxProvince.Texts + "," + txtPostalCode.Texts;
-                        Console.WriteLine(Address);
                         if (CustomerClass.writeCustomerData(txtCustomerName.Texts, txtPhoneNumber.Texts, dpRegDate.Value.ToString("yyyy-MM-dd"), Address, cbxPaymentTerm.Texts, cbxStatus.Texts))
                         {//custName phonenum regdate address payterm status
                             this.Close();
