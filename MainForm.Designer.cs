@@ -44,9 +44,9 @@
             // DisplayPanel
             // 
             this.DisplayPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
-            this.DisplayPanel.Location = new System.Drawing.Point(226, 30);
+            this.DisplayPanel.Location = new System.Drawing.Point(237, 30);
             this.DisplayPanel.Name = "DisplayPanel";
-            this.DisplayPanel.Size = new System.Drawing.Size(810, 570);
+            this.DisplayPanel.Size = new System.Drawing.Size(799, 570);
             this.DisplayPanel.TabIndex = 0;
             this.DisplayPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.DisplayPanel_Paint);
             // 
