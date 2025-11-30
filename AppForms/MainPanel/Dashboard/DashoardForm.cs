@@ -45,7 +45,6 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Dashboard
                 clblSales.Text = countS.ExecuteScalar().ToString();
             }
             query = "SELECT SUM(Price) FROM(SELECT(s.[quantity] * i.[unitprice]) AS Price FROM Sales AS s JOIN Inventory AS i ON s.[productID] = i.[numid]) AS SOURCETABLE";
-            Console.WriteLine(query);
             using (SqlCommand profit = new SqlCommand(query, con))
             {
                 decimal num = Convert.ToDecimal(profit.ExecuteScalar());
@@ -56,7 +55,6 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Dashboard
             //LOAD LATEST SALES
             con.Open();
                 query = "\r\nWITH ParsedSales AS (\r\n    SELECT\r\n        [SalesID],\r\n        [ProductID],\r\n        [Quantity],\r\n        [Status],\r\n        TRY_CAST(SUBSTRING(SalesID, 7, 10) AS INT) AS NumericSalesID\r\n    FROM\r\n        Sales\r\n),\r\nRankedSales AS (\r\n    SELECT \r\n        [SalesID],\r\n        [ProductID],\r\n        [Quantity],\r\n        [NumericSalesID],\r\n        [STATUS],\r\n        DENSE_RANK() OVER (ORDER BY NumericSalesID DESC) as [SalesRank]\r\n    FROM\r\n        [ParsedSales]\r\n    WHERE\r\n        [NumericSalesID] IS NOT NULL\r\n)\r\nSELECT \r\n    R.SalesID,\r\n    COUNT(R.ProductID) AS ItemCount,\r\n    SUM(R.Quantity * I.UnitPrice) AS TotalAmount,\r\n    R.Status\r\nFROM\r\n    RankedSales R\r\nJOIN\r\n    Inventory I ON R.ProductID = I.NumID\r\nWHERE\r\n    R.SalesRank <= 5 \r\nGROUP BY\r\n    R.SalesID, R.SalesRank, R.Status\r\nORDER BY\r\n    R.SalesRank ASC;\r\n";
-                Console.WriteLine(query);
                 using (SqlCommand data = new SqlCommand(query, con))
                 {
                     using (var reader = data.ExecuteReader())
@@ -71,7 +69,32 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Dashboard
                 }//sql command select query
 
             tableTransaction.ClearSelection();
+
+
+            //LOAD EXPIRING ITEMS
+            con.Open();
+            query =
+               "SELECT TOP 5 [SkuCode],[Quantity], [Expiry], [Image]" +
+               "FROM [Inventory] " +
+               "WHERE [Expiry] >= GETDATE() AND [Expiry] <= DATEADD(month, 1, GETDATE()) AND [Quantity] > 0 " +
+               "ORDER BY [Expiry] ASC;";
+
+            Console.WriteLine(query);
+            using (SqlCommand data = new SqlCommand(query, con))
+            {
+                using (var reader = data.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                       
+                        tableExpiry.Rows.Add(new object[] { reader[0].ToString(), reader[1].ToString(), reader[2].ToString(), getImage(reader[3].ToString()) });
+                    }//while reader loop
+                }//reader
+                con.Close();
+            }//sql command select query
+            tableExpiry.ClearSelection();
         }
+
 
         public static Image getImage(string imgStr)
         {
@@ -93,5 +116,9 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Dashboard
             }
         }
 
+        private void tableExpiry_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
