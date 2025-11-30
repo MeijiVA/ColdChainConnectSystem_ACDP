@@ -42,7 +42,6 @@ namespace ToggleSlider
             get { return Bar_Color; }
             set { Bar_Color = value; Invalidate(); }
         }
-        private string Text = "toggleSlider1";
         public string ToggleBarText
         {
             get { return Text; }
