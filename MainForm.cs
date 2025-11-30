@@ -158,5 +158,29 @@ namespace ColdChainConnectSystem_ACDP
         {
 
         }
+
+        private void btnNotif_Click(object sender, EventArgs e)
+        {
+            if (!notificationDisplay1.Visible)
+            {
+                notificationDisplay1.Visible = true;
+                notificationDisplay1.LoadAllNotifs();
+            }
+            else if (notificationDisplay1.Visible)
+            {
+                notificationDisplay1.Visible = false;
+            }
+
+        }
+
+        private void notificationDisplay1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void notificationDisplay1_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }//class
 }//namespace

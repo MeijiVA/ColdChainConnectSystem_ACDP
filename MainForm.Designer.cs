@@ -33,6 +33,7 @@
             this.btnSettings = new System.Windows.Forms.Button();
             this.btnNotif = new System.Windows.Forms.Button();
             this.logoutBtn = new System.Windows.Forms.Button();
+            this.notificationDisplay1 = new ColdChainConnectSystem_ACDP.AppForms.Header.Notification.NotificationDisplay();
             this.uacUserProfile = new ColdChainConnectSystem_ACDP.AppForms.SidePanel.UserAccountControl();
             this.sidePanel1 = new ColdChainConnectSystem_ACDP.AppForms.SidePanel.SidePanel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -85,6 +86,7 @@
             this.btnNotif.Size = new System.Drawing.Size(17, 17);
             this.btnNotif.TabIndex = 6;
             this.btnNotif.UseVisualStyleBackColor = true;
+            this.btnNotif.Click += new System.EventHandler(this.btnNotif_Click);
             // 
             // logoutBtn
             // 
@@ -101,6 +103,16 @@
             this.logoutBtn.TabIndex = 0;
             this.logoutBtn.UseVisualStyleBackColor = true;
             this.logoutBtn.Click += new System.EventHandler(this.logoutBtn_Click);
+            // 
+            // notificationDisplay1
+            // 
+            this.notificationDisplay1.BackColor = System.Drawing.Color.White;
+            this.notificationDisplay1.Location = new System.Drawing.Point(728, 23);
+            this.notificationDisplay1.Name = "notificationDisplay1";
+            this.notificationDisplay1.Size = new System.Drawing.Size(273, 174);
+            this.notificationDisplay1.TabIndex = 0;
+            this.notificationDisplay1.Visible = false;
+            this.notificationDisplay1.Load += new System.EventHandler(this.notificationDisplay1_Load_1);
             // 
             // uacUserProfile
             // 
@@ -128,6 +140,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.BackgroundImage = global::ColdChainConnectSystem_ACDP.Properties.Resources.MainForm1;
             this.ClientSize = new System.Drawing.Size(1035, 600);
+            this.Controls.Add(this.notificationDisplay1);
             this.Controls.Add(this.logoutBtn);
             this.Controls.Add(this.uacUserProfile);
             this.Controls.Add(this.sidePanel1);
@@ -158,5 +171,6 @@
         public AppForms.SidePanel.UserAccountControl uacUserProfile;
         private System.Windows.Forms.Button logoutBtn;
         public AppForms.SidePanel.SidePanel sidePanel1;
+        private AppForms.Header.Notification.NotificationDisplay notificationDisplay1;
     }
 }

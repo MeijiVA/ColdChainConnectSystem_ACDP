@@ -186,6 +186,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppForms\Header\Notification\NotifBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AppForms\Header\Notification\NotifBar.Designer.cs">
+      <DependentUpon>NotifBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForms\Header\Notification\NotificationDisplay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AppForms\Header\Notification\NotificationDisplay.Designer.cs">
+      <DependentUpon>NotificationDisplay.cs</DependentUpon>
+    </Compile>
     <Compile Include="AppForms\Header\Settings\Audit\AuditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -433,6 +445,7 @@
     <Compile Include="ClassResources\Connection\TableView\CustomerClass.cs" />
     <Compile Include="ClassResources\Connection\TableView\SalesClass.cs" />
     <Compile Include="ClassResources\Connection\Excel\InvExcelClass.cs" />
+    <Compile Include="ClassResources\Display\NotificationClass.cs" />
     <Compile Include="ClassResources\Display\OverlayForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -440,6 +453,7 @@
       <DependentUpon>OverlayForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ClassResources\Display\QREncoder.cs" />
+    <Compile Include="ClassResources\Instances\NotificationInstance.cs" />
     <Compile Include="ClassResources\Instances\CustomerInstance.cs" />
     <Compile Include="ClassResources\Instances\EmployeeInstance.cs" />
     <Compile Include="ClassResources\Instances\ItemTabInstance.cs" />
@@ -516,6 +530,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AppForms\Header\Notification\NotifBar.resx">
+      <DependentUpon>NotifBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\Header\Notification\NotificationDisplay.resx">
+      <DependentUpon>NotificationDisplay.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AppForms\Header\Settings\Audit\AuditForm.resx">
       <DependentUpon>AuditForm.cs</DependentUpon>
     </EmbeddedResource>
