@@ -32,8 +32,8 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.PersonalDetails
         }
         public string PositionInfo
         {
-            get { return lblPosition.Text; }
-            set { lblPosition.Text = value; }
+            get { return cbxPosition.Texts; }
+            set { cbxPosition.Texts = value; }
         }
         public string ContactInfo
         {

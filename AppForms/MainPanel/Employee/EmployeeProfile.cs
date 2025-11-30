@@ -170,9 +170,9 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.Employee
                         this.EditAccountContainer.EmailInfo = reader[13].ToString();
 
                         // Update position combobox in Account Information panel
-                        if (EditAccountContainer.cbxPosition != null)
+                        if (EditAccountContainer.PositionInfo != null)
                         {
-                            EditAccountContainer.cbxPosition.Texts = reader[10].ToString();
+                            EditAccountContainer.PositionInfo = reader[10].ToString();
                         }
 
                         // Update status toggle in Account Information panel
@@ -318,9 +318,9 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.Employee
                         command.Parameters.Add("@DateOfBirth", SqlDbType.Date).Value = this.EditPersonalContainer.DOBInfo;
                         // Get position from combobox if available, otherwise from PositionInfo
                         string position = this.EditAccountContainer.PositionInfo;
-                        if (this.EditAccountContainer.cbxPosition != null && !string.IsNullOrEmpty(this.EditAccountContainer.cbxPosition.Texts))
+                        if (this.EditAccountContainer.PositionInfo != null && !string.IsNullOrEmpty(this.EditAccountContainer.PositionInfo))
                         {
-                            position = this.EditAccountContainer.cbxPosition.Texts;
+                            position = this.EditAccountContainer.PositionInfo;
                         }
 
                         // Get status from toggle if available, otherwise from StatusInfo
