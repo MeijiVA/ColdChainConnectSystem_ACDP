@@ -61,13 +61,11 @@ namespace ColdChainConnectSystem_ACDP.ClassResources.Security
                 }
                 catch (SqlException ex)
                 {
-                    Console.WriteLine($"Database Error inserting audit log: {ex.Message}");
                     new CustomMessageBox("Database Error", ex.Message, MessageBoxButtons.OK).ShowDialog();
                     throw;
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine($"An unexpected error occurred: {ex.Message}");
                     new CustomMessageBox("Exception Error", ex.Message, MessageBoxButtons.OK).ShowDialog();
                     throw;
                 }

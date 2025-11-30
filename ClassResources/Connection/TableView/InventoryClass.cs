@@ -25,7 +25,6 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                 String query = $"SELECT [SupplierID], [CompanyName] FROM Supplier ";
                 SqlConnection con = ConnectionClass.Connection();
                 con.Open();
-                Console.WriteLine(query);
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
                     using (var reader = cmd.ExecuteReader())
@@ -136,7 +135,6 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                 totalPages = (int)Math.Ceiling((double)totalRows / PageSize);
                 lblPage.Text = totalPages.ToString();
 
-                Console.WriteLine(totalRows + " TR " + totalPages + "TP");
                 query = $"SELECT [numid],[skucode],[description],[image],[unitprice],[SupplierID],[kg],[quantity],[expiry] FROM Inventory {searchQuery} ORDER BY [numid] OFFSET {(currentPageIndex - 1) * PageSize} ROWS FETCH NEXT {PageSize} ROWS ONLY";
                 using (SqlCommand data = new SqlCommand(query, con))
                 {
@@ -179,7 +177,6 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                     SqlConnection con = ConnectionClass.Connection();
                     using (SqlCommand cmd = new SqlCommand(query, con))
                     {
-                        Console.WriteLine(query);
                         con.Open();
                         cmd.ExecuteNonQuery();
                         con.Close();
@@ -230,7 +227,6 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                     SqlConnection con = ConnectionClass.Connection();
                     using (SqlCommand cmd = new SqlCommand(query, con))
                     {
-                        Console.WriteLine(query);
                         con.Open();
                         cmd.ExecuteNonQuery();
                         con.Close();

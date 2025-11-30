@@ -18,7 +18,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources.Security
             sr.Close();
             string database = "Data Source= @database ;Initial Catalog=ColdChainConnectACDP_DB;Integrated Security=True;TrustServerCertificate=True";
             database = database.Replace("@database", ConnectionClass.db);
-            Console.WriteLine(database);
+          
             return new SqlConnection(database);
         }
     }

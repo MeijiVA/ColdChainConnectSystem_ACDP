@@ -50,7 +50,6 @@ namespace ColdChainConnectSystem_ACDP.ClassResources.Connection
                         query = query + ",\n";
                     }
                 }
-                Console.WriteLine(query);
                 using (SqlCommand command = new SqlCommand(query, con))
                 {
                     //ID	SKU Code	Description	Unit Price	Amount	Weight(KG)	Quantity	Expiry Date
@@ -115,7 +114,6 @@ namespace ColdChainConnectSystem_ACDP.ClassResources.Connection
                     Filter = " WHERE " + SelectedFilterClass.SelectedFilter + " LIKE '%" + searchQuery + "%' ";
                 }
                 query = $"SELECT [numid] AS \"ID\",[skucode] AS \"SKU Code\" , [description] AS \"Description\",[unitprice] AS \"Unit Price\", [SupplierID] AS \"Supplier\", [kg] AS \"Weight(KG)\", [quantity] AS \"Quantity\", [expiry] AS \"Expiry Date\" FROM Inventory {Filter} ORDER BY numid;";
-                Console.WriteLine(query);
                 ExportDataFromTable(query, ofd);
             }
             catch (Exception ex)
@@ -165,7 +163,6 @@ namespace ColdChainConnectSystem_ACDP.ClassResources.Connection
                                     {
                                         DateTime date = Convert.ToDateTime(reader[7].ToString());
                                         excelWorksheet.Cells[row, col].Value2 = date.ToString("MM/dd/yyyy");
-                                        Console.WriteLine(date.ToString("MM/dd/yyyy"));
                                     } else
                                     {
                                         excelWorksheet.Cells[row, col].Value2 = reader[i].ToString();

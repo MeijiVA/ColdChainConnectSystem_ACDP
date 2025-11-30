@@ -29,9 +29,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                 totalRows = (int)count.ExecuteScalar();
                 totalPages = (int)Math.Ceiling((double)totalRows / PageSize);
                 lblPage.Text = totalPages.ToString();
-                Console.WriteLine(query);
                 query = $"SELECT a.[numid], a.[salesid],a.[customerid],a.[salesdate],a.[productid],a.[quantity],i.[unitprice],(a.[quantity] * i.[unitprice])AS TOTAL,a.[status] FROM Sales as a JOIN Inventory AS i ON   a.[productid] = i.[numid] ORDER BY a.[numid] OFFSET {(currentPageIndex - 1) * PageSize} ROWS FETCH NEXT {PageSize} ROWS ONLY";
-                Console.WriteLine(query);
                 using (SqlCommand data = new SqlCommand(query, con))
                 {
                     using (var reader = data.ExecuteReader())
@@ -66,10 +64,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                 totalPages = (int)Math.Ceiling((double)totalRows / PageSize);
                 lblPage.Text = totalPages.ToString();
 
-                Console.WriteLine(totalRows + " TR " + totalPages + "TP");
-                Console.WriteLine(query);
                 query = $"SELECT a.[numid], a.[salesid],a.[customerid],a.[salesdate],a.[productid],a.[quantity],i.[unitprice],(a.[quantity] * i.[unitprice]) AS TOTAL,a.[status] FROM Sales as a JOIN Inventory AS i ON   a.[productid] = i.[numid] {searchQuery} ORDER BY a.[numid] OFFSET {(currentPageIndex - 1) * PageSize} ROWS FETCH NEXT {PageSize} ROWS ONLY";
-                Console.WriteLine(query);
                 using (SqlCommand data = new SqlCommand(query, con))
                 {
                     using (var reader = data.ExecuteReader())
@@ -99,7 +94,6 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                     SqlConnection con = ConnectionClass.Connection();
                     using (SqlCommand cmd = new SqlCommand(query, con))
                     {
-                        Console.WriteLine(query);
                         con.Open();
                         cmd.ExecuteNonQuery();
                         con.Close();
@@ -109,7 +103,6 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                     query = $"UPDATE Inventory SET [quantity] = [quantity] - {quantity} WHERE [numid] = {prodid}";
                     using (SqlCommand cmd = new SqlCommand(query, con))
                     {
-                        Console.WriteLine(query);
                         con.Open();
                         cmd.ExecuteNonQuery();
                         con.Close();
@@ -174,7 +167,6 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                     SqlConnection con = ConnectionClass.Connection();
                     using (SqlCommand cmd = new SqlCommand(query, con))
                     {
-                        Console.WriteLine(query);
                         con.Open();
                         cmd.ExecuteNonQuery();
                         con.Close();

@@ -46,7 +46,6 @@ namespace ColdChainConnectSystem_ACDP.ClassResources.Connection
                         query = query + ",\n";
                     }
                 }
-                Console.WriteLine(query);
                 using (SqlCommand command = new SqlCommand(query, con))
                 {
 
@@ -111,7 +110,6 @@ namespace ColdChainConnectSystem_ACDP.ClassResources.Connection
                     Filter = " WHERE " + SelectedFilterClass.SelectedFilter + " LIKE '%" + searchQuery + "%' ";
                 }
                 query = $"SELECT s.[numID] AS \"ID\",s.[SalesID] AS \"SalesID\",s.[CustomerID] AS \"CustomerID\" , s.[SalesDate] AS \"Sales Date\",s.[ProductID] AS \"Product ID\",s.[Quantity] AS \"Quantity\",s.[Quantity] * i.[UnitPrice] AS \"Total\", s.[Status] AS \"Status\" FROM Sales AS s JOIN Inventory AS i ON  s.[productid] = i.[numid] {Filter} ORDER BY s.numid;";
-                Console.WriteLine(query);
                 ExportDataFromTable(query, ofd);
             }
             catch (Exception ex)

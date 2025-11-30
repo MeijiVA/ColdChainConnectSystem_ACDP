@@ -27,7 +27,6 @@ namespace ColdChainConnectSystem_ACDP.ClassResources.Connection
             {
                 con.Open();
                 String query = "INSERT INTO Customer([customername],[phonenumber],[address],[paymentterm],[registrationdate],[status]) VALUES";
-                Console.WriteLine(query);
                 if ((excelRange.Cells[1, 1] as Range).Value == "Customer")
                 {
                     //Throw an exception here because it isn't a customer xd
@@ -44,13 +43,11 @@ namespace ColdChainConnectSystem_ACDP.ClassResources.Connection
                     String status = "" + (excelRange.Cells[row, 8] as Range).Value;
 
                     query = query + $"('{custname}','{phonenum}','{address}','{pay}','{regdate}','{status}')";
-                    Console.WriteLine(query);
                     if (row != excelRange.Rows.Count)
                     {
                         query = query + ",\n";
                     }
                 }
-                Console.WriteLine(query);
                 using (SqlCommand command = new SqlCommand(query, con))
                 {
                     //ID	SKU Code	Description	Unit Price	Amount	Weight(KG)	Quantity	Expiry Date
@@ -116,7 +113,6 @@ namespace ColdChainConnectSystem_ACDP.ClassResources.Connection
                 }
                 
                 query = $"SELECT [numid] AS \"ID\",[CustomerID] AS \"Customer ID\" , [CustomerName] AS \"Customer Name\",[phonenumber] AS \"Phone Number\", [address] AS \"Address\", [paymentterm] AS \"Payment Term\", [registrationdate] AS \"Registration Date\", [status] AS \"Status\"FROM Customer {Filter} ORDER BY numid;";
-                Console.WriteLine(query);
                 ExportDataFromTable(query, ofd);
             }
             catch (Exception ex)

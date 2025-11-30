@@ -73,7 +73,6 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                 totalPages = (int)Math.Ceiling((double)totalRows / PageSize);
                 lblPage.Text = totalPages.ToString();
 
-                Console.WriteLine(totalRows + " TR " + totalPages + "TP");
                 query = $"SELECT [numid],[supplierid],[companyname],[contactperson],[contactnum],[address],[paymentterm] FROM Supplier {searchQuery} ORDER BY [numid] OFFSET {(currentPageIndex - 1) * PageSize} ROWS FETCH NEXT {PageSize} ROWS ONLY";
                 using (SqlCommand data = new SqlCommand(query, con))
                 {
@@ -102,11 +101,10 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                 try
                 {
                     string query = $"INSERT INTO Supplier([companyname],[contactperson],[contactnum],[address],[paymentterm]) VALUES('{compname}', '{contper}', '{contnum}', '{address}', '{payment}')";
-                    Console.WriteLine(query);
                     SqlConnection con = ConnectionClass.Connection();
                     using (SqlCommand cmd = new SqlCommand(query, con))
                     {
-                        Console.WriteLine(query);
+
                         con.Open();
                         cmd.ExecuteNonQuery();
                         con.Close();
@@ -147,7 +145,6 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                     SqlConnection con = ConnectionClass.Connection();
                     using (SqlCommand cmd = new SqlCommand(query, con))
                     {
-                        Console.WriteLine(query);
                         con.Open();
                         cmd.ExecuteNonQuery();
                         con.Close();

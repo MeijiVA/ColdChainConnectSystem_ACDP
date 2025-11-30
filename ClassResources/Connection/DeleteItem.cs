@@ -19,7 +19,6 @@ namespace ColdChainConnectSystem_ACDP.ClassResources.Connection.TableView
             SqlConnection con = ConnectionClass.Connection();
             using (SqlCommand cmd = new SqlCommand(query, con))
             {
-                Console.WriteLine(query);
                 con.Open();
                 cmd.ExecuteNonQuery();
                 con.Close();

@@ -31,7 +31,6 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                 SqlConnection con = ConnectionClass.Connection();
 
                 String query = $"SELECT [empid], [username], [firstname], [lastname], [position], [status] FROM Employees WHERE [numID] = {currentNum}";
-                Console.WriteLine(query);
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
                     con.Open();
@@ -70,7 +69,6 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                     ) AS RankedEmployees
                     WHERE RowNum = {rowNumber}";
 
-                Console.WriteLine(query);
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
                     con.Open();
