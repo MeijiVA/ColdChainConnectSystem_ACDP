@@ -70,7 +70,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Dashboard
                     con.Close();
                 }//sql command select query
 
-
+            tableTransaction.ClearSelection();
         }
 
         public static Image getImage(string imgStr)
