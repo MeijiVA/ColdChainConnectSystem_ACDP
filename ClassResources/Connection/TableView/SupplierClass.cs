@@ -79,8 +79,6 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                     {
                         while (reader.Read())
                         {
-                            double amount = double.Parse(reader[4].ToString()) * double.Parse(reader[6].ToString());
-
                             //  0        0    1    2    3     4        blank   5      6         7            8              9
                             //checkbox,  id, sku, desc,img,unitprice, amount, kg, quantity, buttonedit, button view, button delete
                             dgv.Rows.Add(new object[] { 0, reader[0].ToString(), reader[1].ToString(), reader[2].ToString(), reader[3].ToString(), reader[4].ToString(), reader[5].ToString(), reader[6].ToString() });
@@ -97,7 +95,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
 
         public static bool writeSupplierData(string compname, string contper, string contnum, string address, string payment)
         {
-            if(!(compname.Equals("") || contper.Equals("") || contnum.Equals("") || address.Equals("") || payment.Equals("")))
+            if (!(compname.Equals("") || contper.Equals("") || contnum.Equals("") || address.Equals("") || payment.Equals("")))
             {
                 try
                 {
@@ -121,7 +119,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
             }
             else
             {
-                new CustomMessageBox("Missing Element","Fill in all required Fields.", MessageBoxButtons.OK).ShowDialog();
+                new CustomMessageBox("Missing Element", "Fill in all required Fields.", MessageBoxButtons.OK).ShowDialog();
                 return false;
             }
         }

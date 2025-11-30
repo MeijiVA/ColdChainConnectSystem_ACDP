@@ -11,6 +11,7 @@ using System.IdentityModel.Tokens;
 using System.IO;
 using System.Security.Policy;
 using System.Windows.Forms;
+using static ColdChainConnectSystem_ACDP.ClassResources.Connection.SqlInjectionPrevention;
 
 namespace ColdChainConnectSystem_ACDP.ClassResources
 {
@@ -56,7 +57,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                 i = Properties.Resources.Expiry_Yellow_;
                 return i;//color yellow = still ok;
             }
-            else 
+            else
             {
                 i = Properties.Resources.Expiry_Red_;
                 return i;//color red = bad;
@@ -142,10 +143,9 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                     {
                         while (reader.Read())
                         {
-                            double amount = double.Parse(reader[4].ToString()) * double.Parse(reader[6].ToString());
                             //  0        0    1    2    3     4         5      6      7       8              9          10
                             //checkbox,  id, sku, desc,img,unitprice, suppid, kg, quantity, buttonedit, button view, button delete
-                            dgv.Rows.Add(new object[] { 0, reader[0].ToString(), reader[1].ToString(), reader[2].ToString(), getImage(reader[3].ToString()), reader[4].ToString(), reader[5].ToString(), reader[6].ToString(), reader[7].ToString() });
+                            dgv.Rows.Add(new object[] { CheckDate(Convert.ToDateTime(reader[8])), reader[0].ToString(), reader[1].ToString(), reader[2].ToString(), getImage(reader[3].ToString()), reader[4].ToString(), reader[5].ToString(), reader[6].ToString(), reader[7].ToString() });
                         }//while reader loop
                     }//reader
                     con.Close();
@@ -167,7 +167,13 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                     {
                         img = "NoImage.png";
                     }
-                    string query = $"INSERT INTO Inventory([skucode],[description],[image],[unitprice],[supplierid],[kg],[quantity],[expiry]) VALUES('{sku}', '{desc}', '{img}', CAST({unitp} AS Decimal(18, 2)), '{supid}',{kg}, {quantity}, N'{expiry}')";
+                    // Sanitize inputs to prevent SQL injection
+                    string sanitizedSku = SanitizeInput(sku);
+                    string sanitizedDesc = SanitizeInput(desc);
+                    string sanitizedImg = SanitizeInput(img);
+                    string sanitizedSupid = SanitizeInput(supid);
+                    string sanitizedExpiry = SanitizeInput(expiry);
+                    string query = $"INSERT INTO Inventory([skucode],[description],[image],[unitprice],[supplierid],[kg],[quantity],[expiry]) VALUES('{sanitizedSku}', '{sanitizedDesc}', '{sanitizedImg}', CAST({unitp} AS Decimal(18, 2)), '{sanitizedSupid}',{kg}, {quantity}, N'{sanitizedExpiry}')";
 
                     SqlConnection con = ConnectionClass.Connection();
                     using (SqlCommand cmd = new SqlCommand(query, con))
@@ -192,7 +198,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
             }
         }
 
-        public static bool updateInventoryData(string numid,string sku, string desc, string unitp, string img, string kg, string quantity, string expiry, string supid)
+        public static bool updateInventoryData(string numid, string sku, string desc, string unitp, string img, string kg, string quantity, string expiry, string supid)
         {
             if (!(sku.Equals("") || sku.Equals("") || desc.Equals("") || unitp.Equals("") || kg.Equals("") || quantity.Equals("") || expiry.Equals("") || supid.Equals("")))
             {
@@ -202,15 +208,22 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                     {
                         img = "NoImage.png";
                     }
-                    string query = $"UPDATE Inventory SET [skucode] = '{sku}'," +
-                        $"[description] = '{desc}'," +
-                        $"[image] = '{img}'," +
+                    // Sanitize inputs to prevent SQL injection
+                    string sanitizedSku = SanitizeInput(sku);
+                    string sanitizedDesc = SanitizeInput(desc);
+                    string sanitizedImg = SanitizeInput(img);
+                    string sanitizedSupid = SanitizeInput(supid);
+                    string sanitizedExpiry = SanitizeInput(expiry);
+                    string sanitizedNumid = SanitizeInput(numid);
+                    string query = $"UPDATE Inventory SET [skucode] = '{sanitizedSku}'," +
+                        $"[description] = '{sanitizedDesc}'," +
+                        $"[image] = '{sanitizedImg}'," +
                         $"[unitprice] = CAST({unitp} AS Decimal(18, 2))," +
-                        $"[supplierid] =  '{supid}'" +
+                        $"[supplierid] =  '{sanitizedSupid}'" +
                         $",[kg] = {kg}," +
                         $"[quantity] = {quantity}," +
-                        $"[expiry] = N'{expiry}'" +
-                        $"WHERE [numid] = '{numid}'";
+                        $"[expiry] = N'{sanitizedExpiry}'" +
+                        $"WHERE [numid] = '{sanitizedNumid}'";
 
                     SqlConnection con = ConnectionClass.Connection();
                     using (SqlCommand cmd = new SqlCommand(query, con))

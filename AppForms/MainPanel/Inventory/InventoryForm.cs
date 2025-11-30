@@ -5,6 +5,7 @@ using ColdChainConnectSystem_ACDP.ClassResources.Connection.TableView;
 using ColdChainConnectSystem_ACDP.ClassResources.Display;
 using ColdChainConnectSystem_ACDP.ClassResources.Instances;
 using ColdChainConnectSystem_ACDP.Popup;
+using static ColdChainConnectSystem_ACDP.ClassResources.Connection.SqlInjectionPrevention;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -35,6 +36,14 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
             SelectedFilterClass.SelectedFilter = "";
             dgvTable.Rows.Clear();
             totalPages = InventoryClass.loadInventoryData(dgvTable, lblMaxPage, lblPageNum, currentPageIndex);
+            // Subscribe to real-time search event
+            SearchBar.SearchTextChanged += SearchBar_SearchTextChanged;
+        }
+
+        private void SearchBar_SearchTextChanged(object sender, EventArgs e)
+        {
+            // Real-time search - update table as user types
+            UpdateTable();
         }
         private void searchUC1_Load(object sender, EventArgs e)
         {
@@ -54,14 +63,18 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
             {
                 dgvTable.Rows.Clear();
                 lblPageNum.Text = (currentPageIndex += 1).ToString();
-                string query = "WHERE " + SelectedFilterClass.SelectedFilter + " LIKE '%" + SearchBar.searchTXT + "%' ";
+                // Sanitize search input to prevent SQL injection
+                string sanitizedSearch = SanitizeLikeInput(SearchBar.searchTXT);
+                string query = "WHERE " + SelectedFilterClass.SelectedFilter + " LIKE '%" + sanitizedSearch + "%' ";
                 totalPages = InventoryClass.loadInventoryData(dgvTable, lblMaxPage, lblPageNum, currentPageIndex, query);
             }//has search query
             else if (currentPageIndex < totalPages)
             {
                 dgvTable.Rows.Clear();
                 lblPageNum.Text = (currentPageIndex += 1).ToString();
-                string query = $"WHERE [numid] LIKE '%{(SearchBar.searchTXT)}%' OR [skucode] LIKE '%{(SearchBar.searchTXT)}%' OR [quantity] LIKE '%{(SearchBar.searchTXT)}%' OR [expiry] LIKE '%{(SearchBar.searchTXT)}%' OR [description] LIKE '%{(SearchBar.searchTXT)}%' OR [SupplierID] LIKE '%{(SearchBar.searchTXT)}%' ";
+                // Sanitize search input to prevent SQL injection
+                string sanitizedSearch = SanitizeLikeInput(SearchBar.searchTXT);
+                string query = $"WHERE [numid] LIKE '%{sanitizedSearch}%' OR [skucode] LIKE '%{sanitizedSearch}%' OR [quantity] LIKE '%{sanitizedSearch}%' OR [expiry] LIKE '%{sanitizedSearch}%' OR [description] LIKE '%{sanitizedSearch}%' OR [SupplierID] LIKE '%{sanitizedSearch}%' ";
                 totalPages = InventoryClass.loadInventoryData(dgvTable, lblMaxPage, lblPageNum, currentPageIndex, query);
             }// has search query ALL
         }
@@ -78,14 +91,18 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
             {
                 dgvTable.Rows.Clear();
                 lblPageNum.Text = (currentPageIndex -= 1).ToString();
-                string query = "WHERE " + SelectedFilterClass.SelectedFilter + " LIKE '%" + SearchBar.searchTXT + "%' ";
+                // Sanitize search input to prevent SQL injection
+                string sanitizedSearch = SanitizeLikeInput(SearchBar.searchTXT);
+                string query = "WHERE " + SelectedFilterClass.SelectedFilter + " LIKE '%" + sanitizedSearch + "%' ";
                 totalPages = InventoryClass.loadInventoryData(dgvTable, lblMaxPage, lblPageNum, currentPageIndex, query);
             }//has search query
             else if (currentPageIndex > 1)
             {
                 dgvTable.Rows.Clear();
                 lblPageNum.Text = (currentPageIndex -= 1).ToString();
-                string query = $"WHERE [numid] LIKE '% {(SearchBar.searchTXT)} %' OR [skucode] LIKE '% {(SearchBar.searchTXT)} %' OR [quantity] LIKE '% {(SearchBar.searchTXT)} %' OR [expiry] LIKE '% {(SearchBar.searchTXT)} %' OR [description] LIKE '% {(SearchBar.searchTXT)} %' OR [SupplierID] LIKE '%{(SearchBar.searchTXT)}%' ";
+                // Sanitize search input to prevent SQL injection
+                string sanitizedSearch = SanitizeLikeInput(SearchBar.searchTXT);
+                string query = $"WHERE [numid] LIKE '% {sanitizedSearch} %' OR [skucode] LIKE '% {sanitizedSearch} %' OR [quantity] LIKE '% {sanitizedSearch} %' OR [expiry] LIKE '% {sanitizedSearch} %' OR [description] LIKE '% {sanitizedSearch} %' OR [SupplierID] LIKE '%{sanitizedSearch}%' ";
                 totalPages = InventoryClass.loadInventoryData(dgvTable, lblMaxPage, lblPageNum, currentPageIndex, query);
             }// has search query ALL
         }
@@ -113,7 +130,9 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
                     lblPageNum.Text = "1";
                     currentPageIndex = 1;//!!!!!!!!!!!!!!!!!!!
                     dgvTable.Rows.Clear();
-                    string query = $"WHERE [numid] LIKE '%{(SearchBar.searchTXT)}%' OR [skucode] LIKE '%{(SearchBar.searchTXT)}%' OR [quantity] LIKE '%{(SearchBar.searchTXT)}%' OR [expiry] LIKE '%{(SearchBar.searchTXT)}%' OR [description] LIKE '%{(SearchBar.searchTXT)}%' OR [SupplierID] LIKE '%{(SearchBar.searchTXT)}%' ";
+                    // Sanitize search input to prevent SQL injection
+                    string sanitizedSearch = SanitizeLikeInput(SearchBar.searchTXT);
+                    string query = $"WHERE [numid] LIKE '%{sanitizedSearch}%' OR [skucode] LIKE '%{sanitizedSearch}%' OR [quantity] LIKE '%{sanitizedSearch}%' OR [expiry] LIKE '%{sanitizedSearch}%' OR [description] LIKE '%{sanitizedSearch}%' OR [SupplierID] LIKE '%{sanitizedSearch}%' ";
                     totalPages = InventoryClass.loadInventoryData(dgvTable, lblMaxPage, lblPageNum, currentPageIndex, query);
                 }
                 else
@@ -121,7 +140,9 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
                     lblPageNum.Text = "1";
                     currentPageIndex = 1;//!!!!!!!!!!!!!!!!!!!
                     dgvTable.Rows.Clear();
-                    string query = " WHERE " + SelectedFilterClass.SelectedFilter + " LIKE '%" + SearchBar.searchTXT + "%' ";
+                    // Sanitize search input to prevent SQL injection
+                    string sanitizedSearch = SanitizeLikeInput(SearchBar.searchTXT);
+                    string query = " WHERE " + SelectedFilterClass.SelectedFilter + " LIKE '%" + sanitizedSearch + "%' ";
                     totalPages = InventoryClass.loadInventoryData(dgvTable, lblMaxPage, lblPageNum, currentPageIndex, query);
                 }
 
@@ -199,6 +220,16 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
                 ViewItemInventory vi = new ViewItemInventory();
                 vi.Show(this);
             }
+            if (dgvTable.Columns[e.ColumnIndex].Name == "img")
+            {
+                // Show image viewer
+                if (dgvTable.Rows[e.RowIndex].Cells["img"].Value != null)
+                {
+                    ImageViewerForm imageViewer = new ImageViewerForm();
+                    imageViewer.SetImage((Image)dgvTable.Rows[e.RowIndex].Cells["img"].Value);
+                    imageViewer.ShowDialog();
+                }
+            }
         }
 
         private void lblLegends_MouseHover(object sender, EventArgs e)
@@ -210,6 +241,27 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
         private void lblLegends_MouseLeave(object sender, EventArgs e)
         {
             uc.Visible = false;
+        }
+
+        private void dgvTable_CellMouseEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            {
+                string columnName = dgvTable.Columns[e.ColumnIndex].Name;
+                if (columnName == "deleteCol" || columnName == "editCol" || columnName == "viewCol")
+                {
+                    dgvTable.Cursor = Cursors.Hand;
+                }
+                else
+                {
+                    dgvTable.Cursor = Cursors.Default;
+                }
+            }
+        }
+
+        private void dgvTable_CellMouseLeave(object sender, DataGridViewCellEventArgs e)
+        {
+            dgvTable.Cursor = Cursors.Default;
         }
     }
 }

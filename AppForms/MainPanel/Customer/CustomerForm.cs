@@ -5,6 +5,7 @@ using ColdChainConnectSystem_ACDP.ClassResources.Connection.TableView;
 using ColdChainConnectSystem_ACDP.ClassResources.Display;
 using ColdChainConnectSystem_ACDP.ClassResources.Instances;
 using ColdChainConnectSystem_ACDP.Popup;
+using static ColdChainConnectSystem_ACDP.ClassResources.Connection.SqlInjectionPrevention;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -34,6 +35,14 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer
             SelectedFilterClass.SelectedFilter = "";
             dgvTable.Rows.Clear();
             totalPages = CustomerClass.loadCustomerData(dgvTable, lblMaxPage, lblPageNum, currentPageIndex);
+            // Subscribe to real-time search event
+            SearchBar.SearchTextChanged += SearchBar_SearchTextChanged;
+        }
+
+        private void SearchBar_SearchTextChanged(object sender, EventArgs e)
+        {
+            // Real-time search - update table as user types
+            UpdateTable();
         }
         private void searchUC1_Load(object sender, EventArgs e)
         {
@@ -53,14 +62,18 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer
             {
                 dgvTable.Rows.Clear();
                 lblPageNum.Text = (currentPageIndex += 1).ToString();
-                string query = "WHERE " + SelectedFilterClass.SelectedFilter + " LIKE '%" + SearchBar.searchTXT + "%' ";
+                // Sanitize search input to prevent SQL injection
+                string sanitizedSearch = SanitizeLikeInput(SearchBar.searchTXT);
+                string query = "WHERE " + SelectedFilterClass.SelectedFilter + " LIKE '%" + sanitizedSearch + "%' ";
                 totalPages = CustomerClass.loadCustomerData(dgvTable, lblMaxPage, lblPageNum, currentPageIndex, query);
             }//has search query
             else if (currentPageIndex < totalPages)
             {
                 dgvTable.Rows.Clear();
                 lblPageNum.Text = (currentPageIndex += 1).ToString();
-                string query = $"WHERE [numid] LIKE '%{(SearchBar.searchTXT)}%' OR [CustomerID] LIKE '%{(SearchBar.searchTXT)}%' OR [CustomerName] LIKE '%{(SearchBar.searchTXT)}%' OR [PhoneNumber] LIKE '%{(SearchBar.searchTXT)}%' OR [Address] LIKE '%{(SearchBar.searchTXT)}%' OR [PaymentTerm] LIKE '%{(SearchBar.searchTXT)}%' OR [RegistrationDate] LIKE '%{(SearchBar.searchTXT)}%' OR [Status] LIKE '%{(SearchBar.searchTXT)}%'   ";
+                // Sanitize search input to prevent SQL injection
+                string sanitizedSearch = SanitizeLikeInput(SearchBar.searchTXT);
+                string query = $"WHERE [numid] LIKE '%{sanitizedSearch}%' OR [CustomerID] LIKE '%{sanitizedSearch}%' OR [CustomerName] LIKE '%{sanitizedSearch}%' OR [PhoneNumber] LIKE '%{sanitizedSearch}%' OR [Address] LIKE '%{sanitizedSearch}%' OR [PaymentTerm] LIKE '%{sanitizedSearch}%' OR [RegistrationDate] LIKE '%{sanitizedSearch}%' OR [Status] LIKE '%{sanitizedSearch}%'   ";
                 totalPages = CustomerClass.loadCustomerData(dgvTable, lblMaxPage, lblPageNum, currentPageIndex, query);
             }// has search query ALL
         }
@@ -77,14 +90,18 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer
             {
                 dgvTable.Rows.Clear();
                 lblPageNum.Text = (currentPageIndex -= 1).ToString();
-                string query = "WHERE " + SelectedFilterClass.SelectedFilter + " LIKE '%" + SearchBar.searchTXT + "%' ";
+                // Sanitize search input to prevent SQL injection
+                string sanitizedSearch = SanitizeLikeInput(SearchBar.searchTXT);
+                string query = "WHERE " + SelectedFilterClass.SelectedFilter + " LIKE '%" + sanitizedSearch + "%' ";
                 totalPages = CustomerClass.loadCustomerData(dgvTable, lblMaxPage, lblPageNum, currentPageIndex, query);
             }//has search query
             else if (currentPageIndex > 1)
             {
                 dgvTable.Rows.Clear();
                 lblPageNum.Text = (currentPageIndex -= 1).ToString();
-                string query = $"WHERE [numid] LIKE '%{(SearchBar.searchTXT)}%' OR [CustomerID] LIKE '%{(SearchBar.searchTXT)}%' OR [CustomerName] LIKE '%{(SearchBar.searchTXT)}%' OR [PhoneNumber] LIKE '%{(SearchBar.searchTXT)}%' OR [Address] LIKE '%{(SearchBar.searchTXT)}%' OR [PaymentTerm] LIKE '%{(SearchBar.searchTXT)}%' OR [RegistrationDate] LIKE '%{(SearchBar.searchTXT)}%' OR [Status] LIKE '%{(SearchBar.searchTXT)}%'  ";
+                // Sanitize search input to prevent SQL injection
+                string sanitizedSearch = SanitizeLikeInput(SearchBar.searchTXT);
+                string query = $"WHERE [numid] LIKE '%{sanitizedSearch}%' OR [CustomerID] LIKE '%{sanitizedSearch}%' OR [CustomerName] LIKE '%{sanitizedSearch}%' OR [PhoneNumber] LIKE '%{sanitizedSearch}%' OR [Address] LIKE '%{sanitizedSearch}%' OR [PaymentTerm] LIKE '%{sanitizedSearch}%' OR [RegistrationDate] LIKE '%{sanitizedSearch}%' OR [Status] LIKE '%{sanitizedSearch}%'  ";
                 totalPages = CustomerClass.loadCustomerData(dgvTable, lblMaxPage, lblPageNum, currentPageIndex, query);
             }// has search query ALL
         }
@@ -112,7 +129,9 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer
                     lblPageNum.Text = "1";
                     currentPageIndex = 1;//!!!!!!!!!!!!!!!!!!!
                     dgvTable.Rows.Clear();
-                    string query = $"WHERE [numid] LIKE '%{(SearchBar.searchTXT)}%' OR [CustomerID] LIKE '%{(SearchBar.searchTXT)}%' OR [CustomerName] LIKE '%{(SearchBar.searchTXT)}%' OR [PhoneNumber] LIKE '%{(SearchBar.searchTXT)}%' OR [Address] LIKE '%{(SearchBar.searchTXT)}%' OR [PaymentTerm] LIKE '%{(SearchBar.searchTXT)}%' OR [RegistrationDate] LIKE '%{(SearchBar.searchTXT)}%' OR [Status] LIKE '%{(SearchBar.searchTXT)}%' OR ";
+                    // Sanitize search input to prevent SQL injection
+                    string sanitizedSearch = SanitizeLikeInput(SearchBar.searchTXT);
+                    string query = $"WHERE [numid] LIKE '%{sanitizedSearch}%' OR [CustomerID] LIKE '%{sanitizedSearch}%' OR [CustomerName] LIKE '%{sanitizedSearch}%' OR [PhoneNumber] LIKE '%{sanitizedSearch}%' OR [Address] LIKE '%{sanitizedSearch}%' OR [PaymentTerm] LIKE '%{sanitizedSearch}%' OR [RegistrationDate] LIKE '%{sanitizedSearch}%' OR [Status] LIKE '%{sanitizedSearch}%'";
                     totalPages = CustomerClass.loadCustomerData(dgvTable, lblMaxPage, lblPageNum, currentPageIndex, query);
                 }
                 else
