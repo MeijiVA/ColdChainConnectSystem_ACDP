@@ -53,7 +53,7 @@
             this.timelbl.BackColor = System.Drawing.Color.Transparent;
             this.timelbl.Font = new System.Drawing.Font("Arial Rounded MT Bold", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.timelbl.ForeColor = System.Drawing.Color.White;
-            this.timelbl.Location = new System.Drawing.Point(647, 5);
+            this.timelbl.Location = new System.Drawing.Point(647, 3);
             this.timelbl.Name = "timelbl";
             this.timelbl.Size = new System.Drawing.Size(133, 17);
             this.timelbl.TabIndex = 1;
@@ -63,7 +63,7 @@
             this.daylbl.BackColor = System.Drawing.Color.Transparent;
             this.daylbl.Font = new System.Drawing.Font("Arial Rounded MT Bold", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.daylbl.ForeColor = System.Drawing.Color.White;
-            this.daylbl.Location = new System.Drawing.Point(648, 17);
+            this.daylbl.Location = new System.Drawing.Point(648, 18);
             this.daylbl.Name = "daylbl";
             this.daylbl.Size = new System.Drawing.Size(132, 17);
             this.daylbl.TabIndex = 2;
@@ -73,7 +73,7 @@
             this.datelbl.BackColor = System.Drawing.Color.Transparent;
             this.datelbl.Font = new System.Drawing.Font("Arial Rounded MT Bold", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.datelbl.ForeColor = System.Drawing.Color.White;
-            this.datelbl.Location = new System.Drawing.Point(648, 30);
+            this.datelbl.Location = new System.Drawing.Point(648, 33);
             this.datelbl.Name = "datelbl";
             this.datelbl.Size = new System.Drawing.Size(131, 17);
             this.datelbl.TabIndex = 3;
