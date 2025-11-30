@@ -428,6 +428,6 @@
         private System.Windows.Forms.Label lblStatus;
         private Materials.CustomButton btnSelectImage;
         public ToggleSlider.ToggleSliderComponent tscStatus;
-        public Materials.CustomComboBox cbxPosition;
+        private Materials.CustomComboBox cbxPosition;
     }
 }
