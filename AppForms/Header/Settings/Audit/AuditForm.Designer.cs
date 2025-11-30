@@ -50,6 +50,7 @@
             this.pnlSearch = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.customPanel2 = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTable)).BeginInit();
             this.customPanel1.SuspendLayout();
             this.pnlSearch.SuspendLayout();
@@ -76,7 +77,7 @@
             this.dgvTable.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
             this.dgvTable.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(160)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
@@ -105,7 +106,7 @@
             this.dgvTable.DefaultCellStyle = dataGridViewCellStyle8;
             this.dgvTable.EnableHeadersVisualStyles = false;
             this.dgvTable.GridColor = System.Drawing.Color.White;
-            this.dgvTable.Location = new System.Drawing.Point(5, 58);
+            this.dgvTable.Location = new System.Drawing.Point(6, 58);
             this.dgvTable.MultiSelect = false;
             this.dgvTable.Name = "dgvTable";
             dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -131,7 +132,7 @@
             this.dgvTable.RowTemplate.DefaultCellStyle.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvTable.RowTemplate.Height = 40;
             this.dgvTable.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvTable.Size = new System.Drawing.Size(755, 388);
+            this.dgvTable.Size = new System.Drawing.Size(754, 376);
             this.dgvTable.TabIndex = 9;
             // 
             // numid
@@ -224,21 +225,21 @@
             this.customPanel1.Location = new System.Drawing.Point(5, 6);
             this.customPanel1.Name = "customPanel1";
             this.customPanel1.Padding = new System.Windows.Forms.Padding(15);
-            this.customPanel1.Size = new System.Drawing.Size(755, 50);
+            this.customPanel1.Size = new System.Drawing.Size(755, 63);
             this.customPanel1.TabIndex = 5;
             this.customPanel1.TextColor = System.Drawing.Color.White;
             // 
             // pnlSearch
             // 
-            this.pnlSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.pnlSearch.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.pnlSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(160)))));
+            this.pnlSearch.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(160)))));
             this.pnlSearch.BorderColor = System.Drawing.Color.White;
             this.pnlSearch.BorderRadius = 10;
             this.pnlSearch.BorderSize = 1;
             this.pnlSearch.Controls.Add(this.txtSearch);
             this.pnlSearch.Controls.Add(this.pictureBox1);
             this.pnlSearch.ForeColor = System.Drawing.Color.White;
-            this.pnlSearch.Location = new System.Drawing.Point(16, 7);
+            this.pnlSearch.Location = new System.Drawing.Point(16, 8);
             this.pnlSearch.Name = "pnlSearch";
             this.pnlSearch.Padding = new System.Windows.Forms.Padding(40, 10, 2, 2);
             this.pnlSearch.Size = new System.Drawing.Size(278, 35);
@@ -247,7 +248,7 @@
             // 
             // txtSearch
             // 
-            this.txtSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.txtSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(160)))));
             this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSearch.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
@@ -271,6 +272,21 @@
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
+            // customPanel2
+            // 
+            this.customPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(160)))));
+            this.customPanel2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(160)))));
+            this.customPanel2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.customPanel2.BorderRadius = 10;
+            this.customPanel2.BorderSize = 0;
+            this.customPanel2.ForeColor = System.Drawing.Color.White;
+            this.customPanel2.Location = new System.Drawing.Point(6, 420);
+            this.customPanel2.Name = "customPanel2";
+            this.customPanel2.Padding = new System.Windows.Forms.Padding(15);
+            this.customPanel2.Size = new System.Drawing.Size(754, 30);
+            this.customPanel2.TabIndex = 6;
+            this.customPanel2.TextColor = System.Drawing.Color.White;
+            // 
             // AuditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -278,6 +294,7 @@
             this.ClientSize = new System.Drawing.Size(766, 458);
             this.Controls.Add(this.dgvTable);
             this.Controls.Add(this.customPanel1);
+            this.Controls.Add(this.customPanel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AuditForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
@@ -306,5 +323,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn referenceid;
         private System.Windows.Forms.DataGridViewTextBoxColumn desc;
         private System.Windows.Forms.DataGridViewTextBoxColumn actiondate;
+        private Materials.CustomPanel customPanel2;
     }
 }

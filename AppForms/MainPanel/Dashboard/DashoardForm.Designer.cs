@@ -44,6 +44,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.customLabel10 = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
+            this.customPanel8 = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
             this.tableTransaction = new System.Windows.Forms.DataGridView();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.amt = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,11 +53,30 @@
             this.Status = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.customPanel5 = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
+            this.customLabel9 = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
+            this.customPanel4 = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
+            this.customLabel3 = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
+            this.customPanel3 = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
+            this.customLabel8 = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
             this.label5 = new System.Windows.Forms.Label();
             this.profitGenpnl = new System.Windows.Forms.Panel();
+            this.customPanel7 = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
+            this.clblProfit = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
+            this.lblTitleProfit = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
             this.totalSales = new System.Windows.Forms.Panel();
+            this.customPanel6 = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
+            this.clblSales = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
+            this.lblTitleSales = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
             this.totalCustpnl = new System.Windows.Forms.Panel();
+            this.customPanel2 = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
+            this.clblCustomer = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
+            this.lblTitleCust = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
             this.totalProdpnl = new System.Windows.Forms.Panel();
+            this.customPanel1 = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
+            this.clblProducts = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
+            this.lblTitleProd = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
+            this.customLabel1 = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
             this.sqlCommandBuilder1 = new Microsoft.Data.SqlClient.SqlCommandBuilder();
             this.tableExpiry = new System.Windows.Forms.DataGridView();
             this.skucode = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -64,44 +85,23 @@
             this.image = new System.Windows.Forms.DataGridViewImageColumn();
             this.customLabel2 = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
             this.greetPanel1 = new ColdChainConnectSystem_ACDP.AppForms.MainPanel.Dashboard.GreetPanel();
-            this.customLabel10 = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
-            this.customPanel5 = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
-            this.customLabel9 = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
-            this.customPanel4 = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
-            this.customLabel3 = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
-            this.customPanel3 = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
-            this.customLabel8 = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
-            this.customPanel7 = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
-            this.clblProfit = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
-            this.lblTitleProfit = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
-            this.customPanel6 = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
-            this.clblSales = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
-            this.lblTitleSales = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
-            this.customPanel2 = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
-            this.clblCustomer = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
-            this.lblTitleCust = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
-            this.customPanel1 = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
-            this.clblProducts = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
-            this.lblTitleProd = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
-            this.customLabel1 = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
-            this.customPanel8 = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
             this.customPanel9 = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
             this.panel9.SuspendLayout();
+            this.customPanel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tableTransaction)).BeginInit();
             this.panel6.SuspendLayout();
-            this.profitGenpnl.SuspendLayout();
-            this.totalSales.SuspendLayout();
-            this.totalCustpnl.SuspendLayout();
-            this.totalProdpnl.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tableExpiry)).BeginInit();
             this.customPanel5.SuspendLayout();
             this.customPanel4.SuspendLayout();
             this.customPanel3.SuspendLayout();
+            this.profitGenpnl.SuspendLayout();
             this.customPanel7.SuspendLayout();
+            this.totalSales.SuspendLayout();
             this.customPanel6.SuspendLayout();
+            this.totalCustpnl.SuspendLayout();
             this.customPanel2.SuspendLayout();
+            this.totalProdpnl.SuspendLayout();
             this.customPanel1.SuspendLayout();
-            this.customPanel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tableExpiry)).BeginInit();
             this.customPanel9.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -113,6 +113,40 @@
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(400, 295);
             this.panel9.TabIndex = 20;
+            // 
+            // customLabel10
+            // 
+            this.customLabel10.AutoSize = true;
+            this.customLabel10.BackColor = System.Drawing.Color.Transparent;
+            this.customLabel10.BackgroundColor = System.Drawing.Color.Transparent;
+            this.customLabel10.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.customLabel10.BorderRadius = 0;
+            this.customLabel10.BorderSize = 0;
+            this.customLabel10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.customLabel10.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customLabel10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.customLabel10.Location = new System.Drawing.Point(12, 14);
+            this.customLabel10.Name = "customLabel10";
+            this.customLabel10.Size = new System.Drawing.Size(159, 18);
+            this.customLabel10.TabIndex = 0;
+            this.customLabel10.Text = "Latest Transaction";
+            this.customLabel10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.customLabel10.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            // 
+            // customPanel8
+            // 
+            this.customPanel8.BackColor = System.Drawing.Color.White;
+            this.customPanel8.BackgroundColor = System.Drawing.Color.White;
+            this.customPanel8.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.customPanel8.BorderRadius = 10;
+            this.customPanel8.BorderSize = 1;
+            this.customPanel8.Controls.Add(this.tableTransaction);
+            this.customPanel8.ForeColor = System.Drawing.Color.White;
+            this.customPanel8.Location = new System.Drawing.Point(10, 35);
+            this.customPanel8.Name = "customPanel8";
+            this.customPanel8.Size = new System.Drawing.Size(380, 248);
+            this.customPanel8.TabIndex = 2;
+            this.customPanel8.TextColor = System.Drawing.Color.White;
             // 
             // tableTransaction
             // 
@@ -249,6 +283,108 @@
             this.panel6.Size = new System.Drawing.Size(400, 127);
             this.panel6.TabIndex = 16;
             // 
+            // customPanel5
+            // 
+            this.customPanel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.customPanel5.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.customPanel5.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.customPanel5.BorderRadius = 15;
+            this.customPanel5.BorderSize = 0;
+            this.customPanel5.Controls.Add(this.customLabel9);
+            this.customPanel5.ForeColor = System.Drawing.Color.White;
+            this.customPanel5.Location = new System.Drawing.Point(292, 38);
+            this.customPanel5.Name = "customPanel5";
+            this.customPanel5.Size = new System.Drawing.Size(98, 66);
+            this.customPanel5.TabIndex = 6;
+            this.customPanel5.TextColor = System.Drawing.Color.White;
+            // 
+            // customLabel9
+            // 
+            this.customLabel9.AutoSize = true;
+            this.customLabel9.BackColor = System.Drawing.Color.Transparent;
+            this.customLabel9.BackgroundColor = System.Drawing.Color.Transparent;
+            this.customLabel9.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.customLabel9.BorderRadius = 0;
+            this.customLabel9.BorderSize = 0;
+            this.customLabel9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.customLabel9.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customLabel9.ForeColor = System.Drawing.Color.White;
+            this.customLabel9.Location = new System.Drawing.Point(7, 12);
+            this.customLabel9.Name = "customLabel9";
+            this.customLabel9.Size = new System.Drawing.Size(53, 18);
+            this.customLabel9.TabIndex = 2;
+            this.customLabel9.Text = "12:00";
+            this.customLabel9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.customLabel9.TextColor = System.Drawing.Color.White;
+            // 
+            // customPanel4
+            // 
+            this.customPanel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.customPanel4.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.customPanel4.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.customPanel4.BorderRadius = 15;
+            this.customPanel4.BorderSize = 0;
+            this.customPanel4.Controls.Add(this.customLabel3);
+            this.customPanel4.ForeColor = System.Drawing.Color.White;
+            this.customPanel4.Location = new System.Drawing.Point(153, 38);
+            this.customPanel4.Name = "customPanel4";
+            this.customPanel4.Size = new System.Drawing.Size(98, 66);
+            this.customPanel4.TabIndex = 6;
+            this.customPanel4.TextColor = System.Drawing.Color.White;
+            // 
+            // customLabel3
+            // 
+            this.customLabel3.AutoSize = true;
+            this.customLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.customLabel3.BackgroundColor = System.Drawing.Color.Transparent;
+            this.customLabel3.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.customLabel3.BorderRadius = 0;
+            this.customLabel3.BorderSize = 0;
+            this.customLabel3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.customLabel3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customLabel3.ForeColor = System.Drawing.Color.White;
+            this.customLabel3.Location = new System.Drawing.Point(7, 12);
+            this.customLabel3.Name = "customLabel3";
+            this.customLabel3.Size = new System.Drawing.Size(53, 18);
+            this.customLabel3.TabIndex = 1;
+            this.customLabel3.Text = "12:00";
+            this.customLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.customLabel3.TextColor = System.Drawing.Color.White;
+            // 
+            // customPanel3
+            // 
+            this.customPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.customPanel3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.customPanel3.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.customPanel3.BorderRadius = 15;
+            this.customPanel3.BorderSize = 0;
+            this.customPanel3.Controls.Add(this.customLabel8);
+            this.customPanel3.ForeColor = System.Drawing.Color.White;
+            this.customPanel3.Location = new System.Drawing.Point(10, 38);
+            this.customPanel3.Name = "customPanel3";
+            this.customPanel3.Size = new System.Drawing.Size(98, 66);
+            this.customPanel3.TabIndex = 5;
+            this.customPanel3.TextColor = System.Drawing.Color.White;
+            // 
+            // customLabel8
+            // 
+            this.customLabel8.AutoSize = true;
+            this.customLabel8.BackColor = System.Drawing.Color.Transparent;
+            this.customLabel8.BackgroundColor = System.Drawing.Color.Transparent;
+            this.customLabel8.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.customLabel8.BorderRadius = 0;
+            this.customLabel8.BorderSize = 0;
+            this.customLabel8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.customLabel8.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customLabel8.ForeColor = System.Drawing.Color.White;
+            this.customLabel8.Location = new System.Drawing.Point(7, 12);
+            this.customLabel8.Name = "customLabel8";
+            this.customLabel8.Size = new System.Drawing.Size(53, 18);
+            this.customLabel8.TabIndex = 0;
+            this.customLabel8.Text = "08:00";
+            this.customLabel8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.customLabel8.TextColor = System.Drawing.Color.White;
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -269,6 +405,61 @@
             this.profitGenpnl.Size = new System.Drawing.Size(200, 100);
             this.profitGenpnl.TabIndex = 21;
             // 
+            // customPanel7
+            // 
+            this.customPanel7.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.customPanel7.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.customPanel7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.customPanel7.BorderRadius = 15;
+            this.customPanel7.BorderSize = 1;
+            this.customPanel7.Controls.Add(this.clblProfit);
+            this.customPanel7.Controls.Add(this.lblTitleProfit);
+            this.customPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.customPanel7.ForeColor = System.Drawing.Color.White;
+            this.customPanel7.Location = new System.Drawing.Point(10, 10);
+            this.customPanel7.Name = "customPanel7";
+            this.customPanel7.Size = new System.Drawing.Size(180, 80);
+            this.customPanel7.TabIndex = 2;
+            this.customPanel7.TextColor = System.Drawing.Color.White;
+            // 
+            // clblProfit
+            // 
+            this.clblProfit.AutoSize = true;
+            this.clblProfit.BackColor = System.Drawing.Color.Transparent;
+            this.clblProfit.BackgroundColor = System.Drawing.Color.Transparent;
+            this.clblProfit.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.clblProfit.BorderRadius = 0;
+            this.clblProfit.BorderSize = 0;
+            this.clblProfit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clblProfit.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clblProfit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.clblProfit.Location = new System.Drawing.Point(12, 28);
+            this.clblProfit.Name = "clblProfit";
+            this.clblProfit.Size = new System.Drawing.Size(28, 18);
+            this.clblProfit.TabIndex = 4;
+            this.clblProfit.Text = "55";
+            this.clblProfit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.clblProfit.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            // 
+            // lblTitleProfit
+            // 
+            this.lblTitleProfit.AutoSize = true;
+            this.lblTitleProfit.BackColor = System.Drawing.Color.Transparent;
+            this.lblTitleProfit.BackgroundColor = System.Drawing.Color.Transparent;
+            this.lblTitleProfit.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.lblTitleProfit.BorderRadius = 0;
+            this.lblTitleProfit.BorderSize = 0;
+            this.lblTitleProfit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblTitleProfit.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitleProfit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.lblTitleProfit.Location = new System.Drawing.Point(12, 10);
+            this.lblTitleProfit.Name = "lblTitleProfit";
+            this.lblTitleProfit.Size = new System.Drawing.Size(122, 15);
+            this.lblTitleProfit.TabIndex = 4;
+            this.lblTitleProfit.Text = "Profits Generated";
+            this.lblTitleProfit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTitleProfit.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            // 
             // totalSales
             // 
             this.totalSales.Controls.Add(this.customPanel6);
@@ -277,6 +468,61 @@
             this.totalSales.Padding = new System.Windows.Forms.Padding(10);
             this.totalSales.Size = new System.Drawing.Size(200, 100);
             this.totalSales.TabIndex = 19;
+            // 
+            // customPanel6
+            // 
+            this.customPanel6.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.customPanel6.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.customPanel6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.customPanel6.BorderRadius = 15;
+            this.customPanel6.BorderSize = 1;
+            this.customPanel6.Controls.Add(this.clblSales);
+            this.customPanel6.Controls.Add(this.lblTitleSales);
+            this.customPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.customPanel6.ForeColor = System.Drawing.Color.White;
+            this.customPanel6.Location = new System.Drawing.Point(10, 10);
+            this.customPanel6.Name = "customPanel6";
+            this.customPanel6.Size = new System.Drawing.Size(180, 80);
+            this.customPanel6.TabIndex = 1;
+            this.customPanel6.TextColor = System.Drawing.Color.White;
+            // 
+            // clblSales
+            // 
+            this.clblSales.AutoSize = true;
+            this.clblSales.BackColor = System.Drawing.Color.Transparent;
+            this.clblSales.BackgroundColor = System.Drawing.Color.Transparent;
+            this.clblSales.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.clblSales.BorderRadius = 0;
+            this.clblSales.BorderSize = 0;
+            this.clblSales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clblSales.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clblSales.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.clblSales.Location = new System.Drawing.Point(12, 28);
+            this.clblSales.Name = "clblSales";
+            this.clblSales.Size = new System.Drawing.Size(28, 18);
+            this.clblSales.TabIndex = 4;
+            this.clblSales.Text = "55";
+            this.clblSales.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.clblSales.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            // 
+            // lblTitleSales
+            // 
+            this.lblTitleSales.AutoSize = true;
+            this.lblTitleSales.BackColor = System.Drawing.Color.Transparent;
+            this.lblTitleSales.BackgroundColor = System.Drawing.Color.Transparent;
+            this.lblTitleSales.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.lblTitleSales.BorderRadius = 0;
+            this.lblTitleSales.BorderSize = 0;
+            this.lblTitleSales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblTitleSales.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitleSales.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.lblTitleSales.Location = new System.Drawing.Point(12, 10);
+            this.lblTitleSales.Name = "lblTitleSales";
+            this.lblTitleSales.Size = new System.Drawing.Size(79, 15);
+            this.lblTitleSales.TabIndex = 4;
+            this.lblTitleSales.Text = "Total Sales";
+            this.lblTitleSales.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTitleSales.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             // 
             // totalCustpnl
             // 
@@ -287,6 +533,61 @@
             this.totalCustpnl.Size = new System.Drawing.Size(200, 100);
             this.totalCustpnl.TabIndex = 17;
             // 
+            // customPanel2
+            // 
+            this.customPanel2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.customPanel2.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.customPanel2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.customPanel2.BorderRadius = 15;
+            this.customPanel2.BorderSize = 1;
+            this.customPanel2.Controls.Add(this.clblCustomer);
+            this.customPanel2.Controls.Add(this.lblTitleCust);
+            this.customPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.customPanel2.ForeColor = System.Drawing.Color.White;
+            this.customPanel2.Location = new System.Drawing.Point(10, 10);
+            this.customPanel2.Name = "customPanel2";
+            this.customPanel2.Size = new System.Drawing.Size(180, 80);
+            this.customPanel2.TabIndex = 0;
+            this.customPanel2.TextColor = System.Drawing.Color.White;
+            // 
+            // clblCustomer
+            // 
+            this.clblCustomer.AutoSize = true;
+            this.clblCustomer.BackColor = System.Drawing.Color.Transparent;
+            this.clblCustomer.BackgroundColor = System.Drawing.Color.Transparent;
+            this.clblCustomer.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.clblCustomer.BorderRadius = 0;
+            this.clblCustomer.BorderSize = 0;
+            this.clblCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clblCustomer.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clblCustomer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.clblCustomer.Location = new System.Drawing.Point(12, 28);
+            this.clblCustomer.Name = "clblCustomer";
+            this.clblCustomer.Size = new System.Drawing.Size(28, 18);
+            this.clblCustomer.TabIndex = 4;
+            this.clblCustomer.Text = "55";
+            this.clblCustomer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.clblCustomer.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            // 
+            // lblTitleCust
+            // 
+            this.lblTitleCust.AutoSize = true;
+            this.lblTitleCust.BackColor = System.Drawing.Color.Transparent;
+            this.lblTitleCust.BackgroundColor = System.Drawing.Color.Transparent;
+            this.lblTitleCust.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.lblTitleCust.BorderRadius = 0;
+            this.lblTitleCust.BorderSize = 0;
+            this.lblTitleCust.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblTitleCust.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitleCust.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.lblTitleCust.Location = new System.Drawing.Point(12, 10);
+            this.lblTitleCust.Name = "lblTitleCust";
+            this.lblTitleCust.Size = new System.Drawing.Size(114, 15);
+            this.lblTitleCust.TabIndex = 4;
+            this.lblTitleCust.Text = "Total Customers";
+            this.lblTitleCust.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTitleCust.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            // 
             // totalProdpnl
             // 
             this.totalProdpnl.Controls.Add(this.customPanel1);
@@ -295,6 +596,80 @@
             this.totalProdpnl.Padding = new System.Windows.Forms.Padding(10);
             this.totalProdpnl.Size = new System.Drawing.Size(201, 100);
             this.totalProdpnl.TabIndex = 15;
+            // 
+            // customPanel1
+            // 
+            this.customPanel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.customPanel1.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.customPanel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.customPanel1.BorderRadius = 15;
+            this.customPanel1.BorderSize = 1;
+            this.customPanel1.Controls.Add(this.clblProducts);
+            this.customPanel1.Controls.Add(this.lblTitleProd);
+            this.customPanel1.Controls.Add(this.customLabel1);
+            this.customPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.customPanel1.ForeColor = System.Drawing.Color.White;
+            this.customPanel1.Location = new System.Drawing.Point(10, 10);
+            this.customPanel1.Name = "customPanel1";
+            this.customPanel1.Size = new System.Drawing.Size(181, 80);
+            this.customPanel1.TabIndex = 1;
+            this.customPanel1.TextColor = System.Drawing.Color.White;
+            // 
+            // clblProducts
+            // 
+            this.clblProducts.AutoSize = true;
+            this.clblProducts.BackColor = System.Drawing.Color.Transparent;
+            this.clblProducts.BackgroundColor = System.Drawing.Color.Transparent;
+            this.clblProducts.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.clblProducts.BorderRadius = 0;
+            this.clblProducts.BorderSize = 0;
+            this.clblProducts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clblProducts.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clblProducts.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.clblProducts.Location = new System.Drawing.Point(12, 28);
+            this.clblProducts.Name = "clblProducts";
+            this.clblProducts.Size = new System.Drawing.Size(28, 18);
+            this.clblProducts.TabIndex = 2;
+            this.clblProducts.Text = "55";
+            this.clblProducts.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.clblProducts.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            // 
+            // lblTitleProd
+            // 
+            this.lblTitleProd.AutoSize = true;
+            this.lblTitleProd.BackColor = System.Drawing.Color.Transparent;
+            this.lblTitleProd.BackgroundColor = System.Drawing.Color.Transparent;
+            this.lblTitleProd.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.lblTitleProd.BorderRadius = 0;
+            this.lblTitleProd.BorderSize = 0;
+            this.lblTitleProd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblTitleProd.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitleProd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.lblTitleProd.Location = new System.Drawing.Point(12, 10);
+            this.lblTitleProd.Name = "lblTitleProd";
+            this.lblTitleProd.Size = new System.Drawing.Size(102, 15);
+            this.lblTitleProd.TabIndex = 1;
+            this.lblTitleProd.Text = "Total Products";
+            this.lblTitleProd.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTitleProd.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            // 
+            // customLabel1
+            // 
+            this.customLabel1.AutoSize = true;
+            this.customLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.customLabel1.BackgroundColor = System.Drawing.Color.Transparent;
+            this.customLabel1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.customLabel1.BorderRadius = 0;
+            this.customLabel1.BorderSize = 0;
+            this.customLabel1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.customLabel1.ForeColor = System.Drawing.Color.White;
+            this.customLabel1.Location = new System.Drawing.Point(12, 11);
+            this.customLabel1.Name = "customLabel1";
+            this.customLabel1.Size = new System.Drawing.Size(73, 13);
+            this.customLabel1.TabIndex = 0;
+            this.customLabel1.Text = "customLabel1";
+            this.customLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.customLabel1.TextColor = System.Drawing.Color.White;
             // 
             // tableExpiry
             // 
@@ -441,381 +816,6 @@
             this.greetPanel1.Size = new System.Drawing.Size(798, 51);
             this.greetPanel1.TabIndex = 22;
             // 
-            // customLabel10
-            // 
-            this.customLabel10.AutoSize = true;
-            this.customLabel10.BackColor = System.Drawing.Color.Transparent;
-            this.customLabel10.BackgroundColor = System.Drawing.Color.Transparent;
-            this.customLabel10.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.customLabel10.BorderRadius = 0;
-            this.customLabel10.BorderSize = 0;
-            this.customLabel10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customLabel10.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customLabel10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.customLabel10.Location = new System.Drawing.Point(12, 14);
-            this.customLabel10.Name = "customLabel10";
-            this.customLabel10.Size = new System.Drawing.Size(159, 18);
-            this.customLabel10.TabIndex = 0;
-            this.customLabel10.Text = "Latest Transaction";
-            this.customLabel10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.customLabel10.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            // 
-            // customPanel5
-            // 
-            this.customPanel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.customPanel5.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.customPanel5.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.customPanel5.BorderRadius = 15;
-            this.customPanel5.BorderSize = 0;
-            this.customPanel5.Controls.Add(this.customLabel9);
-            this.customPanel5.ForeColor = System.Drawing.Color.White;
-            this.customPanel5.Location = new System.Drawing.Point(292, 38);
-            this.customPanel5.Name = "customPanel5";
-            this.customPanel5.Size = new System.Drawing.Size(98, 66);
-            this.customPanel5.TabIndex = 6;
-            this.customPanel5.TextColor = System.Drawing.Color.White;
-            // 
-            // customLabel9
-            // 
-            this.customLabel9.AutoSize = true;
-            this.customLabel9.BackColor = System.Drawing.Color.Transparent;
-            this.customLabel9.BackgroundColor = System.Drawing.Color.Transparent;
-            this.customLabel9.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.customLabel9.BorderRadius = 0;
-            this.customLabel9.BorderSize = 0;
-            this.customLabel9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customLabel9.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customLabel9.ForeColor = System.Drawing.Color.White;
-            this.customLabel9.Location = new System.Drawing.Point(7, 12);
-            this.customLabel9.Name = "customLabel9";
-            this.customLabel9.Size = new System.Drawing.Size(53, 18);
-            this.customLabel9.TabIndex = 2;
-            this.customLabel9.Text = "12:00";
-            this.customLabel9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.customLabel9.TextColor = System.Drawing.Color.White;
-            // 
-            // customPanel4
-            // 
-            this.customPanel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.customPanel4.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.customPanel4.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.customPanel4.BorderRadius = 15;
-            this.customPanel4.BorderSize = 0;
-            this.customPanel4.Controls.Add(this.customLabel3);
-            this.customPanel4.ForeColor = System.Drawing.Color.White;
-            this.customPanel4.Location = new System.Drawing.Point(153, 38);
-            this.customPanel4.Name = "customPanel4";
-            this.customPanel4.Size = new System.Drawing.Size(98, 66);
-            this.customPanel4.TabIndex = 6;
-            this.customPanel4.TextColor = System.Drawing.Color.White;
-            // 
-            // customLabel3
-            // 
-            this.customLabel3.AutoSize = true;
-            this.customLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.customLabel3.BackgroundColor = System.Drawing.Color.Transparent;
-            this.customLabel3.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.customLabel3.BorderRadius = 0;
-            this.customLabel3.BorderSize = 0;
-            this.customLabel3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customLabel3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customLabel3.ForeColor = System.Drawing.Color.White;
-            this.customLabel3.Location = new System.Drawing.Point(7, 12);
-            this.customLabel3.Name = "customLabel3";
-            this.customLabel3.Size = new System.Drawing.Size(53, 18);
-            this.customLabel3.TabIndex = 1;
-            this.customLabel3.Text = "12:00";
-            this.customLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.customLabel3.TextColor = System.Drawing.Color.White;
-            // 
-            // customPanel3
-            // 
-            this.customPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.customPanel3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.customPanel3.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.customPanel3.BorderRadius = 15;
-            this.customPanel3.BorderSize = 0;
-            this.customPanel3.Controls.Add(this.customLabel8);
-            this.customPanel3.ForeColor = System.Drawing.Color.White;
-            this.customPanel3.Location = new System.Drawing.Point(10, 38);
-            this.customPanel3.Name = "customPanel3";
-            this.customPanel3.Size = new System.Drawing.Size(98, 66);
-            this.customPanel3.TabIndex = 5;
-            this.customPanel3.TextColor = System.Drawing.Color.White;
-            // 
-            // customLabel8
-            // 
-            this.customLabel8.AutoSize = true;
-            this.customLabel8.BackColor = System.Drawing.Color.Transparent;
-            this.customLabel8.BackgroundColor = System.Drawing.Color.Transparent;
-            this.customLabel8.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.customLabel8.BorderRadius = 0;
-            this.customLabel8.BorderSize = 0;
-            this.customLabel8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customLabel8.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customLabel8.ForeColor = System.Drawing.Color.White;
-            this.customLabel8.Location = new System.Drawing.Point(7, 12);
-            this.customLabel8.Name = "customLabel8";
-            this.customLabel8.Size = new System.Drawing.Size(53, 18);
-            this.customLabel8.TabIndex = 0;
-            this.customLabel8.Text = "08:00";
-            this.customLabel8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.customLabel8.TextColor = System.Drawing.Color.White;
-            // 
-            // customPanel7
-            // 
-            this.customPanel7.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.customPanel7.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.customPanel7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.customPanel7.BorderRadius = 15;
-            this.customPanel7.BorderSize = 1;
-            this.customPanel7.Controls.Add(this.clblProfit);
-            this.customPanel7.Controls.Add(this.lblTitleProfit);
-            this.customPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.customPanel7.ForeColor = System.Drawing.Color.White;
-            this.customPanel7.Location = new System.Drawing.Point(10, 10);
-            this.customPanel7.Name = "customPanel7";
-            this.customPanel7.Size = new System.Drawing.Size(180, 80);
-            this.customPanel7.TabIndex = 2;
-            this.customPanel7.TextColor = System.Drawing.Color.White;
-            // 
-            // clblProfit
-            // 
-            this.clblProfit.AutoSize = true;
-            this.clblProfit.BackColor = System.Drawing.Color.Transparent;
-            this.clblProfit.BackgroundColor = System.Drawing.Color.Transparent;
-            this.clblProfit.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.clblProfit.BorderRadius = 0;
-            this.clblProfit.BorderSize = 0;
-            this.clblProfit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.clblProfit.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clblProfit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.clblProfit.Location = new System.Drawing.Point(12, 28);
-            this.clblProfit.Name = "clblProfit";
-            this.clblProfit.Size = new System.Drawing.Size(28, 18);
-            this.clblProfit.TabIndex = 4;
-            this.clblProfit.Text = "55";
-            this.clblProfit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.clblProfit.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            // 
-            // lblTitleProfit
-            // 
-            this.lblTitleProfit.AutoSize = true;
-            this.lblTitleProfit.BackColor = System.Drawing.Color.Transparent;
-            this.lblTitleProfit.BackgroundColor = System.Drawing.Color.Transparent;
-            this.lblTitleProfit.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.lblTitleProfit.BorderRadius = 0;
-            this.lblTitleProfit.BorderSize = 0;
-            this.lblTitleProfit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblTitleProfit.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitleProfit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.lblTitleProfit.Location = new System.Drawing.Point(12, 10);
-            this.lblTitleProfit.Name = "lblTitleProfit";
-            this.lblTitleProfit.Size = new System.Drawing.Size(122, 15);
-            this.lblTitleProfit.TabIndex = 4;
-            this.lblTitleProfit.Text = "Profits Generated";
-            this.lblTitleProfit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblTitleProfit.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            // 
-            // customPanel6
-            // 
-            this.customPanel6.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.customPanel6.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.customPanel6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.customPanel6.BorderRadius = 15;
-            this.customPanel6.BorderSize = 1;
-            this.customPanel6.Controls.Add(this.clblSales);
-            this.customPanel6.Controls.Add(this.lblTitleSales);
-            this.customPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.customPanel6.ForeColor = System.Drawing.Color.White;
-            this.customPanel6.Location = new System.Drawing.Point(10, 10);
-            this.customPanel6.Name = "customPanel6";
-            this.customPanel6.Size = new System.Drawing.Size(180, 80);
-            this.customPanel6.TabIndex = 1;
-            this.customPanel6.TextColor = System.Drawing.Color.White;
-            // 
-            // clblSales
-            // 
-            this.clblSales.AutoSize = true;
-            this.clblSales.BackColor = System.Drawing.Color.Transparent;
-            this.clblSales.BackgroundColor = System.Drawing.Color.Transparent;
-            this.clblSales.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.clblSales.BorderRadius = 0;
-            this.clblSales.BorderSize = 0;
-            this.clblSales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.clblSales.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clblSales.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.clblSales.Location = new System.Drawing.Point(12, 28);
-            this.clblSales.Name = "clblSales";
-            this.clblSales.Size = new System.Drawing.Size(28, 18);
-            this.clblSales.TabIndex = 4;
-            this.clblSales.Text = "55";
-            this.clblSales.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.clblSales.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            // 
-            // lblTitleSales
-            // 
-            this.lblTitleSales.AutoSize = true;
-            this.lblTitleSales.BackColor = System.Drawing.Color.Transparent;
-            this.lblTitleSales.BackgroundColor = System.Drawing.Color.Transparent;
-            this.lblTitleSales.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.lblTitleSales.BorderRadius = 0;
-            this.lblTitleSales.BorderSize = 0;
-            this.lblTitleSales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblTitleSales.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitleSales.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.lblTitleSales.Location = new System.Drawing.Point(12, 10);
-            this.lblTitleSales.Name = "lblTitleSales";
-            this.lblTitleSales.Size = new System.Drawing.Size(79, 15);
-            this.lblTitleSales.TabIndex = 4;
-            this.lblTitleSales.Text = "Total Sales";
-            this.lblTitleSales.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblTitleSales.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            // 
-            // customPanel2
-            // 
-            this.customPanel2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.customPanel2.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.customPanel2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.customPanel2.BorderRadius = 15;
-            this.customPanel2.BorderSize = 1;
-            this.customPanel2.Controls.Add(this.clblCustomer);
-            this.customPanel2.Controls.Add(this.lblTitleCust);
-            this.customPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.customPanel2.ForeColor = System.Drawing.Color.White;
-            this.customPanel2.Location = new System.Drawing.Point(10, 10);
-            this.customPanel2.Name = "customPanel2";
-            this.customPanel2.Size = new System.Drawing.Size(180, 80);
-            this.customPanel2.TabIndex = 0;
-            this.customPanel2.TextColor = System.Drawing.Color.White;
-            // 
-            // clblCustomer
-            // 
-            this.clblCustomer.AutoSize = true;
-            this.clblCustomer.BackColor = System.Drawing.Color.Transparent;
-            this.clblCustomer.BackgroundColor = System.Drawing.Color.Transparent;
-            this.clblCustomer.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.clblCustomer.BorderRadius = 0;
-            this.clblCustomer.BorderSize = 0;
-            this.clblCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.clblCustomer.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clblCustomer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.clblCustomer.Location = new System.Drawing.Point(12, 28);
-            this.clblCustomer.Name = "clblCustomer";
-            this.clblCustomer.Size = new System.Drawing.Size(28, 18);
-            this.clblCustomer.TabIndex = 4;
-            this.clblCustomer.Text = "55";
-            this.clblCustomer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.clblCustomer.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            // 
-            // lblTitleCust
-            // 
-            this.lblTitleCust.AutoSize = true;
-            this.lblTitleCust.BackColor = System.Drawing.Color.Transparent;
-            this.lblTitleCust.BackgroundColor = System.Drawing.Color.Transparent;
-            this.lblTitleCust.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.lblTitleCust.BorderRadius = 0;
-            this.lblTitleCust.BorderSize = 0;
-            this.lblTitleCust.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblTitleCust.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitleCust.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.lblTitleCust.Location = new System.Drawing.Point(12, 10);
-            this.lblTitleCust.Name = "lblTitleCust";
-            this.lblTitleCust.Size = new System.Drawing.Size(114, 15);
-            this.lblTitleCust.TabIndex = 4;
-            this.lblTitleCust.Text = "Total Customers";
-            this.lblTitleCust.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblTitleCust.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            // 
-            // customPanel1
-            // 
-            this.customPanel1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.customPanel1.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.customPanel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.customPanel1.BorderRadius = 15;
-            this.customPanel1.BorderSize = 1;
-            this.customPanel1.Controls.Add(this.clblProducts);
-            this.customPanel1.Controls.Add(this.lblTitleProd);
-            this.customPanel1.Controls.Add(this.customLabel1);
-            this.customPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.customPanel1.ForeColor = System.Drawing.Color.White;
-            this.customPanel1.Location = new System.Drawing.Point(10, 10);
-            this.customPanel1.Name = "customPanel1";
-            this.customPanel1.Size = new System.Drawing.Size(181, 80);
-            this.customPanel1.TabIndex = 1;
-            this.customPanel1.TextColor = System.Drawing.Color.White;
-            // 
-            // clblProducts
-            // 
-            this.clblProducts.AutoSize = true;
-            this.clblProducts.BackColor = System.Drawing.Color.Transparent;
-            this.clblProducts.BackgroundColor = System.Drawing.Color.Transparent;
-            this.clblProducts.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.clblProducts.BorderRadius = 0;
-            this.clblProducts.BorderSize = 0;
-            this.clblProducts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.clblProducts.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clblProducts.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.clblProducts.Location = new System.Drawing.Point(12, 28);
-            this.clblProducts.Name = "clblProducts";
-            this.clblProducts.Size = new System.Drawing.Size(28, 18);
-            this.clblProducts.TabIndex = 2;
-            this.clblProducts.Text = "55";
-            this.clblProducts.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.clblProducts.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            // 
-            // lblTitleProd
-            // 
-            this.lblTitleProd.AutoSize = true;
-            this.lblTitleProd.BackColor = System.Drawing.Color.Transparent;
-            this.lblTitleProd.BackgroundColor = System.Drawing.Color.Transparent;
-            this.lblTitleProd.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.lblTitleProd.BorderRadius = 0;
-            this.lblTitleProd.BorderSize = 0;
-            this.lblTitleProd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblTitleProd.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitleProd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.lblTitleProd.Location = new System.Drawing.Point(12, 10);
-            this.lblTitleProd.Name = "lblTitleProd";
-            this.lblTitleProd.Size = new System.Drawing.Size(102, 15);
-            this.lblTitleProd.TabIndex = 1;
-            this.lblTitleProd.Text = "Total Products";
-            this.lblTitleProd.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblTitleProd.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            // 
-            // customLabel1
-            // 
-            this.customLabel1.AutoSize = true;
-            this.customLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.customLabel1.BackgroundColor = System.Drawing.Color.Transparent;
-            this.customLabel1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.customLabel1.BorderRadius = 0;
-            this.customLabel1.BorderSize = 0;
-            this.customLabel1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customLabel1.ForeColor = System.Drawing.Color.White;
-            this.customLabel1.Location = new System.Drawing.Point(12, 11);
-            this.customLabel1.Name = "customLabel1";
-            this.customLabel1.Size = new System.Drawing.Size(73, 13);
-            this.customLabel1.TabIndex = 0;
-            this.customLabel1.Text = "customLabel1";
-            this.customLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.customLabel1.TextColor = System.Drawing.Color.White;
-            // 
-            // customPanel8
-            // 
-            this.customPanel8.BackColor = System.Drawing.Color.White;
-            this.customPanel8.BackgroundColor = System.Drawing.Color.White;
-            this.customPanel8.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.customPanel8.BorderRadius = 10;
-            this.customPanel8.BorderSize = 1;
-            this.customPanel8.Controls.Add(this.tableTransaction);
-            this.customPanel8.ForeColor = System.Drawing.Color.White;
-            this.customPanel8.Location = new System.Drawing.Point(10, 35);
-            this.customPanel8.Name = "customPanel8";
-            this.customPanel8.Size = new System.Drawing.Size(380, 248);
-            this.customPanel8.TabIndex = 2;
-            this.customPanel8.TextColor = System.Drawing.Color.White;
-            // 
             // customPanel9
             // 
             this.customPanel9.BackColor = System.Drawing.Color.White;
@@ -854,29 +854,29 @@
             this.Load += new System.EventHandler(this.DashoardForm_Load);
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
+            this.customPanel8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tableTransaction)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
-            this.profitGenpnl.ResumeLayout(false);
-            this.totalSales.ResumeLayout(false);
-            this.totalCustpnl.ResumeLayout(false);
-            this.totalProdpnl.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.tableExpiry)).EndInit();
             this.customPanel5.ResumeLayout(false);
             this.customPanel5.PerformLayout();
             this.customPanel4.ResumeLayout(false);
             this.customPanel4.PerformLayout();
             this.customPanel3.ResumeLayout(false);
             this.customPanel3.PerformLayout();
+            this.profitGenpnl.ResumeLayout(false);
             this.customPanel7.ResumeLayout(false);
             this.customPanel7.PerformLayout();
+            this.totalSales.ResumeLayout(false);
             this.customPanel6.ResumeLayout(false);
             this.customPanel6.PerformLayout();
+            this.totalCustpnl.ResumeLayout(false);
             this.customPanel2.ResumeLayout(false);
             this.customPanel2.PerformLayout();
+            this.totalProdpnl.ResumeLayout(false);
             this.customPanel1.ResumeLayout(false);
             this.customPanel1.PerformLayout();
-            this.customPanel8.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.tableExpiry)).EndInit();
             this.customPanel9.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

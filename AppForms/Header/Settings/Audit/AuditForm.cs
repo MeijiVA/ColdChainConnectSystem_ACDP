@@ -71,6 +71,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.Audit
         private void AuditForm_Load(object sender, EventArgs e)
         {
             LoadAllLogEntriesIntoDataGridView();
+            dgvTable.ClearSelection();
         }
     }
 }
