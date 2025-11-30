@@ -5,6 +5,7 @@ using ColdChainConnectSystem_ACDP.ClassResources.Connection.TableView;
 using ColdChainConnectSystem_ACDP.ClassResources.Display;
 using ColdChainConnectSystem_ACDP.ClassResources.Instances;
 using ColdChainConnectSystem_ACDP.Popup;
+using static ColdChainConnectSystem_ACDP.ClassResources.Connection.SqlInjectionPrevention;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -34,6 +35,14 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Supplier
             SelectedFilterClass.SelectedFilter = "";
             dgvTable.Rows.Clear();
             totalPages = SupplierClass.loadSupplierData(dgvTable, lblMaxPage, lblPageNum, currentPageIndex);
+            // Subscribe to real-time search event
+            SearchBar.SearchTextChanged += SearchBar_SearchTextChanged;
+        }
+
+        private void SearchBar_SearchTextChanged(object sender, EventArgs e)
+        {
+            // Real-time search - update table as user types
+            UpdateTable();
         }
         private void searchUC1_Load(object sender, EventArgs e)
         {
@@ -53,7 +62,9 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Supplier
             {
                 dgvTable.Rows.Clear();
                 lblPageNum.Text = (currentPageIndex += 1).ToString();
-                string query = "WHERE " + SelectedFilterClass.SelectedFilter + " LIKE '%" + SearchBar.searchTXT + "%' ";
+                // Sanitize search input to prevent SQL injection
+                string sanitizedSearch = SanitizeLikeInput(SearchBar.searchTXT);
+                string query = "WHERE " + SelectedFilterClass.SelectedFilter + " LIKE '%" + sanitizedSearch + "%' ";
                 totalPages = SupplierClass.loadSupplierData(dgvTable, lblMaxPage, lblPageNum, currentPageIndex, query);
             }//has search query
             else if (currentPageIndex < totalPages)
@@ -61,7 +72,9 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Supplier
                 //[supplierid],[companyname],[contactperson],[contactnum],[address],[paymentterm]
                 dgvTable.Rows.Clear();
                 lblPageNum.Text = (currentPageIndex += 1).ToString();
-                string query = $"WHERE supplierid LIKE '%{(SearchBar.searchTXT)}%' OR companyname LIKE '%{(SearchBar.searchTXT)}%' OR contactperson LIKE '%{(SearchBar.searchTXT)}%' OR contactnum LIKE '%{(SearchBar.searchTXT)}%' OR address LIKE '%{(SearchBar.searchTXT)}%' OR paymentterm  LIKE '%{(SearchBar.searchTXT)}%'";
+                // Sanitize search input to prevent SQL injection
+                string sanitizedSearch = SanitizeLikeInput(SearchBar.searchTXT);
+                string query = $"WHERE supplierid LIKE '%{sanitizedSearch}%' OR companyname LIKE '%{sanitizedSearch}%' OR contactperson LIKE '%{sanitizedSearch}%' OR contactnum LIKE '%{sanitizedSearch}%' OR address LIKE '%{sanitizedSearch}%' OR paymentterm  LIKE '%{sanitizedSearch}%'";
                 totalPages = SupplierClass.loadSupplierData(dgvTable, lblMaxPage, lblPageNum, currentPageIndex, query);
             }// has search query ALL
         }
@@ -78,14 +91,18 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Supplier
             {
                 dgvTable.Rows.Clear();
                 lblPageNum.Text = (currentPageIndex -= 1).ToString();
-                string query = "WHERE " + SelectedFilterClass.SelectedFilter + " LIKE '%" + SearchBar.searchTXT + "%' ";
+                // Sanitize search input to prevent SQL injection
+                string sanitizedSearch = SanitizeLikeInput(SearchBar.searchTXT);
+                string query = "WHERE " + SelectedFilterClass.SelectedFilter + " LIKE '%" + sanitizedSearch + "%' ";
                 totalPages = SupplierClass.loadSupplierData(dgvTable, lblMaxPage, lblPageNum, currentPageIndex, query);
             }//has search query
             else if (currentPageIndex > 1)
             {
                 dgvTable.Rows.Clear();
                 lblPageNum.Text = (currentPageIndex -= 1).ToString();
-                string query = $"WHERE supplierid LIKE '%{(SearchBar.searchTXT)}%' OR companyname LIKE '%{(SearchBar.searchTXT)}%' OR contactperson LIKE '%{(SearchBar.searchTXT)}%' OR contactnum LIKE '%{(SearchBar.searchTXT)}%' OR address LIKE '%{(SearchBar.searchTXT)}%' OR paymentterm  LIKE '%{(SearchBar.searchTXT)}%'";
+                // Sanitize search input to prevent SQL injection
+                string sanitizedSearch = SanitizeLikeInput(SearchBar.searchTXT);
+                string query = $"WHERE supplierid LIKE '%{sanitizedSearch}%' OR companyname LIKE '%{sanitizedSearch}%' OR contactperson LIKE '%{sanitizedSearch}%' OR contactnum LIKE '%{sanitizedSearch}%' OR address LIKE '%{sanitizedSearch}%' OR paymentterm  LIKE '%{sanitizedSearch}%'";
                 totalPages = SupplierClass.loadSupplierData(dgvTable, lblMaxPage, lblPageNum, currentPageIndex, query);
             }// has search query ALL
         }
@@ -113,7 +130,9 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Supplier
                     lblPageNum.Text = "1";
                     currentPageIndex = 1;//!!!!!!!!!!!!!!!!!!!
                     dgvTable.Rows.Clear();
-                    string query = $"WHERE supplierid LIKE '%{(SearchBar.searchTXT)}%' OR companyname LIKE '%{(SearchBar.searchTXT)}%' OR contactperson LIKE '%{(SearchBar.searchTXT)}%' OR contactnum LIKE '%{(SearchBar.searchTXT)}%' OR address LIKE '%{(SearchBar.searchTXT)}%' OR paymentterm  LIKE '%{(SearchBar.searchTXT)}%'";
+                    // Sanitize search input to prevent SQL injection
+                    string sanitizedSearch = SanitizeLikeInput(SearchBar.searchTXT);
+                    string query = $"WHERE supplierid LIKE '%{sanitizedSearch}%' OR companyname LIKE '%{sanitizedSearch}%' OR contactperson LIKE '%{sanitizedSearch}%' OR contactnum LIKE '%{sanitizedSearch}%' OR address LIKE '%{sanitizedSearch}%' OR paymentterm  LIKE '%{sanitizedSearch}%'";
                     totalPages = SupplierClass.loadSupplierData(dgvTable, lblMaxPage, lblPageNum, currentPageIndex, query);
                 }
                 else

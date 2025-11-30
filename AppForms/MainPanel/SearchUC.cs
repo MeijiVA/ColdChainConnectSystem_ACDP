@@ -54,6 +54,9 @@ int nHeightEllipse // height of ellipse
             set { txtSearch.Text = value; }
         }
 
+        // Event to notify parent form when search text changes
+        public event EventHandler SearchTextChanged;
+
         private void customTextBox1__TextChanged(object sender, EventArgs e)
         {
 
@@ -413,7 +416,8 @@ int nHeightEllipse // height of ellipse
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-
+            // Trigger the event to notify parent form
+            SearchTextChanged?.Invoke(this, EventArgs.Empty);
         }
     }
 }

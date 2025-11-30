@@ -5,6 +5,7 @@ using ColdChainConnectSystem_ACDP.ClassResources.Connection.TableView;
 using ColdChainConnectSystem_ACDP.ClassResources.Display;
 using ColdChainConnectSystem_ACDP.ClassResources.Instances;
 using ColdChainConnectSystem_ACDP.Popup;
+using static ColdChainConnectSystem_ACDP.ClassResources.Connection.SqlInjectionPrevention;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -35,6 +36,14 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
             SelectedFilterClass.SelectedFilter = "";
             dgvTable.Rows.Clear();
             totalPages = SalesClass.loadSalesData(dgvTable, lblMaxPage, lblPageNum, currentPageIndex);
+            // Subscribe to real-time search event
+            SearchBar.SearchTextChanged += SearchBar_SearchTextChanged;
+        }
+
+        private void SearchBar_SearchTextChanged(object sender, EventArgs e)
+        {
+            // Real-time search - update table as user types
+            UpdateTable();
         }
         private void searchUC1_Load(object sender, EventArgs e)
         {
@@ -54,14 +63,18 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
             {
                 dgvTable.Rows.Clear();
                 lblPageNum.Text = (currentPageIndex += 1).ToString();
-                string query = "WHERE " + SelectedFilterClass.SelectedFilter + " LIKE '%" + SearchBar.searchTXT + "%' ";
+                // Sanitize search input to prevent SQL injection
+                string sanitizedSearch = SanitizeLikeInput(SearchBar.searchTXT);
+                string query = "WHERE " + SelectedFilterClass.SelectedFilter + " LIKE '%" + sanitizedSearch + "%' ";
                 totalPages = SalesClass.loadSalesData(dgvTable, lblMaxPage, lblPageNum, currentPageIndex, query);
             }//has search query
             else if (currentPageIndex < totalPages)
             {
                 dgvTable.Rows.Clear();
                 lblPageNum.Text = (currentPageIndex += 1).ToString();
-                string query = $"WHERE a.[numid] LIKE '%{(SearchBar.searchTXT)}%' OR a.[SalesID] LIKE '%{(SearchBar.searchTXT)}%' OR a.[CustomerID] LIKE '%{(SearchBar.searchTXT)}%' OR a.[SalesDate] LIKE '%{(SearchBar.searchTXT)}%' OR a.[Quantity] LIKE '%{(SearchBar.searchTXT)}%' OR a.[UnitPrice] LIKE '%{(SearchBar.searchTXT)}%' OR a.[Status]LIKE '%{(SearchBar.searchTXT)}%'";
+                // Sanitize search input to prevent SQL injection
+                string sanitizedSearch = SanitizeLikeInput(SearchBar.searchTXT);
+                string query = $"WHERE a.[numid] LIKE '%{sanitizedSearch}%' OR a.[SalesID] LIKE '%{sanitizedSearch}%' OR a.[CustomerID] LIKE '%{sanitizedSearch}%' OR a.[SalesDate] LIKE '%{sanitizedSearch}%' OR a.[Quantity] LIKE '%{sanitizedSearch}%' OR a.[UnitPrice] LIKE '%{sanitizedSearch}%' OR a.[Status]LIKE '%{sanitizedSearch}%'";
                 totalPages = SalesClass.loadSalesData(dgvTable, lblMaxPage, lblPageNum, currentPageIndex, query);
             }// has search query ALL
         }
@@ -78,14 +91,18 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
             {
                 dgvTable.Rows.Clear();
                 lblPageNum.Text = (currentPageIndex -= 1).ToString();
-                string query = "WHERE " + SelectedFilterClass.SelectedFilter + " LIKE '%" + SearchBar.searchTXT + "%' ";
+                // Sanitize search input to prevent SQL injection
+                string sanitizedSearch = SanitizeLikeInput(SearchBar.searchTXT);
+                string query = "WHERE " + SelectedFilterClass.SelectedFilter + " LIKE '%" + sanitizedSearch + "%' ";
                 totalPages = SalesClass.loadSalesData(dgvTable, lblMaxPage, lblPageNum, currentPageIndex, query);
             }//has search query
             else if (currentPageIndex > 1)
             {
                 dgvTable.Rows.Clear();
                 lblPageNum.Text = (currentPageIndex -= 1).ToString();
-                string query = $"WHERE a.[numid] LIKE '%{(SearchBar.searchTXT)}%' OR a.[SalesID] LIKE '%{(SearchBar.searchTXT)}%' OR a.[CustomerID] LIKE '%{(SearchBar.searchTXT)}%' OR a.[SalesDate] LIKE '%{(SearchBar.searchTXT)}%' OR a.[Quantity] LIKE '%{(SearchBar.searchTXT)}%' OR a.[UnitPrice] LIKE '%{(SearchBar.searchTXT)}%' OR a.[Status]LIKE '%{(SearchBar.searchTXT)}%'";
+                // Sanitize search input to prevent SQL injection
+                string sanitizedSearch = SanitizeLikeInput(SearchBar.searchTXT);
+                string query = $"WHERE a.[numid] LIKE '%{sanitizedSearch}%' OR a.[SalesID] LIKE '%{sanitizedSearch}%' OR a.[CustomerID] LIKE '%{sanitizedSearch}%' OR a.[SalesDate] LIKE '%{sanitizedSearch}%' OR a.[Quantity] LIKE '%{sanitizedSearch}%' OR a.[UnitPrice] LIKE '%{sanitizedSearch}%' OR a.[Status]LIKE '%{sanitizedSearch}%'";
                 totalPages = SalesClass.loadSalesData(dgvTable, lblMaxPage, lblPageNum, currentPageIndex, query);
             }// has search query ALL
         }
@@ -113,7 +130,9 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
                     lblPageNum.Text = "1";
                     currentPageIndex = 1;//!!!!!!!!!!!!!!!!!!!
                     dgvTable.Rows.Clear();
-                    string query = $"WHERE a.[numid] LIKE '%{(SearchBar.searchTXT)}%' OR a.[SalesID] LIKE '%{(SearchBar.searchTXT)}%' OR a.[CustomerID] LIKE '%{(SearchBar.searchTXT)}%' OR a.[SalesDate] LIKE '%{(SearchBar.searchTXT)}%' OR a.[Quantity] LIKE '%{(SearchBar.searchTXT)}%' OR a.[UnitPrice] LIKE '%{(SearchBar.searchTXT)}%' OR a.[Status]LIKE '%{(SearchBar.searchTXT)}%'";
+                    // Sanitize search input to prevent SQL injection
+                    string sanitizedSearch = SanitizeLikeInput(SearchBar.searchTXT);
+                    string query = $"WHERE a.[numid] LIKE '%{sanitizedSearch}%' OR a.[SalesID] LIKE '%{sanitizedSearch}%' OR a.[CustomerID] LIKE '%{sanitizedSearch}%' OR a.[SalesDate] LIKE '%{sanitizedSearch}%' OR a.[Quantity] LIKE '%{sanitizedSearch}%' OR a.[UnitPrice] LIKE '%{sanitizedSearch}%' OR a.[Status]LIKE '%{sanitizedSearch}%'";
                     totalPages = SalesClass.loadSalesData(dgvTable, lblMaxPage, lblPageNum, currentPageIndex, query);
                 }
                 else
