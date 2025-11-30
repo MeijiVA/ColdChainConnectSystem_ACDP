@@ -186,15 +186,46 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer
 
         private void dgvTable_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex < 0) return;
+
             String cellValue = Convert.ToString(dgvTable.Rows[e.RowIndex].Cells["numid"].FormattedValue);
+
             if (dgvTable.Columns[e.ColumnIndex].Name == "deleteCol")
             {
-                if (new CustomMessageBox("Delete Row", "Are you sure you want to delete this item from the Database?", MessageBoxButtons.OKCancel).ShowDialog() == DialogResult.OK)
+                // Check if any rows are selected via checkboxes
+                List<string> selectedIds = new List<string>();
+                foreach (DataGridViewRow row in dgvTable.Rows)
                 {
+                    if (row.Cells["rowCbox"].Value != null && (bool)row.Cells["rowCbox"].Value)
+                    {
+                        string id = row.Cells["numid"].Value?.ToString();
+                        if (!string.IsNullOrEmpty(id))
+                        {
+                            selectedIds.Add(id);
+                        }
+                    }
+                }
 
-                    DeleteItem.Delete(cellValue, "Customer");
-                    UpdateTable();
-
+                if (selectedIds.Count > 0)
+                {
+                    // Delete all selected rows
+                    if (new CustomMessageBox("Delete Rows", $"Are you sure you want to delete {selectedIds.Count} item(s) from the Database?", MessageBoxButtons.OKCancel).ShowDialog() == DialogResult.OK)
+                    {
+                        foreach (string id in selectedIds)
+                        {
+                            DeleteItem.Delete(id, "Customer");
+                        }
+                        UpdateTable();
+                    }
+                }
+                else
+                {
+                    // Delete single row
+                    if (new CustomMessageBox("Delete Row", "Are you sure you want to delete this item from the Database?", MessageBoxButtons.OKCancel).ShowDialog() == DialogResult.OK)
+                    {
+                        DeleteItem.Delete(cellValue, "Customer");
+                        UpdateTable();
+                    }
                 }
             }
             if (dgvTable.Columns[e.ColumnIndex].Name == "editCol")
@@ -230,6 +261,60 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer
         private void dgvTable_CellMouseLeave(object sender, DataGridViewCellEventArgs e)
         {
             dgvTable.Cursor = Cursors.Default;
+        }
+
+        private void dgvTable_CurrentCellDirtyStateChanged(object sender, EventArgs e)
+        {
+            if (dgvTable.IsCurrentCellDirty)
+            {
+                dgvTable.CommitEdit(DataGridViewDataErrorContexts.Commit);
+            }
+        }
+
+        private void dgvTable_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 0 && e.RowIndex >= 0) // rowCbox column
+            {
+                UpdateHeaderCheckbox();
+            }
+        }
+
+        private void dgvTable_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Handle header checkbox click for select all
+            if (e.RowIndex == -1 && e.ColumnIndex == 0)
+            {
+                bool allChecked = true;
+                foreach (DataGridViewRow row in dgvTable.Rows)
+                {
+                    if (row.Cells[0].Value == null || !(bool)row.Cells[0].Value)
+                    {
+                        allChecked = false;
+                        break;
+                    }
+                }
+
+                foreach (DataGridViewRow row in dgvTable.Rows)
+                {
+                    row.Cells[0].Value = !allChecked;
+                }
+                dgvTable.RefreshEdit();
+            }
+        }
+
+        private void UpdateHeaderCheckbox()
+        {
+            if (dgvTable.Rows.Count == 0) return;
+
+            bool allChecked = true;
+            foreach (DataGridViewRow row in dgvTable.Rows)
+            {
+                if (row.Cells[0].Value == null || !(bool)row.Cells[0].Value)
+                {
+                    allChecked = false;
+                    break;
+                }
+            }
         }
 
         private void actionlbl_Click(object sender, EventArgs e)

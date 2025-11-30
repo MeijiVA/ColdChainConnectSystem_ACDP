@@ -35,7 +35,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                         while (reader.Read())
                         {
                             //[customerid],[customername],[phonenumber],[address],[paymentterm],[registrationdate],[status]
-                            dgv.Rows.Add(new object[] { 0, reader[0].ToString(), reader[1].ToString(), reader[2].ToString(), reader[3].ToString(), reader[4].ToString(), reader[5].ToString(), Convert.ToDateTime(reader[6]).ToString("yyyy-MM-dd"), reader[7].ToString() });
+                            dgv.Rows.Add(new object[] { false, reader[0].ToString(), reader[1].ToString(), reader[2].ToString(), reader[3].ToString(), reader[4].ToString(), reader[5].ToString(), Convert.ToDateTime(reader[6]).ToString("yyyy-MM-dd"), reader[7].ToString() });
                         }//while reader loop
                     }//reader
                     con.Close();
@@ -88,13 +88,47 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
         }//method
 
 
-    public static bool writeCustomerData(string customername, string phonenumber, string registrationdate, string address, string paymentterm, string status)
+        public static string GenerateCustomerID()
         {
-            if(!(customername.Equals("") || phonenumber.Equals("") || address.Equals("") || paymentterm.Equals("") || registrationdate.Equals("") || status.Equals("")))
+            try
+            {
+                SqlConnection con = ConnectionClass.Connection();
+                string query = "SELECT COUNT(*) FROM Customer";
+                int count = 0;
+
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    con.Open();
+                    object result = cmd.ExecuteScalar();
+                    if (result != null && result != DBNull.Value)
+                    {
+                        count = (int)result;
+                    }
+                    con.Close();
+                }
+
+                // Generate new CustomerID (count + 1, formatted as CUST-001, CUST-002, etc.)
+                int nextNumber = count + 1;
+                string customerID = $"CUST-{nextNumber:D3}";
+
+                return customerID;
+            }
+            catch (Exception ex)
+            {
+                new CustomMessageBox("Error", "Failed to generate Customer ID: " + ex.Message, MessageBoxButtons.OK).ShowDialog();
+                return "CUST-001";
+            }
+        }
+
+        public static bool writeCustomerData(string customername, string phonenumber, string registrationdate, string address, string paymentterm, string status)
+        {
+            if (!(customername.Equals("") || phonenumber.Equals("") || address.Equals("") || paymentterm.Equals("") || registrationdate.Equals("") || status.Equals("")))
             {
                 try
                 {
-                    string query = $"INSERT INTO Customer([customername],[phonenumber],[address],[paymentterm],[registrationdate],[status]) VALUES( '{customername}', '{phonenumber}', '{address}','{paymentterm}','{registrationdate}', N'{status}')";
+                    // Generate CustomerID
+                    string customerID = GenerateCustomerID();
+                    string query = $"INSERT INTO Customer([customerid],[customername],[phonenumber],[address],[paymentterm],[registrationdate],[status]) VALUES( '{customerID}', '{customername}', '{phonenumber}', '{address}','{paymentterm}','{registrationdate}', N'{status}')";
 
                     SqlConnection con = ConnectionClass.Connection();
                     using (SqlCommand cmd = new SqlCommand(query, con))
@@ -114,52 +148,52 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
             }
             else
             {
-                new CustomMessageBox("Missing Element","Fill in all required Fields.", MessageBoxButtons.OK).ShowDialog();
+                new CustomMessageBox("Missing Element", "Fill in all required Fields.", MessageBoxButtons.OK).ShowDialog();
                 return false;
             }
         }
 
-    public static bool updateCustomerData(string numid, string customername, string phonenumber, string registrationdate, string address, string paymentterm, string status)
-    {
-        if (!(customername.Equals("") || phonenumber.Equals("") || address.Equals("") || paymentterm.Equals("") || registrationdate.Equals("") || status.Equals("")))
+        public static bool updateCustomerData(string numid, string customername, string phonenumber, string registrationdate, string address, string paymentterm, string status)
         {
-            try
+            if (!(customername.Equals("") || phonenumber.Equals("") || address.Equals("") || paymentterm.Equals("") || registrationdate.Equals("") || status.Equals("")))
             {
-                string query = $"  UPDATE Customer\r\n" +
-                        $"SET[customername] = '{customername}',\r\n    " +
-                        $"[phonenumber] = '{phonenumber}',\r\n    " +
-                        $"[address] = '{address}',\r\n    " +
-                        $"[paymentterm] = '{paymentterm}',\r\n    " +
-                        $"[registrationdate] = '{registrationdate}',\r\n    " +
-                        $"[status] = N'{status}'\r\n" +
-                        $"WHERE [numid] = {numid};";
-
-                SqlConnection con = ConnectionClass.Connection();
-                using (SqlCommand cmd = new SqlCommand(query, con))
+                try
                 {
-                    Console.WriteLine(query);
-                    con.Open();
-                    cmd.ExecuteNonQuery();
-                    con.Close();
-                    return true;
+                    string query = $"  UPDATE Customer\r\n" +
+                            $"SET[customername] = '{customername}',\r\n    " +
+                            $"[phonenumber] = '{phonenumber}',\r\n    " +
+                            $"[address] = '{address}',\r\n    " +
+                            $"[paymentterm] = '{paymentterm}',\r\n    " +
+                            $"[registrationdate] = '{registrationdate}',\r\n    " +
+                            $"[status] = N'{status}'\r\n" +
+                            $"WHERE [numid] = {numid};";
+
+                    SqlConnection con = ConnectionClass.Connection();
+                    using (SqlCommand cmd = new SqlCommand(query, con))
+                    {
+                        Console.WriteLine(query);
+                        con.Open();
+                        cmd.ExecuteNonQuery();
+                        con.Close();
+                        return true;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    new CustomMessageBox("Exception", ex.Message, MessageBoxButtons.OK).ShowDialog();
+                    return false;
                 }
             }
-            catch (Exception ex)
+            else
             {
-                new CustomMessageBox("Exception", ex.Message, MessageBoxButtons.OK).ShowDialog();
+                new CustomMessageBox("Missing Element", "Fill in all required Fields.", MessageBoxButtons.OK).ShowDialog();
                 return false;
             }
         }
-        else
-        {
-            new CustomMessageBox("Missing Element", "Fill in all required Fields.", MessageBoxButtons.OK).ShowDialog();
-            return false;
-        }
+
+
+
+
+
     }
-
-
-
-
-
-}
 }
