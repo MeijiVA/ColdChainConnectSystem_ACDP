@@ -17,15 +17,11 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.PersonalDetails
             InitializeComponent();
             this.DoubleBuffered = true; // Apply to the form
 
-            // Initialize position combobox
-            if (cbxPosition != null)
-            {
-                cbxPosition.Items.Clear();
-                cbxPosition.Items.Add("Administrator");
-                cbxPosition.Items.Add("Assistant");
-                cbxPosition.Items.Add("Inventory");
-                cbxPosition.Items.Add("Sales");
-            }
+        }
+        public string PositionInfoLabel
+        {
+            get { return lblPos.Text; }
+            set { lblPos.Text = value; }
         }
         public string PositionInfo
         {
@@ -50,10 +46,6 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.PersonalDetails
             set { txtEmail.Texts = value; }
         }
 
-        private void cbxPosition_OnSelectedIndexChanged(object sender, EventArgs e)
-        {
-            PositionInfo = cbxPosition.Texts;
-        }
 
         private void tscStatus_CheckChanged(object sender, EventArgs e)
         {
@@ -69,6 +61,17 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.PersonalDetails
                 tscStatus.ToggleBarText = "Inactive";
                 tscStatus.ToggleCircleColor = Color.Red;
             }
+        }
+
+        private void tscStatus_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EditAccountInformation_Load(object sender, EventArgs e)
+        {
+            lblPos.Hide();
+            cbxPosition.Hide();
         }
     }
 }

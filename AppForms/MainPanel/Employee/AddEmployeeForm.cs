@@ -134,5 +134,11 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Employee
                 MainInstance.i.NavigateTo(EmployeeInstance.i);
             }
         }
+
+        private void AddEmployeeForm_Load(object sender, EventArgs e)
+        {
+            editAccountInformation1.lblPos.Hide();
+            editAccountInformation1.cbxPosition.Show();
+        }
     }
 }

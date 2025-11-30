@@ -39,7 +39,7 @@
             this.tscStatus = new ToggleSlider.ToggleSliderComponent();
             this.lblStatus = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.cbxPosition = new ColdChainConnectSystem_ACDP.Materials.CustomComboBox();
+            this.lblPos = new System.Windows.Forms.Label();
             this.lbl3 = new System.Windows.Forms.Label();
             this.lblPosition = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -49,11 +49,14 @@
             this.txtEmail = new CustomControls.RJControls.CustomTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.cbxPosition = new ColdChainConnectSystem_ACDP.Materials.CustomComboBox();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label2
@@ -70,7 +73,7 @@
             this.lbl2.BackColor = System.Drawing.Color.Transparent;
             this.lbl2.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.lbl2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.lbl2.Location = new System.Drawing.Point(0, 5);
+            this.lbl2.Location = new System.Drawing.Point(14, 3);
             this.lbl2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl2.Name = "lbl2";
             this.lbl2.Size = new System.Drawing.Size(225, 16);
@@ -167,6 +170,7 @@
             this.tscStatus.ToggleCircleColor = System.Drawing.Color.Green;
             this.tscStatus.ToggleColorBar = System.Drawing.Color.Gray;
             this.tscStatus.CheckChanged += new System.EventHandler(this.tscStatus_CheckChanged);
+            this.tscStatus.Load += new System.EventHandler(this.tscStatus_Load);
             // 
             // lblStatus
             // 
@@ -179,7 +183,7 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.cbxPosition);
+            this.panel2.Controls.Add(this.flowLayoutPanel1);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.lbl3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -188,31 +192,15 @@
             this.panel2.Size = new System.Drawing.Size(280, 53);
             this.panel2.TabIndex = 4;
             // 
-            // cbxPosition
+            // lblPos
             // 
-            this.cbxPosition.BackColor = System.Drawing.Color.White;
-            this.cbxPosition.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.cbxPosition.BorderRadius = 0;
-            this.cbxPosition.BorderSize = 1;
-            this.cbxPosition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxPosition.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbxPosition.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.cbxPosition.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.cbxPosition.Items.AddRange(new object[] {
-            "Administrator",
-            "Sales",
-            "Inventory",
-            "Assistsant"});
-            this.cbxPosition.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.cbxPosition.ListTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.cbxPosition.Location = new System.Drawing.Point(5, 25);
-            this.cbxPosition.MinimumSize = new System.Drawing.Size(200, 25);
-            this.cbxPosition.Name = "cbxPosition";
-            this.cbxPosition.Padding = new System.Windows.Forms.Padding(1);
-            this.cbxPosition.Size = new System.Drawing.Size(216, 25);
-            this.cbxPosition.TabIndex = 72;
-            this.cbxPosition.Texts = "";
-            this.cbxPosition.OnSelectedIndexChanged += new System.EventHandler(this.cbxPosition_OnSelectedIndexChanged);
+            this.lblPos.AutoSize = true;
+            this.lblPos.Location = new System.Drawing.Point(3, 0);
+            this.lblPos.Name = "lblPos";
+            this.lblPos.Padding = new System.Windows.Forms.Padding(0, 10, 0, 10);
+            this.lblPos.Size = new System.Drawing.Size(43, 33);
+            this.lblPos.TabIndex = 63;
+            this.lblPos.Text = "position";
             // 
             // lbl3
             // 
@@ -321,6 +309,39 @@
             this.label6.TabIndex = 61;
             this.label6.Text = "  Email";
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.lblPos);
+            this.flowLayoutPanel1.Controls.Add(this.cbxPosition);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(11, 20);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(260, 33);
+            this.flowLayoutPanel1.TabIndex = 64;
+            // 
+            // cbxPosition
+            // 
+            this.cbxPosition.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cbxPosition.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.cbxPosition.BorderRadius = 0;
+            this.cbxPosition.BorderSize = 1;
+            this.cbxPosition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxPosition.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.cbxPosition.ForeColor = System.Drawing.Color.DimGray;
+            this.cbxPosition.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.cbxPosition.Items.AddRange(new object[] {
+            "Administrator",
+            "Inventory",
+            "Sales",
+            "Assistant"});
+            this.cbxPosition.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.cbxPosition.ListTextColor = System.Drawing.Color.DimGray;
+            this.cbxPosition.Location = new System.Drawing.Point(52, 3);
+            this.cbxPosition.MinimumSize = new System.Drawing.Size(200, 30);
+            this.cbxPosition.Name = "cbxPosition";
+            this.cbxPosition.Padding = new System.Windows.Forms.Padding(1);
+            this.cbxPosition.Size = new System.Drawing.Size(200, 30);
+            this.cbxPosition.TabIndex = 64;
+            this.cbxPosition.Texts = "";
             // 
             // EditAccountInformation
             // 
@@ -334,12 +355,15 @@
             this.Controls.Add(this.panel1);
             this.Name = "EditAccountInformation";
             this.Size = new System.Drawing.Size(280, 271);
+            this.Load += new System.EventHandler(this.EditAccountInformation_Load);
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -366,6 +390,8 @@
         private System.Windows.Forms.Label lblPosition;
         private System.Windows.Forms.Label lblStatus;
         public ToggleSlider.ToggleSliderComponent tscStatus;
-        private Materials.CustomComboBox cbxPosition;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        public System.Windows.Forms.Label lblPos;
+        public Materials.CustomComboBox cbxPosition;
     }
 }

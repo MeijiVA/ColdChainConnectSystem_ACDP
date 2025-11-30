@@ -134,7 +134,8 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.Employee
             pnlAccount.Controls.Add(EditAccountContainer);
             pnlPersonal.Controls.Add(EditPersonalContainer);
             pnlAddress.Controls.Add(EditAddressContainer);
-
+            EditAccountContainer.lblPos.Show();
+            EditAccountContainer.cbxPosition.Hide();
             // Hide toggle beside empID, it will be in Account Information panel
             this.tscStatus.Visible = false;
             String query = $"SELECT * FROM Employees WHERE EmpID = '{ProfileInstance.empid}'";

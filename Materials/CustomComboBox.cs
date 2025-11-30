@@ -13,7 +13,7 @@ using System.Drawing.Design;
 namespace ColdChainConnectSystem_ACDP.Materials
 {
     [DefaultEvent("OnSelectedIndexChanged")]
-    class CustomComboBox : UserControl
+    public class CustomComboBox : UserControl
     {
         #region -> Fields
         //Fields

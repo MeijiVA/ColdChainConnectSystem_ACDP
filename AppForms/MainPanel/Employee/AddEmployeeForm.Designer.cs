@@ -44,6 +44,7 @@
             this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.btnExit.BackgroundImage = global::ColdChainConnectSystem_ACDP.Properties.Resources.Back;
             this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnExit.FlatAppearance.BorderSize = 0;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F);
@@ -54,7 +55,6 @@
             this.btnExit.TabIndex = 8;
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
             // 
             // btnSave
             // 
@@ -63,10 +63,14 @@
             this.btnSave.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btnSave.BorderRadius = 10;
             this.btnSave.BorderSize = 0;
+            this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSave.FlatAppearance.BorderSize = 0;
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.GradientColor1 = System.Drawing.Color.Transparent;
+            this.btnSave.GradientColor2 = System.Drawing.Color.Transparent;
+            this.btnSave.GradientTextColor = System.Drawing.Color.Transparent;
             this.btnSave.Location = new System.Drawing.Point(682, 78);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(100, 40);
@@ -74,9 +78,7 @@
             this.btnSave.Text = "Save";
             this.btnSave.TextColor = System.Drawing.Color.White;
             this.btnSave.UseVisualStyleBackColor = false;
-            this.btnSave.Visible = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
             // 
             // tscStatus
             // 
@@ -148,7 +150,7 @@
             this.editAccountInformation1.Location = new System.Drawing.Point(502, 122);
             this.editAccountInformation1.Name = "editAccountInformation1";
             this.editAccountInformation1.PositionInfo = "";
-            this.editAccountInformation1.Size = new System.Drawing.Size(280, 471);
+            this.editAccountInformation1.Size = new System.Drawing.Size(280, 430);
             this.editAccountInformation1.StatusInfo = "";
             this.editAccountInformation1.TabIndex = 77;
             // 
@@ -177,6 +179,7 @@
             this.cbxPosition.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.cbxPosition.BorderRadius = 0;
             this.cbxPosition.BorderSize = 2;
+            this.cbxPosition.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbxPosition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxPosition.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxPosition.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
@@ -191,7 +194,6 @@
             this.cbxPosition.TabIndex = 83;
             this.cbxPosition.Texts = "";
             this.cbxPosition.OnSelectedIndexChanged += new System.EventHandler(this.cbxPosition_OnSelectedIndexChanged);
-            this.cbxPosition.Cursor = System.Windows.Forms.Cursors.Hand;
             // 
             // AddEmployeeForm
             // 
@@ -210,6 +212,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddEmployeeForm";
             this.Text = "AddEmployeeForm";
+            this.Load += new System.EventHandler(this.AddEmployeeForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
