@@ -103,7 +103,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                         con.Open();
                         cmd.ExecuteNonQuery();
                         con.Close();
-                        AuditLog.AddAuditInfo("Add", GetSalesID(), $"[{ConnectionClass.empid}] Added [{salesid}] to [{CurrentFormClass.form}]");
+                        AuditLog.AddAuditInfo("Add", GetSalesNumID(), $"[{ConnectionClass.empid}] Added [{salesid}] to [{CurrentFormClass.form}]");
 
                     }
                     query = $"UPDATE Inventory SET [quantity] = [quantity] - {quantity} WHERE [numid] = {prodid}";
@@ -113,7 +113,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                         con.Open();
                         cmd.ExecuteNonQuery();
                         con.Close();
-                        AuditLog.AddAuditInfo("Deducted", GetSalesID(), $"[{ConnectionClass.empid}] Deducted [{quantity}] from [{prodid}] in [invform]");
+                        AuditLog.AddAuditInfo("Deducted", GetSalesNumID(), $"[{ConnectionClass.empid}] Deducted [{quantity}] from [{prodid}] in [invform] via [{CurrentFormClass.form}]");
                         return true;
                     }
                 }
@@ -196,13 +196,13 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
         }
 
 
-        public static String GetSalesID()
+        public static String GetSalesNumID()
         {
             int count = 0;
             try
             {
                 SqlConnection con = ConnectionClass.Connection();
-                string query = "SELECT COUNT(*) FROM Salees";
+                string query = "SELECT COUNT(*) FROM Sales";
 
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {

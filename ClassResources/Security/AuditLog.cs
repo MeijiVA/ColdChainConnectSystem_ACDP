@@ -40,7 +40,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources.Security
             }
 
             string sqlQuery = @"
-            INSERT INTO Audit (User, Action, Reference, ReferenceID, Description, ActionDate, Notified)
+            INSERT INTO Audit ([User], Action, Reference, ReferenceID, Description, ActionDate, Notified)
             VALUES (@User, @Action, @Reference, @ReferenceID, @Description, GETDATE(), @Notified);";
 
             using (SqlConnection connection = ConnectionClass.Connection())

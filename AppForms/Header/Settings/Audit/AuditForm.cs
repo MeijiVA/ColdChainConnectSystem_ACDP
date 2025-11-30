@@ -51,7 +51,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.Audit
 
                                 // Nullable columns: Must check for DBNull before accessing the value
                                 object user = reader.IsDBNull(reader.GetOrdinal("User")) ? DBNull.Value : (object)reader.GetString(reader.GetOrdinal("User"));
-                                object refid = reader.IsDBNull(reader.GetOrdinal("ReferenceID")) ? DBNull.Value : (object)reader.GetInt32(reader.GetOrdinal("ReferenceID"));
+                                object refid = reader.IsDBNull(reader.GetOrdinal("ReferenceID")) ? DBNull.Value : (object)reader.GetString(reader.GetOrdinal("ReferenceID"));
                                 object desc = reader.IsDBNull(reader.GetOrdinal("Description")) ? DBNull.Value : (object)reader.GetString(reader.GetOrdinal("Description"));
                                 object date = reader.IsDBNull(reader.GetOrdinal("ActionDate")) ? DBNull.Value : (object)reader.GetDateTime(reader.GetOrdinal("ActionDate"));
 

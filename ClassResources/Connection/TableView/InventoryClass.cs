@@ -183,7 +183,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                         con.Open();
                         cmd.ExecuteNonQuery();
                         con.Close();
-                        AuditLog.AddAuditInfo("Add", GetInventoryID(), $"[{ConnectionClass.empid}] Added [{sku}] to [{CurrentFormClass.form}]");
+                        AuditLog.AddAuditInfo("Add", GetInventoryNumID(), $"[{ConnectionClass.empid}] Added [{sku}] to [{CurrentFormClass.form}]");
                         return true;
                     }
                 }
@@ -252,7 +252,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
             }
         }
 
-        public static String GetInventoryID()
+        public static String GetInventoryNumID()
         {
             int count = 0;
             try

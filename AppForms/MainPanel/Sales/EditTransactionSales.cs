@@ -101,15 +101,17 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
                         lblProductID.Text = reader[5].ToString();
                         lblSku.Text = reader[6].ToString();
 
+                        //gets product max quantity then adds current quantity
+                        int max = Convert.ToInt32(reader[12].ToString()) + Convert.ToInt32(reader[7].ToString());
+                        tbQuantity.Maximum = max;
                         //saves value of previous quantity
                         quantity = Convert.ToInt32(reader[7]);
                         //sets bar
                         tbQuantity.Value = Convert.ToInt32(reader[7]);
-                        lblQuantity.Text = "" + tbQuantity.Value; 
-                        //gets product max quantity then adds current quantity
-                        int max = Convert.ToInt32(reader[12].ToString()) + Convert.ToInt32(reader[7].ToString());
-                        tbQuantity.Maximum = max;
-                        lblPrice.Text = ""+(quantity * Convert.ToDecimal(reader[8].ToString()));
+                        lblQuantity.Text = "" + tbQuantity.Value;
+                        //puts value into label
+                        lblPrice.Text = "" + (quantity * Convert.ToDecimal(reader[8].ToString()));
+
 
                         lblUnitPrice.Text = reader[8].ToString();
                         lblPrice.Text = reader[9].ToString();
@@ -140,7 +142,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
             }
             else
             {
-                String query = $"UPDATE Inventory SET [quantity] = ([quantity] + {quantity}) - {tbQuantity.Value} WHERE [numid] = {VarView.id}";
+                String query = $"UPDATE Inventory SET [quantity] = ([quantity] + {quantity}) - {tbQuantity.Value} WHERE [numid] = {lblProductID.Text}";
                 SqlConnection con = ConnectionClass.Connection();
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
@@ -148,7 +150,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
                     con.Open();
                     cmd.ExecuteNonQuery();
                     con.Close();
-                    AuditLog.AddAuditInfo("Edit", salesid, $"[{ConnectionClass.empid}] Editted [{quantity}] from [{VarView.id}] in [invform]");
+                    AuditLog.AddAuditInfo("Edit", VarView.id, $"[{ConnectionClass.empid}] Edited [{quantity}] from [{lblProductID.Text}] in [invform] [{CurrentFormClass.form}]");
                 }
                 if (SalesClass.updateSalesData(VarView.id, lblCustomerID.Texts, dpSalesDate.Value.ToString("yyyy-MM-dd"), tbQuantity.Value.ToString(), lblStatus.Texts)) ;
             }

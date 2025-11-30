@@ -32,7 +32,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
         {
             try
             {
-                cmb = new CustomMessageBox("Add Supplier", "Confirm?", MessageBoxButtons.OKCancel);
+                cmb = new CustomMessageBox("Apply Transaction", "Confirm?", MessageBoxButtons.OKCancel);
                 if (cmb.ShowDialog() == DialogResult.OK)
                 {
                     String[,] table = new string[10,3];
