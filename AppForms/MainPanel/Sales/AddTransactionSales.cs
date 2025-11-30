@@ -42,11 +42,13 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
                     table[num, 0] = productID[0];
                     table[num, 1] = GetTab(num).getQuantity;
                         //cbCustomerID.Texts, dpSalesDate.Value.ToString("yyyy-MM-dd"), table[num,0] , table[num,1], table[num,2]
-                        if (SalesClass.writeSalesData(lblSalesID.Text, cbCustomerID.Texts, dpSalesDate.Value.ToString("yyyy-MM-dd"), table[num, 0], table[num, 1], cbStatus.Texts,ConnectionClass.empid));
+                        if (SalesClass.writeSalesData(lblSalesID.Text, cbCustomerID.Texts, dpSalesDate.Value.ToString("yyyy-MM-dd"), table[num, 0], table[num, 1], cbStatus.Texts, ConnectionClass.empid))
+                        {
+                            this.Close();
+                            MainInstance.i.NavigateTo(SalesInstance.i);
+                            SalesInstance.i.UpdateTable();
+                        }
                     }
-                this.Close();
-                MainInstance.i.NavigateTo(SalesInstance.i);
-                SalesInstance.i.UpdateTable();
                 }
             }
             catch (Exception ex)

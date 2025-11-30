@@ -50,10 +50,12 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Supplier
         private void btnSave_Click(object sender, EventArgs e)
         {
             String address = lblHouseNumber.Texts + "," + lblBarangay.Texts + "," + lblCity.Texts + "," + lblProvince.Texts + "," + lblPostal.Texts;
-            if (SupplierClass.updateSupplierData(VarView.id, lblCompanyName.Texts, lblContactPerson.Texts, lblContactNum.Texts, address, lblPaymentTerm.Texts)) ;
-            this.Close();
-            MainInstance.i.NavigateTo(SupplierInstance.i);
-            SupplierInstance.i.UpdateTable();
+            if (SupplierClass.updateSupplierData(VarView.id, lblCompanyName.Texts, lblContactPerson.Texts, lblContactNum.Texts, address, lblPaymentTerm.Texts))
+            {
+                this.Close();
+                MainInstance.i.NavigateTo(SupplierInstance.i);
+                SupplierInstance.i.UpdateTable();
+            }
         }
 
         private void btnExit_Click(object sender, EventArgs e)

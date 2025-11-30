@@ -133,12 +133,6 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
 
         private void btnExitView_Click(object sender, EventArgs e)
         {
-            if (quantity == tbQuantity.Value)
-            {
-                if (SalesClass.updateSalesData(VarView.id, lblCustomerID.Texts, dpSalesDate.Value.ToString("yyyy-MM-dd"), tbQuantity.Value.ToString(), lblStatus.Texts)) ;
-            }
-            else
-            {
                 String query = $"UPDATE Inventory SET [quantity] = ([quantity] + {quantity}) - {tbQuantity.Value} WHERE [numid] = {lblProductID.Text}";
                 SqlConnection con = ConnectionClass.Connection();
                 using (SqlCommand cmd = new SqlCommand(query, con))
@@ -149,14 +143,13 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
                     con.Close();
                     AuditLog.AddAuditInfo("Edit", VarView.id, $"[{ConnectionClass.empid}] Edited [{quantity}] from [{lblProductID.Text}] in [invform] [{CurrentFormClass.form}]");
                 }
-                if (SalesClass.updateSalesData(VarView.id, lblCustomerID.Texts, dpSalesDate.Value.ToString("yyyy-MM-dd"), tbQuantity.Value.ToString(), lblStatus.Texts)) ;
-            }
-             
+                if (SalesClass.updateSalesData(VarView.id, lblCustomerID.Texts, dpSalesDate.Value.ToString("yyyy-MM-dd"), tbQuantity.Value.ToString(), lblStatus.Texts))
+                {
 
-
-            this.Close();
-            MainInstance.i.NavigateTo(SalesInstance.i);
-            SalesInstance.i.UpdateTable();
+                    this.Close();
+                    MainInstance.i.NavigateTo(SalesInstance.i);
+                    SalesInstance.i.UpdateTable();
+                }
         }
     }
 }

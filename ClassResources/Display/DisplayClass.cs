@@ -9,7 +9,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using QRCoder;
-using System.Drawing; // Required for System.Drawing.Common
 
 namespace ColdChainConnectSystem_ACDP
 {

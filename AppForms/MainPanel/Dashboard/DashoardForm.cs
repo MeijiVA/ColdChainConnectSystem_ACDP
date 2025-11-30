@@ -137,8 +137,9 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Dashboard
 
 
             }
-            catch (Exception ex)
+            catch (Exception )
             {
+
             }
         }
 

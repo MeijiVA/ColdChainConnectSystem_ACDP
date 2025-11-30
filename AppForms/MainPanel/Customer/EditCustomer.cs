@@ -73,10 +73,12 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer
         private void btnSave_Click(object sender, EventArgs e)
         {
             String address = lblHouseNumber.Texts + "," + lblBarangay.Texts + "," + lblCity.Texts + "," + lblProvince.Texts + "," + lblPostal.Texts;
-            if (CustomerClass.updateCustomerData(VarView.id, lblCustomerName.Texts, lblPhoneNumber.Texts, dpRegistrationDate.Value.ToString("yyyy-MM-dd"), address, lblPaymentTerm.Texts, lblStatus.Texts)) ;
-            this.Close();
-            MainInstance.i.NavigateTo(CustomerInstance.i);
-            CustomerInstance.i.UpdateTable();
+            if (CustomerClass.updateCustomerData(VarView.id, lblCustomerName.Texts, lblPhoneNumber.Texts, dpRegistrationDate.Value.ToString("yyyy-MM-dd"), address, lblPaymentTerm.Texts, lblStatus.Texts))
+            {
+                this.Close();
+                MainInstance.i.NavigateTo(CustomerInstance.i);
+                CustomerInstance.i.UpdateTable();
+            }
         }
 
         private void btnExit_Click(object sender, EventArgs e)

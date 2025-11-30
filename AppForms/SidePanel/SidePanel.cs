@@ -31,7 +31,6 @@ namespace ColdChainConnectSystem_ACDP.AppForms.SidePanel
             this.DoubleBuffered = true; // Apply to the form
             cbCurrent = cbtnDashboard;
         }
-        String baseblue = "#070760";
         public void SelectedTab(CustomButton b)
         {
             cbCurrent.GradientColor1 = ColorTranslator.FromHtml("#070760");
