@@ -105,7 +105,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Settings
             if (Clickable[2] == true)
             {
                 LabelClick(lblAudit);
-                /*SettingsInstance.i.NavigateTo(SettingForm.empf);*/
+                SettingsInstance.i.NavigateTo(SettingForm.audf);
             }
         }
 

@@ -186,6 +186,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppForms\Header\Settings\Audit\AuditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\Header\Settings\Audit\AuditForm.Designer.cs">
+      <DependentUpon>AuditForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AppForms\InfoUserControl\EditInformation\EditAccountInformation.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -510,6 +516,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AppForms\Header\Settings\Audit\AuditForm.resx">
+      <DependentUpon>AuditForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AppForms\InfoUserControl\EditInformation\EditAccountInformation.resx">
       <DependentUpon>EditAccountInformation.cs</DependentUpon>
     </EmbeddedResource>
@@ -754,9 +763,7 @@
   <ItemGroup>
     <None Include="Resources\Back.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="AppForms\Header\Settings\Audit\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\MaleIcon.png" />
   </ItemGroup>
