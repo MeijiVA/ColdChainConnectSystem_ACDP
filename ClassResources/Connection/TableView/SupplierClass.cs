@@ -38,7 +38,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                         {
                             //  0        0    1    2    3     4        blank   5      6         7            8              9
                             //checkbox,  id, sku, desc,img,unitprice, amount, kg, quantity, buttonedit, button view, button delete
-                            dgv.Rows.Add(new object[] { 0, reader[0].ToString(), reader[1].ToString(), reader[2].ToString(), reader[3].ToString(), reader[4].ToString(), reader[5].ToString(), reader[6].ToString() });
+                            dgv.Rows.Add(new object[] { false, reader[0].ToString(), reader[1].ToString(), reader[2].ToString(), reader[3].ToString(), reader[4].ToString(), reader[5].ToString(), reader[6].ToString() });
                         }//while reader loop
                     }//reader
                     con.Close();
@@ -81,7 +81,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                         {
                             //  0        0    1    2    3     4        blank   5      6         7            8              9
                             //checkbox,  id, sku, desc,img,unitprice, amount, kg, quantity, buttonedit, button view, button delete
-                            dgv.Rows.Add(new object[] { 0, reader[0].ToString(), reader[1].ToString(), reader[2].ToString(), reader[3].ToString(), reader[4].ToString(), reader[5].ToString(), reader[6].ToString() });
+                            dgv.Rows.Add(new object[] { false, reader[0].ToString(), reader[1].ToString(), reader[2].ToString(), reader[3].ToString(), reader[4].ToString(), reader[5].ToString(), reader[6].ToString() });
                         }//while reader loop
                     }//reader
                     con.Close();

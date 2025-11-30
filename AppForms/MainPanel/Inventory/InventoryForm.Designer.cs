@@ -55,6 +55,7 @@
             this.btnPrev = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
             this.actionlbl = new System.Windows.Forms.Label();
             this.dgvTable = new System.Windows.Forms.DataGridView();
+            this.rowCbox = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.statusExpiry = new System.Windows.Forms.DataGridViewImageColumn();
             this.numid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.skucode = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -252,6 +253,7 @@
             this.dgvTable.ColumnHeadersHeight = 35;
             this.dgvTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.rowCbox,
             this.statusExpiry,
             this.numid,
             this.skucode,
@@ -308,6 +310,17 @@
             this.dgvTable.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dgvTable_RowPostPaint);
             this.dgvTable.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTable_CellMouseEnter);
             this.dgvTable.CellMouseLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTable_CellMouseLeave);
+            this.dgvTable.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTable_CellValueChanged);
+            this.dgvTable.CurrentCellDirtyStateChanged += new System.EventHandler(this.dgvTable_CurrentCellDirtyStateChanged);
+            this.dgvTable.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTable_CellClick);
+            // 
+            // rowCbox
+            // 
+            this.rowCbox.HeaderText = "";
+            this.rowCbox.Name = "rowCbox";
+            this.rowCbox.ReadOnly = false;
+            this.rowCbox.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.rowCbox.Width = 20;
             // 
             // statusExpiry
             // 
@@ -548,6 +561,7 @@
         private System.Windows.Forms.DataGridViewImageColumn viewCol;
         private System.Windows.Forms.DataGridViewImageColumn editCol;
         private System.Windows.Forms.DataGridViewImageColumn deleteCol;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn rowCbox;
         private Materials.CustomLabel lblLegends;
         private UsrCntrlLegend uc;
     }

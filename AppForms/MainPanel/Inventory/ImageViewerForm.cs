@@ -14,16 +14,17 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
             this.DoubleBuffered = true;
         }
 
-        public void SetImage(Image image)
+        public void SetImage(Image image, string description = "")
         {
             if (image != null)
             {
                 pictureBox.Image = image;
                 pictureBox.SizeMode = PictureBoxSizeMode.Zoom;
 
-                // Set form size based on image size, but limit to screen size
-                int maxWidth = Screen.PrimaryScreen.WorkingArea.Width - 100;
-                int maxHeight = Screen.PrimaryScreen.WorkingArea.Height - 100;
+                // Set form size based on popup sizes in the system (similar to CustomMessageBox but larger for images)
+                // Using a reasonable popup size: max 800x600
+                int maxWidth = 800;
+                int maxHeight = 600;
 
                 int imageWidth = image.Width;
                 int imageHeight = image.Height;
@@ -50,6 +51,16 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
                 this.ClientSize = new Size(imageWidth + 20, imageHeight + 60);
                 pictureBox.Size = new Size(imageWidth, imageHeight);
                 pictureBox.Location = new Point(10, 10);
+
+                // Set form title based on description
+                if (!string.IsNullOrEmpty(description))
+                {
+                    this.Text = description;
+                }
+                else
+                {
+                    this.Text = "Image Viewer";
+                }
             }
         }
 

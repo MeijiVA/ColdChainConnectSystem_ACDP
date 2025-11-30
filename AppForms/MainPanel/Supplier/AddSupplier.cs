@@ -78,10 +78,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Supplier
 
         private void txtUnitPrice_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
-            {
-                e.Handled = true;
-            }
+
         }
 
         private void AddItemInventoryForm_Load(object sender, EventArgs e)

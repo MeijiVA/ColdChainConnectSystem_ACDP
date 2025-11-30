@@ -38,7 +38,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                         while (reader.Read())
                         {
                             //[salesid],[customerid],[salesdate],[productid],[quantity],[unitprice],[status]
-                            dgv.Rows.Add(new object[] { 0, reader[0].ToString(), reader[1].ToString(), reader[2].ToString(), Convert.ToDateTime(reader[3]).ToString("yyyy-MM-dd"), reader[4].ToString(), reader[5].ToString(), reader[6].ToString(), reader[7].ToString(), reader[8].ToString() });
+                            dgv.Rows.Add(new object[] { false, reader[0].ToString(), reader[1].ToString(), reader[2].ToString(), Convert.ToDateTime(reader[3]).ToString("yyyy-MM-dd"), reader[4].ToString(), reader[5].ToString(), reader[6].ToString(), reader[7].ToString(), reader[8].ToString() });
                         }//while reader loop
                     }//reader
                     con.Close();
@@ -82,7 +82,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                         while (reader.Read())
                         {
                             //[salesid],[customerid],[salesdate],[productid],[quantity],[unitprice],[status]
-                            dgv.Rows.Add(new object[] { 0, reader[0].ToString(), reader[1].ToString(), reader[2].ToString(), Convert.ToDateTime(reader[3]).ToString("yyyy-MM-dd"), reader[4].ToString(), reader[5].ToString(), reader[6].ToString(), reader[7].ToString(), reader[8].ToString() });
+                            dgv.Rows.Add(new object[] { false, reader[0].ToString(), reader[1].ToString(), reader[2].ToString(), Convert.ToDateTime(reader[3]).ToString("yyyy-MM-dd"), reader[4].ToString(), reader[5].ToString(), reader[6].ToString(), reader[7].ToString(), reader[8].ToString() });
                         }//while reader loop
                     }//reader
                     con.Close();
@@ -94,9 +94,9 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
 
 
         //[salesid],[customerid],[salesdate],[productid],[quantity],[unitprice],[status]
-        public static bool writeSalesData(string salesid,string custid, string sdate, string prodid, string quantity, string status, string createdby)
+        public static bool writeSalesData(string salesid, string custid, string sdate, string prodid, string quantity, string status, string createdby)
         {
-            if(!(salesid.Equals("") || custid.Equals("") || sdate.Equals("") || prodid.Equals("") || quantity.Equals("") || status.Equals("") || createdby.Equals("")))
+            if (!(salesid.Equals("") || custid.Equals("") || sdate.Equals("") || prodid.Equals("") || quantity.Equals("") || status.Equals("") || createdby.Equals("")))
             {
                 try
                 {
@@ -127,7 +127,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
             }
             else
             {
-                new CustomMessageBox("Missing Element","Fill in all required Fields.", MessageBoxButtons.OK).ShowDialog();
+                new CustomMessageBox("Missing Element", "Fill in all required Fields.", MessageBoxButtons.OK).ShowDialog();
                 return false;
             }
         }
@@ -162,7 +162,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
 
         public static bool updateSalesData(string numid, string custid, string sdate, string quantity, string status)
         {
-            if (!( custid.Equals("") || sdate.Equals("") || numid.Equals("") || quantity.Equals("") || status.Equals("")))
+            if (!(custid.Equals("") || sdate.Equals("") || numid.Equals("") || quantity.Equals("") || status.Equals("")))
             {
                 try
                 {

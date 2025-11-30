@@ -282,6 +282,9 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer
             this.dgvTable.Size = new System.Drawing.Size(755, 442);
             this.dgvTable.TabIndex = 8;
             this.dgvTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTable_CellContentClick_1);
+            this.dgvTable.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTable_CellValueChanged);
+            this.dgvTable.CurrentCellDirtyStateChanged += new System.EventHandler(this.dgvTable_CurrentCellDirtyStateChanged);
+            this.dgvTable.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTable_CellClick);
             this.dgvTable.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvTable_CellFormatting);
             this.dgvTable.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTable_CellMouseEnter);
             this.dgvTable.CellMouseLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTable_CellMouseLeave);
@@ -291,7 +294,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer
             // 
             this.rowCbox.HeaderText = "";
             this.rowCbox.Name = "rowCbox";
-            this.rowCbox.ReadOnly = true;
+            this.rowCbox.ReadOnly = false;
             this.rowCbox.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.rowCbox.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.rowCbox.Width = 20;
