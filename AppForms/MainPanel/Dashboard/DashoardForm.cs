@@ -1,4 +1,6 @@
-﻿using ColdChainConnectSystem_ACDP.ClassResources;
+﻿using ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory;
+using ColdChainConnectSystem_ACDP.ClassResources;
+using ColdChainConnectSystem_ACDP.ClassResources.Instances;
 using Microsoft.Office.Interop.Excel;
 using System;
 using System.Collections;
@@ -166,9 +168,30 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Dashboard
 
         }
 
-        private void customPanel3_Paint(object sender, PaintEventArgs e)
+        private void pnlStock1_MouseDown(object sender, MouseEventArgs e)
         {
+            Console.WriteLine("HERE");
+            CurrentFormClass.setPreviousFormTo("invform");
+            MainInstance.i.sidePanel1.SelectedTab(MainInstance.i.sidePanel1.cbtnInventory);
+            MainInstance.i.NavigateTo(InventoryInstance.i = new InventoryForm());
+            InventoryInstance.i.SearchBar.txtSearch.Text = lblSKU1.Text.Substring(1, lblSKU1.Text.Length - 2);
+        }
+        private void pnlStock2_MouseDown(object sender, MouseEventArgs e)
+        {
+            Console.WriteLine("HERE1");
+            CurrentFormClass.setPreviousFormTo("invform");
+            MainInstance.i.sidePanel1.SelectedTab(MainInstance.i.sidePanel1.cbtnInventory);
+            MainInstance.i.NavigateTo(InventoryInstance.i = new InventoryForm());
+            InventoryInstance.i.SearchBar.txtSearch.Text = lblSKU2.Text.Substring(1, lblSKU2.Text.Length - 2);
+        }
 
+        private void pnlStock3_MouseDown(object sender, MouseEventArgs e)
+        {
+            Console.WriteLine("HERE3");
+            CurrentFormClass.setPreviousFormTo("invform");
+            MainInstance.i.sidePanel1.SelectedTab(MainInstance.i.sidePanel1.cbtnInventory);
+            MainInstance.i.NavigateTo(InventoryInstance.i = new InventoryForm());
+            InventoryInstance.i.SearchBar.txtSearch.Text = lblSKU3.Text.Substring(1, lblSKU3.Text.Length - 2);
         }
     }
 }

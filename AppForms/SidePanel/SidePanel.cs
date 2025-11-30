@@ -32,7 +32,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.SidePanel
             cbCurrent = cbtnDashboard;
         }
         String baseblue = "#070760";
-        private void SelectedTab(CustomButton b)
+        public void SelectedTab(CustomButton b)
         {
             cbCurrent.GradientColor1 = ColorTranslator.FromHtml("#070760");
             cbCurrent.GradientColor2 = ColorTranslator.FromHtml("#2B2BA3");

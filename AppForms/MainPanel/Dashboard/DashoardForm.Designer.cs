@@ -44,16 +44,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.ItemsLowOnStock = new System.Windows.Forms.Label();
-            this.profitGenpnl = new System.Windows.Forms.Panel();
-            this.totalSales = new System.Windows.Forms.Panel();
-            this.totalCustpnl = new System.Windows.Forms.Panel();
-            this.totalProdpnl = new System.Windows.Forms.Panel();
-            this.sqlCommandBuilder1 = new Microsoft.Data.SqlClient.SqlCommandBuilder();
-            this.customLabel2 = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
-            this.greetPanel1 = new ColdChainConnectSystem_ACDP.AppForms.MainPanel.Dashboard.GreetPanel();
             this.customLabel10 = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
             this.customPanel8 = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
             this.tableTransaction = new System.Windows.Forms.DataGridView();
@@ -61,29 +51,39 @@
             this.amt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.numproduct = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Status = new System.Windows.Forms.DataGridViewImageColumn();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.customPanel4 = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
-            this.customPanel3 = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
+            this.pnlStock1 = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
             this.lblquant1 = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
             this.lblSKU1 = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
-            this.customPanel = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
+            this.pnlStock2 = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
             this.lblquant2 = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
             this.lblSKU2 = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
-            this.customPanel5 = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
+            this.pnlStock3 = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
             this.lblquant3 = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
             this.lblSKU3 = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
+            this.ItemsLowOnStock = new System.Windows.Forms.Label();
+            this.profitGenpnl = new System.Windows.Forms.Panel();
             this.customPanel7 = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
             this.clblProfit = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
             this.lblTitleProfit = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
+            this.totalSales = new System.Windows.Forms.Panel();
             this.customPanel6 = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
             this.clblSales = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
             this.lblTitleSales = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
+            this.totalCustpnl = new System.Windows.Forms.Panel();
             this.customPanel2 = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
             this.clblCustomer = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
             this.lblTitleCust = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
+            this.totalProdpnl = new System.Windows.Forms.Panel();
             this.customPanel1 = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
             this.clblProducts = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
             this.lblTitleProd = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
             this.customLabel1 = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
+            this.sqlCommandBuilder1 = new Microsoft.Data.SqlClient.SqlCommandBuilder();
+            this.customLabel2 = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
+            this.greetPanel1 = new ColdChainConnectSystem_ACDP.AppForms.MainPanel.Dashboard.GreetPanel();
             this.customPanel9 = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
             this.tableExpiry = new System.Windows.Forms.DataGridView();
             this.skucode = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -91,20 +91,20 @@
             this.expiry = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.image = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel9.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.profitGenpnl.SuspendLayout();
-            this.totalSales.SuspendLayout();
-            this.totalCustpnl.SuspendLayout();
-            this.totalProdpnl.SuspendLayout();
             this.customPanel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tableTransaction)).BeginInit();
+            this.panel6.SuspendLayout();
             this.customPanel4.SuspendLayout();
-            this.customPanel3.SuspendLayout();
-            this.customPanel.SuspendLayout();
-            this.customPanel5.SuspendLayout();
+            this.pnlStock1.SuspendLayout();
+            this.pnlStock2.SuspendLayout();
+            this.pnlStock3.SuspendLayout();
+            this.profitGenpnl.SuspendLayout();
             this.customPanel7.SuspendLayout();
+            this.totalSales.SuspendLayout();
             this.customPanel6.SuspendLayout();
+            this.totalCustpnl.SuspendLayout();
             this.customPanel2.SuspendLayout();
+            this.totalProdpnl.SuspendLayout();
             this.customPanel1.SuspendLayout();
             this.customPanel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tableExpiry)).BeginInit();
@@ -118,96 +118,6 @@
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(400, 295);
             this.panel9.TabIndex = 20;
-            // 
-            // panel7
-            // 
-            this.panel7.Location = new System.Drawing.Point(399, 149);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(399, 127);
-            this.panel7.TabIndex = 18;
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.customPanel4);
-            this.panel6.Controls.Add(this.ItemsLowOnStock);
-            this.panel6.Location = new System.Drawing.Point(0, 149);
-            this.panel6.Name = "panel6";
-            this.panel6.Padding = new System.Windows.Forms.Padding(20);
-            this.panel6.Size = new System.Drawing.Size(400, 127);
-            this.panel6.TabIndex = 16;
-            // 
-            // ItemsLowOnStock
-            // 
-            this.ItemsLowOnStock.AutoSize = true;
-            this.ItemsLowOnStock.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ItemsLowOnStock.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.ItemsLowOnStock.Location = new System.Drawing.Point(7, 12);
-            this.ItemsLowOnStock.Name = "ItemsLowOnStock";
-            this.ItemsLowOnStock.Size = new System.Drawing.Size(116, 18);
-            this.ItemsLowOnStock.TabIndex = 4;
-            this.ItemsLowOnStock.Text = "Lowest Stock";
-            // 
-            // profitGenpnl
-            // 
-            this.profitGenpnl.Controls.Add(this.customPanel7);
-            this.profitGenpnl.Location = new System.Drawing.Point(598, 50);
-            this.profitGenpnl.Name = "profitGenpnl";
-            this.profitGenpnl.Padding = new System.Windows.Forms.Padding(10);
-            this.profitGenpnl.Size = new System.Drawing.Size(200, 100);
-            this.profitGenpnl.TabIndex = 21;
-            // 
-            // totalSales
-            // 
-            this.totalSales.Controls.Add(this.customPanel6);
-            this.totalSales.Location = new System.Drawing.Point(399, 50);
-            this.totalSales.Name = "totalSales";
-            this.totalSales.Padding = new System.Windows.Forms.Padding(10);
-            this.totalSales.Size = new System.Drawing.Size(200, 100);
-            this.totalSales.TabIndex = 19;
-            // 
-            // totalCustpnl
-            // 
-            this.totalCustpnl.Controls.Add(this.customPanel2);
-            this.totalCustpnl.Location = new System.Drawing.Point(200, 50);
-            this.totalCustpnl.Name = "totalCustpnl";
-            this.totalCustpnl.Padding = new System.Windows.Forms.Padding(10);
-            this.totalCustpnl.Size = new System.Drawing.Size(200, 100);
-            this.totalCustpnl.TabIndex = 17;
-            // 
-            // totalProdpnl
-            // 
-            this.totalProdpnl.Controls.Add(this.customPanel1);
-            this.totalProdpnl.Location = new System.Drawing.Point(0, 50);
-            this.totalProdpnl.Name = "totalProdpnl";
-            this.totalProdpnl.Padding = new System.Windows.Forms.Padding(10);
-            this.totalProdpnl.Size = new System.Drawing.Size(201, 100);
-            this.totalProdpnl.TabIndex = 15;
-            // 
-            // customLabel2
-            // 
-            this.customLabel2.AutoSize = true;
-            this.customLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.customLabel2.BackgroundColor = System.Drawing.Color.Transparent;
-            this.customLabel2.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.customLabel2.BorderRadius = 0;
-            this.customLabel2.BorderSize = 0;
-            this.customLabel2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customLabel2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.customLabel2.Location = new System.Drawing.Point(410, 289);
-            this.customLabel2.Name = "customLabel2";
-            this.customLabel2.Size = new System.Drawing.Size(161, 18);
-            this.customLabel2.TabIndex = 2;
-            this.customLabel2.Text = "Products (Expiring)";
-            this.customLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.customLabel2.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            // 
-            // greetPanel1
-            // 
-            this.greetPanel1.Location = new System.Drawing.Point(0, 0);
-            this.greetPanel1.Name = "greetPanel1";
-            this.greetPanel1.Size = new System.Drawing.Size(798, 51);
-            this.greetPanel1.TabIndex = 22;
             // 
             // customLabel10
             // 
@@ -359,6 +269,23 @@
             this.Status.ReadOnly = true;
             this.Status.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
+            // panel7
+            // 
+            this.panel7.Location = new System.Drawing.Point(399, 149);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(399, 127);
+            this.panel7.TabIndex = 18;
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.customPanel4);
+            this.panel6.Controls.Add(this.ItemsLowOnStock);
+            this.panel6.Location = new System.Drawing.Point(0, 149);
+            this.panel6.Name = "panel6";
+            this.panel6.Padding = new System.Windows.Forms.Padding(20);
+            this.panel6.Size = new System.Drawing.Size(400, 127);
+            this.panel6.TabIndex = 16;
+            // 
             // customPanel4
             // 
             this.customPanel4.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -366,9 +293,9 @@
             this.customPanel4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.customPanel4.BorderRadius = 10;
             this.customPanel4.BorderSize = 2;
-            this.customPanel4.Controls.Add(this.customPanel3);
-            this.customPanel4.Controls.Add(this.customPanel);
-            this.customPanel4.Controls.Add(this.customPanel5);
+            this.customPanel4.Controls.Add(this.pnlStock1);
+            this.customPanel4.Controls.Add(this.pnlStock2);
+            this.customPanel4.Controls.Add(this.pnlStock3);
             this.customPanel4.ForeColor = System.Drawing.Color.White;
             this.customPanel4.Location = new System.Drawing.Point(10, 33);
             this.customPanel4.Name = "customPanel4";
@@ -376,22 +303,23 @@
             this.customPanel4.TabIndex = 0;
             this.customPanel4.TextColor = System.Drawing.Color.White;
             // 
-            // customPanel3
+            // pnlStock1
             // 
-            this.customPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.customPanel3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.customPanel3.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.customPanel3.BorderRadius = 15;
-            this.customPanel3.BorderSize = 0;
-            this.customPanel3.Controls.Add(this.lblquant1);
-            this.customPanel3.Controls.Add(this.lblSKU1);
-            this.customPanel3.ForeColor = System.Drawing.Color.White;
-            this.customPanel3.Location = new System.Drawing.Point(9, 10);
-            this.customPanel3.Name = "customPanel3";
-            this.customPanel3.Size = new System.Drawing.Size(98, 66);
-            this.customPanel3.TabIndex = 5;
-            this.customPanel3.TextColor = System.Drawing.Color.White;
-            this.customPanel3.Paint += new System.Windows.Forms.PaintEventHandler(this.customPanel3_Paint);
+            this.pnlStock1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.pnlStock1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.pnlStock1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.pnlStock1.BorderRadius = 15;
+            this.pnlStock1.BorderSize = 0;
+            this.pnlStock1.Controls.Add(this.lblquant1);
+            this.pnlStock1.Controls.Add(this.lblSKU1);
+            this.pnlStock1.Cursor = System.Windows.Forms.Cursors.Help;
+            this.pnlStock1.ForeColor = System.Drawing.Color.White;
+            this.pnlStock1.Location = new System.Drawing.Point(9, 10);
+            this.pnlStock1.Name = "pnlStock1";
+            this.pnlStock1.Size = new System.Drawing.Size(98, 66);
+            this.pnlStock1.TabIndex = 5;
+            this.pnlStock1.TextColor = System.Drawing.Color.White;
+            this.pnlStock1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlStock1_MouseDown);
             // 
             // lblquant1
             // 
@@ -430,21 +358,23 @@
             this.lblSKU1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblSKU1.TextColor = System.Drawing.Color.White;
             // 
-            // customPanel
+            // pnlStock2
             // 
-            this.customPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.customPanel.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.customPanel.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.customPanel.BorderRadius = 15;
-            this.customPanel.BorderSize = 0;
-            this.customPanel.Controls.Add(this.lblquant2);
-            this.customPanel.Controls.Add(this.lblSKU2);
-            this.customPanel.ForeColor = System.Drawing.Color.White;
-            this.customPanel.Location = new System.Drawing.Point(141, 10);
-            this.customPanel.Name = "customPanel";
-            this.customPanel.Size = new System.Drawing.Size(98, 66);
-            this.customPanel.TabIndex = 6;
-            this.customPanel.TextColor = System.Drawing.Color.White;
+            this.pnlStock2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.pnlStock2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.pnlStock2.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.pnlStock2.BorderRadius = 15;
+            this.pnlStock2.BorderSize = 0;
+            this.pnlStock2.Controls.Add(this.lblquant2);
+            this.pnlStock2.Controls.Add(this.lblSKU2);
+            this.pnlStock2.Cursor = System.Windows.Forms.Cursors.Help;
+            this.pnlStock2.ForeColor = System.Drawing.Color.White;
+            this.pnlStock2.Location = new System.Drawing.Point(141, 10);
+            this.pnlStock2.Name = "pnlStock2";
+            this.pnlStock2.Size = new System.Drawing.Size(98, 66);
+            this.pnlStock2.TabIndex = 6;
+            this.pnlStock2.TextColor = System.Drawing.Color.White;
+            this.pnlStock2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlStock2_MouseDown);
             // 
             // lblquant2
             // 
@@ -483,21 +413,23 @@
             this.lblSKU2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblSKU2.TextColor = System.Drawing.Color.White;
             // 
-            // customPanel5
+            // pnlStock3
             // 
-            this.customPanel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.customPanel5.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.customPanel5.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.customPanel5.BorderRadius = 15;
-            this.customPanel5.BorderSize = 0;
-            this.customPanel5.Controls.Add(this.lblquant3);
-            this.customPanel5.Controls.Add(this.lblSKU3);
-            this.customPanel5.ForeColor = System.Drawing.Color.White;
-            this.customPanel5.Location = new System.Drawing.Point(274, 10);
-            this.customPanel5.Name = "customPanel5";
-            this.customPanel5.Size = new System.Drawing.Size(98, 66);
-            this.customPanel5.TabIndex = 6;
-            this.customPanel5.TextColor = System.Drawing.Color.White;
+            this.pnlStock3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.pnlStock3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.pnlStock3.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.pnlStock3.BorderRadius = 15;
+            this.pnlStock3.BorderSize = 0;
+            this.pnlStock3.Controls.Add(this.lblquant3);
+            this.pnlStock3.Controls.Add(this.lblSKU3);
+            this.pnlStock3.Cursor = System.Windows.Forms.Cursors.Help;
+            this.pnlStock3.ForeColor = System.Drawing.Color.White;
+            this.pnlStock3.Location = new System.Drawing.Point(274, 10);
+            this.pnlStock3.Name = "pnlStock3";
+            this.pnlStock3.Size = new System.Drawing.Size(98, 66);
+            this.pnlStock3.TabIndex = 6;
+            this.pnlStock3.TextColor = System.Drawing.Color.White;
+            this.pnlStock3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlStock3_MouseDown);
             // 
             // lblquant3
             // 
@@ -535,6 +467,26 @@
             this.lblSKU3.Text = "12:00";
             this.lblSKU3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblSKU3.TextColor = System.Drawing.Color.White;
+            // 
+            // ItemsLowOnStock
+            // 
+            this.ItemsLowOnStock.AutoSize = true;
+            this.ItemsLowOnStock.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ItemsLowOnStock.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.ItemsLowOnStock.Location = new System.Drawing.Point(7, 12);
+            this.ItemsLowOnStock.Name = "ItemsLowOnStock";
+            this.ItemsLowOnStock.Size = new System.Drawing.Size(116, 18);
+            this.ItemsLowOnStock.TabIndex = 4;
+            this.ItemsLowOnStock.Text = "Lowest Stock";
+            // 
+            // profitGenpnl
+            // 
+            this.profitGenpnl.Controls.Add(this.customPanel7);
+            this.profitGenpnl.Location = new System.Drawing.Point(598, 50);
+            this.profitGenpnl.Name = "profitGenpnl";
+            this.profitGenpnl.Padding = new System.Windows.Forms.Padding(10);
+            this.profitGenpnl.Size = new System.Drawing.Size(200, 100);
+            this.profitGenpnl.TabIndex = 21;
             // 
             // customPanel7
             // 
@@ -591,6 +543,15 @@
             this.lblTitleProfit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblTitleProfit.TextColor = System.Drawing.Color.WhiteSmoke;
             // 
+            // totalSales
+            // 
+            this.totalSales.Controls.Add(this.customPanel6);
+            this.totalSales.Location = new System.Drawing.Point(399, 50);
+            this.totalSales.Name = "totalSales";
+            this.totalSales.Padding = new System.Windows.Forms.Padding(10);
+            this.totalSales.Size = new System.Drawing.Size(200, 100);
+            this.totalSales.TabIndex = 19;
+            // 
             // customPanel6
             // 
             this.customPanel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
@@ -646,6 +607,15 @@
             this.lblTitleSales.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblTitleSales.TextColor = System.Drawing.Color.WhiteSmoke;
             // 
+            // totalCustpnl
+            // 
+            this.totalCustpnl.Controls.Add(this.customPanel2);
+            this.totalCustpnl.Location = new System.Drawing.Point(200, 50);
+            this.totalCustpnl.Name = "totalCustpnl";
+            this.totalCustpnl.Padding = new System.Windows.Forms.Padding(10);
+            this.totalCustpnl.Size = new System.Drawing.Size(200, 100);
+            this.totalCustpnl.TabIndex = 17;
+            // 
             // customPanel2
             // 
             this.customPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
@@ -700,6 +670,15 @@
             this.lblTitleCust.Text = "Total Customers";
             this.lblTitleCust.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblTitleCust.TextColor = System.Drawing.Color.WhiteSmoke;
+            // 
+            // totalProdpnl
+            // 
+            this.totalProdpnl.Controls.Add(this.customPanel1);
+            this.totalProdpnl.Location = new System.Drawing.Point(0, 50);
+            this.totalProdpnl.Name = "totalProdpnl";
+            this.totalProdpnl.Padding = new System.Windows.Forms.Padding(10);
+            this.totalProdpnl.Size = new System.Drawing.Size(201, 100);
+            this.totalProdpnl.TabIndex = 15;
             // 
             // customPanel1
             // 
@@ -774,6 +753,32 @@
             this.customLabel1.Text = "customLabel1";
             this.customLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.customLabel1.TextColor = System.Drawing.Color.White;
+            // 
+            // customLabel2
+            // 
+            this.customLabel2.AutoSize = true;
+            this.customLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.customLabel2.BackgroundColor = System.Drawing.Color.Transparent;
+            this.customLabel2.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.customLabel2.BorderRadius = 0;
+            this.customLabel2.BorderSize = 0;
+            this.customLabel2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.customLabel2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.customLabel2.Location = new System.Drawing.Point(410, 289);
+            this.customLabel2.Name = "customLabel2";
+            this.customLabel2.Size = new System.Drawing.Size(161, 18);
+            this.customLabel2.TabIndex = 2;
+            this.customLabel2.Text = "Products (Expiring)";
+            this.customLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.customLabel2.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            // 
+            // greetPanel1
+            // 
+            this.greetPanel1.Location = new System.Drawing.Point(0, 0);
+            this.greetPanel1.Name = "greetPanel1";
+            this.greetPanel1.Size = new System.Drawing.Size(798, 51);
+            this.greetPanel1.TabIndex = 22;
             // 
             // customPanel9
             // 
@@ -932,27 +937,27 @@
             this.Load += new System.EventHandler(this.DashoardForm_Load);
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            this.profitGenpnl.ResumeLayout(false);
-            this.totalSales.ResumeLayout(false);
-            this.totalCustpnl.ResumeLayout(false);
-            this.totalProdpnl.ResumeLayout(false);
             this.customPanel8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tableTransaction)).EndInit();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             this.customPanel4.ResumeLayout(false);
-            this.customPanel3.ResumeLayout(false);
-            this.customPanel3.PerformLayout();
-            this.customPanel.ResumeLayout(false);
-            this.customPanel.PerformLayout();
-            this.customPanel5.ResumeLayout(false);
-            this.customPanel5.PerformLayout();
+            this.pnlStock1.ResumeLayout(false);
+            this.pnlStock1.PerformLayout();
+            this.pnlStock2.ResumeLayout(false);
+            this.pnlStock2.PerformLayout();
+            this.pnlStock3.ResumeLayout(false);
+            this.pnlStock3.PerformLayout();
+            this.profitGenpnl.ResumeLayout(false);
             this.customPanel7.ResumeLayout(false);
             this.customPanel7.PerformLayout();
+            this.totalSales.ResumeLayout(false);
             this.customPanel6.ResumeLayout(false);
             this.customPanel6.PerformLayout();
+            this.totalCustpnl.ResumeLayout(false);
             this.customPanel2.ResumeLayout(false);
             this.customPanel2.PerformLayout();
+            this.totalProdpnl.ResumeLayout(false);
             this.customPanel1.ResumeLayout(false);
             this.customPanel1.PerformLayout();
             this.customPanel9.ResumeLayout(false);
@@ -976,9 +981,9 @@
         private Microsoft.Data.SqlClient.SqlCommandBuilder sqlCommandBuilder1;
         private Materials.CustomPanel customPanel1;
         private Materials.CustomPanel customPanel2;
-        private Materials.CustomPanel customPanel3;
-        private Materials.CustomPanel customPanel5;
-        private Materials.CustomPanel customPanel;
+        private Materials.CustomPanel pnlStock1;
+        private Materials.CustomPanel pnlStock3;
+        private Materials.CustomPanel pnlStock2;
         private Materials.CustomLabel clblProducts;
         private Materials.CustomLabel lblTitleProd;
         private Materials.CustomLabel customLabel1;

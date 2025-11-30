@@ -159,9 +159,9 @@
         public System.Windows.Forms.Panel DisplayPanel;
         private System.Windows.Forms.Button btnSettings;
         private System.Windows.Forms.Button btnNotif;
-        private AppForms.SidePanel.SidePanel sidePanel1;
         public AppForms.SidePanel.UserAccountControl uacUserProfile;
         private System.Windows.Forms.BindingSource bindingSource1;
         private System.Windows.Forms.Button logoutBtn;
+        public AppForms.SidePanel.SidePanel sidePanel1;
     }
 }

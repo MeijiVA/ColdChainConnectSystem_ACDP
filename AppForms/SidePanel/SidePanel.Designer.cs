@@ -65,7 +65,7 @@
             this.cbtnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbtnDashboard.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbtnDashboard.ForeColor = System.Drawing.Color.White;
-            this.cbtnDashboard.GradientColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.cbtnDashboard.GradientColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(71)))), ((int)(((byte)(217)))));
             this.cbtnDashboard.GradientColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(163)))));
             this.cbtnDashboard.GradientTextColor = System.Drawing.Color.White;
             this.cbtnDashboard.Location = new System.Drawing.Point(3, 23);
@@ -212,11 +212,11 @@
 
         #endregion
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private Materials.CustomButton cbtnDashboard;
-        private Materials.CustomButton cbtnInventory;
-        private Materials.CustomButton cbtnSupplier;
-        private Materials.CustomButton cbtnSales;
-        private Materials.CustomButton cbtnCustomer;
-        private Materials.CustomButton cbtnEmployee;
+        public Materials.CustomButton cbtnDashboard;
+        public Materials.CustomButton cbtnInventory;
+        public Materials.CustomButton cbtnSupplier;
+        public Materials.CustomButton cbtnSales;
+        public Materials.CustomButton cbtnCustomer;
+        public Materials.CustomButton cbtnEmployee;
     }
 }
