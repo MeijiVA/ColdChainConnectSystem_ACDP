@@ -229,7 +229,7 @@
             this.layoutpanel.Margin = new System.Windows.Forms.Padding(5);
             this.layoutpanel.Name = "layoutpanel";
             this.layoutpanel.Padding = new System.Windows.Forms.Padding(32, 7, 7, 7);
-            this.layoutpanel.Size = new System.Drawing.Size(755, 50);
+            this.layoutpanel.Size = new System.Drawing.Size(755, 126);
             this.layoutpanel.TabIndex = 7;
             // 
             // SearchUC
@@ -239,7 +239,7 @@
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.layoutpanel);
             this.Name = "SearchUC";
-            this.Size = new System.Drawing.Size(755, 50);
+            this.Size = new System.Drawing.Size(755, 84);
             this.pnlSearch.ResumeLayout(false);
             this.pnlSearch.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

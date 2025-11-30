@@ -63,7 +63,7 @@
             this.btnOK.GradientColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnOK.GradientColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnOK.GradientTextColor = System.Drawing.Color.Transparent;
-            this.btnOK.Location = new System.Drawing.Point(283, 121);
+            this.btnOK.Location = new System.Drawing.Point(150, 118);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(56, 40);
             this.btnOK.TabIndex = 2;

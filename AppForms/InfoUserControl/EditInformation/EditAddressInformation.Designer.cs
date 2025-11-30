@@ -386,6 +386,7 @@
             this.cbxProvince.TabIndex = 61;
             this.cbxProvince.Texts = "";
             this.cbxProvince.OnSelectedIndexChanged += new System.EventHandler(this.cbxProvince_OnSelectedIndexChanged_1);
+            this.cbxProvince.Layout += new System.Windows.Forms.LayoutEventHandler(this.cbxProvince_Layout);
             this.cbxProvince.Leave += new System.EventHandler(this.cbxProvince_Leave);
             // 
             // EditAddressInformation

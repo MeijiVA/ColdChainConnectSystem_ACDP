@@ -28,12 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.lblContactNum = new CustomControls.RJControls.CustomTextBox();
             this.btnSave = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
             this.lblID = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
-            this.lblProvince = new ColdChainConnectSystem_ACDP.Materials.CustomComboBox();
             this.lblCompanyName = new CustomControls.RJControls.CustomTextBox();
             this.lblContactPerson = new CustomControls.RJControls.CustomTextBox();
             this.customPanel1 = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
+            this.lblProvince = new ColdChainConnectSystem_ACDP.Materials.CustomComboBox();
             this.lblCity = new ColdChainConnectSystem_ACDP.Materials.CustomComboBox();
             this.lblPostal = new CustomControls.RJControls.CustomTextBox();
             this.lblBarangay = new CustomControls.RJControls.CustomTextBox();
@@ -44,14 +50,86 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.lblPaymentTerm = new ColdChainConnectSystem_ACDP.Materials.CustomComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.lblContactNum = new CustomControls.RJControls.CustomTextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.btnExit = new System.Windows.Forms.Button();
             this.customPanel1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(12, 214);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(87, 14);
+            this.label2.TabIndex = 81;
+            this.label2.Text = "Payment Term";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(12, 106);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(92, 14);
+            this.label1.TabIndex = 80;
+            this.label1.Text = "Contact Person";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label8.Location = new System.Drawing.Point(12, 53);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(93, 14);
+            this.label8.TabIndex = 79;
+            this.label8.Text = "Company Name";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label5.Location = new System.Drawing.Point(12, 161);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(96, 14);
+            this.label5.TabIndex = 90;
+            this.label5.Text = "Contact Number";
+            // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.btnExit.BackgroundImage = global::ColdChainConnectSystem_ACDP.Properties.Resources.Back;
+            this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F);
+            this.btnExit.ForeColor = System.Drawing.Color.White;
+            this.btnExit.Location = new System.Drawing.Point(554, 15);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(27, 27);
+            this.btnExit.TabIndex = 92;
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // lblContactNum
+            // 
+            this.lblContactNum.BackColor = System.Drawing.SystemColors.Window;
+            this.lblContactNum.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.lblContactNum.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(150)))));
+            this.lblContactNum.BorderRadius = 10;
+            this.lblContactNum.BorderSize = 2;
+            this.lblContactNum.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
+            this.lblContactNum.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblContactNum.Location = new System.Drawing.Point(11, 178);
+            this.lblContactNum.Margin = new System.Windows.Forms.Padding(4);
+            this.lblContactNum.Multiline = false;
+            this.lblContactNum.Name = "lblContactNum";
+            this.lblContactNum.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.lblContactNum.PasswordChar = false;
+            this.lblContactNum.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.lblContactNum.PlaceholderText = "";
+            this.lblContactNum.Size = new System.Drawing.Size(180, 29);
+            this.lblContactNum.TabIndex = 91;
+            this.lblContactNum.Texts = "";
+            this.lblContactNum.UnderlinedStyle = false;
             // 
             // btnSave
             // 
@@ -95,26 +173,6 @@
             this.lblID.Text = "customLabel1";
             this.lblID.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblID.TextColor = System.Drawing.Color.White;
-            // 
-            // lblProvince
-            // 
-            this.lblProvince.BackColor = System.Drawing.Color.White;
-            this.lblProvince.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.lblProvince.BorderRadius = 0;
-            this.lblProvince.BorderSize = 2;
-            this.lblProvince.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.lblProvince.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
-            this.lblProvince.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.lblProvince.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.lblProvince.ListBackColor = System.Drawing.Color.White;
-            this.lblProvince.ListTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.lblProvince.Location = new System.Drawing.Point(203, 90);
-            this.lblProvince.MinimumSize = new System.Drawing.Size(180, 30);
-            this.lblProvince.Name = "lblProvince";
-            this.lblProvince.Padding = new System.Windows.Forms.Padding(2);
-            this.lblProvince.Size = new System.Drawing.Size(180, 30);
-            this.lblProvince.TabIndex = 80;
-            this.lblProvince.Texts = "";
             // 
             // lblCompanyName
             // 
@@ -183,6 +241,110 @@
             this.customPanel1.Size = new System.Drawing.Size(390, 192);
             this.customPanel1.TabIndex = 84;
             this.customPanel1.TextColor = System.Drawing.Color.White;
+            // 
+            // lblProvince
+            // 
+            this.lblProvince.BackColor = System.Drawing.Color.White;
+            this.lblProvince.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.lblProvince.BorderRadius = 0;
+            this.lblProvince.BorderSize = 2;
+            this.lblProvince.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.lblProvince.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
+            this.lblProvince.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.lblProvince.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.lblProvince.Items.AddRange(new object[] {
+            "Abra",
+            "Agusan del Norte",
+            "Agusan del Sur",
+            "Aklan",
+            "Albay",
+            "Antique",
+            "Apayao",
+            "Aurora",
+            "Basilan",
+            "Bataan",
+            "Batanes",
+            "Batangas",
+            "Benguet",
+            "Biliran",
+            "Bohol",
+            "Bukidnon",
+            "Bulacan",
+            "Cagayan",
+            "Camarines Norte",
+            "Camarines Sur",
+            "Camiguin",
+            "Capiz",
+            "Catanduanes",
+            "Cavite",
+            "Cebu",
+            "Cotabato",
+            "Davao de Oro",
+            "Davao del Norte",
+            "Davao del Sur",
+            "Davao Occidental",
+            "Davao Oriental",
+            "Dinagat Islands",
+            "Eastern Samar",
+            "Guimaras",
+            "Ifugao",
+            "Ilocos Norte",
+            "Ilocos Sur",
+            "Iloilo",
+            "Isabela",
+            "Kalinga",
+            "La Union",
+            "Laguna",
+            "Lanao del Norte",
+            "Lanao del Sur",
+            "Leyte",
+            "Maguindanao",
+            "Marinduque",
+            "Masbate",
+            "Misamis Occidental",
+            "Misamis Oriental",
+            "Mountain Province",
+            "Negros Occidental",
+            "Negros Oriental",
+            "Northern Samar",
+            "Nueva Ecija",
+            "Nueva Vizcaya",
+            "Occidental Mindoro",
+            "Oriental Mindoro",
+            "Palawan",
+            "Pampanga",
+            "Pangasinan",
+            "Quezon",
+            "Quirino",
+            "Rizal",
+            "Romblon",
+            "Samar",
+            "Sarangani",
+            "Siquijor",
+            "Sorsogon",
+            "South Cotabato",
+            "Southern Leyte",
+            "Sultan Kudarat",
+            "Sulu",
+            "Surigao del Norte",
+            "Surigao del Sur",
+            "Tarlac",
+            "Tawi-Tawi",
+            "Zambales",
+            "Zamboanga del Norte",
+            "Zamboanga del Sur",
+            "Zamboanga Sibugay"});
+            this.lblProvince.ListBackColor = System.Drawing.Color.White;
+            this.lblProvince.ListTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.lblProvince.Location = new System.Drawing.Point(203, 90);
+            this.lblProvince.MinimumSize = new System.Drawing.Size(180, 30);
+            this.lblProvince.Name = "lblProvince";
+            this.lblProvince.Padding = new System.Windows.Forms.Padding(2);
+            this.lblProvince.Size = new System.Drawing.Size(180, 30);
+            this.lblProvince.TabIndex = 80;
+            this.lblProvince.Texts = "";
+            this.lblProvince.OnSelectedIndexChanged += new System.EventHandler(this.lblProvince_OnSelectedIndexChanged);
+            this.lblProvince.Leave += new System.EventHandler(this.lblProvince_Leave);
             // 
             // lblCity
             // 
@@ -352,84 +514,6 @@
             this.lblPaymentTerm.Size = new System.Drawing.Size(180, 30);
             this.lblPaymentTerm.TabIndex = 89;
             this.lblPaymentTerm.Texts = "";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(12, 214);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 14);
-            this.label2.TabIndex = 81;
-            this.label2.Text = "Payment Term";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(12, 106);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 14);
-            this.label1.TabIndex = 80;
-            this.label1.Text = "Contact Person";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
-            this.label8.Location = new System.Drawing.Point(12, 53);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(93, 14);
-            this.label8.TabIndex = 79;
-            this.label8.Text = "Company Name";
-            // 
-            // lblContactNum
-            // 
-            this.lblContactNum.BackColor = System.Drawing.SystemColors.Window;
-            this.lblContactNum.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.lblContactNum.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(150)))));
-            this.lblContactNum.BorderRadius = 10;
-            this.lblContactNum.BorderSize = 2;
-            this.lblContactNum.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
-            this.lblContactNum.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblContactNum.Location = new System.Drawing.Point(11, 178);
-            this.lblContactNum.Margin = new System.Windows.Forms.Padding(4);
-            this.lblContactNum.Multiline = false;
-            this.lblContactNum.Name = "lblContactNum";
-            this.lblContactNum.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.lblContactNum.PasswordChar = false;
-            this.lblContactNum.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.lblContactNum.PlaceholderText = "";
-            this.lblContactNum.Size = new System.Drawing.Size(180, 29);
-            this.lblContactNum.TabIndex = 91;
-            this.lblContactNum.Texts = "";
-            this.lblContactNum.UnderlinedStyle = false;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(12, 161);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(96, 14);
-            this.label5.TabIndex = 90;
-            this.label5.Text = "Contact Number";
-            // 
-            // btnExit
-            // 
-            this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.btnExit.BackgroundImage = global::ColdChainConnectSystem_ACDP.Properties.Resources.Back;
-            this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnExit.FlatAppearance.BorderSize = 0;
-            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F);
-            this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(554, 15);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(27, 27);
-            this.btnExit.TabIndex = 92;
-            this.btnExit.UseVisualStyleBackColor = false;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // EditSupplier
             // 

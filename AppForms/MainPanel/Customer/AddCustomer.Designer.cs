@@ -403,6 +403,8 @@
             this.cbxProvince.TabIndex = 76;
             this.cbxProvince.Texts = "";
             this.cbxProvince.OnSelectedIndexChanged += new System.EventHandler(this.cbxProvince_OnSelectedIndexChanged_1);
+            this.cbxProvince.Enter += new System.EventHandler(this.cbxProvince_Enter);
+            this.cbxProvince.Leave += new System.EventHandler(this.cbxProvince_Leave);
             // 
             // txtPostalCode
             // 

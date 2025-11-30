@@ -235,6 +235,88 @@
             this.lblProvince.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
             this.lblProvince.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.lblProvince.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.lblProvince.Items.AddRange(new object[] {
+            "Abra",
+            "Agusan del Norte",
+            "Agusan del Sur",
+            "Aklan",
+            "Albay",
+            "Antique",
+            "Apayao",
+            "Aurora",
+            "Basilan",
+            "Bataan",
+            "Batanes",
+            "Batangas",
+            "Benguet",
+            "Biliran",
+            "Bohol",
+            "Bukidnon",
+            "Bulacan",
+            "Cagayan",
+            "Camarines Norte",
+            "Camarines Sur",
+            "Camiguin",
+            "Capiz",
+            "Catanduanes",
+            "Cavite",
+            "Cebu",
+            "Cotabato",
+            "Davao de Oro",
+            "Davao del Norte",
+            "Davao del Sur",
+            "Davao Occidental",
+            "Davao Oriental",
+            "Dinagat Islands",
+            "Eastern Samar",
+            "Guimaras",
+            "Ifugao",
+            "Ilocos Norte",
+            "Ilocos Sur",
+            "Iloilo",
+            "Isabela",
+            "Kalinga",
+            "La Union",
+            "Laguna",
+            "Lanao del Norte",
+            "Lanao del Sur",
+            "Leyte",
+            "Maguindanao",
+            "Marinduque",
+            "Masbate",
+            "Misamis Occidental",
+            "Misamis Oriental",
+            "Mountain Province",
+            "Negros Occidental",
+            "Negros Oriental",
+            "Northern Samar",
+            "Nueva Ecija",
+            "Nueva Vizcaya",
+            "Occidental Mindoro",
+            "Oriental Mindoro",
+            "Palawan",
+            "Pampanga",
+            "Pangasinan",
+            "Quezon",
+            "Quirino",
+            "Rizal",
+            "Romblon",
+            "Samar",
+            "Sarangani",
+            "Siquijor",
+            "Sorsogon",
+            "South Cotabato",
+            "Southern Leyte",
+            "Sultan Kudarat",
+            "Sulu",
+            "Surigao del Norte",
+            "Surigao del Sur",
+            "Tarlac",
+            "Tawi-Tawi",
+            "Zambales",
+            "Zamboanga del Norte",
+            "Zamboanga del Sur",
+            "Zamboanga Sibugay"});
             this.lblProvince.ListBackColor = System.Drawing.Color.White;
             this.lblProvince.ListTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.lblProvince.Location = new System.Drawing.Point(203, 92);
@@ -245,6 +327,7 @@
             this.lblProvince.TabIndex = 80;
             this.lblProvince.Texts = "";
             this.lblProvince.OnSelectedIndexChanged += new System.EventHandler(this.customComboBox2_OnSelectedIndexChanged);
+            this.lblProvince.Leave += new System.EventHandler(this.lblProvince_Leave);
             // 
             // lblCity
             // 
@@ -265,6 +348,7 @@
             this.lblCity.Size = new System.Drawing.Size(180, 30);
             this.lblCity.TabIndex = 77;
             this.lblCity.Texts = "";
+            this.lblCity.OnSelectedIndexChanged += new System.EventHandler(this.lblCity_OnSelectedIndexChanged);
             // 
             // lblPostal
             // 
