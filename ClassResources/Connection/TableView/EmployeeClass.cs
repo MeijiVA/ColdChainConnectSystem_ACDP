@@ -104,39 +104,62 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
         }
 
         public static bool SaveEmployee(string empID, string username, string firstName, string middleName,
-            string lastName, string contactNum, string address, string age, DateTime dob,
-            string position, string status, string sex, string email)
+         string lastName, string contactNum, string address, string age, DateTime dob,
+         string position, string status, string sex, string email)
         {
             try
             {
                 SqlConnection con = ConnectionClass.Connection();
                 string query = @"INSERT INTO Employees ([empid], [username], [firstname], [middlename], [lastname], 
-                    [contactnum], [address], [age], [dateofbirth], [position], [status], [sex], [email]) 
-                    VALUES (@EmpID, @Username, @FirstName, @MiddleName, @LastName, @ContactNum, @Address, 
-                    @Age, @DateOfBirth, @Position, @Status, @Sex, @Email)";
+                [contactnum], [address], [age], [dateofbirth], [position], [status], [sex], [email]) 
+                VALUES (@EmpID, @Username, @FirstName, @MiddleName, @LastName, @ContactNum, @Address, 
+                @Age, @DateOfBirth, @Position, @Status, @Sex, @Email)";
 
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
-                    cmd.Parameters.AddWithValue("@EmpID", empID);
-                    cmd.Parameters.AddWithValue("@Username", username);
-                    cmd.Parameters.AddWithValue("@FirstName", firstName);
-                    cmd.Parameters.AddWithValue("@MiddleName", string.IsNullOrWhiteSpace(middleName) ? (object)DBNull.Value : middleName);
-                    cmd.Parameters.AddWithValue("@LastName", lastName);
-                    cmd.Parameters.AddWithValue("@ContactNum", string.IsNullOrWhiteSpace(contactNum) ? (object)DBNull.Value : contactNum);
-                    cmd.Parameters.AddWithValue("@Address", string.IsNullOrWhiteSpace(address) ? (object)DBNull.Value : address);
-                    if (string.IsNullOrWhiteSpace(age) || !int.TryParse(age, out int ageValue))
+                    // Explicit Parameter Assignment (using SqlDbType to ensure correct types)
+
+                    cmd.Parameters.Add("@EmpID", SqlDbType.VarChar).Value = empID;
+                    cmd.Parameters.Add("@Username", SqlDbType.VarChar).Value = username;
+                    cmd.Parameters.Add("@FirstName", SqlDbType.VarChar).Value = firstName;
+
+                    // Nullable strings mapped to VARCHAR
+                    cmd.Parameters.Add("@MiddleName", SqlDbType.VarChar).Value =
+                        string.IsNullOrWhiteSpace(middleName) ? (object)DBNull.Value : middleName;
+
+                    cmd.Parameters.Add("@LastName", SqlDbType.VarChar).Value = lastName;
+
+                    cmd.Parameters.Add("@ContactNum", SqlDbType.VarChar).Value =
+                        string.IsNullOrWhiteSpace(contactNum) ? (object)DBNull.Value : contactNum;
+
+                    cmd.Parameters.Add("@Address", SqlDbType.VarChar).Value =
+                        string.IsNullOrWhiteSpace(address) ? (object)DBNull.Value : address;
+
+                    // Mapped to INT in SQL - Safely convert string 'age' to INT or DBNull
+                    object ageParamValue;
+                    int ageValue;
+                    if (int.TryParse(age, out ageValue))
                     {
-                        cmd.Parameters.AddWithValue("@Age", DBNull.Value);
+                        ageParamValue = ageValue;
                     }
                     else
                     {
-                        cmd.Parameters.AddWithValue("@Age", ageValue);
+                        ageParamValue = DBNull.Value;
                     }
-                    cmd.Parameters.AddWithValue("@DateOfBirth", dob);
-                    cmd.Parameters.AddWithValue("@Position", position);
-                    cmd.Parameters.AddWithValue("@Status", status);
-                    cmd.Parameters.AddWithValue("@Sex", string.IsNullOrWhiteSpace(sex) ? (object)DBNull.Value : sex);
-                    cmd.Parameters.AddWithValue("@Email", string.IsNullOrWhiteSpace(email) ? (object)DBNull.Value : email);
+                    cmd.Parameters.Add("@Age", SqlDbType.Int).Value = ageParamValue;
+
+                    // Mapped to DATE in SQL
+                    cmd.Parameters.Add("@DateOfBirth", SqlDbType.Date).Value = dob;
+
+                    cmd.Parameters.Add("@Position", SqlDbType.VarChar).Value = position;
+                    cmd.Parameters.Add("@Status", SqlDbType.VarChar).Value = status;
+
+                    // Nullable strings mapped to VARCHAR
+                    cmd.Parameters.Add("@Sex", SqlDbType.VarChar).Value =
+                        string.IsNullOrWhiteSpace(sex) ? (object)DBNull.Value : sex;
+
+                    cmd.Parameters.Add("@Email", SqlDbType.VarChar).Value =
+                        string.IsNullOrWhiteSpace(email) ? (object)DBNull.Value : email;
 
                     con.Open();
                     cmd.ExecuteNonQuery();
@@ -151,6 +174,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                 return false;
             }
         }
+
 
         /// <summary>
         /// Archives an employee by setting their Status to 'Archived' instead of deleting the record.

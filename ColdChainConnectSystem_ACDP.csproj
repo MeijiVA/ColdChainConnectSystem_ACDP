@@ -565,6 +565,9 @@
     <EmbeddedResource Include="AppForms\MainPanel\Employee\AddEmployeeForm.resx">
       <DependentUpon>AddEmployeeForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\MainPanel\Employee\EmployeeDatabase.resx">
+      <DependentUpon>EmployeeDatabase.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AppForms\MainPanel\Employee\EmployeeForm.resx">
       <DependentUpon>EmployeeForm.cs</DependentUpon>
     </EmbeddedResource>

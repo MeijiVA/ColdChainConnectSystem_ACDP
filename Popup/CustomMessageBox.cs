@@ -51,7 +51,6 @@ namespace ColdChainConnectSystem_ACDP.Popup
             else if (messageBoxButtons == MessageBoxButtons.OK)
             {
                 InitializeComponent();
-                MainInstance.o.Show(MainInstance.i);
                 this.FormBorderStyle = FormBorderStyle.None;
                 this.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
                 btnOK.Visible = true;

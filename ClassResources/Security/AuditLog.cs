@@ -51,7 +51,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources.Security
                     command.Parameters.AddWithValue("@User", user);
                     command.Parameters.AddWithValue("@Action", action);
                     command.Parameters.AddWithValue("@Reference", reference);
-                    command.Parameters.Add("@ReferenceID", SqlDbType.Int).Value = refid;
+                    command.Parameters.Add("@ReferenceID", SqlDbType.VarChar).Value = refid;
                     command.Parameters.AddWithValue("@Description", desc);
                     command.Parameters.Add("@Notified", SqlDbType.Bit).Value = 0;
 
@@ -67,7 +67,6 @@ namespace ColdChainConnectSystem_ACDP.ClassResources.Security
                 catch (Exception ex)
                 {
                     new CustomMessageBox("Exception Error", ex.Message, MessageBoxButtons.OK).ShowDialog();
-                    throw;
                 }
             }
 
