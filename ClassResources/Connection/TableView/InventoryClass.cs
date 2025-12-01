@@ -66,18 +66,35 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
         }
         public static Image getImage(string imgStr)
         {
-            Image i;
-            if (File.Exists(Directory.GetCurrentDirectory() + "\\InventoryImage\\" + imgStr))
+            string imagePath = System.IO.Path.Combine(Directory.GetCurrentDirectory(), "InventoryImage", imgStr);
+
+            if (System.IO.File.Exists(imagePath))
             {
-                i = Image.FromFile(Directory.GetCurrentDirectory() + "\\InventoryImage\\" + imgStr);
-                return i;
+                try
+                {
+                    using (System.IO.FileStream fs = new System.IO.FileStream(imagePath, System.IO.FileMode.Open, System.IO.FileAccess.Read))
+                    {
+                        using (System.IO.MemoryStream ms = new System.IO.MemoryStream())
+                        {
+                            fs.CopyTo(ms);
+                            fs.Close();
+                            return System.Drawing.Image.FromStream(ms);
+                        }
+                    }
+                }
+                catch (Exception)
+                {
+                    return Properties.Resources.CCC_GrayLogo;
+                }
             }
             else
             {
-                i = Properties.Resources.CCC_GrayLogo;
-                return i;
+                return Properties.Resources.CCC_GrayLogo;
             }
         }
+
+
+
         public static int loadInventoryData(DataGridView dgv, Label lblPage, Label lblPageNum, int currentPageIndex)
         {
             int totalRows = 0;

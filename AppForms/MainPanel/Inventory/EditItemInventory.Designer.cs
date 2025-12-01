@@ -29,13 +29,15 @@
         private void InitializeComponent()
         {
             this.label4 = new System.Windows.Forms.Label();
-            this.pboxImage = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.ofdSaveImage = new System.Windows.Forms.OpenFileDialog();
+            this.lblSKU = new CustomControls.RJControls.CustomTextBox();
             this.lblSupplierID = new ColdChainConnectSystem_ACDP.Materials.CustomComboBox();
             this.lblUnitPrice = new CustomControls.RJControls.CustomTextBox();
             this.lblWeight = new CustomControls.RJControls.CustomTextBox();
@@ -46,11 +48,9 @@
             this.lblDescription = new CustomControls.RJControls.CustomTextBox();
             this.dpExpiry = new ColdChainConnectSystem_ACDP.Materials.CustomDatePicker();
             this.lblID = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
-            this.lblSKU = new CustomControls.RJControls.CustomTextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.ofdSaveImage = new System.Windows.Forms.OpenFileDialog();
-            ((System.ComponentModel.ISupportInitialize)(this.pboxImage)).BeginInit();
+            this.pboxImage = new System.Windows.Forms.PictureBox();
             this.customPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxImage)).BeginInit();
             this.SuspendLayout();
             // 
             // label4
@@ -62,16 +62,6 @@
             this.label4.Size = new System.Drawing.Size(66, 14);
             this.label4.TabIndex = 61;
             this.label4.Text = "Supplier ID";
-            // 
-            // pboxImage
-            // 
-            this.pboxImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pboxImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pboxImage.Location = new System.Drawing.Point(461, 59);
-            this.pboxImage.Name = "pboxImage";
-            this.pboxImage.Size = new System.Drawing.Size(125, 125);
-            this.pboxImage.TabIndex = 55;
-            this.pboxImage.TabStop = false;
             // 
             // label5
             // 
@@ -138,6 +128,42 @@
             this.btnExit.TabIndex = 68;
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label6.Location = new System.Drawing.Point(19, 60);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(60, 14);
+            this.label6.TabIndex = 69;
+            this.label6.Text = "SKU Code";
+            // 
+            // ofdSaveImage
+            // 
+            this.ofdSaveImage.FileName = "openFileDialog1";
+            // 
+            // lblSKU
+            // 
+            this.lblSKU.BackColor = System.Drawing.SystemColors.Window;
+            this.lblSKU.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.lblSKU.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(150)))));
+            this.lblSKU.BorderRadius = 10;
+            this.lblSKU.BorderSize = 2;
+            this.lblSKU.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
+            this.lblSKU.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblSKU.Location = new System.Drawing.Point(15, 78);
+            this.lblSKU.Margin = new System.Windows.Forms.Padding(4);
+            this.lblSKU.Multiline = false;
+            this.lblSKU.Name = "lblSKU";
+            this.lblSKU.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.lblSKU.PasswordChar = false;
+            this.lblSKU.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.lblSKU.PlaceholderText = "";
+            this.lblSKU.Size = new System.Drawing.Size(180, 29);
+            this.lblSKU.TabIndex = 70;
+            this.lblSKU.Texts = "";
+            this.lblSKU.UnderlinedStyle = false;
             // 
             // lblSupplierID
             // 
@@ -227,6 +253,7 @@
             // 
             // btnImage
             // 
+            this.btnImage.Angle = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
             this.btnImage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.btnImage.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.btnImage.BorderColor = System.Drawing.Color.Empty;
@@ -251,6 +278,7 @@
             // 
             // btnExitView
             // 
+            this.btnExitView.Angle = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
             this.btnExitView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.btnExitView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.btnExitView.BorderColor = System.Drawing.Color.Empty;
@@ -275,6 +303,7 @@
             // 
             // customPanel1
             // 
+            this.customPanel1.Angle = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
             this.customPanel1.BackColor = System.Drawing.Color.White;
             this.customPanel1.BackgroundColor = System.Drawing.Color.White;
             this.customPanel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
@@ -282,6 +311,9 @@
             this.customPanel1.BorderSize = 2;
             this.customPanel1.Controls.Add(this.lblDescription);
             this.customPanel1.ForeColor = System.Drawing.Color.White;
+            this.customPanel1.GradientColor1 = System.Drawing.Color.Transparent;
+            this.customPanel1.GradientColor2 = System.Drawing.Color.Transparent;
+            this.customPanel1.GradientTextColor = System.Drawing.Color.Transparent;
             this.customPanel1.Location = new System.Drawing.Point(12, 128);
             this.customPanel1.Name = "customPanel1";
             this.customPanel1.Padding = new System.Windows.Forms.Padding(10);
@@ -329,6 +361,7 @@
             // 
             // lblID
             // 
+            this.lblID.Angle = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
             this.lblID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.lblID.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.lblID.BorderColor = System.Drawing.Color.Black;
@@ -337,6 +370,9 @@
             this.lblID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblID.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.lblID.ForeColor = System.Drawing.Color.White;
+            this.lblID.GradientColor1 = System.Drawing.Color.Transparent;
+            this.lblID.GradientColor2 = System.Drawing.Color.Transparent;
+            this.lblID.GradientTextColor = System.Drawing.Color.Transparent;
             this.lblID.Location = new System.Drawing.Point(12, 11);
             this.lblID.Name = "lblID";
             this.lblID.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
@@ -346,41 +382,16 @@
             this.lblID.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblID.TextColor = System.Drawing.Color.White;
             // 
-            // lblSKU
+            // pboxImage
             // 
-            this.lblSKU.BackColor = System.Drawing.SystemColors.Window;
-            this.lblSKU.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.lblSKU.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(150)))));
-            this.lblSKU.BorderRadius = 10;
-            this.lblSKU.BorderSize = 2;
-            this.lblSKU.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
-            this.lblSKU.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblSKU.Location = new System.Drawing.Point(15, 78);
-            this.lblSKU.Margin = new System.Windows.Forms.Padding(4);
-            this.lblSKU.Multiline = false;
-            this.lblSKU.Name = "lblSKU";
-            this.lblSKU.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.lblSKU.PasswordChar = false;
-            this.lblSKU.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.lblSKU.PlaceholderText = "";
-            this.lblSKU.Size = new System.Drawing.Size(180, 29);
-            this.lblSKU.TabIndex = 70;
-            this.lblSKU.Texts = "";
-            this.lblSKU.UnderlinedStyle = false;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(19, 60);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(60, 14);
-            this.label6.TabIndex = 69;
-            this.label6.Text = "SKU Code";
-            // 
-            // ofdSaveImage
-            // 
-            this.ofdSaveImage.FileName = "openFileDialog1";
+            this.pboxImage.BackgroundImage = global::ColdChainConnectSystem_ACDP.Properties.Resources.NoImage1;
+            this.pboxImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pboxImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pboxImage.Location = new System.Drawing.Point(463, 60);
+            this.pboxImage.Name = "pboxImage";
+            this.pboxImage.Size = new System.Drawing.Size(125, 125);
+            this.pboxImage.TabIndex = 71;
+            this.pboxImage.TabStop = false;
             // 
             // EditItemInventory
             // 
@@ -388,6 +399,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(600, 393);
+            this.Controls.Add(this.pboxImage);
             this.Controls.Add(this.lblSKU);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnExit);
@@ -400,7 +412,6 @@
             this.Controls.Add(this.btnExitView);
             this.Controls.Add(this.customPanel1);
             this.Controls.Add(this.dpExpiry);
-            this.Controls.Add(this.pboxImage);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -412,8 +423,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EditItemInventoryForm";
             this.Load += new System.EventHandler(this.EditItemInventory_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pboxImage)).EndInit();
             this.customPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pboxImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -425,7 +436,6 @@
         private Materials.CustomButton btnExitView;
         private Materials.CustomPanel customPanel1;
         private Materials.CustomDatePicker dpExpiry;
-        private System.Windows.Forms.PictureBox pboxImage;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
@@ -442,5 +452,6 @@
         private CustomControls.RJControls.CustomTextBox lblSKU;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.OpenFileDialog ofdSaveImage;
+        private System.Windows.Forms.PictureBox pboxImage;
     }
 }
