@@ -15,6 +15,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources.Security
 
         public static void AddAuditInfo( String action, string refid, string desc)
         {
+            Console.Write("Here in add");
             String user = ConnectionClass.empid;
             string reference = CurrentFormClass.form;
             switch (reference)
@@ -36,6 +37,9 @@ namespace ColdChainConnectSystem_ACDP.ClassResources.Security
                     break;
                 case "empform":
                     reference = "Employee";
+                    break;
+                default:
+                    reference = "Dashboard";
                     break;
             }
 
@@ -62,7 +66,6 @@ namespace ColdChainConnectSystem_ACDP.ClassResources.Security
                 catch (SqlException ex)
                 {
                     new CustomMessageBox("Database Error", ex.Message, MessageBoxButtons.OK).ShowDialog();
-                    throw;
                 }
                 catch (Exception ex)
                 {

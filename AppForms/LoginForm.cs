@@ -3,6 +3,8 @@ using ColdChainConnectSystem_ACDP.AppForms.MainPanel.Dashboard;
 using ColdChainConnectSystem_ACDP.AppForms.MainPanel.Settings;
 using ColdChainConnectSystem_ACDP.ClassResources;
 using ColdChainConnectSystem_ACDP.ClassResources.Instances;
+using ColdChainConnectSystem_ACDP.ClassResources.Security;
+using ColdChainConnectSystem_ACDP.Popup;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -145,6 +147,7 @@ namespace ColdChainConnectSystem_ACDP
                 switch (verify)
                 {
                     case "admin":
+                        AuditLog.AddAuditInfo("Login", "0", ConnectionClass.empid + " Logged in at " + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
                         setupMainForm();
                         this.Hide();
                         MainInstance.i.NavigateTo(new DashoardForm());
@@ -153,7 +156,6 @@ namespace ColdChainConnectSystem_ACDP
 
                     case "sales":
                         setupMainForm();
-
                         this.Hide();
                         MainInstance.i.NavigateTo(new DashoardForm());
                         MainFormShow(MainInstance.i);
@@ -169,15 +171,14 @@ namespace ColdChainConnectSystem_ACDP
 
                     case "inv":
                         setupMainForm();
-
                         this.Hide();
                         MainInstance.i.NavigateTo(new DashoardForm());
                         MainFormShow(MainInstance.i);
                         break;
 
-                    case "default":
+                    default:
+                        new CustomMessageBox("Account Not Found", "Your account does not match the DB: Please Notify an Administrator.",MessageBoxButtons.OK).ShowDialog();
                         break;
-
                 }
             }
         }
