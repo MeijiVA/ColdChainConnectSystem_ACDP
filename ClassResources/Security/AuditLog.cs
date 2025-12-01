@@ -17,6 +17,10 @@ namespace ColdChainConnectSystem_ACDP.ClassResources.Security
         {
             Console.Write("Here in add");
             String user = ConnectionClass.empid;
+            if (user == null)
+            {
+                user = "NO USER";
+            }
             string reference = CurrentFormClass.form;
             switch (reference)
             {
@@ -47,32 +51,34 @@ namespace ColdChainConnectSystem_ACDP.ClassResources.Security
             INSERT INTO Audit ([User], Action, Reference, ReferenceID, Description, ActionDate, Notified)
             VALUES (@User, @Action, @Reference, @ReferenceID, @Description, GETDATE(), @Notified);";
 
-            using (SqlConnection connection = ConnectionClass.Connection())
-            using (SqlCommand command = new SqlCommand(sqlQuery, connection))
+            using (SqlConnection connection = ConnectionAdmin.Connection())
             {
-                try
+                using (SqlCommand command = new SqlCommand(sqlQuery, connection))
                 {
-                    command.Parameters.AddWithValue("@User", user);
-                    command.Parameters.AddWithValue("@Action", action);
-                    command.Parameters.AddWithValue("@Reference", reference);
-                    command.Parameters.Add("@ReferenceID", SqlDbType.VarChar).Value = refid;
-                    command.Parameters.AddWithValue("@Description", desc);
-                    command.Parameters.Add("@Notified", SqlDbType.Bit).Value = 0;
+                    try
+                    {
+                        command.Parameters.AddWithValue("@User", user);
+                        command.Parameters.AddWithValue("@Action", action);
+                        command.Parameters.AddWithValue("@Reference", reference);
+                        command.Parameters.Add("@ReferenceID", SqlDbType.VarChar).Value = refid;
+                        command.Parameters.AddWithValue("@Description", desc);
+                        command.Parameters.Add("@Notified", SqlDbType.Bit).Value = 0;
 
-                    connection.Open();
-                    command.ExecuteNonQuery();
-                    connection.Close();
+                        connection.Open();
+                        command.ExecuteNonQuery();
+                        connection.Close();
+                    }
+                    catch (SqlException ex)
+                    {
+                        new CustomMessageBox("Database Error", ex.Message, MessageBoxButtons.OK).ShowDialog();
+                    }
+                    catch (Exception ex)
+                    {
+                        new CustomMessageBox("Exception Error", ex.Message, MessageBoxButtons.OK).ShowDialog();
+                    }
                 }
-                catch (SqlException ex)
-                {
-                    new CustomMessageBox("Database Error", ex.Message, MessageBoxButtons.OK).ShowDialog();
-                }
-                catch (Exception ex)
-                {
-                    new CustomMessageBox("Exception Error", ex.Message, MessageBoxButtons.OK).ShowDialog();
-                }
+
             }
-
  
         }
     }

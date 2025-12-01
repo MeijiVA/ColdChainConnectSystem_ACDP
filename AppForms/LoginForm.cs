@@ -86,40 +86,22 @@ namespace ColdChainConnectSystem_ACDP
 
                 string accountCredentials = (txtUser.Texts = "AntonDelaPena2") + "," + (txtPass.Texts = "123123123");
                 verify = ConnectionClass.LoginAccount(accountCredentials);
-                switch (verify)
-                {
-                    case "admin":
-                        setupMainForm();
-                        this.Hide();
-                        MainInstance.i.NavigateTo(new DashoardForm());
-                        MainFormShow(MainInstance.i);
-                        break;
-
-                    case "sales":
-                        setupMainForm();
-
-                        this.Hide();
-                        MainFormShow(MainInstance.i);
-                        break;
-
-                    case "assist":
-                        setupMainForm();
-
-                        this.Hide();
-                        MainFormShow(MainInstance.i);
-                        break;
-
-                    case "inv":
-                        setupMainForm();
-
-                        this.Hide();
-                        MainFormShow(MainInstance.i);
-                        break;
-
-                    case "default":
-                        break;
-
-                }
+            switch (verify)
+            {
+                case "admin":
+                case "sales":
+                case "assist":
+                case "inv":
+                    AuditLog.AddAuditInfo("Login", "0", ConnectionClass.empid + " Logged in at " + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+                    setupMainForm();
+                    this.Hide();
+                    MainInstance.i.NavigateTo(new DashoardForm());
+                    MainFormShow(MainInstance.i);
+                    break;
+                case "default":
+                    AuditLog.AddAuditInfo("Login", "0", " WARNING: UNKNOWN Login Occurred at " + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+                    break;
+            }
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -147,37 +129,17 @@ namespace ColdChainConnectSystem_ACDP
                 switch (verify)
                 {
                     case "admin":
+                    case "sales":
+                    case "assist":
+                    case "inv":
                         AuditLog.AddAuditInfo("Login", "0", ConnectionClass.empid + " Logged in at " + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
                         setupMainForm();
                         this.Hide();
                         MainInstance.i.NavigateTo(new DashoardForm());
                         MainFormShow(MainInstance.i);
                         break;
-
-                    case "sales":
-                        setupMainForm();
-                        this.Hide();
-                        MainInstance.i.NavigateTo(new DashoardForm());
-                        MainFormShow(MainInstance.i);
-                        break;
-
-                    case "assist":
-                        setupMainForm();
-
-                        this.Hide();
-                        MainInstance.i.NavigateTo(new DashoardForm());
-                        MainFormShow(MainInstance.i);
-                        break;
-
-                    case "inv":
-                        setupMainForm();
-                        this.Hide();
-                        MainInstance.i.NavigateTo(new DashoardForm());
-                        MainFormShow(MainInstance.i);
-                        break;
-
-                    default:
-                        new CustomMessageBox("Account Not Found", "Your account does not match the DB: Please Notify an Administrator.",MessageBoxButtons.OK).ShowDialog();
+                    case "default":
+                        AuditLog.AddAuditInfo("Login", "0", " WARNING: UNKNOWN Login Occurred at " + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
                         break;
                 }
             }

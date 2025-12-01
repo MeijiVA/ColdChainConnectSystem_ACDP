@@ -6,6 +6,7 @@ using ColdChainConnectSystem_ACDP.AppForms.MainPanel.Settings;
 using ColdChainConnectSystem_ACDP.ClassResources;
 using ColdChainConnectSystem_ACDP.ClassResources.Display;
 using ColdChainConnectSystem_ACDP.ClassResources.Instances;
+using ColdChainConnectSystem_ACDP.ClassResources.Security;
 using ColdChainConnectSystem_ACDP.Popup;
 using System;
 using System.Collections.Generic;
@@ -111,6 +112,8 @@ namespace ColdChainConnectSystem_ACDP
             if(new CustomMessageBox("Log Out","Are you sure you want to log out?",MessageBoxButtons.OKCancel).ShowDialog() == DialogResult.OK)
             {
                 this.DialogResult = DialogResult.Cancel;
+                AuditLog.AddAuditInfo("Login", "0", ConnectionClass.empid + " Logged out at " + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+                ConnectionClass.ClearValues();
             }
 
         }

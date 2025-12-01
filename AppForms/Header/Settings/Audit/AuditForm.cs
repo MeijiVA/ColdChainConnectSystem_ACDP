@@ -55,7 +55,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.Audit
                                 object desc = reader.IsDBNull(reader.GetOrdinal("Description")) ? DBNull.Value : (object)reader.GetString(reader.GetOrdinal("Description"));
                                 object date = reader.IsDBNull(reader.GetOrdinal("ActionDate")) ? DBNull.Value : (object)reader.GetDateTime(reader.GetOrdinal("ActionDate"));
 
-                                dgvTable.Rows.Add(new object[] {num,action,reference,user,refid,desc,Convert.ToDateTime(date).ToString("yyyy-MM-dd")});
+                                dgvTable.Rows.Add(new object[] {num,user,action,reference,refid,desc,Convert.ToDateTime(date).ToString("yyyy-MM-dd")});
                             }
                         }
                     }

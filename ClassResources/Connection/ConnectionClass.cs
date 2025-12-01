@@ -41,6 +41,10 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
         public static string db { get; set; }
         public ConnectionClass()
         {
+            ClearValues();
+        }
+        public static void ClearValues()
+        {
             empid = "";
             username = "";
             account = "";
@@ -57,7 +61,6 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
             pass = "";
             filePath = "";
         }
-
         public static SqlConnection Connection()
         {
             StreamReader sr = new StreamReader(filePath);
@@ -130,7 +133,9 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                                         case "Inventory":
                                             return "inv";
                                         default:
+                                        return "default";
                                             throw new UnknownPositionException("Account has an undefined Position, Please contact an Administrator.");
+                                        
                                     }
                                 }
                             }
