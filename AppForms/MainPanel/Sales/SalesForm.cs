@@ -332,7 +332,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
                 headerCell.UpdateCheckState(allChecked);
             }
         }
-       
+
 
 
     }
