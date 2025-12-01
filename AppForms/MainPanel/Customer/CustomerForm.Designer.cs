@@ -474,13 +474,14 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer
             this.rowCbox.HeaderText = "";
             this.rowCbox.Name = "rowCbox";
             this.rowCbox.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.rowCbox.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.rowCbox.Width = 20;
             // 
             // numid
             // 
             this.numid.HeaderText = "";
             this.numid.Name = "numid";
+            this.numid.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.numid.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.numid.Visible = false;
             // 
             // customerid
@@ -492,6 +493,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer
             this.customerid.Name = "customerid";
             this.customerid.ReadOnly = true;
             this.customerid.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.customerid.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.customerid.Width = 69;
             // 
             // customername
@@ -502,6 +504,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer
             this.customername.Name = "customername";
             this.customername.ReadOnly = true;
             this.customername.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.customername.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.customername.Width = 90;
             // 
             // phonenumber
@@ -513,6 +516,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer
             this.phonenumber.Name = "phonenumber";
             this.phonenumber.ReadOnly = true;
             this.phonenumber.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.phonenumber.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.phonenumber.Width = 85;
             // 
             // address
@@ -525,6 +529,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer
             this.address.Name = "address";
             this.address.ReadOnly = true;
             this.address.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.address.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // paymentterm
             // 
@@ -534,6 +539,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer
             this.paymentterm.Name = "paymentterm";
             this.paymentterm.ReadOnly = true;
             this.paymentterm.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.paymentterm.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.paymentterm.Width = 85;
             // 
             // registrationdate
@@ -544,6 +550,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer
             this.registrationdate.Name = "registrationdate";
             this.registrationdate.ReadOnly = true;
             this.registrationdate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.registrationdate.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.registrationdate.Width = 70;
             // 
             // status
@@ -554,6 +561,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer
             this.status.Name = "status";
             this.status.ReadOnly = true;
             this.status.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.status.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.status.Width = 50;
             // 
             // viewCol
@@ -638,18 +646,6 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer
         private System.Windows.Forms.Label actionlbl;
         public System.Windows.Forms.DataGridView dgvTable;
         private Materials.CustomPanel customPanel1;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn rowCbox;
-        private System.Windows.Forms.DataGridViewTextBoxColumn numid;
-        private System.Windows.Forms.DataGridViewTextBoxColumn customerid;
-        private System.Windows.Forms.DataGridViewTextBoxColumn customername;
-        private System.Windows.Forms.DataGridViewTextBoxColumn phonenumber;
-        private System.Windows.Forms.DataGridViewTextBoxColumn address;
-        private System.Windows.Forms.DataGridViewTextBoxColumn paymentterm;
-        private System.Windows.Forms.DataGridViewTextBoxColumn registrationdate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn status;
-        private System.Windows.Forms.DataGridViewImageColumn viewCol;
-        private System.Windows.Forms.DataGridViewImageColumn editCol;
-        private System.Windows.Forms.DataGridViewImageColumn deleteCol;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
@@ -662,5 +658,17 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Customer
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn3;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn rowCbox;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn customerid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn customername;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phonenumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn address;
+        private System.Windows.Forms.DataGridViewTextBoxColumn paymentterm;
+        private System.Windows.Forms.DataGridViewTextBoxColumn registrationdate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn status;
+        private System.Windows.Forms.DataGridViewImageColumn viewCol;
+        private System.Windows.Forms.DataGridViewImageColumn editCol;
+        private System.Windows.Forms.DataGridViewImageColumn deleteCol;
     }
 }
