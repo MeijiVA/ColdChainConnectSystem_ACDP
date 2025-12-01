@@ -24,14 +24,14 @@ namespace ColdChainConnectSystem_ACDP.ClassResources.Display
             con.Close();
             return i;
         }
-        public static String LoadNotifs(int currentNum, Label user, Label desc)
+        public static String LoadNotifs(int currentNumber, Label user, Label desc)
         {
-            String num = "";
+            String numID = "";
             try
             {
                 SqlConnection con = ConnectionClass.Connection();
 
-                String query = $"SELECT [numid], [user], [action], [reference], [referenceid] FROM Audit WHERE [numID] = {currentNum} AND [Notified] = 0";
+                String query = $"SELECT [numid], [user], [action], [reference], [referenceid] FROM Audit\t WHERE [Notified] = 0 ORDER BY [numID] OFFSET {currentNumber} ROWS FETCH NEXT 1 ROW ONLY;";
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
                     con.Open();
@@ -39,7 +39,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources.Display
                     {
                         while (reader.Read())
                         {
-                            num  = reader[0].ToString().Trim(); // numid
+                            numID  = reader[0].ToString().Trim(); // numid
                             user.Text = reader[1].ToString().Trim(); // user
                             desc.Text = reader[2].ToString().Trim() + " " + reader[3].ToString().Trim() + " in " + reader[4].ToString(); 
                         }
@@ -51,7 +51,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources.Display
             {
                 new CustomMessageBox("Error", "Failed to load employees: " + ex.Message, MessageBoxButtons.OK).ShowDialog();
             }
-                return num;
+                return numID;
         }
 
     }

@@ -37,10 +37,10 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Notification
         {
             flowLayoutNotif.Controls.Clear();
             int numCount = NotificationClass.GetTotalNotifs();
-            for (int i = 1; i <= numCount; i++)
+            for (int i = 0; i < numCount; i++)
             {
                 NotifBar e = new NotifBar();
-                e.notifID = NotificationClass.LoadNotifs(i, e.lblEmpID, e.lblDescription);
+                e.notifID = NotificationClass.LoadNotifs(i,e.lblEmpID, e.lblDescription);
                 flowLayoutNotif.Controls.Add(e);
             }
         }
