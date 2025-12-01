@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.btnExit = new System.Windows.Forms.Button();
+            this.cbxPosition = new ColdChainConnectSystem_ACDP.Materials.CustomComboBox();
             this.btnSave = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
             this.tscStatus = new ToggleSlider.ToggleSliderComponent();
             this.lblPosition = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
@@ -36,7 +37,6 @@
             this.editAddressInformation1 = new ColdChainConnectSystem_ACDP.AppForms.Header.Settings.Employee.EditAddressInformation();
             this.editAccountInformation1 = new ColdChainConnectSystem_ACDP.AppForms.Header.Settings.PersonalDetails.EditAccountInformation();
             this.lbl = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
-            this.cbxPosition = new ColdChainConnectSystem_ACDP.Materials.CustomComboBox();
             this.SuspendLayout();
             // 
             // btnExit
@@ -55,6 +55,28 @@
             this.btnExit.TabIndex = 8;
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // cbxPosition
+            // 
+            this.cbxPosition.BackColor = System.Drawing.Color.White;
+            this.cbxPosition.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.cbxPosition.BorderRadius = 0;
+            this.cbxPosition.BorderSize = 2;
+            this.cbxPosition.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbxPosition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxPosition.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxPosition.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.cbxPosition.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.cbxPosition.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.cbxPosition.ListTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.cbxPosition.Location = new System.Drawing.Point(141, 84);
+            this.cbxPosition.MinimumSize = new System.Drawing.Size(200, 30);
+            this.cbxPosition.Name = "cbxPosition";
+            this.cbxPosition.Padding = new System.Windows.Forms.Padding(1);
+            this.cbxPosition.Size = new System.Drawing.Size(200, 31);
+            this.cbxPosition.TabIndex = 83;
+            this.cbxPosition.Texts = "";
+            this.cbxPosition.OnSelectedIndexChanged += new System.EventHandler(this.cbxPosition_OnSelectedIndexChanged);
             // 
             // btnSave
             // 
@@ -149,10 +171,13 @@
             this.editAccountInformation1.EmailInfo = "";
             this.editAccountInformation1.Location = new System.Drawing.Point(502, 122);
             this.editAccountInformation1.Name = "editAccountInformation1";
+            this.editAccountInformation1.PasswordInfo = "";
             this.editAccountInformation1.PositionInfo = "";
+            this.editAccountInformation1.PositionInfoLabel = "position";
             this.editAccountInformation1.Size = new System.Drawing.Size(280, 430);
             this.editAccountInformation1.StatusInfo = "";
             this.editAccountInformation1.TabIndex = 77;
+            this.editAccountInformation1.UsernameInfo = "";
             // 
             // lbl
             // 
@@ -172,28 +197,6 @@
             this.lbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lbl.TextColor = System.Drawing.Color.White;
             this.lbl.UseMnemonic = false;
-            // 
-            // cbxPosition
-            // 
-            this.cbxPosition.BackColor = System.Drawing.Color.White;
-            this.cbxPosition.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.cbxPosition.BorderRadius = 0;
-            this.cbxPosition.BorderSize = 2;
-            this.cbxPosition.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbxPosition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxPosition.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbxPosition.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.cbxPosition.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.cbxPosition.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.cbxPosition.ListTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.cbxPosition.Location = new System.Drawing.Point(141, 84);
-            this.cbxPosition.MinimumSize = new System.Drawing.Size(200, 30);
-            this.cbxPosition.Name = "cbxPosition";
-            this.cbxPosition.Padding = new System.Windows.Forms.Padding(1);
-            this.cbxPosition.Size = new System.Drawing.Size(200, 31);
-            this.cbxPosition.TabIndex = 83;
-            this.cbxPosition.Texts = "";
-            this.cbxPosition.OnSelectedIndexChanged += new System.EventHandler(this.cbxPosition_OnSelectedIndexChanged);
             // 
             // AddEmployeeForm
             // 

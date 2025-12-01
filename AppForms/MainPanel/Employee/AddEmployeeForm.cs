@@ -135,18 +135,18 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Employee
                 // Create SQL login/user for this new employee
                 try
                 {
-                    var creator = new CreateAccount();
-                    creator.SetupNewAppUser(username, password);
+                    CreateAccount.SetupNewAppUser(username, password);
+
+
+                    new CustomMessageBox("Success", "Employee saved successfully!", MessageBoxButtons.OK).ShowDialog();
+                    // Navigate back to EmployeeForm and refresh
+                    EmployeeInstance.i.LoadAllEmployees();
+                    MainInstance.i.NavigateTo(EmployeeInstance.i);
                 }
                 catch (Exception ex)
                 {
                     new CustomMessageBox("Account Creation", "Employee saved, but failed to create login: " + ex.Message, MessageBoxButtons.OK).ShowDialog();
                 }
-
-                new CustomMessageBox("Success", "Employee saved successfully!", MessageBoxButtons.OK).ShowDialog();
-                // Navigate back to EmployeeForm and refresh
-                EmployeeInstance.i.LoadAllEmployees();
-                MainInstance.i.NavigateTo(EmployeeInstance.i);
             }
         }
 
@@ -154,6 +154,11 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Employee
         {
             editAccountInformation1.lblPos.Hide();
             editAccountInformation1.cbxPosition.Show();
+        }
+
+        private void customButton1_Click(object sender, EventArgs e)
+        {
+            CreateAccount.SetupNewAppUser("test","passwordhere");
         }
     }
 }
