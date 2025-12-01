@@ -203,7 +203,6 @@
             this.lblCustomerName.Name = "lblCustomerName";
             this.lblCustomerName.Size = new System.Drawing.Size(186, 37);
             this.lblCustomerName.TabIndex = 37;
-            this.lblCustomerName.Text = "Text Here lol";
             this.lblCustomerName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblCustomerName.TextColor = System.Drawing.Color.Black;
             // 

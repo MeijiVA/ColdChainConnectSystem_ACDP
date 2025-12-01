@@ -616,6 +616,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddCustomer";
             this.Padding = new System.Windows.Forms.Padding(20);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddItemInventoryForm";
             this.Load += new System.EventHandler(this.AddItemInventoryForm_Load);
             this.customPanel1.ResumeLayout(false);

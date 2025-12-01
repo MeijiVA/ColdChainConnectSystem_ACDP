@@ -567,6 +567,7 @@
             this.Controls.Add(this.lblID);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "EditCustomer";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EditCustomer";
             this.Load += new System.EventHandler(this.EditCustomer_Load);
             this.customPanel1.ResumeLayout(false);

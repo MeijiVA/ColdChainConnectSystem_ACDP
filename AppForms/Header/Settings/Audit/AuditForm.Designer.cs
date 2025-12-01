@@ -33,12 +33,24 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvTable = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.numid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.user = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.action = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,14 +59,12 @@
             this.desc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.actiondate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.customPanel1 = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
-            this.pnlSearch = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
-            this.txtSearch = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.customPanel2 = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
+            this.fltrPanel = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
+            this.cbxUser = new ColdChainConnectSystem_ACDP.Materials.CustomComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTable)).BeginInit();
             this.customPanel1.SuspendLayout();
-            this.pnlSearch.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.fltrPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvTable
@@ -134,6 +144,84 @@
             this.dgvTable.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvTable.Size = new System.Drawing.Size(754, 376);
             this.dgvTable.TabIndex = 9;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn1.HeaderText = "";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 2;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle11;
+            this.dataGridViewTextBoxColumn2.HeaderText = "User";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn2.Width = 80;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle12;
+            this.dataGridViewTextBoxColumn3.HeaderText = "  Action  ";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn3.Width = 57;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle13;
+            this.dataGridViewTextBoxColumn4.HeaderText = "  Reference  ";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn4.Width = 80;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle14;
+            this.dataGridViewTextBoxColumn5.HeaderText = "Reference ID";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            this.dataGridViewTextBoxColumn5.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn5.Width = 82;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn6.DefaultCellStyle = dataGridViewCellStyle15;
+            this.dataGridViewTextBoxColumn6.HeaderText = "Description";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            this.dataGridViewTextBoxColumn6.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.HeaderText = "ActionDate";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            this.dataGridViewTextBoxColumn7.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn7.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn7.Width = 130;
             // 
             // numid
             // 
@@ -220,7 +308,7 @@
             this.customPanel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.customPanel1.BorderRadius = 10;
             this.customPanel1.BorderSize = 0;
-            this.customPanel1.Controls.Add(this.pnlSearch);
+            this.customPanel1.Controls.Add(this.fltrPanel);
             this.customPanel1.ForeColor = System.Drawing.Color.White;
             this.customPanel1.Location = new System.Drawing.Point(5, 6);
             this.customPanel1.Name = "customPanel1";
@@ -228,49 +316,6 @@
             this.customPanel1.Size = new System.Drawing.Size(755, 63);
             this.customPanel1.TabIndex = 5;
             this.customPanel1.TextColor = System.Drawing.Color.White;
-            // 
-            // pnlSearch
-            // 
-            this.pnlSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(160)))));
-            this.pnlSearch.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(160)))));
-            this.pnlSearch.BorderColor = System.Drawing.Color.White;
-            this.pnlSearch.BorderRadius = 10;
-            this.pnlSearch.BorderSize = 1;
-            this.pnlSearch.Controls.Add(this.txtSearch);
-            this.pnlSearch.Controls.Add(this.pictureBox1);
-            this.pnlSearch.ForeColor = System.Drawing.Color.White;
-            this.pnlSearch.Location = new System.Drawing.Point(16, 8);
-            this.pnlSearch.Name = "pnlSearch";
-            this.pnlSearch.Padding = new System.Windows.Forms.Padding(40, 10, 2, 2);
-            this.pnlSearch.Size = new System.Drawing.Size(278, 35);
-            this.pnlSearch.TabIndex = 4;
-            this.pnlSearch.TextColor = System.Drawing.Color.White;
-            // 
-            // txtSearch
-            // 
-            this.txtSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(160)))));
-            this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSearch.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.txtSearch.ForeColor = System.Drawing.Color.White;
-            this.txtSearch.Location = new System.Drawing.Point(40, 10);
-            this.txtSearch.MaximumSize = new System.Drawing.Size(200, 30);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(200, 14);
-            this.txtSearch.TabIndex = 6;
-            this.txtSearch.Text = "Search Term";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::ColdChainConnectSystem_ACDP.Properties.Resources.searchIcon;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(10, 7);
-            this.pictureBox1.MaximumSize = new System.Drawing.Size(24, 24);
-            this.pictureBox1.MinimumSize = new System.Drawing.Size(24, 24);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
             // 
             // customPanel2
             // 
@@ -287,6 +332,45 @@
             this.customPanel2.TabIndex = 6;
             this.customPanel2.TextColor = System.Drawing.Color.White;
             // 
+            // fltrPanel
+            // 
+            this.fltrPanel.BackColor = System.Drawing.Color.Transparent;
+            this.fltrPanel.BackgroundColor = System.Drawing.Color.Transparent;
+            this.fltrPanel.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.fltrPanel.BorderRadius = 5;
+            this.fltrPanel.BorderSize = 0;
+            this.fltrPanel.Controls.Add(this.cbxUser);
+            this.fltrPanel.ForeColor = System.Drawing.Color.White;
+            this.fltrPanel.Location = new System.Drawing.Point(18, 12);
+            this.fltrPanel.Name = "fltrPanel";
+            this.fltrPanel.Size = new System.Drawing.Size(187, 30);
+            this.fltrPanel.TabIndex = 7;
+            this.fltrPanel.TextColor = System.Drawing.Color.White;
+            // 
+            // cbxUser
+            // 
+            this.cbxUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(160)))));
+            this.cbxUser.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(160)))));
+            this.cbxUser.BorderRadius = 10;
+            this.cbxUser.BorderSize = 1;
+            this.cbxUser.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cbxUser.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.cbxUser.ForeColor = System.Drawing.Color.White;
+            this.cbxUser.IconColor = System.Drawing.Color.White;
+            this.cbxUser.Items.AddRange(new object[] {
+            "Filter"});
+            this.cbxUser.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.cbxUser.ListTextColor = System.Drawing.Color.DimGray;
+            this.cbxUser.Location = new System.Drawing.Point(0, 0);
+            this.cbxUser.MinimumSize = new System.Drawing.Size(40, 30);
+            this.cbxUser.Name = "cbxUser";
+            this.cbxUser.Padding = new System.Windows.Forms.Padding(1);
+            this.cbxUser.Size = new System.Drawing.Size(187, 30);
+            this.cbxUser.TabIndex = 5;
+            this.cbxUser.Texts = "Filter";
+            this.cbxUser.OnSelectedIndexChanged += new System.EventHandler(this.cbxUser_OnSelectedIndexChanged);
+            // 
             // AuditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -302,9 +386,7 @@
             this.Load += new System.EventHandler(this.AuditForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTable)).EndInit();
             this.customPanel1.ResumeLayout(false);
-            this.pnlSearch.ResumeLayout(false);
-            this.pnlSearch.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.fltrPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -312,9 +394,6 @@
         #endregion
 
         private Materials.CustomPanel customPanel1;
-        private Materials.CustomPanel pnlSearch;
-        public System.Windows.Forms.TextBox txtSearch;
-        private System.Windows.Forms.PictureBox pictureBox1;
         public System.Windows.Forms.DataGridView dgvTable;
         private System.Windows.Forms.DataGridViewTextBoxColumn numid;
         private System.Windows.Forms.DataGridViewTextBoxColumn user;
@@ -324,5 +403,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn desc;
         private System.Windows.Forms.DataGridViewTextBoxColumn actiondate;
         private Materials.CustomPanel customPanel2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private Materials.CustomPanel fltrPanel;
+        private Materials.CustomComboBox cbxUser;
     }
 }
