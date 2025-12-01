@@ -460,7 +460,6 @@
     </Compile>
     <Compile Include="ClassResources\Display\QREncoder.cs" />
     <Compile Include="ClassResources\Instances\EmployeeDatabaseInstance.cs" />
-    <Compile Include="ClassResources\Instances\NotificationInstance.cs" />
     <Compile Include="ClassResources\Instances\CustomerInstance.cs" />
     <Compile Include="ClassResources\Instances\EmployeeInstance.cs" />
     <Compile Include="ClassResources\Instances\ItemTabInstance.cs" />

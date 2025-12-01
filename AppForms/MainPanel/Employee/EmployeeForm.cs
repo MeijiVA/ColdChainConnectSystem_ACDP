@@ -10,8 +10,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ColdChainConnectSystem_ACDP.ClassResources.Display;
-using ColdChainConnectSystem_ACDP.ClassResources.Instances;
 
 namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.Employee
 {

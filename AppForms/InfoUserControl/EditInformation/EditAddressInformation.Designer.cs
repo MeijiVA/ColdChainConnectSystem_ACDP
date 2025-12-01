@@ -270,7 +270,7 @@
             this.cbxCity.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.cbxCity.BorderRadius = 0;
             this.cbxCity.BorderSize = 1;
-            this.cbxCity.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cbxCity.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.cbxCity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.cbxCity.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
@@ -290,7 +290,7 @@
             this.cbxProvince.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.cbxProvince.BorderRadius = 0;
             this.cbxProvince.BorderSize = 1;
-            this.cbxProvince.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cbxProvince.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxProvince.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.cbxProvince.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.cbxProvince.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
