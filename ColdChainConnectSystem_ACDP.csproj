@@ -479,6 +479,7 @@
     <Compile Include="ClassResources\Display\SelectedFilterClass.cs" />
     <Compile Include="ClassResources\Display\MunicipalityListClass.cs" />
     <Compile Include="ClassResources\Security\ConnectionAdmin.cs" />
+    <Compile Include="ClassResources\Security\CreateAccount.cs" />
     <Compile Include="ClassResources\Security\SqlInjectionPrevention.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
