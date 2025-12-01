@@ -141,7 +141,7 @@
             this.cbxFilter.BorderRadius = 10;
             this.cbxFilter.BorderSize = 1;
             this.cbxFilter.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cbxFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cbxFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.cbxFilter.ForeColor = System.Drawing.Color.White;
             this.cbxFilter.IconColor = System.Drawing.Color.White;

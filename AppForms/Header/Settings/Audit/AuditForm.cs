@@ -73,5 +73,10 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.Audit
             LoadAllLogEntriesIntoDataGridView();
             dgvTable.ClearSelection();
         }
+
+        private void cbxUser_OnSelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
