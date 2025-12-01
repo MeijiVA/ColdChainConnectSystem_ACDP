@@ -127,7 +127,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
         public static string getNewSalesID()
         {
             String var = "";
-            String query = "SELECT TOP 1[SalesID] FROM Sales ORDER BY [numid] DESC";
+            String query = "SELECT TOP 1 [SalesID] FROM Sales ORDER BY [numid] DESC";
             SqlConnection con = ConnectionClass.Connection();
             using (SqlCommand cmd = new SqlCommand(query, con))
             {
@@ -141,7 +141,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                         int i = Convert.ToInt32(var) + 1;
                         var = "SLS-00" + i;
                     }
-                    else return "";
+                    else return "SLS-001";
                 }
                 con.Close();
             }
