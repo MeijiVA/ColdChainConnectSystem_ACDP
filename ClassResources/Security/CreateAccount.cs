@@ -40,7 +40,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources.Security
         ";
 
             // Use a new connection object specifically for this operation
-            using (SqlConnection con = ConnectionClass.Connection())
+            using (SqlConnection con = ConnectionAdmin.Connection())
             {
                 try
                 {
