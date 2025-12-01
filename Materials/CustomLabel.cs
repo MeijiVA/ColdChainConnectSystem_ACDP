@@ -17,7 +17,15 @@ namespace ColdChainConnectSystem_ACDP.Materials
         private int borderSize = 0;
         private int borderRadius = 0;
         private Color borderColor = Color.PaleVioletRed;
+        [Category("Gradient Properties")]
+        public Color GradientTextColor { get; set; } = Color.Transparent;
 
+        [Category("Gradient Properties")]
+        public Color GradientColor1 { get; set; } = Color.Transparent;
+        [Category("Gradient Properties")]
+        public Color GradientColor2 { get; set; } = Color.Transparent;
+        [Category("Gradient Properties")]
+        public LinearGradientMode Angle { get; set; } = LinearGradientMode.Horizontal;
         //Properties
         [Category("Label Properties")]
         public int BorderSize
@@ -136,6 +144,24 @@ namespace ColdChainConnectSystem_ACDP.Materials
                         pevent.Graphics.DrawRectangle(penBorder, 0, 0, this.Width - 1, this.Height - 1);
                     }
                 }
+            }
+
+            Graphics graphics = pevent.Graphics;
+
+            // Create a LinearGradientBrush for the background gradient
+            using (LinearGradientBrush brush = new LinearGradientBrush(this.ClientRectangle, GradientColor1, GradientColor2, Angle))
+            {
+                graphics.FillRectangle(brush, this.ClientRectangle);
+            }
+
+            // Draw the button text
+            using (SolidBrush textBrush = new SolidBrush(GradientTextColor))
+            {
+                SizeF textSize = graphics.MeasureString(this.Text, this.Font);
+                PointF locationToDraw = new PointF();
+                locationToDraw.X = (this.Width / 2) - (textSize.Width / 2);
+                locationToDraw.Y = (this.Height / 2) - (textSize.Height / 2);
+                graphics.DrawString(this.Text, this.Font, textBrush, locationToDraw);
             }
         }
         protected override void OnHandleCreated(EventArgs e)

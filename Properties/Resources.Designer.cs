@@ -10,9 +10,8 @@
 
 namespace ColdChainConnectSystem_ACDP.Properties {
     using System;
-    using System.Drawing;
-
-
+    
+    
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -244,6 +243,16 @@ namespace ColdChainConnectSystem_ACDP.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap GreetIcon {
+            get {
+                object obj = ResourceManager.GetObject("GreetIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap import {
             get {
                 object obj = ResourceManager.GetObject("import", resourceCulture);
@@ -420,7 +429,5 @@ namespace ColdChainConnectSystem_ACDP.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
-        public static Image AddEmployeeBtn { get; internal set; }
     }
 }

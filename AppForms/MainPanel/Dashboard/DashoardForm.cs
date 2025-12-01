@@ -97,17 +97,17 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Dashboard
                 tableExpiry.ClearSelection();
 
 
-                query = @"SELECT TOP 3 SkuCode, SUM(Quantity) AS TotalQuantity FROM [dbo].[Inventory] GROUP BY SkuCode ORDER BY TotalQuantity ASC;";
+                query = @"SELECT TOP 4 SkuCode, SUM(Quantity) AS TotalQuantity FROM [dbo].[Inventory] GROUP BY SkuCode ORDER BY TotalQuantity ASC;";
 
                 //Sku
                 List<System.Windows.Forms.Label> SKU = new List<System.Windows.Forms.Label>
                 {
-                lblSKU1,lblSKU2,lblSKU3
+                lblSKU1,lblSKU2,lblSKU3,lblSKU4
                 };
                 //Quantity
                 List<System.Windows.Forms.Label> quant = new List<System.Windows.Forms.Label>
                 {
-                lblquant1,lblquant2,lblquant3
+                lblquant1,lblquant2,lblquant3,lblquant4
                 };
                 con.Open();
                 using (SqlCommand command = new SqlCommand(query, con))
@@ -171,28 +171,37 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Dashboard
 
         private void pnlStock1_MouseDown(object sender, MouseEventArgs e)
         {
-            Console.WriteLine("HERE");
             CurrentFormClass.setPreviousFormTo("invform");
             MainInstance.i.sidePanel1.SelectedTab(MainInstance.i.sidePanel1.cbtnInventory);
             MainInstance.i.NavigateTo(InventoryInstance.i = new InventoryForm());
             InventoryInstance.i.SearchBar.txtSearch.Text = lblSKU1.Text.Substring(1, lblSKU1.Text.Length - 2);
+            MainInstance.i.sidePanel1.Refresh();
         }
         private void pnlStock2_MouseDown(object sender, MouseEventArgs e)
         {
-            Console.WriteLine("HERE1");
             CurrentFormClass.setPreviousFormTo("invform");
             MainInstance.i.sidePanel1.SelectedTab(MainInstance.i.sidePanel1.cbtnInventory);
             MainInstance.i.NavigateTo(InventoryInstance.i = new InventoryForm());
             InventoryInstance.i.SearchBar.txtSearch.Text = lblSKU2.Text.Substring(1, lblSKU2.Text.Length - 2);
+            MainInstance.i.sidePanel1.Refresh();
         }
 
         private void pnlStock3_MouseDown(object sender, MouseEventArgs e)
         {
-            Console.WriteLine("HERE3");
             CurrentFormClass.setPreviousFormTo("invform");
             MainInstance.i.sidePanel1.SelectedTab(MainInstance.i.sidePanel1.cbtnInventory);
             MainInstance.i.NavigateTo(InventoryInstance.i = new InventoryForm());
             InventoryInstance.i.SearchBar.txtSearch.Text = lblSKU3.Text.Substring(1, lblSKU3.Text.Length - 2);
+            MainInstance.i.sidePanel1.Refresh();
+        }
+
+        private void customPanel3_Click(object sender, EventArgs e)
+        {
+            CurrentFormClass.setPreviousFormTo("invform");
+            MainInstance.i.sidePanel1.SelectedTab(MainInstance.i.sidePanel1.cbtnInventory);
+            MainInstance.i.NavigateTo(InventoryInstance.i = new InventoryForm());
+            InventoryInstance.i.SearchBar.txtSearch.Text = lblSKU4.Text.Substring(1, lblSKU4.Text.Length - 2);
+            MainInstance.i.sidePanel1.Refresh();
         }
     }
 }

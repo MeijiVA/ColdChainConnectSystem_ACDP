@@ -18,13 +18,15 @@ namespace ColdChainConnectSystem_ACDP.Materials
         private int borderRadius = 0;
         private Color borderColor = Color.PaleVioletRed;
 
-        [Category("Button Properties")]
+        [Category("Gradient Properties")]
         public Color GradientTextColor { get; set; } = Color.Transparent;
 
-        [Category("Button Properties")]
+        [Category("Gradient Properties")]
         public Color GradientColor1 { get; set; } = Color.Transparent;
-        [Category("Button Properties")]
+        [Category("Gradient Properties")]
         public Color GradientColor2 { get; set; } = Color.Transparent;
+        [Category("Gradient Properties")]
+        public LinearGradientMode Angle { get; set; } = LinearGradientMode.Horizontal;
         //Properties
         [Category("Button Properties")]
         public int BorderSize
@@ -149,7 +151,7 @@ namespace ColdChainConnectSystem_ACDP.Materials
             Graphics graphics = pevent.Graphics;
 
             // Create a LinearGradientBrush for the background gradient
-            using (LinearGradientBrush brush = new LinearGradientBrush(this.ClientRectangle, GradientColor1, GradientColor2, LinearGradientMode.Horizontal))
+            using (LinearGradientBrush brush = new LinearGradientBrush(this.ClientRectangle, GradientColor1, GradientColor2, Angle))
             {
                 graphics.FillRectangle(brush, this.ClientRectangle);
             }

@@ -28,5 +28,10 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Dashboard
             datelbl.Text = DateTime.Now.ToString("MMMM dd, yyyy");
 
         }
+
+        private void customPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

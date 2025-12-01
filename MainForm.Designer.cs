@@ -109,7 +109,7 @@
             this.notificationDisplay1.BackColor = System.Drawing.Color.White;
             this.notificationDisplay1.Location = new System.Drawing.Point(728, 23);
             this.notificationDisplay1.Name = "notificationDisplay1";
-            this.notificationDisplay1.Size = new System.Drawing.Size(273, 174);
+            this.notificationDisplay1.Size = new System.Drawing.Size(266, 141);
             this.notificationDisplay1.TabIndex = 0;
             this.notificationDisplay1.Visible = false;
             this.notificationDisplay1.Load += new System.EventHandler(this.notificationDisplay1_Load_1);

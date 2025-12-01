@@ -820,6 +820,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\AddEmployeeBtn.png" />
+    <None Include="Resources\GreetIcon.png" />
     <None Include="Resources\MainForm.png" />
     <None Include="Resources\MainForm1.png" />
   </ItemGroup>
