@@ -1,6 +1,8 @@
 ﻿using ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory;
 using ColdChainConnectSystem_ACDP.ClassResources;
+using ColdChainConnectSystem_ACDP.ClassResources.Display;
 using ColdChainConnectSystem_ACDP.ClassResources.Instances;
+using ColdChainConnectSystem_ACDP.Materials;
 using Microsoft.Office.Interop.Excel;
 using System;
 using System.Collections;
@@ -28,6 +30,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Dashboard
         }
         private void DashoardForm_Load(object sender, EventArgs e)
         {
+            QuantityColor.LoadQuantity("QuantityThreshold.txt");
             try
             {
                 //TOP PART COUNTER
@@ -105,7 +108,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Dashboard
                 lblSKU1,lblSKU2,lblSKU3,lblSKU4
                 };
                 //Quantity
-                List<System.Windows.Forms.Label> quant = new List<System.Windows.Forms.Label>
+                List<CustomLabel> quant = new List<CustomLabel>
                 {
                 lblquant1,lblquant2,lblquant3,lblquant4
                 };
@@ -117,9 +120,25 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Dashboard
                         int i = 0;
                         while (reader.Read())
                         {
+
                             SKU[i].Text = "["+reader[0].ToString()+ "]";
                             quant[i].Text = reader[1].ToString();
-                            i++;
+                                if (Convert.ToInt32(quant[i].Text) <= ((QuantityColor.QuantityThreshold / 2) - 1))
+                                {
+                                    // Red for low stock
+                                    quant[i].TextColor = Color.FromArgb(255, 27, 20);
+                                }
+                                else if (Convert.ToInt32(quant[i].Text) >= (QuantityColor.QuantityThreshold / 2) && Convert.ToInt32(quant[i].Text) <= (QuantityColor.QuantityThreshold - 1))
+                                {
+                                // Yellow for medium stock
+                                    quant[i].TextColor = Color.FromArgb(230, 230, 10);
+                                }
+                                else if (Convert.ToInt32(quant[i].Text) >= QuantityColor.QuantityThreshold)
+                                {
+                                // Green for sufficient stock
+                                    quant[i].TextColor = Color.FromArgb(107, 188, 59);
+                                }
+                                i++;
                         }
                     }
 

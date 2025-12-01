@@ -71,12 +71,16 @@
             this.uc = new ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory.UsrCntrlLegend();
             this.SearchBar = new ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory.SearchUC();
             this.customPanel1 = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
+            this.lblQ = new System.Windows.Forms.Label();
+            this.txtQuantity = new CustomControls.RJControls.CustomTextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTable)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.txtQuantity);
+            this.panel1.Controls.Add(this.lblQ);
             this.panel1.Controls.Add(this.lblLegends);
             this.panel1.Controls.Add(this.lblOf);
             this.panel1.Controls.Add(this.lblMaxPage);
@@ -91,6 +95,7 @@
             // 
             // lblLegends
             // 
+            this.lblLegends.Angle = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
             this.lblLegends.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.lblLegends.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.lblLegends.BorderColor = System.Drawing.Color.PaleVioletRed;
@@ -100,6 +105,9 @@
             this.lblLegends.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblLegends.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLegends.ForeColor = System.Drawing.Color.White;
+            this.lblLegends.GradientColor1 = System.Drawing.Color.Transparent;
+            this.lblLegends.GradientColor2 = System.Drawing.Color.Transparent;
+            this.lblLegends.GradientTextColor = System.Drawing.Color.Transparent;
             this.lblLegends.Location = new System.Drawing.Point(3, 6);
             this.lblLegends.Name = "lblLegends";
             this.lblLegends.Size = new System.Drawing.Size(63, 25);
@@ -134,6 +142,7 @@
             // 
             // lblPageNum
             // 
+            this.lblPageNum.Angle = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
             this.lblPageNum.BackColor = System.Drawing.Color.White;
             this.lblPageNum.BackgroundColor = System.Drawing.Color.White;
             this.lblPageNum.BorderColor = System.Drawing.Color.DimGray;
@@ -142,6 +151,9 @@
             this.lblPageNum.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblPageNum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblPageNum.ForeColor = System.Drawing.Color.Gray;
+            this.lblPageNum.GradientColor1 = System.Drawing.Color.Transparent;
+            this.lblPageNum.GradientColor2 = System.Drawing.Color.Transparent;
+            this.lblPageNum.GradientTextColor = System.Drawing.Color.Transparent;
             this.lblPageNum.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblPageNum.Location = new System.Drawing.Point(661, 2);
             this.lblPageNum.Name = "lblPageNum";
@@ -164,6 +176,7 @@
             // 
             // btnNext
             // 
+            this.btnNext.Angle = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
             this.btnNext.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.btnNext.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.btnNext.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(255)))));
@@ -188,6 +201,7 @@
             // 
             // btnPrev
             // 
+            this.btnPrev.Angle = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
             this.btnPrev.BackColor = System.Drawing.Color.White;
             this.btnPrev.BackgroundColor = System.Drawing.Color.White;
             this.btnPrev.BorderColor = System.Drawing.Color.DimGray;
@@ -490,17 +504,56 @@
             // 
             // customPanel1
             // 
+            this.customPanel1.Angle = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
             this.customPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(163)))));
             this.customPanel1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(163)))));
             this.customPanel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.customPanel1.BorderRadius = 10;
             this.customPanel1.BorderSize = 0;
             this.customPanel1.ForeColor = System.Drawing.Color.White;
+            this.customPanel1.GradientColor1 = System.Drawing.Color.Transparent;
+            this.customPanel1.GradientColor2 = System.Drawing.Color.Transparent;
+            this.customPanel1.GradientTextColor = System.Drawing.Color.Transparent;
             this.customPanel1.Location = new System.Drawing.Point(22, 490);
             this.customPanel1.Name = "customPanel1";
             this.customPanel1.Size = new System.Drawing.Size(753, 29);
             this.customPanel1.TabIndex = 10;
             this.customPanel1.TextColor = System.Drawing.Color.White;
+            // 
+            // lblQ
+            // 
+            this.lblQ.AutoSize = true;
+            this.lblQ.Font = new System.Drawing.Font("Arial", 8.25F);
+            this.lblQ.ForeColor = System.Drawing.Color.DimGray;
+            this.lblQ.Location = new System.Drawing.Point(78, 11);
+            this.lblQ.Name = "lblQ";
+            this.lblQ.Size = new System.Drawing.Size(101, 14);
+            this.lblQ.TabIndex = 10;
+            this.lblQ.Text = "Quantity Threshold:";
+            // 
+            // txtQuantity
+            // 
+            this.txtQuantity.BackColor = System.Drawing.SystemColors.Window;
+            this.txtQuantity.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.txtQuantity.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(163)))));
+            this.txtQuantity.BorderRadius = 10;
+            this.txtQuantity.BorderSize = 1;
+            this.txtQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtQuantity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtQuantity.Location = new System.Drawing.Point(178, 2);
+            this.txtQuantity.Margin = new System.Windows.Forms.Padding(4);
+            this.txtQuantity.Multiline = false;
+            this.txtQuantity.Name = "txtQuantity";
+            this.txtQuantity.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtQuantity.PasswordChar = false;
+            this.txtQuantity.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtQuantity.PlaceholderText = "";
+            this.txtQuantity.Size = new System.Drawing.Size(48, 31);
+            this.txtQuantity.TabIndex = 11;
+            this.txtQuantity.Texts = "";
+            this.txtQuantity.UnderlinedStyle = false;
+            this.txtQuantity._TextChanged += new System.EventHandler(this.customTextBox1__TextChanged);
+            this.txtQuantity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.customTextBox1_KeyPress);
             // 
             // InventoryForm
             // 
@@ -554,5 +607,7 @@
         private System.Windows.Forms.DataGridViewImageColumn deleteCol;
         private Materials.CustomPanel customPanel1;
         public SearchUC SearchBar;
+        private System.Windows.Forms.Label lblQ;
+        private CustomControls.RJControls.CustomTextBox txtQuantity;
     }
 }

@@ -2,6 +2,7 @@
 using ColdChainConnectSystem_ACDP.AppForms.MainPanel.Dashboard;
 using ColdChainConnectSystem_ACDP.AppForms.MainPanel.Settings;
 using ColdChainConnectSystem_ACDP.ClassResources;
+using ColdChainConnectSystem_ACDP.ClassResources.Display;
 using ColdChainConnectSystem_ACDP.ClassResources.Instances;
 using ColdChainConnectSystem_ACDP.ClassResources.Security;
 using ColdChainConnectSystem_ACDP.Popup;
@@ -132,6 +133,7 @@ namespace ColdChainConnectSystem_ACDP
                     case "sales":
                     case "assist":
                     case "inv":
+                        QuantityColor.CreateTxt("QuantityThreshold.txt");
                         AuditLog.AddAuditInfo("Login", "0", ConnectionClass.empid + " Logged in at " + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
                         setupMainForm();
                         this.Hide();

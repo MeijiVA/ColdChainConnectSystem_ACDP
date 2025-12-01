@@ -33,6 +33,8 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
         }
         private void InventoryForm_Load(object sender, EventArgs e)
         {
+            QuantityColor.LoadQuantity("QuantityThreshold.txt");
+            txtQuantity.Texts = ""+QuantityColor.QuantityThreshold;
             currentPageIndex = 1;//!!!!!!!!!!!!!!!!!!!
             SelectedFilterClass.SelectedFilter = "";
             dgvTable.Rows.Clear();
@@ -179,19 +181,19 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
                     string quantityStr = dgvTable.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
                     if (int.TryParse(quantityStr, out int quantity))
                     {
-                        if (quantity <= 50)
+                        if (quantity <= ((QuantityColor.QuantityThreshold/2)-1))
                         {
                             // Red for low stock
                             e.CellStyle.BackColor = Color.FromArgb(255, 200, 200);
                             e.CellStyle.ForeColor = Color.FromArgb(255, 27, 20);
                         }
-                        else if (quantity >= 51 && quantity <= 100)
+                        else if (quantity >= (QuantityColor.QuantityThreshold/2) && quantity <= (QuantityColor.QuantityThreshold-1))
                         {
                             // Yellow for medium stock
                             e.CellStyle.BackColor = Color.FromArgb(255, 255, 200);
                             e.CellStyle.ForeColor = Color.FromArgb(230, 230, 10);
                         }
-                        else if (quantity >= 101)
+                        else if (quantity >= QuantityColor.QuantityThreshold)
                         {
                             // Green for sufficient stock
                             e.CellStyle.BackColor = Color.FromArgb(200, 255, 200);
@@ -369,5 +371,23 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
             }
         }
 
+        private void customTextBox1__TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void customTextBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                QuantityColor.WriteQuantity("QuantityThreshold.txt", txtQuantity);
+                QuantityColor.LoadQuantity("QuantityThreshold.txt");
+                dgvTable.Refresh();
+                e.Handled = true;
+            }
+            else if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != (char)Keys.Enter))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

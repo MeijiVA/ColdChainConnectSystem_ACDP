@@ -34,7 +34,8 @@ namespace ColdChainConnectSystem_ACDP
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            this.Icon = ColdChainConnectSystem_ACDP.Properties.Resources.CCC_Logo;
+            QuantityColor.CreateTxt("QuantityThreshold.txt");
+
             settingFlag = 1;
         }
 
