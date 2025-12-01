@@ -40,7 +40,6 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Notification
             {
                 using (SqlConnection con = ConnectionClass.Connection())
                 {
-                    Console.WriteLine(query);
                     con.Open();
                     using (SqlCommand cmd = new SqlCommand(query, con))
                     {
