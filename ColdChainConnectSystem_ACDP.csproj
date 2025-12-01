@@ -313,11 +313,11 @@
     <Compile Include="AppForms\MainPanel\Customer\CustomerForm.Designer.cs">
       <DependentUpon>CustomerForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AppForms\MainPanel\Dashboard\DashoardForm.cs">
+    <Compile Include="AppForms\MainPanel\Dashboard\Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AppForms\MainPanel\Dashboard\DashoardForm.Designer.cs">
-      <DependentUpon>DashoardForm.cs</DependentUpon>
+    <Compile Include="AppForms\MainPanel\Dashboard\Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="AppForms\MainPanel\Dashboard\GreetPanel.cs">
       <SubType>UserControl</SubType>
@@ -605,8 +605,8 @@
     <EmbeddedResource Include="AppForms\MainPanel\Customer\CustomerForm.resx">
       <DependentUpon>CustomerForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AppForms\MainPanel\Dashboard\DashoardForm.resx">
-      <DependentUpon>DashoardForm.cs</DependentUpon>
+    <EmbeddedResource Include="AppForms\MainPanel\Dashboard\Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AppForms\MainPanel\Dashboard\GreetPanel.resx">
       <DependentUpon>GreetPanel.cs</DependentUpon>

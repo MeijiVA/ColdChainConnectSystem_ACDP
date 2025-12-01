@@ -77,7 +77,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.SidePanel
         {
 
             SelectedTab(cbtnDashboard);
-            MainInstance.i.NavigateTo(new DashoardForm());
+            MainInstance.i.NavigateTo(new Dashboard());
             CurrentFormClass.setPreviousFormTo("dbform");
         }
 

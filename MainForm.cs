@@ -57,7 +57,7 @@ namespace ColdChainConnectSystem_ACDP
             switch (cf)
             {
                 case "dbform":
-                    return new DashoardForm();
+                    return new Dashboard();
                 case "invform":
                     return new InventoryForm();
                 case "supform":
@@ -69,7 +69,7 @@ namespace ColdChainConnectSystem_ACDP
                 case "empform":
                     return new InventoryForm();//change this
                 default:
-                    return new DashoardForm();
+                    return new Dashboard();
             }
         }
 

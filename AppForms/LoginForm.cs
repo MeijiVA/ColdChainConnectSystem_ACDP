@@ -96,7 +96,7 @@ namespace ColdChainConnectSystem_ACDP
                     AuditLog.AddAuditInfo("Login", "0", ConnectionClass.empid + " Logged in at " + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
                     setupMainForm();
                     this.Hide();
-                    MainInstance.i.NavigateTo(new DashoardForm());
+                    MainInstance.i.NavigateTo(new Dashboard());
                     MainFormShow(MainInstance.i);
                     break;
                 case "default":
@@ -137,7 +137,7 @@ namespace ColdChainConnectSystem_ACDP
                         AuditLog.AddAuditInfo("Login", "0", ConnectionClass.empid + " Logged in at " + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
                         setupMainForm();
                         this.Hide();
-                        MainInstance.i.NavigateTo(new DashoardForm());
+                        MainInstance.i.NavigateTo(new Dashboard());
                         MainFormShow(MainInstance.i);
                         break;
                     case "default":
