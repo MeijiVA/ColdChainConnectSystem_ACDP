@@ -246,7 +246,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
             }
             if (dgvTable.Columns[e.ColumnIndex].Name == "viewCol")
             {
-                VarView.id = cellValue;
+                VarView.id = cellValue;  
                 ViewTransactionSales vt = new ViewTransactionSales();
                 vt.Show(this);
             }
