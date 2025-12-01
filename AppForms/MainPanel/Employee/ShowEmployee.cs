@@ -2,6 +2,7 @@
 using ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales;
 using ColdChainConnectSystem_ACDP.ClassResources;
 using ColdChainConnectSystem_ACDP.ClassResources.Instances;
+using ColdChainConnectSystem_ACDP.Popup;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -58,21 +59,17 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.Employee
             MainInstance.i.NavigateTo(ProfileInstance.i = new EmployeeProfile());
         }
 
-        private void Delete_Click(object sender, EventArgs e)
+        private void Archive_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show(
-                $"Are you sure you want to delete employee {lblEmpID.Text}?",
-                "Confirm Delete",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Warning
-            );
-
-            if (result == DialogResult.Yes)
+            if (new CustomMessageBox(
+                    "Archive Employee",
+                    $"Are you sure you want to archive employee {lblEmpID.Text}?",
+                    MessageBoxButtons.OKCancel).ShowDialog() == DialogResult.OK)
             {
-                bool success = EmployeeClass.DeleteEmployee(lblEmpID.Text);
+                bool success = EmployeeClass.ArchiveEmployee(lblEmpID.Text);
                 if (success)
                 {
-                    MessageBox.Show("Employee deleted successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    new CustomMessageBox("Success", "Employee archived successfully!", MessageBoxButtons.OK).ShowDialog();
                     // Remove this control from parent and refresh the list
                     if (this.Parent != null)
                     {

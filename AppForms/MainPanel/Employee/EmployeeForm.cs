@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ColdChainConnectSystem_ACDP.ClassResources.Display;
+using ColdChainConnectSystem_ACDP.ClassResources.Instances;
 
 namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.Employee
 {
@@ -22,6 +23,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.Employee
         {
             InitializeComponent();
             this.DoubleBuffered = true; // Apply to the form
+            EmployeeInstance.i = this;
         }
 
         private void EmployeeForm_Load(object sender, EventArgs ea)
@@ -46,6 +48,15 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.Employee
         private void btnAddEmp_Click(object sender, EventArgs e)
         {
             MainInstance.i.NavigateTo(new AddEmployeeForm());
+        }
+
+        private void btnDatabase_Click(object sender, EventArgs e)
+        {
+            if (EmployeeDatabaseInstance.i == null || EmployeeDatabaseInstance.i.IsDisposed)
+            {
+                EmployeeDatabaseInstance.i = new EmployeeDatabase();
+            }
+            MainInstance.i.NavigateTo(EmployeeDatabaseInstance.i);
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)

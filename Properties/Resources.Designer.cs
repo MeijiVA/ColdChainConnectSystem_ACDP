@@ -10,8 +10,9 @@
 
 namespace ColdChainConnectSystem_ACDP.Properties {
     using System;
-    
-    
+    using System.Drawing;
+
+
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -419,5 +420,7 @@ namespace ColdChainConnectSystem_ACDP.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+
+        public static Image AddEmployeeBtn { get; internal set; }
     }
 }

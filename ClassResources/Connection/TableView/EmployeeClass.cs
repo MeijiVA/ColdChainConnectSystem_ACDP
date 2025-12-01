@@ -11,12 +11,16 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
 {
     internal class EmployeeClass
     {
+        /// <summary>
+        /// Gets the total number of employees that are NOT archived.
+        /// </summary>
         public static int GetTotalEmployees()
         {
             int i;
             SqlConnection con = ConnectionClass.Connection();
             con.Open();
-            String query = "SELECT COUNT(*) FROM Employees";
+            // Only count employees that are not archived so they appear in EmployeeForm
+            String query = "SELECT COUNT(*) FROM Employees WHERE [Status] <> 'Archived'";
             using (SqlCommand count = new SqlCommand(query, con))
             {
                 i = (int)count.ExecuteScalar();
@@ -24,13 +28,20 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
             con.Close();
             return i;
         }
+
+        /// <summary>
+        /// Loads a single (non-archived) employee into the small employee cards shown in EmployeeForm.
+        /// </summary>
         public static void LoadAllEmployees(int currentNum, Label lblemp, Label lbluser, Label lblname, Label lblpos, Label lblstatus)
         {
             try
             {
                 SqlConnection con = ConnectionClass.Connection();
 
-                String query = $"SELECT [empid], [username], [firstname], [lastname], [position], [status] FROM Employees WHERE [numID] = {currentNum}";
+                // Skip archived employees from the main EmployeeForm listing
+                String query = $@"SELECT [empid], [username], [firstname], [lastname], [position], [status] 
+                                  FROM Employees 
+                                  WHERE [numID] = {currentNum} AND [Status] <> 'Archived'";
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
                     con.Open();
@@ -141,12 +152,24 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
             }
         }
 
+        /// <summary>
+        /// Archives an employee by setting their Status to 'Archived' instead of deleting the record.
+        /// Existing code may still call this as DeleteEmployee, but behaviour is now archive-only.
+        /// </summary>
         public static bool DeleteEmployee(string empID)
+        {
+            return ArchiveEmployee(empID);
+        }
+
+        /// <summary>
+        /// Explicit archive helper so other screens (like EmployeeDatabase) can re-use it.
+        /// </summary>
+        public static bool ArchiveEmployee(string empID)
         {
             try
             {
                 SqlConnection con = ConnectionClass.Connection();
-                string query = "DELETE FROM Employees WHERE [empid] = @EmpID";
+                string query = "UPDATE Employees SET [Status] = 'Archived' WHERE [empid] = @EmpID";
 
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
@@ -154,15 +177,101 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                     con.Open();
                     int rowsAffected = cmd.ExecuteNonQuery();
                     con.Close();
-                    AuditLog.AddAuditInfo("Edit", empID, $"[{ConnectionClass.empid}] Deleted Employee [{empID}] from [{CurrentFormClass.form}]");
+                    AuditLog.AddAuditInfo("Edit", empID, $"[{ConnectionClass.empid}] Archived Employee [{empID}] from [{CurrentFormClass.form}]");
                     return rowsAffected > 0;
                 }
             }
             catch (Exception ex)
             {
-                new CustomMessageBox("Error", "Failed to delete employee: " + ex.Message, MessageBoxButtons.OK).ShowDialog();
+                new CustomMessageBox("Error", "Failed to archive employee: " + ex.Message, MessageBoxButtons.OK).ShowDialog();
                 return false;
             }
+        }
+
+        /// <summary>
+        /// Un-archives an employee by switching Status back to 'Active'.
+        /// </summary>
+        public static bool UnarchiveEmployee(string empID)
+        {
+            try
+            {
+                SqlConnection con = ConnectionClass.Connection();
+                string query = "UPDATE Employees SET [Status] = 'Active' WHERE [empid] = @EmpID";
+
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    cmd.Parameters.AddWithValue("@EmpID", empID);
+                    con.Open();
+                    int rowsAffected = cmd.ExecuteNonQuery();
+                    con.Close();
+                    AuditLog.AddAuditInfo("Edit", empID, $"[{ConnectionClass.empid}] Unarchived Employee [{empID}] from [{CurrentFormClass.form}]");
+                    return rowsAffected > 0;
+                }
+            }
+            catch (Exception ex)
+            {
+                new CustomMessageBox("Error", "Failed to unarchive employee: " + ex.Message, MessageBoxButtons.OK).ShowDialog();
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Loads paged employee data (including archived) into a DataGridView for EmployeeDatabase.
+        /// </summary>
+        public static int LoadEmployeeDatabase(DataGridView dgv, Label lblPage, Label lblPageNum, int currentPageIndex, string searchQuery = "")
+        {
+            int totalRows = 0;
+            int totalPages = 0;
+            int pageSize = 10;
+            string query;
+            SqlConnection con = ConnectionClass.Connection();
+            con.Open();
+
+            // Base query for count and data
+            string whereClause = "";
+            if (!string.IsNullOrWhiteSpace(searchQuery))
+            {
+                whereClause = searchQuery;
+            }
+
+            query = $"SELECT COUNT(*) FROM Employees {whereClause}";
+            using (SqlCommand count = new SqlCommand(query, con))
+            {
+                totalRows = (int)count.ExecuteScalar();
+                totalPages = (int)Math.Ceiling((double)totalRows / pageSize);
+                lblPage.Text = totalPages.ToString();
+
+                query = $@"SELECT [numid],[empid],[username],[firstname],[middlename],[lastname],
+                                  [position],[status]
+                           FROM Employees {whereClause}
+                           ORDER BY [numid]
+                           OFFSET {(currentPageIndex - 1) * pageSize} ROWS
+                           FETCH NEXT {pageSize} ROWS ONLY";
+
+                using (SqlCommand data = new SqlCommand(query, con))
+                {
+                    using (var reader = data.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            string fullName = $"{reader[5].ToString().Trim()}, {reader[3].ToString().Trim()} {reader[4].ToString().Trim()}".Trim();
+                            dgv.Rows.Add(new object[]
+                            {
+                                false,                     // checkbox
+                                reader[0].ToString().Trim(), // numid (hidden)
+                                reader[1].ToString().Trim(), // empid
+                                reader[2].ToString().Trim(), // username
+                                fullName,                    // full name
+                                reader[6].ToString().Trim(), // position
+                                reader[7].ToString().Trim()  // status
+                            });
+                        }
+                    }
+                    con.Close();
+                }
+            }
+
+            return totalPages;
         }
 
         public static string GenerateEmployeeID(string position)

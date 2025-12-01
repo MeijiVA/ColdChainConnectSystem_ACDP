@@ -32,6 +32,7 @@
             this.flpEmployee = new System.Windows.Forms.FlowLayoutPanel();
             this.customPanel1 = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
             this.btnAddEmp = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
+            this.btnDatabase = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
             this.pnlSearch = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -57,6 +58,7 @@
             this.customPanel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.customPanel1.BorderRadius = 10;
             this.customPanel1.BorderSize = 0;
+            this.customPanel1.Controls.Add(this.btnDatabase);
             this.customPanel1.Controls.Add(this.btnAddEmp);
             this.customPanel1.Controls.Add(this.pnlSearch);
             this.customPanel1.ForeColor = System.Drawing.Color.White;
@@ -90,6 +92,30 @@
             this.btnAddEmp.TextColor = System.Drawing.Color.White;
             this.btnAddEmp.UseVisualStyleBackColor = false;
             this.btnAddEmp.Click += new System.EventHandler(this.btnAddEmp_Click);
+            // 
+            // btnDatabase
+            // 
+            this.btnDatabase.BackColor = System.Drawing.Color.Transparent;
+            this.btnDatabase.BackgroundColor = System.Drawing.Color.Transparent;
+            this.btnDatabase.BorderColor = System.Drawing.Color.White;
+            this.btnDatabase.BorderRadius = 10;
+            this.btnDatabase.BorderSize = 1;
+            this.btnDatabase.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDatabase.FlatAppearance.BorderSize = 0;
+            this.btnDatabase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDatabase.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            this.btnDatabase.ForeColor = System.Drawing.Color.White;
+            this.btnDatabase.GradientColor1 = System.Drawing.Color.Empty;
+            this.btnDatabase.GradientColor2 = System.Drawing.Color.Empty;
+            this.btnDatabase.GradientTextColor = System.Drawing.Color.Transparent;
+            this.btnDatabase.Location = new System.Drawing.Point(467, 8);
+            this.btnDatabase.Name = "btnDatabase";
+            this.btnDatabase.Size = new System.Drawing.Size(120, 34);
+            this.btnDatabase.TabIndex = 1;
+            this.btnDatabase.Text = "Database";
+            this.btnDatabase.TextColor = System.Drawing.Color.White;
+            this.btnDatabase.UseVisualStyleBackColor = false;
+            this.btnDatabase.Click += new System.EventHandler(this.btnDatabase_Click);
             // 
             // pnlSearch
             // 
@@ -166,5 +192,6 @@
         public System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Materials.CustomButton btnAddEmp;
+        private Materials.CustomButton btnDatabase;
     }
 }

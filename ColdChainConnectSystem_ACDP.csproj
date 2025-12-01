@@ -241,6 +241,12 @@
     <Compile Include="AppForms\MainPanel\Employee\AddEmployeeForm.Designer.cs">
       <DependentUpon>AddEmployeeForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AppForms\MainPanel\Employee\EmployeeDatabase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\MainPanel\Employee\EmployeeDatabase.Designer.cs">
+      <DependentUpon>EmployeeDatabase.cs</DependentUpon>
+    </Compile>
     <Compile Include="AppForms\MainPanel\Employee\EmployeeForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -453,6 +459,7 @@
       <DependentUpon>OverlayForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ClassResources\Display\QREncoder.cs" />
+    <Compile Include="ClassResources\Instances\EmployeeDatabaseInstance.cs" />
     <Compile Include="ClassResources\Instances\NotificationInstance.cs" />
     <Compile Include="ClassResources\Instances\CustomerInstance.cs" />
     <Compile Include="ClassResources\Instances\EmployeeInstance.cs" />

@@ -166,6 +166,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.Employee
                         this.EditAccountContainer.StatusInfo = reader[11].ToString();
                         this.EditPersonalContainer.SexInfo = reader[12].ToString();
                         this.EditAccountContainer.EmailInfo = reader[13].ToString();
+                        // Username/password are not directly editable here for now
 
                         // Update position combobox in Account Information panel
                         if (EditAccountContainer.PositionInfo != null)
@@ -305,14 +306,26 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.Employee
                     {
                         string address = this.EditAddressContainer.HouseNum + "," + this.EditAddressContainer.Barangay + "," + this.EditAddressContainer.Municipality + "," + this.EditAddressContainer.Province + "," + this.EditAddressContainer.Postal;
 
+                        // Safely convert numeric fields
+                        int numIdValue = 0;
+                        int.TryParse(ProfileInstance.id, out numIdValue);
+                        int ageValue;
+                        bool hasAge = int.TryParse(this.EditPersonalContainer.AgeInfo, out ageValue);
 
-                        command.Parameters.Add("@NumID", SqlDbType.Int).Value = ProfileInstance.id;
+                        command.Parameters.Add("@NumID", SqlDbType.Int).Value = numIdValue;
                         command.Parameters.Add("@FirstName", SqlDbType.NVarChar).Value = this.EditPersonalContainer.First_NAMEInfo;
                         command.Parameters.Add("@MiddleName", SqlDbType.NVarChar).Value = this.EditPersonalContainer.Middle_NAMEInfo;
                         command.Parameters.Add("@LastName", SqlDbType.NVarChar).Value = this.EditPersonalContainer.Last_NAMEInfo;
                         command.Parameters.Add("@ContactNum", SqlDbType.NVarChar).Value = this.EditAccountContainer.ContactInfo; ;
                         command.Parameters.Add("@Address", SqlDbType.NVarChar).Value = address;
-                        command.Parameters.Add("@Age", SqlDbType.Int).Value = this.EditPersonalContainer.AgeInfo; ;
+                        if (hasAge)
+                        {
+                            command.Parameters.Add("@Age", SqlDbType.Int).Value = ageValue;
+                        }
+                        else
+                        {
+                            command.Parameters.Add("@Age", SqlDbType.Int).Value = DBNull.Value;
+                        }
                         command.Parameters.Add("@DateOfBirth", SqlDbType.Date).Value = this.EditPersonalContainer.DOBInfo;
                         // Get position from combobox if available, otherwise from PositionInfo
                         string position = this.EditAccountContainer.PositionInfo;

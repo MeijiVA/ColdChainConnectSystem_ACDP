@@ -49,6 +49,14 @@
             this.txtEmail = new CustomControls.RJControls.CustomTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.txtUsername = new CustomControls.RJControls.CustomTextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.txtPassword = new CustomControls.RJControls.CustomTextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.cbxPosition = new ColdChainConnectSystem_ACDP.Materials.CustomComboBox();
             this.panel3.SuspendLayout();
@@ -56,6 +64,8 @@
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel7.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -343,11 +353,121 @@
             this.cbxPosition.TabIndex = 64;
             this.cbxPosition.Texts = "";
             // 
+            // panel6 (Username)
+            // 
+            this.panel6.Controls.Add(this.txtUsername);
+            this.panel6.Controls.Add(this.label8);
+            this.panel6.Controls.Add(this.label9);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel6.Location = new System.Drawing.Point(0, 265);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(280, 53);
+            this.panel6.TabIndex = 8;
+            // 
+            // txtUsername
+            // 
+            this.txtUsername.BackColor = System.Drawing.SystemColors.Window;
+            this.txtUsername.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.txtUsername.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.txtUsername.BorderRadius = 0;
+            this.txtUsername.BorderSize = 1;
+            this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.txtUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.txtUsername.Location = new System.Drawing.Point(8, 20);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(4);
+            this.txtUsername.Multiline = false;
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtUsername.PasswordChar = false;
+            this.txtUsername.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtUsername.PlaceholderText = "";
+            this.txtUsername.Size = new System.Drawing.Size(207, 32);
+            this.txtUsername.TabIndex = 70;
+            this.txtUsername.Texts = "";
+            this.txtUsername.UnderlinedStyle = false;
+            // 
+            // label8
+            // 
+            this.label8.BackColor = System.Drawing.SystemColors.Control;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 0.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(0, 51);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(280, 3);
+            this.label8.TabIndex = 66;
+            // 
+            // label9
+            // 
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.label9.Location = new System.Drawing.Point(0, 5);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(225, 16);
+            this.label9.TabIndex = 61;
+            this.label9.Text = "  Username";
+            // 
+            // panel7 (Password)
+            // 
+            this.panel7.Controls.Add(this.txtPassword);
+            this.panel7.Controls.Add(this.label10);
+            this.panel7.Controls.Add(this.label11);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel7.Location = new System.Drawing.Point(0, 318);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(280, 53);
+            this.panel7.TabIndex = 9;
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.BackColor = System.Drawing.SystemColors.Window;
+            this.txtPassword.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.txtPassword.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.txtPassword.BorderRadius = 0;
+            this.txtPassword.BorderSize = 1;
+            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.txtPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.txtPassword.Location = new System.Drawing.Point(8, 20);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPassword.Multiline = false;
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtPassword.PasswordChar = true;
+            this.txtPassword.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtPassword.PlaceholderText = "";
+            this.txtPassword.Size = new System.Drawing.Size(207, 32);
+            this.txtPassword.TabIndex = 71;
+            this.txtPassword.Texts = "";
+            this.txtPassword.UnderlinedStyle = false;
+            // 
+            // label10
+            // 
+            this.label10.BackColor = System.Drawing.SystemColors.Control;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 0.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(0, 51);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(280, 3);
+            this.label10.TabIndex = 66;
+            // 
+            // label11
+            // 
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.label11.Location = new System.Drawing.Point(0, 5);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(225, 16);
+            this.label11.TabIndex = 61;
+            this.label11.Text = "  Password";
+            // 
             // EditAccountInformation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.panel7);
+            this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel4);
@@ -362,6 +482,8 @@
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
@@ -393,5 +515,13 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         public System.Windows.Forms.Label lblPos;
         public Materials.CustomComboBox cbxPosition;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panel7;
+        private CustomControls.RJControls.CustomTextBox txtUsername;
+        private CustomControls.RJControls.CustomTextBox txtPassword;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
     }
 }

@@ -46,6 +46,18 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.PersonalDetails
             set { txtEmail.Texts = value; }
         }
 
+        public string UsernameInfo
+        {
+            get { return txtUsername.Texts; }
+            set { txtUsername.Texts = value; }
+        }
+
+        public string PasswordInfo
+        {
+            get { return txtPassword.Texts; }
+            set { txtPassword.Texts = value; }
+        }
+
 
         private void tscStatus_CheckChanged(object sender, EventArgs e)
         {

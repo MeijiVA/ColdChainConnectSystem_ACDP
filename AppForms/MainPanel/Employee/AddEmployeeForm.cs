@@ -1,5 +1,6 @@
 ﻿using ColdChainConnectSystem_ACDP.ClassResources;
 using ColdChainConnectSystem_ACDP.ClassResources.Instances;
+using ColdChainConnectSystem_ACDP.ClassResources.Security;
 using ColdChainConnectSystem_ACDP.Popup;
 using System;
 using System.Collections.Generic;
@@ -84,6 +85,8 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Employee
             string lastName = editPersonalInformation1.Last_NAMEInfo;
             string contactNum = editAccountInformation1.ContactInfo;
             string email = editAccountInformation1.EmailInfo;
+            string username = editAccountInformation1.UsernameInfo;
+            string password = editAccountInformation1.PasswordInfo;
 
             // Get status from toggle in Account Information panel
             string status = "Active";
@@ -109,15 +112,16 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Employee
             // Generate EmpID based on position count
             string empID = EmployeeClass.GenerateEmployeeID(position);
 
-            // Generate username (can be improved)
-            string username = "";
-            if (!string.IsNullOrWhiteSpace(firstName) && !string.IsNullOrWhiteSpace(lastName))
+            // Validate username and password (user-defined)
+            if (string.IsNullOrWhiteSpace(username))
             {
-                username = (firstName.Substring(0, 1) + lastName).ToLower();
+                new CustomMessageBox("Validation Error", "Please enter a username for the employee.", MessageBoxButtons.OK).ShowDialog();
+                return;
             }
-            else
+            if (string.IsNullOrWhiteSpace(password))
             {
-                username = empID.ToLower();
+                new CustomMessageBox("Validation Error", "Please enter a password for the employee.", MessageBoxButtons.OK).ShowDialog();
+                return;
             }
 
             // Save to database
@@ -128,6 +132,17 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Employee
 
             if (success)
             {
+                // Create SQL login/user for this new employee
+                try
+                {
+                    var creator = new CreateAccount();
+                    creator.SetupNewAppUser(username, password);
+                }
+                catch (Exception ex)
+                {
+                    new CustomMessageBox("Account Creation", "Employee saved, but failed to create login: " + ex.Message, MessageBoxButtons.OK).ShowDialog();
+                }
+
                 new CustomMessageBox("Success", "Employee saved successfully!", MessageBoxButtons.OK).ShowDialog();
                 // Navigate back to EmployeeForm and refresh
                 EmployeeInstance.i.LoadAllEmployees();
