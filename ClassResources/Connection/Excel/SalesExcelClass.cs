@@ -1,4 +1,5 @@
 ﻿using ColdChainConnectSystem_ACDP.ClassResources.Display;
+using ColdChainConnectSystem_ACDP.ClassResources.Security;
 using ColdChainConnectSystem_ACDP.Popup;
 using Microsoft.CSharp.RuntimeBinder;
 using Microsoft.Office.Interop.Excel;
@@ -54,6 +55,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources.Connection
                         command.ExecuteNonQuery();
                     }
                     new CustomMessageBox("Import", "Import has been completed.", MessageBoxButtons.OK).ShowDialog();
+                    AuditLog.AddAuditInfo("Import", "1", ConnectionClass.empid + " Imported Multiple Values to " + CurrentFormClass.form);
                 }
                 else
                 {
@@ -177,7 +179,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources.Connection
                                 row++;
                             }
                             new CustomMessageBox("Export", "Export has been completed.", MessageBoxButtons.OK).ShowDialog();
-
+                            AuditLog.AddAuditInfo("Import", "1", ConnectionClass.empid + " Exported from " + CurrentFormClass.form);
                         }
                     }
                 }
