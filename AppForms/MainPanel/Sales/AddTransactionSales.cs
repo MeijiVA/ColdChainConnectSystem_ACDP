@@ -85,7 +85,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
 
         private void customComboBox1_Load(object sender, EventArgs e)
         {
-            string query = $"SELECT [CustomerID] FROM Customer WHERE Status = Active";
+            string query = $"SELECT [CustomerID] FROM Customer WHERE Status = 'Active'";
             SqlConnection con = ConnectionClass.Connection();
             con.Open();
             using (SqlCommand cmd = new SqlCommand(query, con))
