@@ -1,5 +1,6 @@
 ﻿using ColdChainConnectSystem_ACDP.ClassResources.Security;
 using ColdChainConnectSystem_ACDP.Popup;
+using Microsoft.IdentityModel.Logging;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -11,9 +12,28 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
 {
     internal class EmployeeClass
     {
-        /// <summary>
-        /// Gets the total number of employees that are NOT archived.
-        /// </summary>
+        public static bool CheckIfDuplicateAccount(string uname)
+        {
+            String query = $"SELECT [Username] FROM Employees WHERE = {uname}";
+            SqlConnection con = ConnectionClass.Connection();
+            con.Open();
+            using (SqlCommand user = new SqlCommand(query, con))
+            {
+                using (var reader = user.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        if (reader[0].ToString() == uname)
+                        {
+                            return true;
+                        }
+                    }
+                }
+            }
+            con.Close();
+            return false;
+        }
+
         public static int GetTotalEmployees()
         {
             int i;

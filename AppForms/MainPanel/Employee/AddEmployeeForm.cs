@@ -124,28 +124,31 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Employee
                 return;
             }
 
-            // Save to database
-            bool success = EmployeeClass.SaveEmployee(
-                empID, username, firstName, middleName, lastName,
-                contactNum, address, age, dob, position, status, sex, email
-            );
-
-            if (success)
+            if (EmployeeClass.CheckIfDuplicateAccount(username))
             {
-                // Create SQL login/user for this new employee
-                try
+                // Save to database
+                bool success = EmployeeClass.SaveEmployee(
+                    empID, username, firstName, middleName, lastName,
+                    contactNum, address, age, dob, position, status, sex, email
+                );
+
+                if (success)
                 {
-                    CreateAccount.SetupNewAppUser(username, password);
+                    // Create SQL login/user for this new employee
+                    try
+                    {
+                        CreateAccount.SetupNewAppUser(username, password);
 
 
-                    new CustomMessageBox("Success", "Employee saved successfully!", MessageBoxButtons.OK).ShowDialog();
-                    // Navigate back to EmployeeForm and refresh
-                    EmployeeInstance.i.LoadAllEmployees();
-                    MainInstance.i.NavigateTo(EmployeeInstance.i);
-                }
-                catch (Exception ex)
-                {
-                    new CustomMessageBox("Account Creation", "Employee saved, but failed to create login: " + ex.Message, MessageBoxButtons.OK).ShowDialog();
+                        new CustomMessageBox("Success", "Employee saved successfully!", MessageBoxButtons.OK).ShowDialog();
+                        // Navigate back to EmployeeForm and refresh
+                        EmployeeInstance.i.LoadAllEmployees();
+                        MainInstance.i.NavigateTo(EmployeeInstance.i);
+                    }
+                    catch (Exception ex)
+                    {
+                        new CustomMessageBox("Account Creation", "Employee saved, but failed to create login: " + ex.Message, MessageBoxButtons.OK).ShowDialog();
+                    }
                 }
             }
         }
