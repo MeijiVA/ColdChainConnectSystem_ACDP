@@ -1,8 +1,12 @@
 ﻿using ColdChainConnectSystem_ACDP.ClassResources;
+using ColdChainConnectSystem_ACDP.ClassResources.Display;
+using ColdChainConnectSystem_ACDP.ClassResources.Security;
+using ColdChainConnectSystem_ACDP.Materials;
 using ColdChainConnectSystem_ACDP.Popup;
 using ExcelDataReader.Log;
 using Microsoft.Office.Interop.Excel;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -22,13 +26,15 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.Audit
             InitializeComponent();
         }
 
-
-        public void LoadAllLogEntriesIntoDataGridView()
+        String userQuery;
+        String actionQuery;
+        public void LoadAllLogEntriesIntoDataGridView(string UserQuery = "")
         {
+            dgvTable.Rows.Clear();
             // SQL Query to select all data (no WHERE clause)
             string sqlQuery =
                 "SELECT [NumID], [User], [Action], [Reference], [ReferenceID], [Description], [ActionDate] " +
-                "FROM [Audit] ORDER BY [NumID] DESC;";
+                $"FROM [Audit] {userQuery} {actionQuery} ORDER BY [NumID] DESC;";
             try
             {
                 using (SqlConnection connection = ConnectionClass.Connection())
@@ -60,23 +66,83 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.Audit
                         }
                     }
                 }
-
+                dgvTable.ClearSelection();
             }
             catch (Exception ex)
             {
                new CustomMessageBox($"Data Load Error",$"Database Error: Failed to load log entries.\nDetails: { ex.Message }", MessageBoxButtons.OK).ShowDialog();
             }
         }
-
         private void AuditForm_Load(object sender, EventArgs e)
         {
+            userQuery = "";
+            actionQuery = "";
             LoadAllLogEntriesIntoDataGridView();
-            dgvTable.ClearSelection();
+        }
+        private void cbxUser_Load(object sender, EventArgs e)
+        {
+            AuditLog.AddUsers(cbxUser);
+
         }
 
-        private void cbxUser_OnSelectedIndexChanged(object sender, EventArgs e)
+        public void SetWhereQuery()
         {
 
+            switch (cbxUser.Texts)
+            {
+                case "All":
+                    userQuery = "";
+                    break;
+                case "Filter":
+                    userQuery = "";
+                    break;
+                default:
+                    userQuery = "WHERE [User] = '" + cbxUser.Texts.ToString() + "'";
+                    break;
+            }
+
+            if (userQuery == "")
+            {
+                switch (cbxAction.Texts)
+                {
+                    case "All":
+                        userQuery = "";
+                        break;
+                    case "Filter":
+                        actionQuery = "";
+                        break;
+                    default:
+                        actionQuery = "WHERE [Action] = '" + cbxAction.Texts.ToString() + "'";
+                        break;
+                }
+            }
+            else
+            {
+                switch (cbxAction.Texts)
+                {
+                    case "All":
+                        actionQuery = "";
+                        break;
+                    case "Filter":
+                        actionQuery = "";
+                        break;
+                    default:
+                        actionQuery = "AND [Action] = '" + cbxAction.SelectedItem.ToString() + "'";
+                        break;
+                }
+            }
+            Console.WriteLine(userQuery + " " + actionQuery);
+        }
+
+        private void cbxAction_Load(object sender, EventArgs e)
+        {
+            AuditLog.AddAction(cbxAction);
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            SetWhereQuery();
+            LoadAllLogEntriesIntoDataGridView();
         }
     }
 }
