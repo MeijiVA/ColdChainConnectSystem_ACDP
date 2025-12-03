@@ -39,7 +39,9 @@
             this.tscStatus = new ToggleSlider.ToggleSliderComponent();
             this.lblStatus = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.lblPos = new System.Windows.Forms.Label();
+            this.cbxPosition = new ColdChainConnectSystem_ACDP.Materials.CustomComboBox();
             this.lbl3 = new System.Windows.Forms.Label();
             this.lblPosition = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -57,16 +59,14 @@
             this.txtPassword = new CustomControls.RJControls.CustomTextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.cbxPosition = new ColdChainConnectSystem_ACDP.Materials.CustomComboBox();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label2
@@ -202,6 +202,15 @@
             this.panel2.Size = new System.Drawing.Size(280, 53);
             this.panel2.TabIndex = 4;
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.lblPos);
+            this.flowLayoutPanel1.Controls.Add(this.cbxPosition);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(11, 20);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(260, 33);
+            this.flowLayoutPanel1.TabIndex = 64;
+            // 
             // lblPos
             // 
             this.lblPos.AutoSize = true;
@@ -211,6 +220,27 @@
             this.lblPos.Size = new System.Drawing.Size(43, 33);
             this.lblPos.TabIndex = 63;
             this.lblPos.Text = "position";
+            // 
+            // cbxPosition
+            // 
+            this.cbxPosition.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cbxPosition.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.cbxPosition.BorderRadius = 0;
+            this.cbxPosition.BorderSize = 1;
+            this.cbxPosition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxPosition.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.cbxPosition.ForeColor = System.Drawing.Color.DimGray;
+            this.cbxPosition.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.cbxPosition.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.cbxPosition.ListTextColor = System.Drawing.Color.DimGray;
+            this.cbxPosition.Location = new System.Drawing.Point(52, 3);
+            this.cbxPosition.MinimumSize = new System.Drawing.Size(200, 30);
+            this.cbxPosition.Name = "cbxPosition";
+            this.cbxPosition.Padding = new System.Windows.Forms.Padding(1);
+            this.cbxPosition.Size = new System.Drawing.Size(200, 30);
+            this.cbxPosition.TabIndex = 64;
+            this.cbxPosition.Texts = "";
+            this.cbxPosition.Load += new System.EventHandler(this.cbxPosition_Load);
             // 
             // lbl3
             // 
@@ -319,41 +349,7 @@
             this.label6.TabIndex = 61;
             this.label6.Text = "  Email";
             // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Controls.Add(this.lblPos);
-            this.flowLayoutPanel1.Controls.Add(this.cbxPosition);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(11, 20);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(260, 33);
-            this.flowLayoutPanel1.TabIndex = 64;
-            // 
-            // cbxPosition
-            // 
-            this.cbxPosition.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.cbxPosition.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.cbxPosition.BorderRadius = 0;
-            this.cbxPosition.BorderSize = 1;
-            this.cbxPosition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxPosition.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.cbxPosition.ForeColor = System.Drawing.Color.DimGray;
-            this.cbxPosition.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.cbxPosition.Items.AddRange(new object[] {
-            "Administrator",
-            "Inventory",
-            "Sales",
-            "Assistant"});
-            this.cbxPosition.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.cbxPosition.ListTextColor = System.Drawing.Color.DimGray;
-            this.cbxPosition.Location = new System.Drawing.Point(52, 3);
-            this.cbxPosition.MinimumSize = new System.Drawing.Size(200, 30);
-            this.cbxPosition.Name = "cbxPosition";
-            this.cbxPosition.Padding = new System.Windows.Forms.Padding(1);
-            this.cbxPosition.Size = new System.Drawing.Size(200, 30);
-            this.cbxPosition.TabIndex = 64;
-            this.cbxPosition.Texts = "";
-            // 
-            // panel6 (Username)
+            // panel6
             // 
             this.panel6.Controls.Add(this.txtUsername);
             this.panel6.Controls.Add(this.label8);
@@ -407,7 +403,7 @@
             this.label9.TabIndex = 61;
             this.label9.Text = "  Username";
             // 
-            // panel7 (Password)
+            // panel7
             // 
             this.panel7.Controls.Add(this.txtPassword);
             this.panel7.Controls.Add(this.label10);
@@ -480,12 +476,12 @@
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel2.ResumeLayout(false);
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
-            this.flowLayoutPanel1.ResumeLayout(false);
-            this.flowLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }

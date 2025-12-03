@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ColdChainConnectSystem_ACDP.ClassResources;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -84,6 +85,22 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.PersonalDetails
         {
             lblPos.Hide();
             cbxPosition.Hide();
+        }
+
+        private void cbxPosition_Load(object sender, EventArgs e)
+        {
+            if(ConnectionClass.position == "Administrator")
+            {
+                cbxPosition.Items.Add("Administrator");
+                cbxPosition.Items.Add("Assistant");
+                cbxPosition.Items.Add("Inventory");
+                cbxPosition.Items.Add("Sales");
+            }
+            else if (ConnectionClass.position == "Assistant")
+            {
+                cbxPosition.Items.Add("Inventory");
+                cbxPosition.Items.Add("Sales");
+            }
         }
     }
 }

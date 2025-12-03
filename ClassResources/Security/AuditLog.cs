@@ -1,4 +1,5 @@
-﻿using ColdChainConnectSystem_ACDP.Popup;
+﻿using ColdChainConnectSystem_ACDP.Materials;
+using ColdChainConnectSystem_ACDP.Popup;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -12,6 +13,43 @@ namespace ColdChainConnectSystem_ACDP.ClassResources.Security
 {
     internal class AuditLog
     {
+        public static void AddUsers(CustomComboBox ccb) 
+        {
+            String query = $"SELECT [User] FROM [AUDIT]  GROUP BY [User];";
+            SqlConnection con = ConnectionClass.Connection();
+            using (SqlCommand cmd = new SqlCommand(query, con))
+            {
+                con.Open();
+                using (var reader = cmd.ExecuteReader())
+                {
+                    ccb.Items.Add("All");
+                    while (reader.Read())
+                    {
+                        ccb.Items.Add(reader[0].ToString());
+                    }
+                }
+                con.Close();
+            }
+        }
+        public static void AddAction(CustomComboBox ccb)
+        {
+            String query = $"SELECT [Action] FROM [Audit] GROUP BY Action;";
+            SqlConnection con = ConnectionClass.Connection();
+            using (SqlCommand cmd = new SqlCommand(query, con))
+            {
+                con.Open();
+                using (var reader = cmd.ExecuteReader())
+                {
+                    ccb.Items.Add("All");
+                    while (reader.Read())
+                    {
+                        ccb.Items.Add(reader[0].ToString());
+                    }
+                }
+                con.Close();
+            }
+        }
+
 
         public static void AddAuditInfo( String action, string refid, string desc)
         {
