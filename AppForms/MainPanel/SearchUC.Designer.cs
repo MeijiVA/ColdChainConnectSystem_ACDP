@@ -74,6 +74,7 @@
             // 
             // pnlSearch
             // 
+            this.pnlSearch.Angle = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
             this.pnlSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.pnlSearch.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.pnlSearch.BorderColor = System.Drawing.Color.White;
@@ -82,6 +83,9 @@
             this.pnlSearch.Controls.Add(this.txtSearch);
             this.pnlSearch.Controls.Add(this.pictureBox1);
             this.pnlSearch.ForeColor = System.Drawing.Color.White;
+            this.pnlSearch.GradientColor1 = System.Drawing.Color.Transparent;
+            this.pnlSearch.GradientColor2 = System.Drawing.Color.Transparent;
+            this.pnlSearch.GradientTextColor = System.Drawing.Color.Transparent;
             this.pnlSearch.Location = new System.Drawing.Point(35, 10);
             this.pnlSearch.Name = "pnlSearch";
             this.pnlSearch.Padding = new System.Windows.Forms.Padding(40, 7, 2, 2);
@@ -121,6 +125,7 @@
             // 
             // fltrPanel
             // 
+            this.fltrPanel.Angle = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
             this.fltrPanel.BackColor = System.Drawing.Color.Transparent;
             this.fltrPanel.BackgroundColor = System.Drawing.Color.Transparent;
             this.fltrPanel.BorderColor = System.Drawing.Color.PaleVioletRed;
@@ -128,6 +133,9 @@
             this.fltrPanel.BorderSize = 0;
             this.fltrPanel.Controls.Add(this.cbxFilter);
             this.fltrPanel.ForeColor = System.Drawing.Color.White;
+            this.fltrPanel.GradientColor1 = System.Drawing.Color.Transparent;
+            this.fltrPanel.GradientColor2 = System.Drawing.Color.Transparent;
+            this.fltrPanel.GradientTextColor = System.Drawing.Color.Transparent;
             this.fltrPanel.Location = new System.Drawing.Point(319, 10);
             this.fltrPanel.Name = "fltrPanel";
             this.fltrPanel.Size = new System.Drawing.Size(100, 30);
@@ -161,6 +169,7 @@
             // 
             // btnAddItem
             // 
+            this.btnAddItem.Angle = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
             this.btnAddItem.BackColor = System.Drawing.Color.Transparent;
             this.btnAddItem.BackgroundColor = System.Drawing.Color.Transparent;
             this.btnAddItem.BackgroundImage = global::ColdChainConnectSystem_ACDP.Properties.Resources.add;
@@ -185,6 +194,7 @@
             // 
             // btnExport
             // 
+            this.btnExport.Angle = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
             this.btnExport.BackColor = System.Drawing.Color.Transparent;
             this.btnExport.BackgroundColor = System.Drawing.Color.Transparent;
             this.btnExport.BackgroundImage = global::ColdChainConnectSystem_ACDP.Properties.Resources.export;
@@ -210,6 +220,7 @@
             // 
             // btnImport
             // 
+            this.btnImport.Angle = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
             this.btnImport.BackColor = System.Drawing.Color.Transparent;
             this.btnImport.BackgroundColor = System.Drawing.Color.Transparent;
             this.btnImport.BackgroundImage = global::ColdChainConnectSystem_ACDP.Properties.Resources.import;
@@ -250,10 +261,6 @@
         }
 
         #endregion
-
-        private Materials.CustomButton btnAddItem;
-        private Materials.CustomButton btnExport;
-        private Materials.CustomButton btnImport;
         private Materials.CustomPanel pnlSearch;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Materials.CustomComboBox cbxFilter;
@@ -262,5 +269,8 @@
         private System.Windows.Forms.SaveFileDialog ofdExport;
         private Materials.CustomPanel fltrPanel;
         private System.Windows.Forms.FlowLayoutPanel layoutpanel;
+        public Materials.CustomButton btnAddItem;
+        public Materials.CustomButton btnExport;
+        public Materials.CustomButton btnImport;
     }
 }

@@ -26,6 +26,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Employee
         public EmployeeDatabase()
         {
             InitializeComponent();
+            CustomizeSearchBar();
             this.DoubleBuffered = true;
         }
 
@@ -214,7 +215,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Employee
                     else if (status == "inactive")
                     {
                         e.CellStyle.BackColor = Color.FromArgb(255, 255, 200);
-                        e.CellStyle.ForeColor = Color.FromArgb(230, 230, 10);
+                        e.CellStyle.ForeColor = Color.FromArgb(255, 27, 20);
                     }
                     else if (status == "archived")
                     {
@@ -224,11 +225,71 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Employee
                 }
             }
         }
+        private void CustomizeSearchBar()
+        {
+          
+            SearchBar.btnAddItem.Visible = false;
+            SearchBar.btnExport.Visible = false;
+            SearchBar.btnImport.Visible = false;
+        }
 
+    
+        private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+          
+            if (dgvEmployee.Columns[e.ColumnIndex].Name == "Status")
+            {
+                if (e.Value != null)
+                {
+                    string status = e.Value.ToString();
+                    if (status.Equals("Inactive", StringComparison.OrdinalIgnoreCase))
+                    {
+                        e.CellStyle.ForeColor = Color.Red;
+                        e.CellStyle.SelectionForeColor = Color.Red;
+                    }
+                    else if (status.Equals("Active", StringComparison.OrdinalIgnoreCase))
+                    {
+                        e.CellStyle.ForeColor = Color.Green; // Optional: Make Active green
+                    }
+                }
+            }
+        }
         private void dgvEmployee_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
-            // Suppress formatting/conversion errors in the grid to avoid default dialog popups
+        
             e.ThrowException = false;
+        }
+
+        private void dgvEmployee_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvEmployee.Columns[e.ColumnIndex].Name == "btnUnarchive" && e.RowIndex >= 0)
+            {
+                List<string> idsToUnarchive = new List<string>();
+                foreach (DataGridViewRow row in dgvEmployee.Rows)
+                {
+
+                    if (Convert.ToBoolean(row.Cells[0].Value))
+                    {
+                        idsToUnarchive.Add(row.Cells[1].Value.ToString());
+                    }
+                }
+
+                if (idsToUnarchive.Count > 0)
+                {
+                    DialogResult result = MessageBox.Show("Are you sure you want to unarchive these employees?", "Unarchive Employee", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (result == DialogResult.Yes)
+                    {
+
+
+                        // Refresh the grid
+                        EmployeeInstance.i.LoadAllEmployees();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Please select employees to unarchive.", "No Selection", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
         }
     }
 }

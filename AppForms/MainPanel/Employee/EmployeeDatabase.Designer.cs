@@ -35,26 +35,9 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Employee
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvEmployee = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.lblOf = new System.Windows.Forms.Label();
-            this.lblMaxPage = new System.Windows.Forms.Label();
-            this.lblPage = new System.Windows.Forms.Label();
-            this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.lblPageNum = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
-            this.btnNext = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
-            this.btnPrev = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
-            this.SearchBar = new ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory.SearchUC();
-            this.footerPanel = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
             this.rowCbox = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.numid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.empid = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -63,6 +46,23 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Employee
             this.position = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnUnarchive = new System.Windows.Forms.DataGridViewImageColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lblOf = new System.Windows.Forms.Label();
+            this.lblMaxPage = new System.Windows.Forms.Label();
+            this.lblPageNum = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
+            this.lblPage = new System.Windows.Forms.Label();
+            this.btnNext = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
+            this.btnPrev = new ColdChainConnectSystem_ACDP.Materials.CustomButton();
+            this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.SearchBar = new ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory.SearchUC();
+            this.footerPanel = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployee)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -146,8 +146,60 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Employee
             this.dgvEmployee.Size = new System.Drawing.Size(754, 442);
             this.dgvEmployee.TabIndex = 1;
             this.dgvEmployee.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmployee_CellClick);
+            this.dgvEmployee.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmployee_CellContentClick);
             this.dgvEmployee.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvEmployee_CellFormatting);
             this.dgvEmployee.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dgvEmployee_DataError);
+            // 
+            // rowCbox
+            // 
+            this.rowCbox.HeaderText = "";
+            this.rowCbox.Name = "rowCbox";
+            this.rowCbox.Width = 20;
+            // 
+            // numid
+            // 
+            this.numid.HeaderText = "";
+            this.numid.Name = "numid";
+            this.numid.Visible = false;
+            // 
+            // empid
+            // 
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.empid.DefaultCellStyle = dataGridViewCellStyle3;
+            this.empid.HeaderText = "Emp ID";
+            this.empid.Name = "empid";
+            this.empid.Width = 80;
+            // 
+            // username
+            // 
+            this.username.HeaderText = "Username";
+            this.username.Name = "username";
+            this.username.Width = 90;
+            // 
+            // fullname
+            // 
+            this.fullname.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.fullname.HeaderText = "Full Name";
+            this.fullname.Name = "fullname";
+            // 
+            // position
+            // 
+            this.position.HeaderText = "Position";
+            this.position.Name = "position";
+            this.position.Width = 80;
+            // 
+            // status
+            // 
+            this.status.HeaderText = "Status";
+            this.status.Name = "status";
+            this.status.Width = 70;
+            // 
+            // btnUnarchive
+            // 
+            this.btnUnarchive.HeaderText = "Unarchive";
+            this.btnUnarchive.Image = global::ColdChainConnectSystem_ACDP.Properties.Resources.delBtn;
+            this.btnUnarchive.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.btnUnarchive.Name = "btnUnarchive";
             // 
             // panel1
             // 
@@ -184,6 +236,29 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Employee
             this.lblMaxPage.TabIndex = 5;
             this.lblMaxPage.Text = "25";
             // 
+            // lblPageNum
+            // 
+            this.lblPageNum.Angle = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.lblPageNum.BackColor = System.Drawing.Color.White;
+            this.lblPageNum.BackgroundColor = System.Drawing.Color.White;
+            this.lblPageNum.BorderColor = System.Drawing.Color.DimGray;
+            this.lblPageNum.BorderRadius = 10;
+            this.lblPageNum.BorderSize = 1;
+            this.lblPageNum.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblPageNum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblPageNum.ForeColor = System.Drawing.Color.Gray;
+            this.lblPageNum.GradientColor1 = System.Drawing.Color.Transparent;
+            this.lblPageNum.GradientColor2 = System.Drawing.Color.Transparent;
+            this.lblPageNum.GradientTextColor = System.Drawing.Color.Transparent;
+            this.lblPageNum.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblPageNum.Location = new System.Drawing.Point(661, 2);
+            this.lblPageNum.Name = "lblPageNum";
+            this.lblPageNum.Size = new System.Drawing.Size(48, 30);
+            this.lblPageNum.TabIndex = 4;
+            this.lblPageNum.Text = " 1";
+            this.lblPageNum.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblPageNum.TextColor = System.Drawing.Color.Gray;
+            // 
             // lblPage
             // 
             this.lblPage.AutoSize = true;
@@ -194,6 +269,56 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Employee
             this.lblPage.Size = new System.Drawing.Size(34, 14);
             this.lblPage.TabIndex = 3;
             this.lblPage.Text = "Page:";
+            // 
+            // btnNext
+            // 
+            this.btnNext.Angle = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.btnNext.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.btnNext.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.btnNext.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(255)))));
+            this.btnNext.BorderRadius = 10;
+            this.btnNext.BorderSize = 0;
+            this.btnNext.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNext.FlatAppearance.BorderSize = 0;
+            this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.btnNext.ForeColor = System.Drawing.Color.White;
+            this.btnNext.GradientColor1 = System.Drawing.Color.Empty;
+            this.btnNext.GradientColor2 = System.Drawing.Color.Empty;
+            this.btnNext.GradientTextColor = System.Drawing.Color.Transparent;
+            this.btnNext.Location = new System.Drawing.Point(571, 2);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(46, 30);
+            this.btnNext.TabIndex = 2;
+            this.btnNext.Text = "Next";
+            this.btnNext.TextColor = System.Drawing.Color.White;
+            this.btnNext.UseVisualStyleBackColor = false;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
+            // 
+            // btnPrev
+            // 
+            this.btnPrev.Angle = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.btnPrev.BackColor = System.Drawing.Color.White;
+            this.btnPrev.BackgroundColor = System.Drawing.Color.White;
+            this.btnPrev.BorderColor = System.Drawing.Color.DimGray;
+            this.btnPrev.BorderRadius = 10;
+            this.btnPrev.BorderSize = 1;
+            this.btnPrev.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPrev.FlatAppearance.BorderSize = 0;
+            this.btnPrev.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrev.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.btnPrev.ForeColor = System.Drawing.Color.Gray;
+            this.btnPrev.GradientColor1 = System.Drawing.Color.Empty;
+            this.btnPrev.GradientColor2 = System.Drawing.Color.Empty;
+            this.btnPrev.GradientTextColor = System.Drawing.Color.Transparent;
+            this.btnPrev.Location = new System.Drawing.Point(519, 1);
+            this.btnPrev.Name = "btnPrev";
+            this.btnPrev.Size = new System.Drawing.Size(46, 30);
+            this.btnPrev.TabIndex = 1;
+            this.btnPrev.Text = "Prev";
+            this.btnPrev.TextColor = System.Drawing.Color.Gray;
+            this.btnPrev.UseVisualStyleBackColor = false;
+            this.btnPrev.Click += new System.EventHandler(this.btnPrev_Click);
             // 
             // dataGridViewCheckBoxColumn1
             // 
@@ -251,79 +376,6 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Employee
             this.dataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
             this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
             // 
-            // lblPageNum
-            // 
-            this.lblPageNum.Angle = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
-            this.lblPageNum.BackColor = System.Drawing.Color.White;
-            this.lblPageNum.BackgroundColor = System.Drawing.Color.White;
-            this.lblPageNum.BorderColor = System.Drawing.Color.DimGray;
-            this.lblPageNum.BorderRadius = 10;
-            this.lblPageNum.BorderSize = 1;
-            this.lblPageNum.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblPageNum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblPageNum.ForeColor = System.Drawing.Color.Gray;
-            this.lblPageNum.GradientColor1 = System.Drawing.Color.Transparent;
-            this.lblPageNum.GradientColor2 = System.Drawing.Color.Transparent;
-            this.lblPageNum.GradientTextColor = System.Drawing.Color.Transparent;
-            this.lblPageNum.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblPageNum.Location = new System.Drawing.Point(661, 2);
-            this.lblPageNum.Name = "lblPageNum";
-            this.lblPageNum.Size = new System.Drawing.Size(48, 30);
-            this.lblPageNum.TabIndex = 4;
-            this.lblPageNum.Text = " 1";
-            this.lblPageNum.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblPageNum.TextColor = System.Drawing.Color.Gray;
-            // 
-            // btnNext
-            // 
-            this.btnNext.Angle = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
-            this.btnNext.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.btnNext.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.btnNext.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(255)))));
-            this.btnNext.BorderRadius = 10;
-            this.btnNext.BorderSize = 0;
-            this.btnNext.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNext.FlatAppearance.BorderSize = 0;
-            this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.btnNext.ForeColor = System.Drawing.Color.White;
-            this.btnNext.GradientColor1 = System.Drawing.Color.Empty;
-            this.btnNext.GradientColor2 = System.Drawing.Color.Empty;
-            this.btnNext.GradientTextColor = System.Drawing.Color.Transparent;
-            this.btnNext.Location = new System.Drawing.Point(571, 2);
-            this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(46, 30);
-            this.btnNext.TabIndex = 2;
-            this.btnNext.Text = "Next";
-            this.btnNext.TextColor = System.Drawing.Color.White;
-            this.btnNext.UseVisualStyleBackColor = false;
-            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
-            // 
-            // btnPrev
-            // 
-            this.btnPrev.Angle = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
-            this.btnPrev.BackColor = System.Drawing.Color.White;
-            this.btnPrev.BackgroundColor = System.Drawing.Color.White;
-            this.btnPrev.BorderColor = System.Drawing.Color.DimGray;
-            this.btnPrev.BorderRadius = 10;
-            this.btnPrev.BorderSize = 1;
-            this.btnPrev.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPrev.FlatAppearance.BorderSize = 0;
-            this.btnPrev.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPrev.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.btnPrev.ForeColor = System.Drawing.Color.Gray;
-            this.btnPrev.GradientColor1 = System.Drawing.Color.Empty;
-            this.btnPrev.GradientColor2 = System.Drawing.Color.Empty;
-            this.btnPrev.GradientTextColor = System.Drawing.Color.Transparent;
-            this.btnPrev.Location = new System.Drawing.Point(519, 1);
-            this.btnPrev.Name = "btnPrev";
-            this.btnPrev.Size = new System.Drawing.Size(46, 30);
-            this.btnPrev.TabIndex = 1;
-            this.btnPrev.Text = "Prev";
-            this.btnPrev.TextColor = System.Drawing.Color.Gray;
-            this.btnPrev.UseVisualStyleBackColor = false;
-            this.btnPrev.Click += new System.EventHandler(this.btnPrev_Click);
-            // 
             // SearchBar
             // 
             this.SearchBar.BackColor = System.Drawing.Color.Transparent;
@@ -351,57 +403,6 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Employee
             this.footerPanel.TabIndex = 4;
             this.footerPanel.TextColor = System.Drawing.Color.White;
             // 
-            // rowCbox
-            // 
-            this.rowCbox.HeaderText = "";
-            this.rowCbox.Name = "rowCbox";
-            this.rowCbox.Width = 20;
-            // 
-            // numid
-            // 
-            this.numid.HeaderText = "";
-            this.numid.Name = "numid";
-            this.numid.Visible = false;
-            // 
-            // empid
-            // 
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.empid.DefaultCellStyle = dataGridViewCellStyle3;
-            this.empid.HeaderText = "Emp ID";
-            this.empid.Name = "empid";
-            this.empid.Width = 80;
-            // 
-            // username
-            // 
-            this.username.HeaderText = "Username";
-            this.username.Name = "username";
-            this.username.Width = 90;
-            // 
-            // fullname
-            // 
-            this.fullname.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.fullname.HeaderText = "Full Name";
-            this.fullname.Name = "fullname";
-            // 
-            // position
-            // 
-            this.position.HeaderText = "Position";
-            this.position.Name = "position";
-            this.position.Width = 80;
-            // 
-            // status
-            // 
-            this.status.HeaderText = "Status";
-            this.status.Name = "status";
-            this.status.Width = 70;
-            // 
-            // btnUnarchive
-            // 
-            this.btnUnarchive.HeaderText = "Unarchive";
-            this.btnUnarchive.Image = global::ColdChainConnectSystem_ACDP.Properties.Resources.delBtn;
-            this.btnUnarchive.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.btnUnarchive.Name = "btnUnarchive";
-            // 
             // EmployeeDatabase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -425,8 +426,6 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Employee
         }
 
         #endregion
-
-        private SearchUC SearchBar;
         public System.Windows.Forms.DataGridView dgvEmployee;
         private System.Windows.Forms.Panel panel1;
         private Materials.CustomButton btnPrev;
@@ -452,6 +451,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Employee
         private System.Windows.Forms.DataGridViewTextBoxColumn position;
         private System.Windows.Forms.DataGridViewTextBoxColumn status;
         private System.Windows.Forms.DataGridViewImageColumn btnUnarchive;
+        public SearchUC SearchBar;
     }
 }
 
