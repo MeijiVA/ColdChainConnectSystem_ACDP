@@ -134,6 +134,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
             // 
             // lblPageNum
             // 
+            this.lblPageNum.Angle = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
             this.lblPageNum.BackColor = System.Drawing.Color.White;
             this.lblPageNum.BackgroundColor = System.Drawing.Color.White;
             this.lblPageNum.BorderColor = System.Drawing.Color.DimGray;
@@ -142,6 +143,9 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
             this.lblPageNum.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblPageNum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblPageNum.ForeColor = System.Drawing.Color.Gray;
+            this.lblPageNum.GradientColor1 = System.Drawing.Color.Transparent;
+            this.lblPageNum.GradientColor2 = System.Drawing.Color.Transparent;
+            this.lblPageNum.GradientTextColor = System.Drawing.Color.Transparent;
             this.lblPageNum.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblPageNum.Location = new System.Drawing.Point(661, 2);
             this.lblPageNum.Name = "lblPageNum";
@@ -164,6 +168,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
             // 
             // btnNext
             // 
+            this.btnNext.Angle = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
             this.btnNext.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.btnNext.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.btnNext.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(255)))));
@@ -188,6 +193,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
             // 
             // btnPrev
             // 
+            this.btnPrev.Angle = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
             this.btnPrev.BackColor = System.Drawing.Color.White;
             this.btnPrev.BackgroundColor = System.Drawing.Color.White;
             this.btnPrev.BorderColor = System.Drawing.Color.DimGray;
@@ -470,12 +476,16 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
             // 
             // customPanel1
             // 
+            this.customPanel1.Angle = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
             this.customPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(163)))));
             this.customPanel1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(163)))));
             this.customPanel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.customPanel1.BorderRadius = 10;
             this.customPanel1.BorderSize = 0;
             this.customPanel1.ForeColor = System.Drawing.Color.White;
+            this.customPanel1.GradientColor1 = System.Drawing.Color.Transparent;
+            this.customPanel1.GradientColor2 = System.Drawing.Color.Transparent;
+            this.customPanel1.GradientTextColor = System.Drawing.Color.Transparent;
             this.customPanel1.Location = new System.Drawing.Point(22, 490);
             this.customPanel1.Name = "customPanel1";
             this.customPanel1.Size = new System.Drawing.Size(753, 29);
@@ -590,7 +600,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
             dataGridViewCellStyle10.Padding = new System.Windows.Forms.Padding(0, 10, 0, 10);
             this.viewCol.DefaultCellStyle = dataGridViewCellStyle10;
             this.viewCol.HeaderText = "";
-            this.viewCol.Image = ((System.Drawing.Image)(resources.GetObject("viewCol.Image")));
+            this.viewCol.Image = global::ColdChainConnectSystem_ACDP.Properties.Resources.viewBtn;
             this.viewCol.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.viewCol.Name = "viewCol";
             this.viewCol.ReadOnly = true;
@@ -605,7 +615,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
             dataGridViewCellStyle11.Padding = new System.Windows.Forms.Padding(0, 10, 0, 10);
             this.editCol.DefaultCellStyle = dataGridViewCellStyle11;
             this.editCol.HeaderText = "";
-            this.editCol.Image = ((System.Drawing.Image)(resources.GetObject("editCol.Image")));
+            this.editCol.Image = global::ColdChainConnectSystem_ACDP.Properties.Resources.editBtn;
             this.editCol.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.editCol.Name = "editCol";
             this.editCol.ReadOnly = true;
@@ -620,7 +630,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
             dataGridViewCellStyle12.Padding = new System.Windows.Forms.Padding(0, 10, 0, 10);
             this.deleteCol.DefaultCellStyle = dataGridViewCellStyle12;
             this.deleteCol.HeaderText = "";
-            this.deleteCol.Image = ((System.Drawing.Image)(resources.GetObject("deleteCol.Image")));
+            this.deleteCol.Image = global::ColdChainConnectSystem_ACDP.Properties.Resources.delBtn;
             this.deleteCol.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.deleteCol.Name = "deleteCol";
             this.deleteCol.ReadOnly = true;

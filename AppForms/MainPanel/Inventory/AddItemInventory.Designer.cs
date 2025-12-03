@@ -184,6 +184,7 @@
             this.txtSKU.TabIndex = 15;
             this.txtSKU.Texts = "";
             this.txtSKU.UnderlinedStyle = false;
+            this.txtSKU.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSKU_KeyPress);
             // 
             // txtQuantity
             // 
@@ -278,6 +279,7 @@
             // 
             // btnImage
             // 
+            this.btnImage.Angle = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
             this.btnImage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.btnImage.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.btnImage.BorderColor = System.Drawing.Color.PaleVioletRed;
@@ -302,6 +304,7 @@
             // 
             // lbl
             // 
+            this.lbl.Angle = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
             this.lbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.lbl.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.lbl.BorderColor = System.Drawing.Color.PaleVioletRed;
@@ -311,6 +314,9 @@
             this.lbl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl.ForeColor = System.Drawing.Color.White;
+            this.lbl.GradientColor1 = System.Drawing.Color.Transparent;
+            this.lbl.GradientColor2 = System.Drawing.Color.Transparent;
+            this.lbl.GradientTextColor = System.Drawing.Color.Transparent;
             this.lbl.Location = new System.Drawing.Point(20, 20);
             this.lbl.Name = "lbl";
             this.lbl.Size = new System.Drawing.Size(758, 55);
@@ -322,6 +328,7 @@
             // 
             // btnAdd
             // 
+            this.btnAdd.Angle = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
             this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.btnAdd.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.btnAdd.BorderColor = System.Drawing.Color.PaleVioletRed;

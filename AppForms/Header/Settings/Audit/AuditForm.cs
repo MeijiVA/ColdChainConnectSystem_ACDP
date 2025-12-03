@@ -131,7 +131,6 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.Audit
                         break;
                 }
             }
-            Console.WriteLine(userQuery + " " + actionQuery);
         }
 
         private void cbxAction_Load(object sender, EventArgs e)

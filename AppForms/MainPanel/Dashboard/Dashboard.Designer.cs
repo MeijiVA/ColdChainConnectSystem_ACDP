@@ -28,13 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -43,24 +36,14 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.profitGenpnl = new System.Windows.Forms.Panel();
-            this.totalSales = new System.Windows.Forms.Panel();
-            this.totalCustpnl = new System.Windows.Forms.Panel();
-            this.totalProdpnl = new System.Windows.Forms.Panel();
-            this.sqlCommandBuilder1 = new Microsoft.Data.SqlClient.SqlCommandBuilder();
-            this.printDialog1 = new System.Windows.Forms.PrintDialog();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.customPanel3 = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
-            this.customLabel2 = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
-            this.customPanel9 = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
-            this.tableExpiry = new System.Windows.Forms.DataGridView();
-            this.skucode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.expiry = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.image = new System.Windows.Forms.DataGridViewImageColumn();
-            this.greetPanel1 = new ColdChainConnectSystem_ACDP.AppForms.MainPanel.Dashboard.GreetPanel();
             this.customLabel10 = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
             this.customPanel8 = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
             this.tableTransaction = new System.Windows.Forms.DataGridView();
@@ -68,6 +51,7 @@
             this.amt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.numproduct = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Status = new System.Windows.Forms.DataGridViewImageColumn();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.customPanel4 = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
             this.pnlStock4 = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
             this.lblquant4 = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
@@ -82,38 +66,54 @@
             this.pnlStock3 = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
             this.lblquant3 = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
             this.lblSKU3 = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
+            this.profitGenpnl = new System.Windows.Forms.Panel();
             this.customPanel7 = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
             this.clblProfit = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
             this.lblTitleProfit = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
+            this.totalSales = new System.Windows.Forms.Panel();
             this.customPanel6 = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
             this.clblSales = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
             this.lblTitleSales = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
+            this.totalCustpnl = new System.Windows.Forms.Panel();
             this.customPanel2 = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
             this.clblCustomer = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
             this.lblTitleCust = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
+            this.totalProdpnl = new System.Windows.Forms.Panel();
             this.customPanel1 = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
             this.clblProducts = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
             this.lblTitleProd = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
+            this.sqlCommandBuilder1 = new Microsoft.Data.SqlClient.SqlCommandBuilder();
+            this.printDialog1 = new System.Windows.Forms.PrintDialog();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.customLabel2 = new ColdChainConnectSystem_ACDP.Materials.CustomLabel();
+            this.customPanel9 = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
+            this.tableExpiry = new System.Windows.Forms.DataGridView();
+            this.skucode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.expiry = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.image = new System.Windows.Forms.DataGridViewImageColumn();
+            this.customPanel3 = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
+            this.greetPanel1 = new ColdChainConnectSystem_ACDP.AppForms.MainPanel.Dashboard.GreetPanel();
             this.panel9.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.profitGenpnl.SuspendLayout();
-            this.totalSales.SuspendLayout();
-            this.totalCustpnl.SuspendLayout();
-            this.totalProdpnl.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.customPanel9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tableExpiry)).BeginInit();
             this.customPanel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tableTransaction)).BeginInit();
+            this.panel6.SuspendLayout();
             this.customPanel4.SuspendLayout();
             this.pnlStock4.SuspendLayout();
             this.pnlStock1.SuspendLayout();
             this.pnlStock2.SuspendLayout();
             this.pnlStock3.SuspendLayout();
+            this.profitGenpnl.SuspendLayout();
             this.customPanel7.SuspendLayout();
+            this.totalSales.SuspendLayout();
             this.customPanel6.SuspendLayout();
+            this.totalCustpnl.SuspendLayout();
             this.customPanel2.SuspendLayout();
+            this.totalProdpnl.SuspendLayout();
             this.customPanel1.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.customPanel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tableExpiry)).BeginInit();
             this.SuspendLayout();
             // 
             // panel9
@@ -124,249 +124,6 @@
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(326, 285);
             this.panel9.TabIndex = 20;
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.customPanel4);
-            this.panel6.Location = new System.Drawing.Point(0, 156);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(656, 128);
-            this.panel6.TabIndex = 16;
-            // 
-            // profitGenpnl
-            // 
-            this.profitGenpnl.Controls.Add(this.customPanel7);
-            this.profitGenpnl.Location = new System.Drawing.Point(493, 50);
-            this.profitGenpnl.Name = "profitGenpnl";
-            this.profitGenpnl.Padding = new System.Windows.Forms.Padding(3, 11, 3, 11);
-            this.profitGenpnl.Size = new System.Drawing.Size(163, 108);
-            this.profitGenpnl.TabIndex = 21;
-            // 
-            // totalSales
-            // 
-            this.totalSales.Controls.Add(this.customPanel6);
-            this.totalSales.Location = new System.Drawing.Point(329, 50);
-            this.totalSales.Name = "totalSales";
-            this.totalSales.Padding = new System.Windows.Forms.Padding(3, 11, 3, 11);
-            this.totalSales.Size = new System.Drawing.Size(163, 108);
-            this.totalSales.TabIndex = 19;
-            // 
-            // totalCustpnl
-            // 
-            this.totalCustpnl.Controls.Add(this.customPanel2);
-            this.totalCustpnl.Location = new System.Drawing.Point(165, 50);
-            this.totalCustpnl.Name = "totalCustpnl";
-            this.totalCustpnl.Padding = new System.Windows.Forms.Padding(3, 11, 3, 11);
-            this.totalCustpnl.Size = new System.Drawing.Size(163, 108);
-            this.totalCustpnl.TabIndex = 17;
-            // 
-            // totalProdpnl
-            // 
-            this.totalProdpnl.Controls.Add(this.customPanel1);
-            this.totalProdpnl.Location = new System.Drawing.Point(1, 50);
-            this.totalProdpnl.Name = "totalProdpnl";
-            this.totalProdpnl.Padding = new System.Windows.Forms.Padding(3, 11, 3, 11);
-            this.totalProdpnl.Size = new System.Drawing.Size(163, 108);
-            this.totalProdpnl.TabIndex = 15;
-            // 
-            // printDialog1
-            // 
-            this.printDialog1.UseEXDialog = true;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.customLabel2);
-            this.panel1.Controls.Add(this.customPanel9);
-            this.panel1.Location = new System.Drawing.Point(330, 283);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(326, 285);
-            this.panel1.TabIndex = 21;
-            // 
-            // customPanel3
-            // 
-            this.customPanel3.Angle = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.customPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.customPanel3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.customPanel3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.customPanel3.BorderRadius = 15;
-            this.customPanel3.BorderSize = 1;
-            this.customPanel3.ForeColor = System.Drawing.Color.White;
-            this.customPanel3.GradientColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(68)))), ((int)(((byte)(211)))));
-            this.customPanel3.GradientColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(163)))));
-            this.customPanel3.GradientTextColor = System.Drawing.Color.Transparent;
-            this.customPanel3.Location = new System.Drawing.Point(664, 61);
-            this.customPanel3.Name = "customPanel3";
-            this.customPanel3.Size = new System.Drawing.Size(125, 497);
-            this.customPanel3.TabIndex = 23;
-            this.customPanel3.TextColor = System.Drawing.Color.White;
-            // 
-            // customLabel2
-            // 
-            this.customLabel2.Angle = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.customLabel2.AutoSize = true;
-            this.customLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.customLabel2.BackgroundColor = System.Drawing.Color.Transparent;
-            this.customLabel2.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.customLabel2.BorderRadius = 0;
-            this.customLabel2.BorderSize = 0;
-            this.customLabel2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customLabel2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.customLabel2.GradientColor1 = System.Drawing.Color.Transparent;
-            this.customLabel2.GradientColor2 = System.Drawing.Color.Transparent;
-            this.customLabel2.GradientTextColor = System.Drawing.Color.Transparent;
-            this.customLabel2.Location = new System.Drawing.Point(12, 5);
-            this.customLabel2.Name = "customLabel2";
-            this.customLabel2.Size = new System.Drawing.Size(161, 18);
-            this.customLabel2.TabIndex = 2;
-            this.customLabel2.Text = "Products (Expiring)";
-            this.customLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.customLabel2.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            // 
-            // customPanel9
-            // 
-            this.customPanel9.Angle = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.customPanel9.BackColor = System.Drawing.Color.White;
-            this.customPanel9.BackgroundColor = System.Drawing.Color.White;
-            this.customPanel9.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.customPanel9.BorderRadius = 10;
-            this.customPanel9.BorderSize = 1;
-            this.customPanel9.Controls.Add(this.tableExpiry);
-            this.customPanel9.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.customPanel9.GradientColor1 = System.Drawing.Color.Transparent;
-            this.customPanel9.GradientColor2 = System.Drawing.Color.Transparent;
-            this.customPanel9.GradientTextColor = System.Drawing.Color.Transparent;
-            this.customPanel9.Location = new System.Drawing.Point(6, 28);
-            this.customPanel9.Name = "customPanel9";
-            this.customPanel9.Size = new System.Drawing.Size(315, 248);
-            this.customPanel9.TabIndex = 3;
-            this.customPanel9.TextColor = System.Drawing.Color.WhiteSmoke;
-            // 
-            // tableExpiry
-            // 
-            this.tableExpiry.AllowUserToAddRows = false;
-            this.tableExpiry.AllowUserToDeleteRows = false;
-            this.tableExpiry.AllowUserToResizeColumns = false;
-            this.tableExpiry.AllowUserToResizeRows = false;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(233)))), ((int)(((byte)(240)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            dataGridViewCellStyle8.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(233)))), ((int)(((byte)(240)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.tableExpiry.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle8;
-            this.tableExpiry.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.tableExpiry.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
-            this.tableExpiry.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tableExpiry.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.tableExpiry.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
-            this.tableExpiry.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            dataGridViewCellStyle9.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tableExpiry.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
-            this.tableExpiry.ColumnHeadersHeight = 35;
-            this.tableExpiry.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.tableExpiry.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.skucode,
-            this.quantity,
-            this.expiry,
-            this.image});
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F);
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle12.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.tableExpiry.DefaultCellStyle = dataGridViewCellStyle12;
-            this.tableExpiry.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableExpiry.EnableHeadersVisualStyles = false;
-            this.tableExpiry.GridColor = System.Drawing.Color.White;
-            this.tableExpiry.Location = new System.Drawing.Point(0, 0);
-            this.tableExpiry.MultiSelect = false;
-            this.tableExpiry.Name = "tableExpiry";
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            dataGridViewCellStyle13.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tableExpiry.RowHeadersDefaultCellStyle = dataGridViewCellStyle13;
-            this.tableExpiry.RowHeadersVisible = false;
-            this.tableExpiry.RowHeadersWidth = 15;
-            this.tableExpiry.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F);
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            dataGridViewCellStyle14.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
-            this.tableExpiry.RowsDefaultCellStyle = dataGridViewCellStyle14;
-            this.tableExpiry.RowTemplate.DefaultCellStyle.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            this.tableExpiry.RowTemplate.Height = 40;
-            this.tableExpiry.Size = new System.Drawing.Size(315, 248);
-            this.tableExpiry.TabIndex = 2;
-            this.tableExpiry.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tableExpiry_CellContentClick);
-            // 
-            // skucode
-            // 
-            this.skucode.FillWeight = 112.969F;
-            this.skucode.HeaderText = "SKU Code";
-            this.skucode.Name = "skucode";
-            this.skucode.ReadOnly = true;
-            this.skucode.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.skucode.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // quantity
-            // 
-            this.quantity.FillWeight = 62.53706F;
-            this.quantity.HeaderText = "Quantity";
-            this.quantity.Name = "quantity";
-            this.quantity.ReadOnly = true;
-            this.quantity.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.quantity.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // expiry
-            // 
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.expiry.DefaultCellStyle = dataGridViewCellStyle10;
-            this.expiry.FillWeight = 117.577F;
-            this.expiry.HeaderText = "Expiry";
-            this.expiry.Name = "expiry";
-            this.expiry.ReadOnly = true;
-            this.expiry.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.expiry.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // image
-            // 
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle11.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle11.NullValue")));
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.image.DefaultCellStyle = dataGridViewCellStyle11;
-            this.image.FillWeight = 117.577F;
-            this.image.HeaderText = "Image";
-            this.image.Image = global::ColdChainConnectSystem_ACDP.Properties.Resources.ACDPLogo;
-            this.image.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.image.Name = "image";
-            this.image.ReadOnly = true;
-            this.image.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // greetPanel1
-            // 
-            this.greetPanel1.Location = new System.Drawing.Point(0, 0);
-            this.greetPanel1.Name = "greetPanel1";
-            this.greetPanel1.Size = new System.Drawing.Size(798, 51);
-            this.greetPanel1.TabIndex = 22;
             // 
             // customLabel10
             // 
@@ -425,7 +182,7 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.tableTransaction.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.tableTransaction.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.tableTransaction.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
+            this.tableTransaction.BackgroundColor = System.Drawing.Color.White;
             this.tableTransaction.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tableTransaction.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.tableTransaction.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
@@ -525,6 +282,14 @@
             this.Status.Name = "Status";
             this.Status.ReadOnly = true;
             this.Status.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.customPanel4);
+            this.panel6.Location = new System.Drawing.Point(0, 156);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(656, 128);
+            this.panel6.TabIndex = 16;
             // 
             // customPanel4
             // 
@@ -828,6 +593,15 @@
             this.lblSKU3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblSKU3.TextColor = System.Drawing.Color.White;
             // 
+            // profitGenpnl
+            // 
+            this.profitGenpnl.Controls.Add(this.customPanel7);
+            this.profitGenpnl.Location = new System.Drawing.Point(493, 50);
+            this.profitGenpnl.Name = "profitGenpnl";
+            this.profitGenpnl.Padding = new System.Windows.Forms.Padding(3, 11, 3, 11);
+            this.profitGenpnl.Size = new System.Drawing.Size(163, 108);
+            this.profitGenpnl.TabIndex = 21;
+            // 
             // customPanel7
             // 
             this.customPanel7.Angle = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
@@ -894,6 +668,15 @@
             this.lblTitleProfit.Text = "Profits Generated";
             this.lblTitleProfit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblTitleProfit.TextColor = System.Drawing.Color.WhiteSmoke;
+            // 
+            // totalSales
+            // 
+            this.totalSales.Controls.Add(this.customPanel6);
+            this.totalSales.Location = new System.Drawing.Point(329, 50);
+            this.totalSales.Name = "totalSales";
+            this.totalSales.Padding = new System.Windows.Forms.Padding(3, 11, 3, 11);
+            this.totalSales.Size = new System.Drawing.Size(163, 108);
+            this.totalSales.TabIndex = 19;
             // 
             // customPanel6
             // 
@@ -962,6 +745,15 @@
             this.lblTitleSales.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblTitleSales.TextColor = System.Drawing.Color.WhiteSmoke;
             // 
+            // totalCustpnl
+            // 
+            this.totalCustpnl.Controls.Add(this.customPanel2);
+            this.totalCustpnl.Location = new System.Drawing.Point(165, 50);
+            this.totalCustpnl.Name = "totalCustpnl";
+            this.totalCustpnl.Padding = new System.Windows.Forms.Padding(3, 11, 3, 11);
+            this.totalCustpnl.Size = new System.Drawing.Size(163, 108);
+            this.totalCustpnl.TabIndex = 17;
+            // 
             // customPanel2
             // 
             this.customPanel2.Angle = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
@@ -1028,6 +820,15 @@
             this.lblTitleCust.Text = "Total Customers";
             this.lblTitleCust.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblTitleCust.TextColor = System.Drawing.Color.WhiteSmoke;
+            // 
+            // totalProdpnl
+            // 
+            this.totalProdpnl.Controls.Add(this.customPanel1);
+            this.totalProdpnl.Location = new System.Drawing.Point(1, 50);
+            this.totalProdpnl.Name = "totalProdpnl";
+            this.totalProdpnl.Padding = new System.Windows.Forms.Padding(3, 11, 3, 11);
+            this.totalProdpnl.Size = new System.Drawing.Size(163, 108);
+            this.totalProdpnl.TabIndex = 15;
             // 
             // customPanel1
             // 
@@ -1096,7 +897,206 @@
             this.lblTitleProd.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblTitleProd.TextColor = System.Drawing.Color.WhiteSmoke;
             // 
-            // DashoardForm
+            // printDialog1
+            // 
+            this.printDialog1.UseEXDialog = true;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.customLabel2);
+            this.panel1.Controls.Add(this.customPanel9);
+            this.panel1.Location = new System.Drawing.Point(330, 283);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(326, 285);
+            this.panel1.TabIndex = 21;
+            // 
+            // customLabel2
+            // 
+            this.customLabel2.Angle = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.customLabel2.AutoSize = true;
+            this.customLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.customLabel2.BackgroundColor = System.Drawing.Color.Transparent;
+            this.customLabel2.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.customLabel2.BorderRadius = 0;
+            this.customLabel2.BorderSize = 0;
+            this.customLabel2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.customLabel2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.customLabel2.GradientColor1 = System.Drawing.Color.Transparent;
+            this.customLabel2.GradientColor2 = System.Drawing.Color.Transparent;
+            this.customLabel2.GradientTextColor = System.Drawing.Color.Transparent;
+            this.customLabel2.Location = new System.Drawing.Point(12, 5);
+            this.customLabel2.Name = "customLabel2";
+            this.customLabel2.Size = new System.Drawing.Size(161, 18);
+            this.customLabel2.TabIndex = 2;
+            this.customLabel2.Text = "Products (Expiring)";
+            this.customLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.customLabel2.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            // 
+            // customPanel9
+            // 
+            this.customPanel9.Angle = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.customPanel9.BackColor = System.Drawing.Color.White;
+            this.customPanel9.BackgroundColor = System.Drawing.Color.White;
+            this.customPanel9.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.customPanel9.BorderRadius = 10;
+            this.customPanel9.BorderSize = 1;
+            this.customPanel9.Controls.Add(this.tableExpiry);
+            this.customPanel9.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.customPanel9.GradientColor1 = System.Drawing.Color.Transparent;
+            this.customPanel9.GradientColor2 = System.Drawing.Color.Transparent;
+            this.customPanel9.GradientTextColor = System.Drawing.Color.Transparent;
+            this.customPanel9.Location = new System.Drawing.Point(6, 28);
+            this.customPanel9.Name = "customPanel9";
+            this.customPanel9.Size = new System.Drawing.Size(315, 248);
+            this.customPanel9.TabIndex = 3;
+            this.customPanel9.TextColor = System.Drawing.Color.WhiteSmoke;
+            // 
+            // tableExpiry
+            // 
+            this.tableExpiry.AllowUserToAddRows = false;
+            this.tableExpiry.AllowUserToDeleteRows = false;
+            this.tableExpiry.AllowUserToResizeColumns = false;
+            this.tableExpiry.AllowUserToResizeRows = false;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(233)))), ((int)(((byte)(240)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            dataGridViewCellStyle8.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(233)))), ((int)(((byte)(240)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.tableExpiry.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle8;
+            this.tableExpiry.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.tableExpiry.BackgroundColor = System.Drawing.Color.White;
+            this.tableExpiry.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tableExpiry.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.tableExpiry.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
+            this.tableExpiry.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            dataGridViewCellStyle9.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tableExpiry.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            this.tableExpiry.ColumnHeadersHeight = 35;
+            this.tableExpiry.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.tableExpiry.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.skucode,
+            this.quantity,
+            this.expiry,
+            this.image});
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle12.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tableExpiry.DefaultCellStyle = dataGridViewCellStyle12;
+            this.tableExpiry.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableExpiry.EnableHeadersVisualStyles = false;
+            this.tableExpiry.GridColor = System.Drawing.Color.White;
+            this.tableExpiry.Location = new System.Drawing.Point(0, 0);
+            this.tableExpiry.MultiSelect = false;
+            this.tableExpiry.Name = "tableExpiry";
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            dataGridViewCellStyle13.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tableExpiry.RowHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            this.tableExpiry.RowHeadersVisible = false;
+            this.tableExpiry.RowHeadersWidth = 15;
+            this.tableExpiry.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F);
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            dataGridViewCellStyle14.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.tableExpiry.RowsDefaultCellStyle = dataGridViewCellStyle14;
+            this.tableExpiry.RowTemplate.DefaultCellStyle.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            this.tableExpiry.RowTemplate.Height = 40;
+            this.tableExpiry.Size = new System.Drawing.Size(315, 248);
+            this.tableExpiry.TabIndex = 2;
+            this.tableExpiry.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tableExpiry_CellContentClick);
+            // 
+            // skucode
+            // 
+            this.skucode.FillWeight = 112.969F;
+            this.skucode.HeaderText = "SKU Code";
+            this.skucode.Name = "skucode";
+            this.skucode.ReadOnly = true;
+            this.skucode.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.skucode.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // quantity
+            // 
+            this.quantity.FillWeight = 62.53706F;
+            this.quantity.HeaderText = "Quantity";
+            this.quantity.Name = "quantity";
+            this.quantity.ReadOnly = true;
+            this.quantity.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.quantity.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // expiry
+            // 
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.expiry.DefaultCellStyle = dataGridViewCellStyle10;
+            this.expiry.FillWeight = 117.577F;
+            this.expiry.HeaderText = "Expiry";
+            this.expiry.Name = "expiry";
+            this.expiry.ReadOnly = true;
+            this.expiry.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.expiry.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // image
+            // 
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle11.NullValue")));
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.image.DefaultCellStyle = dataGridViewCellStyle11;
+            this.image.FillWeight = 117.577F;
+            this.image.HeaderText = "Image";
+            this.image.Image = global::ColdChainConnectSystem_ACDP.Properties.Resources.ACDPLogo;
+            this.image.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.image.Name = "image";
+            this.image.ReadOnly = true;
+            this.image.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // customPanel3
+            // 
+            this.customPanel3.Angle = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.customPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.customPanel3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.customPanel3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
+            this.customPanel3.BorderRadius = 15;
+            this.customPanel3.BorderSize = 1;
+            this.customPanel3.ForeColor = System.Drawing.Color.White;
+            this.customPanel3.GradientColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(68)))), ((int)(((byte)(211)))));
+            this.customPanel3.GradientColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(163)))));
+            this.customPanel3.GradientTextColor = System.Drawing.Color.Transparent;
+            this.customPanel3.Location = new System.Drawing.Point(664, 61);
+            this.customPanel3.Name = "customPanel3";
+            this.customPanel3.Size = new System.Drawing.Size(125, 497);
+            this.customPanel3.TabIndex = 23;
+            this.customPanel3.TextColor = System.Drawing.Color.White;
+            // 
+            // greetPanel1
+            // 
+            this.greetPanel1.Location = new System.Drawing.Point(0, 0);
+            this.greetPanel1.Name = "greetPanel1";
+            this.greetPanel1.Size = new System.Drawing.Size(798, 51);
+            this.greetPanel1.TabIndex = 22;
+            // 
+            // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -1113,22 +1113,14 @@
             this.Controls.Add(this.totalProdpnl);
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "DashoardForm";
+            this.Name = "Dashboard";
             this.Text = "DashboardPanel";
             this.Load += new System.EventHandler(this.DashoardForm_Load);
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.profitGenpnl.ResumeLayout(false);
-            this.totalSales.ResumeLayout(false);
-            this.totalCustpnl.ResumeLayout(false);
-            this.totalProdpnl.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.customPanel9.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.tableExpiry)).EndInit();
             this.customPanel8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tableTransaction)).EndInit();
+            this.panel6.ResumeLayout(false);
             this.customPanel4.ResumeLayout(false);
             this.customPanel4.PerformLayout();
             this.pnlStock4.ResumeLayout(false);
@@ -1139,14 +1131,22 @@
             this.pnlStock2.PerformLayout();
             this.pnlStock3.ResumeLayout(false);
             this.pnlStock3.PerformLayout();
+            this.profitGenpnl.ResumeLayout(false);
             this.customPanel7.ResumeLayout(false);
             this.customPanel7.PerformLayout();
+            this.totalSales.ResumeLayout(false);
             this.customPanel6.ResumeLayout(false);
             this.customPanel6.PerformLayout();
+            this.totalCustpnl.ResumeLayout(false);
             this.customPanel2.ResumeLayout(false);
             this.customPanel2.PerformLayout();
+            this.totalProdpnl.ResumeLayout(false);
             this.customPanel1.ResumeLayout(false);
             this.customPanel1.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.customPanel9.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.tableExpiry)).EndInit();
             this.ResumeLayout(false);
 
         }

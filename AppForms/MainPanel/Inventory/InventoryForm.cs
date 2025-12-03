@@ -33,6 +33,14 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory
         }
         private void InventoryForm_Load(object sender, EventArgs e)
         {
+            if (ConnectionClass.position != "Administrator")
+            {
+                dgvTable.Columns.Remove("deleteCol");
+                dgvTable.Columns["editCol"].DefaultCellStyle.Padding = new Padding(12, 0, 13, 0);
+                dgvTable.Columns["editCol"].Width = 37;
+                dgvTable.Columns["viewCol"].DefaultCellStyle.Padding = new Padding(12, 0, 13, 0);
+                dgvTable.Columns["viewCol"].Width = 38;
+            }
             QuantityColor.LoadQuantity("QuantityThreshold.txt");
             txtQuantity.Texts = ""+QuantityColor.QuantityThreshold;
             currentPageIndex = 1;//!!!!!!!!!!!!!!!!!!!

@@ -40,11 +40,12 @@
             this.flowLayoutNotif.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutNotif.Location = new System.Drawing.Point(0, 40);
             this.flowLayoutNotif.Name = "flowLayoutNotif";
-            this.flowLayoutNotif.Size = new System.Drawing.Size(260, 100);
+            this.flowLayoutNotif.Size = new System.Drawing.Size(266, 100);
             this.flowLayoutNotif.TabIndex = 2;
             // 
             // customPanel1
             // 
+            this.customPanel1.Angle = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
             this.customPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.customPanel1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.customPanel1.BorderColor = System.Drawing.Color.PaleVioletRed;
@@ -53,10 +54,13 @@
             this.customPanel1.Controls.Add(this.lbl);
             this.customPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.customPanel1.ForeColor = System.Drawing.Color.White;
+            this.customPanel1.GradientColor1 = System.Drawing.Color.Transparent;
+            this.customPanel1.GradientColor2 = System.Drawing.Color.Transparent;
+            this.customPanel1.GradientTextColor = System.Drawing.Color.Transparent;
             this.customPanel1.Location = new System.Drawing.Point(0, 0);
             this.customPanel1.Name = "customPanel1";
             this.customPanel1.Padding = new System.Windows.Forms.Padding(10, 10, 0, 10);
-            this.customPanel1.Size = new System.Drawing.Size(260, 40);
+            this.customPanel1.Size = new System.Drawing.Size(266, 40);
             this.customPanel1.TabIndex = 1;
             this.customPanel1.TextColor = System.Drawing.Color.White;
             this.customPanel1.Click += new System.EventHandler(this.customPanel1_Click);
@@ -64,6 +68,7 @@
             // 
             // lbl
             // 
+            this.lbl.Angle = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
             this.lbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.lbl.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.lbl.BorderColor = System.Drawing.Color.PaleVioletRed;
@@ -73,6 +78,9 @@
             this.lbl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbl.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold);
             this.lbl.ForeColor = System.Drawing.Color.White;
+            this.lbl.GradientColor1 = System.Drawing.Color.Transparent;
+            this.lbl.GradientColor2 = System.Drawing.Color.Transparent;
+            this.lbl.GradientTextColor = System.Drawing.Color.Transparent;
             this.lbl.Location = new System.Drawing.Point(10, 10);
             this.lbl.Name = "lbl";
             this.lbl.Size = new System.Drawing.Size(126, 20);
@@ -88,7 +96,7 @@
             this.Controls.Add(this.flowLayoutNotif);
             this.Controls.Add(this.customPanel1);
             this.Name = "NotificationDisplay";
-            this.Size = new System.Drawing.Size(260, 140);
+            this.Size = new System.Drawing.Size(266, 141);
             this.Load += new System.EventHandler(this.NotificationDisplay_Load);
             this.customPanel1.ResumeLayout(false);
             this.ResumeLayout(false);

@@ -163,14 +163,18 @@ namespace ColdChainConnectSystem_ACDP
                 toggle = false;
             }
         }
-
-        private void txtUser_KeyDown(object sender, KeyEventArgs e)
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
-            if(e.KeyCode == Keys.Enter)
+            if (keyData == (Keys.Enter))
             {
-                e.SuppressKeyPress = true; // Prevents the default Enter key behavior (e.g., beep, new line)
-                SelectNextControl(ActiveControl, true, true, true, true);
+                SendKeys.Send("{TAB}");
             }
+
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
+        private void btnLogin_Enter(object sender, EventArgs e)
+        {
+            customButton1_Click(sender, e);
         }
     }//class
 }//namespace

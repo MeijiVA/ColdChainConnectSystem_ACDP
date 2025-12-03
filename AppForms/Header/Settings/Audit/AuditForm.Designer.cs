@@ -343,7 +343,7 @@
             this.btnPanel.GradientColor1 = System.Drawing.Color.Transparent;
             this.btnPanel.GradientColor2 = System.Drawing.Color.Transparent;
             this.btnPanel.GradientTextColor = System.Drawing.Color.Transparent;
-            this.btnPanel.Location = new System.Drawing.Point(470, 12);
+            this.btnPanel.Location = new System.Drawing.Point(457, 12);
             this.btnPanel.Name = "btnPanel";
             this.btnPanel.Padding = new System.Windows.Forms.Padding(5);
             this.btnPanel.Size = new System.Drawing.Size(30, 30);
