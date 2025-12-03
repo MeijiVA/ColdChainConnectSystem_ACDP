@@ -151,6 +151,10 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Employee
                     }
                 }
             }
+            else
+            {
+                new CustomMessageBox("Account Creation", "Username already exists.", MessageBoxButtons.OK).ShowDialog();
+            }
         }
 
         private void AddEmployeeForm_Load(object sender, EventArgs e)
