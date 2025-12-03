@@ -14,24 +14,32 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
     {
         public static bool CheckIfDuplicateAccount(string uname)
         {
-            String query = $"SELECT [Username] FROM Employees WHERE = {uname}";
+            String query = $"SELECT [Username] FROM Employees WHERE [Username] = '{uname}'";
             SqlConnection con = ConnectionClass.Connection();
             con.Open();
-            using (SqlCommand user = new SqlCommand(query, con))
+            Console.Write(query);
+            try
             {
-                using (var reader = user.ExecuteReader())
+                using (SqlCommand user = new SqlCommand(query, con))
                 {
-                    while (reader.Read())
+                    using (var reader = user.ExecuteReader())
                     {
-                        if (reader[0].ToString() == uname)
+                        while (reader.Read())
                         {
-                            return true;
+                            if (reader[0].ToString() == uname)
+                            {
+                                return false ;
+                            }
                         }
                     }
                 }
+                con.Close();
             }
-            con.Close();
-            return false;
+            catch (Exception ex)
+            {
+
+            }
+            return true;
         }
 
         public static int GetTotalEmployees()
