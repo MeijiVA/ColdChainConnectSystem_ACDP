@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ColdChainConnectSystem_ACDP.ClassResources.Security;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -22,6 +23,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources.Connection.TableView
                 con.Open();
                 cmd.ExecuteNonQuery();
                 con.Close();
+                AuditLog.AddAuditInfo("Delete",item, ConnectionClass.empid + $" Deleted Item [{item}] in " + CurrentFormClass.form);
             }
         }
     }
