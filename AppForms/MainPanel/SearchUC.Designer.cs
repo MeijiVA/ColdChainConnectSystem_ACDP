@@ -166,6 +166,7 @@
             this.cbxFilter.Texts = "Filter";
             this.cbxFilter.OnSelectedIndexChanged += new System.EventHandler(this.cbxFilter_OnSelectedIndexChanged);
             this.cbxFilter.Load += new System.EventHandler(this.cbxFilter_Load);
+            this.cbxFilter.Leave += new System.EventHandler(this.cbxFilter_Leave);
             // 
             // btnAddItem
             // 

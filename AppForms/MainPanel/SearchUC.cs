@@ -233,6 +233,66 @@ int nHeightEllipse // height of ellipse
 
         private void cbxFilter_OnSelectedIndexChanged(object sender, EventArgs e)
         {
+            CheckFilter();
+        }
+
+        private void cbxFilter_Load(object sender, EventArgs e)
+        {
+            cbxFilter.Items.Add("All");
+            cbxFilter.Items.Add("ID");
+            switch (CurrentFormClass.form)
+            {
+                case "invform":
+                    cbxFilter.Items.Add("SKU");
+                    cbxFilter.Items.Add("SupID");
+                    cbxFilter.Items.Add("Desc");
+                    cbxFilter.Items.Add("Qty");
+                    cbxFilter.Items.Add("Expry");
+                    break;
+                case "supform":
+                    cbxFilter.Items.Add("SupID");
+                    cbxFilter.Items.Add("C.Name");
+                    cbxFilter.Items.Add("C.Person");
+                    cbxFilter.Items.Add("C.Num");
+                    cbxFilter.Items.Add("Adrs.");
+                    cbxFilter.Items.Add("PayTerm");
+                    break;
+
+                case "salform":
+                    cbxFilter.Items.Add("Sal.ID");
+                    cbxFilter.Items.Add("C.ID");
+                    cbxFilter.Items.Add("S.Date");
+                    cbxFilter.Items.Add("Qty");
+                    cbxFilter.Items.Add("Price");
+                    cbxFilter.Items.Add("Status");
+                    break;
+
+                case "custform":
+                    cbxFilter.Items.Add("C.Name");
+                    cbxFilter.Items.Add("Phone#");
+                    cbxFilter.Items.Add("Adrs.");
+                    cbxFilter.Items.Add("PayTerm");
+                    cbxFilter.Items.Add("R.Date");
+                    cbxFilter.Items.Add("Status");
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            // Trigger the event to notify parent form
+            SearchTextChanged?.Invoke(this, EventArgs.Empty);
+        }
+
+        private void cbxFilter_Leave(object sender, EventArgs e)
+        {
+            CheckFilter();
+        }
+
+        private void CheckFilter()
+        {
             if (IfIsInventoryFilter())
             {
                 switch (cbxFilter.Texts)
@@ -361,56 +421,6 @@ int nHeightEllipse // height of ellipse
                         //FOR SUPPLIER
                 }
             }
-        }
-
-        private void cbxFilter_Load(object sender, EventArgs e)
-        {
-            cbxFilter.Items.Add("All");
-            cbxFilter.Items.Add("ID");
-            switch (CurrentFormClass.form)
-            {
-                case "invform":
-                    cbxFilter.Items.Add("SKU");
-                    cbxFilter.Items.Add("SupID");
-                    cbxFilter.Items.Add("Desc");
-                    cbxFilter.Items.Add("Qty");
-                    cbxFilter.Items.Add("Expry");
-                    break;
-                case "supform":
-                    cbxFilter.Items.Add("SupID");
-                    cbxFilter.Items.Add("C.Name");
-                    cbxFilter.Items.Add("C.Person");
-                    cbxFilter.Items.Add("C.Num");
-                    cbxFilter.Items.Add("Adrs.");
-                    cbxFilter.Items.Add("PayTerm");
-                    break;
-
-                case "salform":
-                    cbxFilter.Items.Add("Sal.ID");
-                    cbxFilter.Items.Add("C.ID");
-                    cbxFilter.Items.Add("S.Date");
-                    cbxFilter.Items.Add("Qty");
-                    cbxFilter.Items.Add("Price");
-                    cbxFilter.Items.Add("Status");
-                    break;
-
-                case "custform":
-                    cbxFilter.Items.Add("C.Name");
-                    cbxFilter.Items.Add("Phone#");
-                    cbxFilter.Items.Add("Adrs.");
-                    cbxFilter.Items.Add("PayTerm");
-                    cbxFilter.Items.Add("R.Date");
-                    cbxFilter.Items.Add("Status");
-                    break;
-                default:
-                    break;
-            }
-        }
-
-        private void txtSearch_TextChanged(object sender, EventArgs e)
-        {
-            // Trigger the event to notify parent form
-            SearchTextChanged?.Invoke(this, EventArgs.Empty);
         }
     }
 }
