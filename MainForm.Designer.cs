@@ -97,9 +97,9 @@
             this.logoutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.logoutBtn.ForeColor = System.Drawing.Color.Transparent;
             this.logoutBtn.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.logoutBtn.Location = new System.Drawing.Point(55, 568);
+            this.logoutBtn.Location = new System.Drawing.Point(61, 568);
             this.logoutBtn.Name = "logoutBtn";
-            this.logoutBtn.Size = new System.Drawing.Size(90, 20);
+            this.logoutBtn.Size = new System.Drawing.Size(79, 16);
             this.logoutBtn.TabIndex = 0;
             this.logoutBtn.UseVisualStyleBackColor = true;
             this.logoutBtn.Click += new System.EventHandler(this.logoutBtn_Click);
@@ -140,8 +140,8 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.BackgroundImage = global::ColdChainConnectSystem_ACDP.Properties.Resources.MainForm1;
             this.ClientSize = new System.Drawing.Size(1035, 600);
-            this.Controls.Add(this.notificationDisplay1);
             this.Controls.Add(this.logoutBtn);
+            this.Controls.Add(this.notificationDisplay1);
             this.Controls.Add(this.uacUserProfile);
             this.Controls.Add(this.sidePanel1);
             this.Controls.Add(this.btnNotif);
