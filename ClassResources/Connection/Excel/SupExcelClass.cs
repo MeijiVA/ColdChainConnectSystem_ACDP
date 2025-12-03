@@ -29,27 +29,30 @@ namespace ColdChainConnectSystem_ACDP.ClassResources.Connection
                 String query = $"INSERT INTO Supplier([companyname],[contactperson],[contactnum],[address],[paymentterm]) VALUES";
                 if ((excelRange.Cells[1, 1] as Range).Value == "Supplier")
                 {
-                    
-                }
-                for (int row = 3; row <= excelRange.Rows.Count; row++)
-                {
-                    String compname = "" + (excelRange.Cells[row, 3] as Range).Value;
-                    String contperson = "" + (excelRange.Cells[row, 4] as Range).Value;
-                    String contnum = "" + (excelRange.Cells[row, 5] as Range).Value;
-                    String address = "" + (excelRange.Cells[row, 6] as Range).Value;
-                    String payterm = "" + (excelRange.Cells[row, 7] as Range).Value;
-                    query = query + $"('{compname}','{contperson}','{contnum}','{address}','{payterm}')";
-                    if (row != excelRange.Rows.Count)
+                    for (int row = 3; row <= excelRange.Rows.Count; row++)
                     {
-                        query = query + ",\n";
+                        String compname = "" + (excelRange.Cells[row, 3] as Range).Value;
+                        String contperson = "" + (excelRange.Cells[row, 4] as Range).Value;
+                        String contnum = "" + (excelRange.Cells[row, 5] as Range).Value;
+                        String address = "" + (excelRange.Cells[row, 6] as Range).Value;
+                        String payterm = "" + (excelRange.Cells[row, 7] as Range).Value;
+                        query = query + $"('{compname}','{contperson}','{contnum}','{address}','{payterm}')";
+                        if (row != excelRange.Rows.Count)
+                        {
+                            query = query + ",\n";
+                        }
                     }
+                    using (SqlCommand command = new SqlCommand(query, con))
+                    {
+                        //ID	SKU Code	Description	Unit Price	Amount	Weight(KG)	Quantity	Expiry Date
+                        command.ExecuteNonQuery();
+                    }
+                    new CustomMessageBox("Import", "Import has been completed.", MessageBoxButtons.OK).ShowDialog();
                 }
-                using (SqlCommand command = new SqlCommand(query, con))
+                else
                 {
-                    //ID	SKU Code	Description	Unit Price	Amount	Weight(KG)	Quantity	Expiry Date
-                    command.ExecuteNonQuery();
+                    new CustomMessageBox("Import", "Invalid DataSet.", MessageBoxButtons.OK).ShowDialog();
                 }
-                new CustomMessageBox("Import", "Import has been completed.", MessageBoxButtons.OK).ShowDialog();
             }
             catch(RuntimeBinderException ex)
             {

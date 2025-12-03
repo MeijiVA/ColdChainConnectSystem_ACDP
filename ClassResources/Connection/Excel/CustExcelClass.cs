@@ -29,31 +29,30 @@ namespace ColdChainConnectSystem_ACDP.ClassResources.Connection
                 String query = "INSERT INTO Customer([customername],[phonenumber],[address],[paymentterm],[registrationdate],[status]) VALUES";
                 if ((excelRange.Cells[1, 1] as Range).Value == "Customer")
                 {
-                    //Throw an exception here because it isn't a customer xd
-
-                }
-                for (int row = 3; row <= excelRange.Rows.Count; row++)
-                {
-                    String custname = "" + (excelRange.Cells[row, 3] as Range).Value;
-                    String phonenum = "" + (excelRange.Cells[row, 4] as Range).Value;
-                    String address = "" + (excelRange.Cells[row, 5] as Range).Value;
-                    String pay = "" + (excelRange.Cells[row, 6] as Range).Value;
-                    DateTime date = Convert.ToDateTime((excelRange.Cells[row, 7] as Range).Value);
-                    String regdate = date.ToString("MM/dd/yyyy");
-                    String status = "" + (excelRange.Cells[row, 8] as Range).Value;
-
-                    query = query + $"('{custname}','{phonenum}','{address}','{pay}','{regdate}','{status}')";
-                    if (row != excelRange.Rows.Count)
+                    for (int row = 3; row <= excelRange.Rows.Count; row++)
                     {
-                        query = query + ",\n";
+                        String custname = "" + (excelRange.Cells[row, 3] as Range).Value;
+                        String phonenum = "" + (excelRange.Cells[row, 4] as Range).Value;
+                        String address = "" + (excelRange.Cells[row, 5] as Range).Value;
+                        String pay = "" + (excelRange.Cells[row, 6] as Range).Value;
+                        DateTime date = Convert.ToDateTime((excelRange.Cells[row, 7] as Range).Value);
+                        String regdate = date.ToString("MM/dd/yyyy");
+                        String status = "" + (excelRange.Cells[row, 8] as Range).Value;
+
+                        query = query + $"('{custname}','{phonenum}','{address}','{pay}','{regdate}','{status}')";
+                        if (row != excelRange.Rows.Count)
+                        {
+                            query = query + ",\n";
+                        }
                     }
+                    using (SqlCommand command = new SqlCommand(query, con))
+                    {
+                        //ID	SKU Code	Description	Unit Price	Amount	Weight(KG)	Quantity	Expiry Date
+                        command.ExecuteNonQuery();
+                    }
+                    new CustomMessageBox("Import", "Import has been completed.", MessageBoxButtons.OK).ShowDialog();
                 }
-                using (SqlCommand command = new SqlCommand(query, con))
-                {
-                    //ID	SKU Code	Description	Unit Price	Amount	Weight(KG)	Quantity	Expiry Date
-                    command.ExecuteNonQuery();
-                }
-                new CustomMessageBox("Import", "Import has been completed.", MessageBoxButtons.OK).ShowDialog();
+                new CustomMessageBox("Import", "Wrong DataSet.", MessageBoxButtons.OK).ShowDialog();
             }
             catch(RuntimeBinderException ex)
             {

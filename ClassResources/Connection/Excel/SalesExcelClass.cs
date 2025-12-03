@@ -26,32 +26,40 @@ namespace ColdChainConnectSystem_ACDP.ClassResources.Connection
             try
             {
                 con.Open();
-                String query = "INSERT INTO Sales ([CustomerID],[SalesDate],[ProductID],[Quantity],[Status]) VALUES";
+                String query = "INSERT INTO Sales ([SalesID],[CustomerID],[SalesDate],[ProductID],[Quantity],[Status],[CreatedBy]) VALUES";
                 if ((excelRange.Cells[1, 1] as Range).Value == "Sales")
                 {
-                    
-                }
-                for (int row = 3; row <= excelRange.Rows.Count; row++)
-                {
-                    String cid = "" + (excelRange.Cells[row, 3] as Microsoft.Office.Interop.Excel.Range).Value;
-                    DateTime date = Convert.ToDateTime((excelRange.Cells[row, 4] as Range).Value);
-                    String salesdate = date.ToString("MM/dd/yyyy");
-                    String prodid = "" + (excelRange.Cells[row, 5] as Microsoft.Office.Interop.Excel.Range).Value;
-                    String quant = "" + (excelRange.Cells[row, 6] as Microsoft.Office.Interop.Excel.Range).Value;
-                    String stat = "" + (excelRange.Cells[row, 8] as Microsoft.Office.Interop.Excel.Range).Value;
-
-                    query = query + $"('{cid}','{salesdate}',{prodid},{quant},'{stat}')";
-                    if (row != excelRange.Rows.Count)
+                    for (int row = 3; row <= excelRange.Rows.Count; row++)
                     {
-                        query = query + ",\n";
-                    }
-                }
-                using (SqlCommand command = new SqlCommand(query, con))
-                {
+                        string sid = "" + (excelRange.Cells[row, 2] as Microsoft.Office.Interop.Excel.Range).Value;
+                        String cid = "" + (excelRange.Cells[row, 3] as Microsoft.Office.Interop.Excel.Range).Value;
+                        DateTime date = Convert.ToDateTime((excelRange.Cells[row, 4] as Range).Value);
+                        String salesdate = date.ToString("MM/dd/yyyy");
+                        String prodid = "" + (excelRange.Cells[row, 5] as Microsoft.Office.Interop.Excel.Range).Value;
+                        String quant = "" + (excelRange.Cells[row, 6] as Microsoft.Office.Interop.Excel.Range).Value;
+                        String stat = "" + (excelRange.Cells[row, 8] as Microsoft.Office.Interop.Excel.Range).Value;
+                        String createdby = ConnectionClass.empid;
 
-                    command.ExecuteNonQuery();
+
+                        query = query + $"('{sid}','{cid}','{salesdate}',{prodid},{quant},'{stat}','{createdby}')";
+                        if (row != excelRange.Rows.Count)
+                        {
+                            query = query + ",\n";
+                        }
+                        Console.WriteLine(query);
+                    }
+                    using (SqlCommand command = new SqlCommand(query, con))
+                    {
+
+                        command.ExecuteNonQuery();
+                    }
+                    new CustomMessageBox("Import", "Import has been completed.", MessageBoxButtons.OK).ShowDialog();
                 }
-                new CustomMessageBox("Import", "Import has been completed.", MessageBoxButtons.OK).ShowDialog();
+                else
+                {
+                    new CustomMessageBox("Import", "Invalid DataSet.", MessageBoxButtons.OK).ShowDialog();
+                }
+               
             }
             catch(RuntimeBinderException ex)
             {

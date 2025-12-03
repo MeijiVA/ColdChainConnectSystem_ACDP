@@ -29,33 +29,37 @@ namespace ColdChainConnectSystem_ACDP.ClassResources.Connection
                 String query = "INSERT INTO Inventory ([skucode],[unitprice],[kg],[quantity],[expiry],[image],[description],[supplierid]) VALUES";
                 if ((excelRange.Cells[1, 1] as Range).Value == "Inventory")
                 {
-                    
-                }
-                for (int row = 3; row <= excelRange.Rows.Count; row++)
-                {
-                    String skucode = "" + (excelRange.Cells[row, 2] as Range).Value;
-                    String unitprice = "" + (excelRange.Cells[row, 4] as Range).Value;
-                    String kg = "" + (excelRange.Cells[row, 6] as Range).Value;
-                    String qty = "" + (excelRange.Cells[row, 7] as Range).Value;
-
-                    DateTime date = Convert.ToDateTime((excelRange.Cells[row, 8] as Range).Value);
-                    String expiry = date.ToString("MM/dd/yyyy");
-                    // I have to switch these places because SQL only acccepts MM/dd/yyyy while excel autoconverts to MM/dd/yyyy
-                    String supid = "" + (excelRange.Cells[row, 5] as Microsoft.Office.Interop.Excel.Range).Value;
-                    String image = "Image.png";
-                    String desc = "" + (excelRange.Cells[row, 3] as Microsoft.Office.Interop.Excel.Range).Value;
-                    query = query + $"('{skucode}',{unitprice},{kg},{qty},'{expiry}','{image}','{desc}','{supid}')";
-                    if (row != excelRange.Rows.Count)
+                    for (int row = 3; row <= excelRange.Rows.Count; row++)
                     {
-                        query = query + ",\n";
+                        String skucode = "" + (excelRange.Cells[row, 2] as Range).Value;
+                        String unitprice = "" + (excelRange.Cells[row, 4] as Range).Value;
+                        String kg = "" + (excelRange.Cells[row, 6] as Range).Value;
+                        String qty = "" + (excelRange.Cells[row, 7] as Range).Value;
+
+                        DateTime date = Convert.ToDateTime((excelRange.Cells[row, 8] as Range).Value);
+                        String expiry = date.ToString("MM/dd/yyyy");
+                        // I have to switch these places because SQL only acccepts MM/dd/yyyy while excel autoconverts to MM/dd/yyyy
+                        String supid = "" + (excelRange.Cells[row, 5] as Microsoft.Office.Interop.Excel.Range).Value;
+                        String image = "Image.png";
+                        String desc = "" + (excelRange.Cells[row, 3] as Microsoft.Office.Interop.Excel.Range).Value;
+                        query = query + $"('{skucode}',{unitprice},{kg},{qty},'{expiry}','{image}','{desc}','{supid}')";
+                        if (row != excelRange.Rows.Count)
+                        {
+                            query = query + ",\n";
+                        }
                     }
+                    using (SqlCommand command = new SqlCommand(query, con))
+                    {
+                        //ID	SKU Code	Description	Unit Price	Amount	Weight(KG)	Quantity	Expiry Date
+                        command.ExecuteNonQuery();
+                    }
+                    new CustomMessageBox("Import", "Import has been completed.", MessageBoxButtons.OK).ShowDialog();
                 }
-                using (SqlCommand command = new SqlCommand(query, con))
+                else
                 {
-                    //ID	SKU Code	Description	Unit Price	Amount	Weight(KG)	Quantity	Expiry Date
-                    command.ExecuteNonQuery();
+                    new CustomMessageBox("Import", "Wrong DataSet.", MessageBoxButtons.OK).ShowDialog();
                 }
-                new CustomMessageBox("Import", "Import has been completed.", MessageBoxButtons.OK).ShowDialog();
+               
             }
             catch(RuntimeBinderException ex)
             {
