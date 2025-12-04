@@ -240,9 +240,9 @@ public class Receipt
         currentY += lineSpacing * 2;
 
 
-        g.DrawString("PREPARED BY:", fontNormal, Brushes.Black, colX_Start, currentY);
+        g.DrawString("RECEIVED BY:", fontNormal, Brushes.Black, colX_Start, currentY);
         DrawRightAlignedText(g, $"{ConnectionClass.fname} {ConnectionClass.mname.Substring(0,1)}. {ConnectionClass.lname}", new System.Drawing.Font(fontBold, FontStyle.Bold), currentY, totalsX_Value);
-        g.DrawString("RECEIVED BY:", fontNormal, Brushes.Black, colX_Amount - 250, currentY);
+        g.DrawString("PREPARED BY:", fontNormal, Brushes.Black, colX_Amount - 250, currentY);
 
 
         e.HasMorePages = false;
