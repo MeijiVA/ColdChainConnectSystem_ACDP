@@ -185,17 +185,16 @@ public class Receipt
         currentY += lineSpacing * 1.1f;
       
         g.DrawLine(Pens.Black, colX_Start, currentY + lineSpacing - 5, colX_Amount, currentY + lineSpacing - 5);
-        currentY += lineSpacing * 1.05f;
 
-        currentY += 5;
-        g.DrawString("QTY", fontBold, Brushes.Black, colX_Qty, currentY);
-        g.DrawString("UNIT", fontBold, Brushes.Black, colX_Unit, currentY);
-        g.DrawString("DESCRIPTION", fontBold, Brushes.Black, colX_Description, currentY);
-        g.DrawString("SKU CODE", fontBold, Brushes.Black, colX_SKU, currentY);
-        g.DrawString("UNIT PRICE", fontBold, Brushes.Black, colX_UPrice, currentY);
-        g.DrawString("AMOUNT", fontBold, Brushes.Black, colX_Amount - 50, currentY); 
-        g.DrawLine(Pens.Black, colX_Start, currentY, colX_Amount, currentY);
-        currentY += 5;
+        currentY += 20;
+        g.DrawString("QTY", fontBold, Brushes.Black, colX_Qty, currentY-10);
+        g.DrawString("UNIT", fontBold, Brushes.Black, colX_Unit, currentY-10);
+        g.DrawString("DESCRIPTION", fontBold, Brushes.Black, colX_Description, currentY - 10);
+        g.DrawString("SKU CODE", fontBold, Brushes.Black, colX_SKU-10, currentY - 10);
+        g.DrawString("UNIT PRICE", fontBold, Brushes.Black, colX_UPrice - 10, currentY - 10);
+        g.DrawString("AMOUNT", fontBold, Brushes.Black, colX_Amount - 60, currentY - 10);
+        g.DrawLine(Pens.Black, colX_Start, currentY + lineSpacing - 5, colX_Amount, currentY + lineSpacing - 5);
+        currentY += 10;
 
     
         decimal grossTotal = 0;
@@ -249,10 +248,9 @@ public class Receipt
         e.HasMorePages = false;
     }
 
-//idk how this works thanks
+//idk how this works lol
     private void DrawRightAlignedText(Graphics g, string text, System.Drawing.Font font, float y, float endX)
     {
-
         StringFormat sf = new StringFormat();
         sf.Alignment = StringAlignment.Far;
         RectangleF layoutRect = new RectangleF(0, y, endX, font.Height);
@@ -266,8 +264,6 @@ public class Receipt
     {
         try
         {
-            PaperSize customSize = new PaperSize("Custom Label", 830, 600); // 4x2 inches
-            printDoc.DefaultPageSettings.PaperSize = customSize;
             this.ShowPreview();
         }
         catch (Exception ex)
