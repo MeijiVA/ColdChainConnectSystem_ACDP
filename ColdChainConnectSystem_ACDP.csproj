@@ -471,6 +471,7 @@
     <Compile Include="ClassResources\Instances\SalesInstance.cs" />
     <Compile Include="ClassResources\Instances\SettingsInstance.cs" />
     <Compile Include="ClassResources\Instances\VarView.cs" />
+    <Compile Include="ClassResources\Print\Receipt.cs" />
     <Compile Include="ClassResources\Security\AuditLog.cs" />
     <Compile Include="ClassResources\Security\ChangeCredentialsClass.cs" />
     <Compile Include="ClassResources\Connection\ConnectionClass.cs" />
@@ -820,6 +821,7 @@
     <None Include="Resources\ExpiryDateLegend.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\ACDP_Logo_Print.png" />
     <Content Include="Resources\AddEmployeeBtn.png" />
     <None Include="Resources\GreetIcon.png" />
     <None Include="Resources\MainForm.png" />

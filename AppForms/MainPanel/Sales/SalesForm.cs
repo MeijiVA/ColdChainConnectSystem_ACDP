@@ -5,6 +5,7 @@ using ColdChainConnectSystem_ACDP.ClassResources.Connection.TableView;
 using ColdChainConnectSystem_ACDP.ClassResources.CustomControls;
 using ColdChainConnectSystem_ACDP.ClassResources.Display;
 using ColdChainConnectSystem_ACDP.ClassResources.Instances;
+using ColdChainConnectSystem_ACDP.Materials;
 using ColdChainConnectSystem_ACDP.Popup;
 using System;
 using System.Collections.Generic;
@@ -26,6 +27,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
     {
         int currentPageIndex = 0;
         public int totalPages = 0;
+        Receipt r = new Receipt();
         public SalesForm()
         {
             InitializeComponent();
@@ -341,6 +343,23 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
             }
         }
 
+        private void cbxPrintSelect_Load(object sender, EventArgs e)
+        {
+            r.DisplaySalesID(cbxPrintSelect);
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            if (!(cbxPrintSelect.Texts.Equals("") || cbxPrintSelect.Texts.Equals(null)))
+            { 
+                Console.WriteLine(cbxPrintSelect.Texts);
+                r.GetData(cbxPrintSelect.Texts);
+                r.ShowPreview();
+            }
+
+        }
+
+      
 
 
     }

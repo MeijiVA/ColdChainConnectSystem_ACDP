@@ -63,6 +63,16 @@ namespace ColdChainConnectSystem_ACDP.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap ACDP_Logo_Print {
+            get {
+                object obj = ResourceManager.GetObject("ACDP_Logo_Print", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap ACDPLogo {
             get {
                 object obj = ResourceManager.GetObject("ACDPLogo", resourceCulture);
