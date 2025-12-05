@@ -127,6 +127,7 @@
             // 
             // lblSalesID
             // 
+            this.lblSalesID.Angle = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
             this.lblSalesID.AutoSize = true;
             this.lblSalesID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.lblSalesID.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
@@ -136,6 +137,9 @@
             this.lblSalesID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblSalesID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.lblSalesID.ForeColor = System.Drawing.Color.White;
+            this.lblSalesID.GradientColor1 = System.Drawing.Color.Transparent;
+            this.lblSalesID.GradientColor2 = System.Drawing.Color.Transparent;
+            this.lblSalesID.GradientTextColor = System.Drawing.Color.Transparent;
             this.lblSalesID.Location = new System.Drawing.Point(250, 38);
             this.lblSalesID.Name = "lblSalesID";
             this.lblSalesID.Size = new System.Drawing.Size(99, 20);
@@ -146,6 +150,7 @@
             // 
             // btnRemoveTab
             // 
+            this.btnRemoveTab.Angle = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
             this.btnRemoveTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.btnRemoveTab.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.btnRemoveTab.BorderColor = System.Drawing.Color.PaleVioletRed;
@@ -154,20 +159,25 @@
             this.btnRemoveTab.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRemoveTab.FlatAppearance.BorderSize = 0;
             this.btnRemoveTab.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRemoveTab.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRemoveTab.ForeColor = System.Drawing.Color.White;
             this.btnRemoveTab.GradientColor1 = System.Drawing.Color.Transparent;
             this.btnRemoveTab.GradientColor2 = System.Drawing.Color.Transparent;
             this.btnRemoveTab.GradientTextColor = System.Drawing.Color.Transparent;
-            this.btnRemoveTab.Location = new System.Drawing.Point(70, 508);
+            this.btnRemoveTab.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnRemoveTab.Location = new System.Drawing.Point(24, 507);
             this.btnRemoveTab.Name = "btnRemoveTab";
             this.btnRemoveTab.Size = new System.Drawing.Size(40, 40);
             this.btnRemoveTab.TabIndex = 40;
+            this.btnRemoveTab.Text = "-";
+            this.btnRemoveTab.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnRemoveTab.TextColor = System.Drawing.Color.White;
             this.btnRemoveTab.UseVisualStyleBackColor = false;
             this.btnRemoveTab.Click += new System.EventHandler(this.btnRemoveTab_Click);
             // 
             // btnAddTab
             // 
+            this.btnAddTab.Angle = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
             this.btnAddTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.btnAddTab.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.btnAddTab.BorderColor = System.Drawing.Color.PaleVioletRed;
@@ -177,20 +187,23 @@
             this.btnAddTab.Enabled = false;
             this.btnAddTab.FlatAppearance.BorderSize = 0;
             this.btnAddTab.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddTab.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddTab.ForeColor = System.Drawing.Color.White;
             this.btnAddTab.GradientColor1 = System.Drawing.Color.Transparent;
             this.btnAddTab.GradientColor2 = System.Drawing.Color.Transparent;
             this.btnAddTab.GradientTextColor = System.Drawing.Color.Transparent;
-            this.btnAddTab.Location = new System.Drawing.Point(24, 508);
+            this.btnAddTab.Location = new System.Drawing.Point(70, 507);
             this.btnAddTab.Name = "btnAddTab";
             this.btnAddTab.Size = new System.Drawing.Size(40, 40);
             this.btnAddTab.TabIndex = 39;
+            this.btnAddTab.Text = "+";
             this.btnAddTab.TextColor = System.Drawing.Color.White;
             this.btnAddTab.UseVisualStyleBackColor = false;
             this.btnAddTab.Click += new System.EventHandler(this.btnAddTab_Click);
             // 
             // lblCustomerName
             // 
+            this.lblCustomerName.Angle = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
             this.lblCustomerName.BackColor = System.Drawing.Color.Transparent;
             this.lblCustomerName.BackgroundColor = System.Drawing.Color.Transparent;
             this.lblCustomerName.BorderColor = System.Drawing.Color.Transparent;
@@ -199,6 +212,9 @@
             this.lblCustomerName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblCustomerName.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10F);
             this.lblCustomerName.ForeColor = System.Drawing.Color.Black;
+            this.lblCustomerName.GradientColor1 = System.Drawing.Color.Transparent;
+            this.lblCustomerName.GradientColor2 = System.Drawing.Color.Transparent;
+            this.lblCustomerName.GradientTextColor = System.Drawing.Color.Transparent;
             this.lblCustomerName.Location = new System.Drawing.Point(251, 104);
             this.lblCustomerName.Name = "lblCustomerName";
             this.lblCustomerName.Size = new System.Drawing.Size(186, 37);
@@ -246,6 +262,7 @@
             // 
             // lbl
             // 
+            this.lbl.Angle = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
             this.lbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.lbl.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.lbl.BorderColor = System.Drawing.Color.PaleVioletRed;
@@ -255,6 +272,9 @@
             this.lbl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl.ForeColor = System.Drawing.Color.White;
+            this.lbl.GradientColor1 = System.Drawing.Color.Transparent;
+            this.lbl.GradientColor2 = System.Drawing.Color.Transparent;
+            this.lbl.GradientTextColor = System.Drawing.Color.Transparent;
             this.lbl.Location = new System.Drawing.Point(20, 20);
             this.lbl.Name = "lbl";
             this.lbl.Size = new System.Drawing.Size(758, 55);
@@ -266,6 +286,7 @@
             // 
             // btnAdd
             // 
+            this.btnAdd.Angle = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
             this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.btnAdd.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(96)))));
             this.btnAdd.BorderColor = System.Drawing.Color.PaleVioletRed;
