@@ -166,14 +166,14 @@ public class Receipt
         float detailX = colX_Amount - 150;
         g.DrawString("DELIVERY RECEIPT", fontBold, Brushes.Black, detailX, currentY - 5);
         currentY += lineSpacing * 2f;
-        g.DrawString("No."+slsid.Replace("SLS-","")+"      ", new System.Drawing.Font("Arial", 9, FontStyle.Bold), Brushes.Red, detailX + 110, currentY - 5);
+        g.DrawString("No."+slsid.Replace("SLS-","")+"      ", new System.Drawing.Font("Arial", 9, FontStyle.Bold), Brushes.Red, detailX + 70, currentY - 5);
         currentY += lineSpacing * 2f;
 
         g.DrawString("DATE:", fontNormal, Brushes.Black, detailX, currentY);
-        g.DrawString(date.ToString("yyyy/MM/dd"), fontNormal, Brushes.Black, detailX + 110, currentY);
+        g.DrawString(date.ToString("yyyy/MM/dd"), fontNormal, Brushes.Black, detailX + 70, currentY);
         currentY += lineSpacing;
         g.DrawString("TERMS:", fontNormal, Brushes.Black, detailX, currentY);
-        g.DrawString(paymentTerm, fontNormal, Brushes.Black, detailX + 110, currentY);
+        g.DrawString(paymentTerm, fontNormal, Brushes.Black, detailX + 70, currentY);
         currentY += lineSpacing * 1.5f;
 
       
