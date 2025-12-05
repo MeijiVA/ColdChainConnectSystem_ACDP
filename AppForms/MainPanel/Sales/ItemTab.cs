@@ -136,11 +136,11 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
 
         public string getBatchID
         {
-            get { return cbProductID.Texts; }
+            get { return this.cbProductID.Texts; }
         }
         public string getQuantity
         {
-            get { return lblQuantityValue.Text; }
+            get { return this.lblQuantityValue.Text; }
         }
         private void cbStatus_OnSelectedIndexChanged(object sender, EventArgs e)
         {

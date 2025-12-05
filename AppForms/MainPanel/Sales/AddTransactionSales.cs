@@ -27,34 +27,40 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
             this.Close();
             MainInstance.i.NavigateTo(new SalesForm());
         }
-
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            try
+            string salesid = lblSalesID.Text;
+            string custid = cbCustomerID.Texts;
+            string status = cbStatus.Texts;
+            for (int num = 0; num < numpages; num++)
             {
-                cmb = new CustomMessageBox("Apply Transaction", "Confirm?", MessageBoxButtons.OKCancel);
-                if (cmb.ShowDialog() == DialogResult.OK)
+                ItemTab currentTab = GetTab(num);
+                string batchIdString = currentTab.getBatchID;
+                if (string.IsNullOrWhiteSpace(batchIdString))
                 {
-                    String[,] table = new string[10,3];
-                    for (int num = 0; num < numpages; num++)
-                    {
-                    String[] productID = GetTab(num).getBatchID.Trim().Split('|'); //removes SKUCODE
-                    table[num, 0] = productID[0];
-                    table[num, 1] = GetTab(num).getQuantity;
-                        //cbCustomerID.Texts, dpSalesDate.Value.ToString("yyyy-MM-dd"), table[num,0] , table[num,1], table[num,2]
-                        if (SalesClass.writeSalesData(lblSalesID.Text, cbCustomerID.Texts, dpSalesDate.Value.ToString("yyyy-MM-dd"), table[num, 0], table[num, 1], cbStatus.Texts, ConnectionClass.empid))
-                        {
-                            this.Close();
-                            MainInstance.i.NavigateTo(SalesInstance.i);
-                            SalesInstance.i.UpdateTable();
-                        }
-                    }
+                    new CustomMessageBox("Missing Data", $"Product ID missing for Item {num + 1}.", MessageBoxButtons.OK).ShowDialog();
+                    return;
+                }
+
+                String[] productID = batchIdString.Trim().Split('|');
+
+                string prodId = productID[0];
+                string quantity = currentTab.getQuantity;
+
+                if (string.IsNullOrWhiteSpace(prodId) || string.IsNullOrWhiteSpace(quantity))
+                {
+                    new CustomMessageBox("Missing Data", $"Product ID or Quantity missing for Item {num + 1}.", MessageBoxButtons.OK).ShowDialog();
+                    return;
+                }
+
+                if (!SalesClass.writeSalesData(salesid, custid, dpSalesDate.Value.ToString("yyyy-MM-dd"), prodId, quantity, status, ConnectionClass.empid))
+                {
+                    return;
                 }
             }
-            catch (Exception ex)
-            {
-                new CustomMessageBox("Missing Element", ex.Message, MessageBoxButtons.OK).ShowDialog();
-            }
+            this.Close();
+            MainInstance.i.NavigateTo(SalesInstance.i);
+            SalesInstance.i.UpdateTable();
         }
 
 
@@ -138,7 +144,6 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
             if (numpages < 10)
             {
                 numpages++;
-                Console.WriteLine(numpages);
                 TabPage tab = new TabPage("Item " + numpages);
                 ItemTab it = GetTab(numpages-1);
                 

@@ -14,6 +14,7 @@ public class Receipt
     private PrintDocument printDoc = new PrintDocument();
     public void DisplaySalesID(CustomComboBox ccb)
     {
+        ccb.Items.Clear();
         String query = $"SELECT [salesid] FROM [sales]  GROUP BY [salesid] ORDER BY MIN([numid]);";
         SqlConnection con = ConnectionClass.Connection();
         using (SqlCommand cmd = new SqlCommand(query, con))
