@@ -55,6 +55,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
             {
                 dgvTable.Columns["rowCbox"].HeaderCell = new CheckBoxHeaderCell();
             }
+            r.DisplaySalesID(cbxPrintSelect);
         }
 
         private void SearchBar_SearchTextChanged(object sender, EventArgs e)
@@ -166,6 +167,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Sales
             {
                 MessageBox.Show(ex.Message);
             }
+            r.DisplaySalesID(cbxPrintSelect);
         }
 
         private void dgvTable_RowPostPaint_1(object sender, DataGridViewRowPostPaintEventArgs e)
