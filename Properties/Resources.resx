@@ -124,6 +124,9 @@
   <data name="FemaleIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FemaleIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ACDP_Logo_Print" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ACDP_Logo_Print.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="viewBtn" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\viewBtn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -163,9 +166,6 @@
   <data name="ShadowsTravelingGRRR" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ShadowsTravelingGRRR.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="NoImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\NoImage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="LogoutButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LogoutButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -183,6 +183,9 @@
   </data>
   <data name="export" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\export.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="passshow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\passshow1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="import" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\import.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -217,8 +220,8 @@
   <data name="searchIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\searchIcon.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="passshow" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\passshow1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="NoImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NoImage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="delBtn" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\delBtn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -229,7 +232,7 @@
   <data name="ExpiryDateLegend" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ExpiryDateLegend.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ACDP_Logo_Print" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ACDP_Logo_Print.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="btnArchive" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnArchive.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

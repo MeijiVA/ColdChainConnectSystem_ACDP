@@ -319,5 +319,33 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Supplier
         {
 
         }
+
+        private void dgvTable_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+
+            if (dgvTable.Columns[e.ColumnIndex].Name == "editCol" && e.RowIndex >= 0)
+            {
+                if (dgvTable.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+                {
+                    e.CellStyle.BackColor = Color.FromArgb(215, 215, 230);
+                }
+            }
+
+            if (dgvTable.Columns[e.ColumnIndex].Name == "viewCol" && e.RowIndex >= 0)
+            {
+                if (dgvTable.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+                {
+                    e.CellStyle.BackColor = Color.FromArgb(215, 215, 230);
+                }
+            }
+
+            if (dgvTable.Columns[e.ColumnIndex].Name == "deleteCol" && e.RowIndex >= 0)
+            {
+                if (dgvTable.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+                {
+                    e.CellStyle.BackColor = Color.FromArgb(215, 215, 230);
+                }
+            }
+        }
     }
 }

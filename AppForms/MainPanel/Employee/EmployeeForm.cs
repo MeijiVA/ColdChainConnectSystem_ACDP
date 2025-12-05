@@ -1,7 +1,8 @@
-﻿using ColdChainConnectSystem_ACDP.ClassResources;
+﻿using ColdChainConnectSystem_ACDP.AppForms.MainPanel.Employee;
+using ColdChainConnectSystem_ACDP.ClassResources;
 using ColdChainConnectSystem_ACDP.ClassResources.Instances;
-using ColdChainConnectSystem_ACDP.AppForms.MainPanel.Employee;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -33,14 +34,17 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.Employee
         {
             flpEmployee.Controls.Clear();
             showEmployeeControls.Clear();
-            int numEmp = EmployeeClass.GetTotalEmployees();
-            for (int i = 1; i <= numEmp; i++)
+
+            string[] empids = EmployeeClass.getUnarchivedEmployees().Split(',');
+            Console.WriteLine(empids[0]);
+            foreach (string i in empids)
             {
                 ShowEmployee e = new ShowEmployee();
-                EmployeeClass.LoadAllEmployees(i, e.lblEmpID, e.lblUsername, e.lblName, e.lblPosition, e.lblStatus);
+                EmployeeClass.LoadAllEmployees(Convert.ToInt32(i), e.lblEmpID, e.lblUsername, e.lblName, e.lblPosition, e.lblStatus);
                 showEmployeeControls.Add(e);
                 flpEmployee.Controls.Add(e);
             }
+
         }
 
         private void btnAddEmp_Click(object sender, EventArgs e)
@@ -50,10 +54,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.Employee
 
         private void btnDatabase_Click(object sender, EventArgs e)
         {
-            if (EmployeeDatabaseInstance.i == null || EmployeeDatabaseInstance.i.IsDisposed)
-            {
-                EmployeeDatabaseInstance.i = new EmployeeDatabase();
-            }
+            EmployeeDatabaseInstance.i = new EmployeeDatabase();
             MainInstance.i.NavigateTo(EmployeeDatabaseInstance.i);
         }
 

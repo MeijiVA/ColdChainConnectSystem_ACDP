@@ -821,6 +821,7 @@
     <None Include="Resources\ExpiryDateLegend.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\btnArchive.png" />
     <None Include="Resources\ACDP_Logo_Print.png" />
     <Content Include="Resources\AddEmployeeBtn.png" />
     <None Include="Resources\GreetIcon.png" />

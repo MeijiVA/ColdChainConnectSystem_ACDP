@@ -193,7 +193,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Employee
                         // also refresh main employee list if open
                         if (EmployeeInstance.i != null)
                         {
-                            EmployeeInstance.i.LoadAllEmployees();
+                            EmployeeDatabase_Load(sender, e);
                         }
                     }
                 }
@@ -279,8 +279,13 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Employee
                     DialogResult result = MessageBox.Show("Are you sure you want to unarchive these employees?", "Unarchive Employee", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (result == DialogResult.Yes)
                     {
-
-
+                        foreach (DataGridViewRow row in dgvEmployee.Rows)
+                        {
+                            if (Convert.ToBoolean(row.Cells[0].Value))
+                            {
+                                EmployeeClass.UnarchiveEmployee(row.Cells[2].Value.ToString());
+                            }
+                        }
                         // Refresh the grid
                         EmployeeInstance.i.LoadAllEmployees();
                     }

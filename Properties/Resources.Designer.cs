@@ -113,6 +113,16 @@ namespace ColdChainConnectSystem_ACDP.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap btnArchive {
+            get {
+                object obj = ResourceManager.GetObject("btnArchive", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap calendarDark {
             get {
                 object obj = ResourceManager.GetObject("calendarDark", resourceCulture);

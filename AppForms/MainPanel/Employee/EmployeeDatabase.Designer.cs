@@ -35,17 +35,9 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Employee
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvEmployee = new System.Windows.Forms.DataGridView();
-            this.rowCbox = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.numid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.empid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.username = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fullname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.position = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnUnarchive = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblOf = new System.Windows.Forms.Label();
             this.lblMaxPage = new System.Windows.Forms.Label();
@@ -63,6 +55,14 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Employee
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.SearchBar = new ColdChainConnectSystem_ACDP.AppForms.MainPanel.Inventory.SearchUC();
             this.footerPanel = new ColdChainConnectSystem_ACDP.Materials.CustomPanel();
+            this.rowCbox = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.numid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.empid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.username = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fullname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.position = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnUnarchive = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployee)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -149,57 +149,6 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Employee
             this.dgvEmployee.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmployee_CellContentClick);
             this.dgvEmployee.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvEmployee_CellFormatting);
             this.dgvEmployee.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dgvEmployee_DataError);
-            // 
-            // rowCbox
-            // 
-            this.rowCbox.HeaderText = "";
-            this.rowCbox.Name = "rowCbox";
-            this.rowCbox.Width = 20;
-            // 
-            // numid
-            // 
-            this.numid.HeaderText = "";
-            this.numid.Name = "numid";
-            this.numid.Visible = false;
-            // 
-            // empid
-            // 
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.empid.DefaultCellStyle = dataGridViewCellStyle3;
-            this.empid.HeaderText = "Emp ID";
-            this.empid.Name = "empid";
-            this.empid.Width = 80;
-            // 
-            // username
-            // 
-            this.username.HeaderText = "Username";
-            this.username.Name = "username";
-            this.username.Width = 90;
-            // 
-            // fullname
-            // 
-            this.fullname.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.fullname.HeaderText = "Full Name";
-            this.fullname.Name = "fullname";
-            // 
-            // position
-            // 
-            this.position.HeaderText = "Position";
-            this.position.Name = "position";
-            this.position.Width = 80;
-            // 
-            // status
-            // 
-            this.status.HeaderText = "Status";
-            this.status.Name = "status";
-            this.status.Width = 70;
-            // 
-            // btnUnarchive
-            // 
-            this.btnUnarchive.HeaderText = "Unarchive";
-            this.btnUnarchive.Image = global::ColdChainConnectSystem_ACDP.Properties.Resources.delBtn;
-            this.btnUnarchive.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.btnUnarchive.Name = "btnUnarchive";
             // 
             // panel1
             // 
@@ -403,6 +352,57 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Employee
             this.footerPanel.TabIndex = 4;
             this.footerPanel.TextColor = System.Drawing.Color.White;
             // 
+            // rowCbox
+            // 
+            this.rowCbox.HeaderText = "";
+            this.rowCbox.Name = "rowCbox";
+            this.rowCbox.Width = 20;
+            // 
+            // numid
+            // 
+            this.numid.HeaderText = "";
+            this.numid.Name = "numid";
+            this.numid.Visible = false;
+            // 
+            // empid
+            // 
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.empid.DefaultCellStyle = dataGridViewCellStyle3;
+            this.empid.HeaderText = "Emp ID";
+            this.empid.Name = "empid";
+            this.empid.Width = 80;
+            // 
+            // username
+            // 
+            this.username.HeaderText = "Username";
+            this.username.Name = "username";
+            this.username.Width = 90;
+            // 
+            // fullname
+            // 
+            this.fullname.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.fullname.HeaderText = "Full Name";
+            this.fullname.Name = "fullname";
+            // 
+            // position
+            // 
+            this.position.HeaderText = "Position";
+            this.position.Name = "position";
+            this.position.Width = 80;
+            // 
+            // status
+            // 
+            this.status.HeaderText = "Status";
+            this.status.Name = "status";
+            this.status.Width = 70;
+            // 
+            // btnUnarchive
+            // 
+            this.btnUnarchive.HeaderText = "Unarchive";
+            this.btnUnarchive.Image = global::ColdChainConnectSystem_ACDP.Properties.Resources.btnArchive;
+            this.btnUnarchive.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.btnUnarchive.Name = "btnUnarchive";
+            // 
             // EmployeeDatabase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -443,6 +443,7 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Employee
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
+        public SearchUC SearchBar;
         private System.Windows.Forms.DataGridViewCheckBoxColumn rowCbox;
         private System.Windows.Forms.DataGridViewTextBoxColumn numid;
         private System.Windows.Forms.DataGridViewTextBoxColumn empid;
@@ -451,7 +452,6 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Employee
         private System.Windows.Forms.DataGridViewTextBoxColumn position;
         private System.Windows.Forms.DataGridViewTextBoxColumn status;
         private System.Windows.Forms.DataGridViewImageColumn btnUnarchive;
-        public SearchUC SearchBar;
     }
 }
 

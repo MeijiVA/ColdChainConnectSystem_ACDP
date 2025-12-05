@@ -7,11 +7,47 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using System.Windows.Markup;
 
 namespace ColdChainConnectSystem_ACDP.ClassResources
 {
     internal class EmployeeClass
     {
+        public static string getUnarchivedEmployees()
+        {
+            String values = "";
+            String query = $"SELECT [numid] FROM Employees WHERE [Status] = 'Inactive' OR [Status] = 'Active'";
+            SqlConnection con = ConnectionClass.Connection();
+            con.Open();
+            try
+            {
+                using (SqlCommand user = new SqlCommand(query, con))
+                {
+                    using (var reader = user.ExecuteReader())
+                    {
+                        int i = 0;
+                        while (reader.Read())
+                        {
+                            if (i == 0)
+                            {
+                                values = reader[0].ToString();
+                            }
+                            else
+                            {
+                                values = values + "," + reader[0].ToString();
+                            }
+                            i++;
+                        }
+                    }
+                }
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+
+            }
+            return values;
+        }
         public static bool CheckIfDuplicateAccount(string uname)
         {
             String query = $"SELECT [Username] FROM Employees WHERE [Username] = '{uname}'";
@@ -69,7 +105,7 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                 // Skip archived employees from the main EmployeeForm listing
                 String query = $@"SELECT [empid], [username], [firstname], [lastname], [position], [status] 
                                   FROM Employees 
-                                  WHERE [numID] = {currentNum} AND [Status] <> 'Archived'";
+                                  WHERE [numID] = {currentNum} AND Status IN('Inactive', 'Active')";
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
                     con.Open();
@@ -239,6 +275,8 @@ namespace ColdChainConnectSystem_ACDP.ClassResources
                 return false;
             }
         }
+
+
 
         /// <summary>
         /// Un-archives an employee by switching Status back to 'Active'.
