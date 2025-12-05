@@ -222,5 +222,10 @@ namespace ColdChainConnectSystem_ACDP.AppForms.MainPanel.Dashboard
             InventoryInstance.i.SearchBar.txtSearch.Text = lblSKU4.Text.Substring(1, lblSKU4.Text.Length - 2);
             MainInstance.i.sidePanel1.Refresh();
         }
+
+        private void customPanel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

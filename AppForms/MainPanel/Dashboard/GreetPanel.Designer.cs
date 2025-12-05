@@ -112,9 +112,9 @@
             // div
             // 
             this.div.BackColor = System.Drawing.SystemColors.Control;
-            this.div.Location = new System.Drawing.Point(655, -2);
+            this.div.Location = new System.Drawing.Point(653, -2);
             this.div.Name = "div";
-            this.div.Size = new System.Drawing.Size(2, 50);
+            this.div.Size = new System.Drawing.Size(3, 50);
             this.div.TabIndex = 5;
             this.div.Text = "label1";
             // 
@@ -123,9 +123,9 @@
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.pictureBox1.BackgroundImage = global::ColdChainConnectSystem_ACDP.Properties.Resources.GreetIcon;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(20, 6);
+            this.pictureBox1.Location = new System.Drawing.Point(25, 11);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(35, 35);
+            this.pictureBox1.Size = new System.Drawing.Size(28, 25);
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
