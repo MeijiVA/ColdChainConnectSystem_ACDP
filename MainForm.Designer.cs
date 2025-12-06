@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.DisplayPanel = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnSettings = new System.Windows.Forms.Button();
@@ -118,7 +119,7 @@
             // 
             this.uacUserProfile.AccountName = "Name";
             this.uacUserProfile.BackColor = System.Drawing.Color.Transparent;
-            this.uacUserProfile.Location = new System.Drawing.Point(12, 49);
+            this.uacUserProfile.Location = new System.Drawing.Point(3, 49);
             this.uacUserProfile.Name = "uacUserProfile";
             this.uacUserProfile.Padding = new System.Windows.Forms.Padding(27, 0, 27, 0);
             this.uacUserProfile.Size = new System.Drawing.Size(177, 163);
@@ -149,6 +150,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.DisplayPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "MainForm";

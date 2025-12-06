@@ -470,7 +470,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "EditAccountInformation";
-            this.Size = new System.Drawing.Size(280, 271);
+            this.Size = new System.Drawing.Size(280, 393);
             this.Load += new System.EventHandler(this.EditAccountInformation_Load);
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);

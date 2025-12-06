@@ -3,6 +3,7 @@ using Azure.Identity;
 using ColdChainConnectSystem_ACDP.AppForms.Header.Settings.PersonalDetails;
 using ColdChainConnectSystem_ACDP.ClassResources;
 using ColdChainConnectSystem_ACDP.ClassResources.Instances;
+using ColdChainConnectSystem_ACDP.ClassResources.Security;
 using ColdChainConnectSystem_ACDP.Popup;
 using System;
 using System.Collections.Generic;
@@ -357,9 +358,12 @@ namespace ColdChainConnectSystem_ACDP.AppForms.Header.Settings.Employee
                 new CustomMessageBox("Acquiring Data", ex.Message, MessageBoxButtons.OK).ShowDialog();
             }
         }
+
+
         private void btnSave_Click(object sender, EventArgs e)
         {
             UpdateData();
+            UpdateAccount.DatabaseAccountChangeTo(UpdateAccount.GetAccount(lblEmpID.Text),this.EditAccountContainer.UsernameInfo, this.EditAccountContainer.PasswordInfo);
             new CustomMessageBox("Save", "Updated Information", MessageBoxButtons.OK).ShowDialog();
             LoadEmployeeData();
             btnSave.Visible = false;
